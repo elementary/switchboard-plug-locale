@@ -15,7 +15,19 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-
+namespace LC {
+    public static const string LANG = "LANG";
+    public static const string NUMERIC = "LC_NUMERIC";
+    public static const string TIME = "LC_TIME";
+    public static const string MONETARY = "LC_MONETARY";
+     public static const string MESSAGES = "LC_MESSAGES";
+    public static const string PAPER = "LC_PAPER";
+    public static const string NAME = "LC_NAME";
+    public static const string ADDRESS = "LC_ADDRESS";
+    public static const string MEASUREMENT = "LC_MEASUREMENT";
+    public static const string TELEPHONE = "LC_TELEPHONE";
+    public static const string IDENTIFICATION = "LC_IDENTIFICATION";
+}
 
 public class Locale.Plug : Switchboard.Plug {
 
@@ -35,24 +47,26 @@ public class Locale.Plug : Switchboard.Plug {
     private string is_ubuntu;
     private string ubuntu_version;
     private string ubuntu_codename;
-    private Gtk.EventBox main_grid;
+    private Gtk.Box box;
 
     string system_language;
     string system_region;
 
-    private Gtk.ListBox locales_box;
+    private LanguageList locales_box;
 
-    private DBusProxy localed_proxy;
+    
     private DBusProxy session_proxy;
 
+    LocaleManager lm;
+
     public Plug () {
-        Object (category: Category.SYSTEM,
+        Object (category: Category.PERSONAL,
                 code_name: "system-pantheon-locale",
                 display_name: _("Locale"),
-                description: _("Shows locale information…"),
+                description: _("Shows locales information…"),
                 icon: "preferences-desktop-locale");
 
-        init_dbus ();
+        lm = LocaleManager.init ();
     }
 
     void session_proxy_ready () {
@@ -73,70 +87,10 @@ public class Locale.Plug : Switchboard.Plug {
             }
          );
 
-        DBusProxy.create_for_bus.begin (BusType.SYSTEM,
-            DBusProxyFlags.NONE,
-            null,
-            "org.freedesktop.locale1",
-            "/org/freedesktop/locale1",
-            "org.freedesktop.locale1",
-            null,
-            (obj, res) => {
-                localed_proxy = DBusProxy.create_for_bus.end (res);
-                
-                if (localed_proxy == null) {
-                    warning ("Failed to connect to localed:");
-                }
-
-                localed_proxy.g_properties_changed.connect (on_localed_properties_changed);
-                on_localed_properties_changed (null, null);
-                message("dbus connected");
-            }
-         );
+        
     }
 
-    void on_localed_properties_changed (Variant? changed_properties, string[]? invalidated_properties) {
-        message("callback");
-        string lang = null;
-        string messages = null;
-        string time = null;
-
-        var v = localed_proxy.get_cached_property ("Locale");
-
-        if (v != null) {
-            message("v is not null");
-            string [] strv;
-
-            strv = v.get_strv ();
-
-            for (int i = 0; strv[i] != null; i++) {
-                if (strv[i].has_prefix ("LANG=")) {
-                    lang = strv[i];
-                } else if (strv[i].has_prefix ("LC_MESSAGES=")) {
-                    messages = strv[i];
-                } else if (strv[i].has_prefix ("LC_TIME=")) {
-                    time = strv[i];
-                }
-                message(strv[i]);
-            }
-
-            if (lang == null) {
-                lang = Intl.setlocale (LocaleCategory.MESSAGES, null);
-            }
-
-            if (messages == null) {
-                messages = lang;
-            }
-
-            if (time == null) {
-                time = lang;
-            }
-
-            system_language = messages;
-            system_region = time;
-
-            update_language_label ();
-        }
-    }
+ 
 
     void update_language_label () {
         var language = system_language;
@@ -144,7 +98,7 @@ public class Locale.Plug : Switchboard.Plug {
 
         name = Gnome.Languages.get_language_from_locale (language, language);
    
-        message ("Label Text: %s", name);
+        message ("Label Text: %s (%s)", name, system_language);
 
         update_region_label ();
     }
@@ -155,19 +109,26 @@ public class Locale.Plug : Switchboard.Plug {
 
         name = Gnome.Languages.get_country_from_locale (region, region);
    
-        message ("Region Text: %s", name);
+        message ("Region Text: %s (%s)", name, system_region);
     }
     
     public override Gtk.Widget get_widget () {
-        if (main_grid == null) {
-            setup_info ();
+        if (box == null) {
+            //setup_info ();
             setup_ui ();
         }
-        return main_grid;
+        return box;
     }
     
     public override void shown () {
+                //init_dbus ();
 
+        var langs = Gnome.Languages.get_all_locales ();
+
+        foreach (var lang in langs) {
+            locales_box.add_locale (lang);
+            message("Languags: %s", lang);
+        }
     }
     
     public override void hidden () {
@@ -183,201 +144,23 @@ public class Locale.Plug : Switchboard.Plug {
         return new Gee.TreeMap<string, string> (null, null);
     }
 
-    private string capitalize (string str) {
-        var result_builder = new StringBuilder ("");
 
-        weak string i = str;
-
-        bool first = true;
-        while (i.length > 0) {
-            unichar c = i.get_char ();
-            if (first) {
-                result_builder.append_unichar (c.toupper ());
-                first = false;
-            } else {
-                result_builder.append_unichar (c);
-            }
-
-            i = i.next_char ();
-        }
-
-        return result_builder.str;
-    }
-
-    // Gets all the hardware info
-    private void setup_info () {
-
-        // Operating System
-        
-        File file = File.new_for_path("/etc/lsb-release");
-        try {
-            var dis = new DataInputStream (file.read ());
-            string line;
-            // Read lines until end of file (null) is reached
-            while ((line = dis.read_line (null)) != null) {
-                if ("DISTRIB_ID=" in line) {
-                    os = line.replace ("DISTRIB_ID=", "");
-                    if ("\"" in os) {
-                        os = os.replace ("\"", "");
-                    }
-                } else if ("DISTRIB_RELEASE=" in line) {
-                    version = line.replace ("DISTRIB_RELEASE=", "");
-                } else if ("DISTRIB_CODENAME=" in line) {
-                    codename = line.replace ("DISTRIB_CODENAME=", "");
-                    codename = capitalize (codename);
-                }
-            }
-        } catch (Error e) {
-            warning("Couldn't read lsb-release file, assuming elementary OS 0.2");
-            os = "elementary OS";
-            version = "0.2";
-            codename = "Luna";
-        }
-        
-        file = File.new_for_path("/etc/upstream-release/lsb-release");
-        try {
-            var dis = new DataInputStream (file.read ());
-            string line;
-            // Read lines until end of file (null) is reached
-            while ((line = dis.read_line (null)) != null) {
-                if ("DISTRIB_ID=" in line) {
-                    is_ubuntu = line.replace ("DISTRIB_ID=", "");
-                } else if ("DISTRIB_RELEASE=" in line) {
-                    ubuntu_version = line.replace ("DISTRIB_RELEASE=", "");
-                } else if ("DISTRIB_CODENAME=" in line) {
-                    ubuntu_codename = line.replace ("DISTRIB_CODENAME=", "");
-                    ubuntu_codename = capitalize (ubuntu_codename);
-                }
-            }
-        } catch (Error e) {
-            warning("Couldn't read upstream lsb-release file, assuming none");
-            is_ubuntu = null;
-            ubuntu_version = null;
-            ubuntu_codename = null;
-        }
-
-        //Bugtracker and website
-        file = File.new_for_path("/etc/dpkg/origins/"+os);
-        bugtracker_url = "";
-        website_url = "";
-        try {
-            var dis = new DataInputStream (file.read ());
-            string line;
-            // Read lines until end of file (null) is reached
-            while ((line = dis.read_line (null)) != null) {
-                 if (line.has_prefix("Bugs:")) {
-                    bugtracker_url = line.replace ("Bugs: ", "");
-                }
-            }
-        } catch (Error e) {
-            warning(e.message);
-            warning("Couldn't find bugtracker/website, using elementary OS defaults");
-            if (website_url == "")
-                website_url = "http://elementaryos.org";
-            if (bugtracker_url == "")
-                bugtracker_url = "https://bugs.launchpad.net/elementary/+filebug";
-        }
-
-        // Architecture
-        try {
-            Process.spawn_command_line_sync ("uname -m", out arch);
-            if (arch == "x86_64\n") {
-                arch = "64-bit";
-            } else if ("arm" in arch) {
-                arch = "ARM";
-            } else {
-                arch = "32-bit";
-            }
-        } catch (Error e) {
-            warning (e.message);
-            arch = _("Unknown");
-        }
-
-        // Processor
-        try {
-            Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
-            int cores = 0;
-            foreach (string core in processor.split ("\n")) {
-                if (core != "") {
-                    cores++;
-                }
-            }
-            if ("\n" in processor) {
-                processor = processor.split ("\n")[0];
-            } if ("(R)" in processor) {
-                processor = processor.replace ("(R)", "®");
-            } if ("(TM)" in processor) {
-                processor = processor.replace ("(TM)", "™");
-            } if (cores > 1) {
-                processor = processor + " × " + cores.to_string ();
-            }
-        } catch (Error e) {
-            warning (e.message);
-            processor = _("Unknown");
-        }
-
-        //Memory
-        memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1024, FormatSizeFlags.IEC_UNITS);
-
-        // Graphics
-        try {
-            Process.spawn_command_line_sync ("lspci", out graphics);
-            if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-                string[] lines = graphics.split("\n");
-                graphics="";
-                foreach (var s in lines) {
-                    if("VGA" in s) {
-                        string model = get_graphics_from_string(s);
-                        if(graphics=="")
-                            graphics = model;
-                        else
-                            graphics += "\n" + model;
-                    }
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
-            graphics = _("Unknown");
-        }
-
-        // Hard Drive
-        
-        var file_root = GLib.File.new_for_path ("/");
-        try {
-            var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
-            hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
-        } catch (Error e) {
-            critical (e.message);
-            hdd = _("Unknown");
-        }
-    }
-
-    private string get_graphics_from_string(string graphics) {
-        //at this line we have the correct line of lspci
-        //as the line has now the form of "00:01.0 VGA compatible controller:Info"
-        //and we want the <Info> part, we split with ":" and get the 3rd part
-        string[] parts = graphics.split(":");
-        string result = graphics;
-        if (parts.length == 3)
-            result = parts[2];
-        else if (parts.length > 3) {
-            result = parts[2];
-            for (int i = 2; i < parts.length; i++) {
-                result+=parts[i];
-            }
-        }
-        else {
-            warning("Unknown lspci format: "+parts[0]+parts[1]);
-            result = _("Unknown"); //set back to unkown
-        }
-        return result.strip ();
-    }
 
     // Wires up and configures initial UI
     private void setup_ui () {
-        main_grid = new Gtk.EventBox ();
+        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+        box.get_style_context ().add_class ("background");
+        //box.margin = 12;
+        message("before lang list");
+        locales_box = new LanguageList ();
+        locales_box.margin = 12;
+        message("after list");
+        choose_hint = new Gtk.Label (_("Choose your language:"));
+        choose_hint.halign = Gtk.Align.START;
+        box.pack_start (choose_hint, false, false);
 
-        locales_box = new Gtk.ListBox ();
+        box.pack_start (locales_box, true, false);
+
         
         /*// Let's make sure this looks like the About dialogs
         main_grid.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
@@ -542,31 +325,10 @@ public class Locale.Plug : Switchboard.Plug {
         main_grid.add (halign);
 
         */
-        main_grid.show_all ();
+        box.show_all ();
     }
 }
 
-private uint64 get_mem_info_for(string name) {
-    uint64 result = 0;
-    File file = File.new_for_path ("/proc/meminfo");
-    try {
-        DataInputStream dis = new DataInputStream (file.read());
-        string? line;
-        while ((line = dis.read_line (null,null)) != null) {
-            if(line.has_prefix(name)) {
-                //get the kb-part of the string with witespaces
-                line = line.substring(name.length,
-                                      line.last_index_of("kB")-name.length);
-                result = uint64.parse(line.strip());
-                break;
-            }
-        }
-    } catch (Error e) {
-        warning (e.message);
-    }
-
-    return result;
-}
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating About plug");

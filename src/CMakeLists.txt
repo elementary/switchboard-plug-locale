@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice)
 
 add_definitions (${DEPS_CFLAGS} -DGNOME_DESKTOP_USE_UNSTABLE_API)
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -15,12 +15,18 @@ include (ValaPrecompile)
 vala_precompile (VALA_C
     Plug.vala
     LocaleEntry.vala
+    LanguageList.vala
+    LanguageEntry.vala
+    LocaleManager.vala
+    InstallEntry.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
     switchboard-2.0
     granite
 	gnome-desktop-3.0
+    accountsservice
+    posix
 OPTIONS
 	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
     --thread

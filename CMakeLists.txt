@@ -10,7 +10,7 @@ cmake_policy (VERSION 2.6)
 set (PLUGNAME "locale")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
-set (PLUGCATEGORY "system")
+set (PLUGCATEGORY "personal")
 # Set the Title to use for the Plug in the Overview and in the Titlebar
 set (PLUGTITLE "Region")
 set (PLUGDESCRIPTION "Set region")
@@ -25,14 +25,14 @@ project (${PLUGNAME})
 
 include (GNUInstallDirs)
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
-set (PKGDATADIR "${DATADIR}/system/pantheon-${PLUGNAME}")
+set (PKGDATADIR "${DATADIR}/${PLUGCATEGORY}/pantheon-${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}-plug")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
-install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
+#configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
+#install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
 configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 

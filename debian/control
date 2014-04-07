@@ -1,29 +1,30 @@
-Source: switchboard-plug-about
+Source: switchboard-plug-locale
 Section: x11
 Priority: optional
-Maintainer: Ivo Nunes <ivo@elementaryos.org>
+Maintainer: Simon Dieterle <smndtrl@gmail.com>
 Build-Depends: cmake,
                debhelper (>= 9),
                libgranite-dev,
                libswitchboard-2.0-dev,
-               valac (>= 0.22)
+               libaccountsservice-dev,
+               valac (>= 0.32)
 Standards-Version: 3.9.2
-Homepage: https://launchpad.net/switchboard-plug-about
+Homepage: https://launchpad.net/switchboard-plug-locale
 
-Package: switchboard-plug-about
+Package: switchboard-plug-locale
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: About plug for Switchboard
- This plug displays information about the system.
+ This plug displays locale settings.
 
-Package: switchboard-plug-about-dbg
+Package: switchboard-plug-locale-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: switchboard-plug-about (= ${binary:Version}), ${misc:Depends}
-Enhances: switchboard-plug-about
+Depends: switchboard-plug-locale (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-locale
 Description: About plug for Switchboard (debugging symbols)
  This plug displays information about the system.
  .
- This package contains debugging symbols for switchboard-plug-about.
+ This package contains debugging symbols for switchboard-plug-locale.
