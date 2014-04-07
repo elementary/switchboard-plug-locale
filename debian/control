@@ -7,7 +7,7 @@ Build-Depends: cmake,
                libgranite-dev,
                libswitchboard-2.0-dev,
                libaccountsservice-dev,
-               valac (>= 0.32)
+               valac (>= 0.23)
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/switchboard-plug-locale
 
