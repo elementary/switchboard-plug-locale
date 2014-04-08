@@ -9,6 +9,8 @@ public class LocaleEntry : LanguageEntry {
 	Gtk.Label country_label;
 	Gtk.Label region_label;
 
+	public Gtk.CheckButton check_button;
+
 	public signal void set_region (string region);
 
 	public LocaleEntry (string _locale) {
@@ -17,7 +19,7 @@ public class LocaleEntry : LanguageEntry {
 		country = Gnome.Languages.get_country_from_locale (locale, null);
 		region = Gnome.Languages.get_language_from_code (locale.substring (0, 2), null);
 
-		var check_button = new Gtk.CheckButton ();
+		check_button = new Gtk.CheckButton ();
 
 		action_box.pack_start (check_button, false, false);
 

@@ -57,6 +57,8 @@ public class Locale.Plug : Switchboard.Plug {
     
     private DBusProxy session_proxy;
 
+    Gtk.ScrolledWindow sw;
+
     LocaleManager lm;
 
     public Plug () {
@@ -113,11 +115,11 @@ public class Locale.Plug : Switchboard.Plug {
     }
     
     public override Gtk.Widget get_widget () {
-        if (box == null) {
+        if (sw == null) {
             //setup_info ();
             setup_ui ();
         }
-        return box;
+        return sw;
     }
     
     public override void shown () {
@@ -148,184 +150,25 @@ public class Locale.Plug : Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+
+        sw = new Gtk.ScrolledWindow (null, null);
+
+        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
         box.get_style_context ().add_class ("background");
-        //box.margin = 12;
+        box.margin = 24;
         message("before lang list");
         locales_box = new LanguageList ();
-        locales_box.margin = 12;
+        locales_box.valign = Gtk.Align.START;
+        //locales_box.margin = 12;
         message("after list");
         choose_hint = new Gtk.Label (_("Choose your language:"));
         choose_hint.halign = Gtk.Align.START;
         box.pack_start (choose_hint, false, false);
 
-        box.pack_start (locales_box, true, false);
+        box.pack_start (locales_box, true, true);
 
-        
-        /*// Let's make sure this looks like the About dialogs
-        main_grid.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
-
-        // Create the section about elementary OS
-        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
-
-        var title = new Gtk.Label (os);
-        title.use_markup = false;
-        Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.TITLE, title);
-        title.set_alignment (0, 0);
-
-        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" ( " + arch + " )");
-        version.set_alignment (0, 0);
-        version.set_selectable (true);
-        
-        if (is_ubuntu != null) {
-            based_off = new Gtk.Label (_("Built on") + ": " + is_ubuntu + " " + ubuntu_version + " ( \"" + ubuntu_codename + "\" )");
-            based_off.set_alignment (0, 0);
-            based_off.set_selectable (true);
-        }
-
-        var website_label = new Gtk.Label (null);
-        website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org</a>");
-        website_label.set_alignment (0, 0);
-
-        var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        details.pack_start (title, false, false, 0);
-        details.pack_start (version, false, false, 0);
-        details.pack_start (based_off, false, false, 0);
-        details.pack_start (website_label, false, false, 0);
-
-        var elementary_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-        elementary_box.pack_start (logo, false, false, 0);
-        elementary_box.pack_start (details, false, false, 0);
-
-        // Hardware title
-        var hardware_title = new Gtk.Label (null);
-        hardware_title.set_markup (("<b><span size=\"x-large\">%s</span></b>").printf(_("Hardware:")));
-        hardware_title.set_alignment (0, 0);
-
-        // Hardware labels
-        var processor_label = new Gtk.Label (_("Processor:"));
-        processor_label.set_alignment (1, 0);
-
-        var memory_label = new Gtk.Label (_("Memory:"));
-        memory_label.set_alignment (1, 0);
-
-        var graphics_label = new Gtk.Label (_("Graphics:"));
-        graphics_label.set_alignment (1, 0);
-
-        var hdd_label = new Gtk.Label (_("Storage:"));
-        hdd_label.set_alignment (1, 0);
-
-        // Hardware info
-        var processor_info = new Gtk.Label (processor);
-        processor_info.set_alignment (0, 0);
-        processor_info.set_margin_left (6);
-        processor_info.set_selectable (true);
-        processor_info.set_line_wrap (false);
-
-        var memory_info = new Gtk.Label (memory);
-        memory_info.set_alignment (0, 0);
-        memory_info.set_margin_left (6);
-        memory_info.set_selectable (true);
-
-        var graphics_info = new Gtk.Label (graphics);
-        graphics_info.set_alignment (0, 0);
-        graphics_info.set_margin_left (6);
-        graphics_info.set_selectable (true);
-        graphics_info.set_line_wrap (false);
-
-        var hdd_info = new Gtk.Label (hdd);
-        hdd_info.set_alignment (0, 0);
-        hdd_info.set_margin_left (6);
-        hdd_info.set_selectable (true);
-
-        // Hardware grid
-        var hardware_grid = new Gtk.Grid ();
-        hardware_grid.set_row_spacing (1);
-        hardware_grid.attach (hardware_title, 0, 0, 100, 30);
-        hardware_grid.attach (processor_label, 0, 40, 100, 25);
-        hardware_grid.attach (memory_label, 0, 80, 100, 25);
-        hardware_grid.attach (graphics_label, 0, 120, 100, 25);
-        hardware_grid.attach (hdd_label, 0, 160, 100, 25);
-        hardware_grid.attach (processor_info, 100, 40, 100, 25);
-        hardware_grid.attach (memory_info, 100, 80, 100, 25);
-        hardware_grid.attach (graphics_info, 100, 120, 100, 25);
-        hardware_grid.attach (hdd_info, 100, 160, 100, 25);
-
-        // Help button
-        const string HELP_BUTTON_STYLESHEET = """
-            .help_button {
-                border-radius: 200px;
-            }
-        """;
-
-        var help_button = new Gtk.Button.with_label ("?");
-
-        Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
-                           Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        help_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri ("http://elementaryos.org/support", null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
-
-        help_button.size_allocate.connect ( (alloc) => {
-            help_button.set_size_request (alloc.height, -1);
-        });
-
-        // Translate button
-        var translate_button = new Gtk.Button.with_label (_("Translate"));
-        translate_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
-
-        // Bug button
-        var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
-        bug_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri (bugtracker_url, null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
-
-        // Upgrade button
-        var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
-        upgrade_button.clicked.connect (() => {
-            try {
-                Process.spawn_command_line_async("update-manager");
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
-
-        // Create a box for the buttons
-        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-        button_box.pack_start (help_button, false, false, 0);
-        button_box.pack_start (translate_button, true, true, 0);
-        button_box.pack_start (bug_button, true, true, 0);
-        button_box.pack_start (upgrade_button, true, true, 0);
-        
-        // Fit everything in a box
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        box.pack_start (elementary_box, false, false, 20);
-        box.pack_start (hardware_grid, false, false, 40);
-        box.pack_end (button_box, false, false, 0);
-        box.set_margin_bottom(20);
-
-        // Let's align the box and add it to the plug
-        var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
-        halign.add (box);
-        main_grid.add (halign);
-
-        */
-        box.show_all ();
+        sw.add (box);
+        sw.show_all ();
     }
 }
 

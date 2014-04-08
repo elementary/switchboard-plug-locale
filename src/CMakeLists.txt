@@ -19,6 +19,8 @@ vala_precompile (VALA_C
     LanguageEntry.vala
     LocaleManager.vala
     InstallEntry.vala
+    InstallPopover.vala
+    LanguageInstaller.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

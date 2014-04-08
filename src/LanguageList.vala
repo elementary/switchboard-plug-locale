@@ -2,10 +2,15 @@ public class LanguageList : Gtk.ListBox {
 
 	Gee.HashMap<string, LocaleEntry> locales;
 
+	InstallPopover language_popover;
+	int visible_count = 0;
+
 	public LanguageList () {
+		set_activate_on_single_click(true);
 		set_sort_func (sort_func);
 		set_selection_mode (Gtk.SelectionMode.NONE);
 		set_header_func (header_func);
+		set_filter_func (filter_func);
 
 		var provider = new Gtk.CssProvider();
 		provider.load_from_data ("
@@ -29,8 +34,27 @@ public class LanguageList : Gtk.ListBox {
 
 		
 		var install_entry = new InstallEntry();
+		language_popover = new InstallPopover (install_entry);
 		add (install_entry);
 	
+	}
+
+	public override void row_activated (Gtk.ListBoxRow row) {
+		if (row is InstallEntry) {
+			language_popover.show_all ();
+		} else {
+			var locale = row as LocaleEntry;
+			locale.check_button.set_active (true);
+		}
+	}
+
+	bool filter_func (Gtk.ListBoxRow row) {
+		if (visible_count >= 5) {
+			return false;
+		}
+
+		visible_count++;
+		return true;
 	}
 
 	public void add_locale (string locale) {
