@@ -6,6 +6,7 @@ Build-Depends: cmake,
                debhelper (>= 9),
                libgranite-dev,
                libswitchboard-2.0-dev,
+               libgnome-desktop-3-dev,
                libaccountsservice-dev,
                valac (>= 0.23)
 Standards-Version: 3.9.2
