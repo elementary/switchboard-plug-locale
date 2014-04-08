@@ -3,15 +3,20 @@ public class LocaleEntry : LanguageEntry {
 	string region;
 	string country;
 
-	Gtk.ToggleButton language_button;
-	Gtk.ToggleButton time_button;
+	public Gtk.ToggleButton input_button;
+	public Gtk.ToggleButton format_button;
+	public Gtk.CheckButton check_button;
 
 	Gtk.Label country_label;
 	Gtk.Label region_label;
 
-	public Gtk.CheckButton check_button;
+
 
 	public signal void set_region (string region);
+
+	public signal void language_changed (string region);
+	public signal void format_changed (string region);
+	public signal void input_changed (string region);
 
 	public LocaleEntry (string _locale) {
 		locale = _locale;
@@ -20,6 +25,12 @@ public class LocaleEntry : LanguageEntry {
 		region = Gnome.Languages.get_language_from_code (locale.substring (0, 2), null);
 
 		check_button = new Gtk.CheckButton ();
+		check_button.toggled.connect (() => {
+			if (check_button.active) {
+				language_changed (locale);
+
+			}
+		});
 
 		action_box.pack_start (check_button, false, false);
 
@@ -35,25 +46,30 @@ public class LocaleEntry : LanguageEntry {
 		description_box.pack_start (region_label);
 		description_box.pack_start (country_label);
 
-		var time_image = new Gtk.Image.from_icon_name ("input-keyboard-symbolic", Gtk.IconSize.MENU);
-		var input_image = new Gtk.Image.from_icon_name ("format-justify-fill-symbolic", Gtk.IconSize.MENU);
+		var input_image = new Gtk.Image.from_icon_name ("input-keyboard-symbolic", Gtk.IconSize.MENU);
+		var format_image = new Gtk.Image.from_icon_name ("format-justify-fill-symbolic", Gtk.IconSize.MENU);
 
 		
-		language_button = new Gtk.ToggleButton();
-		language_button.set_image (input_image);
-		language_button.sensitive = true;
-		language_button.clicked.connect (() => {
-			LocaleManager.init ().set_user_language (locale);
+		input_button = new Gtk.ToggleButton();
+		input_button.get_style_context ().remove_class ("button");
+		input_button.get_style_context ().add_class ("insenstive");
+		input_button.set_image (input_image);
+		input_button.sensitive = true;
+		input_button.clicked.connect (() => {
+			input_changed (locale);
 		});
 
-		time_button = new Gtk.ToggleButton();
-		time_button.set_image (time_image);
-		time_button.sensitive = true;
-		time_button.clicked.connect (() => {
-			LocaleManager.init ().set_user_location (locale);
+		format_button = new Gtk.ToggleButton();
+		format_button.get_style_context ().remove_class ("button");
+		format_button.get_style_context ().add_class ("insenstive");
+		format_button.set_image (format_image);
+		format_button.sensitive = true;
+		format_button.clicked.connect (() => {
+			format_changed (locale);
 		});
 
-		settings_box.pack_start (language_button);
-		settings_box.pack_start (time_button);
+		settings_box.pack_start (format_button);
+		settings_box.pack_start (input_button);
+
 	}
 }

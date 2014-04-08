@@ -15,14 +15,16 @@ public class LanguageList : Gtk.ListBox {
 		var provider = new Gtk.CssProvider();
 		provider.load_from_data ("
 			.rounded-corners {
-    			/*background-color: #aabbcc;*/
-    			border-radius: 5px;
+    			background-color: #aabbcc;
+    			border-radius: 10px;
+    		}
 
-   
-			}
+    		.insensitve {
+    			color: #ccc;
+    		}
 		", 400);
 
-		get_style_context().add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+		get_style_context().add_provider_for_screen (get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 		get_style_context().add_class ("rounded-corners");
 
 		valign = Gtk.Align.START;
@@ -59,9 +61,73 @@ public class LanguageList : Gtk.ListBox {
 
 	public void add_locale (string locale) {
 		var l_entry = new LocaleEntry(locale);
-		l_entry.set_region.connect (on_set_region);
+
+		l_entry.language_changed.connect (on_language_changed);
+		l_entry.format_changed.connect (on_format_changed);
+		l_entry.input_changed.connect (on_input_changed);
+
 		add (l_entry);
 		show_all();
+	}
+
+	void on_language_changed (string lang) {
+		@foreach ((row) => {
+			if (row is InstallEntry) {
+				return;
+			}
+
+			var locale = row as LocaleEntry;
+
+			// uncheck other languages
+			if (locale.locale == lang) {
+				locale.check_button.set_active (true);
+			} else {
+				locale.check_button.set_active (false);
+
+			}
+
+		});
+		
+	}
+
+	void on_format_changed (string lang) {
+		@foreach ((row) => {
+			if (row is InstallEntry) {
+				return;
+			}
+
+			var locale = row as LocaleEntry;
+
+			// uncheck other languages
+			if (locale.locale != lang) {
+				locale.format_button.get_style_context ().add_class ("insensitve");
+				//locale.format_button.set_active (false);
+			} else {
+				locale.format_button.get_style_context ().remove_class ("insensitve");
+
+			}
+
+		});
+	}
+
+	void on_input_changed (string lang) {
+		@foreach ((row) => {
+			if (row is InstallEntry) {
+				return;
+			}
+
+			var locale = row as LocaleEntry;
+
+			// uncheck other languages
+			if (locale.locale.substring (0,2) != lang.substring (0,2)) {
+				locale.input_button.get_style_context ().add_class ("insensitve");
+				//locale.format_button.set_active (false);
+			} else {
+				locale.input_button.get_style_context ().remove_class ("insensitve");
+
+			}
+
+		});
 	}
 
 	void on_set_region (string region) {
