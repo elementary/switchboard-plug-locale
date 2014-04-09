@@ -8,7 +8,7 @@ public class Utils : Object{
 		lang_map = new Gee.HashMap<string,string> (null, null);
 		country_map = new Gee.HashMap<string,string> (null, null);
 
-
+/*
 		Xml.Doc* doc = Xml.Parser.parse_file ("/usr/share/xml/iso-codes/iso_639_3.xml");
 		var node = doc->get_root_element ();
 
@@ -66,7 +66,7 @@ public class Utils : Object{
             //message("%s:%s",code, descr);
             country_map.set (code, descr);
         }
-
+*/
 
 	}
 	
