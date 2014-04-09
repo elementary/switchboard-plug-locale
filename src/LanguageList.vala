@@ -9,6 +9,8 @@ public class LanguageList : Gtk.ListBox {
 
 	InstallEntry install_entry;
 
+	string processing_language = "";
+
 	public LanguageList () {
 		set_activate_on_single_click(true);
 		set_sort_func (sort_func);
@@ -38,12 +40,22 @@ public class LanguageList : Gtk.ListBox {
 
 		li = new LanguageInstaller ();
 		li.install_finished.connect (on_install_finished);
+		li.remove_finished.connect (on_remove_finished);
 		
 		install_entry = new InstallEntry();
 		language_popover = new InstallPopover (install_entry);
 		language_popover.language_selected.connect (on_install_language);
 		add (install_entry);
 	
+	}
+
+	public void reload_locales () {
+		var langs = Utils.get_installed_languages ();
+
+        foreach (var lang in langs) {
+            add_locale (lang);
+            //message("Languags: %s", lang);
+        }
 	}
 
 	public override void row_activated (Gtk.ListBoxRow row) {
@@ -56,13 +68,38 @@ public class LanguageList : Gtk.ListBox {
 	}
 
 	void on_install_language (string lang) {
-		install_entry.install_started ();
+		processing_language = lang;
+		install_entry.install_started (lang);
 		li.install (lang);
 		
 	}
 
-	void on_install_finished () {
-		install_entry.install_complete ();
+	void on_install_finished (bool success, string? message) {
+		
+		if (success) {
+			install_entry.install_complete ();
+			reload_locales ();		
+		} else {
+			install_entry.set_error (message);
+		}
+
+		processing_language = "";
+
+
+	}
+
+	void on_deletion_requested (string locale) {
+		processing_language = locale;
+		install_entry.remove_started (locale);
+		li.remove (locale);
+	}
+
+	void on_remove_finished () {
+		install_entry.remove_finished();
+		var widget = locales.@get (processing_language);
+		remove (widget);
+		locales.unset (processing_language);
+		processing_language = "";
 	}
 
 	bool filter_func (Gtk.ListBoxRow row) {
@@ -75,7 +112,14 @@ public class LanguageList : Gtk.ListBox {
 	}
 
 	public void add_locale (string locale) {
+
+		if (locales.has_key (locale)) {
+			return;
+		}
+
 		var l_entry = new LocaleEntry(locale);
+
+		locales.@set (locale, l_entry);
 
 		l_entry.language_changed.connect (on_language_changed);
 		l_entry.format_changed.connect (on_format_changed);
@@ -83,12 +127,10 @@ public class LanguageList : Gtk.ListBox {
 		l_entry.deletion_requested.connect (on_deletion_requested);
 
 		add (l_entry);
-		show_all();
+		l_entry.show_all ();
 	}
 
-	void on_deletion_requested (string locale) {
-		li.remove (locale);
-	}
+
 
 	void on_language_changed (string lang) {
 		@foreach ((row) => {
@@ -158,7 +200,10 @@ public class LanguageList : Gtk.ListBox {
 	int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
 		var first = row1 as LanguageEntry;
 		var second = row2 as LanguageEntry;
-		var diff = (int) (first.locale.collate(second.locale) );
+
+		var string1 = first.region + " " + first.country;
+		var string2 = second.region + " " + second.country;
+		var diff = (int) (string1.collate (string2) );
 		return diff;
 	}
 

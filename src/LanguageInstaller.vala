@@ -5,15 +5,15 @@ public class LanguageInstaller : Object {
 
 	Permission permission;
 
-	public signal void install_finished ();
+	public signal void install_finished (bool success, string? message);
 	public signal void remove_finished ();
 
 	
 	public LanguageInstaller () {
 		ui = new UbuntuInstaller ();
 
-		ui.install_finished.connect (() => {
-			install_finished ();
+		ui.install_finished.connect ((s, m) => {
+			install_finished (s, m);
 		});
 
 		ui.remove_finished.connect (() => {
@@ -31,7 +31,7 @@ public class LanguageInstaller : Object {
 
 		//var install = ui.get_remaining_packages (language);
 
-		//ui.install (install);
+		ui.install (language);
 
 		
 	}

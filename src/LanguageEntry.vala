@@ -7,7 +7,8 @@ public class LanguageEntry : Gtk.ListBoxRow {
 
 	public bool selected = false;
 	public string locale {get; set;}
-
+	public string region = "";
+	public string country = "";
 
 	public LanguageEntry () {
 		box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);

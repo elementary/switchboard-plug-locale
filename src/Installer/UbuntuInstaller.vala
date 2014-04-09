@@ -1,4 +1,4 @@
-public class UbuntuInstaller : Object {
+public class UbuntuInstaller : Backend {
 
 		static const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
 	static const string LOCALES_INSTALLER = "/usr/share/locales/install-language-pack";
@@ -8,28 +8,21 @@ public class UbuntuInstaller : Object {
 
 	AptdProxy aptd;
 
-public signal void install_finished ();
+public signal void install_finished (bool success, string? msg);
 	public signal void remove_finished ();
+
+	string msg;
+	bool success = true;
 
 	public UbuntuInstaller () {
 		aptd = new AptdProxy ();
 		aptd.connect_to_aptd ();
 	}
 
-	public bool install (string packages_string) {
-		message("Packages to install: %s", packages_string);
-		var packages = packages_string.split (" ");
-		packages[packages.length - 1] = null;
+	public override void install (string language) {
+		var remaining = get_remaining_packages (language);
+		var packages = remaining.strip ().split (" ");
 
-	/*	var copy = new string[packages.length+1];
-		int i = 0;
-		foreach (var packet in packages) {
-			copy[i++] = packet;
-		}
-
-		copy[packages.length] = null;
-
-	*/
 		foreach (var packet in packages) {
 			message("Packet: %s", packet);
 		}
@@ -45,16 +38,16 @@ public signal void install_finished ();
 			warning (test);
 
 		});
-		return true;
+
 	}
 
-	public bool remove (string language) {
+	public override void remove (string languagecode) {
 
-		var inst = get_installed_packages (language);
-		message (inst);
+		var inst = get_installed_packages (languagecode);
+		//message (inst);
 		var installed = inst.strip().split(" ");
-		var miss = get_remaining_packages (language);
-		message (miss);
+		var miss = get_remaining_packages (languagecode);
+		//message (miss);
 		var missing = miss.strip().split(" ");
 
 
@@ -84,25 +77,37 @@ public signal void install_finished ();
 			return true;
 		});
 
+		try {
+			aptd.remove_packages.begin (remove_list, (obj, res) => {
+				var test = aptd.remove_packages.end (res);
+				var proxy = new AptdTransactionProxy ();
+				proxy.finished.connect (on_apt_remove_finshed);
+				proxy.connect_to_aptd (test);
+				proxy.simulate ();
+				proxy.run ();
+
+
+				warning (test);
+
+			});
+		} catch (Error e) {
+			warning ("Error %s", e.message);
+			success = false;
+			msg = e.message;
+		}
+
 		
 
-		aptd.remove_packages.begin (remove_list, (obj, res) => {
-			var test = aptd.remove_packages.end (res);
-			var proxy = new AptdTransactionProxy ();
-			proxy.finished.connect (on_apt_finshed);
-			proxy.connect_to_aptd (test);
-			proxy.simulate ();
-			proxy.run ();
+	}
 
-			warning (test);
-
-		});
-		return true;
+	void on_apt_remove_finshed (string id) {
+		message ("REMOVE ID finished: %s", id);
+		remove_finished ();
 	}
 
 	void on_apt_finshed (string id) {
-		message ("Transaction ID finished: %s", id);
-		install_finished ();
+		message ("INSTALL ID finished: %s", id);
+		install_finished (success, msg);
 	}
 
 

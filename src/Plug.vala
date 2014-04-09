@@ -128,12 +128,7 @@ public class Locale.Plug : Switchboard.Plug {
         //var langs = Gnome.Languages.get_all_locales ();
         var utils = new Utils ();
         
-        var langs = Utils.get_installed_languages ();
-
-        foreach (var lang in langs) {
-            locales_box.add_locale (lang);
-            message("Languags: %s", lang);
-        }
+        locales_box.reload_locales ();
 
     }
     
@@ -176,7 +171,11 @@ public class Locale.Plug : Switchboard.Plug {
         box.pack_start (locales_box, true, true);
 
         sw.add (box);
-        sw.show_all ();
+
+        choose_hint.show ();
+        locales_box.show ();
+        box.show ();
+        sw.show ();
     }
 }
 

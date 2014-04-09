@@ -1,7 +1,6 @@
 public class LocaleEntry : LanguageEntry {
 
-	string region;
-	string country;
+
 
 	public Gtk.ToggleButton input_button;
 	public Gtk.ToggleButton format_button;

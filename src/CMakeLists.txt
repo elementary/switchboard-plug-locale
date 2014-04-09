@@ -23,6 +23,7 @@ vala_precompile (VALA_C
     LanguageInstaller.vala
     Installer/UbuntuInstaller.vala
     Installer/aptd-client.vala
+    Installer/Backend.vala
     Utils.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
