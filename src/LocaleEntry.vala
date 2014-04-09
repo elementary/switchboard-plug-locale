@@ -5,6 +5,7 @@ public class LocaleEntry : LanguageEntry {
 
 	public Gtk.ToggleButton input_button;
 	public Gtk.ToggleButton format_button;
+	public Gtk.Button delete_button;
 	public Gtk.CheckButton check_button;
 
 	Gtk.Label country_label;
@@ -17,6 +18,7 @@ public class LocaleEntry : LanguageEntry {
 	public signal void language_changed (string region);
 	public signal void format_changed (string region);
 	public signal void input_changed (string region);
+	public signal void deletion_requested (string region);
 
 	public LocaleEntry (string _locale) {
 		locale = _locale;
@@ -34,13 +36,13 @@ public class LocaleEntry : LanguageEntry {
 
 		action_box.pack_start (check_button, false, false);
 
-		country_label = new Gtk.Label (country);
+		country_label = new Gtk.Label (Utils.get_default ().translate_country (country));
 		country_label.halign = Gtk.Align.START;
 
-		region_label = new Gtk.Label (region);
+		region_label = new Gtk.Label (Utils.get_default ().translate_language (region));
 		region_label.halign = Gtk.Align.START;
 
-		region_label.set_markup ("<b>%s</b>".printf(region));
+		region_label.set_markup ("<b>%s</b>".printf(region_label.label));
 
 
 		description_box.pack_start (region_label);
@@ -48,6 +50,8 @@ public class LocaleEntry : LanguageEntry {
 
 		var input_image = new Gtk.Image.from_icon_name ("input-keyboard-symbolic", Gtk.IconSize.MENU);
 		var format_image = new Gtk.Image.from_icon_name ("format-justify-fill-symbolic", Gtk.IconSize.MENU);
+		var delete_image = new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.MENU);
+
 
 		
 		input_button = new Gtk.ToggleButton();
@@ -68,8 +72,17 @@ public class LocaleEntry : LanguageEntry {
 			format_changed (locale);
 		});
 
+		delete_button = new Gtk.ToggleButton();
+		delete_button.get_style_context ().remove_class ("button");
+		delete_button.set_image (delete_image);
+		delete_button.sensitive = true;
+		delete_button.clicked.connect (() => {
+			deletion_requested (locale);
+		});
+
 		settings_box.pack_start (format_button);
 		settings_box.pack_start (input_button);
+		settings_box.pack_start (delete_button);
 
 	}
 }

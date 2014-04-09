@@ -8,6 +8,8 @@ public class InstallPopover : Gtk.Popover {
 	string search_string = " ";
 
 	LanguageInstaller li;
+
+	public signal void language_selected (string lang);
 	
 	public InstallPopover (Gtk.Widget relative_to) {
 		Object (relative_to: relative_to);
@@ -51,7 +53,8 @@ public class InstallPopover : Gtk.Popover {
 	void row_activated (Gtk.ListBoxRow row) {
 		var language_row = row as LanguageRow;
 
-		li.install (language_row.lang);
+		//li.install (language_row.locale);
+		language_selected (language_row.locale);
 		hide ();
 	}
 
@@ -94,7 +97,7 @@ public class InstallPopover : Gtk.Popover {
 
         	if (line.substring(0,1) != "#") {
         		var values = line.split (";");
-        		languages_box.add (new LanguageRow (values[0]));
+        		languages_box.add (new LanguageRow (values[0], values[2]));
         		//stdout.printf ("%s\n", values[0]);
         	}
             
@@ -114,11 +117,13 @@ public class InstallPopover : Gtk.Popover {
 public class LanguageRow : Gtk.ListBoxRow {
 
 	public string lang;
+	public string locale;
 
 	Gtk.Label language_label;
 
-	public LanguageRow (string language) {
+	public LanguageRow (string language, string _locale) {
 		lang = language;
+		locale = _locale;
 		get_style_context ().add_class ("background");
 
 		language_label = new Gtk.Label (language);

@@ -5,6 +5,10 @@ public class LanguageList : Gtk.ListBox {
 	InstallPopover language_popover;
 	int visible_count = 0;
 
+	LanguageInstaller li;
+
+	InstallEntry install_entry;
+
 	public LanguageList () {
 		set_activate_on_single_click(true);
 		set_sort_func (sort_func);
@@ -15,8 +19,7 @@ public class LanguageList : Gtk.ListBox {
 		var provider = new Gtk.CssProvider();
 		provider.load_from_data ("
 			.rounded-corners {
-    			background-color: #aabbcc;
-    			border-radius: 10px;
+    			border-radius: 5px;
     		}
 
     		.insensitve {
@@ -33,10 +36,12 @@ public class LanguageList : Gtk.ListBox {
 
 		locales = new Gee.HashMap<string, LocaleEntry> ();
 
-
+		li = new LanguageInstaller ();
+		li.install_finished.connect (on_install_finished);
 		
-		var install_entry = new InstallEntry();
+		install_entry = new InstallEntry();
 		language_popover = new InstallPopover (install_entry);
+		language_popover.language_selected.connect (on_install_language);
 		add (install_entry);
 	
 	}
@@ -50,9 +55,19 @@ public class LanguageList : Gtk.ListBox {
 		}
 	}
 
+	void on_install_language (string lang) {
+		install_entry.install_started ();
+		li.install (lang);
+		
+	}
+
+	void on_install_finished () {
+		install_entry.install_complete ();
+	}
+
 	bool filter_func (Gtk.ListBoxRow row) {
 		if (visible_count >= 5) {
-			return false;
+			//return false;
 		}
 
 		visible_count++;
@@ -65,9 +80,14 @@ public class LanguageList : Gtk.ListBox {
 		l_entry.language_changed.connect (on_language_changed);
 		l_entry.format_changed.connect (on_format_changed);
 		l_entry.input_changed.connect (on_input_changed);
+		l_entry.deletion_requested.connect (on_deletion_requested);
 
 		add (l_entry);
 		show_all();
+	}
+
+	void on_deletion_requested (string locale) {
+		li.remove (locale);
 	}
 
 	void on_language_changed (string lang) {

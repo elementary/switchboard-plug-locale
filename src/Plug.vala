@@ -68,7 +68,7 @@ public class Locale.Plug : Switchboard.Plug {
                 description: _("Shows locales information…"),
                 icon: "preferences-desktop-locale");
 
-        lm = LocaleManager.init ();
+        
     }
 
     void session_proxy_ready () {
@@ -116,21 +116,29 @@ public class Locale.Plug : Switchboard.Plug {
     
     public override Gtk.Widget get_widget () {
         if (sw == null) {
-            //setup_info ();
             setup_ui ();
+            setup_info ();
         }
         return sw;
     }
-    
-    public override void shown () {
-                //init_dbus ();
 
-        var langs = Gnome.Languages.get_all_locales ();
+    void setup_info () {
+        lm = LocaleManager.init ();
+
+        //var langs = Gnome.Languages.get_all_locales ();
+        var utils = new Utils ();
+        
+        var langs = Utils.get_installed_languages ();
 
         foreach (var lang in langs) {
             locales_box.add_locale (lang);
             message("Languags: %s", lang);
         }
+
+    }
+    
+    public override void shown () {
+        
     }
     
     public override void hidden () {
@@ -154,7 +162,7 @@ public class Locale.Plug : Switchboard.Plug {
         sw = new Gtk.ScrolledWindow (null, null);
 
         box = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
-        box.get_style_context ().add_class ("background");
+        //box.get_style_context ().add_class ("background");
         box.margin = 24;
         message("before lang list");
         locales_box = new LanguageList ();
