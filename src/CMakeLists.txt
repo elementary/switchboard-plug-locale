@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice polkit-gobject-1)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice)
 
 add_definitions (${DEPS_CFLAGS} -DGNOME_DESKTOP_USE_UNSTABLE_API -w)
 link_directories (${DEPS_LIBRARY_DIRS} /usr/share/polkit-1)
@@ -14,7 +14,7 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C
     Plug.vala
-    LocaleEntry.vala
+    BaseEntry.vala
     LanguageList.vala
     LanguageEntry.vala
     LocaleManager.vala
@@ -33,7 +33,7 @@ PACKAGES
 	gnome-desktop-3.0
     accountsservice
     posix
-    polkit-gobject-1
+    #polkit-gobject-1
 OPTIONS
 	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
     --thread

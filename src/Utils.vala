@@ -88,6 +88,24 @@ public class Utils : Object{
 		return output.split("\n");
 	}
 
+	public static string[] get_installed_locales () {
+
+		string output;
+		int status;
+
+		Pid pid;
+		Process.spawn_sync (null, 
+			{"/usr/share/language-tools/language-options" , null}, 
+			Environ.get (),
+			SpawnFlags.SEARCH_PATH,
+			null,
+			out output,
+			null,
+			out status);
+		message( "output: %s", output);
+		return output.split("\n");
+	}
+
 	public string translate_language (string lang) {
 		message ("looking up: lang %s", lang);
 		if (lang_map.has_key (lang)) {

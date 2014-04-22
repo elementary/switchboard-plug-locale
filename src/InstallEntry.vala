@@ -1,4 +1,4 @@
-public class InstallEntry : LanguageEntry {
+public class InstallEntry : BaseEntry {
 
 
 	Gtk.Label action_label;
@@ -18,10 +18,10 @@ public class InstallEntry : LanguageEntry {
 		spinner = new Gtk.Spinner ();
 
 		var image = new Gtk.Image.from_icon_name ("browser-download", Gtk.IconSize.BUTTON);
-		action_box.pack_start (image);
+		//action_box.pack_start (image);
 
 		var label = new Gtk.Label (_("Install more languages…"));
-		description_box.pack_start (label);
+		right_box.pack_start (label);
 
 		action_label = new Gtk.Label ("");
 		settings_box.pack_start (help_image);

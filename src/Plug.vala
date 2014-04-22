@@ -128,7 +128,7 @@ public class Locale.Plug : Switchboard.Plug {
         //var langs = Gnome.Languages.get_all_locales ();
         var utils = new Utils ();
         
-        locales_box.reload_locales ();
+        locales_box.reload_languages();
 
     }
     
@@ -164,13 +164,33 @@ public class Locale.Plug : Switchboard.Plug {
         locales_box.valign = Gtk.Align.START;
         //locales_box.margin = 12;
         message("after list");
-        choose_hint = new Gtk.Label (_("Choose your language:"));
-        choose_hint.halign = Gtk.Align.START;
-        box.pack_start (choose_hint, false, false);
+
+        // positioning hack
+        var label_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        label_box.homogeneous = true;
+        var label_right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        label_right_box.homogeneous = true;
+
+        var choose_language_hint = new Gtk.Label (_("Choose your language:"));
+        var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
+        var choose_input_hint = new Gtk.Label (_("Keyboard input:"));
+
+        choose_language_hint.halign = Gtk.Align.START;
+        choose_format_hint.halign = Gtk.Align.START;
+        choose_input_hint.halign = Gtk.Align.START;
+
+
+        label_box.pack_start (choose_language_hint, true, true);
+        label_box.pack_start (label_right_box, true, true);
+
+        label_right_box.pack_start (choose_format_hint, true, true);
+        label_right_box.pack_start (choose_input_hint, true, true);
+        box.pack_start (label_box, false, false);
 
         box.pack_start (locales_box, true, true);
 
         sw.add (box);
+        label_box.show_all ();
 
         choose_hint.show ();
         locales_box.show ();
