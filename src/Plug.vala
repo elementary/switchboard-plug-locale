@@ -123,7 +123,8 @@ public class Locale.Plug : Switchboard.Plug {
     }
 
     void setup_info () {
-        lm = LocaleManager.init ();
+        lm = new LocaleManager();
+        //locales_box.lm = lm;
 
         //var langs = Gnome.Languages.get_all_locales ();
         var utils = new Utils ();
@@ -189,6 +190,12 @@ public class Locale.Plug : Switchboard.Plug {
 
         box.pack_start (locales_box, true, true);
 
+        var apply_button = new Gtk.Button.with_label (_("Apply system-wide"));
+        apply_button.clicked.connect (on_applied_to_systen);
+        box.pack_start (apply_button, false, false);
+
+        apply_button.show_all ();
+
         sw.add (box);
         label_box.show_all ();
 
@@ -196,6 +203,10 @@ public class Locale.Plug : Switchboard.Plug {
         locales_box.show ();
         box.show ();
         sw.show ();
+    }
+
+    void on_applied_to_systen () {
+        lm.apply_user_to_system ();
     }
 }
 

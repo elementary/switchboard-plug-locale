@@ -11,6 +11,20 @@ public class LanguageList : Gtk.ListBox {
 
 	string processing_language = "";
 
+	string? language;
+	string? format;
+	string? input;
+
+	public static Gtk.RadioButton language_button = new Gtk.RadioButton (null);
+	public static Gtk.RadioButton format_button = new Gtk.RadioButton (null);
+	public static Gtk.RadioButton input_button = new Gtk.RadioButton (null);
+
+
+	Gee.HashMap<string, string?> input_sources;
+
+
+	public LocaleManager lm;
+
 	public LanguageList () {
 		set_activate_on_single_click(true);
 		set_sort_func (sort_func);
@@ -37,21 +51,47 @@ public class LanguageList : Gtk.ListBox {
 		get_style_context().add_provider_for_screen (get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 		get_style_context().add_class ("rounded-corners");
 
+
+
 		valign = Gtk.Align.START;
 		vexpand = true;
 		hexpand = false;
 
 		languages = new Gee.HashMap<string, LanguageEntry> ();
+		input_sources = new Gee.HashMap<string, string?> ();
 
 		li = new LanguageInstaller ();
 		li.install_finished.connect (on_install_finished);
 		li.remove_finished.connect (on_remove_finished);
+		lm = LocaleManager. init();
+		lm.loaded_user.connect (on_user_settings_loaded);
 		
 		install_entry = new InstallEntry();
 		language_popover = new InstallPopover (install_entry);
 		language_popover.language_selected.connect (on_install_language);
 		add (install_entry);
+
 	
+	}
+
+	bool update_lock = false;
+
+	void on_user_settings_loaded (string language, string format) {
+
+
+		@foreach ((child) => {
+			if (child is InstallEntry)
+				return;
+
+			var entry = child as LanguageEntry;
+			message("%s",entry.langcode);
+			update_lock = true;
+			entry.set_display_region (language);
+			entry.set_display_format (format.substring (0, 5));
+			//set_display_input ("us");
+			update_lock = false;
+		});
+
 	}
 
 	public void reload_languages () {
@@ -60,8 +100,14 @@ public class LanguageList : Gtk.ListBox {
         foreach (var lang in langs) {
         	message("Language: %s", lang);
             add_locale (lang);
-            
         }
+
+        var locale = lm.get_user_language ();
+
+        var entry = languages.@get (locale.substring (0, 2));
+        entry.set_display_region (locale);
+
+
 	}
 
 	public override void row_activated (Gtk.ListBoxRow row) {
@@ -124,15 +170,16 @@ public class LanguageList : Gtk.ListBox {
 			message ("Language %s found, adding region %s", locale, language);
 			var entry = languages.@get (language);
 			entry.add_region (locale);
+
 			return;
 		}
 
-		var l_entry = new LanguageEntry(locale);
+		var l_entry = new LanguageEntry(locale, this);
 
-		languages.@set (locale, l_entry);
+		languages.@set (language, l_entry);
 
 		l_entry.language_changed.connect (on_language_changed);
-		l_entry.format_changed.connect (on_format_changed);
+		//l_entry.format_changed.connect (on_format_changed);
 		l_entry.input_changed.connect (on_input_changed);
 		l_entry.deletion_requested.connect (on_deletion_requested);
 
@@ -143,70 +190,58 @@ public class LanguageList : Gtk.ListBox {
 
 
 	void on_language_changed (UpdateType type, string lang) {
+		if (update_lock) {
+			return;
 
+		}
 		message ("Language changed to: %s", lang);
-		@foreach ((row) => {
-			if (row is InstallEntry) {
-				return;
-			}
 
-			var locale = row as LanguageEntry;
 
-			// uncheck other languages
-			if (locale.locale == lang) {
-				//locale.check_button.set_active (true);
-			} else {
-				//locale.check_button.set_active (false);
+		switch (type) {
+			case UpdateType.LANGUAGE:
+				message("lang");
+				var lm = LocaleManager.init ();
+				lm.set_user_language (lang);
+				break;
+			case UpdateType.FORMAT:
+				message("format");
+				var lm = LocaleManager.init ();
+				//lm.set_user_location (lang);
+				//lm.set_user_region (lang);
+				lm.set_user_format (lang+".UTF-8");
+				break;
+			case UpdateType.INPUT:
+				message("input");
+				break;
+		}
 
-			}
+			
 
-		});
 		
 	}
 
-	void on_format_changed (string lang) {
-		@foreach ((row) => {
-			if (row is InstallEntry) {
-				return;
-			}
 
-			var locale = row as LanguageEntry;
+	void on_input_changed (string langcode, string inputcode, bool added) {
+		if (!added) {
+			input_sources.@unset (langcode);
+		} else {
 
-			// uncheck other languages
-			if (locale.locale != lang) {
-				//locale.format_button.get_style_context ().add_class ("insensitve");
-				//locale.format_button.set_active (false);
-			} else {
-				//locale.format_button.get_style_context ().remove_class ("insensitve");
+			input_sources.@set (langcode, inputcode);
+		}
 
-			}
+		VariantBuilder builder = new VariantBuilder (new VariantType ("a(ss)") );		
+		input_sources.@foreach((entry) => {
+			message ("('%s', '%s')", "xkb", entry.value);
+			builder.add ("(ss)", "xkb", entry.value);
+			return true;
+		});	
 
-		});
-	}
-
-	void on_input_changed (string lang) {
-		@foreach ((row) => {
-			if (row is InstallEntry) {
-				return;
-			}
-
-			var locale = row as LanguageEntry;
-
-			// uncheck other languages
-			if (locale.locale.substring (0,2) != lang.substring (0,2)) {
-				//locale.input_button.get_style_context ().add_class ("insensitve");
-				//locale.format_button.set_active (false);
-			} else {
-				//locale.input_button.get_style_context ().remove_class ("insensitve");
-
-			}
-
-		});
+		var lm = LocaleManager.init ();
+		lm.set_input_language (builder.end ());
 	}
 
 	void on_set_region (string region) {
-		var lm = LocaleManager.init ();
-		lm.set_user_location (region);
+		
 	}
 
 	int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {

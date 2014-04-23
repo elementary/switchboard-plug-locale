@@ -33,6 +33,7 @@ public class BaseEntry : Gtk.ListBoxRow {
 		inner_box.pack_start (left_box, true, true);
 
 		right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+		right_box.homogeneous = true;
 		//right_box.get_style_context ().add_class ("bg2");
 		inner_box.pack_start (right_box, true, true);
 

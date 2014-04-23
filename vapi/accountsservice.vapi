@@ -32,6 +32,7 @@ namespace Act {
 		public void set_account_type (Act.UserAccountType account_type);
 		public void set_automatic_login (bool enabled);
 		public void set_email (string email);
+		public void set_formats_locale (string formats_locale);
 		public void set_icon_file (string icon_file);
 		public void set_language (string language);
 		public void set_location (string location);
