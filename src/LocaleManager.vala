@@ -26,6 +26,7 @@ public class LocaleManager : Object {
 	static const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
 	static const string KEY_CURRENT_INPUT = "current";
 	static const string KEY_INPUT_SOURCES = "sources";
+    const string KEY_INPUT_SELETION = "input-selections";
 
 	DBusProxy localed_proxy;
 	private LocaleProxy locale_proxy;
@@ -38,11 +39,14 @@ public class LocaleManager : Object {
 
 	Settings locale_settings;
 	Settings input_settings;
+	Settings settings;
 
 	Gnome.XkbInfo xkbinfo;
 
-	public signal void loaded_user (string language, string format);
+	public signal void loaded_user (string language, string format, Gee.HashMap<string, string> inputs);
 	
+
+
 	public LocaleManager () {
 
 		xkbinfo = new Gnome.XkbInfo ();
@@ -55,36 +59,17 @@ public class LocaleManager : Object {
 		locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
 		input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
-		DBusProxy.create_for_bus.begin (BusType.SYSTEM,
-			DBusProxyFlags.NONE,
-			null,
-			"org.freedesktop.locale1",
-			"/org/freedesktop/locale1",
-			"org.freedesktop.locale1",
-			null,
-			(obj, res) => {
-				localed_proxy = DBusProxy.create_for_bus.end (res);
-				
-				if (localed_proxy == null) {
-					warning ("Failed to connect to localed:");
-				}
-
-				//localed_proxy.g_properties_changed.connect (on_localed_properties_changed);
-				//on_localed_properties_changed (null, null);
-				message("dbus connected");
-			}
-		);
-
 		Bus.get_proxy<AccountProxy> (BusType.SYSTEM,
 			"org.freedesktop.locale1",
 			"/org/freedesktop/locale1",
 			0,
 			null,
 			(obj, res) => {
-				locale_proxy = Bus.get_proxy.end (res);
-
-				//loaded_user (account_proxy.language, account_proxy.formats_locale);
-							//message(account_proxy.formats_locale);
+				try {
+					locale_proxy = Bus.get_proxy.end (res);
+				} catch (Error e) {
+					warning ("Could not connect to locale bus");
+				}
 
 		});
 
@@ -94,70 +79,67 @@ public class LocaleManager : Object {
 			0,
 			null,
 			(obj, res) => {
-				account_proxy = Bus.get_proxy.end (res);
-
-				loaded_user (account_proxy.language, account_proxy.formats_locale);
-							//message(account_proxy.formats_locale);
-
-		});
-
-
-/*
-		DBusProxy.create_for_bus.begin (BusType.SYSTEM,
-			DBusProxyFlags.NONE,
-			null,
-			"org.freedesktop.Accounts",
-			"/org/freedesktop/Accounts/User"+(string)uid,
-			"org.freedesktop.Accounts.User",
-			null,
-			(obj, res) => {
-				account_proxy = DBusProxy.create_for_bus.end (res);
-				
-				if (account_proxy == null) {
-					warning ("Failed to connect to localed:");
+				try {
+					account_proxy = Bus.get_proxy.end (res);
+					fetch_settings (account_proxy.language, account_proxy.formats_locale);
+				} catch (Error e) {
+					warning ("Could not connect to user account");
 				}
-
-
-
-				//localed_proxy.g_properties_changed.connect (on_localed_properties_changed);
-				//on_localed_properties_changed (null, null);
-				message("dbus connected");
-			}
-		);
-*/
-		ibus = new IBus.Bus.async ();
-
-		if (ibus.is_connected ()) {
-			load_ibus_engines ();
-		} else {
-			ibus.connected.connect (load_ibus_engines);
-		}
-
-	}
-
-	void load_ibus_engines () {
-		ibus.list_engines_async.begin (1000, null, (obj, res) => {
-			var list = ibus.list_engines_async_finish (res);
-
-			list.foreach ((ibus) => {
-
-				message ("Name: %s, Desc: %s", ibus.name, ibus.description);
-
-			});
-
+				
 		});
-	}
 
-	public void set_input_language (Variant input_sources) {
-
-		if (input_sources.get_type_string () == "a(ss)") {
-			input_settings.set_value (KEY_INPUT_SOURCES, input_sources);
-		}
-
-		//set_localed_input ();
-
+		settings = new Settings ("org.pantheon.switchboard.plug.locale");
+        settings.changed.connect (on_settings_changed);
 
 	}
+
+	void fetch_settings (string language, string format) {
+
+            var map_array = settings.get_value (KEY_INPUT_SELETION);
+            var iter = map_array.iterator ();
+
+            string? k = null;
+            string? value = null;
+
+            var map = new Gee.HashMap<string, string> ();
+
+            while (iter.next ("(ss)", &k, &value)) {
+                map.@set (k, value);
+                warning ("clicking %s -> %s", k, value);
+            }
+            
+
+            loaded_user (language, format, map);
+        
+	}
+
+
+	void remove_input_setting (string langcode, string variant) {
+
+	}
+
+	void on_settings_changed (string key) {
+
+        if (key == KEY_INPUT_SELETION) {
+            var map_array = settings.get_value (KEY_INPUT_SELETION);
+            var iter = map_array.iterator ();
+
+            string? k = null;
+            string? value = null;
+
+            var map = new Gee.HashMap<string, string> ();
+
+            while (iter.next ("(ss)", &k, &value)) {
+                map.@set (k, value);
+                warning ("clicking %s -> %s", k, value);
+
+            }
+
+
+            //language_list.select_inputs (map);
+        }
+    }
+
 
 	public void apply_user_to_system () {
 		message("language");
@@ -233,7 +215,9 @@ public class LocaleManager : Object {
 	}
 
 
-	// LANG=
+	/*
+	 * user related stuff
+	 */
 	public void set_user_language (string language) {
 		account_proxy.set_language (language);
 	}
@@ -248,6 +232,55 @@ public class LocaleManager : Object {
 
 	public string get_user_format () {
 		return account_proxy.formats_locale;
+	}
+
+	public Gee.HashMap<string, string> get_user_inputmaps () {
+		var map_array = settings.get_value (KEY_INPUT_SELETION);
+        var iter = map_array.iterator ();
+
+        string? k = null;
+        string? value = null;
+
+        var map = new Gee.HashMap<string, string> ();
+
+        while (iter.next ("(ss)", &k, &value)) {
+            map.@set (k, value);
+            warning ("clicking %s -> %s", k, value);
+
+        }
+
+        return map;
+	}
+
+	public Gee.HashMap<string, string> get_user_inputs () {
+		var map_array = settings.get_value (KEY_INPUT_SOURCES);
+        var iter = map_array.iterator ();
+
+        string? k = null;
+        string? value = null;
+
+        var map = new Gee.HashMap<string, string> ();
+
+        while (iter.next ("(ss)", &k, &value)) {
+            map.@set (k, value);
+            warning ("clicking %s -> %s", k, value);
+
+        }
+
+        return map;
+	}
+
+	public void set_input_language (Variant input_sources, Variant my_map) {
+
+		if (input_sources.get_type_string () == "a(ss)") {
+			input_settings.set_value (KEY_INPUT_SOURCES, input_sources);
+		}
+
+		if (my_map.get_type_string () == "a(ss)") {
+			settings.set_value (KEY_INPUT_SELETION, my_map);
+		}
+
+
 	}
 
 /*

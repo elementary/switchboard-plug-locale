@@ -5,19 +5,12 @@ public class LanguageList : Gtk.ListBox {
 	InstallPopover language_popover;
 	int visible_count = 0;
 
-	LanguageInstaller li;
+	UbuntuInstaller li;
 
 	InstallEntry install_entry;
 
-	string processing_language = "";
-
-	string? language;
-	string? format;
-	string? input;
-
-	public static Gtk.RadioButton language_button = new Gtk.RadioButton (null);
-	public static Gtk.RadioButton format_button = new Gtk.RadioButton (null);
-	public static Gtk.RadioButton input_button = new Gtk.RadioButton (null);
+	public Gtk.RadioButton language_button = new Gtk.RadioButton (null);
+	public Gtk.RadioButton format_button = new Gtk.RadioButton (null);
 
 
 	Gee.HashMap<string, string?> input_sources;
@@ -32,23 +25,6 @@ public class LanguageList : Gtk.ListBox {
 		set_header_func (header_func);
 		set_filter_func (filter_func);
 
-		var provider = new Gtk.CssProvider();
-		provider.load_from_data ("
-			.rounded-corners {
-    			border-radius: 5px;
-    		}
-
-    		.insensitve {
-    			color: #ccc;
-    		}
-
-    		.bg1 {background-color: #444;}
-    		.bg2 {background-color: #666;}
-    		.bg3 {background-color: #888;}
-    		.bg4 {background-color: #aaa;}
-		", 400);
-
-		get_style_context().add_provider_for_screen (get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 		get_style_context().add_class ("rounded-corners");
 
 
@@ -58,27 +34,48 @@ public class LanguageList : Gtk.ListBox {
 		hexpand = false;
 
 		languages = new Gee.HashMap<string, LanguageEntry> ();
+		languages.notify["size"].connect (on_nr_of_languages_changed);
 		input_sources = new Gee.HashMap<string, string?> ();
 
-		li = new LanguageInstaller ();
+		li = new UbuntuInstaller ();
 		li.install_finished.connect (on_install_finished);
 		li.remove_finished.connect (on_remove_finished);
 		lm = LocaleManager. init();
 		lm.loaded_user.connect (on_user_settings_loaded);
 		
 		install_entry = new InstallEntry();
-		language_popover = new InstallPopover (install_entry);
+		language_popover = new InstallPopover (install_entry.label);
+		language_popover.li = li;
 		language_popover.language_selected.connect (on_install_language);
 		add (install_entry);
 
 	
 	}
 
+	void on_nr_of_languages_changed () {
+		if (languages.size < 2) {
+			languages.foreach ((entry) => {
+				entry.value.hide_delete ();
+				return true;
+			});
+		} else {
+			languages.foreach ((entry) => {
+				entry.value.show_delete ();
+				return true;
+			});
+		}
+	}
+
 	bool update_lock = false;
 
-	void on_user_settings_loaded (string language, string format) {
 
 
+	void on_user_settings_loaded (string language, string format, Gee.HashMap<string, string> inputs) {
+
+		select_language (language);
+		select_format (format);
+		select_inputs (inputs);
+/*
 		@foreach ((child) => {
 			if (child is InstallEntry)
 				return;
@@ -91,6 +88,7 @@ public class LanguageList : Gtk.ListBox {
 			//set_display_input ("us");
 			update_lock = false;
 		});
+		*/
 
 	}
 
@@ -98,76 +96,122 @@ public class LanguageList : Gtk.ListBox {
 		var langs = Utils.get_installed_languages ();
 
         foreach (var lang in langs) {
-        	message("Language: %s", lang);
             add_locale (lang);
         }
 
         var locale = lm.get_user_language ();
 
         var entry = languages.@get (locale.substring (0, 2));
-        entry.set_display_region (locale);
 
+        requery_display ();
+
+
+	}
+
+	void requery_display () {
+
+		var lang = lm.get_user_language ();
+		var region = lm.get_user_format ();
+		var inputs = lm.get_user_inputmaps ();
+
+		critical ("Lang %s Format %s Input", lang, region);
+
+		update_lock = true;
+
+		select_language (lang);
+		select_format (region);
+		select_inputs (inputs);
+
+		update_lock = false;
+	}
+
+	/*
+	 * update selections
+	 */
+
+	void select_language (string language) {
+
+		var langcode = language[0:2];
+
+		var lang = languages.get (langcode);
+		lang.set_display_region (language);
+
+	}
+
+	void select_format (string locale) {
+
+		var langcode = locale[0:2];
+
+		var lang = languages.get (langcode);
+		lang.set_display_format(locale[0:5]);
+
+	}
+
+	void select_inputs (Gee.HashMap<string, string> map) {
+		
+		map.@foreach ((entry) => {
+			warning ("clicking %s -> %s", entry.key, entry.value);
+			input_sources.@set (entry.key, entry.value);
+			var lang = languages.get (entry.key);
+			lang.set_display_input (entry.value);
+			return true;
+		});
 
 	}
 
 	public override void row_activated (Gtk.ListBoxRow row) {
+
 		if (row is InstallEntry) {
 			language_popover.show_all ();
 		} else {
 			var locale = row as LanguageEntry;
-			//locale.check_button.set_active (true);
+			locale.check_button.set_active (true);
 		}
+
 	}
 
+
+
 	void on_install_language (string lang) {
-		processing_language = lang;
-		install_entry.install_started (lang);
 		li.install (lang);
 		
 	}
 
-	void on_install_finished (bool success, string? message) {
+	void on_install_finished (string language) {
 		
-		if (success) {
-			install_entry.install_complete ();
-			reload_languages ();		
-		} else {
-			install_entry.set_error (message);
-		}
-
-		processing_language = "";
-
+			reload_languages ();
 
 	}
 
 	void on_deletion_requested (string locale) {
-		processing_language = locale;
-		install_entry.remove_started (locale);
 		li.remove (locale);
 	}
 
-	void on_remove_finished () {
-		install_entry.remove_finished();
-		var widget = languages.@get (processing_language);
+	void on_remove_finished (string langcode) {
+		message("removed %s", langcode);
+		var widget = languages.@get (langcode);
 		remove (widget);
-		languages.unset (processing_language);
-		processing_language = "";
+		languages.unset (langcode);
+
+		if (languages.size == 1) {
+			languages.@foreach ((entry) => {
+				entry.value.hide_delete ();
+				return true;
+			});
+		}
+
 	}
 
 	bool filter_func (Gtk.ListBoxRow row) {
-		if (visible_count >= 5) {
-			//return false;
-		}
 
-		visible_count++;
 		return true;
+
 	}
 
 	public void add_locale (string locale) {
 		var language = locale.substring (0, 2);
 
 		if (languages.has_key (language)) {
-			message ("Language %s found, adding region %s", locale, language);
 			var entry = languages.@get (language);
 			entry.add_region (locale);
 
@@ -185,33 +229,38 @@ public class LanguageList : Gtk.ListBox {
 
 		add (l_entry);
 		l_entry.show_all ();
+
+		if (languages.size == 1) {
+			languages.@foreach ((entry) => {
+				entry.value.hide_delete ();
+				return true;
+			});
+		} else {
+			languages.@foreach ((entry) => {
+				entry.value.show_delete ();
+				return true;
+			});
+		}
+		
 	}
 
 
 
 	void on_language_changed (UpdateType type, string lang) {
+		
 		if (update_lock) {
 			return;
-
 		}
+
 		message ("Language changed to: %s", lang);
 
 
 		switch (type) {
 			case UpdateType.LANGUAGE:
-				message("lang");
-				var lm = LocaleManager.init ();
 				lm.set_user_language (lang);
 				break;
 			case UpdateType.FORMAT:
-				message("format");
-				var lm = LocaleManager.init ();
-				//lm.set_user_location (lang);
-				//lm.set_user_region (lang);
 				lm.set_user_format (lang+".UTF-8");
-				break;
-			case UpdateType.INPUT:
-				message("input");
 				break;
 		}
 
@@ -222,6 +271,10 @@ public class LanguageList : Gtk.ListBox {
 
 
 	void on_input_changed (string langcode, string inputcode, bool added) {
+		if (update_lock) {
+			return;
+		}
+
 		if (!added) {
 			input_sources.@unset (langcode);
 		} else {
@@ -229,20 +282,19 @@ public class LanguageList : Gtk.ListBox {
 			input_sources.@set (langcode, inputcode);
 		}
 
+		VariantBuilder builder2 = new VariantBuilder (new VariantType ("a(ss)") );		
 		VariantBuilder builder = new VariantBuilder (new VariantType ("a(ss)") );		
 		input_sources.@foreach((entry) => {
 			message ("('%s', '%s')", "xkb", entry.value);
+			builder2.add ("(ss)", entry.key, entry.value);
 			builder.add ("(ss)", "xkb", entry.value);
 			return true;
 		});	
 
 		var lm = LocaleManager.init ();
-		lm.set_input_language (builder.end ());
+		lm.set_input_language (builder.end (), builder2.end ());
 	}
 
-	void on_set_region (string region) {
-		
-	}
 
 	int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
 		var first = row1 as BaseEntry;

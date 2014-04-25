@@ -31,89 +31,25 @@ namespace LC {
 
 public class Locale.Plug : Switchboard.Plug {
 
-    private string os;
-    private string website_url;
-    private string bugtracker_url;
-    private string codename;
-    private string version;
-    private string arch;
-    private string processor;
-    private string memory;
-    private string graphics;
-    private string hdd;
-    private Gtk.Label choose_hint;
-    
-    
-    private string is_ubuntu;
-    private string ubuntu_version;
-    private string ubuntu_codename;
-    private Gtk.Box box;
-
     string system_language;
     string system_region;
 
-    private LanguageList locales_box;
-
-    
-    private DBusProxy session_proxy;
-
-    Gtk.ScrolledWindow sw;
+    LanguageList language_list;
 
     LocaleManager lm;
 
+    Gtk.ScrolledWindow sw;
+
     public Plug () {
+
         Object (category: Category.PERSONAL,
                 code_name: "system-pantheon-locale",
                 display_name: _("Locale"),
                 description: _("Shows locales information…"),
                 icon: "preferences-desktop-locale");
-
         
     }
 
-    void session_proxy_ready () {
-
-    }
-
-    void init_dbus () {
-        DBusProxy.create_for_bus.begin (BusType.SESSION,
-            DBusProxyFlags.NONE,
-            null,
-            "org.gnome.SessionManager",
-            "/org/gnome/SessionManager",
-            "org.gnome.SessionManager",
-            null,
-            (obj, res) => {
-                session_proxy = DBusProxy.create_for_bus.end (res);
-                message("dbus connected");
-            }
-         );
-
-        
-    }
-
- 
-
-    void update_language_label () {
-        var language = system_language;
-        string name = "";
-
-        name = Gnome.Languages.get_language_from_locale (language, language);
-   
-        message ("Label Text: %s (%s)", name, system_language);
-
-        update_region_label ();
-    }
-
-    void update_region_label () {
-        var region = system_region;
-        string name = "";
-
-        name = Gnome.Languages.get_country_from_locale (region, region);
-   
-        message ("Region Text: %s (%s)", name, system_region);
-    }
-    
     public override Gtk.Widget get_widget () {
         if (sw == null) {
             setup_ui ();
@@ -124,17 +60,13 @@ public class Locale.Plug : Switchboard.Plug {
 
     void setup_info () {
         lm = new LocaleManager();
-        //locales_box.lm = lm;
-
-        //var langs = Gnome.Languages.get_all_locales ();
-        var utils = new Utils ();
         
-        locales_box.reload_languages();
+        language_list.reload_languages();
 
     }
     
     public override void shown () {
-        
+
     }
     
     public override void hidden () {
@@ -154,23 +86,44 @@ public class Locale.Plug : Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-
         sw = new Gtk.ScrolledWindow (null, null);
 
-        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
-        //box.get_style_context ().add_class ("background");
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
         box.margin = 24;
-        message("before lang list");
-        locales_box = new LanguageList ();
-        locales_box.valign = Gtk.Align.START;
-        //locales_box.margin = 12;
-        message("after list");
+
+        var provider = new Gtk.CssProvider();
+        provider.load_from_data ("
+            .rounded-corners {
+                border-radius: 5px;
+            }
+
+            .insensitve {
+                color: #ccc;
+            }
+
+            .bg1 {background-color: #444;}
+            .bg2 {background-color: #666;}
+            .bg3 {background-color: #888;}
+            .bg4 {background-color: #aaa;}
+        ", 400);
+
+        sw.get_style_context().add_provider_for_screen (sw.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+
+
+
+        language_list = new LanguageList ();
+        language_list.valign = Gtk.Align.START;
+
 
         // positioning hack
-        var label_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        var top_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var label_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         label_box.homogeneous = true;
-        var label_right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        var label_right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         label_right_box.homogeneous = true;
+        //label_right_box.get_style_context().add_class ("bg1");
+
 
         var choose_language_hint = new Gtk.Label (_("Choose your language:"));
         var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
@@ -180,15 +133,20 @@ public class Locale.Plug : Switchboard.Plug {
         choose_format_hint.halign = Gtk.Align.START;
         choose_input_hint.halign = Gtk.Align.START;
 
+        var delete_image = new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.MENU);
+        delete_image.opacity = 0;
+
 
         label_box.pack_start (choose_language_hint, true, true);
         label_box.pack_start (label_right_box, true, true);
+        top_box.pack_start (label_box, true, true);
+        top_box.pack_end (delete_image, false, false);
 
         label_right_box.pack_start (choose_format_hint, true, true);
         label_right_box.pack_start (choose_input_hint, true, true);
-        box.pack_start (label_box, false, false);
+        box.pack_start (top_box, false, false);
 
-        box.pack_start (locales_box, true, true);
+        box.pack_start (language_list, true, true);
 
         var apply_button = new Gtk.Button.with_label (_("Apply system-wide"));
         apply_button.clicked.connect (on_applied_to_systen);
@@ -197,10 +155,9 @@ public class Locale.Plug : Switchboard.Plug {
         apply_button.show_all ();
 
         sw.add (box);
+        top_box.show_all ();
         label_box.show_all ();
-
-        choose_hint.show ();
-        locales_box.show ();
+        language_list.show ();
         box.show ();
         sw.show ();
     }

@@ -7,7 +7,7 @@ public class InstallPopover : Gtk.Popover {
 	int visible_count = 0;
 	string search_string = " ";
 
-	LanguageInstaller li;
+	public UbuntuInstaller li;
 
 	public signal void language_selected (string lang);
 	
@@ -35,8 +35,6 @@ public class InstallPopover : Gtk.Popover {
 
 		add (box);
 
-
-		li = LanguageInstaller.get_default ();
 
 
 		load_languagelist();

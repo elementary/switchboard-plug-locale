@@ -39,12 +39,16 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 # Comment this out to enable C compiler warnings
 add_definitions (-w)
 
+include(GSettings)
+add_schema("data/schema/org.pantheon.switchboard.plug.locale.gschema.xml")
+
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
 # Traslation stuff
 add_subdirectory (po)
+
 # Info-plug
-install (FILES ${resources} DESTINATION ${PKGDATADIR})
+#install (FILES ${resources} DESTINATION ${PKGDATADIR})
 
 add_subdirectory(src)
