@@ -20,7 +20,7 @@ namespace LC {
     public static const string NUMERIC = "LC_NUMERIC";
     public static const string TIME = "LC_TIME";
     public static const string MONETARY = "LC_MONETARY";
-     public static const string MESSAGES = "LC_MESSAGES";
+    public static const string MESSAGES = "LC_MESSAGES";
     public static const string PAPER = "LC_PAPER";
     public static const string NAME = "LC_NAME";
     public static const string ADDRESS = "LC_ADDRESS";
@@ -30,9 +30,6 @@ namespace LC {
 }
 
 public class Locale.Plug : Switchboard.Plug {
-
-    string system_language;
-    string system_region;
 
     LanguageList language_list;
 
@@ -59,9 +56,11 @@ public class Locale.Plug : Switchboard.Plug {
     }
 
     void setup_info () {
-        lm = new LocaleManager();
-        
-        language_list.reload_languages();
+        lm = LocaleManager.get_default ();
+
+        lm.connected.connect (() => {
+            language_list.reload_languages();
+        });
 
     }
     
@@ -91,25 +90,27 @@ public class Locale.Plug : Switchboard.Plug {
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
         box.margin = 24;
 
-        var provider = new Gtk.CssProvider();
-        provider.load_from_data ("
-            .rounded-corners {
-                border-radius: 5px;
-            }
+        try {
+            var provider = new Gtk.CssProvider();
+            provider.load_from_data ("
+                .rounded-corners {
+                    border-radius: 5px;
+                }
 
-            .insensitve {
-                color: #ccc;
-            }
+                .insensitve {
+                    color: #ccc;
+                }
 
-            .bg1 {background-color: #444;}
-            .bg2 {background-color: #666;}
-            .bg3 {background-color: #888;}
-            .bg4 {background-color: #aaa;}
-        ", 400);
+                .bg1 {background-color: #444;}
+                .bg2 {background-color: #666;}
+                .bg3 {background-color: #888;}
+                .bg4 {background-color: #aaa;}
+            ", 400);
 
-        sw.get_style_context().add_provider_for_screen (sw.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-
+            Gtk.StyleContext.add_provider_for_screen (sw.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        } catch (Error e) {
+            warning ("Could not set styles");
+        }
 
 
         language_list = new LanguageList ();

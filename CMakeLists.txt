@@ -49,6 +49,6 @@ file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 add_subdirectory (po)
 
 # Info-plug
-#install (FILES ${resources} DESTINATION ${PKGDATADIR})
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/languagelist DESTINATION ${PKGDATADIR})
 
 add_subdirectory(src)
