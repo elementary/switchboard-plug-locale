@@ -1,10 +1,21 @@
-public class UbuntuInstaller : Backend {
+/***
+  Copyright (C) 2011-2012 Switchboard Locale Plug Developers
+  This program is free software: you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License version 3, as published
+  by the Free Software Foundation.
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranties of
+  MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+  PURPOSE. See the GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License along
+  with this program. If not, see 
+***/
+
+public class UbuntuInstaller : Object {
 
     static const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
     static const string LOCALES_INSTALLER = "/usr/share/locales/install-language-pack";
     static const string LOCALES_REMOVER = "/usr/share/locales/install-language-pack";
-
-    //check-language-support -l fr
 
     AptdProxy aptd;
 
@@ -26,7 +37,7 @@ public class UbuntuInstaller : Backend {
         
     }
 
-    public override void install (string language) {
+    public void install (string language) {
         var packages = get_remaining_packages_for_language (language);
 
         foreach (var packet in packages) {
@@ -40,9 +51,29 @@ public class UbuntuInstaller : Backend {
                 transactions.@set (transaction_id, "i- " + language);
                 run_transaction (transaction_id);
             } catch (Error e) {
-                warning ("Could not queue downloads");
+                warning ("Could not queue downloads: %s", e.message);
             }
             
+
+        });
+
+    }
+
+    public void remove (string languagecode) {
+
+
+        var installed = get_to_remove_packages_for_language (languagecode);
+
+
+        aptd.remove_packages.begin (installed, (obj, res) => {
+
+            try {
+                var transaction_id = aptd.remove_packages.end (res);
+                transactions.@set (transaction_id, "r-"+languagecode);
+                run_transaction (transaction_id);
+            } catch (Error e) {
+                warning ("Could not queue deletions: %s", e.message);
+            }
 
         });
 
@@ -62,29 +93,8 @@ public class UbuntuInstaller : Backend {
             proxy.run ();
         } catch (Error e) {
             on_apt_finshed (transaction_id, false);
-            warning ("Could no run transaction");
+            warning ("Could no run transaction: %s", e.message);
         }
-
-    }
-
-    public override void remove (string languagecode) {
-
-        var installed = get_installed_packages_for_language (languagecode);
-
-        aptd.remove_packages.begin (installed, (obj, res) => {
-
-            try {
-                var transaction_id = aptd.remove_packages.end (res);
-                transactions.@set (transaction_id, "r-"+languagecode);
-                run_transaction (transaction_id);
-            } catch (Error e) {
-                warning ("Could not queue deletions");
-            }
-
-        });
-
-
-        
 
     }
 
@@ -113,7 +123,7 @@ public class UbuntuInstaller : Backend {
             remove_finished (lang);
         }
 
-        //transactions.unset (id);
+        transactions.unset (id);
     }
 
 
@@ -139,6 +149,24 @@ public class UbuntuInstaller : Backend {
 
     }
 
+    string[] get_to_remove_packages_for_language (string language) {
+        var installed = get_installed_packages_for_language (language);
+
+        string[] multilang_packs = { "chromium-browser-l10n", "poppler-data"};
+
+        var removable = new Gee.ArrayList<string> ();
+        foreach (var packet in installed) {
+            if (packet in multilang_packs) {
+                // nothing
+            } else {
+                removable.add (packet);
+            }
+        }
+
+        return removable.to_array ();
+
+    }
+ 
     string[]? get_installed_packages_for_language (string langcode) {
 
         string output;

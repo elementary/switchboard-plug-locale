@@ -1,3 +1,16 @@
+/***
+  Copyright (C) 2011-2012 Switchboard Locale Plug Developers
+  This program is free software: you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License version 3, as published
+  by the Free Software Foundation.
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranties of
+  MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+  PURPOSE. See the GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License along
+  with this program. If not, see 
+***/
+
 public enum UpdateType {
     LANGUAGE,
     FORMAT,
@@ -25,6 +38,7 @@ public class LanguageEntry : BaseEntry {
     // region selection
     public Gtk.RadioButton format_checkbutton;
     Gtk.ComboBox format_combobox;
+    Gtk.ListStore format_store;
 
     // input selection
     public Gtk.CheckButton input_checkbutton;
@@ -40,6 +54,7 @@ public class LanguageEntry : BaseEntry {
     Gtk.TreeIter iter;
 
     Gee.HashMap<string, int> regionbox_map = new Gee.HashMap<string, int> ();
+    Gee.HashMap<string, int> formatbox_map = new Gee.HashMap<string, int> ();
     Gee.HashMap<string, int> inputbox_map = new Gee.HashMap<string, int> ();
 
     public string langcode;
@@ -49,8 +64,9 @@ public class LanguageEntry : BaseEntry {
         langcode = locale.substring (0, 2);
 
         country = Gnome.Languages.get_country_from_locale (locale, null);
-        region = Gnome.Languages.get_language_from_code (locale.substring (0, 2), null);
+        region = Gnome.Languages.get_language_from_code (langcode, null);
 
+        format_store = new Gtk.ListStore (2, typeof (string), typeof (string));
         input_store = new Gtk.ListStore (2, typeof (string), typeof (string));
         list_store = new Gtk.ListStore (2, typeof (string), typeof (string));
 
@@ -75,15 +91,10 @@ public class LanguageEntry : BaseEntry {
         country_combobox = new Gtk.ComboBox.with_model (list_store);
         country_combobox.changed.connect (on_language_changed);
         country_combobox.width_request = 50;
-        country_combobox.halign = Gtk.Align.START;
+        country_combobox.halign = Gtk.Align.END;
+        country_combobox.hexpand = true;
         country_combobox.pack_start (value_renderer, true);
         country_combobox.add_attribute (value_renderer, "text", 0);
-
-        var country_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
-        country_box.halign = Gtk.Align.START;
-        country_box.pack_start (check_button, false, false);
-        country_box.pack_start (region_label, false, false);
-        country_box.pack_start (country_combobox, true, false);
 
         /*
          * Regional format (date, currency, …)
@@ -92,14 +103,14 @@ public class LanguageEntry : BaseEntry {
         format_checkbutton = new Gtk.RadioButton.from_widget (list.format_button);
         format_checkbutton.toggled.connect (on_format_activated);
 
-        format_combobox = new Gtk.ComboBox.with_model (list_store);
+        format_combobox = new Gtk.ComboBox.with_model (format_store);
         format_combobox.changed.connect (on_format_changed);
         format_combobox.pack_start (value_renderer, true);
         format_combobox.add_attribute (value_renderer, "text", 0);
 
-        var format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
-        format_box.pack_start (format_checkbutton, false, false);
-        format_box.pack_start (format_combobox, true, true);
+        var format_grid = new Gtk.Grid ();
+        format_grid.attach (format_checkbutton, 0, 0, 1, 1);
+        format_grid.attach (format_combobox, 1, 0, 1, 1);
 
         /*
          * Input language (Keyboard layout)
@@ -108,22 +119,26 @@ public class LanguageEntry : BaseEntry {
         input_checkbutton = new Gtk.CheckButton ();
         input_checkbutton.toggled.connect (() => {
             on_input_changed ();
-            });
+        });
 
         input_combobox = new Gtk.ComboBox.with_model (input_store);
         input_combobox.changed.connect (on_input_changed);
         input_combobox.pack_start (value_renderer, true);
         input_combobox.add_attribute (value_renderer, "text", 0);
+        input_combobox.hexpand = true;
 
-        var input_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
-        input_box.pack_start (input_checkbutton, false, false);
-        input_box.pack_start (input_combobox, true, true);
+        var input_grid = new Gtk.Grid ();
+        input_grid.attach (input_checkbutton, 0, 0, 1, 1);
+        input_grid.attach (input_combobox, 1, 0, 1, 1);
 
 
-        left_box.pack_start (country_box);
+        //left_grid.attach (country_grid, 0, 0, 1, 1);
+        left_grid.attach (check_button, 0, 0, 1, 1);
+        left_grid.attach (region_label, 1, 0, 1, 1);
+        left_grid.attach (country_combobox, 2, 0, 1, 1);
 
-        right_box.pack_start (format_box);
-        right_box.pack_end (input_box);
+        right_grid.attach (format_grid, 0, 0, 1, 1);
+        right_grid.attach (input_grid, 1, 0, 1, 1);
 
         delete_image = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
 
@@ -135,9 +150,11 @@ public class LanguageEntry : BaseEntry {
             deletion_requested (locale);
         });
 
-        settings_box.pack_start (delete_button);
+        settings_grid.pack_start (delete_button);
 
-        add_region (locale);
+        add_language (locale);
+
+        show_all ();
     }
 
     void reload_input () {
@@ -151,7 +168,6 @@ public class LanguageEntry : BaseEntry {
             string xkb_variant;
 
             xkb.get_layout_info (input, out display_name, out short_name, out xkb_layout, out xkb_variant);
-            //message("%s - %s - %s - %s", display_name, short_name, xkb_layout, xkb_variant);
             
             if (xkb_layout == "us" && langcode != "en") {
                 // skip english international
@@ -174,11 +190,8 @@ public class LanguageEntry : BaseEntry {
         update_lock = true;
 
         if (regionbox_map.has_key (locale)) {
-            message("must set region to %s", locale);
             country_combobox.active = regionbox_map.@get (locale);
             check_button.active = true;
-        } else {
-            warning ("%s has no region %s", langcode, locale);
         }
 
         update_lock = false;
@@ -189,7 +202,7 @@ public class LanguageEntry : BaseEntry {
 
         update_lock = true;
 
-        format_combobox.active = regionbox_map.@get (locale);
+        format_combobox.active = formatbox_map.@get (locale);
         format_checkbutton.active = true;
 
         update_lock = false;
@@ -202,10 +215,8 @@ public class LanguageEntry : BaseEntry {
 
         if (inputbox_map.has_key (input)) {
             var number = inputbox_map.@get (input);
-            warning ("Number for %s is %d", input, number);
             input_combobox.active = number;
             input_checkbutton.active = true;
-
         }
         
         update_lock = false;
@@ -235,8 +246,8 @@ public class LanguageEntry : BaseEntry {
         Value format;
 
         format_combobox.get_active_iter (out iter);
-        list_store.get_value (iter, 1, out format);
-
+        format_store.get_value (iter, 1, out format);
+        message ("%s", format.get_string ());
         language_changed (UpdateType.FORMAT, format.get_string ());
 
     }
@@ -250,26 +261,21 @@ public class LanguageEntry : BaseEntry {
         input_combobox.get_active_iter (out iter);
         input_store.get_value (iter, 1, out xkb_string);
 
-        message ("Input %s %s", xkb_string.get_string (), changed ? "added" : "removed");
-
         input_changed (langcode, xkb_string.get_string (), changed);
 
     }
 
     void on_language_changed () {
-        if (!check_button.active) {
+        if (!check_button.active)
             return;
-        }
 
         on_language_activated ();
 
     }
 
     void on_format_changed () {
-        if (!format_checkbutton.active) {
-
+        if (!format_checkbutton.active)
             return;
-        }
 
         on_format_activated ();
     }
@@ -284,27 +290,45 @@ public class LanguageEntry : BaseEntry {
     }
 
 
-    public void add_region (string locale) {
-        var country = Gnome.Languages.get_country_from_locale (locale, null);
-        //var region = Gnome.Languages.get_language_from_code (locale.substring (0, 2), null);
+    public void add_language (string locale) {
 
-        
+        string language = "";
+        string country = "";
 
-        if (country != null) {
-
-            list_store.append (out iter);
-            regionbox_map.@set (locale, regionbox_map.size);
-            list_store.set (iter, 0, country, 1, locale);
+        if (locale.length == 2)  {// only lancode
+            language = Gnome.Languages.get_language_from_code (locale, null);
+            country = Gnome.Languages.get_country_from_code (locale, null);
+        } else if (locale.length == 5) {// full locale
+            language = Gnome.Languages.get_language_from_locale (locale, null);
+            country = Gnome.Languages.get_country_from_locale (locale, null);
         }
-        
 
+        if (country == null)
+            country = language;
+
+
+        list_store.append (out iter);
+        regionbox_map.@set (locale, regionbox_map.size);
+        list_store.set (iter, 0, country, 1, locale);
+
+        
         country_combobox.active = 0;
-        format_combobox.active = 0;
         input_combobox.active = 0;
     }
 
-    public void add_format (string locale) {
+    public void add_locale (string locale) {
+        var country = Gnome.Languages.get_country_from_locale (locale, null);
 
+        if (country != null) {
+            format_store.append (out iter);
+            formatbox_map.@set (locale, formatbox_map.size);
+            format_store.set (iter, 0, country, 1, locale);
+
+            format_combobox.show ();
+            format_checkbutton.show ();
+        }
+
+        format_combobox.active = 0;
     }
 
     public void hide_delete () {

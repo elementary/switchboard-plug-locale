@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice ibus-1.0)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice)
 
 add_definitions (${DEPS_CFLAGS} -DGNOME_DESKTOP_USE_UNSTABLE_API -w)
 link_directories (${DEPS_LIBRARY_DIRS} /usr/share/polkit-1)
@@ -18,7 +18,6 @@ vala_precompile (VALA_C
     LocaleManager.vala
     Installer/UbuntuInstaller.vala
     Installer/aptd-client.vala
-    Installer/Backend.vala
     Widgets/BaseEntry.vala
     Widgets/LanguageList.vala
     Widgets/LanguageEntry.vala

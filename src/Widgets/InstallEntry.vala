@@ -1,3 +1,16 @@
+/***
+  Copyright (C) 2011-2012 Switchboard Locale Plug Developers
+  This program is free software: you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License version 3, as published
+  by the Free Software Foundation.
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranties of
+  MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+  PURPOSE. See the GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License along
+  with this program. If not, see 
+***/
+
 public class InstallEntry : BaseEntry {
 
 
@@ -5,6 +18,7 @@ public class InstallEntry : BaseEntry {
 
     Gtk.Spinner spinner;
 
+    Gtk.Image image;
 
     public InstallEntry () {
         locale = "zz_ZZ";
@@ -13,21 +27,23 @@ public class InstallEntry : BaseEntry {
 
         spinner = new Gtk.Spinner ();
 
-        var image = new Gtk.Image.from_icon_name ("browser-download", Gtk.IconSize.BUTTON);
+        image = new Gtk.Image.from_icon_name ("browser-download", Gtk.IconSize.BUTTON);
         image.halign = Gtk.Align.START;
-        left_box.pack_start (image, false, false);
+        image.valign = Gtk.Align.START;
+        left_grid.attach (spinner, 0, 0, 1, 1);
+        left_grid.attach (image, 0, 0, 1, 1);
 
         label = new Gtk.Label (_("Install more languages…"));
         label.halign = Gtk.Align.START;
 
-        left_box.pack_start (label);
+        left_grid.attach (label, 1, 0, 2, 1);
 
 
         show_all ();
         spinner.hide ();
     }
 
-    public void install_started (string lang) {
+    public void install_started () {
 
         start_spinner ();
     }
@@ -42,6 +58,7 @@ public class InstallEntry : BaseEntry {
     void start_spinner () {
 
         spinner.show ();
+        image.hide ();
         spinner.start ();
 
     }
@@ -49,6 +66,7 @@ public class InstallEntry : BaseEntry {
     void stop_spinner () {
 
         spinner.stop ();
+        image.show ();
         spinner.hide ();
 
     }
