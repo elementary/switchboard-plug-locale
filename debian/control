@@ -27,7 +27,6 @@ Priority: extra
 Depends: switchboard-plug-locale (= ${binary:Version}), ${misc:Depends}
 Enhances: switchboard-plug-locale
 Description: Region & Language plug for Switchboard (debugging symbols)
- This plug displays information about the system.
  Change your region and language settings
  .
  This package contains debugging symbols for switchboard-plug-locale.
