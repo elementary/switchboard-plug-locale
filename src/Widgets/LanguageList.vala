@@ -16,7 +16,6 @@ public class LanguageList : Gtk.ListBox {
 	public signal void settings_changed ();
 
     InstallPopover language_popover;
-    BaseEntry header_entry;
     InstallEntry install_entry;
 
     UbuntuInstaller li;

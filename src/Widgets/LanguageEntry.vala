@@ -319,10 +319,11 @@ public class LanguageEntry : BaseEntry {
     public void add_locale (string locale) {
         var country = Gnome.Languages.get_country_from_locale (locale, null);
 
+        var country_short = country.replace ("(%s)".printf (region), "");
         if (country != null) {
             format_store.append (out iter);
             formatbox_map.@set (locale, formatbox_map.size);
-            format_store.set (iter, 0, country, 1, locale);
+            format_store.set (iter, 0, country_short, 1, locale);
 
             format_combobox.show ();
             format_checkbutton.show ();

@@ -11,7 +11,7 @@
   with this program. If not, see 
 ***/
  
-[DBus (name = "org.freedesktop.locale1")]
+/*[DBus (name = "org.freedesktop.locale1")]
   public interface LocaleProxy: GLib.Object
   {
     [DBus (signature = "(asb)")]
@@ -21,13 +21,11 @@
     public abstract string x11_layout  { owned get; }
     public abstract string x11_model  { owned get; }
   }
+*/
 
 [DBus (name = "org.freedesktop.Accounts.User")]
   public interface AccountProxy: GLib.Object
   {
-    //public abstract async void set_locale (string[] locale, bool user_interaction) throws IOError;
-    //public abstract async string set_x11_keyboard (string layout, string model, string variant, string options, bool convert, bool user_interaction) throws IOError;
-    //public abstract string get_x11_layout();
     public abstract void set_formats_locale (string formats_locale) throws IOError;
     public abstract void set_language (string language) throws IOError;
     public abstract string formats_locale  { owned get; }
@@ -43,7 +41,6 @@ public class LocaleManager : Object {
     const string KEY_INPUT_SELETION = "input-selections";
 
     DBusProxy locale1_proxy;
-    private LocaleProxy locale_proxy;
     private AccountProxy account_proxy;
 
     Act.UserManager user_manager;
@@ -67,13 +64,12 @@ public class LocaleManager : Object {
 
         user_manager = Act.UserManager.get_default ();
         uint uid = (uint)Posix.getuid();
-        message ("uid: %u", uid);
         user = user_manager.get_user_by_id (uid);
 
         locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
         input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
-        Bus.get_proxy.begin<AccountProxy> (BusType.SYSTEM,
+        /*Bus.get_proxy.begin<AccountProxy> (BusType.SYSTEM,
             "org.freedesktop.locale1",
             "/org/freedesktop/locale1",
             0,
@@ -86,26 +82,23 @@ public class LocaleManager : Object {
                         is_connected = true;
                         connected ();
                     }
-                    warning ("localed proxy connected");
-                    /*foreach (var loc in locale_proxy.locale) {
-                        warning (loc);
-                    }*/
+
                 } catch (Error e) {
                     warning ("Could not connect to locale bus");
                 }
 
-        });
+        });*/
 
         Bus.get_proxy.begin<AccountProxy> (BusType.SYSTEM,
             "org.freedesktop.Accounts",
-            "/org/freedesktop/Accounts/User1000",
+            "/org/freedesktop/Accounts/User%u".printf (uid),
             0,
             null,
             (obj, res) => {
                 try {
                     account_proxy = Bus.get_proxy.end (res);
                     
-                    if (account_proxy != null && locale_proxy != null) {
+                    if (account_proxy != null && locale1_proxy != null) {
                         is_connected = true;
                         connected ();
                     }
@@ -117,7 +110,7 @@ public class LocaleManager : Object {
                 
         });
 
-         DBusProxy.create_for_bus.begin (BusType.SYSTEM,
+        DBusProxy.create_for_bus.begin (BusType.SYSTEM,
              DBusProxyFlags.NONE,
              null,
              "org.freedesktop.locale1",
@@ -125,15 +118,18 @@ public class LocaleManager : Object {
              "org.freedesktop.locale1",
              null,
              (obj, res) => {
-                 locale1_proxy = DBusProxy.create_for_bus.end (res);
+                try {
+                    locale1_proxy = DBusProxy.create_for_bus.end (res);
                  
-                 if (locale1_proxy == null) {
-                     warning ("Failed to connect to localed:");
-                 }
-  
-   
-                 message("dbus connected");
-             }
+                    if (account_proxy != null && locale1_proxy != null) {
+                        is_connected = true;
+                        connected ();
+                    }
+      
+                } catch (Error e) {
+                    warning ("Could not connect to locale1 dbus");
+                }
+            }
           );
 
         settings = new Settings ("org.pantheon.switchboard.plug.locale");
@@ -153,7 +149,6 @@ public class LocaleManager : Object {
 
             while (iter.next ("(ss)", &k, &value)) {
                 map.@set (k, value);
-                warning ("clicking %s -> %s", k, value);
             }
             
 
@@ -174,8 +169,6 @@ public class LocaleManager : Object {
 
             while (iter.next ("(ss)", &k, &value)) {
                 map.@set (k, value);
-                warning ("clicking %s -> %s", k, value);
-
             }
 
 
@@ -191,6 +184,7 @@ public class LocaleManager : Object {
 
     }
 
+    /* // leading to segfault, would be my preferred way instead of using raw dbus
     void set_system_language (string language, string? format) {
         
         var list = new Gee.ArrayList<string> ();
@@ -209,7 +203,7 @@ public class LocaleManager : Object {
             warning (e.message);
         }
 
-    }
+    }*/
 
     void set_system_language_direct (string language, string? format) {
 
@@ -267,7 +261,12 @@ public class LocaleManager : Object {
      */
     public void set_user_language (string language) {
         debug("Setting user language to %s", language);
-        account_proxy.set_language (language);
+
+        try {
+            account_proxy.set_language (language); 
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 
     public string get_user_language () {
@@ -276,7 +275,12 @@ public class LocaleManager : Object {
 
     public void set_user_format (string language) {
         debug("Setting user format to %s", language);
-        account_proxy.set_formats_locale (language);
+
+        try {
+            account_proxy.set_formats_locale (language); 
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 
     public string get_user_format () {
