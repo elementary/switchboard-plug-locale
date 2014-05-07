@@ -31,7 +31,9 @@ public class Locale.Plug : Switchboard.Plug {
 
     LocaleManager lm;
 
-    Gtk.ScrolledWindow sw;
+    Gtk.InfoBar infobar;
+    Gtk.Grid grid;
+    Gtk.Box top_box;
 
     public Plug () {
 
@@ -44,11 +46,11 @@ public class Locale.Plug : Switchboard.Plug {
     }
 
     public override Gtk.Widget get_widget () {
-        if (sw == null) {
-            setup_ui ();
-            setup_info ();
+        if (grid == null) {
+            grid = new Gtk.Grid ();
+
         }
-        return sw;
+        return grid;
     }
 
     void setup_info () {
@@ -61,7 +63,8 @@ public class Locale.Plug : Switchboard.Plug {
     }
     
     public override void shown () {
-
+        setup_ui ();
+        setup_info ();
     }
     
     public override void hidden () {
@@ -81,10 +84,9 @@ public class Locale.Plug : Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-        sw = new Gtk.ScrolledWindow (null, null);
+        
 
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
-        box.margin = 24;
+        
 
         try {
             var provider = new Gtk.CssProvider();
@@ -103,64 +105,95 @@ public class Locale.Plug : Switchboard.Plug {
                 .bg4 {background-color: #aaa;}
             ", 400);
 
-            Gtk.StyleContext.add_provider_for_screen (sw.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            Gtk.StyleContext.add_provider_for_screen (grid.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         } catch (Error e) {
             warning ("Could not set styles");
         }
 
 
+var sw = new Gtk.ScrolledWindow (null, null);
+
+        grid.column_homogeneous = true;
+        grid.row_spacing = 5;
+
         language_list = new LanguageList ();
         language_list.valign = Gtk.Align.START;
+        sw.add (language_list);
 
-
-        // positioning hack
-        var top_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var label_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        label_box.homogeneous = true;
-        var label_right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        label_right_box.homogeneous = true;
-        //label_right_box.get_style_context().add_class ("bg1");
-
+        var header_entry = new BaseEntry ();
+        header_entry.hexpand = true;
+        header_entry.margin_left = 24;
+        header_entry.margin_right = 24;
+        //header_entry.get_style_context ().add_class ("bg4");
 
         var choose_language_hint = new Gtk.Label (_("Choose your language:"));
+        choose_language_hint.hexpand = true;
         var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
         var choose_input_hint = new Gtk.Label (_("Keyboard input:"));
 
         choose_language_hint.halign = Gtk.Align.START;
+        //choose_language_hint.get_style_context ().add_class ("bg1");
         choose_format_hint.halign = Gtk.Align.START;
+        //choose_format_hint.get_style_context ().add_class ("bg2");
         choose_input_hint.halign = Gtk.Align.START;
+        //choose_input_hint.get_style_context ().add_class ("bg3");
 
-        var delete_image = new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.MENU);
-        delete_image.opacity = 0;
+        header_entry.left_grid.attach (choose_language_hint, 0, 0, 1, 1);
+        header_entry.right_grid.attach (choose_format_hint, 0, 0, 1, 1);
+        header_entry.right_grid.attach (choose_input_hint, 1, 0, 1, 1);
+        var spacer = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
+        spacer.set_opacity (0);
+        header_entry.settings_grid.add (spacer);
 
+        infobar = new Gtk.InfoBar ();
+        infobar.message_type = Gtk.MessageType.INFO;
+        infobar.no_show_all = true;
+        var content = infobar.get_content_area () as Gtk.Container;
+        var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
+        content.add (label);
 
-        label_box.pack_start (choose_language_hint, true, true);
-        label_box.pack_start (label_right_box, true, true);
-        top_box.pack_start (label_box, true, true);
-        top_box.pack_end (delete_image, false, false);
+        language_list.settings_changed.connect (() => {
+            infobar.no_show_all = false;
+            infobar.show_all ();
+        });
 
-        label_right_box.pack_start (choose_format_hint, true, true);
-        label_right_box.pack_start (choose_input_hint, true, true);
-        box.pack_start (top_box, false, false);
+        try {
 
-        box.pack_start (language_list, true, true);
+            var permission = new Polkit.Permission.sync ("org.freedesktop.locale1.set-locale", Polkit.UnixProcess.new (Posix.getpid ()));
+            var apply_button = new Gtk.LockButton (permission);
 
-        var apply_button = new Gtk.Button.with_label (_("Apply system-wide"));
-        apply_button.clicked.connect (on_applied_to_systen);
-        box.pack_start (apply_button, false, false);
+            apply_button.label = _("Apply for login screen, guest account and new users");
+            apply_button.halign = Gtk.Align.CENTER;
+            apply_button.margin = 12;
+            grid.attach (apply_button, 0, 4, 4, 1);
 
-        apply_button.show_all ();
+            permission.notify["allowed"].connect (() => {
+                if (permission.allowed) {
+                    on_applied_to_system();
+                    permission.impl_update (false, true, true);
+                }
+            });
 
-        sw.add (box);
-        top_box.show_all ();
-        label_box.show_all ();
-        language_list.show ();
-        box.show ();
+        } catch (Error e) {
+                critical (e.message);
+        }
+
+        
         sw.show ();
+        header_entry.show_all ();
+
+        grid.attach (infobar, 0, 0, 4, 1);
+        grid.attach (header_entry, 0, 1, 4, 1);
+        grid.attach (top_box, 0, 2, 4, 1);
+        grid.attach (sw, 0, 3, 4, 1);
+        grid.show ();
+
     }
 
-    void on_applied_to_systen () {
+    void on_applied_to_system () {
         lm.apply_user_to_system ();
+        infobar.no_show_all = false;
+        infobar.show_all ();
     }
 }
 

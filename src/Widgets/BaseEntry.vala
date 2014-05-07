@@ -13,7 +13,7 @@
 
 public class BaseEntry : Gtk.ListBoxRow {
 
-    protected Gtk.Box settings_grid;
+    
 
 
     public bool selected = false;
@@ -21,13 +21,15 @@ public class BaseEntry : Gtk.ListBoxRow {
     public string region = "";
     public string country = "";
 
-    protected Gtk.Grid left_grid;
-    protected Gtk.Grid right_grid;
+    public Gtk.Grid left_grid;
+    public Gtk.Grid right_grid;
+    public Gtk.Box settings_grid;
 
     public BaseEntry () {
         var box = new Gtk.Grid ();
         //box.column_homogeneous = true;
         box.margin = 10;
+        box.column_spacing = 5;
         
         var inner_grid = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         inner_grid.homogeneous = true;
@@ -37,6 +39,7 @@ public class BaseEntry : Gtk.ListBoxRow {
 
         right_grid = new Gtk.Grid ();
         right_grid.column_homogeneous = true;
+        right_grid.column_spacing = 5;
         inner_grid.pack_start (right_grid, true, true);
 
         box.attach (inner_grid, 0, 0, 1, 1);

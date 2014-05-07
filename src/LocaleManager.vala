@@ -14,10 +14,12 @@
 [DBus (name = "org.freedesktop.locale1")]
   public interface LocaleProxy: GLib.Object
   {
-    public abstract async void set_locale (string[] locale, bool user_interaction) throws IOError;
-    public abstract async void set_x11_keyboard (string layout, string model, string variant, string options, bool convert, bool user_interaction) throws IOError;
-    //public abstract string get_x11_layout() throws IOError;
-    //public abstract string get_x11_model()throws IOError;
+    [DBus (signature = "(asb)")]
+    public abstract void set_locale (string[] locale, bool user_interaction) throws IOError;
+    public abstract void set_x11_keyboard (string layout, string model, string variant, string options, bool convert, bool user_interaction) throws IOError;
+    public abstract string[] locale  { owned get; }
+    public abstract string x11_layout  { owned get; }
+    public abstract string x11_model  { owned get; }
   }
 
 [DBus (name = "org.freedesktop.Accounts.User")]
@@ -26,8 +28,8 @@
     //public abstract async void set_locale (string[] locale, bool user_interaction) throws IOError;
     //public abstract async string set_x11_keyboard (string layout, string model, string variant, string options, bool convert, bool user_interaction) throws IOError;
     //public abstract string get_x11_layout();
-    public abstract async void set_formats_locale (string formats_locale) throws IOError;
-    public abstract async void set_language (string language) throws IOError;
+    public abstract void set_formats_locale (string formats_locale) throws IOError;
+    public abstract void set_language (string language) throws IOError;
     public abstract string formats_locale  { owned get; }
     public abstract string language  { owned get; }
   }
@@ -40,7 +42,7 @@ public class LocaleManager : Object {
     static const string KEY_INPUT_SOURCES = "sources";
     const string KEY_INPUT_SELETION = "input-selections";
 
-    DBusProxy localed_proxy;
+    DBusProxy locale1_proxy;
     private LocaleProxy locale_proxy;
     private AccountProxy account_proxy;
 
@@ -85,6 +87,9 @@ public class LocaleManager : Object {
                         connected ();
                     }
                     warning ("localed proxy connected");
+                    /*foreach (var loc in locale_proxy.locale) {
+                        warning (loc);
+                    }*/
                 } catch (Error e) {
                     warning ("Could not connect to locale bus");
                 }
@@ -111,6 +116,25 @@ public class LocaleManager : Object {
                 }
                 
         });
+
+         DBusProxy.create_for_bus.begin (BusType.SYSTEM,
+             DBusProxyFlags.NONE,
+             null,
+             "org.freedesktop.locale1",
+             "/org/freedesktop/locale1",
+             "org.freedesktop.locale1",
+             null,
+             (obj, res) => {
+                 locale1_proxy = DBusProxy.create_for_bus.end (res);
+                 
+                 if (locale1_proxy == null) {
+                     warning ("Failed to connect to localed:");
+                 }
+  
+   
+                 message("dbus connected");
+             }
+          );
 
         settings = new Settings ("org.pantheon.switchboard.plug.locale");
         settings.changed.connect (on_settings_changed);
@@ -161,45 +185,50 @@ public class LocaleManager : Object {
 
 
     public void apply_user_to_system () {
-        message("language");
-        set_localed_language ();
-        //set_localed_format ();
-        message("input");
-        set_localed_input ();
+
+        set_system_language_direct (get_user_language (), get_user_format ());
+        set_system_input_direct ();
+
     }
 
-    public void set_locale_language () {
-        string[] langs = new string[1];
+    void set_system_language (string language, string? format) {
+        
+        var list = new Gee.ArrayList<string> ();
 
-        langs[0] = "LANG=%s".printf (get_user_language ());
-        /*if (get_user_language () != get_user_format ()) {
-            langs[1] = "LC_TIME=%s".printf (get_user_format ());
-            langs[2] = "LC_NUMERIC=%s".printf (get_user_format ());
-            langs[3] = "LC_MEASUREMENT=%s".printf (get_user_format ());
-            langs[4] = "LC_MONETARY=%s".printf (get_user_format ());
+        list.add ("LANG=%s".printf (language));
+        if (format != null && format != language) {
+            list.add ("LC_TIME=%s".printf (format));
+            list.add ("LC_NUMERIC=%s".printf (format));
+            list.add ("LC_MONETARY=%s".printf (format));
+            list.add ("LC_MEASUREMENT=%s".printf (format));
+        }
 
-        }*/
+        try {
+            locale_proxy.set_locale (list.to_array (), true);
+        } catch (Error e) {
+            warning (e.message);
+        }
 
-//      localed_proxy.call ("SetLocale", variant, DBusCallFlags.NONE, -1, null);
-        locale_proxy.set_locale.begin (langs, true);
     }
 
-    public void set_localed_language () {
+    void set_system_language_direct (string language, string? format) {
 
         VariantBuilder builder = new VariantBuilder (new VariantType ("as") );      
-        builder.add ("s", "LANG=%s".printf (get_user_language ()));
-        if (get_user_language () != get_user_format ()) {
-            builder.add ("s", "LC_TIME=%s".printf (get_user_format ()));
-            builder.add ("s", "LC_NUMERIC=%s".printf (get_user_format ()));
-            builder.add ("s", "LC_MONETARY=%s".printf (get_user_format ()));
-            builder.add ("s", "LC_MEASUREMENT=%s".printf (get_user_format ()));
+        builder.add ("s", "LANG=%s".printf (language));
+        if (format != null) {
+            builder.add ("s", "LC_TIME=%s".printf (format));
+            builder.add ("s", "LC_NUMERIC=%s".printf (format));
+            builder.add ("s", "LC_MONETARY=%s".printf (format));
+            builder.add ("s", "LC_MEASUREMENT=%s".printf (format));
         }
     
         var variant = new Variant ("(asb)", builder, true);
-        localed_proxy.call.begin ("SetLocale", variant, DBusCallFlags.NONE, -1, null);
+        locale1_proxy.call.begin ("SetLocale", variant, DBusCallFlags.NONE, -1, null);
+        
+        
     }
 
-    public void set_localed_input () {
+    void set_system_input_direct () {
 
         string layouts = "";
         string variants = "";
@@ -228,7 +257,7 @@ public class LocaleManager : Object {
         }
 
         var insert = new Variant ("(ssssbb)", layouts, "", variants, "", true, true);
-        localed_proxy.call.begin ("SetX11Keyboard", insert, DBusCallFlags.NONE, -1, null);
+        locale1_proxy.call.begin ("SetX11Keyboard", insert, DBusCallFlags.NONE, -1, null);
         // TODO
     }
 
@@ -237,7 +266,8 @@ public class LocaleManager : Object {
      * user related stuff
      */
     public void set_user_language (string language) {
-        account_proxy.set_language.begin (language);
+        debug("Setting user language to %s", language);
+        account_proxy.set_language (language);
     }
 
     public string get_user_language () {
@@ -245,7 +275,8 @@ public class LocaleManager : Object {
     }
 
     public void set_user_format (string language) {
-        account_proxy.set_formats_locale.begin (language);
+        debug("Setting user format to %s", language);
+        account_proxy.set_formats_locale (language);
     }
 
     public string get_user_format () {
@@ -298,36 +329,6 @@ public class LocaleManager : Object {
             settings.set_value (KEY_INPUT_SELETION, my_map);
         }
 
-
-    }
-
-/*
-    // LC_xxx=
-    public void set_user_format (string language) {
-        message("setting location to %s", language);
-        user.set_formats_locale (language);
-    }
-*/
-    // LC_xxx=
-    public void set_user_location (string language) {
-        message("setting location to %s", language);
-        user.set_location (language);
-    }
-
-    public string get_user_location () {
-        return user.get_location ();
-    }
-
-    // LC_xxx=
-    public void set_user_region (string region) {
-        locale_settings.set_string (KEY_REGION, region);
-    }
-
-    public string get_user_region () {
-        return locale_settings.get_string (KEY_REGION);
-    }
-
-    public void set_system_region (string region) {
 
     }
 

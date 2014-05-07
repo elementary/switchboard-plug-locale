@@ -13,7 +13,10 @@
 
 public class LanguageList : Gtk.ListBox {
 
+	public signal void settings_changed ();
+
     InstallPopover language_popover;
+    BaseEntry header_entry;
     InstallEntry install_entry;
 
     UbuntuInstaller li;
@@ -29,7 +32,9 @@ public class LanguageList : Gtk.ListBox {
     public LanguageList () {
         valign = Gtk.Align.START;
         vexpand = true;
-        hexpand = false;
+        hexpand = true;
+        margin_left = 24;
+        margin_right = 24;
 
         set_activate_on_single_click(true);
         set_sort_func (sort_func);
@@ -51,7 +56,10 @@ public class LanguageList : Gtk.ListBox {
         install_entry = new InstallEntry();
         language_popover = new InstallPopover (install_entry.label);
         language_popover.language_selected.connect (on_install_language);
+
         add (install_entry);
+
+        show ();
   
     }
 
@@ -218,6 +226,8 @@ public class LanguageList : Gtk.ListBox {
                 lm.set_user_format (lang+".UTF-8");
                 break;
         }
+
+        settings_changed ();
         
     }
 
