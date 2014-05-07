@@ -39,8 +39,8 @@ public class Locale.Plug : Switchboard.Plug {
 
         Object (category: Category.PERSONAL,
                 code_name: "system-pantheon-locale",
-                display_name: _("Locale"),
-                description: _("Shows locales information…"),
+                display_name: _("Region & Language"),
+                description: _("Change your region and language settings"),
                 icon: "preferences-desktop-locale");
         
     }
@@ -85,9 +85,6 @@ public class Locale.Plug : Switchboard.Plug {
     // Wires up and configures initial UI
     private void setup_ui () {
         
-
-        
-
         try {
             var provider = new Gtk.CssProvider();
             provider.load_from_data ("
@@ -110,8 +107,7 @@ public class Locale.Plug : Switchboard.Plug {
             warning ("Could not set styles");
         }
 
-
-var sw = new Gtk.ScrolledWindow (null, null);
+        var sw = new Gtk.ScrolledWindow (null, null);
 
         grid.column_homogeneous = true;
         grid.row_spacing = 5;
@@ -124,7 +120,6 @@ var sw = new Gtk.ScrolledWindow (null, null);
         header_entry.hexpand = true;
         header_entry.margin_left = 24;
         header_entry.margin_right = 24;
-        //header_entry.get_style_context ().add_class ("bg4");
 
         var choose_language_hint = new Gtk.Label (_("Choose your language:"));
         choose_language_hint.hexpand = true;
@@ -132,11 +127,8 @@ var sw = new Gtk.ScrolledWindow (null, null);
         var choose_input_hint = new Gtk.Label (_("Keyboard input:"));
 
         choose_language_hint.halign = Gtk.Align.START;
-        //choose_language_hint.get_style_context ().add_class ("bg1");
         choose_format_hint.halign = Gtk.Align.START;
-        //choose_format_hint.get_style_context ().add_class ("bg2");
         choose_input_hint.halign = Gtk.Align.START;
-        //choose_input_hint.get_style_context ().add_class ("bg3");
 
         header_entry.left_grid.attach (choose_language_hint, 0, 0, 1, 1);
         header_entry.right_grid.attach (choose_format_hint, 0, 0, 1, 1);

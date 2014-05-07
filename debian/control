@@ -10,15 +10,15 @@ Build-Depends: cmake,
                libaccountsservice-dev,
                libibus-1.0-dev,
                valac (>= 0.23)
-Standards-Version: 3.9.2
+Standards-Version: 3.9.5
 Homepage: https://launchpad.net/switchboard-plug-locale
 
 Package: switchboard-plug-locale
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
-Description: About plug for Switchboard
- This plug displays locale settings.
+Description: Region & Language plug for Switchboard
+ Change your region and language settings
 
 Package: switchboard-plug-locale-dbg
 Architecture: any
@@ -26,7 +26,8 @@ Section: debug
 Priority: extra
 Depends: switchboard-plug-locale (= ${binary:Version}), ${misc:Depends}
 Enhances: switchboard-plug-locale
-Description: About plug for Switchboard (debugging symbols)
+Description: Region & Language plug for Switchboard (debugging symbols)
  This plug displays information about the system.
+ Change your region and language settings
  .
  This package contains debugging symbols for switchboard-plug-locale.
