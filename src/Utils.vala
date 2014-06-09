@@ -80,8 +80,7 @@ public class Utils : Object{
     }
 
     public static string translate_country (string country) {
-        var test = dgettext ("iso_3166", "Germany");
-        return test;  
+        return dgettext ("iso_3166", country);
     }
 
     public static string translate (string locale) {
