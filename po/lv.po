@@ -8,27 +8,27 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-06 22:05-0500\n"
-"PO-Revision-Date: 2014-08-01 01:25+0000\n"
-"Last-Translator: Matiss Roberts Treinis <matiss@marolind.com>\n"
+"PO-Revision-Date: 2014-08-15 11:33+0000\n"
+"Last-Translator: Edgar <edy9112@gmail.com>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 07:10+0000\n"
+"X-Launchpad-Export-Date: 2014-08-16 06:54+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 "Language: lv\n"
 
 #: ../src/Plug.vala:42
 msgid "Region & Language"
-msgstr ""
+msgstr "Atrašanas vieta un valoda"
 
 #: ../src/Plug.vala:43
 msgid "Change your region and language settings"
-msgstr ""
+msgstr "Mainīt atrašanās vietu un valodas iestatījumus"
 
 #: ../src/Plug.vala:124
 msgid "Choose your language:"
-msgstr ""
+msgstr "Izvēlēties valodu"
 
 #: ../src/Plug.vala:126
 msgid "Numbers and dates:"
