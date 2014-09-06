@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-06 22:05-0500\n"
-"PO-Revision-Date: 2014-09-02 21:41+0000\n"
+"PO-Revision-Date: 2014-09-05 16:12+0000\n"
 "Last-Translator: Artem Anufrij <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-03 07:09+0000\n"
+"X-Launchpad-Export-Date: 2014-09-06 07:39+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 "Language: ru\n"
 
@@ -36,15 +36,17 @@ msgstr "Числа и даты:"
 
 #: ../src/Plug.vala:127
 msgid "Keyboard input:"
-msgstr ""
+msgstr "Раскладка клавиатуры:"
 
 #: ../src/Plug.vala:144
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "Некоторые изменения вступят в силу после выхода из сеанса"
 
 #: ../src/Plug.vala:157
 msgid "Apply for login screen, guest account and new users"
 msgstr ""
+"Применить для экрана входа в систему, гостевой учётной записи и новых "
+"пользователей"
 
 #: ../src/Widgets/InstallEntry.vala:36
 msgid "Install more languages…"
