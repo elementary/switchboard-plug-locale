@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-06 22:05-0500\n"
-"PO-Revision-Date: 2014-11-13 19:29+0000\n"
+"PO-Revision-Date: 2014-11-14 12:44+0000\n"
 "Last-Translator: Ivan Vrljić <vrlja92@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-11-14 06:36+0000\n"
+"X-Launchpad-Export-Date: 2014-11-15 07:00+0000\n"
 "X-Generator: Launchpad (build 17241)\n"
 "Language: hr\n"
 
 #: ../src/Plug.vala:42
 msgid "Region & Language"
-msgstr "Regija i Jezik"
+msgstr "Regija i jezik"
 
 #: ../src/Plug.vala:43
 msgid "Change your region and language settings"
@@ -40,7 +40,7 @@ msgstr "Unos tipkovnice:"
 
 #: ../src/Plug.vala:144
 msgid "Some changes will not take effect until you log out"
-msgstr "Neke promjene će biti aktivne nakon odjave."
+msgstr "Neke promjene će biti aktivne tek nakon odjave."
 
 #: ../src/Plug.vala:157
 msgid "Apply for login screen, guest account and new users"
