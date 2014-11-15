@@ -17,15 +17,31 @@ public class InstallEntry : BaseEntry {
     public Gtk.Label label;
 
     Gtk.Spinner spinner;
-
     Gtk.Image image;
 
+    private const string STYLE = """
+
+        GtkListBoxRow.list-row {
+            background-image: none;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    """;
+
     public InstallEntry () {
+
+        var css_provider = new Gtk.CssProvider ();
+        css_provider.load_from_data (STYLE, STYLE.length);
+        get_style_context ().add_provider (css_provider, -1);
+
         locale = "zz_ZZ";
         region = "zz";
         country = "ZZ";
 
         spinner = new Gtk.Spinner ();
+        spinner.margin_end = 3;
 
         image = new Gtk.Image.from_icon_name ("browser-download", Gtk.IconSize.BUTTON);
         image.halign = Gtk.Align.START;
@@ -38,7 +54,6 @@ public class InstallEntry : BaseEntry {
         label.halign = Gtk.Align.START;
 
         left_grid.attach (label, 1, 0, 2, 1);
-
 
         show_all ();
         spinner.hide ();
@@ -71,8 +86,5 @@ public class InstallEntry : BaseEntry {
         spinner.hide ();
 
     }
-
-
-
 
 }

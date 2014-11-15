@@ -13,9 +13,6 @@
 
 public class BaseEntry : Gtk.ListBoxRow {
 
-    
-
-
     public bool selected = false;
     public string locale {get; set;}
     public string region = "";
@@ -26,6 +23,7 @@ public class BaseEntry : Gtk.ListBoxRow {
     public Gtk.Box settings_grid;
 
     public BaseEntry () {
+
         var box = new Gtk.Grid ();
         //box.column_homogeneous = true;
         box.margin = 10;
@@ -48,7 +46,6 @@ public class BaseEntry : Gtk.ListBoxRow {
         settings_grid.halign = Gtk.Align.END;
 
         box.attach (settings_grid, 1, 0, 1, 1);
-
         add (box);
 
         box.show_all ();
