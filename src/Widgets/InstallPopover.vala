@@ -16,7 +16,6 @@ public class InstallPopover : Gtk.Popover {
     Gtk.SearchEntry search_entry;
     Gtk.ListBox languages_box;
 
-    int visible_count = 0;
     string search_string = " ";
 
     public signal void language_selected (string lang);
@@ -26,8 +25,13 @@ public class InstallPopover : Gtk.Popover {
 
         set_position(Gtk.PositionType.BOTTOM);
         
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        box.margin = 5;
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        box.margin = 6;
+
+        var frame = new Gtk.Frame ("");
+        var scrolled = new Gtk.ScrolledWindow (null, null);
+        scrolled.height_request = 145;
+        scrolled.width_request = 225;
 
         search_entry = new Gtk.SearchEntry ();
         search_entry.search_changed.connect (on_search);
@@ -37,11 +41,13 @@ public class InstallPopover : Gtk.Popover {
         languages_box.set_activate_on_single_click(true);
         languages_box.set_selection_mode (Gtk.SelectionMode.NONE);
         languages_box.get_style_context ().add_class ("background");
-        languages_box.set_filter_func(filter_func_text);
+        //languages_box.set_filter_func(filter_func_text);
         languages_box.set_header_func (header_func);
         languages_box.row_activated.connect (row_activated);
 
-        box.pack_start (languages_box);
+        scrolled.add (languages_box);
+        frame.add (scrolled);
+        box.pack_start (frame);
 
         add (box);
 
@@ -51,7 +57,6 @@ public class InstallPopover : Gtk.Popover {
 
     void on_search () {
 
-        visible_count = 0;
         search_string = search_entry.text;
         languages_box.set_filter_func(filter_func_text);
     
@@ -66,13 +71,9 @@ public class InstallPopover : Gtk.Popover {
     }
 
     bool filter_func_text (Gtk.ListBoxRow row) {
-        if (visible_count >= 5) {
-            return false;
-        }
     
         var locale = row as LanguageRow;
         if (search_string.down () in locale.lang.down () || search_string.down () in locale.translated_lang.down ()) {
-            visible_count++;
             return true;
         }
         return false;

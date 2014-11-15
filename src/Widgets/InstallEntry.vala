@@ -30,6 +30,7 @@ public class InstallEntry : BaseEntry {
         image = new Gtk.Image.from_icon_name ("browser-download", Gtk.IconSize.BUTTON);
         image.halign = Gtk.Align.START;
         image.valign = Gtk.Align.START;
+        image.margin_end = 3;
         left_grid.attach (spinner, 0, 0, 1, 1);
         left_grid.attach (image, 0, 0, 1, 1);
 
