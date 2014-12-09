@@ -14,6 +14,7 @@
 public class LanguageList : Gtk.ListBox {
 
 	public signal void settings_changed ();
+	public signal void install_missing_finished ();
 
     InstallPopover language_popover;
     InstallEntry install_entry;
@@ -49,6 +50,7 @@ public class LanguageList : Gtk.ListBox {
         li = new UbuntuInstaller ();
         li.install_finished.connect (on_install_finished);
         li.remove_finished.connect (on_remove_finished);
+        li.install_missing_finished.connect (on_install_missing_finished);
         
         lm = LocaleManager.get_default ();
         
@@ -160,6 +162,10 @@ public class LanguageList : Gtk.ListBox {
 
     }
 
+    void on_install_missing_finished () {
+        install_missing_finished ();
+    }
+
     public void add_language(string locale) {
 
         var langcode = locale.substring (0, 2);
@@ -211,7 +217,9 @@ public class LanguageList : Gtk.ListBox {
         }
     }
 
-
+    public void install_missing_languages () {
+        li.install_missing_languages();
+    }
 
     void on_language_changed (UpdateType type, string lang) {
         if (update_lock) 

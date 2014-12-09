@@ -32,6 +32,7 @@ public class Locale.Plug : Switchboard.Plug {
     LocaleManager lm;
 
     Gtk.InfoBar infobar;
+    Gtk.InfoBar missing_lang_infobar;
     Gtk.Grid grid;
     Gtk.Box top_box;
 
@@ -149,6 +150,50 @@ public class Locale.Plug : Switchboard.Plug {
             infobar.show_all ();
         });
 
+        missing_lang_infobar = new Gtk.InfoBar ();
+        missing_lang_infobar.message_type = Gtk.MessageType.INFO;
+        missing_lang_infobar.no_show_all = true;
+
+        var install_missing_spinner = new Gtk.Spinner ();
+        install_missing_spinner.no_show_all = true;
+        install_missing_spinner.start ();
+
+        var missing_content = missing_lang_infobar.get_content_area () as Gtk.Box;
+
+        var missing_label = new Gtk.Label (_("Language support is not installed completely"));
+
+        var install_missing = new Gtk.Button.with_label(_("Install Missing"));
+        install_missing.clicked.connect(()=>{
+            language_list.install_missing_languages ();
+
+            language_list.set_sensitive (false);
+            missing_label.set_label (_("Installing missing Languange"));
+            install_missing.hide();
+            install_missing_spinner.show ();
+        });
+        language_list.install_missing_finished.connect(()=>{
+            missing_lang_infobar.hide ();
+            language_list.set_sensitive (true);
+        });
+
+
+        missing_content.pack_start (missing_label, false);
+        missing_content.pack_end (install_missing, false);
+        missing_content.pack_end (install_missing_spinner, false);
+        var missing_language = Utils.get_missing_languages ();
+
+        if (missing_language!=null && missing_language.length > 0) {
+            missing_lang_infobar.no_show_all = false;
+            missing_lang_infobar.show_all ();
+        } else {
+            missing_lang_infobar.hide ();
+        }
+
+        language_list.settings_changed.connect (() => {
+            infobar.no_show_all = false;
+            infobar.show_all ();
+        });
+
         try {
 
             var permission = new Polkit.Permission.sync ("org.freedesktop.locale1.set-locale", Polkit.UnixProcess.new (Posix.getpid ()));
@@ -157,7 +202,7 @@ public class Locale.Plug : Switchboard.Plug {
             apply_button.label = _("Apply for login screen, guest account and new users");
             apply_button.halign = Gtk.Align.CENTER;
             apply_button.margin = 12;
-            grid.attach (apply_button, 0, 4, 4, 1);
+            grid.attach (apply_button, 0, 5, 4, 1);
 
             permission.notify["allowed"].connect (() => {
                 if (permission.allowed) {
@@ -175,9 +220,10 @@ public class Locale.Plug : Switchboard.Plug {
         header_entry.show_all ();
 
         grid.attach (infobar, 0, 0, 4, 1);
-        grid.attach (header_entry, 0, 1, 4, 1);
-        grid.attach (top_box, 0, 2, 4, 1);
-        grid.attach (sw, 0, 3, 4, 1);
+        grid.attach (header_entry, 0, 2, 4, 1);
+        grid.attach (top_box, 0, 3, 4, 1);
+        grid.attach (sw, 0, 4, 4, 1);
+        grid.attach (missing_lang_infobar, 0, 1, 4, 1);
         grid.show ();
 
     }

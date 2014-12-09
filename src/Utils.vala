@@ -41,6 +41,27 @@ public class Utils : Object{
         
     }
 
+    public static string[]? get_missing_languages () {
+
+        string output;
+        int status;
+
+        try {
+            Process.spawn_sync (null,
+                {"/usr/bin/check-language-support", null},
+                Environ.get (),
+                SpawnFlags.SEARCH_PATH,
+                null,
+                out output,
+                null,
+                out status);
+
+            return output.strip().split(" ");
+
+        } catch (Error e) {
+            return null;
+        }
+    }
     public static Gee.ArrayList<string>? get_installed_locales () {
 
         string output;
@@ -70,6 +91,7 @@ public class Utils : Object{
         }
 
     }
+
 
     public static string translate_language (string lang) {
         Intl.textdomain ("iso_639");

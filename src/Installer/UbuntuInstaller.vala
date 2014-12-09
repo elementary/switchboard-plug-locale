@@ -21,6 +21,7 @@ public class UbuntuInstaller : Object {
 
     public signal void install_finished (string langcode);
     public signal void remove_finished (string langcode);
+    public signal void install_missing_finished ();
 
     Gee.HashMap<string, string> transactions;
 
@@ -39,6 +40,7 @@ public class UbuntuInstaller : Object {
 
     public void install (string language) {
         var packages = get_remaining_packages_for_language (language);
+        /* var packages = Utils.get_missing_languages(); */
 
         foreach (var packet in packages) {
             message("Packet: %s", packet);
@@ -53,8 +55,24 @@ public class UbuntuInstaller : Object {
             } catch (Error e) {
                 warning ("Could not queue downloads: %s", e.message);
             }
-            
 
+
+        });
+
+    }
+
+    public void install_missing_languages () {
+        var packages = Utils.get_missing_languages();
+
+        aptd.install_packages.begin (packages, (obj, res) => {
+
+            try {
+                var transaction_id = aptd.install_packages.end (res);
+                transactions.@set (transaction_id, "install-missing");
+                run_transaction (transaction_id);
+            } catch (Error e) {
+                warning ("Could not queue downloads: %s", e.message);
+            }
         });
 
     }
@@ -110,6 +128,11 @@ public class UbuntuInstaller : Object {
         }
 
         var action = transactions.get (id);
+        if (action == "install-missing") {
+            install_missing_finished ();
+            transactions.unset (id);
+            return;
+        }
         var lang = action[2:action.length];
 
         message ("ID %s -> %s", id, success ? "success" : "failed");
