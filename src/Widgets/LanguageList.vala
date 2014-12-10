@@ -218,7 +218,7 @@ public class LanguageList : Gtk.ListBox {
     }
 
     public void install_missing_languages () {
-        li.install_missing_languages();
+        li.install_missing_languages ();
     }
 
     void on_language_changed (UpdateType type, string lang) {

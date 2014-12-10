@@ -40,7 +40,6 @@ public class UbuntuInstaller : Object {
 
     public void install (string language) {
         var packages = get_remaining_packages_for_language (language);
-        /* var packages = Utils.get_missing_languages(); */
 
         foreach (var packet in packages) {
             message("Packet: %s", packet);
@@ -62,7 +61,11 @@ public class UbuntuInstaller : Object {
     }
 
     public void install_missing_languages () {
-        var packages = Utils.get_missing_languages();
+        var packages = Utils.get_missing_languages ();
+
+        foreach (var packet in packages) {
+            message ("Installing: %s", packet);
+        }
 
         aptd.install_packages.begin (packages, (obj, res) => {
 

@@ -48,7 +48,7 @@ public class Utils : Object{
 
         try {
             Process.spawn_sync (null,
-                {"/usr/bin/check-language-support", null},
+                {"check-language-support", null},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
@@ -56,7 +56,7 @@ public class Utils : Object{
                 null,
                 out status);
 
-            return output.strip().split(" ");
+            return output.strip ().split (" ");
 
         } catch (Error e) {
             return null;
