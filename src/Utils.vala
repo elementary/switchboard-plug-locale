@@ -41,23 +41,38 @@ public class Utils : Object{
         
     }
 
-    public static string[]? get_missing_languages () {
+    public static async string[]? get_missing_languages () {
 
-        string output;
+        /* string output; */
+        string final = null;
+        Pid pid;
         int status;
+        int input;
+        int output;
+        int error;
 
         try {
-            Process.spawn_sync (null,
+            Process.spawn_async_with_pipes (null,
                 {"check-language-support", null},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
+                out pid,
+                out input,
                 out output,
-                null,
-                out status);
+                out error);
+            UnixInputStream read_stream = new UnixInputStream (output, true);
+            DataInputStream out_channel = new DataInputStream (read_stream);
+            string line = null;
+            final = "";
+            while ((line = yield out_channel.read_line_async (Priority.DEFAULT)) != null) {
+                final += line;
+            }
 
-            return output.strip ().split (" ");
-
+            if (final != null)
+                return final.strip ().split (" ");
+            else
+                return null;
         } catch (Error e) {
             return null;
         }

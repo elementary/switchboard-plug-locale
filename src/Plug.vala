@@ -152,7 +152,6 @@ public class Locale.Plug : Switchboard.Plug {
 
         missing_lang_infobar = new Gtk.InfoBar ();
         missing_lang_infobar.message_type = Gtk.MessageType.INFO;
-        missing_lang_infobar.no_show_all = true;
 
         var install_missing_spinner = new Gtk.Spinner ();
         install_missing_spinner.no_show_all = true;
@@ -164,30 +163,34 @@ public class Locale.Plug : Switchboard.Plug {
 
         var install_missing = new Gtk.Button.with_label (_("Install Missing"));
         install_missing.clicked.connect (()=>{
-            language_list.install_missing_languages ();
-
-            language_list.set_sensitive (false);
             missing_label.set_label (_("Installing missing language"));
             install_missing.hide ();
             install_missing_spinner.show ();
+
+            language_list.install_missing_languages ();
         });
-        language_list.install_missing_finished.connect (()=>{
-            missing_lang_infobar.hide ();
-            language_list.set_sensitive (true);
+        language_list.check_missing_finished.connect ((missing)=>{
+            if (missing.length>0) {
+                missing_lang_infobar.show ();
+                missing_lang_infobar.show_all ();
+            } else {
+                missing_lang_infobar.hide ();
+            }
         });
 
 
         missing_content.pack_start (missing_label, false);
         missing_content.pack_end (install_missing, false);
         missing_content.pack_end (install_missing_spinner, false);
-        var missing_language = Utils.get_missing_languages ();
-
-        if ((missing_language != null) && (missing_language.length > 0)) {
-            missing_lang_infobar.no_show_all = false;
-            missing_lang_infobar.show_all ();
-        } else {
-            missing_lang_infobar.hide ();
-        }
+        /* var missing_language = Utils.get_missing_languages (); */
+        /* string[] missing_language = null; */
+        /*  */
+        /* if ((missing_language != null) && (missing_language.length > 0)) { */
+        /* missing_lang_infobar.no_show_all = true; */
+        /*     missing_lang_infobar.show_all (); */
+        /* } else { */
+        /*     missing_lang_infobar.hide (); */
+        /* } */
 
         language_list.settings_changed.connect (() => {
             infobar.no_show_all = false;
