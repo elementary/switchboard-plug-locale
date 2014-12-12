@@ -161,7 +161,7 @@ public class Locale.Plug : Switchboard.Plug {
 
         var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
-        var install_missing = new Gtk.Button.with_label (_("Install Missing"));
+        var install_missing = new Gtk.Button.with_label (_("Complete Installation"));
         install_missing.clicked.connect (()=>{
             missing_label.set_label (_("Installing missing language"));
             install_missing.hide ();
@@ -182,15 +182,6 @@ public class Locale.Plug : Switchboard.Plug {
         missing_content.pack_start (missing_label, false);
         missing_content.pack_end (install_missing, false);
         missing_content.pack_end (install_missing_spinner, false);
-        /* var missing_language = Utils.get_missing_languages (); */
-        /* string[] missing_language = null; */
-        /*  */
-        /* if ((missing_language != null) && (missing_language.length > 0)) { */
-        /* missing_lang_infobar.no_show_all = true; */
-        /*     missing_lang_infobar.show_all (); */
-        /* } else { */
-        /*     missing_lang_infobar.hide (); */
-        /* } */
 
         language_list.settings_changed.connect (() => {
             infobar.no_show_all = false;

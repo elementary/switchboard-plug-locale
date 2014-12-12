@@ -46,7 +46,6 @@ public class Utils : Object{
         /* string output; */
         string final = null;
         Pid pid;
-        int status;
         int input;
         int output;
         int error;
