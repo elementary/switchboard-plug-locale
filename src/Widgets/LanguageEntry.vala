@@ -70,7 +70,11 @@ public class LanguageEntry : BaseEntry {
     public LanguageEntry (string _locale, LanguageList? list = null) {
 
         var css_provider = new Gtk.CssProvider ();
-        css_provider.load_from_data (STYLE, STYLE.length);
+        try {
+            css_provider.load_from_data (STYLE, STYLE.length);
+        } catch (Error e) {
+            warning ("loading css: %s", e.message);
+        }          
         get_style_context ().add_provider (css_provider, -1);
         margin_bottom = 5;
 
@@ -157,7 +161,6 @@ public class LanguageEntry : BaseEntry {
         delete_image = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
 
         delete_button = new Gtk.ToggleButton();
-        //delete_button.get_style_context ().remove_class ("button");
         delete_button.set_image (delete_image);
         delete_button.sensitive = true;
         delete_button.clicked.connect (() => {

@@ -39,7 +39,11 @@ public class LanguageList : Gtk.ListBox {
     public LanguageList () {
 
         var css_provider = new Gtk.CssProvider ();
-        css_provider.load_from_data (STYLE, STYLE.length);
+        try {
+            css_provider.load_from_data (STYLE, STYLE.length);
+        } catch (Error e) {
+            warning ("loading css: %s", e.message);
+        }  
         get_style_context ().add_provider (css_provider, -1);
 
         valign = Gtk.Align.START;
