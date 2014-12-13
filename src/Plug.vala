@@ -152,7 +152,7 @@ public class Locale.Plug : Switchboard.Plug {
 
         var install_infobar = new InstallInfoBar ();
         install_infobar.hide ();
-        install_infobar.cancel_clicked.connect (()=>{
+        install_infobar.cancel_clicked.connect (() => {
             language_list.cancel_install ();
         });
 
@@ -164,13 +164,13 @@ public class Locale.Plug : Switchboard.Plug {
         var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
         var install_missing = new Gtk.Button.with_label (_("Complete Installation"));
-        install_missing.clicked.connect (()=>{
+        install_missing.clicked.connect (() => {
             missing_lang_infobar.hide ();
 
             language_list.install_missing_languages ();
         });
-        language_list.check_missing_finished.connect ((missing)=>{
-            if (missing.length>0) {
+        language_list.check_missing_finished.connect ((missing) => {
+            if (missing.length > 0) {
                 missing_lang_infobar.show ();
                 missing_lang_infobar.show_all ();
             } else {
@@ -185,7 +185,7 @@ public class Locale.Plug : Switchboard.Plug {
             infobar.no_show_all = false;
             infobar.show_all ();
         });
-        language_list.progress_changed.connect((progress)=>{
+        language_list.progress_changed.connect((progress) => {
             install_infobar.set_progress (progress);
             install_infobar.set_cancellable (language_list.install_cancellable);
             install_infobar.set_transaction_mode (language_list.get_transaction_mode ());

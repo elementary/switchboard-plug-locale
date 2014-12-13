@@ -14,7 +14,7 @@
 public class LanguageList : Gtk.ListBox {
 
 	public signal void settings_changed ();
-	public signal void check_missing_finished (string[] missing);
+	public signal void check_missing_finished (string [] missing);
 	public signal void progress_changed (int progress);
 
     InstallPopover language_popover;
@@ -57,7 +57,7 @@ public class LanguageList : Gtk.ListBox {
         li.remove_finished.connect (on_remove_finished);
         li.check_missing_languages ();
         li.check_missing_finished.connect (on_check_missing_finished);
-        li.progress_changed.connect ((progress)=>{
+        li.progress_changed.connect ((progress) => {
             progress_changed (progress);
         });
         
@@ -175,7 +175,7 @@ public class LanguageList : Gtk.ListBox {
 
     }
 
-    void on_check_missing_finished (string[] missing) {
+    void on_check_missing_finished (string [] missing) {
         this.set_sensitive (true);
         check_missing_finished (missing);
     }

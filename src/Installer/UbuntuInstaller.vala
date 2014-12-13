@@ -20,13 +20,13 @@ public class UbuntuInstaller : Object {
     AptdProxy aptd;
     AptdTransactionProxy proxy;
 
-    string[]? missing_packages = null;
+    string []? missing_packages = null;
     public bool install_cancellable;
     public TransactionMode transaction_mode;
 
     public signal void install_finished (string langcode);
     public signal void remove_finished (string langcode);
-    public signal void check_missing_finished (string[] missing);
+    public signal void check_missing_finished (string [] missing);
     public signal void progress_changed (int progress);
 
     public enum TransactionMode {
@@ -73,9 +73,9 @@ public class UbuntuInstaller : Object {
 
     }
 
-    public void install_packages (string[] packages) {
+    public void install_packages (string [] packages) {
         foreach (var packet in packages) {
-            message("will install: %s", packet);
+            message ("will install: %s", packet);
         }
 
         aptd.install_packages.begin (packages, (obj, res) => {
@@ -98,7 +98,7 @@ public class UbuntuInstaller : Object {
 
                     if (missing_packages != null)
                         check_missing_finished (missing_packages);
-                } catch (Error e){
+                } catch (Error e) {
                     warning ("cant parse missing language:%s", e.message);
                 }
         });
@@ -134,7 +134,7 @@ public class UbuntuInstaller : Object {
     }
 
     public void cancel_install () {
-        if (install_cancellable){
+        if (install_cancellable) {
             warning ("cancel_install");
             try {
                 proxy.cancel ();
@@ -153,8 +153,8 @@ public class UbuntuInstaller : Object {
 
         proxy.property_changed.connect ((prop, val) => {
             if (prop == "Progress")
-                progress_changed ((int)val.get_int32 ());
-            if (prop=="Cancellable")
+                progress_changed ((int) val.get_int32 ());
+            if (prop == "Cancellable")
                 install_cancellable = val.get_boolean ();
         });
 
@@ -183,7 +183,7 @@ public class UbuntuInstaller : Object {
 
         var action = transactions.get (id);
         if (action == "install-missing") {
-            install_finished("");
+            install_finished ("");
             transactions.unset (id);
             return;
         }

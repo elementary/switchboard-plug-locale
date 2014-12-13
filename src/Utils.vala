@@ -41,7 +41,7 @@ public class Utils : Object{
         
     }
 
-    public static async string[]? get_missing_languages () {
+    public static async string []? get_missing_languages () {
 
         /* string output; */
         string final = null;
