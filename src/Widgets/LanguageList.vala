@@ -15,11 +15,16 @@ public class LanguageList : Gtk.ListBox {
 
 	public signal void settings_changed ();
 	public signal void check_missing_finished (string[] missing);
+	public signal void progress_changed (int progress);
 
     InstallPopover language_popover;
     InstallEntry install_entry;
 
     UbuntuInstaller li;
+
+    public bool install_cancellable {
+        get {return li.install_cancellable;}
+    }
 
     public Gtk.RadioButton language_button = new Gtk.RadioButton (null);
     public Gtk.RadioButton format_button = new Gtk.RadioButton (null);
@@ -52,6 +57,9 @@ public class LanguageList : Gtk.ListBox {
         li.remove_finished.connect (on_remove_finished);
         li.check_missing_languages ();
         li.check_missing_finished.connect (on_check_missing_finished);
+        li.progress_changed.connect ((progress)=>{
+            progress_changed (progress);
+        });
         
         lm = LocaleManager.get_default ();
         
@@ -170,6 +178,15 @@ public class LanguageList : Gtk.ListBox {
     void on_check_missing_finished (string[] missing) {
         this.set_sensitive (true);
         check_missing_finished (missing);
+    }
+
+    public void cancel_install () {
+        li.cancel_install ();
+        check_missing_languages ();
+    }
+
+    public UbuntuInstaller.TransactionMode get_transaction_mode () {
+        return li.transaction_mode;
     }
 
     public void add_language(string locale) {
