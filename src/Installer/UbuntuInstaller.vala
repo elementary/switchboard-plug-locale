@@ -18,9 +18,22 @@ public class UbuntuInstaller : Object {
     static const string LOCALES_REMOVER = "/usr/share/locales/install-language-pack";
 
     AptdProxy aptd;
+    AptdTransactionProxy proxy;
+
+    string []? missing_packages = null;
+    public bool install_cancellable;
+    public TransactionMode transaction_mode;
 
     public signal void install_finished (string langcode);
     public signal void remove_finished (string langcode);
+    public signal void check_missing_finished (string [] missing);
+    public signal void progress_changed (int progress);
+
+    public enum TransactionMode {
+        INSTALL,
+        REMOVE,
+        INSTALL_MISSING,
+    }
 
     Gee.HashMap<string, string> transactions;
 
@@ -38,6 +51,7 @@ public class UbuntuInstaller : Object {
     }
 
     public void install (string language) {
+        transaction_mode = TransactionMode.INSTALL;
         var packages = get_remaining_packages_for_language (language);
 
         foreach (var packet in packages) {
@@ -53,14 +67,54 @@ public class UbuntuInstaller : Object {
             } catch (Error e) {
                 warning ("Could not queue downloads: %s", e.message);
             }
-            
+
 
         });
 
     }
 
-    public void remove (string languagecode) {
+    public void install_packages (string [] packages) {
+        foreach (var packet in packages) {
+            message ("will install: %s", packet);
+        }
 
+        aptd.install_packages.begin (packages, (obj, res) => {
+
+            try {
+                var transaction_id = aptd.install_packages.end (res);
+                transactions.@set (transaction_id, "install-missing");
+                run_transaction (transaction_id);
+            } catch (Error e) {
+                warning ("Could not queue downloads: %s", e.message);
+            }
+        });
+
+    }
+
+    public void check_missing_languages () {
+        Utils.get_missing_languages.begin ((obj, res) => {
+                try {
+                    missing_packages = Utils.get_missing_languages.end (res);
+
+                    if (missing_packages != null)
+                        check_missing_finished (missing_packages);
+                } catch (Error e) {
+                    warning ("cant parse missing language:%s", e.message);
+                }
+        });
+
+    }
+
+    public void install_missing_languages () {
+        if (missing_packages == null || missing_packages.length == 0)
+            return;
+        transaction_mode = TransactionMode.INSTALL_MISSING;
+
+        install_packages (missing_packages);
+    }
+
+    public void remove (string languagecode) {
+        transaction_mode = TransactionMode.REMOVE;
 
         var installed = get_to_remove_packages_for_language (languagecode);
 
@@ -79,11 +133,29 @@ public class UbuntuInstaller : Object {
 
     }
 
+    public void cancel_install () {
+        if (install_cancellable) {
+            warning ("cancel_install");
+            try {
+                proxy.cancel ();
+            } catch (Error e) {
+                warning ("cannot cancel installation:%s", e.message);
+            }
+        }
+    }
+
     void run_transaction (string transaction_id) {
 
-        var proxy = new AptdTransactionProxy ();
+        proxy = new AptdTransactionProxy ();
         proxy.finished.connect (() => {
             on_apt_finshed (transaction_id, true);
+        });
+
+        proxy.property_changed.connect ((prop, val) => {
+            if (prop == "Progress")
+                progress_changed ((int) val.get_int32 ());
+            if (prop == "Cancellable")
+                install_cancellable = val.get_boolean ();
         });
 
         try {
@@ -110,6 +182,11 @@ public class UbuntuInstaller : Object {
         }
 
         var action = transactions.get (id);
+        if (action == "install-missing") {
+            install_finished ("");
+            transactions.unset (id);
+            return;
+        }
         var lang = action[2:action.length];
 
         message ("ID %s -> %s", id, success ? "success" : "failed");

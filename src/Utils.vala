@@ -41,6 +41,41 @@ public class Utils : Object{
         
     }
 
+    public static async string []? get_missing_languages () {
+
+        /* string output; */
+        string final = null;
+        Pid pid;
+        int input;
+        int output;
+        int error;
+
+        try {
+            Process.spawn_async_with_pipes (null,
+                {"check-language-support", null},
+                Environ.get (),
+                SpawnFlags.SEARCH_PATH,
+                null,
+                out pid,
+                out input,
+                out output,
+                out error);
+            UnixInputStream read_stream = new UnixInputStream (output, true);
+            DataInputStream out_channel = new DataInputStream (read_stream);
+            string line = null;
+            final = "";
+            while ((line = yield out_channel.read_line_async (Priority.DEFAULT)) != null) {
+                final += line;
+            }
+
+            if (final != null)
+                return final.strip ().split (" ");
+            else
+                return null;
+        } catch (Error e) {
+            return null;
+        }
+    }
     public static Gee.ArrayList<string>? get_installed_locales () {
 
         string output;
@@ -70,6 +105,7 @@ public class Utils : Object{
         }
 
     }
+
 
     public static string translate_language (string lang) {
         Intl.textdomain ("iso_639");

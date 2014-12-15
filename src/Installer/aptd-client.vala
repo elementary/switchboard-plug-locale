@@ -37,6 +37,7 @@
     public abstract void simulate () throws IOError;
     public abstract void cancel () throws IOError;
     public signal void finished (string exit_state);
+    public signal void property_changed (string property, Variant val);
   }
   
   public class AptdProxy: GLib.Object
@@ -69,6 +70,7 @@
   public class AptdTransactionProxy: GLib.Object
   {
     public signal void finished (string transaction_id);
+    public signal void property_changed (string property, Variant variant);
 
     public void connect_to_aptd (string transaction_id) throws IOError
     {
@@ -77,6 +79,9 @@
         {
           debug ("aptd transaction finished: %s\n", exit_state);
           finished (transaction_id);
+        });
+      _aptd_service.property_changed.connect ((prop, variant) => {
+          property_changed (prop, variant);
         });
     }
 
@@ -88,6 +93,11 @@
     public void run () throws IOError
     {
       _aptd_service.run ();
+    }
+
+    public void cancel () throws IOError
+    {
+      _aptd_service.cancel ();
     }
 
     private AptdTransactionService _aptd_service;
