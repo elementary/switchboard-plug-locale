@@ -34,20 +34,35 @@ public class LanguageList : Gtk.ListBox {
     Gee.HashMap<string, LanguageEntry> languages;
     Gee.HashMap<string, string?> input_sources;
 
+    private const string STYLE = """
+
+        GtkListBox {
+            background-color: transparent;
+        }
+
+    """;
+
     public LanguageList () {
+
+        var css_provider = new Gtk.CssProvider ();
+        try {
+            css_provider.load_from_data (STYLE, STYLE.length);
+        } catch (Error e) {
+            warning ("loading css: %s", e.message);
+        }  
+        get_style_context ().add_provider (css_provider, -1);
+
         valign = Gtk.Align.START;
         vexpand = true;
         hexpand = true;
-        margin_left = 24;
-        margin_right = 24;
+        margin_start = 24;
+        margin_end = 24;
 
         set_activate_on_single_click(true);
         set_sort_func (sort_func);
         set_selection_mode (Gtk.SelectionMode.NONE);
-        set_header_func (header_func);
+        //set_header_func (header_func);
         set_filter_func (filter_func);
-
-        get_style_context().add_class ("rounded-corners");
 
         languages = new Gee.HashMap<string, LanguageEntry> ();
         input_sources = new Gee.HashMap<string, string?> ();
@@ -318,13 +333,13 @@ public class LanguageList : Gtk.ListBox {
 
     }
 
-    void header_func (Gtk.ListBoxRow? row, Gtk.ListBoxRow? before) {
+    /*void header_func (Gtk.ListBoxRow? row, Gtk.ListBoxRow? before) {
         
         if (before != null) {
             row.set_header (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         }
 
-    }
+    }*/
 
     bool filter_func (Gtk.ListBoxRow row) {
 
