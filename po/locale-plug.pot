@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-06 22:05-0500\n"
+"POT-Creation-Date: 2014-12-20 15:23-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/Plug.vala:42
+#: ../src/Plug.vala:43
 msgid "Region & Language"
 msgstr ""
 
-#: ../src/Plug.vala:43
+#: ../src/Plug.vala:44
 msgid "Change your region and language settings"
 msgstr ""
 
-#: ../src/Plug.vala:124
+#: ../src/Plug.vala:125
 msgid "Choose your language:"
 msgstr ""
 
-#: ../src/Plug.vala:126
+#: ../src/Plug.vala:127
 msgid "Numbers and dates:"
 msgstr ""
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:128
 msgid "Keyboard input:"
 msgstr ""
 
-#: ../src/Plug.vala:144
+#: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
-#: ../src/Plug.vala:157
+#: ../src/Plug.vala:164
+msgid "Language support is not installed completely"
+msgstr ""
+
+#: ../src/Plug.vala:166
+msgid "Complete Installation"
+msgstr ""
+
+#: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
 msgstr ""
 
-#: ../src/Widgets/InstallEntry.vala:36
+#: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:37
+msgid "Cancel"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:53
+msgid "installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:56
+msgid "removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:59
+msgid "installing missing language"
 msgstr ""
