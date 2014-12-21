@@ -7,45 +7,69 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-06 22:05-0500\n"
+"POT-Creation-Date: 2014-12-20 15:23-0800\n"
 "PO-Revision-Date: 2014-08-17 11:15+0000\n"
 "Last-Translator: Jonathan Moerman <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-18 07:23+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-12-21 06:14+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 "Language: nl\n"
 
-#: ../src/Plug.vala:42
+#: ../src/Plug.vala:43
 msgid "Region & Language"
 msgstr "Regio en taal"
 
-#: ../src/Plug.vala:43
+#: ../src/Plug.vala:44
 msgid "Change your region and language settings"
 msgstr "Wijzig uw regio en taal instellingen"
 
-#: ../src/Plug.vala:124
+#: ../src/Plug.vala:125
 msgid "Choose your language:"
 msgstr "Kies uw taal:"
 
-#: ../src/Plug.vala:126
+#: ../src/Plug.vala:127
 msgid "Numbers and dates:"
 msgstr "Nummers en data:"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:128
 msgid "Keyboard input:"
 msgstr "Toetsenbordindeling:"
 
-#: ../src/Plug.vala:144
+#: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
 msgstr "Sommige wijzigingen worden pas van kracht zodra u zich afmeldt"
 
-#: ../src/Plug.vala:157
+#: ../src/Plug.vala:164
+msgid "Language support is not installed completely"
+msgstr ""
+
+#: ../src/Plug.vala:166
+msgid "Complete Installation"
+msgstr ""
+
+#: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
 msgstr "Toepassen voor inlogscherm, gastaccount en nieuwe gebruikers"
 
-#: ../src/Widgets/InstallEntry.vala:36
+#: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
 msgstr "Installeer meer talen..."
+
+#: ../src/Widgets/InstallInfoBar.vala:37
+msgid "Cancel"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:53
+msgid "installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:56
+msgid "removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:59
+msgid "installing missing language"
+msgstr ""
