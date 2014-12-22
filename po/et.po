@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-20 15:23-0800\n"
-"PO-Revision-Date: 2014-08-13 18:12+0000\n"
+"PO-Revision-Date: 2014-12-21 11:12+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-21 06:14+0000\n"
+"X-Launchpad-Export-Date: 2014-12-22 07:08+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
 "Language: et\n"
 
@@ -44,11 +44,11 @@ msgstr "Mõningate seadete rakendumiseks tuleb sul välja logida…"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Kasutajaliidese keeletugi pole korralikult paigaldatud"
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr ""
+msgstr "Lõpeta paigaldus"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
@@ -62,16 +62,16 @@ msgstr "Rohkemate keelte paigaldamine…"
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "Loobu"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "keele paigaldamine"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "keele eemaldamine"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "puuduoleva keele paigaldamine"
