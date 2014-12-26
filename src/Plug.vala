@@ -40,8 +40,8 @@ public class Locale.Plug : Switchboard.Plug {
 
         Object (category: Category.PERSONAL,
                 code_name: "system-pantheon-locale",
-                display_name: _("Region & Language"),
-                description: _("Change your region and language settings"),
+                display_name: _("Language & Region"),
+                description: _("Change your language and region settings"),
                 icon: "preferences-desktop-locale");
         
     }
