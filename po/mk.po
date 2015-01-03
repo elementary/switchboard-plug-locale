@@ -13,69 +13,69 @@ msgstr ""
 "Project-Id-Version: shotwell-0.15\n"
 "Report-Msgid-Bugs-To: shotwell@yorba.org\n"
 "POT-Creation-Date: 2014-12-20 15:23-0800\n"
-"PO-Revision-Date: 2014-08-01 01:23+0000\n"
-"Last-Translator: Jim Nelson <jim@yorba.org>\n"
+"PO-Revision-Date: 2015-01-02 23:54+0000\n"
+"Last-Translator: Bojan Karkalasev <bojankarkalasev@gmail.com>\n"
 "Language-Team: Macedonian "
 "(http://www.transifex.com/projects/p/shotwell/language/mk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-21 06:14+0000\n"
+"X-Launchpad-Export-Date: 2015-01-03 06:15+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
 "Language: mk\n"
 
 #: ../src/Plug.vala:43
 msgid "Region & Language"
-msgstr ""
+msgstr "Регион и Јазик"
 
 #: ../src/Plug.vala:44
 msgid "Change your region and language settings"
-msgstr ""
+msgstr "Промени ги поставувањата за регион и јазик"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
-msgstr ""
+msgstr "Одбери јазик:"
 
 #: ../src/Plug.vala:127
 msgid "Numbers and dates:"
-msgstr ""
+msgstr "Броеви и дати:"
 
 #: ../src/Plug.vala:128
 msgid "Keyboard input:"
-msgstr ""
+msgstr "Внес на тастатура:"
 
 #: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "Некои промени нема да имаат ефект додека не се одјавиш"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Поддршка за јазикот не е комплетно инсталирана"
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr ""
+msgstr "Комплетна инсталација"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
-msgstr ""
+msgstr "Аплицирај за екран за најава, гости и нови корисници"
 
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
-msgstr ""
+msgstr "Инсталирај повеќе јазици..."
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "Откажи"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "инсталирање на јазик"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "бришење на јазик"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "инсталирање на јазик кој го нема"
