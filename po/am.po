@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-20 15:23-0800\n"
-"PO-Revision-Date: 2014-08-12 17:18+0000\n"
+"PO-Revision-Date: 2015-01-31 01:40+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-21 06:14+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-01-31 06:21+0000\n"
+"X-Generator: Launchpad (build 17306)\n"
 "Language: am\n"
 
 #: ../src/Plug.vala:43
@@ -44,11 +44,11 @@ msgstr "አንዳንድ ለውጦች ተግባራዊ አይሆኑም ወጥተ�
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "የ ቋንቋ ድጋፍ ሙሉ በሙሉ አልተገጠመም"
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr ""
+msgstr "መግጠሙ ጨርሷል"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
@@ -60,16 +60,16 @@ msgstr "ተጨማሪ ቋንቋ መግጠሚያ…"
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "መሰረዣ"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "ቋንቋ በመግጠም ላይ"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "ቋንቋ በማስወገድ ላይ"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "የ ጎደሉ ቋንቋዎችን በመግጠም ላይ"
