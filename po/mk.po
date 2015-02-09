@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: shotwell-0.15\n"
 "Report-Msgid-Bugs-To: shotwell@yorba.org\n"
 "POT-Creation-Date: 2014-12-20 15:23-0800\n"
-"PO-Revision-Date: 2015-01-02 23:54+0000\n"
-"Last-Translator: Bojan Karkalasev <bojankarkalasev@gmail.com>\n"
+"PO-Revision-Date: 2015-02-08 13:17+0000\n"
+"Last-Translator: Aleksandar Neskovski <Unknown>\n"
 "Language-Team: Macedonian "
 "(http://www.transifex.com/projects/p/shotwell/language/mk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-03 06:15+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-09 06:23+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 "Language: mk\n"
 
 #: ../src/Plug.vala:43
@@ -30,7 +30,7 @@ msgstr "Регион и Јазик"
 
 #: ../src/Plug.vala:44
 msgid "Change your region and language settings"
-msgstr "Промени ги поставувањата за регион и јазик"
+msgstr "Промени ги подесувањата за регион и јазик"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
@@ -38,7 +38,7 @@ msgstr "Одбери јазик:"
 
 #: ../src/Plug.vala:127
 msgid "Numbers and dates:"
-msgstr "Броеви и дати:"
+msgstr "Броеви и датуми:"
 
 #: ../src/Plug.vala:128
 msgid "Keyboard input:"
@@ -54,15 +54,15 @@ msgstr "Поддршка за јазикот не е комплетно инст
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr "Комплетна инсталација"
+msgstr "Целосна инсталација"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
-msgstr "Аплицирај за екран за најава, гости и нови корисници"
+msgstr "Примени за екранот за најава, профилот за гости, и нови корисници"
 
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
-msgstr "Инсталирај повеќе јазици..."
+msgstr "Инсталирај дополнителни јазици..."
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
@@ -78,4 +78,4 @@ msgstr "бришење на јазик"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr "инсталирање на јазик кој го нема"
+msgstr "инсталирање на јазик кој недостасува"
