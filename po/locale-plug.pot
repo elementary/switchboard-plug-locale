@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 15:23-0800\n"
+"POT-Creation-Date: 2015-02-09 19:41-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/Plug.vala:43
-msgid "Region & Language"
+msgid "Language & Region"
 msgstr ""
 
 #: ../src/Plug.vala:44
-msgid "Change your region and language settings"
+msgid "Install languages, set region, and choose date & currency formats"
 msgstr ""
 
 #: ../src/Plug.vala:125
@@ -53,10 +53,6 @@ msgstr ""
 msgid "Apply for login screen, guest account and new users"
 msgstr ""
 
-#: ../src/Widgets/InstallEntry.vala:57
-msgid "Install more languages…"
-msgstr ""
-
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
 msgstr ""
@@ -71,4 +67,8 @@ msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
+msgstr ""
+
+#: ../src/Widgets/InstallEntry.vala:57
+msgid "Install more languages…"
 msgstr ""
