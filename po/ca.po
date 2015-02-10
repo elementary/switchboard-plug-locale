@@ -7,36 +7,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 15:23-0800\n"
-"PO-Revision-Date: 2014-08-01 01:47+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"POT-Creation-Date: 2015-02-09 19:41-0600\n"
+"PO-Revision-Date: 2015-02-10 05:53+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-21 06:14+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-10 07:09+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 "Language: ca\n"
 
 #: ../src/Plug.vala:43
-msgid "Region & Language"
-msgstr ""
+msgid "Language & Region"
+msgstr "Idioma i regió"
 
 #: ../src/Plug.vala:44
-msgid "Change your region and language settings"
+msgid "Install languages, set region, and choose date & currency formats"
 msgstr ""
+"Instal·lació d’idiomes i configuració de regió y formats de data i moneda"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
-msgstr ""
+msgstr "Trieu el vostre idioma:"
 
 #: ../src/Plug.vala:127
 msgid "Numbers and dates:"
-msgstr ""
+msgstr "Nombres i dates:"
 
 #: ../src/Plug.vala:128
 msgid "Keyboard input:"
-msgstr ""
+msgstr "Entrada de teclat:"
 
 #: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
@@ -54,22 +55,22 @@ msgstr ""
 msgid "Apply for login screen, guest account and new users"
 msgstr ""
 
-#: ../src/Widgets/InstallEntry.vala:57
-msgid "Install more languages…"
-msgstr ""
-
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "s’està instal·lant l’idioma"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "s’està desinstal·lant l’idioma"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "s’està instal·lant l’idioma mancant"
+
+#: ../src/Widgets/InstallEntry.vala:57
+msgid "Install more languages…"
+msgstr "Instal·la més idiomes…"

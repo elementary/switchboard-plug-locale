@@ -7,24 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 15:23-0800\n"
-"PO-Revision-Date: 2015-01-07 16:02+0000\n"
+"POT-Creation-Date: 2015-02-09 19:41-0600\n"
+"PO-Revision-Date: 2015-02-10 05:50+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-08 07:13+0000\n"
-"X-Generator: Launchpad (build 17298)\n"
+"X-Launchpad-Export-Date: 2015-02-10 07:10+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 "Language: es\n"
 
 #: ../src/Plug.vala:43
-msgid "Region & Language"
-msgstr "Región e idioma"
+msgid "Language & Region"
+msgstr "Idioma y región"
 
 #: ../src/Plug.vala:44
-msgid "Change your region and language settings"
-msgstr "Cambiar su configuración de región e idioma"
+msgid "Install languages, set region, and choose date & currency formats"
+msgstr ""
+"Instalación de idiomas y configuración de región y formatos de fecha y moneda"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
@@ -56,10 +57,6 @@ msgstr ""
 "Aplicar para la pantalla de acceso y las cuentas de invitado y usuarios "
 "nuevos"
 
-#: ../src/Widgets/InstallEntry.vala:57
-msgid "Install more languages…"
-msgstr "Instalar más idiomas…"
-
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
 msgstr "Cancelar"
@@ -75,3 +72,13 @@ msgstr "desinstalando el idioma"
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
 msgstr "instalando el idioma faltante"
+
+#: ../src/Widgets/InstallEntry.vala:57
+msgid "Install more languages…"
+msgstr "Instalar más idiomas…"
+
+#~ msgid "Region & Language"
+#~ msgstr "Región e idioma"
+
+#~ msgid "Change your region and language settings"
+#~ msgstr "Cambiar su configuración de región e idioma"

@@ -7,24 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 15:23-0800\n"
+"POT-Creation-Date: 2015-02-09 19:41-0600\n"
 "PO-Revision-Date: 2014-12-29 09:15+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-30 06:28+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-10 07:10+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 "Language: nb\n"
 
 #: ../src/Plug.vala:43
-msgid "Region & Language"
-msgstr "Region og språk"
+msgid "Language & Region"
+msgstr ""
 
 #: ../src/Plug.vala:44
-msgid "Change your region and language settings"
-msgstr "Bytt region og språkinnstillinger"
+msgid "Install languages, set region, and choose date & currency formats"
+msgstr ""
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
@@ -54,10 +54,6 @@ msgstr "Fullfør installasjon"
 msgid "Apply for login screen, guest account and new users"
 msgstr "Bruk for låseskjerm, gjestekonto og nye brukere"
 
-#: ../src/Widgets/InstallEntry.vala:57
-msgid "Install more languages…"
-msgstr "Installer flere språk …"
-
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
 msgstr "Avbryt"
@@ -73,3 +69,13 @@ msgstr "fjerner språk"
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
 msgstr "installerer manglende språk"
+
+#: ../src/Widgets/InstallEntry.vala:57
+msgid "Install more languages…"
+msgstr "Installer flere språk …"
+
+#~ msgid "Region & Language"
+#~ msgstr "Region og språk"
+
+#~ msgid "Change your region and language settings"
+#~ msgstr "Bytt region og språkinnstillinger"

@@ -7,24 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 15:23-0800\n"
+"POT-Creation-Date: 2015-02-09 19:41-0600\n"
 "PO-Revision-Date: 2014-08-25 21:28+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-21 06:14+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-10 07:10+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 "Language: sr\n"
 
 #: ../src/Plug.vala:43
-msgid "Region & Language"
-msgstr "Регион и језик"
+msgid "Language & Region"
+msgstr ""
 
 #: ../src/Plug.vala:44
-msgid "Change your region and language settings"
-msgstr "Измените поставке региона и језика"
+msgid "Install languages, set region, and choose date & currency formats"
+msgstr ""
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
@@ -54,10 +54,6 @@ msgstr ""
 msgid "Apply for login screen, guest account and new users"
 msgstr "Примени на екран пријаве, гостински налог и нове кориснике"
 
-#: ../src/Widgets/InstallEntry.vala:57
-msgid "Install more languages…"
-msgstr "Инсталирај још језика..."
-
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
 msgstr ""
@@ -73,3 +69,13 @@ msgstr ""
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
 msgstr ""
+
+#: ../src/Widgets/InstallEntry.vala:57
+msgid "Install more languages…"
+msgstr "Инсталирај још језика..."
+
+#~ msgid "Region & Language"
+#~ msgstr "Регион и језик"
+
+#~ msgid "Change your region and language settings"
+#~ msgstr "Измените поставке региона и језика"
