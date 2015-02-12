@@ -1,26 +1,25 @@
-# Malay translation for maya
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the maya package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# Azerbaijani translation for switchboard-plug-locale
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the switchboard-plug-locale package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: maya\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: switchboard-plug-locale\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-09 19:41-0600\n"
-"PO-Revision-Date: 2015-02-12 05:14+0000\n"
-"Last-Translator: No Name <launchpad-baecc8@simondieterle.net>\n"
-"Language-Team: Malay <ms@li.org>\n"
+"PO-Revision-Date: 2015-02-11 09:00+0000\n"
+"Last-Translator: Nicat Məmmədov <n1c4t97@gmail.com>\n"
+"Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2015-02-12 07:08+0000\n"
 "X-Generator: Launchpad (build 17336)\n"
-"Language: ms\n"
 
 #: ../src/Plug.vala:43
 msgid "Language & Region"
-msgstr ""
+msgstr "Dil və Region"
 
 #: ../src/Plug.vala:44
 msgid "Install languages, set region, and choose date & currency formats"
@@ -28,55 +27,48 @@ msgstr ""
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
-msgstr "Pilih bahasa anda:"
+msgstr "Öz dilinizi seçin:"
 
 #: ../src/Plug.vala:127
 msgid "Numbers and dates:"
-msgstr "Nombor dan tarikh:"
+msgstr ""
 
 #: ../src/Plug.vala:128
 msgid "Keyboard input:"
-msgstr "Input papan kekunci:"
+msgstr ""
 
 #: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
 msgstr ""
-"Beberapa perubahan tidak akan berkesan sehinggalah anda mendaftar keluar"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr "Bantuan bahasa tidak dipasang dengan sempurna"
+msgstr ""
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr "Pemasangan siap"
+msgstr ""
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
-msgstr "Laksana untuk skrin daftar masuk, akaun tetamu dan pengguna baharu"
+msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr "Batal"
+msgstr "İmtina"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr "Memasang bahasa"
+msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr "Membuang bahasa"
+msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr "Pasang bahasa yang hilang"
+msgstr ""
 
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
-msgstr "Pasang lagi bahasa..."
-
-#~ msgid "Region & Language"
-#~ msgstr "Wilayah & Bahasa"
-
-#~ msgid "Change your region and language settings"
-#~ msgstr "Ubah tetapan wilayah dan bahasa anda"
+msgstr ""

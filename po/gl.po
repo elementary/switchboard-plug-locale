@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-11 06:29+0000\n"
+"X-Launchpad-Export-Date: 2015-02-12 07:08+0000\n"
 "X-Generator: Launchpad (build 17336)\n"
 "Language: gl\n"
 
@@ -74,9 +74,3 @@ msgstr ""
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
 msgstr "Instalar máis idiomas..."
-
-#~ msgid "Region & Language"
-#~ msgstr "Rexión e idioma"
-
-#~ msgid "Change your region and language settings"
-#~ msgstr "Cambiar os axustes de rexión e idioma"
