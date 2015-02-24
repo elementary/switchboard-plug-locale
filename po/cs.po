@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-09 19:41-0600\n"
-"PO-Revision-Date: 2015-02-15 01:17+0000\n"
-"Last-Translator: Marek Doležel <marekdolezel@gmail.com>\n"
+"PO-Revision-Date: 2015-02-23 15:44+0000\n"
+"Last-Translator: Tomo Moto <Unknown>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-16 06:54+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-24 05:50+0000\n"
+"X-Generator: Launchpad (build 17355)\n"
 "Language: cs\n"
 
 #: ../src/Plug.vala:43
 msgid "Language & Region"
-msgstr ""
+msgstr "Jazyk & Region"
 
 #: ../src/Plug.vala:44
 msgid "Install languages, set region, and choose date & currency formats"
-msgstr ""
+msgstr "Nainstalovat jazyky, nastavit region a vybrat formát data a měny"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
@@ -44,11 +44,11 @@ msgstr "Některé změny se projeví až po opětovném přihlášení"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Jazyková podpora není kompletně nainstalována"
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr ""
+msgstr "Dokončit instalaci"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
@@ -56,19 +56,19 @@ msgstr "Použít pro přihlašovací obrazovku, účet hosta a nové uživatele"
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "instaluji jazyk"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "odstraňuji jazyk"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "instaluji chybějící jazyk"
 
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
