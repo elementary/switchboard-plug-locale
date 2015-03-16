@@ -8,68 +8,70 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-09 19:41-0600\n"
-"PO-Revision-Date: 2014-08-01 01:05+0000\n"
-"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"PO-Revision-Date: 2015-03-15 10:38+0000\n"
+"Last-Translator: lem8r <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-11 06:29+0000\n"
-"X-Generator: Launchpad (build 17336)\n"
+"X-Launchpad-Export-Date: 2015-03-16 06:04+0000\n"
+"X-Generator: Launchpad (build 17389)\n"
 "Language: uk\n"
 
 #: ../src/Plug.vala:43
 msgid "Language & Region"
-msgstr ""
+msgstr "Мова та регіон"
 
 #: ../src/Plug.vala:44
 msgid "Install languages, set region, and choose date & currency formats"
-msgstr ""
+msgstr "Встановити мови, вибрати регіон, налаштувати формат дати та валют"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
-msgstr ""
+msgstr "Оберіть вашу мову:"
 
 #: ../src/Plug.vala:127
 msgid "Numbers and dates:"
-msgstr ""
+msgstr "Числа та дати:"
 
 #: ../src/Plug.vala:128
 msgid "Keyboard input:"
-msgstr ""
+msgstr "Ввід з клавіатури:"
 
 #: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "Деякі зміни набудуть чинності тільки після виходу з сеансу"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Підтримка мови встановлена не повністю"
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr ""
+msgstr "Завершити встановлення"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
 msgstr ""
+"Застосувати для екрану входу, нових користувачів та гостьового облікового "
+"запису"
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "встановлення мови"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "видалення мови"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "встановлення відсутньої мови"
 
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
-msgstr ""
+msgstr "Встановити більше мов..."
