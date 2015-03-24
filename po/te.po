@@ -14,32 +14,32 @@ msgstr ""
 "Project-Id-Version: shotwell-0.15\n"
 "Report-Msgid-Bugs-To: shotwell@yorba.org\n"
 "POT-Creation-Date: 2015-02-09 19:41-0600\n"
-"PO-Revision-Date: 2014-08-01 01:05+0000\n"
-"Last-Translator: Krishnababu Krothapalli <Unknown>\n"
+"PO-Revision-Date: 2015-03-23 16:01+0000\n"
+"Last-Translator: venkat <subash.venkat007@gmail.com>\n"
 "Language-Team: Telugu "
 "(http://www.transifex.com/projects/p/shotwell/language/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-11 06:29+0000\n"
-"X-Generator: Launchpad (build 17336)\n"
+"X-Launchpad-Export-Date: 2015-03-24 06:12+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 "Language: te\n"
 
 #: ../src/Plug.vala:43
 msgid "Language & Region"
-msgstr ""
+msgstr "బాషా మరీయు ప్రాంతం"
 
 #: ../src/Plug.vala:44
 msgid "Install languages, set region, and choose date & currency formats"
-msgstr ""
+msgstr "బాషా, ప్రాంతం మరీయు తేదీ, ద్రవ్యం నీ ఎంచుకోండి"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
-msgstr ""
+msgstr "బాషా నీ ఎంచుకోండి"
 
 #: ../src/Plug.vala:127
 msgid "Numbers and dates:"
-msgstr ""
+msgstr "అంకెలు మరియు తారీకు"
 
 #: ../src/Plug.vala:128
 msgid "Keyboard input:"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "కొన్ని మార్పులు లాగౌట్ అయ్యన్తవరుకు మారవు"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
