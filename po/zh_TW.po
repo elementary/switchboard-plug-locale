@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-09 19:41-0600\n"
-"PO-Revision-Date: 2015-02-15 01:13+0000\n"
+"PO-Revision-Date: 2015-04-12 01:40+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-16 06:54+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-04-12 06:03+0000\n"
+"X-Generator: Launchpad (build 17423)\n"
 "Language: \n"
 
 #: ../src/Plug.vala:43
 msgid "Language & Region"
-msgstr ""
+msgstr "語言和地區"
 
 #: ../src/Plug.vala:44
 msgid "Install languages, set region, and choose date & currency formats"
-msgstr ""
+msgstr "安裝語言、設定區域、和選擇日期與貨幣格式"
 
 #: ../src/Plug.vala:125
 msgid "Choose your language:"
@@ -44,11 +44,11 @@ msgstr "部份修改需要重新登入後才會生效"
 
 #: ../src/Plug.vala:164
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "語言支援尚未完全安裝"
 
 #: ../src/Plug.vala:166
 msgid "Complete Installation"
-msgstr ""
+msgstr "完全安裝"
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
@@ -56,19 +56,19 @@ msgstr "套用到登入畫面、客戶帳號與未來的新使用者"
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
-msgstr ""
+msgstr "正在安裝語言"
 
 #: ../src/Widgets/InstallInfoBar.vala:56
 msgid "removing language"
-msgstr ""
+msgstr "正在移除語言"
 
 #: ../src/Widgets/InstallInfoBar.vala:59
 msgid "installing missing language"
-msgstr ""
+msgstr "正在安裝缺失的語言"
 
 #: ../src/Widgets/InstallEntry.vala:57
 msgid "Install more languages…"
