@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-09 19:41-0600\n"
-"PO-Revision-Date: 2015-02-11 04:48+0000\n"
-"Last-Translator: No Name <launchpad-baecc8@simondieterle.net>\n"
+"PO-Revision-Date: 2015-04-13 17:30+0000\n"
+"Last-Translator: Karen Yeghiazaryan <kareneghiazaryan@mail.ru>\n"
 "Language-Team: Armenian <hy@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-12 07:08+0000\n"
-"X-Generator: Launchpad (build 17336)\n"
+"X-Launchpad-Export-Date: 2015-04-14 05:35+0000\n"
+"X-Generator: Launchpad (build 17423)\n"
 "Language: hy\n"
 
 #: ../src/Plug.vala:43
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:37
 msgid "Cancel"
-msgstr ""
+msgstr "Չեղարկել"
 
 #: ../src/Widgets/InstallInfoBar.vala:53
 msgid "installing language"
