@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 19:41-0600\n"
+"POT-Creation-Date: 2015-04-20 14:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,26 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/Widgets/InstallEntry.vala:57
+msgid "Install more languages…"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:37
+msgid "Cancel"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:53
+msgid "installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:56
+msgid "removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:59
+msgid "installing missing language"
+msgstr ""
 
 #: ../src/Plug.vala:43
 msgid "Language & Region"
@@ -51,24 +71,4 @@ msgstr ""
 
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:37
-msgid "Cancel"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:53
-msgid "installing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:56
-msgid "removing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:59
-msgid "installing missing language"
-msgstr ""
-
-#: ../src/Widgets/InstallEntry.vala:57
-msgid "Install more languages…"
 msgstr ""
