@@ -82,21 +82,21 @@ public class InstallPopover : Gtk.Popover {
         list_store.get_value (iter, 2, out value);
         language_selected (value.get_string ());
         hide ();
-
     }
 
     void load_languagelist () {
         var file = File.new_for_path (Constants.PKGDATADIR+"/languagelist");
-
         try {
             var dis = new DataInputStream (file.read ());
             string line;
             var langs = new GLib.List<string> ();
-            langs.append ("C");
             while ((line = dis.read_line (null)) != null) {
                 if (line.substring(0,1) != "#") {
                     var values = line.split (";");
                     var lang = values[2];
+                    if (lang == "C")
+                        continue;
+                    lang = lang[0:2];
                     if (langs.find_custom (lang, strcmp).length () == 0) {
                         Gtk.TreeIter iter;
                         list_store.append (out iter);

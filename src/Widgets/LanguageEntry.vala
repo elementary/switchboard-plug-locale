@@ -77,6 +77,7 @@ public class LanguageEntry : BaseEntry {
 
         region_combobox = new Gtk.ComboBoxText ();
         region_combobox.changed.connect (on_language_changed);
+        region_combobox.width_request = 150;
 
         left_grid.attach (region_checkbutton, 0, 0, 1, 1);
         left_grid.attach (region_label, 1, 0, 1, 1);
@@ -95,6 +96,7 @@ public class LanguageEntry : BaseEntry {
 
         format_combobox = new Gtk.ComboBoxText ();
         format_combobox.changed.connect (on_format_changed);
+        format_combobox.width_request = 150;
 
         right_grid.attach (format_checkbutton, 0, 0, 1, 1);
         right_grid.attach (format_label, 1, 0, 1, 1);
