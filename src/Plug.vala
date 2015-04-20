@@ -146,12 +146,6 @@ public class Locale.Plug : Switchboard.Plug {
             infobar.show_all ();
         });
 
-        var install_infobar = new InstallInfoBar ();
-        install_infobar.hide ();
-        install_infobar.cancel_clicked.connect (() => {
-            language_list.cancel_install ();
-        });
-
         missing_lang_infobar = new Gtk.InfoBar ();
         missing_lang_infobar.message_type = Gtk.MessageType.INFO;
 
@@ -181,11 +175,6 @@ public class Locale.Plug : Switchboard.Plug {
             infobar.no_show_all = false;
             infobar.show_all ();
         });
-        language_list.progress_changed.connect((progress) => {
-            install_infobar.set_progress (progress);
-            install_infobar.set_cancellable (language_list.install_cancellable);
-            install_infobar.set_transaction_mode (language_list.get_transaction_mode ());
-        });
 
         try {
 
@@ -214,9 +203,8 @@ public class Locale.Plug : Switchboard.Plug {
 
         grid.attach (infobar, 0, 0, 4, 1);
         grid.attach (missing_lang_infobar, 0, 1, 4, 1);
-        grid.attach (install_infobar, 0, 2, 4, 1);
-        grid.attach (header_entry, 0, 3, 4, 1);
-        grid.attach (sw, 0, 4, 4, 1);
+        grid.attach (header_entry, 0, 2, 4, 1);
+        grid.attach (sw, 0, 3, 4, 1);
         grid.show ();
 
     }

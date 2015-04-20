@@ -35,7 +35,7 @@ public class InstallPopover : Gtk.Popover {
         search_entry = new Gtk.SearchEntry ();
         box.pack_start (search_entry);
 
-        list_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+        list_store = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (string));
         list_store.set_default_sort_func ((model, a, b) => {
             Value value_a;
             model.get_value (a, 0, out value_a);
@@ -79,7 +79,7 @@ public class InstallPopover : Gtk.Popover {
         Gtk.TreeIter iter;
         list_store.get_iter (out iter, path);
         Value value;
-        list_store.get_value (iter, 1, out value);
+        list_store.get_value (iter, 2, out value);
         language_selected (value.get_string ());
         hide ();
 
@@ -100,7 +100,7 @@ public class InstallPopover : Gtk.Popover {
                     if (langs.find_custom (lang, strcmp).length () == 0) {
                         Gtk.TreeIter iter;
                         list_store.append (out iter);
-                        list_store.set (iter, 0, Utils.translate (lang), 1, values[0]);
+                        list_store.set (iter, 0, Utils.translate (lang), 1, values[0], 2, lang);
                         langs.append (lang);
                     }
                 }

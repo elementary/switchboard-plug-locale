@@ -23,7 +23,6 @@ vala_precompile (VALA_C ${PLUGNAME}
     Widgets/LanguageEntry.vala
     Widgets/InstallEntry.vala
     Widgets/InstallPopover.vala
-    Widgets/InstallInfoBar.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

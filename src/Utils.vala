@@ -76,6 +76,26 @@ public class Utils : Object{
             return null;
         }
     }
+ 
+    public static string? get_default_for_lang (string lang) {
+        string output;
+        int status;
+        try {
+            Process.spawn_sync (null, 
+                {"/usr/share/language-tools/language2locale", lang , null}, 
+                Environ.get (),
+                SpawnFlags.SEARCH_PATH,
+                null,
+                out output,
+                null,
+                out status);
+
+            return output[0:5];
+        } catch (Error e) {
+            return null;
+        }
+    }
+
     public static Gee.ArrayList<string>? get_installed_locales () {
 
         string output;
@@ -95,7 +115,7 @@ public class Utils : Object{
 
             foreach (var line in output.split("\n")) {
                 if (".utf8" in line)
-                    locales.add (line[0:5]);   
+                    locales.add (line[0:5]);
             }
 
             return locales;

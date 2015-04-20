@@ -15,9 +15,7 @@ public class LanguageList : Gtk.ListBox {
 
 	public signal void settings_changed ();
 	public signal void check_missing_finished (string [] missing);
-	public signal void progress_changed (int progress);
 
-    InstallPopover language_popover;
     InstallEntry install_entry;
 
     UbuntuInstaller li;
@@ -67,18 +65,21 @@ public class LanguageList : Gtk.ListBox {
 
         li = new UbuntuInstaller ();
         li.install_finished.connect (on_install_finished);
+        li.install_failed.connect (on_install_failed);
         li.remove_finished.connect (on_remove_finished);
         li.check_missing_languages ();
         li.check_missing_finished.connect (on_check_missing_finished);
         li.progress_changed.connect ((progress) => {
-            progress_changed (progress);
+            install_entry.set_progress (progress);
+            install_entry.set_cancellable (install_cancellable);
+            install_entry.set_transaction_mode (get_transaction_mode ());
         });
         
         lm = LocaleManager.get_default ();
         
         install_entry = new InstallEntry();
-        language_popover = new InstallPopover (install_entry.label);
-        language_popover.language_selected.connect (on_install_language);
+        install_entry.on_install_language.connect (on_install_language);
+        install_entry.cancel_clicked.connect (cancel_install);
 
         add (install_entry);
 
@@ -89,6 +90,9 @@ public class LanguageList : Gtk.ListBox {
     bool update_lock = true;
 
     public void reload_languages () {
+        foreach (var val in languages.values) {
+            val.clear ();
+        }
 
         var langs = Utils.get_installed_languages ();
         foreach (var lang in langs) {
@@ -113,6 +117,14 @@ public class LanguageList : Gtk.ListBox {
 
         update_lock = true;
 
+        foreach (var key in languages.keys) {
+            var def = Utils.get_default_for_lang (key);
+            if (def != null) {
+                select_language (def);
+                select_format (def);
+            }
+        }
+
         select_language (lang);
         select_format (region);
 
@@ -132,36 +144,34 @@ public class LanguageList : Gtk.ListBox {
     }
 
     void select_format (string locale) {
-
         var lang = languages.get (locale[0:2]);
-        lang.set_display_format(locale[0:5]);
-
+        lang.set_display_format(locale);
     }
 
     void on_install_language (string lang) {
-        
         li.install (lang);
         install_entry.install_started ();
-        
     }
 
     void on_install_finished (string language) {
-        
         reload_languages ();
         install_entry.install_complete ();
 
         li.check_missing_languages ();
+    }
 
+    void on_install_failed () {
+        reload_languages ();
+        install_entry.install_complete ();
+
+        li.check_missing_languages ();
     }
 
     void on_deletion_requested (string locale) {
-        
         li.remove (locale);
-
     }
 
     void on_remove_finished (string langcode) {
-        
         var widget = languages.@get (langcode);
         remove (widget);
         languages.unset (langcode);
@@ -172,7 +182,6 @@ public class LanguageList : Gtk.ListBox {
                 return true;
             });
         }
-
     }
 
     void on_check_missing_finished (string [] missing) {
@@ -190,9 +199,7 @@ public class LanguageList : Gtk.ListBox {
     }
 
     public void add_language(string locale) {
-
         var langcode = locale.substring (0, 2);
-
         if (languages.has_key (langcode)) {
             var entry = languages.@get (langcode);
             entry.add_language (locale);
@@ -203,7 +210,6 @@ public class LanguageList : Gtk.ListBox {
         var l_entry = new LanguageEntry(locale, this);
 
         languages.@set (langcode, l_entry);
-
         l_entry.language_changed.connect (on_language_changed);
         l_entry.deletion_requested.connect (on_deletion_requested);
 
@@ -270,26 +276,20 @@ public class LanguageList : Gtk.ListBox {
      */
 
     public override void row_activated (Gtk.ListBoxRow row) {
-
         if (row is InstallEntry) {
-            language_popover.show_all ();
-        } else {
-            var locale = row as LanguageEntry;
-            locale.check_button.set_active (true);
+            ((InstallEntry) row).do_activate ();
         }
-
     }
 
     int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
-        
         var first = row1 as BaseEntry;
         var second = row2 as BaseEntry;
 
-        var string1 = first.region + " " + first.country;
-        var string2 = second.region + " " + second.country;
-        var diff = (int) (string1.collate (string2) );
-        return diff;
+        int comp = first.region.collate (second.region);
+        if (comp != 0)
+            return comp;
 
+        return first.country.collate (second.country);
     }
 
     /*void header_func (Gtk.ListBoxRow? row, Gtk.ListBoxRow? before) {
