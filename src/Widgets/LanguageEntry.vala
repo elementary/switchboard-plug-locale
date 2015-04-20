@@ -22,12 +22,12 @@ public class LanguageEntry : BaseEntry {
     public signal void language_changed (UpdateType type, string locale);
     public signal void deletion_requested (string region);
 
-    // language selecetion
+    // Language selecetion
     public Gtk.RadioButton region_checkbutton;
     Gtk.Label region_label;
     Gtk.ComboBoxText region_combobox;
 
-    // region selection
+    // Region selection
     public Gtk.RadioButton format_checkbutton;
     Gtk.Label format_label;
     Gtk.ComboBoxText format_combobox;
@@ -55,7 +55,7 @@ public class LanguageEntry : BaseEntry {
         }
 
         get_style_context ().add_provider (css_provider, -1);
-        margin_bottom = 5;
+        margin_bottom = 6;
 
         locale = _locale;
         langcode = locale.substring (0, 2);
@@ -67,20 +67,21 @@ public class LanguageEntry : BaseEntry {
          * Language (translation)
          */
 
-        region_checkbutton = new Gtk.RadioButton.from_widget (list.language_button);
-        region_checkbutton.toggled.connect (on_language_activated);
-        region_checkbutton.set_active (false);
-
         region_label = new Gtk.Label ("<b>%s</b>".printf(region));
         region_label.halign = Gtk.Align.START;
         region_label.use_markup = true;
 
+        region_checkbutton = new Gtk.RadioButton.from_widget (list.language_button);
+        region_checkbutton.toggled.connect (on_language_activated);
+        region_checkbutton.set_active (false);
+        region_checkbutton.image = region_label;
+
         region_combobox = new Gtk.ComboBoxText ();
         region_combobox.changed.connect (on_language_changed);
         region_combobox.width_request = 150;
+        region_combobox.sensitive = false;
 
         left_grid.attach (region_checkbutton, 0, 0, 1, 1);
-        left_grid.attach (region_label, 1, 0, 1, 1);
         left_grid.attach (region_combobox, 2, 0, 1, 1);
 
         /*
@@ -93,14 +94,15 @@ public class LanguageEntry : BaseEntry {
 
         format_checkbutton = new Gtk.RadioButton.from_widget (list.format_button);
         format_checkbutton.toggled.connect (on_format_activated);
+        format_checkbutton.image = format_label;
 
         format_combobox = new Gtk.ComboBoxText ();
         format_combobox.changed.connect (on_format_changed);
         format_combobox.width_request = 150;
+        format_combobox.sensitive = false;
 
         right_grid.attach (format_checkbutton, 0, 0, 1, 1);
-        right_grid.attach (format_label, 1, 0, 1, 1);
-        right_grid.attach (format_combobox, 2, 0, 1, 1);
+        right_grid.attach (format_combobox, 1, 0, 1, 1);
 
         delete_button = new Gtk.ToggleButton ();
         delete_button.image = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.BUTTON);
@@ -119,6 +121,7 @@ public class LanguageEntry : BaseEntry {
         update_region_lock = true;
         region_combobox.active_id = locale;
         region_checkbutton.active = true;
+        region_combobox.sensitive = true;
         update_region_lock = false;
     }
 
@@ -127,6 +130,7 @@ public class LanguageEntry : BaseEntry {
         update_format_lock = true;
         format_combobox.active_id = locale;
         format_checkbutton.active = true;
+        format_combobox.sensitive = true;
         update_format_lock = false;
     }
 
@@ -134,6 +138,7 @@ public class LanguageEntry : BaseEntry {
         if (update_region_lock) 
             return;
 
+        region_combobox.sensitive = region_checkbutton.active;
         language_changed (UpdateType.LANGUAGE, region_combobox.get_active_id ());
     }
 
@@ -141,6 +146,7 @@ public class LanguageEntry : BaseEntry {
         if (update_format_lock) 
             return;
 
+        format_combobox.sensitive = format_checkbutton.active;
         language_changed (UpdateType.FORMAT, format_combobox.get_active_id ());
 
     }
@@ -165,7 +171,7 @@ public class LanguageEntry : BaseEntry {
         region_combobox.remove_all ();
         format_combobox.remove_all ();
         update_format_lock = false;
-        update_format_lock = false;
+        update_region_lock = false;
     }
 
     public void add_language (string locale) {

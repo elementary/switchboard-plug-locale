@@ -53,8 +53,8 @@ public class InstallEntry : BaseEntry {
 
         /* Addition Grid */
         image = new Gtk.Image.from_icon_name ("browser-download", Gtk.IconSize.BUTTON);
-        image.halign = Gtk.Align.START;
-        image.valign = Gtk.Align.START;
+        image.halign = Gtk.Align.CENTER;
+        image.valign = Gtk.Align.CENTER;
 
         label = new Gtk.Label (_("Install more languages…"));
         label.halign = Gtk.Align.START;

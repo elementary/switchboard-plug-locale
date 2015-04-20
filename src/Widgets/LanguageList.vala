@@ -113,7 +113,7 @@ public class LanguageList : Gtk.ListBox {
     void requery_display () {
 
         var lang = lm.get_user_language ();
-        var region = lm.get_user_format ();
+        var region = lm.get_user_format ()[0:5];
 
         update_lock = true;
 
@@ -268,7 +268,6 @@ public class LanguageList : Gtk.ListBox {
         }
 
         settings_changed ();
-        
     }
 
     /*
