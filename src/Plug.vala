@@ -125,15 +125,12 @@ public class Locale.Plug : Switchboard.Plug {
         var choose_language_hint = new Gtk.Label (_("Choose your language:"));
         choose_language_hint.hexpand = true;
         var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
-        var choose_input_hint = new Gtk.Label (_("Keyboard input:"));
 
         choose_language_hint.halign = Gtk.Align.START;
         choose_format_hint.halign = Gtk.Align.START;
-        choose_input_hint.halign = Gtk.Align.START;
 
         header_entry.left_grid.attach (choose_language_hint, 0, 0, 1, 1);
         header_entry.right_grid.attach (choose_format_hint, 0, 0, 1, 1);
-        header_entry.right_grid.attach (choose_input_hint, 1, 0, 1, 1);
         var spacer = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
         spacer.set_opacity (0);
         header_entry.settings_grid.add (spacer);

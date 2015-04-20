@@ -32,7 +32,6 @@ public class LanguageList : Gtk.ListBox {
     LocaleManager lm;
 
     Gee.HashMap<string, LanguageEntry> languages;
-    Gee.HashMap<string, string?> input_sources;
 
     private const string STYLE = """
 
@@ -65,7 +64,6 @@ public class LanguageList : Gtk.ListBox {
         set_filter_func (filter_func);
 
         languages = new Gee.HashMap<string, LanguageEntry> ();
-        input_sources = new Gee.HashMap<string, string?> ();
 
         li = new UbuntuInstaller ();
         li.install_finished.connect (on_install_finished);
@@ -112,13 +110,11 @@ public class LanguageList : Gtk.ListBox {
 
         var lang = lm.get_user_language ();
         var region = lm.get_user_format ();
-        var inputs = lm.get_user_inputmaps ();
 
         update_lock = true;
 
         select_language (lang);
         select_format (region);
-        select_inputs (inputs);
 
         update_lock = false;
 
@@ -139,17 +135,6 @@ public class LanguageList : Gtk.ListBox {
 
         var lang = languages.get (locale[0:2]);
         lang.set_display_format(locale[0:5]);
-
-    }
-
-    void select_inputs (Gee.HashMap<string, string> map) {
-        
-        map.@foreach ((entry) => {
-            input_sources.@set (entry.key, entry.value);
-            var lang = languages.get (entry.key);
-            lang.set_display_input (entry.value);
-            return true;
-        });
 
     }
 
@@ -220,7 +205,6 @@ public class LanguageList : Gtk.ListBox {
         languages.@set (langcode, l_entry);
 
         l_entry.language_changed.connect (on_language_changed);
-        l_entry.input_changed.connect (on_input_changed);
         l_entry.deletion_requested.connect (on_deletion_requested);
 
         add (l_entry);
@@ -279,31 +263,6 @@ public class LanguageList : Gtk.ListBox {
 
         settings_changed ();
         
-    }
-
-
-    void on_input_changed (string langcode, string inputcode, bool added) {
-        
-        if (update_lock)
-            return;
-
-        if (!added) {
-            input_sources.@unset (langcode);
-        } else {
-            input_sources.@set (langcode, inputcode);
-        }
-
-        VariantBuilder builder2 = new VariantBuilder (new VariantType ("a(ss)") );      
-        VariantBuilder builder = new VariantBuilder (new VariantType ("a(ss)") );       
-        input_sources.@foreach((entry) => {
-            message ("('%s', '%s')", "xkb", entry.value);
-            builder2.add ("(ss)", entry.key, entry.value);
-            builder.add ("(ss)", "xkb", entry.value);
-            return true;
-        }); 
-
-        lm.set_input_language (builder.end (), builder2.end ());
-   
     }
 
     /*
