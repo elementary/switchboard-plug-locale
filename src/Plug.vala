@@ -34,7 +34,6 @@ public class Locale.Plug : Switchboard.Plug {
     Gtk.InfoBar infobar;
     Gtk.InfoBar missing_lang_infobar;
     Gtk.Grid grid;
-    Gtk.Box top_box;
 
     public Plug () {
 
@@ -111,7 +110,7 @@ public class Locale.Plug : Switchboard.Plug {
         var sw = new Gtk.ScrolledWindow (null, null);
 
         grid.column_homogeneous = true;
-        grid.row_spacing = 5;
+        grid.row_spacing = 6;
 
         language_list = new LanguageList ();
         language_list.valign = Gtk.Align.START;
@@ -217,8 +216,7 @@ public class Locale.Plug : Switchboard.Plug {
         grid.attach (missing_lang_infobar, 0, 1, 4, 1);
         grid.attach (install_infobar, 0, 2, 4, 1);
         grid.attach (header_entry, 0, 3, 4, 1);
-        grid.attach (top_box, 0, 4, 4, 1);
-        grid.attach (sw, 0, 5, 4, 1);
+        grid.attach (sw, 0, 4, 4, 1);
         grid.show ();
 
     }

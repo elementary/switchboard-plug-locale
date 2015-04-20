@@ -14,9 +14,8 @@
 public class InstallPopover : Gtk.Popover {
 
     Gtk.SearchEntry search_entry;
-    Gtk.ListBox languages_box;
-
-    string search_string = " ";
+    Gtk.TreeView languages_view;
+    Gtk.ListStore list_store;
 
     public signal void language_selected (string lang);
     
@@ -24,60 +23,65 @@ public class InstallPopover : Gtk.Popover {
         Object (relative_to: relative_to);
 
         set_position(Gtk.PositionType.BOTTOM);
-        
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         box.margin = 6;
 
-        var frame = new Gtk.Frame ("");
         var scrolled = new Gtk.ScrolledWindow (null, null);
+        scrolled.shadow_type = Gtk.ShadowType.IN;
         scrolled.height_request = 145;
         scrolled.width_request = 225;
 
         search_entry = new Gtk.SearchEntry ();
-        search_entry.search_changed.connect (on_search);
         box.pack_start (search_entry);
 
-        languages_box = new Gtk.ListBox ();
-        languages_box.set_activate_on_single_click(true);
-        languages_box.set_selection_mode (Gtk.SelectionMode.NONE);
-        languages_box.get_style_context ().add_class ("background");
-        //languages_box.set_filter_func(filter_func_text);
-        languages_box.set_header_func (header_func);
-        languages_box.row_activated.connect (row_activated);
+        list_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+        list_store.set_default_sort_func ((model, a, b) => {
+            Value value_a;
+            model.get_value (a, 0, out value_a);
+            Value value_b;
+            model.get_value (b, 0, out value_b);
+            return value_a.get_string ().collate (value_b.get_string ());
+        });
 
-        scrolled.add (languages_box);
-        frame.add (scrolled);
-        box.pack_start (frame);
+        languages_view = new Gtk.TreeView.with_model (list_store);
+        languages_view.headers_visible = false;
+        languages_view.insert_column_with_attributes (-1, "", new Gtk.CellRendererText (), "text", 0);
+        languages_view.activate_on_single_click = true;
+        languages_view.row_activated.connect (row_activated);
+        languages_view.set_search_entry (search_entry);
+        languages_view.set_search_equal_func (treesearchfunc);
+
+        scrolled.add (languages_view);
+        box.pack_start (scrolled);
 
         add (box);
 
         load_languagelist();
-        on_search ();
     }
 
-    void on_search () {
-
-        search_string = search_entry.text;
-        languages_box.set_filter_func(filter_func_text);
-    
-    }
-
-    void row_activated (Gtk.ListBoxRow row) {
-
-        var language_row = row as LanguageRow;
-        language_selected (language_row.locale);
-        hide ();
-
-    }
-
-    bool filter_func_text (Gtk.ListBoxRow row) {
-    
-        var locale = row as LanguageRow;
-        if (search_string.down () in locale.lang.down () || search_string.down () in locale.translated_lang.down ()) {
-            return true;
+    static bool treesearchfunc (Gtk.TreeModel model, int column, string key, Gtk.TreeIter iter) {
+        Value value;
+        model.get_value (iter, 0, out value);
+        if (key.down () in value.get_string ().down ()) {
+            return false;
         }
-        return false;
 
+        model.get_value (iter, 1, out value);
+        if (key.down () in value.get_string ().down ()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    void row_activated (Gtk.TreePath path, Gtk.TreeViewColumn column) {
+        Gtk.TreeIter iter;
+        list_store.get_iter (out iter, path);
+        Value value;
+        list_store.get_value (iter, 1, out value);
+        language_selected (value.get_string ());
+        hide ();
 
     }
 
@@ -87,47 +91,22 @@ public class InstallPopover : Gtk.Popover {
         try {
             var dis = new DataInputStream (file.read ());
             string line;
-        
+            var langs = new GLib.List<string> ();
+            langs.append ("C");
             while ((line = dis.read_line (null)) != null) {
-
                 if (line.substring(0,1) != "#") {
                     var values = line.split (";");
-                    languages_box.add (new LanguageRow (values[0], values[2]));
+                    var lang = values[2];
+                    if (langs.find_custom (lang, strcmp).length () == 0) {
+                        Gtk.TreeIter iter;
+                        list_store.append (out iter);
+                        list_store.set (iter, 0, Utils.translate (lang), 1, values[0]);
+                        langs.append (lang);
+                    }
                 }
-                
             }
         } catch (Error e) {
             error ("%s", e.message);
         }
-    }
-
-    void header_func (Gtk.ListBoxRow? row, Gtk.ListBoxRow? before) {
-        
-        if (before != null)
-            row.set_header (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-    
-    }
-}
-
-public class LanguageRow : Gtk.ListBoxRow {
-
-    public string lang;
-    public string translated_lang;
-    public string locale;
-
-    Gtk.Label language_label;
-
-    public LanguageRow (string language, string _locale) {
-        lang = language;
-        locale = _locale;
-        translated_lang = Utils.translate (locale);
-        get_style_context ().add_class ("background");
-
-        language_label = new Gtk.Label (language);
-        language_label.halign = Gtk.Align.START;
-        language_label.margin = 5;
-        language_label.set_markup ("<b>%s</b>".printf(translated_lang));
-        //warning ("Language: %s Translated: %s", language, );
-        add (language_label);
     }
 }

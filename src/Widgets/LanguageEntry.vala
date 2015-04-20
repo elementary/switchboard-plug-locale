@@ -18,7 +18,6 @@ public enum UpdateType {
 
 public class LanguageEntry : BaseEntry {
 
-    public Gtk.Button delete_button;
 
     public signal void set_region (string region);
 
@@ -36,7 +35,7 @@ public class LanguageEntry : BaseEntry {
     Gtk.ComboBox format_combobox;
     Gtk.ListStore format_store;
 
-    Gtk.Image delete_image;
+    Gtk.Button delete_button;
 
     Gtk.ListStore list_store;
 
@@ -249,13 +248,10 @@ public class LanguageEntry : BaseEntry {
     }
 
     public void hide_delete () {
-
-        delete_image.set_opacity (0);
-
+        delete_button.hide ();
     }
 
     public void show_delete () {
-
-        delete_image.set_opacity (1);
+        delete_button.show ();
     }
 }

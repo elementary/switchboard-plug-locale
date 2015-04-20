@@ -29,13 +29,13 @@ PACKAGES
     gtk+-3.0
     switchboard-2.0
     granite
-	gnome-desktop-3.0
+    gnome-desktop-3.0
     accountsservice
     posix
     ibus-1.0
     polkit-gobject-1
 OPTIONS
-	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
+    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
     --thread
 )
 
