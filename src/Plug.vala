@@ -8,7 +8,7 @@
   MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
   PURPOSE. See the GNU General Public License for more details.
   You should have received a copy of the GNU General Public License along
-  with this program. If not, see 
+  with this program. If not, see
 ***/
 
 namespace LC {
@@ -41,9 +41,9 @@ public class Locale.Plug : Switchboard.Plug {
         Object (category: Category.PERSONAL,
                 code_name: "system-pantheon-locale",
                 display_name: _("Language & Region"),
-                description: _("Install languages, set region, and choose date & currency formats"),
+                description: _("Install languages, set region, and choose date &amp; currency formats"),
                 icon: "preferences-desktop-locale");
-        
+
     }
 
     public override Gtk.Widget get_widget () {
@@ -62,20 +62,20 @@ public class Locale.Plug : Switchboard.Plug {
         });
 
     }
-    
+
     public override void shown () {
         setup_ui ();
         setup_info ();
     }
-    
+
     public override void hidden () {
-    
+
     }
-    
+
     public override void search_callback (string location) {
-    
+
     }
-    
+
     // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
     public override async Gee.TreeMap<string, string> search (string search) {
         return new Gee.TreeMap<string, string> (null, null);
@@ -85,7 +85,7 @@ public class Locale.Plug : Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-        
+
         try {
             var provider = new Gtk.CssProvider();
             provider.load_from_data ("
