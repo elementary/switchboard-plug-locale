@@ -41,7 +41,7 @@ public class Locale.Plug : Switchboard.Plug {
         Object (category: Category.PERSONAL,
                 code_name: "system-pantheon-locale",
                 display_name: _("Language & Region"),
-                description: _("Install languages, set region, and choose date & currency formats"),
+                description: _("Install languages, set region, and choose date &amp; currency formats"),
                 icon: "preferences-desktop-locale");
         
     }
