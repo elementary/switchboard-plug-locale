@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-16 05:42+0000\n"
+"X-Launchpad-Export-Date: 2015-05-17 05:25+0000\n"
 "X-Generator: Launchpad (build 17493)\n"
 "Language: pt\n"
 
@@ -73,7 +73,3 @@ msgstr "Completar instalação"
 #: ../src/Plug.vala:199
 msgid "Apply for login screen, guest account and new users"
 msgstr "Aplicar no ecrã de bloqueio, conta de convidado e novos utilizadores"
-
-#~ msgid "Install languages, set region, and choose date & currency formats"
-#~ msgstr ""
-#~ "Instalar idiomas, definir regiões, e escolher formatos de data e de moeda"
