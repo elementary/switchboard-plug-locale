@@ -45,6 +45,8 @@ add_schema("data/schema/org.pantheon.switchboard.plug.locale.gschema.xml")
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
+install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-locale.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
+
 # Traslation stuff
 add_subdirectory (po)
 
