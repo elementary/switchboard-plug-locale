@@ -25,6 +25,7 @@ public class UbuntuInstaller : Object {
     public TransactionMode transaction_mode;
 
     public signal void install_finished (string langcode);
+    public signal void install_failed ();
     public signal void remove_finished (string langcode);
     public signal void check_missing_finished (string [] missing);
     public signal void progress_changed (int progress);
@@ -173,6 +174,7 @@ public class UbuntuInstaller : Object {
 
     void on_apt_finshed (string id, bool success) {
         if (!success) {
+            install_failed ();
             transactions.unset (id);
             return;
         }

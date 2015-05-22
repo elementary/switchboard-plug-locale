@@ -34,7 +34,6 @@ public class Locale.Plug : Switchboard.Plug {
     Gtk.InfoBar infobar;
     Gtk.InfoBar missing_lang_infobar;
     Gtk.Grid grid;
-    Gtk.Box top_box;
 
     public Plug () {
 
@@ -111,7 +110,7 @@ public class Locale.Plug : Switchboard.Plug {
         var sw = new Gtk.ScrolledWindow (null, null);
 
         grid.column_homogeneous = true;
-        grid.row_spacing = 5;
+        grid.row_spacing = 6;
 
         language_list = new LanguageList ();
         language_list.valign = Gtk.Align.START;
@@ -125,15 +124,12 @@ public class Locale.Plug : Switchboard.Plug {
         var choose_language_hint = new Gtk.Label (_("Choose your language:"));
         choose_language_hint.hexpand = true;
         var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
-        var choose_input_hint = new Gtk.Label (_("Keyboard input:"));
 
         choose_language_hint.halign = Gtk.Align.START;
         choose_format_hint.halign = Gtk.Align.START;
-        choose_input_hint.halign = Gtk.Align.START;
 
         header_entry.left_grid.attach (choose_language_hint, 0, 0, 1, 1);
         header_entry.right_grid.attach (choose_format_hint, 0, 0, 1, 1);
-        header_entry.right_grid.attach (choose_input_hint, 1, 0, 1, 1);
         var spacer = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
         spacer.set_opacity (0);
         header_entry.settings_grid.add (spacer);
@@ -148,12 +144,6 @@ public class Locale.Plug : Switchboard.Plug {
         language_list.settings_changed.connect (() => {
             infobar.no_show_all = false;
             infobar.show_all ();
-        });
-
-        var install_infobar = new InstallInfoBar ();
-        install_infobar.hide ();
-        install_infobar.cancel_clicked.connect (() => {
-            language_list.cancel_install ();
         });
 
         missing_lang_infobar = new Gtk.InfoBar ();
@@ -185,11 +175,6 @@ public class Locale.Plug : Switchboard.Plug {
             infobar.no_show_all = false;
             infobar.show_all ();
         });
-        language_list.progress_changed.connect((progress) => {
-            install_infobar.set_progress (progress);
-            install_infobar.set_cancellable (language_list.install_cancellable);
-            install_infobar.set_transaction_mode (language_list.get_transaction_mode ());
-        });
 
         try {
 
@@ -218,10 +203,8 @@ public class Locale.Plug : Switchboard.Plug {
 
         grid.attach (infobar, 0, 0, 4, 1);
         grid.attach (missing_lang_infobar, 0, 1, 4, 1);
-        grid.attach (install_infobar, 0, 2, 4, 1);
-        grid.attach (header_entry, 0, 3, 4, 1);
-        grid.attach (top_box, 0, 4, 4, 1);
-        grid.attach (sw, 0, 5, 4, 1);
+        grid.attach (header_entry, 0, 2, 4, 1);
+        grid.attach (sw, 0, 3, 4, 1);
         grid.show ();
 
     }
