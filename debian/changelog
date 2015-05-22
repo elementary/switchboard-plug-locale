@@ -1,3 +1,9 @@
+switchboard-plug-locale (0.1.0.1) trusty; urgency=low
+
+  * Fix Switchboard tooltip (lp:1443639)
+
+ -- Cody Garver <cody@elementaryos.org>  Fri, 22 May 2015 05:20:34 -0500
+
 switchboard-plug-locale (0.1) trusty; urgency=low
 
   * Initial release.
