@@ -7,69 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-16 00:19-0500\n"
-"PO-Revision-Date: 2015-02-15 01:17+0000\n"
+"POT-Creation-Date: 2015-05-22 05:15-0500\n"
+"PO-Revision-Date: 2015-05-22 15:43+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-17 05:25+0000\n"
-"X-Generator: Launchpad (build 17493)\n"
+"X-Launchpad-Export-Date: 2015-05-23 05:27+0000\n"
+"X-Generator: Launchpad (build 17514)\n"
 "Language: it\n"
 
-#: ../src/Widgets/InstallEntry.vala:57
+#: ../src/Widgets/LanguageEntry.vala:109
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: ../src/Widgets/InstallEntry.vala:59
 msgid "Install more languages…"
 msgstr "Installa più lingue ..."
 
-#: ../src/Widgets/InstallInfoBar.vala:37
-msgid "Cancel"
-msgstr "Annulla"
-
-#: ../src/Widgets/InstallInfoBar.vala:53
+#: ../src/Widgets/InstallEntry.vala:74 ../src/Widgets/InstallEntry.vala:130
 msgid "installing language"
 msgstr "installazione della lingua"
 
-#: ../src/Widgets/InstallInfoBar.vala:56
+#: ../src/Widgets/InstallEntry.vala:85
+msgid "Cancel"
+msgstr "Annulla"
+
+#: ../src/Widgets/InstallEntry.vala:133
 msgid "removing language"
 msgstr "rimozione della lingua"
 
-#: ../src/Widgets/InstallInfoBar.vala:59
+#: ../src/Widgets/InstallEntry.vala:136
 msgid "installing missing language"
 msgstr "installazione della lingua mancante"
 
-#: ../src/Plug.vala:43
+#: ../src/Plug.vala:42
 msgid "Language & Region"
 msgstr "Lingua e Regione"
 
-#: ../src/Plug.vala:44
+#: ../src/Plug.vala:43
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
+"Installa lingue, imposta la regione e scegli la data & amp; il formati della "
+"valuta"
 
-#: ../src/Plug.vala:125
+#: ../src/Plug.vala:124
 msgid "Choose your language:"
 msgstr "Scegli la lingua:"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:126
 msgid "Numbers and dates:"
 msgstr "Numeri e date:"
 
-#: ../src/Plug.vala:128
-msgid "Keyboard input:"
-msgstr "Immissione dalla tastiera:"
-
-#: ../src/Plug.vala:145
+#: ../src/Plug.vala:141
 msgid "Some changes will not take effect until you log out"
 msgstr "Alcune modifiche non avranno effetto fino alla disconnessione"
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:154
 msgid "Language support is not installed completely"
 msgstr "Il supporto linguistico non è installato completamente"
 
-#: ../src/Plug.vala:166
+#: ../src/Plug.vala:156
 msgid "Complete Installation"
 msgstr "Completa installazione"
 
-#: ../src/Plug.vala:199
+#: ../src/Plug.vala:184
 msgid "Apply for login screen, guest account and new users"
 msgstr "Applica per la schermata di login, utente ospite e nuovi utenti"

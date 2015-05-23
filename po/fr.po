@@ -7,71 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-16 00:19-0500\n"
+"POT-Creation-Date: 2015-05-22 05:15-0500\n"
 "PO-Revision-Date: 2015-04-19 13:40+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-17 05:24+0000\n"
-"X-Generator: Launchpad (build 17493)\n"
+"X-Launchpad-Export-Date: 2015-05-23 05:27+0000\n"
+"X-Generator: Launchpad (build 17514)\n"
 "Language: fr\n"
 
-#: ../src/Widgets/InstallEntry.vala:57
+#: ../src/Widgets/LanguageEntry.vala:109
+msgid "Remove"
+msgstr ""
+
+#: ../src/Widgets/InstallEntry.vala:59
 msgid "Install more languages…"
 msgstr "Installer d'autres langues…"
 
-#: ../src/Widgets/InstallInfoBar.vala:37
-msgid "Cancel"
-msgstr "Annuler"
-
-#: ../src/Widgets/InstallInfoBar.vala:53
+#: ../src/Widgets/InstallEntry.vala:74 ../src/Widgets/InstallEntry.vala:130
 msgid "installing language"
 msgstr "Installation des langues en cours"
 
-#: ../src/Widgets/InstallInfoBar.vala:56
+#: ../src/Widgets/InstallEntry.vala:85
+msgid "Cancel"
+msgstr "Annuler"
+
+#: ../src/Widgets/InstallEntry.vala:133
 msgid "removing language"
 msgstr "Suppression des langues en cours"
 
-#: ../src/Widgets/InstallInfoBar.vala:59
+#: ../src/Widgets/InstallEntry.vala:136
 msgid "installing missing language"
 msgstr "Installation des langues manquantes en cours"
 
-#: ../src/Plug.vala:43
+#: ../src/Plug.vala:42
 msgid "Language & Region"
 msgstr "Langue & Région"
 
-#: ../src/Plug.vala:44
+#: ../src/Plug.vala:43
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
 
-#: ../src/Plug.vala:125
+#: ../src/Plug.vala:124
 msgid "Choose your language:"
 msgstr "Choisissez votre langue :"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:126
 msgid "Numbers and dates:"
 msgstr "Nombres et dates :"
 
-#: ../src/Plug.vala:128
-msgid "Keyboard input:"
-msgstr "Clavier :"
-
-#: ../src/Plug.vala:145
+#: ../src/Plug.vala:141
 msgid "Some changes will not take effect until you log out"
 msgstr "Certains changements ne prendront effet qu'après déconnexion."
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:154
 msgid "Language support is not installed completely"
 msgstr ""
 "Le support des langues supplémentaires n'est pas entièrement installé."
 
-#: ../src/Plug.vala:166
+#: ../src/Plug.vala:156
 msgid "Complete Installation"
 msgstr "Terminer l'installation"
 
-#: ../src/Plug.vala:199
+#: ../src/Plug.vala:184
 msgid "Apply for login screen, guest account and new users"
 msgstr ""
 "Appliquer pour l'écran de connexion, le compte invité et les nouveaux "
