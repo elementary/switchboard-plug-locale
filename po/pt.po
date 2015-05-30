@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-22 05:15-0500\n"
-"PO-Revision-Date: 2015-02-13 13:19+0000\n"
-"Last-Translator: Sérgio Marques <Unknown>\n"
+"PO-Revision-Date: 2015-05-29 11:36+0000\n"
+"Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-23 05:27+0000\n"
-"X-Generator: Launchpad (build 17514)\n"
+"X-Launchpad-Export-Date: 2015-05-30 05:34+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
 "Language: pt\n"
 
 #: ../src/Widgets/LanguageEntry.vala:109
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: ../src/Widgets/InstallEntry.vala:59
 msgid "Install more languages…"
@@ -49,6 +49,7 @@ msgstr "Idioma e região"
 #: ../src/Plug.vala:43
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
+"Instalar idiomas, escolher a região e escolher os formatos de data e moeda"
 
 #: ../src/Plug.vala:124
 msgid "Choose your language:"
