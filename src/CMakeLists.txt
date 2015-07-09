@@ -24,6 +24,9 @@ vala_precompile (VALA_C ${PLUGNAME}
     Widgets/InstallEntry.vala
     Widgets/InstallPopover.vala
     Widgets/LanguageListBox.vala
+    Widgets/LocaleView.vala
+    Widgets/LocaleSetting.vala
+    Widgets/Preview.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
@@ -34,6 +37,7 @@ PACKAGES
     posix
     ibus-1.0
     polkit-gobject-1
+    monetary
 OPTIONS
     --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
     --thread
