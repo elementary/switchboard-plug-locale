@@ -13,8 +13,8 @@ ensure_vala_version ("0.23.0" MINIMUM)
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${PLUGNAME}
-    Plug.vala  
-    Utils.vala 
+    Plug.vala
+    Utils.vala
     LocaleManager.vala
     Installer/UbuntuInstaller.vala
     Installer/aptd-client.vala
@@ -23,6 +23,7 @@ vala_precompile (VALA_C ${PLUGNAME}
     Widgets/LanguageEntry.vala
     Widgets/InstallEntry.vala
     Widgets/InstallPopover.vala
+    Widgets/LanguageListBox.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
