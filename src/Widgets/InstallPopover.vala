@@ -86,23 +86,21 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         void load_languagelist () {
-            var file = File.new_for_path (Constants.PKGDATADIR+"/languagelist");
+            var file = File.new_for_path (Path.build_path ("/", Constants.PKGDATADIR, "languagelist"));
             try {
                 var dis = new DataInputStream (file.read ());
                 string line;
                 var langs = new GLib.List<string> ();
                 while ((line = dis.read_line (null)) != null) {
-                    if (line.substring(0,1) != "#") {
-                        var values = line.split (";");
-                        var lang = values[2];
-                        if (lang == "C")
+                    if (line.substring(0,1) != "#" && line != "") {
+                        if (line == "ia")
                             continue;
-                        lang = lang[0:2];
-                        if (langs.find_custom (lang, strcmp).length () == 0) {
+
+                        if (langs.find_custom (line, strcmp).length () == 0) {
                             Gtk.TreeIter iter;
                             list_store.append (out iter);
-                            list_store.set (iter, 0, Utils.translate (lang), 1, values[0], 2, lang);
-                            langs.append (lang);
+                            list_store.set (iter, 0, Utils.translate (line, null), 1, Utils.translate (line, "C"), 2, line);
+                            langs.append (line);
                         }
                     }
                 }

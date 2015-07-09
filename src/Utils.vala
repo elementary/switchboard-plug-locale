@@ -139,9 +139,12 @@ namespace SwitchboardPlugLocale {
             return dgettext ("iso_3166", country);
         }
 
-        public static string translate (string locale) {
+        public static string translate (string locale, string? translation) {
             var current_language = Environment.get_variable ("LANGUAGE");
-            Environment.set_variable ("LANGUAGE", locale, true);
+            if (translation == null)
+                Environment.set_variable ("LANGUAGE", locale, true);
+            else
+                Environment.set_variable ("LANGUAGE", translation, true);
 
             var lang_name = translate_language (Gnome.Languages.get_language_from_locale (locale, null));
 
