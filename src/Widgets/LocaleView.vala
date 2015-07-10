@@ -2,6 +2,8 @@ namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Granite.Widgets.ThinPaned {
         private weak Plug               plug;
         private Gtk.Box                 sidebar;
+        private Gtk.ToolButton          add_button;
+        private Gtk.ToolButton          remove_button;
 
         public LanguageListBox          list_box;
         public LocaleSetting            locale_setting;
@@ -22,6 +24,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 debug ("reloading Settings widget for language '%s'".printf (list_box.get_selected_language_code ()));
                 locale_setting.reload_regions (list_box.get_selected_language_code (), regions);
                 locale_setting.reload_labels (list_box.get_selected_language_code ());
+
+                if (remove_button != null) {
+                    if (list_box.get_selected_language_code () == lm.get_user_language ().slice (0, 2))
+                        remove_button.set_sensitive (false);
+                    else if (Utils.get_permission ().allowed)
+                        remove_button.set_sensitive (true);
+                }
             });
 
             sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -30,7 +39,7 @@ namespace SwitchboardPlugLocale.Widgets {
             scroll.expand = true;
             sidebar.pack_start (scroll, true, true);
 
-            var add_button = new Gtk.ToolButton (null, "add");
+            add_button = new Gtk.ToolButton (null, "add");
             add_button.set_icon_name ("list-add-symbolic");
             add_button.set_tooltip_text (_("Install language"));
             add_button.set_sensitive (false);
@@ -40,7 +49,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 popover.language_selected.connect (plug.on_install_language);
             });
 
-            var remove_button = new Gtk.ToolButton (null, "remove");
+            remove_button = new Gtk.ToolButton (null, "remove");
             remove_button.set_icon_name ("list-remove-symbolic");
             remove_button.set_tooltip_text (_("Remove language"));
             remove_button.set_sensitive (false);
@@ -96,7 +105,8 @@ namespace SwitchboardPlugLocale.Widgets {
             Utils.get_permission ().notify["allowed"].connect (() => {
                 if (Utils.get_permission ().allowed) {
                     add_button.set_sensitive (true);
-                    remove_button.set_sensitive (true);
+                    if (list_box.get_selected_language_code () != lm.get_user_language ().slice (0, 2))
+                        remove_button.set_sensitive (true);
                 } else {
                     add_button.set_sensitive (false);
                     remove_button.set_sensitive (false);
