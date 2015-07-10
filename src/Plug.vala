@@ -122,7 +122,7 @@ namespace SwitchboardPlugLocale {
 
             //Gtk.InfoBar for informing about necessary log-out/log-in
             infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.INFO;
+            infobar.message_type = Gtk.MessageType.WARNING;
             infobar.no_show_all = true;
             var content = infobar.get_content_area () as Gtk.Container;
             var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
