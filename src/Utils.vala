@@ -174,6 +174,7 @@ namespace SwitchboardPlugLocale {
         }
 
         public static string translate_country (string country) {
+            Intl.textdomain ("iso_3166");
             return dgettext ("iso_3166", country);
         }
 
@@ -191,17 +192,19 @@ namespace SwitchboardPlugLocale {
             return lang_name;
         }
         
-        //TODO: seems not work currently. damn.
-        public static string translate_region (string locale, string region) {
-            //var current_language = Environment.get_variable ("LANGUAGE");
-            //Environment.set_variable ("LANGUAGE", locale, true);
+        public static string translate_region (string locale, string region, string? translation) {
+            var current_language = Environment.get_variable ("LANGUAGE");
+            if (translation == null)
+                Environment.set_variable ("LANGUAGE", locale, true);
+            else
+                Environment.set_variable ("LANGUAGE", translation, true);
 
             string region_name = region;
 
             if (region.length == 2)
-                region_name = Gnome.Languages.get_country_from_code (region, null);
+                region_name = translate_country (Gnome.Languages.get_country_from_code (region, null));
 
-            //Environment.set_variable ("LANGUAGE", current_language, true);
+            Environment.set_variable ("LANGUAGE", current_language, true);
  
             return region_name;
         }

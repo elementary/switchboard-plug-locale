@@ -81,7 +81,7 @@ namespace SwitchboardPlugLocale.Widgets {
             set_button = new Gtk.Button ();
             set_button.label = _("Set Language");
             set_button.halign = Gtk.Align.START;
-            set_button.set_size_request (150, 25);
+            set_button.set_size_request (150, 27);
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
             set_button.clicked.connect (() => {
@@ -110,7 +110,7 @@ namespace SwitchboardPlugLocale.Widgets {
             set_system_button.set_tooltip_text (
                 _("Set language for login screen, guest account and new user accounts"));
             set_system_button.halign = Gtk.Align.START;
-            set_system_button.set_size_request (150, 25);
+            set_system_button.set_size_request (150, 27);
             set_system_button.set_sensitive (false);
 
             set_system_button.clicked.connect (() => {
@@ -190,7 +190,7 @@ namespace SwitchboardPlugLocale.Widgets {
             has_region = false;
             foreach (var region in regions) {
                 has_region = true;
-                var region_string = Utils.translate_region (language, region);
+                var region_string = Utils.translate_region (language, region, language);
 
                 var iter = Gtk.TreeIter ();
                 region_store.append (out iter);
@@ -244,12 +244,7 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         public void reload_labels (string language) {
-            /* this seems stupid, but Utils.translate needs to be called twice to work.
-             * I have no clue why, but well - this is only a workaround */
-            var language_string = Utils.translate (language, null);
-            language_string = Utils.translate (language, null);
-
-            language_label.set_label (language_string);
+            language_label.set_label (Utils.translate (language, null));
         }
 
         private void on_applied_to_system () {

@@ -19,7 +19,7 @@ namespace SwitchboardPlugLocale.Widgets {
             list_box.settings_changed.connect (() => {
                 var regions = Utils.get_regions (list_box.get_selected_language_code ());
 
-                debug ("reloading locale_setting widget");
+                debug ("reloading Settings widget for language '%s'".printf (list_box.get_selected_language_code ()));
                 locale_setting.reload_regions (list_box.get_selected_language_code (), regions);
                 locale_setting.reload_labels (list_box.get_selected_language_code ());
             });
