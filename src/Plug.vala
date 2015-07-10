@@ -27,14 +27,14 @@ namespace LC {
 
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
-
+        Gtk.Grid grid;
         Widgets.LanguageList language_list;
 
+        public Installer.UbuntuInstaller installer;
         LocaleManager lm;
 
-        Gtk.InfoBar infobar;
-        Gtk.InfoBar missing_lang_infobar;
-        Gtk.Grid grid;
+        public Gtk.InfoBar infobar;
+        public Gtk.InfoBar missing_lang_infobar;
 
         public Plug () {
 

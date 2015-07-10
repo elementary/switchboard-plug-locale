@@ -333,8 +333,136 @@ namespace SwitchboardPlugLocale {
             if (my_map.get_type_string () == "a(ss)") {
                 settings.set_value (KEY_INPUT_SELETION, my_map);
             }
+        }
+        
+        private void localectl_set_locale (string locale, string? format = null) throws GLib.Error {
+            debug ("setting system-wide locale via localectl");
+            if (Utils.get_permission ().allowed) {
+                string output;
+                int status;
+                string cli = "/usr/bin/localectl";
+                string command = "set-locale";
 
+                try {
+                    if (format == null) {
+                        Process.spawn_sync (null,
+                            {"pkexec", cli, command, locale}, 
+                            Environ.get (), 
+                            SpawnFlags.SEARCH_PATH, 
+                            null, out output, 
+                            null, out status);
+                        if (output != "")
+                            critical ("localectl failed to set locale");
+                    } else {
+                        Process.spawn_sync (null,
+                            {"pkexec", cli, command, locale, "LC_TIME=%s".printf (format),
+                             "LC_NUMERIC=%s".printf (format), "LC_MONETARY=%s".printf (format),
+                             "LC_MEASUREMENT=%s".printf (format)}, 
+                            Environ.get (),
+                            SpawnFlags.SEARCH_PATH,
+                            null, out output,
+                            null, out status);
+                        if (output != "")
+                            critical ("localectl failed to set locale");
+                    }
+                } catch (Error e) {
+                    critical ("localectl failed to set locale");
+                    throw e;
+                }
+            }
+        }
 
+        private void localectl_set_x11_keymap (string layouts, string variants) throws GLib.Error {
+            if (Utils.get_permission ().allowed) {
+                string output;
+                int status;
+                string cli = "/usr/bin/localectl";
+                string command = "set-x11-keymap";
+
+                try {
+                    Process.spawn_sync (null,
+                        {"pkexec", cli, command, layouts, "", variants},
+                        Environ.get (),
+                        SpawnFlags.SEARCH_PATH,
+                        null, out output,
+                        null, out status);
+
+                    if (output != "")
+                        critical ("localectl failed to set x11 keymap");
+                } catch (Error e) {
+                    critical ("localectl failed to set x11 keymap");
+                    throw e;
+                }
+            }
+        }
+        
+          public void apply_to_system (string language, string? format) {
+            set_system_language (language, format);
+            set_system_input ();
+        }
+
+        private void set_system_language (string language, string? format) {
+            /*
+             * This is a temporary solution for setting the system-wide locale.
+             * I am assuming systemd in version 204 (which we currently ship from Ubuntu repositories)
+             * is broken as SetLocale does not recognize the aquired polkit permission. Maybe that is
+             * intended, but I do not believe this. May be fixed in a later version of systemd and should
+             * be reversed (TODO) when introducing a newer version of systemd to elementary OS.
+             */
+
+            /*var list = new Gee.ArrayList<string> ();
+
+            list.add ("LANG=%s.UTF-8".printf (language));
+            if (format != null && format != language) {
+                list.add ("LC_TIME=%s".printf (format));
+                list.add ("LC_NUMERIC=%s".printf (format));
+                list.add ("LC_MONETARY=%s".printf (format));
+                list.add ("LC_MEASUREMENT=%s".printf (format));
+            }*/
+
+            try {
+                localectl_set_locale ("LANG=%s.utf8".printf (language), format);
+                //locale_proxy.set_locale (list.to_array (), true);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        }
+
+        private void set_system_input () {
+            string layouts = "";
+            string variants = "";
+
+            string l;
+            string v;
+
+            var variant = input_settings.get_value (KEY_INPUT_SOURCES);
+            var nr_keymaps = (int)variant.n_children ();
+
+            for (int i = 0; i < nr_keymaps; i++) {
+                var entry = variant.get_child_value (i);
+
+                //var type = entry.get_child_value (0).get_string ();
+                var code = entry.get_child_value (1).get_string ();
+
+                xkbinfo.get_layout_info (code, null, null, out l, out v);
+
+                layouts += l;
+                variants += v;
+
+                if (i < nr_keymaps-1) {
+                    layouts += ",";
+                    variants += ",";
+                }
+            }
+
+            try {
+                /* TODO: temporary solution for systemd-localed polkit problem */
+
+                localectl_set_x11_keymap (layouts, variants);
+                //locale_proxy.set_x11_keyboard (layouts, "", variants, "", true, true);
+            } catch (Error e) {
+                warning (e.message);
+            }
         }
 
         static LocaleManager? instance = null;
