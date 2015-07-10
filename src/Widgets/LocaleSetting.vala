@@ -202,7 +202,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 region_store.append (out iter);
                 region_store.set (iter, 0, region_string, 1, region);
 
-                if (default_regions.has_key (language)
+                if (lm.get_user_language ().length == 5 && lm.get_user_language ().slice (0, 2) == language
+                    && lm.get_user_language ().slice (3, 5) == region)
+                        selected_region = i;
+
+                if (default_regions.has_key (language) && lm.get_user_language ().slice (0, 2) != language
                 && default_regions.@get (language) == "%s_%s".printf (language, region))
                     selected_region = i;
 
