@@ -123,9 +123,47 @@ namespace SwitchboardPlugLocale {
             } catch (Error e) {
                 return null;
             }
-
         }
 
+        private static Gee.HashMap<string, string>? default_regions;
+
+        public static Gee.HashMap<string, string>? get_default_regions () {
+            if (default_regions != null)
+                return default_regions;
+
+            default_regions = new Gee.HashMap<string, string> ();
+            string file = "/usr/share/language-tools/main-countries";
+            string? output = "";
+            try {
+                FileUtils.get_contents (file, out output);
+            } catch (Error e) {
+                warning (e.message);
+            }
+
+            var output_array = output.split ("\n");
+            foreach (string line in output_array) {
+                if (line != "" && line.index_of ("#") == -1) {
+                    var line_array = line.split ("\t");
+                    default_regions.@set (line_array[0], line_array[1]);
+                }
+            }
+
+            return default_regions;
+        }
+
+        public static Gee.ArrayList<string> get_regions (string language) {
+            Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
+                foreach (string locale in get_installed_languages ()) {
+                    if (locale.length == 5) {
+                        string code = locale.slice (0, 2);
+                        string region = locale.slice (3, 5);
+
+                        if (!regions.contains (region) && code == language)
+                            regions.add (region);
+                    }
+                }
+            return regions;
+        }
 
         public static string translate_language (string lang) {
             Intl.textdomain ("iso_639");
@@ -151,6 +189,35 @@ namespace SwitchboardPlugLocale {
             Environment.set_variable ("LANGUAGE", current_language, true);
 
             return lang_name;
+        }
+        
+        //TODO: seems not work currently. damn.
+        public static string translate_region (string locale, string region) {
+            //var current_language = Environment.get_variable ("LANGUAGE");
+            //Environment.set_variable ("LANGUAGE", locale, true);
+
+            string region_name = region;
+
+            if (region.length == 2)
+                region_name = Gnome.Languages.get_country_from_code (region, null);
+
+            //Environment.set_variable ("LANGUAGE", current_language, true);
+ 
+            return region_name;
+        }
+
+        private static Polkit.Permission? permission = null;
+
+        public static Polkit.Permission? get_permission () {
+            if (permission != null)
+                return permission;
+            try {
+                permission = new Polkit.Permission.sync ("org.pantheon.switchboard.locale.administration", Polkit.UnixProcess.new (Posix.getpid ()));
+                return permission;
+            } catch (Error e) {
+                critical (e.message);
+                return null;
+            }
         }
 
         static Utils? instance = null;

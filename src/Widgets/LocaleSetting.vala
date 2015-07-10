@@ -8,7 +8,7 @@
   MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
   PURPOSE. See the GNU General Public License for more details.
   You should have received a copy of the GNU General Public License along
-  with this program. If not, see 
+  with this program. If not, see
 ***/
 
 namespace SwitchboardPlugLocale.Widgets {
@@ -196,7 +196,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 region_store.append (out iter);
                 region_store.set (iter, 0, region_string, 1, region);
 
-                if (default_regions.has_key (language) 
+                if (default_regions.has_key (language)
                 && default_regions.@get (language) == "%s_%s".printf (language, region))
                     selected_region = i;
 
@@ -246,8 +246,8 @@ namespace SwitchboardPlugLocale.Widgets {
         public void reload_labels (string language) {
             /* this seems stupid, but Utils.translate needs to be called twice to work.
              * I have no clue why, but well - this is only a workaround */
-            var language_string = Utils.translate (language);
-            language_string = Utils.translate (language);
+            var language_string = Utils.translate (language, null);
+            language_string = Utils.translate (language, null);
 
             language_label.set_label (language_string);
         }
