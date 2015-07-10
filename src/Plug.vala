@@ -28,7 +28,6 @@ namespace LC {
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
         Gtk.Grid grid;
-        Widgets.LanguageList language_list;
         Widgets.LocaleView view;
 
         public Installer.UbuntuInstaller installer;
@@ -38,35 +37,68 @@ namespace SwitchboardPlugLocale {
         public Gtk.InfoBar missing_lang_infobar;
 
         public Plug () {
-
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
                     display_name: _("Language & Region"),
                     description: _("Install languages, set region, and choose date &amp; currency formats"),
                     icon: "preferences-desktop-locale");
-
         }
 
         public override Gtk.Widget get_widget () {
             if (grid == null) {
+                installer = new Installer.UbuntuInstaller ();
                 grid = new Gtk.Grid ();
 
+                setup_ui ();
+                setup_info ();
             }
             return grid;
+        }
+
+        private void reload () {
+            var langs = Utils.get_installed_languages ();
+            var locales = Utils.get_installed_locales ();
+
+            view.list_box.reload_languages (langs);
+            view.locale_setting.reload_formats (locales);
+            installer.check_missing_languages ();
         }
 
         void setup_info () {
             lm = LocaleManager.get_default ();
 
             lm.connected.connect (() => {
-                language_list.reload_languages();
+                reload ();
+
+                infobar.no_show_all = true;
+                infobar.hide ();
             });
 
+            installer.install_finished.connect ((langcode) => {
+                reload ();
+                view.make_sensitive (true);
+            });
+            installer.remove_finished.connect ((langcode) => {
+                reload ();
+                view.make_sensitive (true);
+            });
+            installer.check_missing_finished.connect ((missing) => {
+                if (missing.length > 0) {
+                    missing_lang_infobar.show ();
+                    missing_lang_infobar.show_all ();
+                } else {
+                    missing_lang_infobar.hide ();
+                }
+            });
+            installer.progress_changed.connect ((progress) => {
+                //install_infobar.set_progress (progress);
+                //install_infobar.set_cancellable (installer.install_cancellable);
+                //install_infobar.set_transaction_mode (installer.transaction_mode);
+            });
         }
 
         public override void shown () {
-            setup_ui ();
-            setup_info ();
+
         }
 
         public override void hidden () {
@@ -82,59 +114,10 @@ namespace SwitchboardPlugLocale {
             return new Gee.TreeMap<string, string> (null, null);
         }
 
-
-
         // Wires up and configures initial UI
         private void setup_ui () {
-
-            try {
-                var provider = new Gtk.CssProvider();
-                provider.load_from_data ("
-                    .rounded-corners {
-                        border-radius: 5px;
-                    }
-
-                    .insensitve {
-                        color: #ccc;
-                    }
-
-                    .bg1 {background-color: #444;}
-                    .bg2 {background-color: #666;}
-                    .bg3 {background-color: #888;}
-                    .bg4 {background-color: #aaa;}
-                ", 400);
-
-                Gtk.StyleContext.add_provider_for_screen (grid.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-            } catch (Error e) {
-                warning ("Could not set styles");
-            }
-
-            var sw = new Gtk.ScrolledWindow (null, null);
-
             grid.column_homogeneous = true;
             grid.row_spacing = 6;
-
-            language_list = new Widgets.LanguageList ();
-            language_list.valign = Gtk.Align.START;
-            sw.add (language_list);
-
-            var header_entry = new Widgets.BaseEntry ();
-            header_entry.hexpand = true;
-            header_entry.margin_left = 24;
-            header_entry.margin_right = 24;
-
-            var choose_language_hint = new Gtk.Label (_("Choose your language:"));
-            choose_language_hint.hexpand = true;
-            var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
-
-            choose_language_hint.halign = Gtk.Align.START;
-            choose_format_hint.halign = Gtk.Align.START;
-
-            header_entry.left_grid.attach (choose_language_hint, 0, 0, 1, 1);
-            header_entry.right_grid.attach (choose_format_hint, 0, 0, 1, 1);
-            var spacer = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
-            spacer.set_opacity (0);
-            header_entry.settings_grid.add (spacer);
 
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.INFO;
@@ -142,13 +125,6 @@ namespace SwitchboardPlugLocale {
             var content = infobar.get_content_area () as Gtk.Container;
             var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
             content.add (label);
-
-            language_list.settings_changed.connect (() => {
-                infobar.no_show_all = false;
-                infobar.show_all ();
-            });
-
-            view = new Widgets.LocaleView (this);
 
             missing_lang_infobar = new Gtk.InfoBar ();
             missing_lang_infobar.message_type = Gtk.MessageType.INFO;
@@ -160,55 +136,16 @@ namespace SwitchboardPlugLocale {
             var install_missing = new Gtk.Button.with_label (_("Complete Installation"));
             install_missing.clicked.connect (() => {
                 missing_lang_infobar.hide ();
-
-                language_list.install_missing_languages ();
+                installer.install_missing_languages ();
             });
-            language_list.check_missing_finished.connect ((missing) => {
-                if (missing.length > 0) {
-                    missing_lang_infobar.show ();
-                    missing_lang_infobar.show_all ();
-                } else {
-                    missing_lang_infobar.hide ();
-                }
-            });
-
             missing_content.pack_start (missing_label, false);
             missing_content.pack_end (install_missing, false);
 
-            language_list.settings_changed.connect (() => {
-                infobar.no_show_all = false;
-                infobar.show_all ();
-            });
+            view = new Widgets.LocaleView (this);
 
-            try {
-
-                var permission = new Polkit.Permission.sync ("org.freedesktop.locale1.set-locale", Polkit.UnixProcess.new (Posix.getpid ()));
-                var apply_button = new Gtk.LockButton (permission);
-
-                apply_button.label = _("Apply for login screen, guest account and new users");
-                apply_button.halign = Gtk.Align.CENTER;
-                apply_button.margin = 12;
-                grid.attach (apply_button, 0, 6, 4, 1);
-
-                permission.notify["allowed"].connect (() => {
-                    if (permission.allowed) {
-                        on_applied_to_system();
-                        permission.impl_update (false, true, true);
-                    }
-                });
-
-            } catch (Error e) {
-                    critical (e.message);
-            }
-
-
-            sw.show ();
-            header_entry.show_all ();
-
-            grid.attach (infobar, 0, 0, 4, 1);
-            grid.attach (missing_lang_infobar, 0, 1, 4, 1);
-            grid.attach (header_entry, 0, 2, 4, 1);
-            grid.attach (sw, 0, 3, 4, 1);
+            grid.attach (infobar, 0, 0, 1, 1);
+            grid.attach (missing_lang_infobar, 0, 1, 1, 1);
+            grid.attach (view, 0, 3, 1, 1);
             grid.show ();
 
         }
