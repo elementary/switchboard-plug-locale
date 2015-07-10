@@ -29,6 +29,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private Preview         preview;
         private string          language;
         private string          selected_language = "";
+        private string          selected_format = "";
         private bool            has_region;
 
         private Gee.HashMap<string, string> default_regions;
@@ -66,6 +67,7 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.pack_start (renderer, true);
             format_combobox.add_attribute (renderer, "text", 0);
             format_combobox.changed.connect (on_format_changed);
+            format_combobox.changed.connect (compare);
             format_combobox.active = 0;
 
             preview = new Preview ();
@@ -83,6 +85,7 @@ namespace SwitchboardPlugLocale.Widgets {
             set_button.halign = Gtk.Align.START;
             set_button.set_size_request (150, 27);
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            set_button.set_sensitive (false);
 
             set_button.clicked.connect (() => {
                 if (!has_region) {
@@ -95,6 +98,7 @@ namespace SwitchboardPlugLocale.Widgets {
                     lm.set_user_language ("%s_%s".printf (language, region));
                     selected_language = "%s_%s".printf (language, region);
                 }
+                selected_format = get_format ();
 
                 compare ();
 
@@ -164,14 +168,16 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void compare () {
-            var compare_language = language;
-            if (has_region)
-                compare_language = "%s_%s".printf (compare_language, get_region ());
+            if (set_button != null && selected_language != "" && selected_format != "") {
+                var compare_language = language;
+                if (has_region)
+                    compare_language = "%s_%s".printf (compare_language, get_region ());
 
-            if (compare_language == selected_language)
+                if (compare_language == selected_language && selected_format == get_format ())
                     set_button.set_sensitive (false);
-            else
-                set_button.set_sensitive (true);
+                else
+                    set_button.set_sensitive (true);
+            }
         }
 
         private Gtk.Label create_end_label (string text) {
@@ -210,13 +216,14 @@ namespace SwitchboardPlugLocale.Widgets {
                 selected_language = "%s_%s".printf (language, get_region ());
             else if (selected_language == "" && !has_region)
                 selected_language = language;
+
             compare ();
         }
 
         public void reload_formats (Gee.ArrayList<string>? locales) {
             format_store.clear ();
             var user_format = lm.get_user_format ();
-            int selected_format = 0;
+            int format_id = 0;
 
             int i = 0;
             foreach (var locale in locales) {
@@ -234,13 +241,18 @@ namespace SwitchboardPlugLocale.Widgets {
                     format_store.set (iter, 0, country, 1, locale);
 
                     if (locale == user_format)
-                        selected_format = i;
+                        format_id = i;
 
                     i++;
                 }
             }
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            format_combobox.active = selected_format;
+            format_combobox.active = format_id;
+
+            if (selected_format == "")
+                selected_format = get_format ();
+
+            compare ();
         }
 
         public void reload_labels (string language) {

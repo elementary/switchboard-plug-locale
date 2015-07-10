@@ -177,13 +177,6 @@ namespace SwitchboardPlugLocale {
             grid.attach (install_infobar, 0, 3, 1, 1);
             grid.attach (view, 0, 4, 1, 1);
             grid.show ();
-
-        }
-
-        void on_applied_to_system () {
-            lm.apply_user_to_system ();
-            infobar.no_show_all = false;
-            infobar.show_all ();
         }
 
         public void on_install_language (string language) {
