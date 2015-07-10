@@ -31,7 +31,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.shadow_type = Gtk.ShadowType.IN;
             scrolled.height_request = 145;
-            scrolled.width_request = 225;
+            scrolled.width_request = 160;
 
             search_entry = new Gtk.SearchEntry ();
             box.pack_start (search_entry);

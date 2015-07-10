@@ -19,6 +19,7 @@ vala_precompile (VALA_C ${PLUGNAME}
     Installer/UbuntuInstaller.vala
     Installer/aptd-client.vala
     Widgets/InstallPopover.vala
+    Widgets/InstallInfoBar.vala
     Widgets/LanguageListBox.vala
     Widgets/LocaleView.vala
     Widgets/LocaleSetting.vala
