@@ -29,6 +29,7 @@ namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
         Gtk.Grid grid;
         Widgets.LanguageList language_list;
+        Widgets.LocaleView view;
 
         public Installer.UbuntuInstaller installer;
         LocaleManager lm;
@@ -147,6 +148,8 @@ namespace SwitchboardPlugLocale {
                 infobar.show_all ();
             });
 
+            view = new Widgets.LocaleView (this);
+
             missing_lang_infobar = new Gtk.InfoBar ();
             missing_lang_infobar.message_type = Gtk.MessageType.INFO;
 
@@ -214,6 +217,11 @@ namespace SwitchboardPlugLocale {
             lm.apply_user_to_system ();
             infobar.no_show_all = false;
             infobar.show_all ();
+        }
+
+        public void on_install_language (string language) {
+            view.make_sensitive (false);
+            installer.install (language);
         }
     }
 }
