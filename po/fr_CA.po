@@ -8,68 +8,70 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-22 05:15-0500\n"
-"PO-Revision-Date: 2014-08-01 01:38+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"PO-Revision-Date: 2015-07-12 04:22+0000\n"
+"Last-Translator: Ismael Cormier <ismael.cormier@outlook.com>\n"
 "Language-Team: French (Canada) <fr_CA@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-23 05:27+0000\n"
-"X-Generator: Launchpad (build 17514)\n"
+"X-Launchpad-Export-Date: 2015-07-12 04:56+0000\n"
+"X-Generator: Launchpad (build 17620)\n"
 "Language: \n"
 
 #: ../src/Widgets/LanguageEntry.vala:109
 msgid "Remove"
-msgstr ""
+msgstr "Retirer"
 
 #: ../src/Widgets/InstallEntry.vala:59
 msgid "Install more languages…"
-msgstr ""
+msgstr "Installer plus de langues"
 
 #: ../src/Widgets/InstallEntry.vala:74 ../src/Widgets/InstallEntry.vala:130
 msgid "installing language"
-msgstr ""
+msgstr "Installation de la langue en cour"
 
 #: ../src/Widgets/InstallEntry.vala:85
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: ../src/Widgets/InstallEntry.vala:133
 msgid "removing language"
-msgstr ""
+msgstr "Supprimer la langue"
 
 #: ../src/Widgets/InstallEntry.vala:136
 msgid "installing missing language"
-msgstr ""
+msgstr "Installer les langues manquantes"
 
 #: ../src/Plug.vala:42
 msgid "Language & Region"
-msgstr ""
+msgstr "Langue & Region"
 
 #: ../src/Plug.vala:43
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
+"Installer les langues, configurer la region et choisir la date ainsi que le "
+"format monetaire."
 
 #: ../src/Plug.vala:124
 msgid "Choose your language:"
-msgstr ""
+msgstr "Choisir votre langue"
 
 #: ../src/Plug.vala:126
 msgid "Numbers and dates:"
-msgstr ""
+msgstr "Nombres et dates"
 
 #: ../src/Plug.vala:141
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "Certains changements ne prendrons effet seulement à la déconnexion."
 
 #: ../src/Plug.vala:154
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Le support langage n'est pas installé complètement."
 
 #: ../src/Plug.vala:156
 msgid "Complete Installation"
-msgstr ""
+msgstr "Completer l'installation"
 
 #: ../src/Plug.vala:184
 msgid "Apply for login screen, guest account and new users"
-msgstr ""
+msgstr "Appliquer pour la connexion, compte visiteur et nouvel utilisateur"
