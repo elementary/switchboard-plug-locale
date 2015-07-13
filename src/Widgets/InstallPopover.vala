@@ -8,105 +8,105 @@
   MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
   PURPOSE. See the GNU General Public License for more details.
   You should have received a copy of the GNU General Public License along
-  with this program. If not, see 
+  with this program. If not, see
 ***/
 
-public class InstallPopover : Gtk.Popover {
+namespace SwitchboardPlugLocale.Widgets {
+    public class InstallPopover : Gtk.Popover {
 
-    Gtk.SearchEntry search_entry;
-    Gtk.TreeView languages_view;
-    Gtk.ListStore list_store;
+        Gtk.SearchEntry search_entry;
+        Gtk.TreeView languages_view;
+        Gtk.ListStore list_store;
 
-    public signal void language_selected (string lang);
-    
-    public InstallPopover (Gtk.Widget relative_to) {
-        Object (relative_to: relative_to);
+        public signal void language_selected (string lang);
 
-        set_position(Gtk.PositionType.BOTTOM);
+        public InstallPopover (Gtk.Widget relative_to) {
+            Object (relative_to: relative_to);
 
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-        box.margin = 6;
+            set_position(Gtk.PositionType.BOTTOM);
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.shadow_type = Gtk.ShadowType.IN;
-        scrolled.height_request = 145;
-        scrolled.width_request = 225;
+            var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+            box.margin = 6;
 
-        search_entry = new Gtk.SearchEntry ();
-        box.pack_start (search_entry);
+            var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.shadow_type = Gtk.ShadowType.IN;
+            scrolled.height_request = 145;
+            scrolled.width_request = 160;
 
-        list_store = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (string));
-        list_store.set_default_sort_func ((model, a, b) => {
-            Value value_a;
-            model.get_value (a, 0, out value_a);
-            Value value_b;
-            model.get_value (b, 0, out value_b);
-            return value_a.get_string ().collate (value_b.get_string ());
-        });
+            search_entry = new Gtk.SearchEntry ();
+            box.pack_start (search_entry);
 
-        languages_view = new Gtk.TreeView.with_model (list_store);
-        languages_view.headers_visible = false;
-        languages_view.insert_column_with_attributes (-1, "", new Gtk.CellRendererText (), "text", 0);
-        languages_view.activate_on_single_click = true;
-        languages_view.row_activated.connect (row_activated);
-        languages_view.set_search_entry (search_entry);
-        languages_view.set_search_equal_func (treesearchfunc);
+            list_store = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (string));
+            list_store.set_default_sort_func ((model, a, b) => {
+                Value value_a;
+                model.get_value (a, 0, out value_a);
+                Value value_b;
+                model.get_value (b, 0, out value_b);
+                return value_a.get_string ().collate (value_b.get_string ());
+            });
 
-        scrolled.add (languages_view);
-        box.pack_start (scrolled);
+            languages_view = new Gtk.TreeView.with_model (list_store);
+            languages_view.headers_visible = false;
+            languages_view.insert_column_with_attributes (-1, "", new Gtk.CellRendererText (), "text", 0);
+            languages_view.activate_on_single_click = true;
+            languages_view.row_activated.connect (row_activated);
+            languages_view.set_search_entry (search_entry);
+            languages_view.set_search_equal_func (treesearchfunc);
 
-        add (box);
+            scrolled.add (languages_view);
+            box.pack_start (scrolled);
 
-        load_languagelist();
-    }
+            add (box);
 
-    static bool treesearchfunc (Gtk.TreeModel model, int column, string key, Gtk.TreeIter iter) {
-        Value value;
-        model.get_value (iter, 0, out value);
-        if (key.down () in value.get_string ().down ()) {
-            return false;
+            load_languagelist();
         }
 
-        model.get_value (iter, 1, out value);
-        if (key.down () in value.get_string ().down ()) {
-            return false;
+        static bool treesearchfunc (Gtk.TreeModel model, int column, string key, Gtk.TreeIter iter) {
+            Value value;
+            model.get_value (iter, 0, out value);
+            if (key.down () in value.get_string ().down ()) {
+                return false;
+            }
+
+            model.get_value (iter, 1, out value);
+            if (key.down () in value.get_string ().down ()) {
+                return false;
+            }
+
+            return true;
         }
 
-        return true;
-    }
+        void row_activated (Gtk.TreePath path, Gtk.TreeViewColumn column) {
+            Gtk.TreeIter iter;
+            list_store.get_iter (out iter, path);
+            Value value;
+            list_store.get_value (iter, 2, out value);
+            language_selected (value.get_string ());
+            hide ();
+        }
 
-    void row_activated (Gtk.TreePath path, Gtk.TreeViewColumn column) {
-        Gtk.TreeIter iter;
-        list_store.get_iter (out iter, path);
-        Value value;
-        list_store.get_value (iter, 2, out value);
-        language_selected (value.get_string ());
-        hide ();
-    }
+        void load_languagelist () {
+            var file = File.new_for_path (Path.build_path ("/", Constants.PKGDATADIR, "languagelist"));
+            try {
+                var dis = new DataInputStream (file.read ());
+                string line;
+                var langs = new GLib.List<string> ();
+                while ((line = dis.read_line (null)) != null) {
+                    if (line.substring(0,1) != "#" && line != "") {
+                        if (line == "ia")
+                            continue;
 
-    void load_languagelist () {
-        var file = File.new_for_path (Constants.PKGDATADIR+"/languagelist");
-        try {
-            var dis = new DataInputStream (file.read ());
-            string line;
-            var langs = new GLib.List<string> ();
-            while ((line = dis.read_line (null)) != null) {
-                if (line.substring(0,1) != "#") {
-                    var values = line.split (";");
-                    var lang = values[2];
-                    if (lang == "C")
-                        continue;
-                    lang = lang[0:2];
-                    if (langs.find_custom (lang, strcmp).length () == 0) {
-                        Gtk.TreeIter iter;
-                        list_store.append (out iter);
-                        list_store.set (iter, 0, Utils.translate (lang), 1, values[0], 2, lang);
-                        langs.append (lang);
+                        if (langs.find_custom (line, strcmp).length () == 0) {
+                            Gtk.TreeIter iter;
+                            list_store.append (out iter);
+                            list_store.set (iter, 0, Utils.translate (line, null), 1, Utils.translate (line, "C"), 2, line);
+                            langs.append (line);
+                        }
                     }
                 }
+            } catch (Error e) {
+                error ("%s", e.message);
             }
-        } catch (Error e) {
-            error ("%s", e.message);
         }
     }
 }

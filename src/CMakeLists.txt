@@ -13,16 +13,17 @@ ensure_vala_version ("0.23.0" MINIMUM)
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${PLUGNAME}
-    Plug.vala  
-    Utils.vala 
+    Plug.vala
+    Utils.vala
     LocaleManager.vala
     Installer/UbuntuInstaller.vala
     Installer/aptd-client.vala
-    Widgets/BaseEntry.vala
-    Widgets/LanguageList.vala
-    Widgets/LanguageEntry.vala
-    Widgets/InstallEntry.vala
     Widgets/InstallPopover.vala
+    Widgets/InstallInfoBar.vala
+    Widgets/LanguageListBox.vala
+    Widgets/LocaleView.vala
+    Widgets/LocaleSetting.vala
+    Widgets/Preview.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
@@ -33,6 +34,7 @@ PACKAGES
     posix
     ibus-1.0
     polkit-gobject-1
+    monetary
 OPTIONS
     --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
     --thread

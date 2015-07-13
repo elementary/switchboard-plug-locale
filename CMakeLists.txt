@@ -1,12 +1,12 @@
 # This a sample CMakeLists.txt for compiling plug for Switchboard
-# http://elementaryos.org/docs/developer-guide/cmake 
+# http://elementaryos.org/docs/developer-guide/cmake
 
 cmake_minimum_required (VERSION 2.6)
 cmake_policy (VERSION 2.6)
 
 # Set the Properties of your Plug
 
-# Set the Name of the plug, should be an executable command, lowercase, no spaces 
+# Set the Name of the plug, should be an executable command, lowercase, no spaces
 set (PLUGNAME "locale")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
@@ -44,6 +44,10 @@ add_schema("data/schema/org.pantheon.switchboard.plug.locale.gschema.xml")
 
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
+
+#Polkit Policy
+configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.locale.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.locale.policy)
+install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.locale.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 
 install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-locale.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
 

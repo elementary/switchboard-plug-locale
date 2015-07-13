@@ -8,7 +8,7 @@
   MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
   PURPOSE. See the GNU General Public License for more details.
   You should have received a copy of the GNU General Public License along
-  with this program. If not, see 
+  with this program. If not, see
 ***/
 
 namespace LC {
@@ -25,200 +25,169 @@ namespace LC {
     public static const string IDENTIFICATION = "LC_IDENTIFICATION";
 }
 
-public class Locale.Plug : Switchboard.Plug {
+namespace SwitchboardPlugLocale {
+    public class Plug : Switchboard.Plug {
+        Gtk.Grid grid;
+        Widgets.LocaleView view;
 
-    LanguageList language_list;
+        public Installer.UbuntuInstaller installer;
+        LocaleManager lm;
 
-    LocaleManager lm;
+        public Gtk.InfoBar infobar;
+        public Gtk.InfoBar permission_infobar;
+        public Gtk.InfoBar missing_lang_infobar;
+        public Widgets.InstallInfoBar install_infobar;
 
-    Gtk.InfoBar infobar;
-    Gtk.InfoBar missing_lang_infobar;
-    Gtk.Grid grid;
-
-    public Plug () {
-
-        Object (category: Category.PERSONAL,
-                code_name: "system-pantheon-locale",
-                display_name: _("Language & Region"),
-                description: _("Install languages, set region, and choose date &amp; currency formats"),
-                icon: "preferences-desktop-locale");
-        
-    }
-
-    public override Gtk.Widget get_widget () {
-        if (grid == null) {
-            grid = new Gtk.Grid ();
-
-        }
-        return grid;
-    }
-
-    void setup_info () {
-        lm = LocaleManager.get_default ();
-
-        lm.connected.connect (() => {
-            language_list.reload_languages();
-        });
-
-    }
-    
-    public override void shown () {
-        setup_ui ();
-        setup_info ();
-    }
-    
-    public override void hidden () {
-    
-    }
-    
-    public override void search_callback (string location) {
-    
-    }
-    
-    // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
-    public override async Gee.TreeMap<string, string> search (string search) {
-        return new Gee.TreeMap<string, string> (null, null);
-    }
-
-
-
-    // Wires up and configures initial UI
-    private void setup_ui () {
-        
-        try {
-            var provider = new Gtk.CssProvider();
-            provider.load_from_data ("
-                .rounded-corners {
-                    border-radius: 5px;
-                }
-
-                .insensitve {
-                    color: #ccc;
-                }
-
-                .bg1 {background-color: #444;}
-                .bg2 {background-color: #666;}
-                .bg3 {background-color: #888;}
-                .bg4 {background-color: #aaa;}
-            ", 400);
-
-            Gtk.StyleContext.add_provider_for_screen (grid.get_style_context ().get_screen (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        } catch (Error e) {
-            warning ("Could not set styles");
+        public Plug () {
+            Object (category: Category.PERSONAL,
+                    code_name: "system-pantheon-locale",
+                    display_name: _("Language & Region"),
+                    description: _("Install languages, set region, and choose date &amp; currency formats"),
+                    icon: "preferences-desktop-locale");
         }
 
-        var sw = new Gtk.ScrolledWindow (null, null);
+        public override Gtk.Widget get_widget () {
+            if (grid == null) {
+                installer = new Installer.UbuntuInstaller ();
+                grid = new Gtk.Grid ();
 
-        grid.column_homogeneous = true;
-        grid.row_spacing = 6;
-
-        language_list = new LanguageList ();
-        language_list.valign = Gtk.Align.START;
-        sw.add (language_list);
-
-        var header_entry = new BaseEntry ();
-        header_entry.hexpand = true;
-        header_entry.margin_left = 24;
-        header_entry.margin_right = 24;
-
-        var choose_language_hint = new Gtk.Label (_("Choose your language:"));
-        choose_language_hint.hexpand = true;
-        var choose_format_hint = new Gtk.Label (_("Numbers and dates:"));
-
-        choose_language_hint.halign = Gtk.Align.START;
-        choose_format_hint.halign = Gtk.Align.START;
-
-        header_entry.left_grid.attach (choose_language_hint, 0, 0, 1, 1);
-        header_entry.right_grid.attach (choose_format_hint, 0, 0, 1, 1);
-        var spacer = new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU);
-        spacer.set_opacity (0);
-        header_entry.settings_grid.add (spacer);
-
-        infobar = new Gtk.InfoBar ();
-        infobar.message_type = Gtk.MessageType.INFO;
-        infobar.no_show_all = true;
-        var content = infobar.get_content_area () as Gtk.Container;
-        var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
-        content.add (label);
-
-        language_list.settings_changed.connect (() => {
-            infobar.no_show_all = false;
-            infobar.show_all ();
-        });
-
-        missing_lang_infobar = new Gtk.InfoBar ();
-        missing_lang_infobar.message_type = Gtk.MessageType.INFO;
-
-        var missing_content = missing_lang_infobar.get_content_area () as Gtk.Box;
-
-        var missing_label = new Gtk.Label (_("Language support is not installed completely"));
-
-        var install_missing = new Gtk.Button.with_label (_("Complete Installation"));
-        install_missing.clicked.connect (() => {
-            missing_lang_infobar.hide ();
-
-            language_list.install_missing_languages ();
-        });
-        language_list.check_missing_finished.connect ((missing) => {
-            if (missing.length > 0) {
-                missing_lang_infobar.show ();
-                missing_lang_infobar.show_all ();
-            } else {
-                missing_lang_infobar.hide ();
+                setup_ui ();
+                setup_info ();
             }
-        });
+            return grid;
+        }
 
-        missing_content.pack_start (missing_label, false);
-        missing_content.pack_end (install_missing, false);
+        private void reload () {
+            var langs = Utils.get_installed_languages ();
+            var locales = Utils.get_installed_locales ();
 
-        language_list.settings_changed.connect (() => {
-            infobar.no_show_all = false;
-            infobar.show_all ();
-        });
+            view.list_box.reload_languages (langs);
+            view.locale_setting.reload_formats (locales);
+            installer.check_missing_languages ();
+        }
 
-        try {
+        void setup_info () {
+            lm = LocaleManager.get_default ();
 
-            var permission = new Polkit.Permission.sync ("org.freedesktop.locale1.set-locale", Polkit.UnixProcess.new (Posix.getpid ()));
-            var apply_button = new Gtk.LockButton (permission);
+            lm.connected.connect (() => {
+                reload ();
 
-            apply_button.label = _("Apply for login screen, guest account and new users");
-            apply_button.halign = Gtk.Align.CENTER;
-            apply_button.margin = 12;
-            grid.attach (apply_button, 0, 6, 4, 1);
+                infobar.no_show_all = true;
+                infobar.hide ();
+            });
 
-            permission.notify["allowed"].connect (() => {
-                if (permission.allowed) {
-                    on_applied_to_system();
-                    permission.impl_update (false, true, true);
+            installer.install_finished.connect ((langcode) => {
+                reload ();
+                view.make_sensitive (true);
+            });
+            installer.remove_finished.connect ((langcode) => {
+                reload ();
+                view.make_sensitive (true);
+            });
+            installer.check_missing_finished.connect ((missing) => {
+                if (missing.length > 0) {
+                    missing_lang_infobar.show ();
+                    missing_lang_infobar.show_all ();
+                } else {
+                    missing_lang_infobar.hide ();
+                }
+            });
+            installer.progress_changed.connect ((progress) => {
+                install_infobar.set_progress (progress);
+                install_infobar.set_cancellable (installer.install_cancellable);
+                install_infobar.set_transaction_mode (installer.transaction_mode);
+            });
+        }
+
+        public override void shown () {
+
+        }
+
+        public override void hidden () {
+
+        }
+
+        public override void search_callback (string location) {
+
+        }
+
+        // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+        public override async Gee.TreeMap<string, string> search (string search) {
+            return new Gee.TreeMap<string, string> (null, null);
+        }
+
+        // Wires up and configures initial UI
+        private void setup_ui () {
+            grid.column_homogeneous = true;
+
+            //Gtk.InfoBar for informing about necessary log-out/log-in
+            infobar = new Gtk.InfoBar ();
+            infobar.message_type = Gtk.MessageType.WARNING;
+            infobar.no_show_all = true;
+            var content = infobar.get_content_area () as Gtk.Container;
+            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
+            content.add (label);
+
+            //Gtk.InfoBar for language support installation
+            missing_lang_infobar = new Gtk.InfoBar ();
+            missing_lang_infobar.message_type = Gtk.MessageType.INFO;
+            var missing_content = missing_lang_infobar.get_content_area () as Gtk.Box;
+            var missing_label = new Gtk.Label (_("Language support is not installed completely"));
+
+            var install_missing = new Gtk.Button.with_label (_("Complete Installation"));
+            install_missing.clicked.connect (() => {
+                missing_lang_infobar.hide ();
+                installer.install_missing_languages ();
+            });
+            missing_content.pack_start (missing_label, false);
+            missing_content.pack_end (install_missing, false);
+
+            //Gtk.InfoBar for "one-click" administrative permissions
+            permission_infobar = new Gtk.InfoBar ();
+            permission_infobar.message_type = Gtk.MessageType.INFO;
+
+            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
+            var lock_button = new Gtk.LockButton (Utils.get_permission ());
+            area_infobar.add (lock_button);
+
+            var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
+            var label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
+            content_infobar.add (label_infobar);
+
+            permission_infobar.show_all ();
+
+            //Custom InstallInfoBar widget for language installation progress
+            install_infobar = new Widgets.InstallInfoBar ();
+            install_infobar.no_show_all = true;
+            install_infobar.cancel_clicked.connect (installer.cancel_install);
+
+            //connect polkit permission to hiding the permission infobar
+            Utils.get_permission ().notify["allowed"].connect (() => {
+                if (Utils.get_permission ().allowed) {
+                    permission_infobar.no_show_all = true;
+                    permission_infobar.hide ();
                 }
             });
 
-        } catch (Error e) {
-                critical (e.message);
+            view = new Widgets.LocaleView (this);
+
+            grid.attach (infobar, 0, 0, 1, 1);
+            grid.attach (missing_lang_infobar, 0, 1, 1, 1);
+            grid.attach (permission_infobar, 0, 2, 1, 1);
+            grid.attach (install_infobar, 0, 3, 1, 1);
+            grid.attach (view, 0, 4, 1, 1);
+            grid.show ();
         }
 
-
-        sw.show ();
-        header_entry.show_all ();
-
-        grid.attach (infobar, 0, 0, 4, 1);
-        grid.attach (missing_lang_infobar, 0, 1, 4, 1);
-        grid.attach (header_entry, 0, 2, 4, 1);
-        grid.attach (sw, 0, 3, 4, 1);
-        grid.show ();
-
-    }
-
-    void on_applied_to_system () {
-        lm.apply_user_to_system ();
-        infobar.no_show_all = false;
-        infobar.show_all ();
+        public void on_install_language (string language) {
+            view.make_sensitive (false);
+            installer.install (language);
+        }
     }
 }
 
-
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating About plug");
-    var plug = new Locale.Plug ();
+    debug ("Activating Locale plug");
+    var plug = new SwitchboardPlugLocale.Plug ();
     return plug;
 }

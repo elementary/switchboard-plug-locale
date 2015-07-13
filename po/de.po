@@ -49,7 +49,7 @@ msgstr "Sprache & Region"
 #: ../src/Plug.vala:43
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
-"Sprachpakete installieren, Region & Währung auswählen und Datum festlegen"
+"Sprachpakete installieren, Region &amp; Währung auswählen und Datum festlegen"
 
 #: ../src/Plug.vala:124
 msgid "Choose your language:"
