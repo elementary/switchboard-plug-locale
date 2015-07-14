@@ -7,71 +7,123 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 05:15-0500\n"
-"PO-Revision-Date: 2015-06-13 15:15+0000\n"
+"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"PO-Revision-Date: 2015-07-14 02:01+0000\n"
 "Last-Translator: Niklas G <niklas.goetz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-14 05:45+0000\n"
-"X-Generator: Launchpad (build 17557)\n"
+"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
 "Language: de\n"
 
-#: ../src/Widgets/LanguageEntry.vala:109
-msgid "Remove"
-msgstr "Löschen"
-
-#: ../src/Widgets/InstallEntry.vala:59
-msgid "Install more languages…"
-msgstr "Weitere Sprachen installieren …"
-
-#: ../src/Widgets/InstallEntry.vala:74 ../src/Widgets/InstallEntry.vala:130
-msgid "installing language"
-msgstr "Sprache installieren"
-
-#: ../src/Widgets/InstallEntry.vala:85
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: ../src/Widgets/InstallEntry.vala:133
-msgid "removing language"
-msgstr "Sprache entfernen"
-
-#: ../src/Widgets/InstallEntry.vala:136
-msgid "installing missing language"
-msgstr "Fehlende Sprache installieren"
-
-#: ../src/Plug.vala:42
+#: ../src/Plug.vala:44
 msgid "Language & Region"
 msgstr "Sprache & Region"
 
-#: ../src/Plug.vala:43
+#: ../src/Plug.vala:45
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
 "Sprachpakete installieren, Region &amp; Währung auswählen und Datum festlegen"
 
-#: ../src/Plug.vala:124
-msgid "Choose your language:"
-msgstr "Ihre Sprache auswählen:"
-
-#: ../src/Plug.vala:126
-msgid "Numbers and dates:"
-msgstr "Zahlen- und Datumsformat:"
-
-#: ../src/Plug.vala:141
+#: ../src/Plug.vala:128
 msgid "Some changes will not take effect until you log out"
 msgstr "Einige Änderungen werden erst mit der nächsten Sitzung übernommen"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Die Sprache ist nicht vollständig installiert"
 
-#: ../src/Plug.vala:156
+#: ../src/Plug.vala:137
 msgid "Complete Installation"
 msgstr "Installation vervollständigen"
 
-#: ../src/Plug.vala:184
-msgid "Apply for login screen, guest account and new users"
+#: ../src/Plug.vala:154
+msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Für den Anmeldebildschirm, die Gastsitzung und neue Benutzer übernehmen"
+
+#: ../src/Widgets/LocaleView.vala:44
+msgid "Install language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:54
+msgid "Remove language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:63
+msgid "Switch to keyboard settings"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:15
+msgid "Installed Languages"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:101
+msgid "Currently active language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:38
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../src/Widgets/InstallInfoBar.vala:54
+msgid "Installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:57
+msgid "Removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:60
+msgid "Installing missing language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:75
+msgid "Language: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Region: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:79
+msgid "Formats: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:84
+msgid "Set Language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:113
+msgid "Set System Language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:115
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+
+#~ msgid "Remove"
+#~ msgstr "Löschen"
+
+#~ msgid "Install more languages…"
+#~ msgstr "Weitere Sprachen installieren …"
+
+#~ msgid "installing language"
+#~ msgstr "Sprache installieren"
+
+#~ msgid "removing language"
+#~ msgstr "Sprache entfernen"
+
+#~ msgid "installing missing language"
+#~ msgstr "Fehlende Sprache installieren"
+
+#~ msgid "Choose your language:"
+#~ msgstr "Ihre Sprache auswählen:"
+
+#~ msgid "Numbers and dates:"
+#~ msgstr "Zahlen- und Datumsformat:"
+
+#~ msgid "Apply for login screen, guest account and new users"
+#~ msgstr ""
+#~ "Für den Anmeldebildschirm, die Gastsitzung und neue Benutzer übernehmen"

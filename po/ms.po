@@ -7,70 +7,98 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 05:15-0500\n"
+"POT-Creation-Date: 2015-07-12 13:35+0200\n"
 "PO-Revision-Date: 2015-03-09 14:45+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-23 05:27+0000\n"
-"X-Generator: Launchpad (build 17514)\n"
+"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
 "Language: ms\n"
 
-#: ../src/Widgets/LanguageEntry.vala:109
-msgid "Remove"
-msgstr ""
-
-#: ../src/Widgets/InstallEntry.vala:59
-msgid "Install more languages…"
-msgstr "Pasang lagi bahasa..."
-
-#: ../src/Widgets/InstallEntry.vala:74 ../src/Widgets/InstallEntry.vala:130
-msgid "installing language"
-msgstr "Memasang bahasa"
-
-#: ../src/Widgets/InstallEntry.vala:85
-msgid "Cancel"
-msgstr "Batal"
-
-#: ../src/Widgets/InstallEntry.vala:133
-msgid "removing language"
-msgstr "Membuang bahasa"
-
-#: ../src/Widgets/InstallEntry.vala:136
-msgid "installing missing language"
-msgstr "Pasang bahasa yang hilang"
-
-#: ../src/Plug.vala:42
+#: ../src/Plug.vala:44
 msgid "Language & Region"
 msgstr "Bahasa & Wilayah"
 
-#: ../src/Plug.vala:43
+#: ../src/Plug.vala:45
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
 
-#: ../src/Plug.vala:124
-msgid "Choose your language:"
-msgstr "Pilih bahasa anda:"
-
-#: ../src/Plug.vala:126
-msgid "Numbers and dates:"
-msgstr "Nombor dan tarikh:"
-
-#: ../src/Plug.vala:141
+#: ../src/Plug.vala:128
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 "Beberapa perubahan tidak akan berkesan sehinggalah anda mendaftar keluar"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Bantuan bahasa tidak dipasang dengan sempurna"
 
-#: ../src/Plug.vala:156
+#: ../src/Plug.vala:137
 msgid "Complete Installation"
 msgstr "Pemasangan siap"
 
-#: ../src/Plug.vala:184
-msgid "Apply for login screen, guest account and new users"
-msgstr "Laksana untuk skrin daftar masuk, akaun tetamu dan pengguna baharu"
+#: ../src/Plug.vala:154
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:44
+msgid "Install language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:54
+msgid "Remove language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:63
+msgid "Switch to keyboard settings"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:15
+msgid "Installed Languages"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:101
+msgid "Currently active language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:38
+msgid "Cancel"
+msgstr "Batal"
+
+#: ../src/Widgets/InstallInfoBar.vala:54
+msgid "Installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:57
+msgid "Removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:60
+msgid "Installing missing language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:75
+msgid "Language: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Region: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:79
+msgid "Formats: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:84
+msgid "Set Language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:113
+msgid "Set System Language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:115
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
