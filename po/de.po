@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-07-14 02:01+0000\n"
-"Last-Translator: Niklas G <niklas.goetz@gmail.com>\n"
+"PO-Revision-Date: 2015-07-14 09:20+0000\n"
+"Last-Translator: Marvin Beckers <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
+"X-Launchpad-Export-Date: 2015-07-16 05:46+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 "Language: de\n"
 
@@ -42,22 +42,24 @@ msgstr "Installation vervollständigen"
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Manche Einstellungen benötigen Administrator-Berechtigungen, um geändert zu "
+"werden"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Sprachen installieren"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Sprache entfernen"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Zu Tastatureinstellungen wechseln"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Installierte Sprachen"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
@@ -102,28 +104,3 @@ msgstr ""
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
-
-#~ msgid "Remove"
-#~ msgstr "Löschen"
-
-#~ msgid "Install more languages…"
-#~ msgstr "Weitere Sprachen installieren …"
-
-#~ msgid "installing language"
-#~ msgstr "Sprache installieren"
-
-#~ msgid "removing language"
-#~ msgstr "Sprache entfernen"
-
-#~ msgid "installing missing language"
-#~ msgstr "Fehlende Sprache installieren"
-
-#~ msgid "Choose your language:"
-#~ msgstr "Ihre Sprache auswählen:"
-
-#~ msgid "Numbers and dates:"
-#~ msgstr "Zahlen- und Datumsformat:"
-
-#~ msgid "Apply for login screen, guest account and new users"
-#~ msgstr ""
-#~ "Für den Anmeldebildschirm, die Gastsitzung und neue Benutzer übernehmen"

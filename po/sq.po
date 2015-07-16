@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-03-06 00:06+0000\n"
+"PO-Revision-Date: 2015-07-14 17:30+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
+"X-Launchpad-Export-Date: 2015-07-16 05:46+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/Plug.vala:44
@@ -24,6 +24,7 @@ msgstr "Gjuha dhe Rajoni"
 #: ../src/Plug.vala:45
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
+"Instalo gjuhë, vendos rajonin, dhe zgjidh formatet e datës dhe të valutës"
 
 #: ../src/Plug.vala:128
 msgid "Some changes will not take effect until you log out"
@@ -40,26 +41,27 @@ msgstr "Plotëso instalimin"
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Disa parametra kërkojnë të drejtat e administratorit për tu ndryshuar"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Instalo gjuhë"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Hiqe gjuhën"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Kalo tek rregullimet e tastierës"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Gjuhët e instaluara"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "Gjuha në përdorim"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
@@ -67,36 +69,38 @@ msgstr "Anulo"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "Duke instaluar gjuhën"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "Duke hequr gjuhën"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
-msgstr ""
+msgstr "Duke instaluar gjuhën që mungon"
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "Gjuha: "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "Rajoni: "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "Formatet: "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "Vendos gjuhën"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "Vendos gjuhën e sistemit"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Vendos gjuhën për ekranin e hyrjes, llogarinë mysafir dhe llogaritë e reja "
+"të përdoruesit"
