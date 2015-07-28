@@ -236,14 +236,12 @@ namespace SwitchboardPlugLocale.Installer {
             var installed = get_installed_packages_for_language (language);
 
             string[] multilang_packs = { "chromium-browser-l10n", "poppler-data"};
+            string[]? missing_packs = get_remaining_packages_for_language (language);
 
             var removable = new Gee.ArrayList<string> ();
             foreach (var packet in installed) {
-                if (packet in multilang_packs) {
-                    // nothing
-                } else {
+                if (!(packet in multilang_packs) && !(packet in missing_packs))
                     removable.add (packet);
-                }
             }
 
             return removable.to_array ();
