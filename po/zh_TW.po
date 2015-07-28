@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-04-12 01:40+0000\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"PO-Revision-Date: 2015-07-27 15:41+0000\n"
+"Last-Translator: 賴家亨 <laichiaheng@outlook.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:42+0000\n"
+"X-Launchpad-Export-Date: 2015-07-28 05:44+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 "Language: \n"
 
@@ -24,7 +24,7 @@ msgstr "語言和地區"
 
 #: ../src/Plug.vala:45
 msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr ""
+msgstr "安裝語言、設定地區，選擇日期和貨幣格式"
 
 #: ../src/Plug.vala:128
 msgid "Some changes will not take effect until you log out"
@@ -40,27 +40,27 @@ msgstr "完全安裝"
 
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "有些設定值需要有管理員權限才能變更"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "安裝語言"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "移除語言"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "切換到鍵盤設定"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "已安裝的語言"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "目前啟用的語言"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
@@ -68,36 +68,36 @@ msgstr "取消"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "語言安裝中"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "語言移除中"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
-msgstr ""
+msgstr "正在安裝需要補缺的語言"
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "語言： "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "地區： "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "格式： "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "設定語言"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "設定系統語言"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
+msgstr "為登入畫面、訪客帳號、和新使用者帳號設定預設語言"
