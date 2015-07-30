@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-03-27 07:55+0000\n"
+"PO-Revision-Date: 2015-07-29 11:28+0000\n"
 "Last-Translator: Ivan Vrljić <vrlja92@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-07-30 06:15+0000\n"
+"X-Generator: Launchpad (build 17646)\n"
 "Language: hr\n"
 
 #: ../src/Plug.vala:44
@@ -40,15 +40,15 @@ msgstr "Potpuna instalacija"
 
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Neke postavke zahtijevaju administratorska prava"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Instaliraj jezik"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Ukloni jezik"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
@@ -56,11 +56,11 @@ msgstr ""
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Instalirani jezici"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "Trenutno aktivan jezik"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
@@ -68,11 +68,11 @@ msgstr "Otkaži"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "Instalacija jezika"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "Uklanjanje jezika"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
@@ -80,24 +80,25 @@ msgstr ""
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "Jezik: "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "Regija "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "Formati: "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "Postavi jezik"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "Postavi jezik sustava"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Postavi jezik za zaslon prijave, račun gosta i nove korisničke račune"
