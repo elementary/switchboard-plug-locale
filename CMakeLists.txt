@@ -16,6 +16,8 @@ set (PLUGTITLE "Region")
 set (PLUGDESCRIPTION "Set region")
 # The symbolic name of the Icon to use for the plug
 set (PLUGICON "preferences-desktop-locale")
+# Set the version for the plug
+set (VERSION "0.2")
 
 project (${PLUGNAME})
 
