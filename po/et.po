@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-06-24 17:40+0000\n"
+"PO-Revision-Date: 2015-08-16 09:16+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-17 06:11+0000\n"
+"X-Generator: Launchpad (build 17686)\n"
 "Language: et\n"
 
 #: ../src/Plug.vala:44
@@ -41,27 +41,27 @@ msgstr "Lõpeta paigaldus"
 
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Paigalda keelepakett"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Eemalda keelepakett"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Klaviatuuri seaded…"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Paigaldatud keelepaketid"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "Praegu aktiivne keelepakett"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
@@ -69,36 +69,38 @@ msgstr "Loobu"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "Keelepaketi paigaldamine"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "Keelepaketi eemaldamine"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
-msgstr ""
+msgstr "Puuduoleva keelepaketi paigaldamine"
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "Keel: "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "Regioon: "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "Formaat: "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "Keele määramine"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "Määra süsteemi keeleks"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Keele määramine sisselogimise ekraanile, külastaja kontole ning kõikidele "
+"uutele loodavatele kontodele."
