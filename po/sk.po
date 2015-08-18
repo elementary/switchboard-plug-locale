@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-04-12 10:36+0000\n"
-"Last-Translator: Milan Slovák <Unknown>\n"
+"PO-Revision-Date: 2015-08-17 13:54+0000\n"
+"Last-Translator: pyler <pyler.inbox@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-18 06:01+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 "Language: sk\n"
 
 #: ../src/Plug.vala:44
@@ -24,7 +24,7 @@ msgstr "Jazyk & Krajina"
 
 #: ../src/Plug.vala:45
 msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr ""
+msgstr "Nainštalovať jazyky, nastaviť oblasť, vybrať formáty dátumu a meny"
 
 #: ../src/Plug.vala:128
 msgid "Some changes will not take effect until you log out"
@@ -40,27 +40,27 @@ msgstr "Dokončiť inštaláciu"
 
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Niektoré nastavenia vyžadujú zmenu administrátorských práv"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Nainštalovať jazyk"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Odstrániť jazyk"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Prepnúť do nastavení klávesnice"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Nainštalované jazyky"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "Aktuálny aktívny jazyk"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
@@ -68,36 +68,38 @@ msgstr "Zrušiť"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "Inštalácia jazyku"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "Odstraňovanie jazyku"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
-msgstr ""
+msgstr "Inštalácia chýbajúceho jazyku"
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "Jazyk: "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "Oblasť: "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "Formáty "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "Nastaviť jazyk"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "Nastaviť jazyk systému"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Nastaviť jazyk pre prihlasovaciu obrazovku, účet hosťa a nové používateľské "
+"účty"
