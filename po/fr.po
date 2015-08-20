@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-05-26 22:47+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"PO-Revision-Date: 2015-08-19 07:25+0000\n"
+"Last-Translator: Alexis Saettler <alexis@saettler.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-20 06:03+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 "Language: fr\n"
 
 #: ../src/Plug.vala:44
@@ -42,26 +42,27 @@ msgstr "Terminer l'installation"
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"La modification de certains paramètres nécessite les droits d'administrateur"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Installer une langue"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Supprimer une langue"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Aller à la configuration du clavier"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Langues installées"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "Langue actuellement activée"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
@@ -69,11 +70,11 @@ msgstr "Annuler"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "Installation de la langue"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "Suppression de la langue"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
@@ -81,23 +82,23 @@ msgstr ""
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "Langue : "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "Région : "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "Formats : "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "Définir la langue"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "Définir la langue du système"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
