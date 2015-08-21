@@ -8,23 +8,24 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-12 13:35+0200\n"
-"PO-Revision-Date: 2015-02-15 01:16+0000\n"
-"Last-Translator: Laszlo Espadas <kw@kardiweb.org>\n"
+"PO-Revision-Date: 2015-08-20 12:05+0000\n"
+"Last-Translator: Papp Ferenc <Unknown>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-21 05:42+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 "Language: hu\n"
 
 #: ../src/Plug.vala:44
 msgid "Language & Region"
-msgstr ""
+msgstr "Nyelv és régió"
 
 #: ../src/Plug.vala:45
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
+"Nyelvek telepítése, régió beállítása, dátum és pénznem formátumok választása"
 
 #: ../src/Plug.vala:128
 msgid "Some changes will not take effect until you log out"
@@ -32,72 +33,74 @@ msgstr "Egyes változások kijelentkezés után lépnek érvénybe"
 
 #: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Nyelvi támogatás nincs teljesen telepítve"
 
 #: ../src/Plug.vala:137
 msgid "Complete Installation"
-msgstr ""
+msgstr "Telepítés befejezése"
 
 #: ../src/Plug.vala:154
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Néhány beállítás változtatásához adminisztrátor jog szükséges"
 
 #: ../src/Widgets/LocaleView.vala:44
 msgid "Install language"
-msgstr ""
+msgstr "Nyelv telepítése"
 
 #: ../src/Widgets/LocaleView.vala:54
 msgid "Remove language"
-msgstr ""
+msgstr "Nyelv eltávolítása"
 
 #: ../src/Widgets/LocaleView.vala:63
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Váltás a billentyűzet beállításokra"
 
 #: ../src/Widgets/LanguageListBox.vala:15
 msgid "Installed Languages"
-msgstr ""
+msgstr "Telepített nyelvek"
 
 #: ../src/Widgets/LanguageListBox.vala:101
 msgid "Currently active language"
-msgstr ""
+msgstr "Jelenleg használt nyelv"
 
 #: ../src/Widgets/InstallInfoBar.vala:38
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: ../src/Widgets/InstallInfoBar.vala:54
 msgid "Installing language"
-msgstr ""
+msgstr "Nyelv telepítése"
 
 #: ../src/Widgets/InstallInfoBar.vala:57
 msgid "Removing language"
-msgstr ""
+msgstr "Nyelv eltávolítása"
 
 #: ../src/Widgets/InstallInfoBar.vala:60
 msgid "Installing missing language"
-msgstr ""
+msgstr "Hiányzó nyelv telepítése"
 
 #: ../src/Widgets/LocaleSetting.vala:75
 msgid "Language: "
-msgstr ""
+msgstr "Nyelv: "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Region: "
-msgstr ""
+msgstr "Régió: "
 
 #: ../src/Widgets/LocaleSetting.vala:79
 msgid "Formats: "
-msgstr ""
+msgstr "Formátumok: "
 
 #: ../src/Widgets/LocaleSetting.vala:84
 msgid "Set Language"
-msgstr ""
+msgstr "Nyelv megadása"
 
 #: ../src/Widgets/LocaleSetting.vala:113
 msgid "Set System Language"
-msgstr ""
+msgstr "A rendszer nyelvének beállítása"
 
 #: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Nyelv beállítása a bejelentkező képernyőhöz, a vendég fiókhoz és az új "
+"felhasználói fiókokhoz."
