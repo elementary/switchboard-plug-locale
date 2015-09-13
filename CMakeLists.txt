@@ -51,8 +51,6 @@ file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.locale.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.locale.policy)
 install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.locale.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 
-install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-locale.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
-
 # Traslation stuff
 add_subdirectory (po)
 
