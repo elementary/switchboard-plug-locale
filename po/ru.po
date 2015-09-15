@@ -7,97 +7,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"POT-Creation-Date: 2015-09-14 21:00-0500\n"
 "PO-Revision-Date: 2015-09-03 20:14+0000\n"
 "Last-Translator: crow <crow@rikka.io>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-04 05:36+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-09-15 05:47+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "Language: ru\n"
 
-#: ../src/Plug.vala:44
-msgid "Language & Region"
-msgstr "Язык и региональные настройки"
-
-#: ../src/Plug.vala:45
-msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr "Установка языков, выбор региона  и даты, форматы валют"
-
-#: ../src/Plug.vala:128
-msgid "Some changes will not take effect until you log out"
-msgstr "Некоторые изменения вступят в силу после выхода из сеанса"
-
-#: ../src/Plug.vala:135
-msgid "Language support is not installed completely"
-msgstr "Поддержка языка установлена не полностью"
-
-#: ../src/Plug.vala:137
-msgid "Complete Installation"
-msgstr "Завершить установку"
-
-#: ../src/Plug.vala:154
-msgid "Some settings require administrator rights to be changed"
-msgstr "Для некоторых настроек требуются права администратора"
-
-#: ../src/Widgets/LocaleView.vala:44
-msgid "Install language"
-msgstr "Установить язык"
-
-#: ../src/Widgets/LocaleView.vala:54
-msgid "Remove language"
-msgstr "Удалить язык"
-
-#: ../src/Widgets/LocaleView.vala:63
-msgid "Switch to keyboard settings"
-msgstr "Перейти к настройкам клавиатуры"
-
-#: ../src/Widgets/LanguageListBox.vala:15
-msgid "Installed Languages"
-msgstr "Установленные языки"
-
-#: ../src/Widgets/LanguageListBox.vala:101
-msgid "Currently active language"
-msgstr "Сейчас язык активен"
-
-#: ../src/Widgets/InstallInfoBar.vala:38
-msgid "Cancel"
-msgstr "Отменить"
-
-#: ../src/Widgets/InstallInfoBar.vala:54
-msgid "Installing language"
-msgstr "Установка языка"
-
-#: ../src/Widgets/InstallInfoBar.vala:57
-msgid "Removing language"
-msgstr "Удаление языка"
-
-#: ../src/Widgets/InstallInfoBar.vala:60
-msgid "Installing missing language"
-msgstr "Установка недостающего языка"
-
-#: ../src/Widgets/LocaleSetting.vala:75
+#: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
 msgstr "Язык: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
 msgstr "Регион: "
 
-#: ../src/Widgets/LocaleSetting.vala:79
+#: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
 msgstr "Формат: "
 
-#: ../src/Widgets/LocaleSetting.vala:84
+#: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
 msgstr "Установить язык"
 
-#: ../src/Widgets/LocaleSetting.vala:113
+#: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
 msgstr "Выбрать как системный язык"
 
-#: ../src/Widgets/LocaleSetting.vala:115
+#: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Выбрать язык для экрана входа, гостевого и новых аккаунтов"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "Установить язык"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "Удалить язык"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "Перейти к настройкам клавиатуры"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Отменить"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "Установка языка"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "Удаление языка"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "Установка недостающего языка"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Установленные языки"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Сейчас язык активен"
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "Язык и региональные настройки"
+
+#: ../src/Plug.vala:48
+msgid "Install languages, set region, and choose date &amp; currency formats"
+msgstr "Установка языков, выбор региона  и даты, форматы валют"
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Некоторые изменения вступят в силу после выхода из сеанса"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "Поддержка языка установлена не полностью"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "Завершить установку"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
+msgstr "Для некоторых настроек требуются права администратора"

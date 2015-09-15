@@ -7,97 +7,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"POT-Creation-Date: 2015-09-14 21:00-0500\n"
 "PO-Revision-Date: 2015-07-24 16:49+0000\n"
 "Last-Translator: Tomo Moto <Unknown>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-25 05:40+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-09-15 05:47+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "Language: cs\n"
 
-#: ../src/Plug.vala:44
-msgid "Language & Region"
-msgstr "Jazyk & Region"
-
-#: ../src/Plug.vala:45
-msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr "Nainstalujte jazyky, nastavte region a zvolte formát data a měny"
-
-#: ../src/Plug.vala:128
-msgid "Some changes will not take effect until you log out"
-msgstr "Některé změny se projeví až po opětovném přihlášení"
-
-#: ../src/Plug.vala:135
-msgid "Language support is not installed completely"
-msgstr "Jazyková podpora není kompletně nainstalována"
-
-#: ../src/Plug.vala:137
-msgid "Complete Installation"
-msgstr "Dokončit instalaci"
-
-#: ../src/Plug.vala:154
-msgid "Some settings require administrator rights to be changed"
-msgstr "Některá nastavení vyžadují administrátorská oprávnění"
-
-#: ../src/Widgets/LocaleView.vala:44
-msgid "Install language"
-msgstr "Nainstalovat jazyk"
-
-#: ../src/Widgets/LocaleView.vala:54
-msgid "Remove language"
-msgstr "Odebrat jazyk"
-
-#: ../src/Widgets/LocaleView.vala:63
-msgid "Switch to keyboard settings"
-msgstr "Přepnout na nastavení klávesnice"
-
-#: ../src/Widgets/LanguageListBox.vala:15
-msgid "Installed Languages"
-msgstr "Nainstalované jazyky"
-
-#: ../src/Widgets/LanguageListBox.vala:101
-msgid "Currently active language"
-msgstr "Aktuálně používaný jazyk"
-
-#: ../src/Widgets/InstallInfoBar.vala:38
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: ../src/Widgets/InstallInfoBar.vala:54
-msgid "Installing language"
-msgstr "Instaluji jazyk"
-
-#: ../src/Widgets/InstallInfoBar.vala:57
-msgid "Removing language"
-msgstr "Odstraňuji jazyk"
-
-#: ../src/Widgets/InstallInfoBar.vala:60
-msgid "Installing missing language"
-msgstr "Instaluji chybějící jazyk"
-
-#: ../src/Widgets/LocaleSetting.vala:75
+#: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
 msgstr "Jazyk: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
 msgstr "Oblast: "
 
-#: ../src/Widgets/LocaleSetting.vala:79
+#: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
 msgstr "Formáty: "
 
-#: ../src/Widgets/LocaleSetting.vala:84
+#: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
 msgstr "Nastavit jazyk"
 
-#: ../src/Widgets/LocaleSetting.vala:113
+#: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
 msgstr "Nastavit jazyk systému"
 
-#: ../src/Widgets/LocaleSetting.vala:115
+#: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Použít jazyk pro přihlašovací obrazovku, účet hosta a nové uživatele"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "Nainstalovat jazyk"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "Odebrat jazyk"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "Přepnout na nastavení klávesnice"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "Instaluji jazyk"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "Odstraňuji jazyk"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "Instaluji chybějící jazyk"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Nainstalované jazyky"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Aktuálně používaný jazyk"
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "Jazyk & Region"
+
+#: ../src/Plug.vala:48
+msgid "Install languages, set region, and choose date &amp; currency formats"
+msgstr "Nainstalujte jazyky, nastavte region a zvolte formát data a měny"
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Některé změny se projeví až po opětovném přihlášení"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "Jazyková podpora není kompletně nainstalována"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "Dokončit instalaci"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
+msgstr "Některá nastavení vyžadují administrátorská oprávnění"

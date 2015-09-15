@@ -7,97 +7,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"POT-Creation-Date: 2015-09-14 21:00-0500\n"
 "PO-Revision-Date: 2015-08-01 07:52+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-02 05:37+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-09-15 05:47+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "Language: \n"
 
-#: ../src/Plug.vala:44
-msgid "Language & Region"
-msgstr "语言和区域"
-
-#: ../src/Plug.vala:45
-msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr "安装语言、设置区域、选择日期和货币格式"
-
-#: ../src/Plug.vala:128
-msgid "Some changes will not take effect until you log out"
-msgstr "某些变更将会在注销后生效"
-
-#: ../src/Plug.vala:135
-msgid "Language support is not installed completely"
-msgstr "语言支持安装不完整"
-
-#: ../src/Plug.vala:137
-msgid "Complete Installation"
-msgstr "完整安装"
-
-#: ../src/Plug.vala:154
-msgid "Some settings require administrator rights to be changed"
-msgstr "某些设置需要管理员权限才能更改"
-
-#: ../src/Widgets/LocaleView.vala:44
-msgid "Install language"
-msgstr "安装语言"
-
-#: ../src/Widgets/LocaleView.vala:54
-msgid "Remove language"
-msgstr "删除语言"
-
-#: ../src/Widgets/LocaleView.vala:63
-msgid "Switch to keyboard settings"
-msgstr "转至键盘设置"
-
-#: ../src/Widgets/LanguageListBox.vala:15
-msgid "Installed Languages"
-msgstr "已安装语言"
-
-#: ../src/Widgets/LanguageListBox.vala:101
-msgid "Currently active language"
-msgstr "已激活语言"
-
-#: ../src/Widgets/InstallInfoBar.vala:38
-msgid "Cancel"
-msgstr "取消"
-
-#: ../src/Widgets/InstallInfoBar.vala:54
-msgid "Installing language"
-msgstr "正在安装语言"
-
-#: ../src/Widgets/InstallInfoBar.vala:57
-msgid "Removing language"
-msgstr "正在删除语言"
-
-#: ../src/Widgets/InstallInfoBar.vala:60
-msgid "Installing missing language"
-msgstr "正在安装缺失的语言"
-
-#: ../src/Widgets/LocaleSetting.vala:75
+#: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
 msgstr "语言： "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
 msgstr "区域： "
 
-#: ../src/Widgets/LocaleSetting.vala:79
+#: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
 msgstr "格式： "
 
-#: ../src/Widgets/LocaleSetting.vala:84
+#: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
 msgstr "设置语言"
 
-#: ../src/Widgets/LocaleSetting.vala:113
+#: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
 msgstr "设置系统语言"
 
-#: ../src/Widgets/LocaleSetting.vala:115
+#: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "设置登录界面、访客账户和新账户的语言"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "安装语言"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "删除语言"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "转至键盘设置"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "取消"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "正在安装语言"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "正在删除语言"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "正在安装缺失的语言"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "已安装语言"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "已激活语言"
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "语言和区域"
+
+#: ../src/Plug.vala:48
+msgid "Install languages, set region, and choose date &amp; currency formats"
+msgstr "安装语言、设置区域、选择日期和货币格式"
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "某些变更将会在注销后生效"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "语言支持安装不完整"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "完整安装"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
+msgstr "某些设置需要管理员权限才能更改"

@@ -7,101 +7,101 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"POT-Creation-Date: 2015-09-14 21:00-0500\n"
 "PO-Revision-Date: 2015-08-12 18:28+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-13 05:43+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-09-15 05:47+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "Language: de\n"
 
-#: ../src/Plug.vala:44
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Language: "
+msgstr "Sprache: "
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Region: "
+msgstr "Region: "
+
+#: ../src/Widgets/LocaleSetting.vala:82
+msgid "Formats: "
+msgstr "Formate: "
+
+#: ../src/Widgets/LocaleSetting.vala:87
+msgid "Set Language"
+msgstr "Sprache festlegen"
+
+#: ../src/Widgets/LocaleSetting.vala:116
+msgid "Set System Language"
+msgstr "Systemsprache festlegen"
+
+#: ../src/Widgets/LocaleSetting.vala:118
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+"Sprache für Anmelde-Bildschirm, Gast- und neue Benutzerkonten festlegen"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "Sprachen installieren"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "Sprache entfernen"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "Zu Tastatureinstellungen wechseln"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "Installiere Sprache"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "Entferne Sprache"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "Installiere fehlende Sprache"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Installierte Sprachen"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Aktuell aktivierte Sprache"
+
+#: ../src/Plug.vala:47
 msgid "Language & Region"
 msgstr "Sprache & Region"
 
-#: ../src/Plug.vala:45
+#: ../src/Plug.vala:48
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
 "Sprachpakete installieren, Region &amp; Währung auswählen und Datum festlegen"
 
-#: ../src/Plug.vala:128
+#: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Einige Änderungen werden erst mit der nächsten Sitzung übernommen"
 
-#: ../src/Plug.vala:135
+#: ../src/Plug.vala:138
 msgid "Language support is not installed completely"
 msgstr "Die Sprache ist nicht vollständig installiert"
 
-#: ../src/Plug.vala:137
+#: ../src/Plug.vala:140
 msgid "Complete Installation"
 msgstr "Installation vervollständigen"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Manche Einstellungen benötigen Administrator-Berechtigungen, um geändert zu "
 "werden"
-
-#: ../src/Widgets/LocaleView.vala:44
-msgid "Install language"
-msgstr "Sprachen installieren"
-
-#: ../src/Widgets/LocaleView.vala:54
-msgid "Remove language"
-msgstr "Sprache entfernen"
-
-#: ../src/Widgets/LocaleView.vala:63
-msgid "Switch to keyboard settings"
-msgstr "Zu Tastatureinstellungen wechseln"
-
-#: ../src/Widgets/LanguageListBox.vala:15
-msgid "Installed Languages"
-msgstr "Installierte Sprachen"
-
-#: ../src/Widgets/LanguageListBox.vala:101
-msgid "Currently active language"
-msgstr "Aktuell aktivierte Sprache"
-
-#: ../src/Widgets/InstallInfoBar.vala:38
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: ../src/Widgets/InstallInfoBar.vala:54
-msgid "Installing language"
-msgstr "Installiere Sprache"
-
-#: ../src/Widgets/InstallInfoBar.vala:57
-msgid "Removing language"
-msgstr "Entferne Sprache"
-
-#: ../src/Widgets/InstallInfoBar.vala:60
-msgid "Installing missing language"
-msgstr "Installiere fehlende Sprache"
-
-#: ../src/Widgets/LocaleSetting.vala:75
-msgid "Language: "
-msgstr "Sprache: "
-
-#: ../src/Widgets/LocaleSetting.vala:77
-msgid "Region: "
-msgstr "Region: "
-
-#: ../src/Widgets/LocaleSetting.vala:79
-msgid "Formats: "
-msgstr "Formate: "
-
-#: ../src/Widgets/LocaleSetting.vala:84
-msgid "Set Language"
-msgstr "Sprache festlegen"
-
-#: ../src/Widgets/LocaleSetting.vala:113
-msgid "Set System Language"
-msgstr "Systemsprache festlegen"
-
-#: ../src/Widgets/LocaleSetting.vala:115
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
-"Sprache für Anmelde-Bildschirm, Gast- und neue Benutzerkonten festlegen"

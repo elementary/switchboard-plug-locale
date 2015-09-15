@@ -7,97 +7,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"POT-Creation-Date: 2015-09-14 21:00-0500\n"
 "PO-Revision-Date: 2015-05-26 13:29+0000\n"
 "Last-Translator: Peachyz <lasmanis.davis@gmail.com>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-14 05:41+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-09-15 05:47+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "Language: lv\n"
 
-#: ../src/Plug.vala:44
-msgid "Language & Region"
-msgstr "Valoda un atrašanās vieta"
-
-#: ../src/Plug.vala:45
-msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr "Uzstādīt valodas, reģionus un izvēlēties datuma un valūtas formātus"
-
-#: ../src/Plug.vala:128
-msgid "Some changes will not take effect until you log out"
-msgstr "Dažas izmaiņas stāsies spēkā pēc iziešanas no sistēmas"
-
-#: ../src/Plug.vala:135
-msgid "Language support is not installed completely"
-msgstr "Valodas atbalsts ir instalēts nepilnīgi"
-
-#: ../src/Plug.vala:137
-msgid "Complete Installation"
-msgstr "Uzstādīšana pabeigta"
-
-#: ../src/Plug.vala:154
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:44
-msgid "Install language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:54
-msgid "Remove language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:63
-msgid "Switch to keyboard settings"
-msgstr ""
-
-#: ../src/Widgets/LanguageListBox.vala:15
-msgid "Installed Languages"
-msgstr ""
-
-#: ../src/Widgets/LanguageListBox.vala:101
-msgid "Currently active language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:38
-msgid "Cancel"
-msgstr "Atcelt"
-
-#: ../src/Widgets/InstallInfoBar.vala:54
-msgid "Installing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:57
-msgid "Removing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:60
-msgid "Installing missing language"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:75
+#: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:79
+#: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:84
+#: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:113
+#: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:115
+#: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr ""
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "Valoda un atrašanās vieta"
+
+#: ../src/Plug.vala:48
+msgid "Install languages, set region, and choose date &amp; currency formats"
+msgstr "Uzstādīt valodas, reģionus un izvēlēties datuma un valūtas formātus"
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Dažas izmaiņas stāsies spēkā pēc iziešanas no sistēmas"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "Valodas atbalsts ir instalēts nepilnīgi"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "Uzstādīšana pabeigta"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
 msgstr ""

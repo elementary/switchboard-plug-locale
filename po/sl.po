@@ -7,98 +7,98 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 13:35+0200\n"
+"POT-Creation-Date: 2015-09-14 21:00-0500\n"
 "PO-Revision-Date: 2015-08-16 13:25+0000\n"
 "Last-Translator: MarkoD <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-17 06:11+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-09-15 05:47+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "Language: sl\n"
 
-#: ../src/Plug.vala:44
-msgid "Language & Region"
-msgstr "Jezik in področje"
-
-#: ../src/Plug.vala:45
-msgid "Install languages, set region, and choose date &amp; currency formats"
-msgstr "Namesti jezike, nastavi področje in izberi format datuma in denarja"
-
-#: ../src/Plug.vala:128
-msgid "Some changes will not take effect until you log out"
-msgstr "Spremembe ne bodo vidne dokler se ne odjavite"
-
-#: ../src/Plug.vala:135
-msgid "Language support is not installed completely"
-msgstr "Jezikovna podpora ni v celoti nameščena"
-
-#: ../src/Plug.vala:137
-msgid "Complete Installation"
-msgstr "Končaj namestitev"
-
-#: ../src/Plug.vala:154
-msgid "Some settings require administrator rights to be changed"
-msgstr "Spremembe nekaterih nastavitev potrebujejo pravice skrbnika"
-
-#: ../src/Widgets/LocaleView.vala:44
-msgid "Install language"
-msgstr "Namesti jezik"
-
-#: ../src/Widgets/LocaleView.vala:54
-msgid "Remove language"
-msgstr "Izbriši jezik"
-
-#: ../src/Widgets/LocaleView.vala:63
-msgid "Switch to keyboard settings"
-msgstr "Preklopi v nastavitve tipkovnice"
-
-#: ../src/Widgets/LanguageListBox.vala:15
-msgid "Installed Languages"
-msgstr "Nameščeni jeziki"
-
-#: ../src/Widgets/LanguageListBox.vala:101
-msgid "Currently active language"
-msgstr "Trenutno aktivni jezik"
-
-#: ../src/Widgets/InstallInfoBar.vala:38
-msgid "Cancel"
-msgstr "Prekliči"
-
-#: ../src/Widgets/InstallInfoBar.vala:54
-msgid "Installing language"
-msgstr "Nameščanje jezika"
-
-#: ../src/Widgets/InstallInfoBar.vala:57
-msgid "Removing language"
-msgstr "Odstranjevanje jezika"
-
-#: ../src/Widgets/InstallInfoBar.vala:60
-msgid "Installing missing language"
-msgstr "Nameščanje manjkajočega jezika"
-
-#: ../src/Widgets/LocaleSetting.vala:75
+#: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
 msgstr "Jezik: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
 msgstr "Področje: "
 
-#: ../src/Widgets/LocaleSetting.vala:79
+#: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
 msgstr "Formati: "
 
-#: ../src/Widgets/LocaleSetting.vala:84
+#: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
 msgstr "Nastavi jezik"
 
-#: ../src/Widgets/LocaleSetting.vala:113
+#: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
 msgstr "Nastavi jezik sistema"
 
-#: ../src/Widgets/LocaleSetting.vala:115
+#: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nastavi jezik za prijavni zaslon, račun gosta in račun novih uporabnikov"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "Namesti jezik"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "Izbriši jezik"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "Preklopi v nastavitve tipkovnice"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "Nameščanje jezika"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "Odstranjevanje jezika"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "Nameščanje manjkajočega jezika"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Nameščeni jeziki"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Trenutno aktivni jezik"
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "Jezik in področje"
+
+#: ../src/Plug.vala:48
+msgid "Install languages, set region, and choose date &amp; currency formats"
+msgstr "Namesti jezike, nastavi področje in izberi format datuma in denarja"
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Spremembe ne bodo vidne dokler se ne odjavite"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "Jezikovna podpora ni v celoti nameščena"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "Končaj namestitev"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
+msgstr "Spremembe nekaterih nastavitev potrebujejo pravice skrbnika"
