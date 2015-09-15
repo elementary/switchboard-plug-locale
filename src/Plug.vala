@@ -133,7 +133,7 @@ namespace SwitchboardPlugLocale {
 
             //Gtk.InfoBar for language support installation
             missing_lang_infobar = new Gtk.InfoBar ();
-            missing_lang_infobar.message_type = Gtk.MessageType.INFO;
+            missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
             var missing_content = missing_lang_infobar.get_content_area () as Gtk.Box;
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
