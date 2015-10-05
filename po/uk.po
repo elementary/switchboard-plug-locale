@@ -8,51 +8,53 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-14 21:00-0500\n"
-"PO-Revision-Date: 2015-03-15 10:38+0000\n"
-"Last-Translator: Bogdan Lisnenko <Unknown>\n"
+"PO-Revision-Date: 2015-10-04 09:48+0000\n"
+"Last-Translator: zigi21 <huckier78@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-16 05:52+0000\n"
-"X-Generator: Launchpad (build 17737)\n"
+"X-Launchpad-Export-Date: 2015-10-05 05:52+0000\n"
+"X-Generator: Launchpad (build 17783)\n"
 "Language: uk\n"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
-msgstr ""
+msgstr "Мова: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr ""
+msgstr "Регіон: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
-msgstr ""
+msgstr "Формати: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
-msgstr ""
+msgstr "Вказати мову"
 
 #: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
-msgstr ""
+msgstr "Виставити мову системи"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Встановити мову для екрану входу, гостьового облікового запису та нових "
+"користувацьких облікових записів"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr ""
+msgstr "Встановити мову"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
-msgstr ""
+msgstr "Вилучити мову"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Перейти до налаштувань клавіатури"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
@@ -60,7 +62,7 @@ msgstr "Скасувати"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "Встановлення мови"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
