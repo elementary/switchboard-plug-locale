@@ -337,7 +337,7 @@ namespace SwitchboardPlugLocale {
                 settings.set_value (KEY_INPUT_SELETION, my_map);
             }
         }
-        
+
         private void localectl_set_locale (string locale, string? format = null) throws GLib.Error {
             debug ("setting system-wide locale via localectl");
             if (Utils.get_permission ().allowed) {
@@ -349,10 +349,10 @@ namespace SwitchboardPlugLocale {
                 try {
                     if (format == null) {
                         Process.spawn_sync (null,
-                            {"pkexec", cli, command, locale}, 
-                            Environ.get (), 
-                            SpawnFlags.SEARCH_PATH, 
-                            null, out output, 
+                            {"pkexec", cli, command, locale},
+                            Environ.get (),
+                            SpawnFlags.SEARCH_PATH,
+                            null, out output,
                             null, out status);
                         if (output != "")
                             critical ("localectl failed to set locale");
@@ -360,7 +360,7 @@ namespace SwitchboardPlugLocale {
                         Process.spawn_sync (null,
                             {"pkexec", cli, command, locale, "LC_TIME=%s".printf (format),
                              "LC_NUMERIC=%s".printf (format), "LC_MONETARY=%s".printf (format),
-                             "LC_MEASUREMENT=%s".printf (format)}, 
+                             "LC_MEASUREMENT=%s".printf (format)},
                             Environ.get (),
                             SpawnFlags.SEARCH_PATH,
                             null, out output,
@@ -398,7 +398,7 @@ namespace SwitchboardPlugLocale {
                 }
             }
         }
-        
+
           public void apply_to_system (string language, string? format) {
             set_system_language (language, format);
             set_system_input ();
@@ -424,7 +424,10 @@ namespace SwitchboardPlugLocale {
             }*/
 
             try {
-                localectl_set_locale ("LANG=%s.utf8".printf (language), format);
+                if (language.length == 2)
+                    localectl_set_locale ("LANG=%s.UTF-8".printf (Utils.get_default_for_lang (language)), format);
+                else
+                    localectl_set_locale ("LANG=%s.UTF-8".printf (language), format);
                 //locale_proxy.set_locale (list.to_array (), true);
             } catch (Error e) {
                 warning (e.message);
