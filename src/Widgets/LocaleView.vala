@@ -15,7 +15,7 @@
 */
 
 namespace SwitchboardPlugLocale.Widgets {
-    public class LocaleView : Granite.Widgets.ThinPaned {
+    public class LocaleView : Gtk.Paned {
         private weak Plug               plug;
         private Gtk.Box                 sidebar;
         private Gtk.ToolButton          add_button;
