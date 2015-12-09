@@ -1,3 +1,9 @@
+switchboard-plug-locale (0.2.0.2) trusty; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Wed, 09 Dec 2015 14:37:18 -0600
+
 switchboard-plug-locale (0.2.0.1) trusty; urgency=medium
 
   * New upstream release.
