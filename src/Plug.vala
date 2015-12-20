@@ -45,7 +45,7 @@ namespace SwitchboardPlugLocale {
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
                     display_name: _("Language & Region"),
-                    description: _("Install languages, set region, and choose date &amp; currency formats"),
+                    description: _("Manage languages, and configure region and format"),
                     icon: "preferences-desktop-locale");
         }
 
