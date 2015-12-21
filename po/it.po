@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-14 21:00-0500\n"
-"PO-Revision-Date: 2015-08-13 09:30+0000\n"
+"PO-Revision-Date: 2015-12-20 11:55+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-29 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-21 05:35+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Language: it\n"
 
 #: ../src/Widgets/LocaleSetting.vala:78
@@ -86,7 +86,7 @@ msgstr "Lingua e Regione"
 #: ../src/Plug.vala:48
 msgid "Install languages, set region, and choose date &amp; currency formats"
 msgstr ""
-"Installa lingue, imposta la regione e scegli la data &amp; il formati della "
+"Installa lingue, imposta la regione e scegli la data e il formato della "
 "valuta"
 
 #: ../src/Plug.vala:131
