@@ -2,15 +2,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 21:00-0500\n"
+"POT-Creation-Date: 2016-04-21 08:43-0300\n"
 "PO-Revision-Date: 2015-04-20 21:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-29 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr ""
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr ""
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
@@ -36,18 +56,6 @@ msgstr ""
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: ../src/Widgets/LocaleView.vala:60
-msgid "Install language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:70
-msgid "Remove language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:79
-msgid "Switch to keyboard settings"
-msgstr ""
-
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
 msgstr ""
@@ -64,20 +72,12 @@ msgstr ""
 msgid "Installing missing language"
 msgstr ""
 
-#: ../src/Widgets/LanguageListBox.vala:30
-msgid "Installed Languages"
-msgstr ""
-
-#: ../src/Widgets/LanguageListBox.vala:116
-msgid "Currently active language"
-msgstr ""
-
 #: ../src/Plug.vala:47
 msgid "Language & Region"
 msgstr ""
 
 #: ../src/Plug.vala:48
-msgid "Install languages, set region, and choose date &amp; currency formats"
+msgid "Manage languages, and configure region and format"
 msgstr ""
 
 #: ../src/Plug.vala:131

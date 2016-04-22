@@ -7,16 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 21:00-0500\n"
+"POT-Creation-Date: 2016-04-21 08:43-0300\n"
 "PO-Revision-Date: 2015-11-04 13:30+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-29 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: pt_BR\n"
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "Instalar idioma"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "Remover idioma"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "Alternar para configurações de teclado"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Idiomas instalados"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Idioma ativo atualmente"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
@@ -44,18 +64,6 @@ msgstr ""
 "Definir idioma para tela de login, conta de visitante e novas contas de "
 "usuário"
 
-#: ../src/Widgets/LocaleView.vala:60
-msgid "Install language"
-msgstr "Instalar idioma"
-
-#: ../src/Widgets/LocaleView.vala:70
-msgid "Remove language"
-msgstr "Remover idioma"
-
-#: ../src/Widgets/LocaleView.vala:79
-msgid "Switch to keyboard settings"
-msgstr "Alternar para configurações de teclado"
-
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
 msgstr "Cancelar"
@@ -72,23 +80,13 @@ msgstr "Removendo idioma"
 msgid "Installing missing language"
 msgstr "Instalando idioma não encontrado"
 
-#: ../src/Widgets/LanguageListBox.vala:30
-msgid "Installed Languages"
-msgstr "Idiomas instalados"
-
-#: ../src/Widgets/LanguageListBox.vala:116
-msgid "Currently active language"
-msgstr "Idioma ativo atualmente"
-
 #: ../src/Plug.vala:47
 msgid "Language & Region"
 msgstr "Idioma e região"
 
 #: ../src/Plug.vala:48
-msgid "Install languages, set region, and choose date &amp; currency formats"
+msgid "Manage languages, and configure region and format"
 msgstr ""
-"Instale idiomas, configure o fuso horário e escolha o formato para data "
-"&amp; moeda."
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
