@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 08:43-0300\n"
-"PO-Revision-Date: 2016-04-21 17:21+0000\n"
-"Last-Translator: Djaler <djaler1@gmail.com>\n"
+"PO-Revision-Date: 2016-04-22 17:30+0000\n"
+"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-04-23 05:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: ru\n"
 
@@ -84,7 +84,7 @@ msgstr "Язык и региональные настройки"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr "Управление языками, настройка региона и формата"
+msgstr "Управление языками, настройка региона и формата времени"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
