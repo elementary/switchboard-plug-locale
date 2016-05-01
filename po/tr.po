@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 08:43-0300\n"
-"PO-Revision-Date: 2016-04-09 14:38+0000\n"
-"Last-Translator: Melih Güçlü <melihguclu@hotmail.com>\n"
+"PO-Revision-Date: 2016-04-30 12:16+0000\n"
+"Last-Translator: Kaan Kölköy <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 05:47+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: tr\n"
 
@@ -28,7 +28,7 @@ msgstr "Dili Kaldır"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Klavye ayarlarına geç"
 
 #: ../src/Widgets/LanguageListBox.vala:30
 msgid "Installed Languages"
@@ -84,7 +84,7 @@ msgstr "Dil & Bölge"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Dilleri yönet ve bölge ve düzeni ayarla"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
