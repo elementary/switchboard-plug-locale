@@ -2,74 +2,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 08:43-0300\n"
+"POT-Creation-Date: 2016-05-05 09:50-0700\n"
 "PO-Revision-Date: 2015-10-08 00:21+0000\n"
 "Last-Translator: qezwan <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-05-06 04:57+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
-#: ../src/Widgets/LocaleView.vala:60
-msgid "Install language"
-msgstr "دامەزراندنی زمان"
-
-#: ../src/Widgets/LocaleView.vala:70
-msgid "Remove language"
-msgstr "سڕینەوەی زمان"
-
-#: ../src/Widgets/LocaleView.vala:79
-msgid "Switch to keyboard settings"
-msgstr "ڕیکخستنی گۆڕین تختەکلیل"
-
-#: ../src/Widgets/LanguageListBox.vala:30
-msgid "Installed Languages"
-msgstr "زمانه‌ دامه‌زراوه‌كان"
-
-#: ../src/Widgets/LanguageListBox.vala:116
-msgid "Currently active language"
-msgstr "ئێستا زمان چالاک ە"
-
-#: ../src/Widgets/LocaleSetting.vala:78
-msgid "Language: "
-msgstr "زمان : "
-
-#: ../src/Widgets/LocaleSetting.vala:80
-msgid "Region: "
-msgstr "هەرێم "
-
-#: ../src/Widgets/LocaleSetting.vala:82
-msgid "Formats: "
-msgstr "ڕێخستن "
-
-#: ../src/Widgets/LocaleSetting.vala:87
-msgid "Set Language"
-msgstr "رێکخستنی زمان"
-
-#: ../src/Widgets/LocaleSetting.vala:116
-msgid "Set System Language"
-msgstr "زمانی سیسته‌مه‌كه‌ ڕیكبخه‌"
-
-#: ../src/Widgets/LocaleSetting.vala:118
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr "زمان بۆ پەڕەی چونەژوورەوە ، هەژمارەی میوان و هەژمارەی نوێ ڕێکبخە"
-
-#: ../src/Widgets/InstallInfoBar.vala:42
-msgid "Cancel"
-msgstr "هەڵوەشاندنەوە"
-
-#: ../src/Widgets/InstallInfoBar.vala:58
-msgid "Installing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:61
-msgid "Removing language"
-msgstr "سڕینەوەی زمان"
-
-#: ../src/Widgets/InstallInfoBar.vala:64
-msgid "Installing missing language"
+#. /or modify it under the terms of the GNU Lesser General Public License as
+#. * published by the Free Software Foundation, either version 3 of the
+#. * License, or (at your option) any later version.
+#. *
+#. * This program is distributed in the hope that it will be
+#. * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+#. * Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public License along
+#. * with this program. If not, see http://www.gnu.org/licenses/.
+#. 
+#: ../src/Translations.vala:17
+msgid "Authentication is required to manage locale settings"
 msgstr ""
 
 #: ../src/Plug.vala:47
@@ -95,3 +51,63 @@ msgstr ""
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "هەڵوەشاندنەوە"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "سڕینەوەی زمان"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr "دامەزراندنی زمان"
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr "سڕینەوەی زمان"
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
+msgstr "ڕیکخستنی گۆڕین تختەکلیل"
+
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Language: "
+msgstr "زمان : "
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Region: "
+msgstr "هەرێم "
+
+#: ../src/Widgets/LocaleSetting.vala:82
+msgid "Formats: "
+msgstr "ڕێخستن "
+
+#: ../src/Widgets/LocaleSetting.vala:87
+msgid "Set Language"
+msgstr "رێکخستنی زمان"
+
+#: ../src/Widgets/LocaleSetting.vala:116
+msgid "Set System Language"
+msgstr "زمانی سیسته‌مه‌كه‌ ڕیكبخه‌"
+
+#: ../src/Widgets/LocaleSetting.vala:118
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr "زمان بۆ پەڕەی چونەژوورەوە ، هەژمارەی میوان و هەژمارەی نوێ ڕێکبخە"
+
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "زمانه‌ دامه‌زراوه‌كان"
+
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "ئێستا زمان چالاک ە"

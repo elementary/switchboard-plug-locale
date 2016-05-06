@@ -7,16 +7,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 08:43-0300\n"
+"POT-Creation-Date: 2016-05-05 09:50-0700\n"
 "PO-Revision-Date: 2015-07-16 16:56+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-05-06 04:56+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: pt\n"
+
+#. /or modify it under the terms of the GNU Lesser General Public License as
+#. * published by the Free Software Foundation, either version 3 of the
+#. * License, or (at your option) any later version.
+#. *
+#. * This program is distributed in the hope that it will be
+#. * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+#. * Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public License along
+#. * with this program. If not, see http://www.gnu.org/licenses/.
+#. 
+#: ../src/Translations.vala:17
+msgid "Authentication is required to manage locale settings"
+msgstr ""
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "Idioma e região"
+
+#: ../src/Plug.vala:48
+msgid "Manage languages, and configure region and format"
+msgstr ""
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Algumas alterações terão efeito após terminar sessão"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "O pacote de idioma não está completamente instalado"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "Completar instalação"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Algumas definições requerem privilégios administrativos para serem alteradas"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "A instalar idioma"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "A remover idioma"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "A instalar idioma em falta"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
@@ -29,14 +86,6 @@ msgstr "Remover idioma"
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
 msgstr "Ir para definições de Teclado"
-
-#: ../src/Widgets/LanguageListBox.vala:30
-msgid "Installed Languages"
-msgstr "Idiomas Instalados"
-
-#: ../src/Widgets/LanguageListBox.vala:116
-msgid "Currently active language"
-msgstr "Idioma ativo"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
@@ -64,43 +113,10 @@ msgstr ""
 "Definir idioma do ecrã de início de sessão, da conta de convidado e novas "
 "contas"
 
-#: ../src/Widgets/InstallInfoBar.vala:42
-msgid "Cancel"
-msgstr "Cancelar"
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Idiomas Instalados"
 
-#: ../src/Widgets/InstallInfoBar.vala:58
-msgid "Installing language"
-msgstr "A instalar idioma"
-
-#: ../src/Widgets/InstallInfoBar.vala:61
-msgid "Removing language"
-msgstr "A remover idioma"
-
-#: ../src/Widgets/InstallInfoBar.vala:64
-msgid "Installing missing language"
-msgstr "A instalar idioma em falta"
-
-#: ../src/Plug.vala:47
-msgid "Language & Region"
-msgstr "Idioma e região"
-
-#: ../src/Plug.vala:48
-msgid "Manage languages, and configure region and format"
-msgstr ""
-
-#: ../src/Plug.vala:131
-msgid "Some changes will not take effect until you log out"
-msgstr "Algumas alterações terão efeito após terminar sessão"
-
-#: ../src/Plug.vala:138
-msgid "Language support is not installed completely"
-msgstr "O pacote de idioma não está completamente instalado"
-
-#: ../src/Plug.vala:140
-msgid "Complete Installation"
-msgstr "Completar instalação"
-
-#: ../src/Plug.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Algumas definições requerem privilégios administrativos para serem alteradas"
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Idioma ativo"

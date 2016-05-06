@@ -7,16 +7,72 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 08:43-0300\n"
+"POT-Creation-Date: 2016-05-05 09:50-0700\n"
 "PO-Revision-Date: 2015-08-16 09:16+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-05-06 04:56+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: et\n"
+
+#. /or modify it under the terms of the GNU Lesser General Public License as
+#. * published by the Free Software Foundation, either version 3 of the
+#. * License, or (at your option) any later version.
+#. *
+#. * This program is distributed in the hope that it will be
+#. * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+#. * Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public License along
+#. * with this program. If not, see http://www.gnu.org/licenses/.
+#. 
+#: ../src/Translations.vala:17
+msgid "Authentication is required to manage locale settings"
+msgstr ""
+
+#: ../src/Plug.vala:47
+msgid "Language & Region"
+msgstr "Keel ja piirkond"
+
+#: ../src/Plug.vala:48
+msgid "Manage languages, and configure region and format"
+msgstr ""
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Mõningate seadete rakendumiseks tuleb sul välja logida…"
+
+#: ../src/Plug.vala:138
+msgid "Language support is not installed completely"
+msgstr "Kasutajaliidese keeletugi pole korralikult paigaldatud"
+
+#: ../src/Plug.vala:140
+msgid "Complete Installation"
+msgstr "Lõpeta paigaldus"
+
+#: ../src/Plug.vala:157
+msgid "Some settings require administrator rights to be changed"
+msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
+
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Cancel"
+msgstr "Loobu"
+
+#: ../src/Widgets/InstallInfoBar.vala:58
+msgid "Installing language"
+msgstr "Keelepaketi paigaldamine"
+
+#: ../src/Widgets/InstallInfoBar.vala:61
+msgid "Removing language"
+msgstr "Keelepaketi eemaldamine"
+
+#: ../src/Widgets/InstallInfoBar.vala:64
+msgid "Installing missing language"
+msgstr "Puuduoleva keelepaketi paigaldamine"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
@@ -29,14 +85,6 @@ msgstr "Eemalda keelepakett"
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
 msgstr "Klaviatuuri seaded…"
-
-#: ../src/Widgets/LanguageListBox.vala:30
-msgid "Installed Languages"
-msgstr "Paigaldatud keelepaketid"
-
-#: ../src/Widgets/LanguageListBox.vala:116
-msgid "Currently active language"
-msgstr "Praegu aktiivne keelepakett"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
@@ -64,42 +112,10 @@ msgstr ""
 "Keele määramine sisselogimise ekraanile, külastaja kontole ning kõikidele "
 "uutele loodavatele kontodele."
 
-#: ../src/Widgets/InstallInfoBar.vala:42
-msgid "Cancel"
-msgstr "Loobu"
+#: ../src/Widgets/LanguageListBox.vala:30
+msgid "Installed Languages"
+msgstr "Paigaldatud keelepaketid"
 
-#: ../src/Widgets/InstallInfoBar.vala:58
-msgid "Installing language"
-msgstr "Keelepaketi paigaldamine"
-
-#: ../src/Widgets/InstallInfoBar.vala:61
-msgid "Removing language"
-msgstr "Keelepaketi eemaldamine"
-
-#: ../src/Widgets/InstallInfoBar.vala:64
-msgid "Installing missing language"
-msgstr "Puuduoleva keelepaketi paigaldamine"
-
-#: ../src/Plug.vala:47
-msgid "Language & Region"
-msgstr "Keel ja piirkond"
-
-#: ../src/Plug.vala:48
-msgid "Manage languages, and configure region and format"
-msgstr ""
-
-#: ../src/Plug.vala:131
-msgid "Some changes will not take effect until you log out"
-msgstr "Mõningate seadete rakendumiseks tuleb sul välja logida…"
-
-#: ../src/Plug.vala:138
-msgid "Language support is not installed completely"
-msgstr "Kasutajaliidese keeletugi pole korralikult paigaldatud"
-
-#: ../src/Plug.vala:140
-msgid "Complete Installation"
-msgstr "Lõpeta paigaldus"
-
-#: ../src/Plug.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
+#: ../src/Widgets/LanguageListBox.vala:116
+msgid "Currently active language"
+msgstr "Praegu aktiivne keelepakett"
