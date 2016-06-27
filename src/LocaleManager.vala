@@ -153,6 +153,7 @@ namespace SwitchboardPlugLocale {
 
             set_system_language_direct (get_user_language (), get_user_format ());
             set_system_input_direct ();
+        }
 
 
         void set_system_language_direct (string language, string? format) {
