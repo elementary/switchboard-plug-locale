@@ -14,18 +14,6 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-/*[DBus (name = "org.freedesktop.locale1")]
-  public interface LocaleProxy: GLib.Object
-  {
-    [DBus (signature = "(asb)")]
-    public abstract void set_locale (string[] locale, bool user_interaction) throws IOError;
-    public abstract void set_x11_keyboard (string layout, string model, string variant, string options, bool convert, bool user_interaction) throws IOError;
-    public abstract string[] locale  { owned get; }
-    public abstract string x11_layout  { owned get; }
-    public abstract string x11_model  { owned get; }
-  }
-*/
-
 [DBus (name = "org.freedesktop.Accounts.User")]
   public interface AccountProxy: GLib.Object
   {
@@ -72,26 +60,6 @@ namespace SwitchboardPlugLocale {
 
             locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
-
-            /*Bus.get_proxy.begin<AccountProxy> (BusType.SYSTEM,
-                "org.freedesktop.locale1",
-                "/org/freedesktop/locale1",
-                0,
-                null,
-                (obj, res) => {
-                    try {
-                        locale_proxy = Bus.get_proxy.end (res);
-
-                        if (account_proxy != null && locale_proxy != null) {
-                            is_connected = true;
-                            connected ();
-                        }
-
-                    } catch (Error e) {
-                        warning ("Could not connect to locale bus");
-                    }
-
-            });*/
 
             Bus.get_proxy.begin<AccountProxy> (BusType.SYSTEM,
                 "org.freedesktop.Accounts",
@@ -186,28 +154,6 @@ namespace SwitchboardPlugLocale {
             set_system_language_direct (get_user_language (), get_user_format ());
             set_system_input_direct ();
 
-        }
-
-        /* // leading to segfault, would be my preferred way instead of using raw dbus
-        void set_system_language (string language, string? format) {
-
-            var list = new Gee.ArrayList<string> ();
-
-            list.add ("LANG=%s".printf (language));
-            if (format != null && format != language) {
-                list.add ("LC_TIME=%s".printf (format));
-                list.add ("LC_NUMERIC=%s".printf (format));
-                list.add ("LC_MONETARY=%s".printf (format));
-                list.add ("LC_MEASUREMENT=%s".printf (format));
-            }
-
-            try {
-                locale_proxy.set_locale (list.to_array (), true);
-            } catch (Error e) {
-                warning (e.message);
-            }
-
-        }*/
 
         void set_system_language_direct (string language, string? format) {
 
@@ -413,22 +359,12 @@ namespace SwitchboardPlugLocale {
              * be reversed (TODO) when introducing a newer version of systemd to elementary OS.
              */
 
-            /*var list = new Gee.ArrayList<string> ();
-
-            list.add ("LANG=%s.UTF-8".printf (language));
-            if (format != null && format != language) {
-                list.add ("LC_TIME=%s".printf (format));
-                list.add ("LC_NUMERIC=%s".printf (format));
-                list.add ("LC_MONETARY=%s".printf (format));
-                list.add ("LC_MEASUREMENT=%s".printf (format));
-            }*/
 
             try {
                 if (language.length == 2)
                     localectl_set_locale ("LANG=%s.UTF-8".printf (Utils.get_default_for_lang (language)), format);
                 else
                     localectl_set_locale ("LANG=%s.UTF-8".printf (language), format);
-                //locale_proxy.set_locale (list.to_array (), true);
             } catch (Error e) {
                 warning (e.message);
             }
@@ -447,7 +383,6 @@ namespace SwitchboardPlugLocale {
             for (int i = 0; i < nr_keymaps; i++) {
                 var entry = variant.get_child_value (i);
 
-                //var type = entry.get_child_value (0).get_string ();
                 var code = entry.get_child_value (1).get_string ();
 
                 xkbinfo.get_layout_info (code, null, null, out l, out v);
@@ -465,7 +400,6 @@ namespace SwitchboardPlugLocale {
                 /* TODO: temporary solution for systemd-localed polkit problem */
 
                 localectl_set_x11_keymap (layouts, variants);
-                //locale_proxy.set_x11_keyboard (layouts, "", variants, "", true, true);
             } catch (Error e) {
                 warning (e.message);
             }
