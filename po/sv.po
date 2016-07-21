@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2016-07-16 21:42+0000\n"
+"PO-Revision-Date: 2016-07-20 14:22+0000\n"
 "Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-17 06:18+0000\n"
-"X-Generator: Launchpad (build 18140)\n"
+"X-Launchpad-Export-Date: 2016-07-21 06:03+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: sv\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -32,7 +32,7 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "autentisering krävs för att hantera språkinställningar"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
@@ -40,7 +40,7 @@ msgstr "Språk & region"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Hantera språk och ställ in region och format"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
@@ -64,56 +64,57 @@ msgstr "Avbryt"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "Installerar språk"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr ""
+msgstr "Tar bort språk"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
-msgstr ""
+msgstr "Installerar saknat språk"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr ""
+msgstr "Installera språk"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
-msgstr ""
+msgstr "Ta bort språk"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Gå till tangentbordsinställningar"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
-msgstr ""
+msgstr "Språk: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr ""
+msgstr "Region: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
-msgstr ""
+msgstr "Format: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
-msgstr ""
+msgstr "Ställ in språk"
 
 #: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
-msgstr ""
+msgstr "Ställ in systemspråk"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Ställ in språk för inloggningsskärmen, gästkontot och nya användarkonton"
 
 #: ../src/Widgets/LanguageListBox.vala:30
 msgid "Installed Languages"
-msgstr ""
+msgstr "Installerade språk"
 
 #: ../src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr ""
+msgstr "Nuvarande aktivt språk"
