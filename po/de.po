@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2016-07-25 21:20+0000\n"
+"PO-Revision-Date: 2016-08-01 20:55+0000\n"
 "Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-26 05:39+0000\n"
-"X-Generator: Launchpad (build 18153)\n"
+"X-Launchpad-Export-Date: 2016-08-02 06:02+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 "Language: de\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -67,11 +67,11 @@ msgstr "Abbrechen"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr "Installiere Sprache"
+msgstr "Sprache wird installiert"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr "Entferne Sprache"
+msgstr "Sprache wird entfernt"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
@@ -79,7 +79,7 @@ msgstr "Fehlende Sprache wird installiert"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr "Sprachen installieren"
+msgstr "Sprache installieren"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
@@ -103,11 +103,11 @@ msgstr "Formate: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
-msgstr "Sprache festlegen"
+msgstr "Als Benutzersprache festlegen"
 
 #: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
-msgstr "Systemsprache festlegen"
+msgstr "Als Systemsprache festlegen"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
