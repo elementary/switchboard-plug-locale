@@ -25,11 +25,11 @@
 
 namespace SwitchboardPlugLocale {
     public class LocaleManager : Object {
-        static const string GNOME_SYSTEM_LOCALE = "org.gnome.system.locale";
-        static const string KEY_REGION = "region";
-        static const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
-        static const string KEY_CURRENT_INPUT = "current";
-        static const string KEY_INPUT_SOURCES = "sources";
+        const string GNOME_SYSTEM_LOCALE = "org.gnome.system.locale";
+        const string KEY_REGION = "region";
+        const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
+        const string KEY_CURRENT_INPUT = "current";
+        const string KEY_INPUT_SOURCES = "sources";
         const string KEY_INPUT_SELETION = "input-selections";
 
         DBusProxy locale1_proxy;

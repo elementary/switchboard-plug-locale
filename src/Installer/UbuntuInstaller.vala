@@ -17,9 +17,9 @@
 namespace SwitchboardPlugLocale.Installer {
     public class UbuntuInstaller : Object {
 
-        static const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
-        static const string LOCALES_INSTALLER = "/usr/share/locales/install-language-pack";
-        static const string LOCALES_REMOVER = "/usr/share/locales/install-language-pack";
+        const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
+        const string LOCALES_INSTALLER = "/usr/share/locales/install-language-pack";
+        const string LOCALES_REMOVER = "/usr/share/locales/install-language-pack";
 
         AptdProxy aptd;
         AptdTransactionProxy proxy;

@@ -16,8 +16,8 @@
  * Authored by Pawel Stolowski <pawel.stolowski@canonical.com>
  */
 
-  static const string APTD_DBUS_NAME = "org.debian.apt";
-  static const string APTD_DBUS_PATH = "/org/debian/apt";
+  const string APTD_DBUS_NAME = "org.debian.apt";
+  const string APTD_DBUS_PATH = "/org/debian/apt";
 
   /**
    * Expose a subset of org.debian.apt interfaces -- only what's needed by applications lens.

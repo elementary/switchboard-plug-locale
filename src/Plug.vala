@@ -15,17 +15,17 @@
 */
 
 namespace LC {
-    public static const string LANG = "LANG";
-    public static const string NUMERIC = "LC_NUMERIC";
-    public static const string TIME = "LC_TIME";
-    public static const string MONETARY = "LC_MONETARY";
-    public static const string MESSAGES = "LC_MESSAGES";
-    public static const string PAPER = "LC_PAPER";
-    public static const string NAME = "LC_NAME";
-    public static const string ADDRESS = "LC_ADDRESS";
-    public static const string MEASUREMENT = "LC_MEASUREMENT";
-    public static const string TELEPHONE = "LC_TELEPHONE";
-    public static const string IDENTIFICATION = "LC_IDENTIFICATION";
+    public const string LANG = "LANG";
+    public const string NUMERIC = "LC_NUMERIC";
+    public const string TIME = "LC_TIME";
+    public const string MONETARY = "LC_MONETARY";
+    public const string MESSAGES = "LC_MESSAGES";
+    public const string PAPER = "LC_PAPER";
+    public const string NAME = "LC_NAME";
+    public const string ADDRESS = "LC_ADDRESS";
+    public const string MEASUREMENT = "LC_MEASUREMENT";
+    public const string TELEPHONE = "LC_TELEPHONE";
+    public const string IDENTIFICATION = "LC_IDENTIFICATION";
 }
 
 namespace SwitchboardPlugLocale {
