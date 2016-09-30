@@ -15,13 +15,18 @@
 */
 
 [DBus (name = "org.freedesktop.Accounts.User")]
-  public interface AccountProxy: GLib.Object
-  {
+public interface AccountProxy : GLib.Object {
     public abstract void set_formats_locale (string formats_locale) throws IOError;
     public abstract void set_language (string language) throws IOError;
     public abstract string formats_locale  { owned get; }
     public abstract string language  { owned get; }
-  }
+}
+
+[DBus (name = "org.freedesktop.locale1")]
+public interface Locale1Proxy : GLib.Object {
+    public abstract void set_locale (string[] arg_0, bool arg_1) throws IOError;
+    public abstract void set_x11_keyboard (string arg_0, string arg_1, string arg_2, string arg_3, bool arg_4, bool arg_5) throws IOError;
+}
 
 namespace SwitchboardPlugLocale {
     public class LocaleManager : Object {
@@ -32,8 +37,8 @@ namespace SwitchboardPlugLocale {
         const string KEY_INPUT_SOURCES = "sources";
         const string KEY_INPUT_SELETION = "input-selections";
 
-        DBusProxy locale1_proxy;
-        private AccountProxy account_proxy;
+        Locale1Proxy locale1_proxy;
+        AccountProxy account_proxy;
 
         Act.UserManager user_manager;
         Act.User user;
@@ -61,52 +66,17 @@ namespace SwitchboardPlugLocale {
             locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
-            Bus.get_proxy.begin<AccountProxy> (BusType.SYSTEM,
-                "org.freedesktop.Accounts",
-                "/org/freedesktop/Accounts/User%u".printf (uid),
-                0,
-                null,
-                (obj, res) => {
-                    try {
-                        account_proxy = Bus.get_proxy.end (res);
-
-                        if (account_proxy != null && locale1_proxy != null) {
-                            is_connected = true;
-                            connected ();
-                        }
-
-                        fetch_settings (account_proxy.language, account_proxy.formats_locale);
-                    } catch (Error e) {
-                        warning ("Could not connect to user account");
-                    }
-
-            });
-
-            DBusProxy.create_for_bus.begin (BusType.SYSTEM,
-                 DBusProxyFlags.NONE,
-                 null,
-                 "org.freedesktop.locale1",
-                 "/org/freedesktop/locale1",
-                 "org.freedesktop.locale1",
-                 null,
-                 (obj, res) => {
-                    try {
-                        locale1_proxy = DBusProxy.create_for_bus.end (res);
-
-                        if (account_proxy != null && locale1_proxy != null) {
-                            is_connected = true;
-                            connected ();
-                        }
-
-                    } catch (Error e) {
-                        warning ("Could not connect to locale1 dbus");
-                    }
-                }
-              );
+            var connection = GLib.Application.get_default ().get_dbus_connection ();
+            locale1_proxy = connection.get_proxy_sync<Locale1Proxy> ("org.freedesktop.locale1", "/org/freedesktop/locale1", DBusProxyFlags.NONE);
+            account_proxy = connection.get_proxy_sync<AccountProxy> ("org.freedesktop.Accounts", "/org/freedesktop/Accounts/User%u".printf (uid), DBusProxyFlags.NONE);
 
             settings = new Settings ("org.pantheon.switchboard.plug.locale");
             settings.changed.connect (on_settings_changed);
 
+            if (account_proxy != null && locale1_proxy != null) {
+                is_connected = true;
+                connected ();
+            }
         }
 
         void fetch_settings (string language, string format) {
@@ -158,19 +128,17 @@ namespace SwitchboardPlugLocale {
 
         void set_system_language_direct (string language, string? format) {
 
-            VariantBuilder builder = new VariantBuilder (new VariantType ("as") );
-            builder.add ("s", "LANG=%s".printf (language));
+            string[] param = {};
+
+            param += "LANG=%s".printf (language);
             if (format != null) {
-                builder.add ("s", "LC_TIME=%s".printf (format));
-                builder.add ("s", "LC_NUMERIC=%s".printf (format));
-                builder.add ("s", "LC_MONETARY=%s".printf (format));
-                builder.add ("s", "LC_MEASUREMENT=%s".printf (format));
+                param += "LC_TIME=%s".printf (format);
+                param += "LC_NUMERIC=%s".printf (format);
+                param += "LC_MONETARY=%s".printf (format);
+                param += "LC_MEASUREMENT=%s".printf (format);
             }
-
-            var variant = new Variant ("(asb)", builder, true);
-            locale1_proxy.call.begin ("SetLocale", variant, DBusCallFlags.NONE, -1, null);
-
-
+            
+            locale1_proxy.set_locale (param, true);
         }
 
         void set_system_input_direct () {
@@ -201,8 +169,7 @@ namespace SwitchboardPlugLocale {
                 }
             }
 
-            var insert = new Variant ("(ssssbb)", layouts, "", variants, "", true, true);
-            locale1_proxy.call.begin ("SetX11Keyboard", insert, DBusCallFlags.NONE, -1, null);
+            locale1_proxy.set_x11_keyboard (layouts, "", variants, "", true, true);
             // TODO
         }
 
@@ -408,7 +375,7 @@ namespace SwitchboardPlugLocale {
 
         static LocaleManager? instance = null;
 
-        public static LocaleManager get_default () {
+        public static unowned LocaleManager get_default () {
             if (instance == null) {
                 instance = new LocaleManager ();
             }
