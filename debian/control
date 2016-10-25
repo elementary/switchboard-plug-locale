@@ -9,7 +9,7 @@ Build-Depends: cmake,
                libgnome-desktop-3-dev,
                libaccountsservice-dev,
                libibus-1.0-dev,
-               valac (>= 0.23)
+               valac (>= 0.34.1)
 Standards-Version: 3.9.5
 Homepage: https://launchpad.net/switchboard-plug-locale
 
