@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2015-02-25 05:11+0000\n"
-"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"PO-Revision-Date: 2016-11-16 18:36+0000\n"
+"Last-Translator: Davidmp <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-14 06:18+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-18 06:23+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "Language: ca\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -32,7 +32,7 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Cal autenticació per gestionar els paràmetres de llengua"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
@@ -40,7 +40,7 @@ msgstr "Idioma i regió"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Gestioneu les llengües i configureu-ne la regió i el format"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
@@ -48,15 +48,16 @@ msgstr "Alguns canvis no seran efectius fins que tanqueu la sessió"
 
 #: ../src/Plug.vala:138
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "El suport de llengua no s'ha instal·lat completament."
 
 #: ../src/Plug.vala:140
 msgid "Complete Installation"
-msgstr ""
+msgstr "Completa'n la instal·lació"
 
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
@@ -64,56 +65,58 @@ msgstr "Cancel·la"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "S'instal·la la llengua"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr ""
+msgstr "S'elimina la llengua"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
-msgstr ""
+msgstr "S'instal·la la llengua que falta"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr ""
+msgstr "Instal·la la llengua"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
-msgstr ""
+msgstr "Elimina la llengua"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "Canvia cap als paràmetres del teclat"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
-msgstr ""
+msgstr "Llengua: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr ""
+msgstr "Regió: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
-msgstr ""
+msgstr "Formats: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
-msgstr ""
+msgstr "Estableix la llengua"
 
 #: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
-msgstr ""
+msgstr "Establiu la llengua del sistema:"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"Estableix la llengua per a la pantalla d'entrada, la sessió de convidat i "
+"els nous comptes d'usuari."
 
 #: ../src/Widgets/LanguageListBox.vala:30
 msgid "Installed Languages"
-msgstr ""
+msgstr "Llengües instal·lades"
 
 #: ../src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr ""
+msgstr "Llengua activa actual"
