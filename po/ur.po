@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2015-04-20 21:29+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-11-18 14:29+0000\n"
+"Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-14 06:18+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-19 06:15+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
 #. * published by the Free Software Foundation, either version 3 of the
@@ -26,11 +26,11 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "لوکیل کی ترتیبات بدلنے کے لیے تصدیق درکار ہے"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr ""
+msgstr "زبان اور علاقہ"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
@@ -54,15 +54,15 @@ msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
-msgstr ""
+msgstr "منسوخ"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "زبان انسٹال کر رہا ہے"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr ""
+msgstr "زبان ہٹائی جا رہی ہے"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
