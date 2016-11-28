@@ -66,7 +66,7 @@ namespace SwitchboardPlugLocale {
             locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
-            var connection = GLib.Application.get_default ().get_dbus_connection ();
+            var connection = Bus.get_sync (BusType.SYSTEM);
             locale1_proxy = connection.get_proxy_sync<Locale1Proxy> ("org.freedesktop.locale1", "/org/freedesktop/locale1", DBusProxyFlags.NONE);
             account_proxy = connection.get_proxy_sync<AccountProxy> ("org.freedesktop.Accounts", "/org/freedesktop/Accounts/User%u".printf (uid), DBusProxyFlags.NONE);
 
