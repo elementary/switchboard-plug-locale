@@ -42,11 +42,14 @@ namespace SwitchboardPlugLocale {
         public Widgets.InstallInfoBar install_infobar;
 
         public Plug () {
+            var settings = new Gee.TreeMap<string, string?> (null, null);
+            settings.set ("language", "null");
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
                     display_name: _("Language & Region"),
                     description: _("Manage languages, and configure region and format"),
-                    icon: "preferences-desktop-locale");
+                    icon: "preferences-desktop-locale",
+                    supported_settings: settings);
         }
 
         public override Gtk.Widget get_widget () {
