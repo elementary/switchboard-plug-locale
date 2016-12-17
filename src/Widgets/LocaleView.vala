@@ -78,10 +78,7 @@ namespace SwitchboardPlugLocale.Widgets {
             keyboard_button.set_icon_name ("input-keyboard-symbolic");
             keyboard_button.set_tooltip_text (_("Switch to keyboard settings"));
             keyboard_button.clicked.connect (() => {
-                var command = new Granite.Services.SimpleCommand (
-                            Environment.get_home_dir (),
-                            "/usr/bin/switchboard -o hardware-pantheon-keyboard");
-                command.run ();
+                Gtk.show_uri (null, "settings://input/keyboard/layout", Gdk.CURRENT_TIME);
             });
 
             var tbar = new Gtk.Toolbar ();
