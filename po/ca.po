@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2016-11-16 18:36+0000\n"
+"PO-Revision-Date: 2016-12-20 16:41+0000\n"
 "Last-Translator: Davidmp <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-21 05:36+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
 "Language: ca\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -36,7 +36,7 @@ msgstr "Cal autenticació per gestionar els paràmetres de llengua"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr "Idioma i regió"
+msgstr "Llengua i regió"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
