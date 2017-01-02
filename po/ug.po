@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2015-04-20 21:29+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-01-02 02:59+0000\n"
+"Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2017-01-02 05:24+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
 #. * published by the Free Software Foundation, either version 3 of the
@@ -26,88 +26,89 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "تېل تەڭشەكلىرىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr ""
+msgstr "تىل ۋە رايون"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "تىللارنى باشقۇرۇش، رايون ۋە فورماتلارنى تەڭشەش"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "ھىساۋاتتىن چىكىنمىگۈچە بەزى ئۆزگەرتىشلەر كۈچكە ئىگە بولمايدۇ"
 
 #: ../src/Plug.vala:138
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "تىل قوللىشى تولۇق ئورنىتىلمىغان"
 
 #: ../src/Plug.vala:140
 msgid "Complete Installation"
-msgstr ""
+msgstr "تولۇق ئورنىتىش"
 
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈر"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
-msgstr ""
+msgstr "ئەمەلدىن قالدۇرۇش"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "تىلنى ئورنىتىۋاتىدۇ"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr ""
+msgstr "تىلنى ئۆچۈرىۋاتىدۇ"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
-msgstr ""
+msgstr "يۈتكەن تىللارنى ئورنىتىۋاتىدۇ"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr ""
+msgstr "تىل ئورنىتىش"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
-msgstr ""
+msgstr "تىل ئۆچۈرۈش"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
-msgstr ""
+msgstr "تىل: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr ""
+msgstr "رايون: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
-msgstr ""
+msgstr "فورماتلار: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
-msgstr ""
+msgstr "تىل بەلگىلەش"
 
 #: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
-msgstr ""
+msgstr "سىستېما تىلىنى بەلگىلەش"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
+"كىرىش ئىكرانى، مىھمان ھىساۋاتى ۋە يىڭى ئابونت ھىساۋاتلىرى ئۈچۈن تىل بەلگىلەش"
 
 #: ../src/Widgets/LanguageListBox.vala:30
 msgid "Installed Languages"
-msgstr ""
+msgstr "قوشۇلغان تىللار"
 
 #: ../src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr ""
+msgstr "نۆۋەتتىكى ئاكتىپ تىل"
