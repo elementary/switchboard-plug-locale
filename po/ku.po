@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-02-08 20:37+0000\n"
+"PO-Revision-Date: 2017-02-14 21:27+0000\n"
 "Last-Translator: Rokar <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
+"X-Launchpad-Export-Date: 2017-02-15 06:45+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr ""
+msgstr "Ziman & Herêm"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../src/Plug.vala:140
 msgid "Complete Installation"
-msgstr ""
+msgstr "bicihkirin ava bu"
 
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
@@ -58,23 +58,23 @@ msgstr "Betal bike"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "Ziman damezrandin"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr ""
+msgstr "Ziman rakirin"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
-msgstr ""
+msgstr "Zimane kêm damezrandin"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr ""
+msgstr "Ziman ava bikin"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
-msgstr ""
+msgstr "Ziman rakirin"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
@@ -86,11 +86,11 @@ msgstr "Ziman: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr ""
+msgstr "Herêm: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
-msgstr ""
+msgstr "Mîzanpaj: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
