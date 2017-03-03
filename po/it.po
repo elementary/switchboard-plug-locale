@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-01-26 13:10+0000\n"
+"PO-Revision-Date: 2017-03-02 18:53+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-27 06:16+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-03-03 06:05+0000\n"
+"X-Generator: Launchpad (build 18329)\n"
 "Language: it\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr "Lingua e Regione"
+msgstr "Lingua e regione"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
@@ -54,7 +54,7 @@ msgstr "Il supporto linguistico non è installato completamente"
 
 #: ../src/Plug.vala:140
 msgid "Complete Installation"
-msgstr "Completa installazione"
+msgstr "Completa l'installazione"
 
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
