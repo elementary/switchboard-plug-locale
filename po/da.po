@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2015-12-07 17:45+0000\n"
-"Last-Translator: Jimmy Merrild Krag <jimmy@kragenet.dk>\n"
+"PO-Revision-Date: 2017-03-14 17:42+0000\n"
+"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2017-03-15 06:49+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "Language: da\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -32,7 +32,7 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Godkendelse er påkrævet for at håndtere lokalitetsindstillinger"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
@@ -40,7 +40,7 @@ msgstr "Sprog & region"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Håndter sprog og konfigurer region og format"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
