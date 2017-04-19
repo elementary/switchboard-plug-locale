@@ -8,11 +8,10 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-04-15 09:00+0000\n"
+"PO-Revision-Date: 2017-04-19 09:45+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: he (generated) "
-"<https://l10n.elementary.io/projects/switchboard/switchboard-plug-locale/he/>"
-"\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,31 +34,31 @@ msgstr ""
 #.
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "נדרש אימות כדי לנהל הגדרות מקומיות"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr ""
+msgstr "שפה ומיקום"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "ניהול שפות והגדרת מיקום ותבנית"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "חלק מהשינויים לא יכנסו לתוקף עד ליציאתך מהחשבון"
 
 #: ../src/Plug.vala:138
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "התמיכה בשפה מותקנת באופן חלקי"
 
 #: ../src/Plug.vala:140
 msgid "Complete Installation"
-msgstr ""
+msgstr "השלמת ההתקנה"
 
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "לצורך שינוי של חלק מההגדרות יש צורך בהרשאות ניהול"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
@@ -67,56 +66,56 @@ msgstr "ביטול"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
-msgstr ""
+msgstr "השפה מותקנת"
 
 #: ../src/Widgets/InstallInfoBar.vala:61
 msgid "Removing language"
-msgstr ""
+msgstr "השפה בהסרה"
 
 #: ../src/Widgets/InstallInfoBar.vala:64
 msgid "Installing missing language"
-msgstr ""
+msgstr "השפה החסרה מותקנת"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr ""
+msgstr "התקנת שפה"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
-msgstr ""
+msgstr "הסרת שפה"
 
 #: ../src/Widgets/LocaleView.vala:79
 msgid "Switch to keyboard settings"
-msgstr ""
+msgstr "מעבר להגדרות מקלדת"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
-msgstr ""
+msgstr "שפה: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr ""
+msgstr "מיקום: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
-msgstr ""
+msgstr "תבניות: "
 
 #: ../src/Widgets/LocaleSetting.vala:87
 msgid "Set Language"
-msgstr ""
+msgstr "הגדרת שפה"
 
 #: ../src/Widgets/LocaleSetting.vala:116
 msgid "Set System Language"
-msgstr ""
+msgstr "הגדרת שפת המערכת"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
+msgstr "הגדרת שפה למסך הכניסה, לחשבון האורח ולחשבונות של משתמשים חדשים"
 
 #: ../src/Widgets/LanguageListBox.vala:30
 msgid "Installed Languages"
-msgstr ""
+msgstr "שפות מותקנות"
 
 #: ../src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr ""
+msgstr "שפות פעילות נכון לעכשיו"
