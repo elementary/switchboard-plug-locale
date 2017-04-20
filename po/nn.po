@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2015-02-11 04:49+0000\n"
-"Last-Translator: No Name <launchpad-baecc8@simondieterle.net>\n"
-"Language-Team: Norwegian Nynorsk <nn@li.org>\n"
+"PO-Revision-Date: 2017-04-20 20:51+0000\n"
+"Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
+"Language-Team: nn (generated) "
+"<https://l10n.elementary.io/projects/switchboard/switchboard-plug-locale/nn/>"
+"\n"
+"Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
-"Language: nn\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
 #. * published by the Free Software Foundation, either version 3 of the
@@ -29,18 +32,18 @@ msgstr ""
 #. *
 #. * You should have received a copy of the GNU General Public License along
 #. * with this program. If not, see http://www.gnu.org/licenses/.
-#. 
+#.
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Autentisering er naudsynt for å endra lokalinstillingar"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
-msgstr ""
+msgstr "Språk og region"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Handsam språk, og konfigurer region og format"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
@@ -48,11 +51,11 @@ msgstr "Nokre endringar trer i kraft etter at du loggar ut"
 
 #: ../src/Plug.vala:138
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Språkstøtta er ikkje installert fullstendig"
 
 #: ../src/Plug.vala:140
 msgid "Complete Installation"
-msgstr ""
+msgstr "Fullfør installasjonen"
 
 #: ../src/Plug.vala:157
 msgid "Some settings require administrator rights to be changed"
@@ -60,7 +63,7 @@ msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
