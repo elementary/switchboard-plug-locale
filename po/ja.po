@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-02-11 04:01+0000\n"
-"Last-Translator: Ryo Nakano <Unknown>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2017-04-30 10:14+0000\n"
+"Last-Translator: Ryo Nakano <nscnskichiro0911@gmail.com>\n"
+"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:23+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
-"Language: ja\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
 #. * published by the Free Software Foundation, either version 3 of the
@@ -29,7 +31,7 @@ msgstr ""
 #. *
 #. * You should have received a copy of the GNU General Public License along
 #. * with this program. If not, see http://www.gnu.org/licenses/.
-#. 
+#.
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
 msgstr "ロケール（言語）設定を管理するため、認証が必要です"
@@ -76,7 +78,7 @@ msgstr "不足している言語のインストール"
 
 #: ../src/Widgets/LocaleView.vala:60
 msgid "Install language"
-msgstr "言語をインスト−ル"
+msgstr "言語をインストール"
 
 #: ../src/Widgets/LocaleView.vala:70
 msgid "Remove language"
@@ -108,7 +110,8 @@ msgstr "システム言語に設定"
 
 #: ../src/Widgets/LocaleSetting.vala:118
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr "ログイン画面・ゲストアカウント・新しいユーザーアカウントの言語を設定します"
+msgstr ""
+"ログイン画面・ゲストアカウント・新しいユーザーアカウントの言語を設定します"
 
 #: ../src/Widgets/LanguageListBox.vala:30
 msgid "Installed Languages"
