@@ -87,7 +87,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 var temperature_settings = new Settings ("org.gnome.GWeather");
 
                 var temperature = new Granite.Widgets.ModeButton ();
-                temperature.append_text (_("Centigrade"));
+                temperature.append_text (_("Celcius"));
                 temperature.append_text (_("Fahrenheit"));
 
                 attach (create_end_label (_("Temperature:")), 0, 4, 1, 1);
