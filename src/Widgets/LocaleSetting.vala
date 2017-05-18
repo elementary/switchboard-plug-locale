@@ -101,14 +101,6 @@ namespace SwitchboardPlugLocale.Widgets {
                     temperature.selected = 1;
                 }
 
-                temperature_settings.changed["temperature-unit"].connect (() => {
-                    if (temp_setting == "centigrade") {
-                        temperature.selected = 0;
-                    } else if (temp_setting == "fahrenheit") {
-                        temperature.selected = 1;
-                    }
-                });
-
                 temperature.mode_changed.connect (() => {
                     if (temperature.selected == 0) {
                         temperature_settings.set_string ("temperature-unit", "centigrade");
