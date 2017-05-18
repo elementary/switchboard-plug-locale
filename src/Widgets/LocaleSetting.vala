@@ -37,6 +37,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
         private Gee.HashMap<string, string> default_regions;
 
+        private static GLib.Settings? temperature_settings = null;
+
         public signal void settings_changed ();
 
         public LocaleSetting () {
@@ -83,9 +85,7 @@ namespace SwitchboardPlugLocale.Widgets {
             attach (format_combobox, 1, 3, 1, 1);
             attach (preview, 0, 5, 2, 1);
 
-            if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", false) != null) {
-                var temperature_settings = new Settings ("org.gnome.GWeather");
-
+            if (temperature_settings != null) {
                 var temperature = new Granite.Widgets.ModeButton ();
                 temperature.append_text (_("Celcius"));
                 temperature.append_text (_("Fahrenheit"));
@@ -175,6 +175,12 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             this.show_all ();
+        }
+
+        static construct {
+            if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", false) != null) {
+                temperature_settings = new Settings ("org.gnome.GWeather");
+            }
         }
 
         public string get_region () {
