@@ -1,3 +1,9 @@
+switchboard-plug-locale (0.2.3) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Mon, 22 May 2017 15:19:09 -0500
+
 switchboard-plug-locale (0.2.2) xenial; urgency=medium
 
   * New upstream release.

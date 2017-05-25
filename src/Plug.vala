@@ -74,6 +74,7 @@ namespace SwitchboardPlugLocale {
 
         void setup_info () {
             lm = LocaleManager.get_default ();
+            reload ();
 
             lm.connected.connect (() => {
                 reload ();
