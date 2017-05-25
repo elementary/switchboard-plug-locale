@@ -87,7 +87,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
             if (temperature_settings != null) {
                 var temperature = new Granite.Widgets.ModeButton ();
-                temperature.append_text (_("Celcius"));
+                temperature.append_text (_("Celsius"));
                 temperature.append_text (_("Fahrenheit"));
 
                 attach (create_end_label (_("Temperature:")), 0, 4, 1, 1);
