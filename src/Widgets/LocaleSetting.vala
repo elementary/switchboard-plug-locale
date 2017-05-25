@@ -37,6 +37,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
         private Gee.HashMap<string, string> default_regions;
 
+        private static GLib.Settings? temperature_settings = null;
+
         public signal void settings_changed ();
 
         public LocaleSetting () {
@@ -81,7 +83,33 @@ namespace SwitchboardPlugLocale.Widgets {
             attach (region_combobox, 1, 2, 1, 1);
             attach (create_end_label (_("Formats: ")), 0, 3, 1, 1);
             attach (format_combobox, 1, 3, 1, 1);
-            attach (preview, 0, 4, 2, 1);
+            attach (preview, 0, 5, 2, 1);
+
+            if (temperature_settings != null) {
+                var temperature = new Granite.Widgets.ModeButton ();
+                temperature.append_text (_("Celcius"));
+                temperature.append_text (_("Fahrenheit"));
+
+                attach (create_end_label (_("Temperature:")), 0, 4, 1, 1);
+                attach (temperature, 1, 4, 1, 1);
+
+                var temp_setting = temperature_settings.get_string ("temperature-unit");
+
+                if (temp_setting == "centigrade") {
+                    temperature.selected = 0;
+                } else if (temp_setting == "fahrenheit") {
+                    temperature.selected = 1;
+                }
+
+                temperature.mode_changed.connect (() => {
+                    if (temperature.selected == 0) {
+                        temperature_settings.set_string ("temperature-unit", "centigrade");
+                    } else {
+                        temperature_settings.set_string ("temperature-unit", "fahrenheit");
+                    }
+                });
+
+            }
 
             set_button = new Gtk.Button ();
             set_button.label = _("Set Language");
@@ -129,7 +157,7 @@ namespace SwitchboardPlugLocale.Widgets {
             Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             button_box.pack_start (set_system_button);
             button_box.pack_start (set_button);
-            attach (button_box, 0, 5, 2, 1);
+            attach (button_box, 0, 6, 2, 1);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
                 if (Utils.get_permission ().allowed)
@@ -139,6 +167,12 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             this.show_all ();
+        }
+
+        static construct {
+            if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", false) != null) {
+                temperature_settings = new Settings ("org.gnome.GWeather");
+            }
         }
 
         public string get_region () {
