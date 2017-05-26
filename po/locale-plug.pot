@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-05 09:50-0700\n"
+"POT-Creation-Date: 2017-05-25 18:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. /or modify it under the terms of the GNU Lesser General Public License as
-#. * published by the Free Software Foundation, either version 3 of the
-#. * License, or (at your option) any later version.
-#. *
-#. * This program is distributed in the hope that it will be
-#. * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-#. * Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License along
-#. * with this program. If not, see http://www.gnu.org/licenses/.
-#.
-#: ../src/Translations.vala:17
+#: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
 msgstr ""
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:49
 msgid "Language & Region"
 msgstr ""
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: ../src/Plug.vala:131
+#: ../src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
-#: ../src/Plug.vala:138
+#: ../src/Plug.vala:142
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: ../src/Plug.vala:140
+#: ../src/Plug.vala:144
 msgid "Complete Installation"
 msgstr ""
 
-#: ../src/Plug.vala:157
+#: ../src/Plug.vala:161
 msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:60
+msgid "Install language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:70
+msgid "Remove language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:79
+msgid "Switch to keyboard settings"
 msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:42
@@ -73,39 +73,39 @@ msgstr ""
 msgid "Installing missing language"
 msgstr ""
 
-#: ../src/Widgets/LocaleView.vala:60
-msgid "Install language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:70
-msgid "Remove language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:79
-msgid "Switch to keyboard settings"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:78
+#: ../src/Widgets/LocaleSetting.vala:80
 msgid "Language: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: ../src/Widgets/LocaleSetting.vala:82
 msgid "Region: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:82
+#: ../src/Widgets/LocaleSetting.vala:84
 msgid "Formats: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:87
+#: ../src/Widgets/LocaleSetting.vala:90
+msgid "Celsius"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:91
+msgid "Fahrenheit"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:93
+msgid "Temperature:"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:115
 msgid "Set Language"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:116
+#: ../src/Widgets/LocaleSetting.vala:144
 msgid "Set System Language"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:118
+#: ../src/Widgets/LocaleSetting.vala:146
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
