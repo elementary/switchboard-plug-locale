@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-05-12 15:55+0000\n"
+"PO-Revision-Date: 2017-06-01 21:08+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -34,7 +34,7 @@ msgstr ""
 #.
 #: ../src/Translations.vala:17
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Authenticatie is vereist om de locatie-instellingen te beheren"
 
 #: ../src/Plug.vala:47
 msgid "Language & Region"
@@ -42,7 +42,7 @@ msgstr "Taal & Regio"
 
 #: ../src/Plug.vala:48
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Beheer talen en configureer regio's en formaten"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
