@@ -43,7 +43,7 @@ namespace SwitchboardPlugLocale {
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
-            settings.set ("language", "null");
+            settings.set ("language", null);
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
                     display_name: _("Language & Region"),
