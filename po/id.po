@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-07-31 15:31+0700\n"
+"PO-Revision-Date: 2017-07-31 08:33+0000\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/id/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #. /or modify it under the terms of the GNU Lesser General Public License as
@@ -89,11 +89,11 @@ msgstr "Beralih ke pengaturan papan tik"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Language: "
-msgstr "Bahasa:"
+msgstr "Bahasa: "
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Region: "
-msgstr "Wilayah:"
+msgstr "Wilayah: "
 
 #: ../src/Widgets/LocaleSetting.vala:82
 msgid "Formats: "
@@ -117,4 +117,4 @@ msgstr "Bahasa Terpasang"
 
 #: ../src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr "Bahasa yang aktif saat ini "
+msgstr "Bahasa yang aktif saat ini"
