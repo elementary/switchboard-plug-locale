@@ -100,9 +100,9 @@ namespace SwitchboardPlugLocale {
                 }
             });
             installer.progress_changed.connect ((progress) => {
-                install_infobar.set_progress (progress);
-                install_infobar.set_cancellable (installer.install_cancellable);
-                install_infobar.set_transaction_mode (installer.transaction_mode);
+                install_infobar.progress = progress;
+                install_infobar.cancellable = installer.install_cancellable;
+                install_infobar.transaction_mode = installer.transaction_mode;
             });
         }
 

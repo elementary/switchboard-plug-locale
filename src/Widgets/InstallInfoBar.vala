@@ -1,4 +1,4 @@
-/* Copyright 2011-2015 Switchboard Locale Plug Developers
+/* Copyright 2011-2017 elementary LLC. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
@@ -16,28 +16,52 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class InstallInfoBar : Gtk.InfoBar {
-        protected Gtk.Box box;
-        protected Gtk.Label label;
-        protected Gtk.ProgressBar progress;
-        protected Gtk.Button cancel_button;
-
-        private bool _install_cancellable;
-        public void set_cancellable (bool cancellable) {
-            _install_cancellable = cancellable;
-            cancel_button.set_sensitive (_install_cancellable);
-        }
-
         public signal void cancel_clicked ();
 
-        public InstallInfoBar () {
-            this.message_type = Gtk.MessageType.INFO;
+        public bool cancellable {
+            set {
+                cancel_button.sensitive = value;
+            }
+        }
 
-            box = get_content_area () as Gtk.Box;
+        public int progress {
+            set {
+                if (value >= 100) {
+                    hide ();
+                } else {
+                    show ();
+                }
+                progressbar.set_fraction (value/100.0);
+            }
+        }
+
+        public Installer.UbuntuInstaller.TransactionMode transaction_mode {
+            set {
+                switch (value) {
+                    case Installer.UbuntuInstaller.TransactionMode.INSTALL:
+                        label.label = _("Installing language");
+                        break;
+                    case Installer.UbuntuInstaller.TransactionMode.REMOVE:
+                        label.label = _("Removing language");
+                        break;
+                    case Installer.UbuntuInstaller.TransactionMode.INSTALL_MISSING:
+                        label.label = _("Installing missing language");
+                        break;
+                }
+            }
+        }
+
+        private Gtk.ProgressBar progressbar;
+        private Gtk.Label label;
+        private Gtk.Button cancel_button;
+
+        construct {
+            message_type = Gtk.MessageType.INFO;
 
             label = new Gtk.Label (null);
 
-            progress = new Gtk.ProgressBar ();
-            progress.valign = Gtk.Align.CENTER;
+            progressbar = new Gtk.ProgressBar ();
+            progressbar.valign = Gtk.Align.CENTER;
 
             cancel_button = new Gtk.Button.with_label (_("Cancel"));
             cancel_button.clicked.connect (() => {
@@ -45,33 +69,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 cancel_clicked ();
             });
 
+            var box = (Gtk.Box) get_content_area ();
             box.pack_start (label, false);
             box.pack_end (cancel_button, false);
-            box.pack_end (progress, false);
-
+            box.pack_end (progressbar, false);
             box.show_all ();
-        }
-
-        public void set_transaction_mode (Installer.UbuntuInstaller.TransactionMode transaction_mode) {
-            switch (transaction_mode) {
-                case Installer.UbuntuInstaller.TransactionMode.INSTALL:
-                    label.set_label (_("Installing language"));
-                    break;
-                case Installer.UbuntuInstaller.TransactionMode.REMOVE:
-                    label.set_label (_("Removing language"));
-                    break;
-                case Installer.UbuntuInstaller.TransactionMode.INSTALL_MISSING:
-                    label.set_label (_("Installing missing language"));
-                    break;
-            }
-        }
-
-        public void set_progress (int progress) {
-            if (progress >= 100)
-                hide ();
-            else
-                show ();
-            this.progress.set_fraction(progress/100.0);
         }
     }
 }
