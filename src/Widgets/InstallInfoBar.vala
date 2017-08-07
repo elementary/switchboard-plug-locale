@@ -31,7 +31,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 } else {
                     show ();
                 }
-                progressbar.set_fraction (value/100.0);
+                progressbar.fraction = value / 100.0;
             }
         }
 
