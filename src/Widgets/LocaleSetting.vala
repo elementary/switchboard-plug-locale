@@ -1,4 +1,4 @@
-/* Copyright 2011-2015 Switchboard Locale Plug Developers
+/* Copyright 2011-2017 elementary LLC. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
@@ -16,24 +16,21 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Gtk.Grid {
-        private Gtk.Label       language_label;
-        private Gtk.Label       region_label;
+        private Gtk.Button set_button;
+        private Gtk.Button set_system_button;
+        private Gtk.ComboBox format_combobox;
+        private Gtk.ComboBox region_combobox;
+        private Gtk.Label language_label;
+        private Gtk.Label region_label;
+        private Gtk.ListStore format_store;
+        private Gtk.ListStore region_store;
 
-        private Gtk.ComboBox    format_combobox;
-        private Gtk.ListStore   format_store;
-
-        private Gtk.ComboBox    region_combobox;
-        private Gtk.ListStore   region_store;
-
-        private Gtk.Button      set_button;
-        private Gtk.Button      set_system_button;
-
-        private LocaleManager   lm;
-        private Preview         preview;
-        private string          language;
-        private string          selected_language = "";
-        private string          selected_format = "";
-        private bool            has_region;
+        private LocaleManager lm;
+        private Preview preview;
+        private string language;
+        private string selected_language = "";
+        private string selected_format = "";
+        private bool has_region;
 
         private Gee.HashMap<string, string> default_regions;
 
@@ -42,12 +39,15 @@ namespace SwitchboardPlugLocale.Widgets {
         public signal void settings_changed ();
 
         public LocaleSetting () {
-            this.row_homogeneous = false;
-            this.margin = 20;
-            this.row_spacing = 10;
-            this.column_spacing = 10;
-            this.halign = Gtk.Align.CENTER;
+            Object (
+                column_spacing: 12,
+                halign: Gtk.Align.CENTER,
+                margin: 24,
+                row_spacing: 12
+            );
+        }
 
+        construct {
             lm = LocaleManager.get_default ();
             default_regions = Utils.get_default_regions ();
 
@@ -61,7 +61,7 @@ namespace SwitchboardPlugLocale.Widgets {
             region_store = new Gtk.ListStore (2, typeof (string), typeof (string));
 
             region_combobox = new Gtk.ComboBox.with_model (region_store);
-            region_combobox.set_size_request (0, 27);
+            region_combobox.height_request = 27;
             region_combobox.pack_start (renderer, true);
             region_combobox.add_attribute (renderer, "text", 0);
             region_combobox.changed.connect (compare);
@@ -77,11 +77,11 @@ namespace SwitchboardPlugLocale.Widgets {
 
             preview = new Preview ();
 
-            attach (create_end_label (_("Language: ")), 0, 0, 1, 1);
+            attach (new EndLabel (_("Language: ")), 0, 0, 1, 1);
             attach (language_label,1, 0, 1, 1);
-            attach (create_end_label (_("Region: ")), 0, 2, 1, 1);
+            attach (new EndLabel (_("Region: ")), 0, 2, 1, 1);
             attach (region_combobox, 1, 2, 1, 1);
-            attach (create_end_label (_("Formats: ")), 0, 3, 1, 1);
+            attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
             attach (format_combobox, 1, 3, 1, 1);
             attach (preview, 0, 5, 2, 1);
 
@@ -90,7 +90,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 temperature.append_text (_("Celsius"));
                 temperature.append_text (_("Fahrenheit"));
 
-                attach (create_end_label (_("Temperature:")), 0, 4, 1, 1);
+                attach (new EndLabel (_("Temperature:")), 0, 4, 1, 1);
                 attach (temperature, 1, 4, 1, 1);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
@@ -113,8 +113,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
             set_button = new Gtk.Button ();
             set_button.label = _("Set Language");
-            set_button.halign = Gtk.Align.START;
-            set_button.set_size_request (150, 27);
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             set_button.set_sensitive (false);
 
@@ -144,8 +142,6 @@ namespace SwitchboardPlugLocale.Widgets {
             set_system_button.label = _("Set System Language");
             set_system_button.set_tooltip_text (
                 _("Set language for login screen, guest account and new user accounts"));
-            set_system_button.halign = Gtk.Align.START;
-            set_system_button.set_size_request (150, 27);
             set_system_button.set_sensitive (false);
 
             set_system_button.clicked.connect (() => {
@@ -154,16 +150,19 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
-            Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            button_box.pack_start (set_system_button);
-            button_box.pack_start (set_button);
+            var button_box = new Gtk.Grid ();
+            button_box.column_homogeneous = true;
+            button_box.column_spacing = 6;
+            button_box.add (set_system_button);
+            button_box.add (set_button);
             attach (button_box, 0, 6, 2, 1);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().allowed)
-                    set_system_button.set_sensitive (true);
-                else
-                    set_system_button.set_sensitive (false);
+                if (Utils.get_permission ().allowed) {
+                    set_system_button.sensitive = true;
+                } else {
+                    set_system_button.sensitive = false;
+                }
             });
 
             this.show_all ();
@@ -217,10 +216,13 @@ namespace SwitchboardPlugLocale.Widgets {
             }
         }
 
-        private Gtk.Label create_end_label (string text) {
-            var label = new Gtk.Label (text);
-            label.halign = Gtk.Align.END;
-            return label;
+        public class EndLabel : Gtk.Label {
+            public EndLabel (string label) {
+                Object (
+                    halign: Gtk.Align.END,
+                    label: label
+                );
+            }
         }
 
         public void reload_regions (string language, Gee.ArrayList<string> regions) {
