@@ -1,4 +1,4 @@
-/* Copyright 2011-2015 Switchboard Locale Plug Developers
+/* Copyright 2011-2017 elementary LLC. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
