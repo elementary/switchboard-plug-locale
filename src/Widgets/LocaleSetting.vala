@@ -40,10 +40,10 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public LocaleSetting () {
             Object (
-                column_spacing: 10,
+                column_spacing: 12,
                 halign: Gtk.Align.CENTER,
-                margin: 20,
-                row_spacing: 10
+                margin: 24,
+                row_spacing: 12
             );
         }
 
