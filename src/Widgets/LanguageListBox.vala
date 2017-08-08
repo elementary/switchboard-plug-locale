@@ -136,6 +136,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
             construct {
                 image = new Gtk.Image ();
+                image.hexpand = true;
                 image.halign = Gtk.Align.END;
                 image.icon_size = Gtk.IconSize.BUTTON;
 
