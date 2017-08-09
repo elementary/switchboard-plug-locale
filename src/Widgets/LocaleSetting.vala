@@ -76,9 +76,11 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.active = 0;
 
             preview = new Preview ();
+            preview.margin_bottom = 12;
+            preview.margin_top = 12;
 
             attach (new EndLabel (_("Language: ")), 0, 0, 1, 1);
-            attach (language_label,1, 0, 1, 1);
+            attach (language_label, 1, 0, 1, 1);
             attach (new EndLabel (_("Region: ")), 0, 2, 1, 1);
             attach (region_combobox, 1, 2, 1, 1);
             attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);

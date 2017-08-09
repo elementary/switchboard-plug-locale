@@ -16,25 +16,40 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class Preview : Gtk.Grid {
-        LocaleManager lm;
-        Gtk.Label first_line;
-        Gtk.Label second_line;
+        private Gtk.Label date_time_label;
+        private Gtk.Label date_label;
+        private Gtk.Label time_label;
+        private Gtk.Label currency_label;
+        private Gtk.Label number_label;
 
         public Preview () {
-            this.row_spacing = 10;
-            this.margin_top = 10;
-            this.margin_bottom = 20;
+            Object (row_spacing: 12);
+        }
 
-            lm = LocaleManager.get_default ();
+        construct {
+            date_time_label = new Gtk.Label ("");
+            date_time_label.hexpand = true;
 
-            first_line = new Gtk.Label ("");
-            second_line = new Gtk.Label ("");
+            date_label = new Gtk.Label ("");
+            date_label.xalign = 0;
 
-            first_line.set_sensitive (false);
-            second_line.set_sensitive (false);
+            time_label = new Gtk.Label ("");
+            currency_label = new Gtk.Label ("");
 
-            attach (first_line, 0, 0, 1, 1);
-            attach (second_line, 0, 1, 1, 1);
+            number_label = new Gtk.Label ("");
+            number_label.xalign = 1;
+
+            var flowbox = new Gtk.FlowBox ();
+            flowbox.column_spacing = 6;
+            flowbox.max_children_per_line = 4;
+            flowbox.min_children_per_line = 2;
+            flowbox.add (date_label);
+            flowbox.add (time_label);
+            flowbox.add (currency_label);
+            flowbox.add (number_label);
+
+            attach (date_time_label, 0, 0, 1, 1);
+            attach (flowbox, 0, 1, 1, 1);
 
             this.show_all ();
         }
@@ -43,17 +58,15 @@ namespace SwitchboardPlugLocale.Widgets {
             Intl.setlocale (LocaleCategory.ALL, format);
 
             var date = new DateTime.now_local ();
-            first_line.set_label ("%s".printf (
-                date.format ("%c")
-                ));
+            date_time_label.label = "%s".printf (date.format ("%c"));
 
             char currency[20];
             Monetary.strfmon (currency, "%5.2n", 1234.56);
 
-            second_line.set_label ("%s   %s   %'.2f ".printf (
-                date.format("%x   %X"),
-                (string) currency,
-                1234.56));
+            date_label.label = date.format ("%x");
+            time_label.label = date.format ("%X");
+            currency_label.label = (string) currency;
+            number_label.label = "%'.2f".printf ((string) currency, 1234.56);
         }
     }
 }
