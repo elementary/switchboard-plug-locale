@@ -1,4 +1,4 @@
-/* Copyright 2011-2015 Switchboard Locale Plug Developers
+/* Copyright 2011-2017 elementary LLC. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
@@ -16,28 +16,20 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class InstallPopover : Gtk.Popover {
-
-        Gtk.SearchEntry search_entry;
-        Gtk.TreeView languages_view;
-        Gtk.ListStore list_store;
+        private Gtk.TreeView languages_view;
+        private Gtk.ListStore list_store;
 
         public signal void language_selected (string lang);
 
         public InstallPopover (Gtk.Widget relative_to) {
-            Object (relative_to: relative_to);
+            Object (
+                position: Gtk.PositionType.BOTTOM,
+                relative_to: relative_to
+            );
+        }
 
-            set_position(Gtk.PositionType.BOTTOM);
-
-            var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            box.margin = 6;
-
-            var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.shadow_type = Gtk.ShadowType.IN;
-            scrolled.height_request = 145;
-            scrolled.width_request = 160;
-
-            search_entry = new Gtk.SearchEntry ();
-            box.pack_start (search_entry);
+        construct {
+            var search_entry = new Gtk.SearchEntry ();
 
             list_store = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (string));
             list_store.set_default_sort_func ((model, a, b) => {
@@ -56,12 +48,22 @@ namespace SwitchboardPlugLocale.Widgets {
             languages_view.set_search_entry (search_entry);
             languages_view.set_search_equal_func (treesearchfunc);
 
+            var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.shadow_type = Gtk.ShadowType.IN;
+            scrolled.height_request = 145;
+            scrolled.width_request = 200;
             scrolled.add (languages_view);
-            box.pack_start (scrolled);
 
-            add (box);
+            var grid = new Gtk.Grid ();
+            grid.margin = 12;
+            grid.row_spacing = 12;
+            grid.orientation = Gtk.Orientation.VERTICAL;
+            grid.add (search_entry);
+            grid.add (scrolled);
 
-            load_languagelist();
+            add (grid);
+
+            load_languagelist ();
         }
 
         static bool treesearchfunc (Gtk.TreeModel model, int column, string key, Gtk.TreeIter iter) {
