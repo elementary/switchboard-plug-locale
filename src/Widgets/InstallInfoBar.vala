@@ -18,7 +18,7 @@ namespace SwitchboardPlugLocale.Widgets {
     public class InstallInfoBar : Gtk.InfoBar {
         public signal void cancel_clicked ();
 
-        public bool cancellable {
+        public bool is_cancellable {
             set {
                 cancel_button.sensitive = value;
             }
@@ -31,7 +31,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 } else {
                     show ();
                 }
-                progressbar.fraction = value / 100.0;
+                progress_bar.fraction = value / 100.0;
             }
         }
 
@@ -51,7 +51,7 @@ namespace SwitchboardPlugLocale.Widgets {
             }
         }
 
-        private Gtk.ProgressBar progressbar;
+        private Gtk.ProgressBar progress_bar;
         private Gtk.Label label;
         private Gtk.Button cancel_button;
 
@@ -60,8 +60,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
             label = new Gtk.Label (null);
 
-            progressbar = new Gtk.ProgressBar ();
-            progressbar.valign = Gtk.Align.CENTER;
+            progress_bar = new Gtk.ProgressBar ();
+            progress_bar.valign = Gtk.Align.CENTER;
 
             cancel_button = new Gtk.Button.with_label (_("Cancel"));
             cancel_button.clicked.connect (() => {
@@ -72,7 +72,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var box = (Gtk.Box) get_content_area ();
             box.pack_start (label, false);
             box.pack_end (cancel_button, false);
-            box.pack_end (progressbar, false);
+            box.pack_end (progress_bar, false);
             box.show_all ();
         }
     }
