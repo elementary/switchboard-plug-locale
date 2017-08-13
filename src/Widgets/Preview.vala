@@ -31,25 +31,28 @@ namespace SwitchboardPlugLocale.Widgets {
             date_time_label.hexpand = true;
 
             date_label = new Gtk.Label ("");
+            date_label.hexpand = true;
             date_label.xalign = 0;
 
             time_label = new Gtk.Label ("");
+            time_label.hexpand = true;
+
             currency_label = new Gtk.Label ("");
+            currency_label.hexpand = true;
 
             number_label = new Gtk.Label ("");
+            number_label.hexpand = true;
             number_label.xalign = 1;
 
-            var flowbox = new Gtk.FlowBox ();
-            flowbox.column_spacing = 6;
-            flowbox.max_children_per_line = 4;
-            flowbox.min_children_per_line = 2;
-            flowbox.add (date_label);
-            flowbox.add (time_label);
-            flowbox.add (currency_label);
-            flowbox.add (number_label);
+            var grid = new Gtk.Grid ();
+            grid.column_spacing = 6;
+            grid.add (date_label);
+            grid.add (time_label);
+            grid.add (currency_label);
+            grid.add (number_label);
 
             attach (date_time_label, 0, 0, 1, 1);
-            attach (flowbox, 0, 1, 1, 1);
+            attach (grid, 0, 1, 1, 1);
 
             this.show_all ();
         }
