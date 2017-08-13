@@ -69,7 +69,7 @@ namespace SwitchboardPlugLocale.Widgets {
             date_label.label = date.format ("%x");
             time_label.label = date.format ("%X");
             currency_label.label = (string) currency;
-            number_label.label = "%'.2f".printf ((string) currency, 1234.56);
+            number_label.label = "%'.2f".printf (1234.56);
         }
     }
 }
