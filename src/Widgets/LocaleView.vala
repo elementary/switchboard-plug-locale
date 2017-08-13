@@ -88,14 +88,15 @@ namespace SwitchboardPlugLocale.Widgets {
             pack2 (locale_setting, true, false);
 
             list_box.settings_changed.connect (() => {
-                var regions = Utils.get_regions (list_box.get_selected_language_code ());
+                var selected_language_code = list_box.get_selected_language_code ();
+                var regions = Utils.get_regions (selected_language_code);
 
-                debug ("reloading Settings widget for language '%s'".printf (list_box.get_selected_language_code ()));
-                locale_setting.reload_regions (list_box.get_selected_language_code (), regions);
-                locale_setting.reload_labels (list_box.get_selected_language_code ());
+                debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
+                locale_setting.reload_regions (selected_language_code, regions);
+                locale_setting.reload_labels (selected_language_code);
 
                 if (remove_button != null) {
-                    if (list_box.get_selected_language_code () == locale_manager.get_user_language ().slice (0, 2)) {
+                    if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {
                         remove_button.sensitive = false;
                     } else if (Utils.get_permission ().allowed) {
                         remove_button.sensitive = true;
