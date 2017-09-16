@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-05 09:50-0700\n"
-"PO-Revision-Date: 2017-08-28 08:06+0000\n"
-"Last-Translator: Flyus Fly <fly_fly@popstar.com>\n"
+"PO-Revision-Date: 2017-09-16 01:09+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "locale/en_GB/>\n"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Cancel"
 
 #: ../src/Widgets/InstallInfoBar.vala:58
 msgid "Installing language"
