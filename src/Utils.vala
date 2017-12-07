@@ -15,46 +15,54 @@
 */
 
 namespace SwitchboardPlugLocale {
-    public class Utils : Object{
+    public class Utils : Object {
 
-        public Utils () {
+        private static string[] installed_languages;
+        private static Gee.ArrayList<string> installed_locales;
+        private static Gee.HashMap<string, string> default_regions;
 
+        public static void init () {
+            installed_locales = new Gee.ArrayList<string> ();
+            default_regions = new Gee.HashMap<string, string> ();
+            installed_languages = {};
         }
 
         public static string[]? get_installed_languages () {
+            if (installed_languages.length > 0) {
+                return installed_languages;
+            }
 
             string output;
             int status;
 
             try {
                 Process.spawn_sync (null,
-                    {"/usr/share/language-tools/language-options" , null},
+                    {"/usr/share/language-tools/language-options", null},
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,
                     out output,
                     null,
                     out status);
-
-                return output.split("\n");
-
+                
+                installed_languages = output.split ("\n");
             } catch (Error e) {
-                return null;
+                warning (e.message);
             }
 
-
+            return installed_languages;
         }
 
-        public static async string []? get_missing_languages () {
-
-            /* string output; */
-            string final = null;
+        public static async string [] get_missing_languages () {
             Pid pid;
             int input;
             int output;
             int error;
 
+            string[] missing = {};
             try {
+                string res = "";
+
                 Process.spawn_async_with_pipes (null,
                     {"check-language-support", null},
                     Environ.get (),
@@ -67,18 +75,16 @@ namespace SwitchboardPlugLocale {
                 UnixInputStream read_stream = new UnixInputStream (output, true);
                 DataInputStream out_channel = new DataInputStream (read_stream);
                 string line = null;
-                final = "";
                 while ((line = yield out_channel.read_line_async (Priority.DEFAULT)) != null) {
-                    final += line;
+                    res += line;
                 }
 
-                if (final != null)
-                    return final.strip ().split (" ");
-                else
-                    return null;
+                missing = res.strip ().split (" ");
             } catch (Error e) {
-                return null;
+                warning (e.message);
             }
+
+            return missing;
         }
 
         public static string? get_default_for_lang (string lang) {
@@ -100,16 +106,17 @@ namespace SwitchboardPlugLocale {
             }
         }
 
-        public static Gee.ArrayList<string>? get_installed_locales () {
+        public static Gee.ArrayList<string> get_installed_locales () {
+            if (installed_locales.size > 0) {
+                return installed_locales;
+            }
 
             string output;
             int status;
 
-            Gee.ArrayList<string>locales = new Gee.ArrayList<string> ();
-
             try {
                 Process.spawn_sync (null,
-                    {"locale", "-a" , null},
+                    {"locale", "-a", null},
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,
@@ -117,38 +124,41 @@ namespace SwitchboardPlugLocale {
                     null,
                     out status);
 
-                foreach (var line in output.split("\n")) {
-                    if (".utf8" in line)
-                        locales.add (line[0:5]);
+                foreach (var line in output.split ("\n")) {
+                    if (".utf8" in line) {
+                        installed_locales.add (line[0:5]);
+                    }
                 }
-
-                return locales;
-
-            } catch (Error e) {
-                return null;
-            }
-        }
-
-        private static Gee.HashMap<string, string>? default_regions;
-
-        public static Gee.HashMap<string, string>? get_default_regions () {
-            if (default_regions != null)
-                return default_regions;
-
-            default_regions = new Gee.HashMap<string, string> ();
-            string file = "/usr/share/language-tools/main-countries";
-            string? output = "";
-            try {
-                FileUtils.get_contents (file, out output);
             } catch (Error e) {
                 warning (e.message);
             }
 
-            var output_array = output.split ("\n");
+            return installed_locales;
+        }
+
+        public static async Gee.HashMap<string, string>? get_default_regions () {
+            if (default_regions.size > 0) {
+                return default_regions;
+            }
+
+            default_regions = new Gee.HashMap<string, string> ();
+
+            uint8[] data;
+            try {
+                var file = File.new_for_path ("/usr/share/language-tools/main-countries");
+                yield file.load_contents_async (null, out data, null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+
+            string contents = (string)data;
+            var output_array = contents.split ("\n");
             foreach (string line in output_array) {
                 if (line != "" && line.index_of ("#") == -1) {
                     var line_array = line.split ("\t");
-                    default_regions.@set (line_array[0], line_array[1]);
+                    if (line_array.length > 1) {
+                        default_regions[line_array[0]] = line_array[1];
+                    }
                 }
             }
 
@@ -157,15 +167,17 @@ namespace SwitchboardPlugLocale {
 
         public static Gee.ArrayList<string> get_regions (string language) {
             Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
-                foreach (string locale in get_installed_languages ()) {
-                    if (locale.length == 5) {
-                        string code = locale.slice (0, 2);
-                        string region = locale.slice (3, 5);
+            foreach (string locale in get_installed_languages ()) {
+                if (locale.length == 5) {
+                    string code = locale.slice (0, 2);
+                    string region = locale.slice (3, 5);
 
-                        if (!regions.contains (region) && code == language)
-                            regions.add (region);
+                    if (!regions.contains (region) && code == language) {
+                        regions.add (region);
                     }
                 }
+            }
+
             return regions;
         }
 

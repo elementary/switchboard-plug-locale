@@ -32,8 +32,6 @@ namespace SwitchboardPlugLocale.Widgets {
         private string selected_format = "";
         private bool has_region;
 
-        private Gee.HashMap<string, string> default_regions;
-
         private static GLib.Settings? temperature_settings = null;
 
         public signal void settings_changed ();
@@ -49,8 +47,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
         construct {
             lm = LocaleManager.get_default ();
-            default_regions = Utils.get_default_regions ();
-
+            
             language_label = new Gtk.Label ("");
             language_label.halign = Gtk.Align.START;
 
@@ -227,7 +224,7 @@ namespace SwitchboardPlugLocale.Widgets {
             }
         }
 
-        public void reload_regions (string language, Gee.ArrayList<string> regions) {
+        public async void reload_regions (string language, Gee.ArrayList<string> regions) {
             this.language = language;
             int selected_region = 0;
 
@@ -247,6 +244,7 @@ namespace SwitchboardPlugLocale.Widgets {
                     && lm.get_user_language ().slice (3, 5) == region)
                         selected_region = i;
 
+                var default_regions = yield Utils.get_default_regions ();
                 if (default_regions.has_key (language) && lm.get_user_language ().slice (0, 2) != language
                 && default_regions.@get (language) == "%s_%s".printf (language, region))
                     selected_region = i;
