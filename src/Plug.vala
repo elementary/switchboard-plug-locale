@@ -44,6 +44,7 @@ namespace SwitchboardPlugLocale {
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("language", null);
+            Utils.init ();
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
                     display_name: _("Language & Region"),
@@ -63,32 +64,41 @@ namespace SwitchboardPlugLocale {
             return grid;
         }
 
-        private void reload () {
-            var langs = Utils.get_installed_languages ();
-            var locales = Utils.get_installed_locales ();
+        private async void reload () {
+            new Thread<void*> ("load-lang-data", () => {
+                var langs = Utils.get_installed_languages ();
+                var locales = Utils.get_installed_locales ();
 
-            view.list_box.reload_languages (langs);
-            view.locale_setting.reload_formats (locales);
-            installer.check_missing_languages ();
+                Idle.add (() => {
+                    view.list_box.reload_languages (langs);
+                    view.locale_setting.reload_formats (locales);
+                    return false;
+                });
+
+                return null;
+            });
+            
+
+            yield installer.check_missing_languages ();
         }
 
         void setup_info () {
             lm = LocaleManager.get_default ();
-            reload ();
+            reload.begin ();
 
             lm.connected.connect (() => {
-                reload ();
+                reload.begin ();
 
                 infobar.no_show_all = true;
                 infobar.hide ();
             });
 
             installer.install_finished.connect ((langcode) => {
-                reload ();
+                reload.begin ();
                 view.make_sensitive (true);
             });
             installer.remove_finished.connect ((langcode) => {
-                reload ();
+                reload.begin ();
                 view.make_sensitive (true);
             });
             installer.check_missing_finished.connect ((missing) => {
