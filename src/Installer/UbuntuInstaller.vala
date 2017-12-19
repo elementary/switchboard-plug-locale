@@ -96,18 +96,9 @@ namespace SwitchboardPlugLocale.Installer {
 
         }
 
-        public void check_missing_languages () {
-            Utils.get_missing_languages.begin ((obj, res) => {
-                    try {
-                        missing_packages = Utils.get_missing_languages.end (res);
-
-                        if (missing_packages != null)
-                            check_missing_finished (missing_packages);
-                    } catch (Error e) {
-                        warning ("cant parse missing language:%s", e.message);
-                    }
-            });
-
+        public async void check_missing_languages () {
+            var missing_packages = yield Utils.get_missing_languages ();
+            check_missing_finished (missing_packages);
         }
 
         public void install_missing_languages () {
