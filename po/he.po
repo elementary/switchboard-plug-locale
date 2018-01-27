@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-01-27 22:18+0000\n"
+"PO-Revision-Date: 2018-04-29 11:28+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/he/>\n"
+"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,9 +105,8 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "הגדרת שפה למסך הכניסה, לחשבון האורח ולחשבונות של משתמשים חדשים"
 
 #: ../src/Widgets/LocaleSetting.vala:109
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "מעבר להגדרות מקלדת"
+msgstr "להגדרות מקלדת…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
