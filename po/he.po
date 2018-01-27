@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 13:36-0800\n"
-"PO-Revision-Date: 2017-04-25 17:31+0000\n"
+"PO-Revision-Date: 2018-01-27 22:18+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/he/>\n"
+"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: ../src/Translations.vala:1
@@ -90,15 +90,15 @@ msgstr "תבניות: "
 
 #: ../src/Widgets/LocaleSetting.vala:89
 msgid "Celsius"
-msgstr ""
+msgstr "צלזיוס"
 
 #: ../src/Widgets/LocaleSetting.vala:90
 msgid "Fahrenheit"
-msgstr ""
+msgstr "פרנהייט"
 
 #: ../src/Widgets/LocaleSetting.vala:92
 msgid "Temperature:"
-msgstr ""
+msgstr "מעלות:"
 
 #: ../src/Widgets/LocaleSetting.vala:114
 msgid "Set Language"
