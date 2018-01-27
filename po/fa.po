@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-05 09:50-0700\n"
+"POT-Creation-Date: 2018-01-27 13:36-0800\n"
 "PO-Revision-Date: 2014-08-01 01:40+0000\n"
 "Last-Translator: Mohammad Zali <mohamadzali@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -18,102 +18,102 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#. /or modify it under the terms of the GNU Lesser General Public License as
-#. * published by the Free Software Foundation, either version 3 of the
-#. * License, or (at your option) any later version.
-#. *
-#. * This program is distributed in the hope that it will be
-#. * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-#. * Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License along
-#. * with this program. If not, see http://www.gnu.org/licenses/.
-#.
-#: ../src/Translations.vala:17
+#: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
 msgstr ""
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:50
 msgid "Language & Region"
 msgstr ""
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:51
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: ../src/Plug.vala:131
+#: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
-#: ../src/Plug.vala:138
+#: ../src/Plug.vala:152
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: ../src/Plug.vala:140
+#: ../src/Plug.vala:154
 msgid "Complete Installation"
 msgstr ""
 
-#: ../src/Plug.vala:157
+#: ../src/Plug.vala:171
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Widgets/InstallInfoBar.vala:42
-msgid "Cancel"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:58
-msgid "Installing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:61
-msgid "Removing language"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:64
-msgid "Installing missing language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:60
+#: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
 msgstr ""
 
-#: ../src/Widgets/LocaleView.vala:70
+#: ../src/Widgets/LocaleView.vala:51
 msgid "Remove language"
 msgstr ""
 
-#: ../src/Widgets/LocaleView.vala:79
+#: ../src/Widgets/LocaleView.vala:59
 msgid "Switch to keyboard settings"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:78
+#: ../src/Widgets/InstallInfoBar.vala:42
+msgid "Installing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:45
+msgid "Removing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:48
+msgid "Installing missing language"
+msgstr ""
+
+#: ../src/Widgets/InstallInfoBar.vala:66
+msgid "Cancel"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:79
 msgid "Language: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: ../src/Widgets/LocaleSetting.vala:81
 msgid "Region: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:82
+#: ../src/Widgets/LocaleSetting.vala:83
 msgid "Formats: "
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:87
+#: ../src/Widgets/LocaleSetting.vala:89
+msgid "Celsius"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:90
+msgid "Fahrenheit"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:92
+msgid "Temperature:"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:114
 msgid "Set Language"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:116
+#: ../src/Widgets/LocaleSetting.vala:141
 msgid "Set System Language"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:118
+#: ../src/Widgets/LocaleSetting.vala:143
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: ../src/Widgets/LanguageListBox.vala:30
+#: ../src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr ""
 
-#: ../src/Widgets/LanguageListBox.vala:116
+#: ../src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr ""
