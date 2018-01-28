@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-01-29 00:02+0000\n"
+"PO-Revision-Date: 2018-04-29 06:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/ja/>\n"
+"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,9 +106,8 @@ msgstr ""
 "ログイン画面・ゲストアカウント・新しいユーザーアカウントの言語を設定します"
 
 #: ../src/Widgets/LocaleSetting.vala:109
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "キーボード設定の切り替え"
+msgstr "キーボードの設定…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
