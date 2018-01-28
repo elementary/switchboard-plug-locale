@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 13:36-0800\n"
-"PO-Revision-Date: 2018-01-28 00:24+0000\n"
+"PO-Revision-Date: 2018-01-29 00:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/ja/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
-msgstr "ロケール（言語）設定を管理するため、認証が必要です"
+msgstr "ロケール (言語) 設定を管理するには認証が必要です"
 
 #: ../src/Plug.vala:50
 msgid "Language & Region"
@@ -34,7 +34,7 @@ msgstr "言語を管理し、地域とフォーマットを設定します"
 
 #: ../src/Plug.vala:145
 msgid "Some changes will not take effect until you log out"
-msgstr "いくつかの設定はログアウト後に反映されます"
+msgstr "一部の変更はログアウト後に反映されます"
 
 #: ../src/Plug.vala:152
 msgid "Language support is not installed completely"
