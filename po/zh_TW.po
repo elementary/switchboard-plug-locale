@@ -8,10 +8,11 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-01-28 05:36+0000\n"
+"PO-Revision-Date: 2018-04-29 17:05+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-locale/zh_TW/>\n"
+"Language-Team: Chinese (Traditional) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"locale/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,9 +106,8 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "為登入畫面、訪客帳號、和新使用者帳號設定預設語言"
 
 #: ../src/Widgets/LocaleSetting.vala:109
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "切換到鍵盤設定"
+msgstr "鍵盤設定…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
