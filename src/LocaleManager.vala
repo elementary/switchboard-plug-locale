@@ -51,9 +51,7 @@ namespace SwitchboardPlugLocale {
 
         public signal void loaded_user (string language, string format, Gee.HashMap<string, string> inputs);
 
-        public signal void connected ();
-
-        bool is_connected = false;
+        public bool is_connected { get; private set; default = false; }
 
         private LocaleManager () {
 
@@ -75,7 +73,6 @@ namespace SwitchboardPlugLocale {
 
             if (account_proxy != null && locale1_proxy != null) {
                 is_connected = true;
-                connected ();
             }
         }
 

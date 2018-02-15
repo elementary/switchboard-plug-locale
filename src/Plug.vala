@@ -34,7 +34,6 @@ namespace SwitchboardPlugLocale {
         Widgets.LocaleView view;
 
         public Installer.UbuntuInstaller installer;
-        LocaleManager lm;
 
         public Gtk.InfoBar infobar;
         public Gtk.InfoBar permission_infobar;
@@ -44,6 +43,7 @@ namespace SwitchboardPlugLocale {
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("language", null);
+
             Utils.init ();
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
@@ -56,11 +56,11 @@ namespace SwitchboardPlugLocale {
         public override Gtk.Widget get_widget () {
             if (grid == null) {
                 installer = new Installer.UbuntuInstaller ();
-                grid = new Gtk.Grid ();
 
                 setup_ui ();
                 setup_info ();
             }
+
             return grid;
         }
 
@@ -77,43 +77,31 @@ namespace SwitchboardPlugLocale {
 
                 return null;
             });
-            
 
             yield installer.check_missing_languages ();
         }
 
         void setup_info () {
-            lm = LocaleManager.get_default ();
-            reload.begin ();
-
-            lm.connected.connect (() => {
+            unowned LocaleManager lm = LocaleManager.get_default ();
+            if (lm.is_connected) {
                 reload.begin ();
 
                 infobar.no_show_all = true;
                 infobar.hide ();
-            });
+            }
 
             installer.install_finished.connect ((langcode) => {
                 reload.begin ();
                 view.make_sensitive (true);
             });
+
             installer.remove_finished.connect ((langcode) => {
                 reload.begin ();
                 view.make_sensitive (true);
             });
-            installer.check_missing_finished.connect ((missing) => {
-                if (missing.length > 0) {
-                    missing_lang_infobar.show ();
-                    missing_lang_infobar.show_all ();
-                } else {
-                    missing_lang_infobar.hide ();
-                }
-            });
-            installer.progress_changed.connect ((progress) => {
-                install_infobar.progress = progress;
-                install_infobar.is_cancellable = installer.install_cancellable;
-                install_infobar.transaction_mode = installer.transaction_mode;
-            });
+
+            installer.check_missing_finished.connect (on_check_missing_finished);
+            installer.progress_changed.connect (on_progress_changed);
         }
 
         public override void shown () {
@@ -135,9 +123,10 @@ namespace SwitchboardPlugLocale {
 
         // Wires up and configures initial UI
         private void setup_ui () {
+            grid = new Gtk.Grid ();
             grid.column_homogeneous = true;
 
-            //Gtk.InfoBar for informing about necessary log-out/log-in
+            // Gtk.InfoBar for informing about necessary log-out/log-in
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
             infobar.no_show_all = true;
@@ -145,7 +134,7 @@ namespace SwitchboardPlugLocale {
             var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
             content.add (label);
 
-            //Gtk.InfoBar for language support installation
+            // Gtk.InfoBar for language support installation
             missing_lang_infobar = new Gtk.InfoBar ();
             missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
             var missing_content = missing_lang_infobar.get_content_area () as Gtk.Box;
@@ -159,7 +148,7 @@ namespace SwitchboardPlugLocale {
             missing_content.pack_start (missing_label, false);
             missing_content.pack_end (install_missing, false);
 
-            //Gtk.InfoBar for "one-click" administrative permissions
+            // Gtk.InfoBar for "one-click" administrative permissions
             permission_infobar = new Gtk.InfoBar ();
             permission_infobar.message_type = Gtk.MessageType.INFO;
 
@@ -173,14 +162,15 @@ namespace SwitchboardPlugLocale {
 
             permission_infobar.show_all ();
 
-            //Custom InstallInfoBar widget for language installation progress
+            // Custom InstallInfoBar widget for language installation progress
             install_infobar = new Widgets.InstallInfoBar ();
             install_infobar.no_show_all = true;
             install_infobar.cancel_clicked.connect (installer.cancel_install);
 
-            //connect polkit permission to hiding the permission infobar
-            Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().allowed) {
+            // connect polkit permission to hiding the permission infobar
+            var permission = Utils.get_permission ();
+            permission.notify["allowed"].connect (() => {
+                if (permission.allowed) {
                     permission_infobar.no_show_all = true;
                     permission_infobar.hide ();
                 }
@@ -199,6 +189,21 @@ namespace SwitchboardPlugLocale {
         public void on_install_language (string language) {
             view.make_sensitive (false);
             installer.install (language);
+        }
+
+        private void on_check_missing_finished (string [] missing) {
+            if (missing.length > 0) {
+                missing_lang_infobar.show ();
+                missing_lang_infobar.show_all ();
+            } else {
+                missing_lang_infobar.hide ();
+            }
+        }
+
+        private void on_progress_changed (int progress) {
+            install_infobar.progress = progress;
+            install_infobar.is_cancellable = installer.install_cancellable;
+            install_infobar.transaction_mode = installer.transaction_mode;
         }
     }
 }
