@@ -71,9 +71,7 @@ namespace SwitchboardPlugLocale {
             settings = new Settings ("org.pantheon.switchboard.plug.locale");
             settings.changed.connect (on_settings_changed);
 
-            if (account_proxy != null && locale1_proxy != null) {
-                is_connected = true;
-            }
+            is_connected = account_proxy != null && locale1_proxy != null;
         }
 
         void fetch_settings (string language, string format) {
