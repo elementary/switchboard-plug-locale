@@ -191,7 +191,7 @@ namespace SwitchboardPlugLocale {
             installer.install (language);
         }
 
-        private void on_check_missing_finished (string [] missing) {
+        private void on_check_missing_finished (string[] missing) {
             if (missing.length > 0) {
                 missing_lang_infobar.show ();
                 missing_lang_infobar.show_all ();
