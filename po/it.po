@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 13:36-0800\n"
-"PO-Revision-Date: 2017-03-02 18:53+0000\n"
-"Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
-"Language-Team: Italian <it@li.org>\n"
+"PO-Revision-Date: 2018-02-18 19:41+0000\n"
+"Last-Translator: Dave <dave9000@cheapnet.it>\n"
+"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-03 06:05+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
 
 #: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
@@ -92,15 +94,15 @@ msgstr "Formato: "
 
 #: ../src/Widgets/LocaleSetting.vala:89
 msgid "Celsius"
-msgstr ""
+msgstr "Centigradi"
 
 #: ../src/Widgets/LocaleSetting.vala:90
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: ../src/Widgets/LocaleSetting.vala:92
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatura:"
 
 #: ../src/Widgets/LocaleSetting.vala:114
 msgid "Set Language"
