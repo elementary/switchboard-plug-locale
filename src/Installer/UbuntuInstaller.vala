@@ -97,7 +97,7 @@ namespace SwitchboardPlugLocale.Installer {
         }
 
         public async void check_missing_languages () {
-            var missing_packages = yield Utils.get_missing_languages ();
+            missing_packages = yield Utils.get_missing_languages ();
             check_missing_finished (missing_packages);
         }
 
