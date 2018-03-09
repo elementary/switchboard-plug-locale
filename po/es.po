@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 13:36-0800\n"
-"PO-Revision-Date: 2018-02-01 00:09+0000\n"
+"PO-Revision-Date: 2018-03-10 00:04+0000\n"
 "Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/es/>\n"
@@ -90,7 +90,6 @@ msgid "Formats: "
 msgstr "Fomatos: "
 
 #: ../src/Widgets/LocaleSetting.vala:89
-#, fuzzy
 msgid "Celsius"
 msgstr "Celsius"
 
