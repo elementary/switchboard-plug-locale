@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 13:36-0800\n"
-"PO-Revision-Date: 2017-07-01 22:11+0000\n"
-"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/da/>\n"
+"PO-Revision-Date: 2018-03-24 21:08+0000\n"
+"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-15 06:49+0000\n"
 
 #: ../src/Translations.vala:1
@@ -91,15 +91,15 @@ msgstr "Formater: "
 
 #: ../src/Widgets/LocaleSetting.vala:89
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: ../src/Widgets/LocaleSetting.vala:90
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: ../src/Widgets/LocaleSetting.vala:92
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatur:"
 
 #: ../src/Widgets/LocaleSetting.vala:114
 msgid "Set Language"
