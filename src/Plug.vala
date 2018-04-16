@@ -44,7 +44,6 @@ namespace SwitchboardPlugLocale {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("language", null);
 
-            Utils.init ();
             Object (category: Category.PERSONAL,
                     code_name: "system-pantheon-locale",
                     display_name: _("Language & Region"),
@@ -55,6 +54,7 @@ namespace SwitchboardPlugLocale {
 
         public override Gtk.Widget get_widget () {
             if (grid == null) {
+                Utils.init ();
                 installer = new Installer.UbuntuInstaller ();
 
                 setup_ui ();
