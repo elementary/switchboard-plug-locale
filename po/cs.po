@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 13:36-0800\n"
-"PO-Revision-Date: 2016-08-07 17:41+0000\n"
-"Last-Translator: Marek Suchánek <suchm@seznam.cz>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2018-04-20 00:12+0000\n"
+"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
@@ -24,7 +26,7 @@ msgstr "K úpravě jazykových nastavení je nutné oprávnění"
 
 #: ../src/Plug.vala:50
 msgid "Language & Region"
-msgstr "Jazyk & Region"
+msgstr "Jazyk a region"
 
 #: ../src/Plug.vala:51
 msgid "Manage languages, and configure region and format"
