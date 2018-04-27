@@ -19,26 +19,26 @@
   const string APTD_DBUS_NAME = "org.debian.apt";
   const string APTD_DBUS_PATH = "/org/debian/apt";
 
-  /**
-   * Expose a subset of org.debian.apt interfaces -- only what's needed by applications lens.
-   */
-  [DBus (name = "org.debian.apt")]
-  public interface AptdService: GLib.Object {
+/**
+* Expose a subset of org.debian.apt interfaces -- only what's needed by applications lens.
+*/
+[DBus (name = "org.debian.apt")]
+public interface AptdService: GLib.Object {
     public abstract async string install_packages (string[] packages) throws GLib.Error;
     public abstract async string remove_packages (string[] packages) throws GLib.Error;
     public abstract async void quit () throws GLib.Error;
-  }
+}
   
-  [DBus (name = "org.debian.apt.transaction")]
-  public interface AptdTransactionService: GLib.Object {
+[DBus (name = "org.debian.apt.transaction")]
+public interface AptdTransactionService: GLib.Object {
     public abstract void run () throws GLib.Error;
     public abstract void simulate () throws GLib.Error;
     public abstract void cancel () throws GLib.Error;
     public signal void finished (string exit_state);
     public signal void property_changed (string property, Variant val);
-  }
+}
   
-  public class AptdProxy: GLib.Object {
+public class AptdProxy: GLib.Object {
     public void connect_to_aptd () throws GLib.Error {
       _aptd_service = Bus.get_proxy_sync (BusType.SYSTEM, APTD_DBUS_NAME, APTD_DBUS_PATH);
     }
@@ -58,9 +58,9 @@
     }
 
     private AptdService _aptd_service;
-  }
+}
 
-  public class AptdTransactionProxy: GLib.Object {
+public class AptdTransactionProxy: GLib.Object {
     public signal void finished (string transaction_id);
     public signal void property_changed (string property, Variant variant);
 
@@ -88,4 +88,4 @@
     }
 
     private AptdTransactionService _aptd_service;
-  }
+}
