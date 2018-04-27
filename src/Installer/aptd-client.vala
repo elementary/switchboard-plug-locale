@@ -23,60 +23,50 @@
    * Expose a subset of org.debian.apt interfaces -- only what's needed by applications lens.
    */
   [DBus (name = "org.debian.apt")]
-  public interface AptdService: GLib.Object
-  {
-    public abstract async string install_packages (string[] packages) throws IOError;
-    public abstract async string remove_packages (string[] packages) throws IOError;
-    public abstract async void quit () throws IOError;
+  public interface AptdService: GLib.Object {
+    public abstract async string install_packages (string[] packages) throws GLib.Error;
+    public abstract async string remove_packages (string[] packages) throws GLib.Error;
+    public abstract async void quit () throws GLib.Error;
   }
   
   [DBus (name = "org.debian.apt.transaction")]
-  public interface AptdTransactionService: GLib.Object
-  {
-    public abstract void run () throws IOError;
-    public abstract void simulate () throws IOError;
-    public abstract void cancel () throws IOError;
+  public interface AptdTransactionService: GLib.Object {
+    public abstract void run () throws GLib.Error;
+    public abstract void simulate () throws GLib.Error;
+    public abstract void cancel () throws GLib.Error;
     public signal void finished (string exit_state);
     public signal void property_changed (string property, Variant val);
   }
   
-  public class AptdProxy: GLib.Object
-  {
-    public void connect_to_aptd () throws IOError
-    {
+  public class AptdProxy: GLib.Object {
+    public void connect_to_aptd () throws GLib.Error {
       _aptd_service = Bus.get_proxy_sync (BusType.SYSTEM, APTD_DBUS_NAME, APTD_DBUS_PATH);
     }
 
-    public async string install_packages (string[] packages) throws IOError
-    {
+    public async string install_packages (string[] packages) throws GLib.Error {
       string res = yield _aptd_service.install_packages (packages);
       return res;
     }
 
-    public async string remove_packages (string[] packages) throws IOError
-    {
+    public async string remove_packages (string[] packages) throws GLib.Error {
       string res = yield _aptd_service.remove_packages (packages);
       return res;
     }
 
-    public async void quit () throws IOError
-    {
+    public async void quit () throws GLib.Error {
         yield _aptd_service.quit ();
     }
 
     private AptdService _aptd_service;
   }
 
-  public class AptdTransactionProxy: GLib.Object
-  {
+  public class AptdTransactionProxy: GLib.Object {
     public signal void finished (string transaction_id);
     public signal void property_changed (string property, Variant variant);
 
-    public void connect_to_aptd (string transaction_id) throws IOError
-    {
+    public void connect_to_aptd (string transaction_id) throws GLib.Error {
       _aptd_service = Bus.get_proxy_sync (BusType.SYSTEM, APTD_DBUS_NAME, transaction_id);
-      _aptd_service.finished.connect ((exit_state) =>
-        {
+      _aptd_service.finished.connect ((exit_state) => {
           debug ("aptd transaction finished: %s\n", exit_state);
           finished (transaction_id);
         });
@@ -85,18 +75,15 @@
         });
     }
 
-    public void simulate () throws IOError
-    {
+    public void simulate () throws GLib.Error {
       _aptd_service.simulate ();
     }
 
-    public void run () throws IOError
-    {
+    public void run () throws GLib.Error {
       _aptd_service.run ();
     }
 
-    public void cancel () throws IOError
-    {
+    public void cancel () throws GLib.Error {
       _aptd_service.cancel ();
     }
 

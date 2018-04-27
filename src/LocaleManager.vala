@@ -16,16 +16,16 @@
 
 [DBus (name = "org.freedesktop.Accounts.User")]
 public interface AccountProxy : GLib.Object {
-    public abstract void set_formats_locale (string formats_locale) throws IOError;
-    public abstract void set_language (string language) throws IOError;
+    public abstract void set_formats_locale (string formats_locale) throws GLib.Error;
+    public abstract void set_language (string language) throws GLib.Error;
     public abstract string formats_locale  { owned get; }
     public abstract string language  { owned get; }
 }
 
 [DBus (name = "org.freedesktop.locale1")]
 public interface Locale1Proxy : GLib.Object {
-    public abstract void set_locale (string[] arg_0, bool arg_1) throws IOError;
-    public abstract void set_x11_keyboard (string arg_0, string arg_1, string arg_2, string arg_3, bool arg_4, bool arg_5) throws IOError;
+    public abstract void set_locale (string[] arg_0, bool arg_1) throws GLib.Error;
+    public abstract void set_x11_keyboard (string arg_0, string arg_1, string arg_2, string arg_3, bool arg_4, bool arg_5) throws GLib.Error;
 }
 
 namespace SwitchboardPlugLocale {
