@@ -15,12 +15,11 @@
 */
 
 namespace SwitchboardPlugLocale.Widgets {
-    public class LocaleSetting : Gtk.Grid {
+    public class LocaleSetting : Granite.SimpleSettingsPage {
         private Gtk.Button set_button;
         private Gtk.Button set_system_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
-        private Gtk.Label language_label;
         private Gtk.Label region_label;
         private Gtk.ListStore format_store;
         private Gtk.ListStore region_store;
@@ -37,19 +36,11 @@ namespace SwitchboardPlugLocale.Widgets {
         public signal void settings_changed ();
 
         public LocaleSetting () {
-            Object (
-                column_spacing: 12,
-                halign: Gtk.Align.CENTER,
-                margin: 24,
-                row_spacing: 12
-            );
+            Object (icon_name: "preferences-desktop-locale");
         }
 
         construct {
             lm = LocaleManager.get_default ();
-            
-            language_label = new Gtk.Label ("");
-            language_label.halign = Gtk.Align.START;
 
             region_label = new Gtk.Label ("");
             region_label.halign = Gtk.Align.START;
@@ -76,21 +67,20 @@ namespace SwitchboardPlugLocale.Widgets {
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
-            attach (new EndLabel (_("Language: ")), 0, 0, 1, 1);
-            attach (language_label, 1, 0, 1, 1);
-            attach (new EndLabel (_("Region: ")), 0, 2, 1, 1);
-            attach (region_combobox, 1, 2, 1, 1);
-            attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
-            attach (format_combobox, 1, 3, 1, 1);
-            attach (preview, 0, 5, 2, 1);
+            content_area.halign = Gtk.Align.CENTER;
+            content_area.attach (new EndLabel (_("Region: ")), 0, 2, 1, 1);
+            content_area.attach (region_combobox, 1, 2, 1, 1);
+            content_area.attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
+            content_area.attach (format_combobox, 1, 3, 1, 1);
+            content_area.attach (preview, 0, 5, 2, 1);
 
             if (temperature_settings != null) {
                 var temperature = new Granite.Widgets.ModeButton ();
                 temperature.append_text (_("Celsius"));
                 temperature.append_text (_("Fahrenheit"));
 
-                attach (new EndLabel (_("Temperature:")), 0, 4, 1, 1);
-                attach (temperature, 1, 4, 1, 1);
+                content_area.attach (new EndLabel (_("Temperature:")), 0, 4, 1, 1);
+                content_area.attach (temperature, 1, 4, 1, 1);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
@@ -149,12 +139,8 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
-            var button_box = new Gtk.Grid ();
-            button_box.column_homogeneous = true;
-            button_box.column_spacing = 6;
-            button_box.add (set_system_button);
-            button_box.add (set_button);
-            attach (button_box, 0, 6, 2, 1);
+            action_area.add (set_system_button);
+            action_area.add (set_button);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
                 if (Utils.get_permission ().allowed) {
@@ -164,7 +150,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
-            this.show_all ();
+            show_all ();
         }
 
         static construct {
@@ -299,7 +285,7 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         public void reload_labels (string language) {
-            language_label.set_label (Utils.translate (language, null));
+            title = Utils.translate (language, null);
         }
 
         private void on_applied_to_system () {

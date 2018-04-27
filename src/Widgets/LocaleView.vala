@@ -77,8 +77,6 @@ namespace SwitchboardPlugLocale.Widgets {
             sidebar.add (action_bar);
 
             locale_setting = new LocaleSetting ();
-            locale_setting.margin_top = 50;
-            locale_setting.hexpand = true;
             locale_setting.settings_changed.connect (() => {
                 plug.infobar.no_show_all = false;
                 plug.infobar.show_all ();
