@@ -135,18 +135,12 @@ namespace SwitchboardPlugLocale {
             content.add (label);
 
             // Gtk.InfoBar for language support installation
-            missing_lang_infobar = new Gtk.InfoBar ();
-            missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
-            var missing_content = missing_lang_infobar.get_content_area () as Gtk.Box;
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
-            var install_missing = new Gtk.Button.with_label (_("Complete Installation"));
-            install_missing.clicked.connect (() => {
-                missing_lang_infobar.hide ();
-                installer.install_missing_languages ();
-            });
-            missing_content.pack_start (missing_label, false);
-            missing_content.pack_end (install_missing, false);
+            missing_lang_infobar = new Gtk.InfoBar ();
+            missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
+            missing_lang_infobar.add_button (_("Complete Installation"), 0);
+            missing_lang_infobar.get_content_area ().add (missing_label);
 
             // Gtk.InfoBar for "one-click" administrative permissions
             permission_infobar = new Gtk.InfoBar ();
@@ -184,6 +178,11 @@ namespace SwitchboardPlugLocale {
             grid.attach (install_infobar, 0, 3, 1, 1);
             grid.attach (view, 0, 4, 1, 1);
             grid.show ();
+
+            missing_lang_infobar.response.connect (() => {
+                missing_lang_infobar.hide ();
+                installer.install_missing_languages ();
+            });
         }
 
         public void on_install_language (string language) {
