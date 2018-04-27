@@ -123,9 +123,6 @@ namespace SwitchboardPlugLocale {
 
         // Wires up and configures initial UI
         private void setup_ui () {
-            grid = new Gtk.Grid ();
-            grid.column_homogeneous = true;
-
             // Gtk.InfoBar for informing about necessary log-out/log-in
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
@@ -172,11 +169,13 @@ namespace SwitchboardPlugLocale {
 
             view = new Widgets.LocaleView (this);
 
-            grid.attach (infobar, 0, 0, 1, 1);
-            grid.attach (missing_lang_infobar, 0, 1, 1, 1);
-            grid.attach (permission_infobar, 0, 2, 1, 1);
-            grid.attach (install_infobar, 0, 3, 1, 1);
-            grid.attach (view, 0, 4, 1, 1);
+            grid = new Gtk.Grid ();
+            grid.orientation = Gtk.Orientation.VERTICAL;
+            grid.add (infobar);
+            grid.add (missing_lang_infobar);
+            grid.add (permission_infobar);
+            grid.add (install_infobar);
+            grid.add (view);
             grid.show ();
 
             missing_lang_infobar.response.connect (() => {
