@@ -1,4 +1,4 @@
-/* Copyright 2011-2017 elementary LLC. (https://elementary.io)
+/* Copyright 2011-2018 elementary LLC. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
@@ -17,11 +17,9 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Gtk.Grid {
         private Gtk.Button set_button;
-        private Gtk.Button set_system_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
         private Gtk.Label language_label;
-        private Gtk.Label region_label;
         private Gtk.ListStore format_store;
         private Gtk.ListStore region_store;
 
@@ -51,7 +49,7 @@ namespace SwitchboardPlugLocale.Widgets {
             language_label = new Gtk.Label ("");
             language_label.halign = Gtk.Align.START;
 
-            region_label = new Gtk.Label ("");
+            var region_label = new Gtk.Label ("");
             region_label.halign = Gtk.Align.START;
 
             Gtk.CellRendererText renderer = new Gtk.CellRendererText ();
@@ -110,10 +108,9 @@ namespace SwitchboardPlugLocale.Widgets {
 
             }
 
-            set_button = new Gtk.Button ();
-            set_button.label = _("Set Language");
+            set_button = new Gtk.Button.with_label (_("Set Language"));
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            set_button.set_sensitive (false);
+            set_button.sensitive = false;
 
             set_button.clicked.connect (() => {
                 if (!has_region) {
@@ -137,16 +134,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 settings_changed ();
             });
 
-            set_system_button = new Gtk.Button ();
-            set_system_button.label = _("Set System Language");
-            set_system_button.set_tooltip_text (
-                _("Set language for login screen, guest account and new user accounts"));
-            set_system_button.set_sensitive (false);
+            var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
+            set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
+            set_system_button.sensitive = false;
 
             set_system_button.clicked.connect (() => {
-                if (Utils.get_permission ().allowed) {
-                    on_applied_to_system ();
-                }
+                on_applied_to_system ();
             });
 
             var button_box = new Gtk.Grid ();
