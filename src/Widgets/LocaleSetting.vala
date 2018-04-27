@@ -1,4 +1,4 @@
-/* Copyright 2011-2017 elementary LLC. (https://elementary.io)
+/* Copyright 2011-2018 elementary LLC. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
@@ -17,10 +17,8 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Granite.SimpleSettingsPage {
         private Gtk.Button set_button;
-        private Gtk.Button set_system_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
-        private Gtk.Label region_label;
         private Gtk.ListStore format_store;
         private Gtk.ListStore region_store;
 
@@ -42,7 +40,7 @@ namespace SwitchboardPlugLocale.Widgets {
         construct {
             lm = LocaleManager.get_default ();
 
-            region_label = new Gtk.Label ("");
+            var region_label = new Gtk.Label ("");
             region_label.halign = Gtk.Align.START;
 
             Gtk.CellRendererText renderer = new Gtk.CellRendererText ();
@@ -100,10 +98,30 @@ namespace SwitchboardPlugLocale.Widgets {
 
             }
 
-            set_button = new Gtk.Button ();
-            set_button.label = _("Set Language");
+            set_button = new Gtk.Button.with_label (_("Set Language"));
+            set_button.sensitive = false;
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            set_button.set_sensitive (false);
+
+            var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
+            set_system_button.sensitive = false;
+            set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
+
+            var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…"));
+
+            action_area.add (keyboard_button);
+            action_area.add (set_system_button);
+            action_area.add (set_button);
+            action_area.set_child_secondary (keyboard_button, true);
+
+            show_all ();
+
+            keyboard_button.clicked.connect (() => {
+                try {
+                    AppInfo.launch_default_for_uri ("settings://input/keyboard/layout", null);
+                } catch (Error e) {
+                    warning ("Failed to open keyboard settings: %s", e.message);
+                }
+            });
 
             set_button.clicked.connect (() => {
                 if (!has_region) {
@@ -127,20 +145,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 settings_changed ();
             });
 
-            set_system_button = new Gtk.Button ();
-            set_system_button.label = _("Set System Language");
-            set_system_button.set_tooltip_text (
-                _("Set language for login screen, guest account and new user accounts"));
-            set_system_button.set_sensitive (false);
-
             set_system_button.clicked.connect (() => {
                 if (Utils.get_permission ().allowed) {
                     on_applied_to_system ();
                 }
             });
-
-            action_area.add (set_system_button);
-            action_area.add (set_button);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
                 if (Utils.get_permission ().allowed) {
@@ -149,8 +158,6 @@ namespace SwitchboardPlugLocale.Widgets {
                     set_system_button.sensitive = false;
                 }
             });
-
-            show_all ();
         }
 
         static construct {
