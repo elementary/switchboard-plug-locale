@@ -74,25 +74,6 @@ namespace SwitchboardPlugLocale {
             is_connected = account_proxy != null && locale1_proxy != null;
         }
 
-        void fetch_settings (string language, string format) {
-
-                var map_array = settings.get_value (KEY_INPUT_SELETION);
-                var iter = map_array.iterator ();
-
-                string? k = null;
-                string? value = null;
-
-                var map = new Gee.HashMap<string, string> ();
-
-                while (iter.next ("(ss)", &k, &value)) {
-                    map.@set (k, value);
-                }
-
-
-                loaded_user (language, format, map);
-
-        }
-
         void on_settings_changed (string key) {
 
             if (key == KEY_INPUT_SELETION) {
