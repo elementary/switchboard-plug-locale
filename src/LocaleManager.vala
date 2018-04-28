@@ -64,9 +64,13 @@ namespace SwitchboardPlugLocale {
             locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
-            var connection = Bus.get_sync (BusType.SYSTEM);
-            locale1_proxy = connection.get_proxy_sync<Locale1Proxy> ("org.freedesktop.locale1", "/org/freedesktop/locale1", DBusProxyFlags.NONE);
-            account_proxy = connection.get_proxy_sync<AccountProxy> ("org.freedesktop.Accounts", "/org/freedesktop/Accounts/User%u".printf (uid), DBusProxyFlags.NONE);
+            try {
+                var connection = Bus.get_sync (BusType.SYSTEM);
+                locale1_proxy = connection.get_proxy_sync<Locale1Proxy> ("org.freedesktop.locale1", "/org/freedesktop/locale1", DBusProxyFlags.NONE);
+                account_proxy = connection.get_proxy_sync<AccountProxy> ("org.freedesktop.Accounts", "/org/freedesktop/Accounts/User%u".printf (uid), DBusProxyFlags.NONE);
+            } catch (IOError e) {
+                critical (e.message);
+            }
 
             settings = new Settings ("org.pantheon.switchboard.plug.locale");
             settings.changed.connect (on_settings_changed);
@@ -132,8 +136,13 @@ namespace SwitchboardPlugLocale {
                 param += "LC_MONETARY=%s".printf (format);
                 param += "LC_MEASUREMENT=%s".printf (format);
             }
-            
-            locale1_proxy.set_locale (param, true);
+
+            try {
+                locale1_proxy.set_locale (param, true);
+            } catch (Error e) {
+                critical (e.message);
+            }
+
         }
 
         void set_system_input_direct () {
@@ -164,8 +173,11 @@ namespace SwitchboardPlugLocale {
                 }
             }
 
-            locale1_proxy.set_x11_keyboard (layouts, "", variants, "", true, true);
-            // TODO
+            try {
+                locale1_proxy.set_x11_keyboard (layouts, "", variants, "", true, true);
+            } catch (Error e) {
+                critical (e.message);
+            }
         }
 
 
