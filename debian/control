@@ -15,7 +15,7 @@ Homepage: https://launchpad.net/switchboard-plug-locale
 
 Package: switchboard-plug-locale
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: aptdaemon, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: Region & Language plug for Switchboard
  Change your region and language settings
