@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 13:36-0800\n"
+"POT-Creation-Date: 2018-04-28 11:06-0700\n"
 "PO-Revision-Date: 2018-04-25 18:27+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-locale/cs/>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,45 +20,33 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "K úpravě jazykových nastavení je nutné oprávnění"
-
-#: ../src/Plug.vala:50
+#: ../src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Jazyk a region"
 
-#: ../src/Plug.vala:51
+#: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte region a místní formáty"
 
-#: ../src/Plug.vala:145
+#: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Některé změny se projeví až po opětovném přihlášení"
 
-#: ../src/Plug.vala:152
+#: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Jazyková podpora není kompletně nainstalována"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Dokončit instalaci"
 
-#: ../src/Plug.vala:171
+#: ../src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Nainstalovat jazyk"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Odebrat jazyk"
-
-#: ../src/Widgets/LocaleView.vala:59
-msgid "Switch to keyboard settings"
-msgstr "Přepnout na nastavení klávesnice"
+#: ../src/Translations.vala:1
+msgid "Authentication is required to manage locale settings"
+msgstr "K úpravě jazykových nastavení je nutné oprávnění"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
@@ -76,42 +64,6 @@ msgstr "Instaluji chybějící jazyk"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: ../src/Widgets/LocaleSetting.vala:79
-msgid "Language: "
-msgstr "Jazyk: "
-
-#: ../src/Widgets/LocaleSetting.vala:81
-msgid "Region: "
-msgstr "Oblast: "
-
-#: ../src/Widgets/LocaleSetting.vala:83
-msgid "Formats: "
-msgstr "Formáty: "
-
-#: ../src/Widgets/LocaleSetting.vala:89
-msgid "Celsius"
-msgstr "Celsia"
-
-#: ../src/Widgets/LocaleSetting.vala:90
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
-
-#: ../src/Widgets/LocaleSetting.vala:92
-msgid "Temperature:"
-msgstr "Teplota:"
-
-#: ../src/Widgets/LocaleSetting.vala:114
-msgid "Set Language"
-msgstr "Nastavit jazyk"
-
-#: ../src/Widgets/LocaleSetting.vala:141
-msgid "Set System Language"
-msgstr "Nastavit jazyk systému"
-
-#: ../src/Widgets/LocaleSetting.vala:143
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr "Použít jazyk pro přihlašovací obrazovku, účet hosta a nové uživatele"
-
 #: ../src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Nainstalované jazyky"
@@ -119,3 +71,51 @@ msgstr "Nainstalované jazyky"
 #: ../src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Aktuálně používaný jazyk"
+
+#: ../src/Widgets/LocaleSetting.vala:69
+msgid "Region: "
+msgstr "Oblast: "
+
+#: ../src/Widgets/LocaleSetting.vala:71
+msgid "Formats: "
+msgstr "Formáty: "
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Celsius"
+msgstr "Celsia"
+
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Temperature:"
+msgstr "Teplota:"
+
+#: ../src/Widgets/LocaleSetting.vala:101
+msgid "Set Language"
+msgstr "Nastavit jazyk"
+
+#: ../src/Widgets/LocaleSetting.vala:105
+msgid "Set System Language"
+msgstr "Nastavit jazyk systému"
+
+#: ../src/Widgets/LocaleSetting.vala:107
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr "Použít jazyk pro přihlašovací obrazovku, účet hosta a nové uživatele"
+
+#: ../src/Widgets/LocaleSetting.vala:109
+#, fuzzy
+msgid "Keyboard Settings…"
+msgstr "Přepnout na nastavení klávesnice"
+
+#: ../src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Nainstalovat jazyk"
+
+#: ../src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Odebrat jazyk"
+
+#~ msgid "Language: "
+#~ msgstr "Jazyk: "

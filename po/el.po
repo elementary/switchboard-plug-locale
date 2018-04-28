@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 13:36-0800\n"
+"POT-Creation-Date: 2018-04-28 11:06-0700\n"
 "PO-Revision-Date: 2017-02-21 10:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -18,45 +18,33 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-22 06:07+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "Απαιτείται επαλήθευση για να διαχειριστείτε τις ρυθμίσεις τοποθεσίας"
-
-#: ../src/Plug.vala:50
+#: ../src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Γλώσσα & περιοχή"
 
-#: ../src/Plug.vala:51
+#: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Διαχείριση γλωσσών, και ρύθμιση περιοχής και μορφής"
 
-#: ../src/Plug.vala:145
+#: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Κάποιες αλλαγές δε θα εφαρμοστούν μέχρι να αποσυνδεθείτε"
 
-#: ../src/Plug.vala:152
+#: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Η γλωσσική υποστήριξη δεν είναι πλήρως εγκατεστημένη"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Ολοκλήρωση εγκατάστασης"
 
-#: ../src/Plug.vala:171
+#: ../src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Εγκατάσταση γλώσσας"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Αφαίρεση γλώσσας"
-
-#: ../src/Widgets/LocaleView.vala:59
-msgid "Switch to keyboard settings"
-msgstr "Αλλαγή σε ρυθμίσεις πληκτρολογίου"
+#: ../src/Translations.vala:1
+msgid "Authentication is required to manage locale settings"
+msgstr "Απαιτείται επαλήθευση για να διαχειριστείτε τις ρυθμίσεις τοποθεσίας"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
@@ -74,44 +62,6 @@ msgstr "Γίνεται εγκατάσταση ελλειπούσας γλώσσ�
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: ../src/Widgets/LocaleSetting.vala:79
-msgid "Language: "
-msgstr "Γλώσσα: "
-
-#: ../src/Widgets/LocaleSetting.vala:81
-msgid "Region: "
-msgstr "Περιοχή: "
-
-#: ../src/Widgets/LocaleSetting.vala:83
-msgid "Formats: "
-msgstr "Μορφές: "
-
-#: ../src/Widgets/LocaleSetting.vala:89
-msgid "Celsius"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:90
-msgid "Fahrenheit"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:92
-msgid "Temperature:"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:114
-msgid "Set Language"
-msgstr "Ορισμός γλώσσας"
-
-#: ../src/Widgets/LocaleSetting.vala:141
-msgid "Set System Language"
-msgstr "Καθορισμός γλώσσας συστήματος"
-
-#: ../src/Widgets/LocaleSetting.vala:143
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
-"Ορίστε γλώσσα για την οθόνη εισόδου, τον λογαριασμό επισκέπτη και τους νέους "
-"λογαριασμούς χρηστών"
-
 #: ../src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Εγκατεστημένες γλώσσες"
@@ -119,3 +69,53 @@ msgstr "Εγκατεστημένες γλώσσες"
 #: ../src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Τρέχουσα ενεργή γλώσσα"
+
+#: ../src/Widgets/LocaleSetting.vala:69
+msgid "Region: "
+msgstr "Περιοχή: "
+
+#: ../src/Widgets/LocaleSetting.vala:71
+msgid "Formats: "
+msgstr "Μορφές: "
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Celsius"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Fahrenheit"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Temperature:"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:101
+msgid "Set Language"
+msgstr "Ορισμός γλώσσας"
+
+#: ../src/Widgets/LocaleSetting.vala:105
+msgid "Set System Language"
+msgstr "Καθορισμός γλώσσας συστήματος"
+
+#: ../src/Widgets/LocaleSetting.vala:107
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+"Ορίστε γλώσσα για την οθόνη εισόδου, τον λογαριασμό επισκέπτη και τους νέους "
+"λογαριασμούς χρηστών"
+
+#: ../src/Widgets/LocaleSetting.vala:109
+#, fuzzy
+msgid "Keyboard Settings…"
+msgstr "Αλλαγή σε ρυθμίσεις πληκτρολογίου"
+
+#: ../src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Εγκατάσταση γλώσσας"
+
+#: ../src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Αφαίρεση γλώσσας"
+
+#~ msgid "Language: "
+#~ msgstr "Γλώσσα: "

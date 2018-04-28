@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 13:36-0800\n"
+"POT-Creation-Date: 2018-04-28 11:06-0700\n"
 "PO-Revision-Date: 2018-02-19 23:19+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
-"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-locale/it/>\n"
+"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,47 +20,35 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-03 06:05+0000\n"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "È necessario autenticarsi per gestire le impostazioni locali"
-
-#: ../src/Plug.vala:50
+#: ../src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Lingua e regione"
 
-#: ../src/Plug.vala:51
+#: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Gestisci le lingue e configura la regione e il formato"
 
-#: ../src/Plug.vala:145
+#: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Alcune modifiche non avranno effetto fino alla disconnessione"
 
-#: ../src/Plug.vala:152
+#: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Il supporto linguistico non è installato completamente"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Completa l'installazione"
 
-#: ../src/Plug.vala:171
+#: ../src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Alcune impostazioni richiedono i diritti di amministratore per essere "
 "modificate"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Installa lingua"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Rimuovi lingua"
-
-#: ../src/Widgets/LocaleView.vala:59
-msgid "Switch to keyboard settings"
-msgstr "Passa alle impostazioni della tastiera"
+#: ../src/Translations.vala:1
+msgid "Authentication is required to manage locale settings"
+msgstr "È necessario autenticarsi per gestire le impostazioni locali"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
@@ -78,43 +66,6 @@ msgstr "Installazione lingua mancante"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../src/Widgets/LocaleSetting.vala:79
-msgid "Language: "
-msgstr "Lingua: "
-
-#: ../src/Widgets/LocaleSetting.vala:81
-msgid "Region: "
-msgstr "Nazione: "
-
-#: ../src/Widgets/LocaleSetting.vala:83
-msgid "Formats: "
-msgstr "Formato: "
-
-#: ../src/Widgets/LocaleSetting.vala:89
-msgid "Celsius"
-msgstr "Centigradi"
-
-#: ../src/Widgets/LocaleSetting.vala:90
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
-
-#: ../src/Widgets/LocaleSetting.vala:92
-msgid "Temperature:"
-msgstr "Temperatura:"
-
-#: ../src/Widgets/LocaleSetting.vala:114
-msgid "Set Language"
-msgstr "Imposta lingua"
-
-#: ../src/Widgets/LocaleSetting.vala:141
-msgid "Set System Language"
-msgstr "Imposta lingua di sistema"
-
-#: ../src/Widgets/LocaleSetting.vala:143
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
-"Imposta lingua per la schermata di login, l'account ospite e i nuovi account"
-
 #: ../src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Lingue installate"
@@ -122,3 +73,52 @@ msgstr "Lingue installate"
 #: ../src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Lingua in uso"
+
+#: ../src/Widgets/LocaleSetting.vala:69
+msgid "Region: "
+msgstr "Nazione: "
+
+#: ../src/Widgets/LocaleSetting.vala:71
+msgid "Formats: "
+msgstr "Formato: "
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Celsius"
+msgstr "Centigradi"
+
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Temperature:"
+msgstr "Temperatura:"
+
+#: ../src/Widgets/LocaleSetting.vala:101
+msgid "Set Language"
+msgstr "Imposta lingua"
+
+#: ../src/Widgets/LocaleSetting.vala:105
+msgid "Set System Language"
+msgstr "Imposta lingua di sistema"
+
+#: ../src/Widgets/LocaleSetting.vala:107
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+"Imposta lingua per la schermata di login, l'account ospite e i nuovi account"
+
+#: ../src/Widgets/LocaleSetting.vala:109
+#, fuzzy
+msgid "Keyboard Settings…"
+msgstr "Passa alle impostazioni della tastiera"
+
+#: ../src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Installa lingua"
+
+#: ../src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Rimuovi lingua"
+
+#~ msgid "Language: "
+#~ msgstr "Lingua: "

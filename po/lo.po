@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 13:36-0800\n"
+"POT-Creation-Date: 2018-04-28 11:06-0700\n"
 "PO-Revision-Date: 2014-08-01 01:25+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: Lao <lo@li.org>\n"
@@ -18,44 +18,32 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr ""
-
-#: ../src/Plug.vala:50
+#: ../src/Plug.vala:49
 msgid "Language & Region"
 msgstr ""
 
-#: ../src/Plug.vala:51
+#: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: ../src/Plug.vala:145
+#: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
-#: ../src/Plug.vala:152
+#: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:139
 msgid "Complete Installation"
 msgstr ""
 
-#: ../src/Plug.vala:171
+#: ../src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr ""
-
-#: ../src/Widgets/LocaleView.vala:59
-msgid "Switch to keyboard settings"
+#: ../src/Translations.vala:1
+msgid "Authentication is required to manage locale settings"
 msgstr ""
 
 #: ../src/Widgets/InstallInfoBar.vala:42
@@ -74,46 +62,54 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:79
-msgid "Language: "
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:81
-msgid "Region: "
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:83
-msgid "Formats: "
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:89
-msgid "Celsius"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:90
-msgid "Fahrenheit"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:92
-msgid "Temperature:"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:114
-msgid "Set Language"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:141
-msgid "Set System Language"
-msgstr ""
-
-#: ../src/Widgets/LocaleSetting.vala:143
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
-
 #: ../src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr ""
 
 #: ../src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:69
+msgid "Region: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:71
+msgid "Formats: "
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Celsius"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Fahrenheit"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Temperature:"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:101
+msgid "Set Language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:105
+msgid "Set System Language"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:107
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+
+#: ../src/Widgets/LocaleSetting.vala:109
+msgid "Keyboard Settings…"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr ""
+
+#: ../src/Widgets/LocaleView.vala:51
+msgid "Remove language"
 msgstr ""

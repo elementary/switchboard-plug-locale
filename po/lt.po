@@ -7,59 +7,47 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 13:36-0800\n"
+"POT-Creation-Date: 2018-04-28 11:06-0700\n"
 "PO-Revision-Date: 2018-01-28 20:12+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-locale/lt/>\n"
+"Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-locale/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
-"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
+
+#: ../src/Plug.vala:49
+msgid "Language & Region"
+msgstr "Kalba ir regionas"
+
+#: ../src/Plug.vala:50
+msgid "Manage languages, and configure region and format"
+msgstr "Tvarkyti kalbas ir konfigūruoti regioną bei formatą"
+
+#: ../src/Plug.vala:131
+msgid "Some changes will not take effect until you log out"
+msgstr "Kai kurie pasikeitimai neįsigalios tol, kol neatsijungsite"
+
+#: ../src/Plug.vala:135
+msgid "Language support is not installed completely"
+msgstr "Kalbos palaikymas nėra pilnai įdiegtas"
+
+#: ../src/Plug.vala:139
+msgid "Complete Installation"
+msgstr "Pabaigti įdiegimą"
+
+#: ../src/Plug.vala:151
+msgid "Some settings require administrator rights to be changed"
+msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
 
 #: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
 msgstr "Norint tvarkyti lokalės nustatymus, reikia nustatyti tapatybę"
-
-#: ../src/Plug.vala:50
-msgid "Language & Region"
-msgstr "Kalba ir regionas"
-
-#: ../src/Plug.vala:51
-msgid "Manage languages, and configure region and format"
-msgstr "Tvarkyti kalbas ir konfigūruoti regioną bei formatą"
-
-#: ../src/Plug.vala:145
-msgid "Some changes will not take effect until you log out"
-msgstr "Kai kurie pasikeitimai neįsigalios tol, kol neatsijungsite"
-
-#: ../src/Plug.vala:152
-msgid "Language support is not installed completely"
-msgstr "Kalbos palaikymas nėra pilnai įdiegtas"
-
-#: ../src/Plug.vala:154
-msgid "Complete Installation"
-msgstr "Pabaigti įdiegimą"
-
-#: ../src/Plug.vala:171
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
-
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Įdiegti kalbą"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Šalinti kalbą"
-
-#: ../src/Widgets/LocaleView.vala:59
-msgid "Switch to keyboard settings"
-msgstr "Persijungti į klaviatūros nustatymus"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
@@ -77,44 +65,6 @@ msgstr "Įdiegiama trūkstama kalba"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: ../src/Widgets/LocaleSetting.vala:79
-msgid "Language: "
-msgstr "Kalba: "
-
-#: ../src/Widgets/LocaleSetting.vala:81
-msgid "Region: "
-msgstr "Regionas: "
-
-#: ../src/Widgets/LocaleSetting.vala:83
-msgid "Formats: "
-msgstr "Formatai: "
-
-#: ../src/Widgets/LocaleSetting.vala:89
-msgid "Celsius"
-msgstr "Celsijus"
-
-#: ../src/Widgets/LocaleSetting.vala:90
-msgid "Fahrenheit"
-msgstr "Farenheitas"
-
-#: ../src/Widgets/LocaleSetting.vala:92
-msgid "Temperature:"
-msgstr "Temperatūra:"
-
-#: ../src/Widgets/LocaleSetting.vala:114
-msgid "Set Language"
-msgstr "Nustatyti kalbą"
-
-#: ../src/Widgets/LocaleSetting.vala:141
-msgid "Set System Language"
-msgstr "Nustatyti sistemos kalba"
-
-#: ../src/Widgets/LocaleSetting.vala:143
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
-"Nustatyti kalbą prisijungimo ekranui, svečio paskyrai ir naujoms naudotojų "
-"paskyroms"
-
 #: ../src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Įdiegtos kalbos"
@@ -122,3 +72,53 @@ msgstr "Įdiegtos kalbos"
 #: ../src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Šiuo metu aktyvi kalba"
+
+#: ../src/Widgets/LocaleSetting.vala:69
+msgid "Region: "
+msgstr "Regionas: "
+
+#: ../src/Widgets/LocaleSetting.vala:71
+msgid "Formats: "
+msgstr "Formatai: "
+
+#: ../src/Widgets/LocaleSetting.vala:77
+msgid "Celsius"
+msgstr "Celsijus"
+
+#: ../src/Widgets/LocaleSetting.vala:78
+msgid "Fahrenheit"
+msgstr "Farenheitas"
+
+#: ../src/Widgets/LocaleSetting.vala:80
+msgid "Temperature:"
+msgstr "Temperatūra:"
+
+#: ../src/Widgets/LocaleSetting.vala:101
+msgid "Set Language"
+msgstr "Nustatyti kalbą"
+
+#: ../src/Widgets/LocaleSetting.vala:105
+msgid "Set System Language"
+msgstr "Nustatyti sistemos kalba"
+
+#: ../src/Widgets/LocaleSetting.vala:107
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+"Nustatyti kalbą prisijungimo ekranui, svečio paskyrai ir naujoms naudotojų "
+"paskyroms"
+
+#: ../src/Widgets/LocaleSetting.vala:109
+#, fuzzy
+msgid "Keyboard Settings…"
+msgstr "Persijungti į klaviatūros nustatymus"
+
+#: ../src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Įdiegti kalbą"
+
+#: ../src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Šalinti kalbą"
+
+#~ msgid "Language: "
+#~ msgstr "Kalba: "
