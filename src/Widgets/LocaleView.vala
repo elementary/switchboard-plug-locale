@@ -55,21 +55,10 @@ namespace SwitchboardPlugLocale.Widgets {
                 plug.installer.remove (list_box.get_selected_language_code ());
             });
 
-            var keyboard_button = new Gtk.Button.from_icon_name ("input-keyboard-symbolic", Gtk.IconSize.BUTTON);
-            keyboard_button.tooltip_text = _("Switch to keyboard settings");
-            keyboard_button.clicked.connect (() => {
-                try {
-                    AppInfo.launch_default_for_uri ("settings://input/keyboard/layout", null);
-                } catch (Error e) {
-                    warning ("Failed to open keyboard settings: %s", e.message);
-                }
-            });
-
             var action_bar = new Gtk.ActionBar ();
             action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
             action_bar.pack_start (add_button);
             action_bar.pack_start (remove_button);
-            action_bar.pack_end (keyboard_button);
 
             sidebar = new Gtk.Grid ();
             sidebar.orientation = Gtk.Orientation.VERTICAL;
@@ -77,8 +66,6 @@ namespace SwitchboardPlugLocale.Widgets {
             sidebar.add (action_bar);
 
             locale_setting = new LocaleSetting ();
-            locale_setting.margin_top = 50;
-            locale_setting.hexpand = true;
             locale_setting.settings_changed.connect (() => {
                 plug.infobar.no_show_all = false;
                 plug.infobar.show_all ();
