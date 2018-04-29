@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-04-29 06:07+0000\n"
+"PO-Revision-Date: 2018-05-03 07:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/ja/>\n"
@@ -50,11 +50,11 @@ msgstr "ロケール (言語) 設定を管理するには認証が必要です"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
-msgstr "言語ファイルをインストール中"
+msgstr "言語ファイルをインストールしています"
 
 #: ../src/Widgets/InstallInfoBar.vala:45
 msgid "Removing language"
-msgstr "言語ファイルを削除中"
+msgstr "言語ファイルを削除しています"
 
 #: ../src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
