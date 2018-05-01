@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-04-29 11:28+0000\n"
+"PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/he/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/Plug.vala:49
 msgid "Language & Region"
-msgstr "שפה ומיקום"
+msgstr "שפה ואזור"
 
 #: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
@@ -106,7 +106,7 @@ msgstr "הגדרת שפה למסך הכניסה, לחשבון האורח ולח�
 
 #: ../src/Widgets/LocaleSetting.vala:109
 msgid "Keyboard Settings…"
-msgstr "להגדרות מקלדת…"
+msgstr "הגדרות מקלדת…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
