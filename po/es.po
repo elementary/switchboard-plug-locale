@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-05-03 05:48+0000\n"
-"Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
+"PO-Revision-Date: 2018-05-08 00:11+0000\n"
+"Last-Translator: Iuninefrendor <iuninefrendor@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/es/>\n"
 "Language: es\n"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../src/Widgets/LocaleSetting.vala:109
 msgid "Keyboard Settings…"
-msgstr "Cambiar a ajustes de teclado…"
+msgstr "Cambiar la configuración de teclado…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
