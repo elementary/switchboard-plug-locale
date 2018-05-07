@@ -203,7 +203,11 @@ namespace SwitchboardPlugLocale {
 
             var lang_name = translate_language (Gnome.Languages.get_language_from_locale (locale, null));
 
-            Environment.set_variable ("LANGUAGE", current_language, true);
+            if (current_language != null) {
+                Environment.set_variable ("LANGUAGE", current_language, true);
+            } else {
+                Environment.unset_variable ("LANGUAGE");
+            }
 
             return lang_name;
         }
@@ -220,7 +224,11 @@ namespace SwitchboardPlugLocale {
             if (region.length == 2)
                 region_name = translate_country (Gnome.Languages.get_country_from_code (region, null));
 
-            Environment.set_variable ("LANGUAGE", current_language, true);
+            if (current_language != null) {
+                Environment.set_variable ("LANGUAGE", current_language, true);
+            } else {
+                Environment.unset_variable ("LANGUAGE");
+            }
  
             return region_name;
         }
