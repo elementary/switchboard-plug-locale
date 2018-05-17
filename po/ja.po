@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-05-06 00:10+0000\n"
+"PO-Revision-Date: 2018-05-18 00:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/ja/>\n"
@@ -58,7 +58,7 @@ msgstr "言語ファイルを削除しています"
 
 #: ../src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
-msgstr "不足している言語のインストール"
+msgstr "不足している言語をインストールしています"
 
 #: ../src/Widgets/InstallInfoBar.vala:66
 msgid "Cancel"
@@ -102,8 +102,7 @@ msgstr "システム言語に設定"
 
 #: ../src/Widgets/LocaleSetting.vala:107
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
-"ログイン画面・ゲストアカウント・新しいユーザーアカウントの言語を設定します"
+msgstr "ログイン画面、ゲストアカウント、新しいユーザーアカウントの言語を設定します"
 
 #: ../src/Widgets/LocaleSetting.vala:109
 msgid "Keyboard Settings…"
