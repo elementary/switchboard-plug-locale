@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-05-30 03:57+0000\n"
+"PO-Revision-Date: 2018-05-31 00:03+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
@@ -107,7 +107,7 @@ msgstr "Velg språket for innloggingsskjerm, gjestekonto og nye brukerkontoer"
 
 #: ../src/Widgets/LocaleSetting.vala:109
 msgid "Keyboard Settings…"
-msgstr "Bytt til tastaturinnstillinger…"
+msgstr "Tastaturinnstillinger…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
