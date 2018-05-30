@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-05-30 00:04+0000\n"
+"PO-Revision-Date: 2018-05-30 10:26+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/hu/>\n"
@@ -26,7 +26,7 @@ msgstr "Nyelv és régió"
 
 #: ../src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Nyelvek kezelése, régió és formátum beállítása"
 
 #: ../src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
@@ -46,7 +46,7 @@ msgstr "Néhány beállítás változtatásához adminisztrátor jog szükséges
 
 #: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Hitelesítés szükséges a helybeállítások kezeléséhez"
 
 #: ../src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
@@ -82,15 +82,15 @@ msgstr "Formátumok: "
 
 #: ../src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: ../src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: ../src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
-msgstr ""
+msgstr "Hőmérséklet:"
 
 #: ../src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
@@ -107,9 +107,8 @@ msgstr ""
 "felhasználói fiókokhoz."
 
 #: ../src/Widgets/LocaleSetting.vala:109
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "Váltás a billentyűzet beállításokra"
+msgstr "Billentyűzet beállítások…"
 
 #: ../src/Widgets/LocaleView.vala:42
 msgid "Install language"
