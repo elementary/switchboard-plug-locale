@@ -239,7 +239,7 @@ namespace SwitchboardPlugLocale {
             if (permission != null)
                 return permission;
             try {
-                permission = new Polkit.Permission.sync ("org.pantheon.switchboard.locale.administration", new Polkit.UnixProcess (Posix.getpid ()));
+                permission = new Polkit.Permission.sync ("io.elementary.switchboard.locale.administration", new Polkit.UnixProcess (Posix.getpid ()));
                 return permission;
             } catch (Error e) {
                 critical (e.message);

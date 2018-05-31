@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema path="/org/pantheon/switchboard/plug/locale/" id="org.pantheon.switchboard.plug.locale" gettext-domain="switchboard">
+	<schema path="/io/elementary/switchboard/plug/locale/" id="io.elementary.switchboard.plug.locale">
 		<key name="input-selections" type="a(ss)">
 			<default>[]</default>
 			<summary>Saves selected input sources per language.</summary>

@@ -42,14 +42,14 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 add_definitions (-w)
 
 include(GSettings)
-add_schema("data/schema/org.pantheon.switchboard.plug.locale.gschema.xml")
+add_schema("data/schema/io.elementary.switchboard.plug.locale.gschema.xml")
 
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
 #Polkit Policy
-configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.locale.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.locale.policy)
-install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.locale.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
+configure_file (${CMAKE_SOURCE_DIR}/data/io.elementary.switchboard.locale.policy.cmake ${CMAKE_BINARY_DIR}/data/io.elementary.switchboard.locale.policy)
+install (FILES ${CMAKE_BINARY_DIR}/data/io.elementary.switchboard.locale.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 
 # Traslation stuff
 add_subdirectory (po)
