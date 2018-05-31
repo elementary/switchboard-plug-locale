@@ -6,7 +6,7 @@
   <vendor>elementary</vendor>
   <vendor_url>http://elementaryos.org/</vendor_url>
 
-  <action id="org.pantheon.switchboard.locale.administration">
+  <action id="io.elementary.switchboard.locale.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage locale settings </description>
     <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to manage locale settings</message>
     <icon_name>preferences-desktop-locale</icon_name>
