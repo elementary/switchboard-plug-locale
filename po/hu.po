@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-05-31 00:03+0000\n"
+"PO-Revision-Date: 2018-06-02 00:06+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/hu/>\n"
@@ -42,7 +42,7 @@ msgstr "Telepítés befejezése"
 
 #: ../src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatása adminisztrátori jogokat igényel"
+msgstr "Egyes beállítások megváltoztatása rendszergazdai jogokat igényel"
 
 #: ../src/Translations.vala:1
 msgid "Authentication is required to manage locale settings"
