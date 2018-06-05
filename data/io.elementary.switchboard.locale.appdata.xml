@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-​  <id>io.elementary.switchboard-plug-applications</id>
+​  <id>io.elementary.switchboard-plug-locale</id>
 ​  <extends>io.elementary.switchboard</extends>
 ​  <name>Locale</name>
 ​  <summary>Manage languages, and configure region and format</summary>
