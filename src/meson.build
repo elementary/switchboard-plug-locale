@@ -17,6 +17,7 @@ switchboard_dep = dependency('switchboard-2.0')
 shared_module(
     meson.project_name(),
     plug_files,
+    constants,
     dependencies: [
         dependency('accountsservice'),
         dependency('glib-2.0'),
@@ -26,7 +27,6 @@ shared_module(
         dependency('granite'),
         dependency('gtk+-3.0'),
         dependency('ibus-1.0'),
-        dependency('monetary'),
         dependency('polkit-agent-1'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
