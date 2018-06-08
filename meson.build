@@ -3,6 +3,7 @@ project('locale', 'vala', 'c')
 gettext_name = meson.project_name() + '-plug'
 gnome = import('gnome')
 i18n = import('i18n')
+switchboard_dep = dependency('switchboard-2.0')
 pkg_data_dir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personal', 'pantheon-' + meson.project_name())
 
 

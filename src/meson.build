@@ -12,8 +12,6 @@ plug_files = files(
     'Widgets/Preview.vala'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
-
 shared_module(
     meson.project_name(),
     join_paths(meson.source_root(), 'vapi', 'monetary.vapi'),
