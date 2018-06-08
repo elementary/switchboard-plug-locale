@@ -16,7 +16,7 @@ switchboard_dep = dependency('switchboard-2.0')
 
 shared_module(
     meson.project_name(),
-    '../vapi/monetary.vapi',
+    join_paths(meson.source_root(), 'vapi', 'monetary.vapi'),
     plug_files,
     constants,
     dependencies: [
