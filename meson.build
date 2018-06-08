@@ -8,7 +8,8 @@ pkg_data_dir =  join_paths(get_option('datadir'), 'personal', 'pantheon-' + meso
 
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
-    language:'c'
+    '-DGNOME_DESKTOP_USE_UNSTABLE_API',
+    language: 'c'
 )
 
 add_project_arguments(
