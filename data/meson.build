@@ -13,3 +13,8 @@ install_data(
     'io.elementary.switchboard.plug.locale.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )
+
+install_data(
+    'languagelist',
+    install_dir: pkg_data_dir
+)
