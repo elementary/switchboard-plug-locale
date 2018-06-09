@@ -1,17 +1,17 @@
 Source: switchboard-plug-locale
 Section: x11
 Priority: optional
-Maintainer: Simon Dieterle <smndtrl@gmail.com>
-Build-Depends: cmake,
-               debhelper (>= 9),
+Maintainer: elementary LLC <builds@elementary.io>
+Build-Depends: debhelper (>= 10.5.1),
                libgranite-dev,
                libswitchboard-2.0-dev,
                libgnome-desktop-3-dev,
                libaccountsservice-dev,
                libibus-1.0-dev,
+               meson,
                valac (>= 0.34.1)
-Standards-Version: 3.9.5
-Homepage: https://launchpad.net/switchboard-plug-locale
+Standards-Version: 4.1.1
+Homepage: https://github.com/elementary/switchboard-plug-locale
 
 Package: switchboard-plug-locale
 Architecture: any
