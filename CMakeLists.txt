@@ -51,6 +51,9 @@ file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 configure_file (${CMAKE_SOURCE_DIR}/data/io.elementary.switchboard.locale.policy.cmake ${CMAKE_BINARY_DIR}/data/io.elementary.switchboard.locale.policy)
 install (FILES ${CMAKE_BINARY_DIR}/data/io.elementary.switchboard.locale.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 
+#AppData
+install (FILES ${CMAKE_SOURCE_DIR}/data/io.elementary.switchboard.locale.appdata.xml DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/metainfo)
+
 # Traslation stuff
 add_subdirectory (po)
 
