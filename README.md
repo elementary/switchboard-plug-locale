@@ -10,7 +10,7 @@ You'll need the following dependencies:
 * libgnome-desktop-3-dev
 * libgranite-dev
 * libswitchboard-2.0-dev
-* meson
+* meson >= 0.46.1
 * valac
 
 Run `meson` to configure the build environment and then `ninja` to build
