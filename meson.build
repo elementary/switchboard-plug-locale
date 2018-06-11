@@ -1,4 +1,4 @@
-project('locale-plug', 'vala', 'c')
+project('locale-plug', 'vala', 'c', meson_version: '>= 0.46.1')
 
 gnome = import('gnome')
 i18n = import('i18n')
