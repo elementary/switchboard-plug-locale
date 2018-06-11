@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 11:06-0700\n"
+"POT-Creation-Date: 2018-06-11 09:08-0700\n"
 "PO-Revision-Date: 2018-02-19 23:19+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
@@ -20,105 +20,104 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-03 06:05+0000\n"
 
-#: ../src/Plug.vala:49
+#: src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Lingua e regione"
 
-#: ../src/Plug.vala:50
+#: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Gestisci le lingue e configura la regione e il formato"
 
-#: ../src/Plug.vala:131
+#: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Alcune modifiche non avranno effetto fino alla disconnessione"
 
-#: ../src/Plug.vala:135
+#: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Il supporto linguistico non è installato completamente"
 
-#: ../src/Plug.vala:139
+#: src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Completa l'installazione"
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Alcune impostazioni richiedono i diritti di amministratore per essere "
 "modificate"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "È necessario autenticarsi per gestire le impostazioni locali"
-
-#: ../src/Widgets/InstallInfoBar.vala:42
+#: src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
 msgstr "Installazione della lingua"
 
-#: ../src/Widgets/InstallInfoBar.vala:45
+#: src/Widgets/InstallInfoBar.vala:45
 msgid "Removing language"
 msgstr "Rimozione della lingua"
 
-#: ../src/Widgets/InstallInfoBar.vala:48
+#: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
 msgstr "Installazione lingua mancante"
 
-#: ../src/Widgets/InstallInfoBar.vala:66
+#: src/Widgets/InstallInfoBar.vala:66
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Lingue installate"
 
-#: ../src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Lingua in uso"
 
-#: ../src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Installa lingua"
+
+#: src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Rimuovi lingua"
+
+#: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
 msgstr "Nazione: "
 
-#: ../src/Widgets/LocaleSetting.vala:71
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "Formato: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr "Centigradi"
 
-#: ../src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: ../src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "Imposta lingua"
 
-#: ../src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "Imposta lingua di sistema"
 
-#: ../src/Widgets/LocaleSetting.vala:107
+#: src/Widgets/LocaleSetting.vala:107
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Imposta lingua per la schermata di login, l'account ospite e i nuovi account"
 
-#: ../src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:109
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "Passa alle impostazioni della tastiera"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Installa lingua"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Rimuovi lingua"
+#~ msgid "Authentication is required to manage locale settings"
+#~ msgstr "È necessario autenticarsi per gestire le impostazioni locali"
 
 #~ msgid "Language: "
 #~ msgstr "Lingua: "

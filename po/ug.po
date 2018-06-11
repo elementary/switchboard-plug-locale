@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 11:06-0700\n"
+"POT-Creation-Date: 2018-06-11 09:08-0700\n"
 "PO-Revision-Date: 2017-01-02 02:59+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,103 +13,102 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-03 06:15+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: ../src/Plug.vala:49
+#: src/Plug.vala:49
 msgid "Language & Region"
 msgstr "تىل ۋە رايون"
 
-#: ../src/Plug.vala:50
+#: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "تىللارنى باشقۇرۇش، رايون ۋە فورماتلارنى تەڭشەش"
 
-#: ../src/Plug.vala:131
+#: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "ھىساۋاتتىن چىكىنمىگۈچە بەزى ئۆزگەرتىشلەر كۈچكە ئىگە بولمايدۇ"
 
-#: ../src/Plug.vala:135
+#: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "تىل قوللىشى تولۇق ئورنىتىلمىغان"
 
-#: ../src/Plug.vala:139
+#: src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "تولۇق ئورنىتىش"
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈر"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "تېل تەڭشەكلىرىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
-
-#: ../src/Widgets/InstallInfoBar.vala:42
+#: src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
 msgstr "تىلنى ئورنىتىۋاتىدۇ"
 
-#: ../src/Widgets/InstallInfoBar.vala:45
+#: src/Widgets/InstallInfoBar.vala:45
 msgid "Removing language"
 msgstr "تىلنى ئۆچۈرىۋاتىدۇ"
 
-#: ../src/Widgets/InstallInfoBar.vala:48
+#: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
 msgstr "يۈتكەن تىللارنى ئورنىتىۋاتىدۇ"
 
-#: ../src/Widgets/InstallInfoBar.vala:66
+#: src/Widgets/InstallInfoBar.vala:66
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇرۇش"
 
-#: ../src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "قوشۇلغان تىللار"
 
-#: ../src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "نۆۋەتتىكى ئاكتىپ تىل"
 
-#: ../src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "تىل ئورنىتىش"
+
+#: src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "تىل ئۆچۈرۈش"
+
+#: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
 msgstr "رايون: "
 
-#: ../src/Widgets/LocaleSetting.vala:71
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "فورماتلار: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "تىل بەلگىلەش"
 
-#: ../src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "سىستېما تىلىنى بەلگىلەش"
 
-#: ../src/Widgets/LocaleSetting.vala:107
+#: src/Widgets/LocaleSetting.vala:107
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "كىرىش ئىكرانى، مىھمان ھىساۋاتى ۋە يىڭى ئابونت ھىساۋاتلىرى ئۈچۈن تىل بەلگىلەش"
 
-#: ../src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:109
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "تىل ئورنىتىش"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "تىل ئۆچۈرۈش"
+#~ msgid "Authentication is required to manage locale settings"
+#~ msgstr "تېل تەڭشەكلىرىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
 
 #~ msgid "Language: "
 #~ msgstr "تىل: "
