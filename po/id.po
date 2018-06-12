@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:49
@@ -85,15 +85,15 @@ msgstr "Format: "
 
 #: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatur:"
 
 #: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
@@ -110,7 +110,7 @@ msgstr "Tetapkan bahasa untuk layar masuk, akun tamu, dan akun pengguna baru"
 #: src/Widgets/LocaleSetting.vala:109
 #, fuzzy
 msgid "Keyboard Settings…"
-msgstr "Beralih ke pengaturan papan tik"
+msgstr "Pengaturan Papan Ketik…"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "Otentikasi diperlukan untuk mengelola pengaturan lokal"
