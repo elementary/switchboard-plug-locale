@@ -28,6 +28,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private string selected_language = "";
         private string selected_format = "";
         private bool has_region;
+        private EndLabel region_endlabel;
 
         private static GLib.Settings? temperature_settings = null;
 
@@ -65,8 +66,10 @@ namespace SwitchboardPlugLocale.Widgets {
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
+            region_endlabel = new EndLabel (_("Region: "));
+
             content_area.halign = Gtk.Align.CENTER;
-            content_area.attach (new EndLabel (_("Region: ")), 0, 2, 1, 1);
+            content_area.attach (region_endlabel, 0, 2, 1, 1);
             content_area.attach (region_combobox, 1, 2, 1, 1);
             content_area.attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
             content_area.attach (format_combobox, 1, 3, 1, 1);
@@ -249,10 +252,10 @@ namespace SwitchboardPlugLocale.Widgets {
             region_combobox.active = selected_region;
 
             if (i == 0) {
-                content_area.get_child_at (0, 2).hide ();
+                region_endlabel.hide ();
                 region_combobox.hide ();
             } else {
-                content_area.get_child_at (0, 2).show ();
+                region_endlabel.show ();
                 region_combobox.show ();
             }
 
