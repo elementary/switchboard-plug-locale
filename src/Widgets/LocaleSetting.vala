@@ -248,6 +248,14 @@ namespace SwitchboardPlugLocale.Widgets {
             region_combobox.sensitive = (i != 1 && i != 0);
             region_combobox.active = selected_region;
 
+            if (i == 0) {
+                content_area.get_child_at (0, 2).hide ();
+                region_combobox.hide ();
+            } else {
+                content_area.get_child_at (0, 2).show ();
+                region_combobox.show ();
+            }
+
             if (selected_language == "" && has_region)
                 selected_language = "%s_%s".printf (language, get_region ());
             else if (selected_language == "" && !has_region)
