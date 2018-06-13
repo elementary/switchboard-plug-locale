@@ -27,6 +27,7 @@ namespace SwitchboardPlugLocale.Installer {
         string []? missing_packages = null;
         public bool install_cancellable;
         public TransactionMode transaction_mode;
+        public string transaction_language_code;
 
         public signal void install_finished (string langcode);
         public signal void install_failed ();
@@ -58,6 +59,7 @@ namespace SwitchboardPlugLocale.Installer {
         public void install (string language) {
             transaction_mode = TransactionMode.INSTALL;
             var packages = get_remaining_packages_for_language (language);
+            transaction_language_code = language;
 
             foreach (var packet in packages) {
                 message("Packet: %s", packet);
@@ -111,6 +113,7 @@ namespace SwitchboardPlugLocale.Installer {
 
         public void remove (string languagecode) {
             transaction_mode = TransactionMode.REMOVE;
+            transaction_language_code = languagecode;
 
             var installed = get_to_remove_packages_for_language (languagecode);
 
@@ -121,6 +124,7 @@ namespace SwitchboardPlugLocale.Installer {
                     var transaction_id = aptd.remove_packages.end (res);
                     transactions.@set (transaction_id, "r-"+languagecode);
                     run_transaction (transaction_id);
+
                 } catch (Error e) {
                     warning ("Could not queue deletions: %s", e.message);
                 }
