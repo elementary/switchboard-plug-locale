@@ -39,10 +39,10 @@ namespace SwitchboardPlugLocale.Widgets {
             set {
                 switch (value) {
                     case Installer.UbuntuInstaller.TransactionMode.INSTALL:
-                        label.label = _("Installing language");
+                        label.label = _("Installing %s").printf (transaction_language_name);
                         break;
                     case Installer.UbuntuInstaller.TransactionMode.REMOVE:
-                        label.label = _("Removing language");
+                        label.label = _("Removing %s").printf (transaction_language_name);
                         break;
                     case Installer.UbuntuInstaller.TransactionMode.INSTALL_MISSING:
                         label.label = _("Installing missing language");
@@ -50,6 +50,8 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             }
         }
+
+        public string transaction_language_name;
 
         private Gtk.ProgressBar progress_bar;
         private Gtk.Label label;

@@ -201,6 +201,7 @@ namespace SwitchboardPlugLocale {
         private void on_progress_changed (int progress) {
             install_infobar.progress = progress;
             install_infobar.is_cancellable = installer.install_cancellable;
+            install_infobar.transaction_language_name = Utils.translate (installer.transaction_language_code, null);
             install_infobar.transaction_mode = installer.transaction_mode;
         }
     }
