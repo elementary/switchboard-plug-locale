@@ -248,7 +248,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 i++;
             }
 
-            region_combobox.sensitive = (i != 1 && i != 0);
             region_combobox.active = selected_region;
 
             if (i == 0) {
