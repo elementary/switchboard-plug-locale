@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 11:06-0700\n"
+"POT-Creation-Date: 2018-06-11 09:08-0700\n"
 "PO-Revision-Date: 2015-07-14 17:30+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -18,104 +18,100 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: ../src/Plug.vala:49
+#: src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Gjuha dhe Rajoni"
 
-#: ../src/Plug.vala:50
+#: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: ../src/Plug.vala:131
+#: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Disa ndryshime nuk do kenë efekt deri kur të dalësh nga llogaria"
 
-#: ../src/Plug.vala:135
+#: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Mbështetja për gjuhën nuk është e instaluar plotësisht"
 
-#: ../src/Plug.vala:139
+#: src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Plotëso instalimin"
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr "Disa parametra kërkojnë të drejtat e administratorit për tu ndryshuar"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr ""
-
-#: ../src/Widgets/InstallInfoBar.vala:42
+#: src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
 msgstr "Duke instaluar gjuhën"
 
-#: ../src/Widgets/InstallInfoBar.vala:45
+#: src/Widgets/InstallInfoBar.vala:45
 msgid "Removing language"
 msgstr "Duke hequr gjuhën"
 
-#: ../src/Widgets/InstallInfoBar.vala:48
+#: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
 msgstr "Duke instaluar gjuhën që mungon"
 
-#: ../src/Widgets/InstallInfoBar.vala:66
+#: src/Widgets/InstallInfoBar.vala:66
 msgid "Cancel"
 msgstr "Anulo"
 
-#: ../src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Gjuhët e instaluara"
 
-#: ../src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Gjuha në përdorim"
 
-#: ../src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Instalo gjuhë"
+
+#: src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Hiqe gjuhën"
+
+#: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
 msgstr "Rajoni: "
 
-#: ../src/Widgets/LocaleSetting.vala:71
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "Formatet: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "Vendos gjuhën"
 
-#: ../src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "Vendos gjuhën e sistemit"
 
-#: ../src/Widgets/LocaleSetting.vala:107
+#: src/Widgets/LocaleSetting.vala:107
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Vendos gjuhën për ekranin e hyrjes, llogarinë mysafir dhe llogaritë e reja "
 "të përdoruesit"
 
-#: ../src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:109
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "Kalo tek rregullimet e tastierës"
-
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Instalo gjuhë"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Hiqe gjuhën"
 
 #~ msgid "Language: "
 #~ msgstr "Gjuha: "

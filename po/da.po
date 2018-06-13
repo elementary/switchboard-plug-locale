@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 11:06-0700\n"
+"POT-Creation-Date: 2018-06-11 09:08-0700\n"
 "PO-Revision-Date: 2018-05-07 00:03+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-locale/da/>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,102 +20,101 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-15 06:49+0000\n"
 
-#: ../src/Plug.vala:49
+#: src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Sprog & Region"
 
-#: ../src/Plug.vala:50
+#: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Håndter sprog og konfigurer region og format"
 
-#: ../src/Plug.vala:131
+#: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Nogle ændringer vil ikke træde i kraft før du logger ud"
 
-#: ../src/Plug.vala:135
+#: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Sprogunderstøttelse er ikke komplet installeret"
 
-#: ../src/Plug.vala:139
+#: src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Fuldfør installation"
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "Godkendelse er påkrævet for at håndtere lokalitetsindstillinger"
-
-#: ../src/Widgets/InstallInfoBar.vala:42
+#: src/Widgets/InstallInfoBar.vala:42
 msgid "Installing language"
 msgstr "Installerer sprog"
 
-#: ../src/Widgets/InstallInfoBar.vala:45
+#: src/Widgets/InstallInfoBar.vala:45
 msgid "Removing language"
 msgstr "Fjerner sprog"
 
-#: ../src/Widgets/InstallInfoBar.vala:48
+#: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
 msgstr "Installerer manglende sprog"
 
-#: ../src/Widgets/InstallInfoBar.vala:66
+#: src/Widgets/InstallInfoBar.vala:66
 msgid "Cancel"
 msgstr "Annuller"
 
-#: ../src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Installerede sprog"
 
-#: ../src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Nuværende aktive sprog"
 
-#: ../src/Widgets/LocaleSetting.vala:69
-msgid "Region: "
-msgstr "Region: "
-
-#: ../src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
-msgstr "Formater: "
-
-#: ../src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
-msgstr "Celsius"
-
-#: ../src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
-
-#: ../src/Widgets/LocaleSetting.vala:80
-msgid "Temperature:"
-msgstr "Temperatur:"
-
-#: ../src/Widgets/LocaleSetting.vala:101
-msgid "Set Language"
-msgstr "Vælg sprog"
-
-#: ../src/Widgets/LocaleSetting.vala:105
-msgid "Set System Language"
-msgstr "Angiv systemets sprog"
-
-#: ../src/Widgets/LocaleSetting.vala:107
-msgid "Set language for login screen, guest account and new user accounts"
-msgstr "Angiv sprog for loginskærm, gæstekonto og nye brugerkonti"
-
-#: ../src/Widgets/LocaleSetting.vala:109
-msgid "Keyboard Settings…"
-msgstr "Tastaturindstillinger…"
-
-#: ../src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:42
 msgid "Install language"
 msgstr "Installér sprog"
 
-#: ../src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:51
 msgid "Remove language"
 msgstr "Fjern sprog"
+
+#: src/Widgets/LocaleSetting.vala:69
+msgid "Region: "
+msgstr "Region: "
+
+#: src/Widgets/LocaleSetting.vala:71
+msgid "Formats: "
+msgstr "Formater: "
+
+#: src/Widgets/LocaleSetting.vala:77
+msgid "Celsius"
+msgstr "Celsius"
+
+#: src/Widgets/LocaleSetting.vala:78
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: src/Widgets/LocaleSetting.vala:80
+msgid "Temperature:"
+msgstr "Temperatur:"
+
+#: src/Widgets/LocaleSetting.vala:101
+msgid "Set Language"
+msgstr "Vælg sprog"
+
+#: src/Widgets/LocaleSetting.vala:105
+msgid "Set System Language"
+msgstr "Angiv systemets sprog"
+
+#: src/Widgets/LocaleSetting.vala:107
+msgid "Set language for login screen, guest account and new user accounts"
+msgstr "Angiv sprog for loginskærm, gæstekonto og nye brugerkonti"
+
+#: src/Widgets/LocaleSetting.vala:109
+msgid "Keyboard Settings…"
+msgstr "Tastaturindstillinger…"
+
+#~ msgid "Authentication is required to manage locale settings"
+#~ msgstr "Godkendelse er påkrævet for at håndtere lokalitetsindstillinger"
 
 #~ msgid "Language: "
 #~ msgstr "Sprog: "
