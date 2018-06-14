@@ -1,0 +1,11 @@
+src/Plug.vala
+src/Utils.vala
+src/LocaleManager.vala
+src/Installer/UbuntuInstaller.vala
+src/Installer/aptd-client.vala
+src/Widgets/InstallPopover.vala
+src/Widgets/InstallInfoBar.vala
+src/Widgets/LanguageListBox.vala
+src/Widgets/LocaleView.vala
+src/Widgets/LocaleSetting.vala
+src/Widgets/Preview.vala
