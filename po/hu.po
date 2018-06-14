@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 11:06-0700\n"
-"PO-Revision-Date: 2018-06-02 00:06+0000\n"
+"PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-locale/hu/>\n"
@@ -34,7 +34,7 @@ msgstr "Egyes változások kijelentkezés után lépnek érvénybe"
 
 #: ../src/Plug.vala:135
 msgid "Language support is not installed completely"
-msgstr "Nyelvi támogatás nincs teljesen telepítve"
+msgstr "A nyelvi támogatás nincs teljesen telepítve"
 
 #: ../src/Plug.vala:139
 msgid "Complete Installation"
