@@ -19,14 +19,3 @@ Depends: aptdaemon, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: Region & Language plug for Switchboard
  Change your region and language settings
-
-Package: switchboard-plug-locale-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: switchboard-plug-locale (= ${binary:Version}), ${misc:Depends}
-Enhances: switchboard-plug-locale
-Description: Region & Language plug for Switchboard (debugging symbols)
- Change your region and language settings
- .
- This package contains debugging symbols for switchboard-plug-locale.
