@@ -1,11 +1,11 @@
-gettext_declaration = configure_file(
+configured_policy_file = configure_file(
     configuration: configuration_data,
     input: 'io.elementary.switchboard.locale.policy.in.in',
     output: '@BASENAME@'
 )
 
 i18n.merge_file(
-    input: gettext_declaration,
+    input: configured_policy_file,
     output: 'io.elementary.switchboard.locale.policy',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,

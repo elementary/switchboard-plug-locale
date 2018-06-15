@@ -12,9 +12,10 @@ plug_files = files(
     'Widgets/Preview.vala'
 )
 
+vala_compiler = meson.get_compiler('vala')
+
 shared_module(
     meson.project_name(),
-    join_paths(meson.source_root(), 'vapi', 'monetary.vapi'),
     plug_files,
     constants,
     dependencies: [
@@ -27,7 +28,8 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('ibus-1.0'),
         dependency('polkit-gobject-1'),
-        meson.get_compiler('vala').find_library('posix'),
+        vala_compiler.find_library('posix'),
+        vala_compiler.find_library('monetary', dirs: join_paths(meson.source_root(), 'vapi')),
         switchboard_dep
     ],
     install: true,
