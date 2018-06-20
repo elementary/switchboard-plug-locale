@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 11:06-0700\n"
+"POT-Creation-Date: 2018-06-20 08:02-0700\n"
 "PO-Revision-Date: 2018-05-06 00:10+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-locale/nl/>\n"
+"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,102 +20,103 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
-#: ../src/Plug.vala:49
+#: src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Taal & Regio"
 
-#: ../src/Plug.vala:50
+#: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Beheer talen en configureer regio's en formaten"
 
-#: ../src/Plug.vala:131
+#: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Sommige wijzigingen worden pas van kracht nadat u zich heeft afgemeld"
 
-#: ../src/Plug.vala:135
+#: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Taalondersteuning is niet volledig geïnstalleerd"
 
-#: ../src/Plug.vala:139
+#: src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Volledige Installatie"
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "Authenticatie is vereist om de locatie-instellingen te beheren"
-
-#: ../src/Widgets/InstallInfoBar.vala:42
-msgid "Installing language"
+#: src/Widgets/InstallInfoBar.vala:42
+#, fuzzy, c-format
+msgid "Installing %s"
 msgstr "Taal installeren"
 
-#: ../src/Widgets/InstallInfoBar.vala:45
-msgid "Removing language"
+#: src/Widgets/InstallInfoBar.vala:45
+#, fuzzy, c-format
+msgid "Removing %s"
 msgstr "Taal verwijderen"
 
-#: ../src/Widgets/InstallInfoBar.vala:48
+#: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
 msgstr "Installeer ontbrekende taal"
 
-#: ../src/Widgets/InstallInfoBar.vala:66
+#: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Geïnstalleerde talen"
 
-#: ../src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Huidige actieve taal"
 
-#: ../src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Installeer taal"
+
+#: src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Taal verwijderen"
+
+#: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
 msgstr "Regio: "
 
-#: ../src/Widgets/LocaleSetting.vala:71
+#: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
 msgstr "Formaten: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
 msgstr ""
 
-#: ../src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
 msgstr "Taal instellen"
 
-#: ../src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
 msgstr "Systeemtaal instellen"
 
-#: ../src/Widgets/LocaleSetting.vala:107
+#: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Zet de taal voor het aanmeldscherm, het gast account en nieuwe gebruikers"
 
-#: ../src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:112
 msgid "Keyboard Settings…"
 msgstr "Toetsenbordinstellingen…"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Installeer taal"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Taal verwijderen"
+#~ msgid "Authentication is required to manage locale settings"
+#~ msgstr "Authenticatie is vereist om de locatie-instellingen te beheren"
 
 #~ msgid "Language: "
 #~ msgstr "Taal: "

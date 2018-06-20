@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 11:06-0700\n"
+"POT-Creation-Date: 2018-06-20 08:02-0700\n"
 "PO-Revision-Date: 2018-02-09 19:52+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -21,103 +21,104 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: ../src/Plug.vala:49
+#: src/Plug.vala:49
 msgid "Language & Region"
 msgstr "Jezik in področje"
 
-#: ../src/Plug.vala:50
+#: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
 msgstr "Nastavitve jezika, regije in regijskih formatov"
 
-#: ../src/Plug.vala:131
+#: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Spremembe ne bodo vidne dokler se ne odjavite"
 
-#: ../src/Plug.vala:135
+#: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Jezikovna podpora ni v celoti nameščena"
 
-#: ../src/Plug.vala:139
+#: src/Plug.vala:139
 msgid "Complete Installation"
 msgstr "Končaj namestitev"
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
-#: ../src/Translations.vala:1
-msgid "Authentication is required to manage locale settings"
-msgstr "Potrebna je avtentikacija za upravljanje krajevnih nastavitev"
-
-#: ../src/Widgets/InstallInfoBar.vala:42
-msgid "Installing language"
+#: src/Widgets/InstallInfoBar.vala:42
+#, fuzzy, c-format
+msgid "Installing %s"
 msgstr "Nameščanje jezika"
 
-#: ../src/Widgets/InstallInfoBar.vala:45
-msgid "Removing language"
+#: src/Widgets/InstallInfoBar.vala:45
+#, fuzzy, c-format
+msgid "Removing %s"
 msgstr "Odstranjevanje jezika"
 
-#: ../src/Widgets/InstallInfoBar.vala:48
+#: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
 msgstr "Nameščanje manjkajočega jezika"
 
-#: ../src/Widgets/InstallInfoBar.vala:66
+#: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: ../src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
 msgstr "Nameščeni jeziki"
 
-#: ../src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
 msgstr "Trenutno aktivni jezik"
 
-#: ../src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleView.vala:42
+msgid "Install language"
+msgstr "Namesti jezik"
+
+#: src/Widgets/LocaleView.vala:51
+msgid "Remove language"
+msgstr "Izbriši jezik"
+
+#: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
 msgstr "Področje: "
 
-#: ../src/Widgets/LocaleSetting.vala:71
+#: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
 msgstr "Formati: "
 
-#: ../src/Widgets/LocaleSetting.vala:77
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
 msgstr "°C"
 
-#: ../src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
 msgstr "°F"
 
-#: ../src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: ../src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
 msgstr "Nastavi jezik"
 
-#: ../src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
 msgstr "Nastavi jezik sistema"
 
-#: ../src/Widgets/LocaleSetting.vala:107
+#: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nastavi jezik za prijavni zaslon, račun gosta in račun novih uporabnikov"
 
-#: ../src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:112
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "Preklopi v nastavitve tipkovnice"
 
-#: ../src/Widgets/LocaleView.vala:42
-msgid "Install language"
-msgstr "Namesti jezik"
-
-#: ../src/Widgets/LocaleView.vala:51
-msgid "Remove language"
-msgstr "Izbriši jezik"
+#~ msgid "Authentication is required to manage locale settings"
+#~ msgstr "Potrebna je avtentikacija za upravljanje krajevnih nastavitev"
 
 #~ msgid "Language: "
 #~ msgstr "Jezik: "
