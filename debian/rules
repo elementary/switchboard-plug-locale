@@ -10,7 +10,10 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ 
+	dh $@ --buildsystem=meson
+
+override_dh_missing:
+	dh_missing --fail-missing --list-missing
 
 override_dh_strip:
-	dh_strip --dbg-package=switchboard-plug-locale-dbg
+	dh_strip -p switchboard-plug-locale --dbgsym-migration='switchboard-plug-locale-dbg (<< 0.2.3)'
