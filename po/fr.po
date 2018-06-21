@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-05-01 22:21+0000\n"
-"Last-Translator: Romain De Filippi <romain@defilippi.fr>\n"
-"Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/fr/>\n"
+"PO-Revision-Date: 2018-06-21 20:07+0000\n"
+"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"Language-Team: French <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,14 +48,14 @@ msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Installation de la langue"
+msgstr "Installation de la langue : %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Suppression de la langue"
+msgstr "Suppression de la langue : %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
