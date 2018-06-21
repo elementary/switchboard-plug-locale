@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-05-07 00:03+0000\n"
+"PO-Revision-Date: 2018-06-21 18:26+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/da/>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,14 +46,14 @@ msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Installerer sprog"
+msgstr "Installerer %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Fjerner sprog"
+msgstr "Fjerner %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
