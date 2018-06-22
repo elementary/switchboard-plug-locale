@@ -72,7 +72,7 @@ namespace SwitchboardPlugLocale {
                 critical (e.message);
             }
 
-            settings = new Settings ("io.elementary.switchboard.plug.locale");
+            settings = new Settings ("io.elementary.switchboard.locale");
             settings.changed.connect (on_settings_changed);
 
             is_connected = account_proxy != null && locale1_proxy != null;
