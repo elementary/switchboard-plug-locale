@@ -8,10 +8,11 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-04-29 20:34+0000\n"
+"PO-Revision-Date: 2018-06-22 12:54+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-locale/en_CA/>\n"
+"Language-Team: English (Canada) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"locale/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,14 +46,14 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Some settings require administrator rights to be changed"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Installing language"
+msgstr "Installing %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Removing language"
+msgstr "Removing %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
