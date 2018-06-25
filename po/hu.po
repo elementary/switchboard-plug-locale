@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-06-18 00:05+0000\n"
+"PO-Revision-Date: 2018-06-23 08:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-locale/hu/>\n"
+"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-locale/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,14 +46,14 @@ msgstr ""
 "Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Nyelv telepítése"
+msgstr "%s telepítése"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Nyelv eltávolítása"
+msgstr "%s eltávolítása"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
