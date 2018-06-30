@@ -20,10 +20,12 @@ namespace SwitchboardPlugLocale {
         private static string[] installed_languages;
         private static Gee.ArrayList<string> installed_locales;
         private static Gee.HashMap<string, string> default_regions;
+        private static Gee.ArrayList<string> blacklist_packages;
 
         public static void init () {
             installed_locales = new Gee.ArrayList<string> ();
             default_regions = new Gee.HashMap<string, string> ();
+            blacklist_packages = new Gee.ArrayList<string> ();
             installed_languages = {};
         }
 
@@ -44,7 +46,7 @@ namespace SwitchboardPlugLocale {
                     out output,
                     null,
                     out status);
-                
+
                 installed_languages = output.split ("\n");
             } catch (Error e) {
                 warning (e.message);
@@ -54,17 +56,22 @@ namespace SwitchboardPlugLocale {
         }
 
         public static async string [] get_missing_languages () {
+            if (blacklist_packages.size == 0) {
+                blacklist_packages = yield get_blacklist_packages ();
+            }
+
             Pid pid;
             int input;
             int output;
             int error;
 
             string[] missing = {};
+            string[] missing_aux = {};
             try {
                 string res = "";
 
                 Process.spawn_async_with_pipes (null,
-                    {"check-language-support", null},
+                    {"check-language-support", "--show-installed"},
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,
@@ -79,12 +86,36 @@ namespace SwitchboardPlugLocale {
                     res += line;
                 }
 
-                missing = res.strip ().split (" ");
+                missing_aux = res.strip ().split (" ");
+
+                for (var i = 0; i < missing_aux.length; i++) {
+                    if (!blacklist_packages.contains (missing_aux[i])) {
+                        missing += missing_aux[i];
+                    }
+                }
             } catch (Error e) {
                 warning (e.message);
             }
 
             return missing;
+        }
+
+        public static async Gee.ArrayList<string> get_blacklist_packages () {
+            Gee.ArrayList<string> blacklist_items = new Gee.ArrayList<string> ();
+            var file = File.new_for_path (Path.build_path ("/", Constants.PKGDATADIR, "packages_blacklist"));
+
+            try {
+                var dis = new DataInputStream (file.read ());
+                string line = null;
+
+                while ((line = yield dis.read_line_async (Priority.DEFAULT)) != null) {
+                    blacklist_items.add (line);
+                }
+            } catch (Error e) {
+                error (e.message);
+            }
+
+            return blacklist_items;
         }
 
         public static string? get_default_for_lang (string lang) {
@@ -211,7 +242,7 @@ namespace SwitchboardPlugLocale {
 
             return lang_name;
         }
-        
+
         public static string translate_region (string locale, string region, string? translation) {
             var current_language = Environment.get_variable ("LANGUAGE");
             if (translation == null)
@@ -229,7 +260,7 @@ namespace SwitchboardPlugLocale {
             } else {
                 Environment.unset_variable ("LANGUAGE");
             }
- 
+
             return region_name;
         }
 
