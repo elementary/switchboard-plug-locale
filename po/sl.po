@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-02-09 19:52+0000\n"
+"PO-Revision-Date: 2018-07-03 19:21+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/sl/>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.18\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:49
@@ -46,14 +46,14 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Nameščanje jezika"
+msgstr "Nameščanje %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Odstranjevanje jezika"
+msgstr "Odstranjevanje %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
@@ -113,9 +113,8 @@ msgstr ""
 "Nastavi jezik za prijavni zaslon, račun gosta in račun novih uporabnikov"
 
 #: src/Widgets/LocaleSetting.vala:112
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "Preklopi v nastavitve tipkovnice"
+msgstr "Nastavitve tipkovnice…"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "Potrebna je avtentikacija za upravljanje krajevnih nastavitev"
