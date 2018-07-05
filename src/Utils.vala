@@ -71,7 +71,7 @@ namespace SwitchboardPlugLocale {
                 string res = "";
 
                 Process.spawn_async_with_pipes (null,
-                    {"check-language-support", "--show-installed"},
+                    {"check-language-support", null},
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,
