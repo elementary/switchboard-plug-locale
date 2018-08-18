@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-05-01 10:58+0000\n"
+"PO-Revision-Date: 2018-08-18 13:29+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:49
@@ -47,14 +47,14 @@ msgstr ""
 "werden"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Sprache wird installiert"
+msgstr "Installiere %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Sprache wird entfernt"
+msgstr "Entferne %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
