@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2016-05-11 13:04+0000\n"
-"Last-Translator: Leonardo Lemos <Unknown>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2018-08-29 18:46+0000\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
+"Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-locale/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
 #: src/Plug.vala:49
 msgid "Language & Region"
@@ -45,14 +48,14 @@ msgstr ""
 "modificadas"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Instalando idioma"
+msgstr "Instalando %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Removendo idioma"
+msgstr "Removendo %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
@@ -88,15 +91,15 @@ msgstr "Formatos: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatura:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
@@ -113,9 +116,8 @@ msgstr ""
 "usuário"
 
 #: src/Widgets/LocaleSetting.vala:112
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "Alternar para configurações de teclado"
+msgstr "Configurações do Teclado..."
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr ""
