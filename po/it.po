@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-02-19 23:19+0000\n"
-"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"PO-Revision-Date: 2018-09-06 03:52+0000\n"
+"Last-Translator: strozzascotte <marco.depaolini@gmail.com>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-03 06:05+0000\n"
 
 #: src/Plug.vala:49
@@ -47,14 +47,14 @@ msgstr ""
 "modificate"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Installazione della lingua"
+msgstr "Installazione %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Rimozione della lingua"
+msgstr "Rimozione %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
@@ -114,9 +114,8 @@ msgstr ""
 "Imposta lingua per la schermata di login, l'account ospite e i nuovi account"
 
 #: src/Widgets/LocaleSetting.vala:112
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "Passa alle impostazioni della tastiera"
+msgstr "Impostazioni della tastiera…"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "È necessario autenticarsi per gestire le impostazioni locali"
