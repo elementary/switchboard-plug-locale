@@ -250,6 +250,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
             region_combobox.active = selected_region;
 
+            region_store.set_sort_column_id(0, Gtk.SortType.ASCENDING);
+
             if (i == 0) {
                 region_endlabel.hide ();
                 region_combobox.hide ();
@@ -294,6 +296,8 @@ namespace SwitchboardPlugLocale.Widgets {
             }
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
             format_combobox.active = format_id;
+
+            format_store.set_sort_column_id(0, Gtk.SortType.ASCENDING);
 
             if (selected_format == "")
                 selected_format = get_format ();
