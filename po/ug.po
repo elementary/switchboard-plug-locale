@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2017-01-02 02:59+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,7 @@ msgstr "تىللارنى باشقۇرۇش، رايون ۋە فورماتلارن
 msgid "Some changes will not take effect until you log out"
 msgstr "ھىساۋاتتىن چىكىنمىگۈچە بەزى ئۆزگەرتىشلەر كۈچكە ئىگە بولمايدۇ"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "تىل قوللىشى تولۇق ئورنىتىلمىغان"

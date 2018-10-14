@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2018-04-29 17:05+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -32,6 +32,7 @@ msgstr "管理語言、調整區域和相關格式"
 msgid "Some changes will not take effect until you log out"
 msgstr "部份修改需要重新登入後才會生效"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "語言支援尚未完全安裝"

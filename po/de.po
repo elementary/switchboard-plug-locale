@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2018-08-18 13:29+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
@@ -32,6 +32,7 @@ msgstr "Sprach- sowie Regions- und Formateinstellungen vornehmen"
 msgid "Some changes will not take effect until you log out"
 msgstr "Einige Änderungen werden erst mit der nächsten Sitzung übernommen"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Die Sprache ist nicht vollständig installiert"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2018-07-06 00:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
@@ -32,6 +32,7 @@ msgstr "言語を管理し、地域と書式を設定します"
 msgid "Some changes will not take effect until you log out"
 msgstr "一部の変更はログアウト後に反映されます"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "言語サポートが完全にはインストールされていません"
@@ -108,7 +109,9 @@ msgstr "システム言語に設定"
 
 #: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr "ログイン画面、ゲストアカウント、新しいユーザーアカウントで使用される言語に設定します"
+msgstr ""
+"ログイン画面、ゲストアカウント、新しいユーザーアカウントで使用される言語に設"
+"定します"
 
 #: src/Widgets/LocaleSetting.vala:112
 msgid "Keyboard Settings…"

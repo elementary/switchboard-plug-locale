@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2016-06-20 22:34+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -30,6 +30,7 @@ msgstr "Süsteemikeele muutmine, regiooni ja formaadi seadistamine"
 msgid "Some changes will not take effect until you log out"
 msgstr "Mõningate seadete rakendumiseks tuleb sul välja logida…"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Kasutajaliidese keeletugi pole korralikult paigaldatud"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2017-04-17 14:18+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,6 +33,7 @@ msgstr "Upravljajte jezicima i postavite regiju i format"
 msgid "Some changes will not take effect until you log out"
 msgstr "Neke promjene neće biti primijenjene dok se ne odjavite"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Jezična podrška nije u potpunosti instalirana"

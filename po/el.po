@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2017-02-21 10:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -30,6 +30,7 @@ msgstr "Διαχείριση γλωσσών, και ρύθμιση περιοχ�
 msgid "Some changes will not take effect until you log out"
 msgstr "Κάποιες αλλαγές δε θα εφαρμοστούν μέχρι να αποσυνδεθείτε"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Η γλωσσική υποστήριξη δεν είναι πλήρως εγκατεστημένη"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2018-07-21 00:07+0000\n"
 "Last-Translator: Nils K <slx@nilsk.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
@@ -32,6 +32,7 @@ msgstr "Administrere språk samt konfigurere region og format"
 msgid "Some changes will not take effect until you log out"
 msgstr "Noen endringer vil ikke tre i kraft før du logger ut"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Språkstøtten er ikke fullstendig installert"
