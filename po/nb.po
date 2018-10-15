@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:08-0700\n"
-"PO-Revision-Date: 2018-07-21 00:07+0000\n"
-"Last-Translator: Nils K <slx@nilsk.net>\n"
+"PO-Revision-Date: 2018-10-15 15:51+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/nb/>\n"
 "Language: nb\n"
@@ -26,7 +26,7 @@ msgstr "Språk og region"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Administrere språk samt konfigurere region og format"
+msgstr "Behandle språk, og sett opp region og format"
 
 #: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
