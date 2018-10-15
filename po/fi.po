@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-07-01 14:50+0000\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
+"PO-Revision-Date: 2018-10-15 18:52+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/fi/>\n"
@@ -26,12 +26,13 @@ msgstr "Kieli ja alue"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Hallitse kieliä sekä alueen ja muotoilun asetuksia"
+msgstr "Hallitse kieliä, määritä alue sekä muoto"
 
 #: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Jotkin asetukset eivät tule voimaan, ennen kuin kirjaudut ulos"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Kielitukea ei ole asennettu kokonaan"

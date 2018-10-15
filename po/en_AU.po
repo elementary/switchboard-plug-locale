@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2014-08-01 01:45+0000\n"
 "Last-Translator: evanjt <evan@evanjt.com>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
@@ -30,6 +30,7 @@ msgstr ""
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr ""

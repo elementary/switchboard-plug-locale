@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
-"PO-Revision-Date: 2018-09-06 03:52+0000\n"
-"Last-Translator: strozzascotte <marco.depaolini@gmail.com>\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
+"PO-Revision-Date: 2018-10-15 18:08+0000\n"
+"Last-Translator: Marco De Paolini <marco.depaolini@gmail.com>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/it/>\n"
 "Language: it\n"
@@ -26,12 +26,13 @@ msgstr "Lingua e regione"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Gestisci le lingue e configura la regione e il formato"
+msgstr "Amministrazione delle lingue, configurazioni e formati regionali"
 
 #: src/Plug.vala:131
 msgid "Some changes will not take effect until you log out"
 msgstr "Alcune modifiche non avranno effetto fino alla disconnessione"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Il supporto linguistico non è installato completamente"

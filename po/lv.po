@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 08:02-0700\n"
+"POT-Creation-Date: 2018-10-13 17:08-0700\n"
 "PO-Revision-Date: 2015-05-26 13:29+0000\n"
 "Last-Translator: Peachyz <lasmanis.davis@gmail.com>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -30,6 +30,7 @@ msgstr ""
 msgid "Some changes will not take effect until you log out"
 msgstr "Dažas izmaiņas stāsies spēkā pēc iziešanas no sistēmas"
 
+#. Gtk.InfoBar for language support installation
 #: src/Plug.vala:135
 msgid "Language support is not installed completely"
 msgstr "Valodas atbalsts ir instalēts nepilnīgi"
