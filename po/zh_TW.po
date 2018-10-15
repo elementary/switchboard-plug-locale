@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:08-0700\n"
+"POT-Creation-Date: 2018-10-15 16:33-0500\n"
 "PO-Revision-Date: 2018-04-29 17:05+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -28,20 +28,35 @@ msgstr "語言和地區"
 msgid "Manage languages, and configure region and format"
 msgstr "管理語言、調整區域和相關格式"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:122
+#, fuzzy
+msgid "Region"
+msgstr "地區： "
+
+#: src/Plug.vala:123
+#, fuzzy
+msgid "Formats"
+msgstr "格式： "
+
+#: src/Plug.vala:124
+#, fuzzy
+msgid "Temperature"
+msgstr "溫度："
+
+#: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
 msgstr "部份修改需要重新登入後才會生效"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:135
+#: src/Plug.vala:139
 msgid "Language support is not installed completely"
 msgstr "語言支援尚未完全安裝"
 
-#: src/Plug.vala:139
+#: src/Plug.vala:143
 msgid "Complete Installation"
 msgstr "完全安裝"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權限才能變更"
 

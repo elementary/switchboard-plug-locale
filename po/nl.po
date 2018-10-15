@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:08-0700\n"
+"POT-Creation-Date: 2018-10-15 16:33-0500\n"
 "PO-Revision-Date: 2018-06-30 00:03+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
@@ -28,20 +28,34 @@ msgstr "Taal & Regio"
 msgid "Manage languages, and configure region and format"
 msgstr "Beheer talen en configureer regio's en formaten"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:122
+#, fuzzy
+msgid "Region"
+msgstr "Regio: "
+
+#: src/Plug.vala:123
+#, fuzzy
+msgid "Formats"
+msgstr "Formaten: "
+
+#: src/Plug.vala:124
+msgid "Temperature"
+msgstr ""
+
+#: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
 msgstr "Sommige wijzigingen worden pas van kracht nadat u zich heeft afgemeld"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:135
+#: src/Plug.vala:139
 msgid "Language support is not installed completely"
 msgstr "Taalondersteuning is niet volledig geïnstalleerd"
 
-#: src/Plug.vala:139
+#: src/Plug.vala:143
 msgid "Complete Installation"
 msgstr "Volledige Installatie"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
