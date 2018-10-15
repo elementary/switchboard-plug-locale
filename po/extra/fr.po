@@ -34,3 +34,4 @@ msgstr "Gérer les paramètres des langues"
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr ""
+"Il est nécessaire d'être authentifié pour modifier les paramètres des langues"
