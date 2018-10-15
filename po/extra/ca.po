@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:08-0700\n"
-"PO-Revision-Date: 2018-10-15 16:45+0000\n"
+"PO-Revision-Date: 2018-10-15 18:08+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "locale-plug-extra/ca/>\n"
@@ -29,8 +29,8 @@ msgstr "Gestioneu les llengües i configureu-ne la regió i el format"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr "Gestioneu la configuració local"
+msgstr "Gestioneu la configuració de la llengua"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr "Cal autenticació per gestionar la configuració local."
+msgstr "Cal autenticació per gestionar la configuració de la llengua."
