@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-10-16 10:16+0000\n"
+"PO-Revision-Date: 2018-10-16 10:35+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/pl/>\n"
@@ -27,7 +27,7 @@ msgstr "Język i region"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Zarządzaj językami i konfiguruj ustawienia regionalne oraz format"
+msgstr "Zarządzaj językami, konfiguruj region i formaty"
 
 #: src/Plug.vala:122
 msgid "Region"
