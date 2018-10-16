@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-10-15 15:32+0000\n"
-"Last-Translator: Leonardo <leonardo@elementary.io>\n"
+"PO-Revision-Date: 2018-10-16 18:09+0000\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -29,19 +29,16 @@ msgid "Manage languages, and configure region and format"
 msgstr "Gerenciar idiomas e configurar região e formato"
 
 #: src/Plug.vala:122
-#, fuzzy
 msgid "Region"
-msgstr "Região: "
+msgstr "Região"
 
 #: src/Plug.vala:123
-#, fuzzy
 msgid "Formats"
-msgstr "Formatos: "
+msgstr "Formatos"
 
 #: src/Plug.vala:124
-#, fuzzy
 msgid "Temperature"
-msgstr "Temperatura:"
+msgstr "Temperatura"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
