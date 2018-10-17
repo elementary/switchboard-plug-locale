@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:08-0700\n"
-"PO-Revision-Date: 2018-10-15 21:52+0000\n"
+"PO-Revision-Date: 2018-10-17 08:44+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -29,8 +29,8 @@ msgstr "ניהול שפות והגדרת מיקום ותקנים"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr ""
+msgstr "ניהול הגדרות מקומיות"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "נדרש אימות כדי לנהל הגדרות מקומיות"
