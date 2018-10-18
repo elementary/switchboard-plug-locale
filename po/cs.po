@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-06-21 16:43+0000\n"
+"PO-Revision-Date: 2018-10-18 07:04+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:49
@@ -29,19 +29,16 @@ msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte region a místní formáty"
 
 #: src/Plug.vala:122
-#, fuzzy
 msgid "Region"
-msgstr "Oblast: "
+msgstr "Oblast"
 
 #: src/Plug.vala:123
-#, fuzzy
 msgid "Formats"
-msgstr "Formáty: "
+msgstr "Formáty"
 
 #: src/Plug.vala:124
-#, fuzzy
 msgid "Temperature"
-msgstr "Teplota:"
+msgstr "Teplota"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
