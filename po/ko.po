@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-10-20 02:59+0000\n"
+"PO-Revision-Date: 2018-10-20 03:10+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ko/>\n"
@@ -26,7 +26,7 @@ msgstr "언어 & 지역"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "언어와 지역 설정, 형식 등을 관리합니다"
+msgstr "언어 설정 및 지역과 형식 설정"
 
 #: src/Plug.vala:122
 msgid "Region"
