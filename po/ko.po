@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-06-23 00:11+0000\n"
+"PO-Revision-Date: 2018-10-20 02:59+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:49
@@ -29,19 +29,16 @@ msgid "Manage languages, and configure region and format"
 msgstr "언어와 지역 설정, 형식 등을 관리합니다"
 
 #: src/Plug.vala:122
-#, fuzzy
 msgid "Region"
-msgstr "지역: "
+msgstr "지역"
 
 #: src/Plug.vala:123
-#, fuzzy
 msgid "Formats"
-msgstr "형식: "
+msgstr "형식"
 
 #: src/Plug.vala:124
-#, fuzzy
 msgid "Temperature"
-msgstr "온도:"
+msgstr "온도"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
