@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:08-0700\n"
-"PO-Revision-Date: 2018-10-20 13:25+0000\n"
+"PO-Revision-Date: 2018-10-20 13:28+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "locale-plug-extra/sv/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Locale"
-msgstr ""
+msgstr "Lokalisering"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -29,8 +29,8 @@ msgstr "Hantera språk, samt ställ in region och format"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr ""
+msgstr "Hantera lokaliseringsinställningar"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Autentisering krävs för att hantera lokaliseringsinställningar"
