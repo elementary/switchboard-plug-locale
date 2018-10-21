@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-10-21 11:41+0000\n"
+"PO-Revision-Date: 2018-10-21 13:38+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/id/>\n"
@@ -25,7 +25,7 @@ msgstr "Bahasa & Wilayah"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Kelola bahasa, dan konfigurasikan wilayah dan format"
+msgstr "Kelola bahasa, dan konfigurasi wilayah dan format"
 
 #: src/Plug.vala:122
 msgid "Region"
