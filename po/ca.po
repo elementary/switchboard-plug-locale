@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-10-18 00:10+0000\n"
+"PO-Revision-Date: 2018-10-25 07:45+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ca/>\n"
@@ -65,7 +65,7 @@ msgstr "S'instal·la %s"
 #: src/Widgets/InstallInfoBar.vala:45
 #, c-format
 msgid "Removing %s"
-msgstr "S'elimina %s"
+msgstr "Se suprimeix %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
@@ -89,7 +89,7 @@ msgstr "Instal·la la llengua"
 
 #: src/Widgets/LocaleView.vala:51
 msgid "Remove language"
-msgstr "Elimina la llengua"
+msgstr "Suprimeix la llengua"
 
 #: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
