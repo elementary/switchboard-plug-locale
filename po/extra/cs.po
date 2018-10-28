@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:08-0700\n"
-"PO-Revision-Date: 2018-10-18 12:10+0000\n"
-"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
+"PO-Revision-Date: 2018-10-28 16:12+0000\n"
+"Last-Translator: Tadeáš Cvrček <tcvrcek@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "locale-plug-extra/cs/>\n"
 "Language: cs\n"
@@ -29,8 +29,8 @@ msgstr "Spravujte jazyky, nastavte region a místní formáty"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr ""
+msgstr "Spravujte lokální nastavení"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Pro správu nastavení prostředí je vyžadováno ověření"
