@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-11-04 15:03+0000\n"
+"PO-Revision-Date: 2018-11-05 20:39+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/bs/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: src/Plug.vala:49
 msgid "Language & Region"
-msgstr ""
+msgstr "Jezik i regija"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
@@ -31,46 +31,46 @@ msgstr "Upravljajte jezicima i podesite regiju i formate"
 
 #: src/Plug.vala:122
 msgid "Region"
-msgstr ""
+msgstr "Regija"
 
 #: src/Plug.vala:123
 msgid "Formats"
-msgstr ""
+msgstr "Formati"
 
 #: src/Plug.vala:124
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
-msgstr "Neke promjene se neće aktivirate dok se ponovo ne prijavite"
+msgstr "Neke promjene neće biti aktivirane dok se ne odjavite"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:139
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Jezična podrška nije instalirana potpuno"
 
 #: src/Plug.vala:143
 msgid "Complete Installation"
-msgstr ""
+msgstr "Dovršite instalaciju"
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
 msgid "Installing %s"
-msgstr ""
+msgstr "Instaliranje %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
 #, c-format
 msgid "Removing %s"
-msgstr ""
+msgstr "Uklanjanje %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
-msgstr ""
+msgstr "Instaliranje nedostajućeg jezika"
 
 #: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
@@ -78,52 +78,52 @@ msgstr "Otkaži"
 
 #: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
-msgstr ""
+msgstr "Instalirani jezici"
 
 #: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
-msgstr ""
+msgstr "Trenutno aktivni jezik"
 
 #: src/Widgets/LocaleView.vala:42
 msgid "Install language"
-msgstr ""
+msgstr "Instaliraj jezik"
 
 #: src/Widgets/LocaleView.vala:51
 msgid "Remove language"
-msgstr ""
+msgstr "Ukloni jezik"
 
 #: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
-msgstr ""
+msgstr "Regija: "
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
-msgstr ""
+msgstr "Formati: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "Celzij"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatura:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr ""
+msgstr "Podesi jezik"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
-msgstr ""
+msgstr "Postavi jezik sistema"
 
 #: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
+msgstr "Postavi jezik za ekran prijave, račun gosta i nove korisničke račune"
 
 #: src/Widgets/LocaleSetting.vala:112
 msgid "Keyboard Settings…"
-msgstr ""
+msgstr "Podešavanja tastature…"
