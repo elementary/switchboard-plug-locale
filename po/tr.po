@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-05-25 20:42+0000\n"
-"Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
+"PO-Revision-Date: 2018-11-06 21:33+0000\n"
+"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:49
@@ -29,19 +29,16 @@ msgid "Manage languages, and configure region and format"
 msgstr "Dilleri yönet ve bölge ve düzeni ayarla"
 
 #: src/Plug.vala:122
-#, fuzzy
 msgid "Region"
-msgstr "Bölge: "
+msgstr "Bölge"
 
 #: src/Plug.vala:123
-#, fuzzy
 msgid "Formats"
-msgstr "Format: "
+msgstr "Formatlar"
 
 #: src/Plug.vala:124
-#, fuzzy
 msgid "Temperature"
-msgstr "Sıcaklık:"
+msgstr "Sıcaklık"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
@@ -62,14 +59,14 @@ msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
 #: src/Widgets/InstallInfoBar.vala:42
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Dil Kuruluyor"
+msgstr "%s Kuruluyor"
 
 #: src/Widgets/InstallInfoBar.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Dil kaldırılıyor"
+msgstr "%s Kaldırılıyor"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
