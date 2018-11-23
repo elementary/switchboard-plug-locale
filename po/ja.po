@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-10-15 21:52+0000\n"
+"PO-Revision-Date: 2018-11-23 17:37+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ja/>\n"
@@ -93,11 +93,11 @@ msgstr "言語を削除"
 
 #: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
-msgstr "地域: "
+msgstr "地域： "
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
-msgstr "書式: "
+msgstr "書式： "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
@@ -109,7 +109,7 @@ msgstr "華氏"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr "温度:"
+msgstr "温度："
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
