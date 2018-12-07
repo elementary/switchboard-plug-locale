@@ -15,7 +15,7 @@ plug_files = files(
 #
 # Define Vala minimal version
 #
-vala_version_required = '0.42.1'
+vala_version_required = '0.40.10'
 vala_compiler = meson.get_compiler('vala')
 
 if not vala_compiler.version().version_compare('>= @0@'.format(vala_version_required))
