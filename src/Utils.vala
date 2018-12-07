@@ -157,7 +157,8 @@ namespace SwitchboardPlugLocale {
 
                 foreach (var line in output.split ("\n")) {
                     if (".utf8" in line) {
-                        installed_locales.add (line[0:5]);
+                        var locale = line.substring (0, line.index_of (".utf8"));
+                        installed_locales.add (locale);
                     }
                 }
             } catch (Error e) {
