@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-12-10 19:24+0000\n"
+"PO-Revision-Date: 2018-12-14 22:10+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/mr/>\n"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करा"
 
 #: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
