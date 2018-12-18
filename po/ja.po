@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-12-02 06:37+0000\n"
+"PO-Revision-Date: 2018-12-19 00:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ja/>\n"
@@ -42,7 +42,7 @@ msgstr "温度"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
-msgstr "一部の変更はログアウト後に反映されます"
+msgstr "一部の変更は、ログアウト後に反映されます"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:139
@@ -81,7 +81,7 @@ msgstr "インストール済み言語"
 
 #: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
-msgstr "現在使用可能な言語"
+msgstr "現在の表示言語"
 
 #: src/Widgets/LocaleView.vala:42
 msgid "Install language"
