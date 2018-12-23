@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2018-12-14 22:10+0000\n"
+"PO-Revision-Date: 2018-12-23 18:53+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/mr/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: src/Plug.vala:49
 msgid "Language & Region"
-msgstr ""
+msgstr "भाषा आणि क्षेत्र"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
@@ -30,28 +30,28 @@ msgstr "भाषा व्यवस्थापित करा आणि क�
 
 #: src/Plug.vala:122
 msgid "Region"
-msgstr ""
+msgstr "क्षेत्र"
 
 #: src/Plug.vala:123
 msgid "Formats"
-msgstr ""
+msgstr "स्वरूप"
 
 #: src/Plug.vala:124
 msgid "Temperature"
-msgstr ""
+msgstr "तापमान"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "आपण लॉग आउट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:139
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "भाषा समर्थन पूर्णपणे स्थापित नाही"
 
 #: src/Plug.vala:143
 msgid "Complete Installation"
-msgstr ""
+msgstr "स्थापना पूर्ण करा"
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
@@ -60,16 +60,16 @@ msgstr "काही सेटिंग्जसाठी प्रशासक�
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
 msgid "Installing %s"
-msgstr ""
+msgstr "%s स्थापित करीत आहे"
 
 #: src/Widgets/InstallInfoBar.vala:45
 #, c-format
 msgid "Removing %s"
-msgstr ""
+msgstr "%s काढून टाकत आहे"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
-msgstr ""
+msgstr "गहाळ भाषा स्थापित करत आहे"
 
 #: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
@@ -77,52 +77,52 @@ msgstr "रद्द करा"
 
 #: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
-msgstr ""
+msgstr "स्थापित भाषा"
 
 #: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
-msgstr ""
+msgstr "सध्या सक्रिय भाषा"
 
 #: src/Widgets/LocaleView.vala:42
 msgid "Install language"
-msgstr ""
+msgstr "भाषा स्थापित करा"
 
 #: src/Widgets/LocaleView.vala:51
 msgid "Remove language"
-msgstr ""
+msgstr "भाषा काढा"
 
 #: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
-msgstr ""
+msgstr "क्षेत्र: "
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
-msgstr ""
+msgstr "स्वरूप: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "सेल्सिअस"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "फारेनहाइट"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "तापमान:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr ""
+msgstr "भाषा सेट करा"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
-msgstr ""
+msgstr "सिस्टम भाषा सेट करा"
 
 #: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
+msgstr "लॉगिन स्क्रीन, अतिथी खाते आणि नवीन वापरकर्ता खात्यांसाठी भाषा सेट करा"
 
 #: src/Widgets/LocaleSetting.vala:112
 msgid "Keyboard Settings…"
-msgstr ""
+msgstr "कीबोर्ड सेटिंग्ज …"
