@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2017-04-20 20:51+0000\n"
-"Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
-"Language-Team: nn (generated) <https://l10n.elementary.io/projects/"
+"PO-Revision-Date: 2019-01-06 14:39+0000\n"
+"Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
+"Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/nn/>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:49
@@ -26,28 +26,28 @@ msgstr "Språk og region"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Handsam språk, og konfigurer region og format"
+msgstr "Handsam språk, og sett opp region og format"
 
 #: src/Plug.vala:122
 msgid "Region"
-msgstr ""
+msgstr "Region"
 
 #: src/Plug.vala:123
 msgid "Formats"
-msgstr ""
+msgstr "Format"
 
 #: src/Plug.vala:124
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatur"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
-msgstr "Nokre endringar trer i kraft etter at du loggar ut"
+msgstr "Nokre endringar trer ikkje i kraft før du loggar ut"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:139
 msgid "Language support is not installed completely"
-msgstr "Språkstøtta er ikkje installert fullstendig"
+msgstr "Språkstøtte er ikkje fullstendig installert"
 
 #: src/Plug.vala:143
 msgid "Complete Installation"
@@ -55,21 +55,21 @@ msgstr "Fullfør installasjonen"
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Nokre innstillingar krev administratorrettar for å kunne endrast"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
 msgid "Installing %s"
-msgstr ""
+msgstr "Installerer %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
 #, c-format
 msgid "Removing %s"
-msgstr ""
+msgstr "Fjernar %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
-msgstr ""
+msgstr "Installerer manglande språk"
 
 #: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
@@ -77,55 +77,55 @@ msgstr "Avbryt"
 
 #: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
-msgstr ""
+msgstr "Installerte språk"
 
 #: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
-msgstr ""
+msgstr "Gjeldande språk"
 
 #: src/Widgets/LocaleView.vala:42
 msgid "Install language"
-msgstr ""
+msgstr "Installer språk"
 
 #: src/Widgets/LocaleView.vala:51
 msgid "Remove language"
-msgstr ""
+msgstr "Fjern språk"
 
 #: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
-msgstr ""
+msgstr "Region: "
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
-msgstr ""
+msgstr "Format: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatur:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr ""
+msgstr "Vel språk"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
-msgstr ""
+msgstr "Vel systemspråk"
 
 #: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
+msgstr "Vel språket for innloggingsskjermen, gjestekonto og nye brukarkontoar"
 
 #: src/Widgets/LocaleSetting.vala:112
 msgid "Keyboard Settings…"
-msgstr ""
+msgstr "Tastaturinnstillingar…"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "Autentisering er naudsynt for å endra lokalinstillingar"
