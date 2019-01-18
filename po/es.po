@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
 "PO-Revision-Date: 2019-01-18 00:29+0000\n"
-"Last-Translator: Carlos Cañellas <ratiosu.cct@gmail.com>\n"
+"Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/es/>\n"
 "Language: es\n"
@@ -26,7 +26,7 @@ msgstr "Idioma y región"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr "Gestione los idiomas y configure su región y formato."
+msgstr "Gestiona los idiomas y configura la región y el formato."
 
 #: src/Plug.vala:122
 #, fuzzy
