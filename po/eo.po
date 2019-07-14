@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2019-07-05 04:46+0000\n"
+"PO-Revision-Date: 2019-07-15 17:11+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/eo/>\n"
@@ -17,41 +17,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:49
 msgid "Language & Region"
-msgstr ""
+msgstr "Lingvo & Regiono"
 
 #: src/Plug.vala:50
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Mastrumi lingvojn, kaj agordi regionon kaj formaton"
 
 #: src/Plug.vala:122
 msgid "Region"
-msgstr ""
+msgstr "Regiono"
 
 #: src/Plug.vala:123
 msgid "Formats"
-msgstr ""
+msgstr "Formatoj"
 
 #: src/Plug.vala:124
 msgid "Temperature"
-msgstr ""
+msgstr "Temperaturo"
 
 #: src/Plug.vala:135
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "Iuj ŝanĝoj aplikiĝos je elsaluto"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:139
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "Lingva subteno ne estas entute instalita"
 
 #: src/Plug.vala:143
 msgid "Complete Installation"
-msgstr ""
+msgstr "Fini instalon"
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
@@ -60,16 +60,16 @@ msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
 msgid "Installing %s"
-msgstr ""
+msgstr "Instalanta %s"
 
 #: src/Widgets/InstallInfoBar.vala:45
 #, c-format
 msgid "Removing %s"
-msgstr ""
+msgstr "Foriganta %s"
 
 #: src/Widgets/InstallInfoBar.vala:48
 msgid "Installing missing language"
-msgstr ""
+msgstr "Instalanta mankantan lingvon"
 
 #: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
@@ -77,52 +77,52 @@ msgstr "Rezigni"
 
 #: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
-msgstr ""
+msgstr "Instalitaj lingvoj"
 
 #: src/Widgets/LanguageListBox.vala:118
 msgid "Currently active language"
-msgstr ""
+msgstr "Nune aktiva lingvo"
 
 #: src/Widgets/LocaleView.vala:42
 msgid "Install language"
-msgstr ""
+msgstr "Instali lingvon"
 
 #: src/Widgets/LocaleView.vala:51
 msgid "Remove language"
-msgstr ""
+msgstr "Forigi lingvon"
 
 #: src/Widgets/LocaleSetting.vala:69
 msgid "Region: "
-msgstr ""
+msgstr "Regiono: "
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Formats: "
-msgstr ""
+msgstr "Formatoj: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "Celsia"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Farenhejta"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperaturo:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr ""
+msgstr "Difini lingvon"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
-msgstr ""
+msgstr "Difini sisteman lingvon"
 
 #: src/Widgets/LocaleSetting.vala:110
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr ""
+msgstr "Difini lingvon de la ensaluta ekrano, gasta konto, kaj nova uzanto"
 
 #: src/Widgets/LocaleSetting.vala:112
 msgid "Keyboard Settings…"
-msgstr ""
+msgstr "Klavaraj agordoj…"
