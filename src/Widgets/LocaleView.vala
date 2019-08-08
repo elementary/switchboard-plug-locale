@@ -38,14 +38,12 @@ namespace SwitchboardPlugLocale.Widgets {
             scroll.add (list_box);
             scroll.expand = true;
 
-            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
+            var popover = new Widgets.InstallPopover ();
+
+            var add_button = new Gtk.MenuButton ();
+            add_button.image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
+            add_button.popover = popover;
             add_button.tooltip_text = _("Install language");
-            add_button.sensitive = false;
-            add_button.clicked.connect (() => {
-                var popover = new Widgets.InstallPopover (add_button);
-                popover.show_all ();
-                popover.language_selected.connect (plug.on_install_language);
-            });
 
             var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
             remove_button.tooltip_text = _("Remove language");
@@ -93,13 +91,24 @@ namespace SwitchboardPlugLocale.Widgets {
 
             Utils.get_permission ().notify["allowed"].connect (() => {
                 if (Utils.get_permission ().allowed) {
-                    add_button.sensitive = true;
                     if (list_box.get_selected_language_code () != locale_manager.get_user_language ().slice (0, 2)) {
                         remove_button.sensitive = true;
                     }
                 } else {
                     add_button.sensitive = false;
                     remove_button.sensitive = false;
+                }
+            });
+
+            popover.language_selected.connect ((lang) => {
+                var permission = Utils.get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire (null);
+                        plug.on_install_language (lang);
+                    } catch (Error e) {
+                        critical (e.message);
+                    }
                 }
             });
 
