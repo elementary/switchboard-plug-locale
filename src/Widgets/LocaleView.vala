@@ -47,11 +47,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
             var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
             remove_button.tooltip_text = _("Remove language");
-            remove_button.sensitive = false;
-            remove_button.clicked.connect (() => {
-                make_sensitive (false);
-                plug.installer.remove (list_box.get_selected_language_code ());
-            });
 
             var action_bar = new Gtk.ActionBar ();
             action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
@@ -80,23 +75,23 @@ namespace SwitchboardPlugLocale.Widgets {
                 locale_setting.reload_regions (selected_language_code, regions);
                 locale_setting.reload_labels (selected_language_code);
 
-                if (remove_button != null) {
-                    if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {
-                        remove_button.sensitive = false;
-                    } else if (Utils.get_permission ().allowed) {
-                        remove_button.sensitive = true;
-                    }
+                if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {
+                    remove_button.sensitive = false;
+                } else {
+                    remove_button.sensitive = true;
                 }
             });
 
-            Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().allowed) {
-                    if (list_box.get_selected_language_code () != locale_manager.get_user_language ().slice (0, 2)) {
-                        remove_button.sensitive = true;
+            remove_button.clicked.connect (() => {
+                var permission = Utils.get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire (null);
+                        make_sensitive (false);
+                        plug.installer.remove (list_box.get_selected_language_code ());
+                    } catch (Error e) {
+                        critical (e.message);
                     }
-                } else {
-                    add_button.sensitive = false;
-                    remove_button.sensitive = false;
                 }
             });
 

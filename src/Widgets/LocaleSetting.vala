@@ -106,7 +106,6 @@ namespace SwitchboardPlugLocale.Widgets {
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
             var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
-            set_system_button.sensitive = false;
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
 
             var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…"));
@@ -149,16 +148,14 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             set_system_button.clicked.connect (() => {
-                if (Utils.get_permission ().allowed) {
-                    on_applied_to_system ();
-                }
-            });
-
-            Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().allowed) {
-                    set_system_button.sensitive = true;
-                } else {
-                    set_system_button.sensitive = false;
+                var permission = Utils.get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire (null);
+                        on_applied_to_system ();
+                    } catch (Error e) {
+                        critical (e.message);
+                    }
                 }
             });
         }
