@@ -9,7 +9,7 @@ i18n.merge_file(
     output: 'io.elementary.switchboard.locale.policy',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'polkit-1', 'actions')
+    install_dir: join_paths(datadir, 'polkit-1', 'actions')
 )
 
 i18n.merge_file(
@@ -17,16 +17,16 @@ i18n.merge_file(
     output: '@BASENAME@',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo')
+    install_dir: join_paths(datadir, 'metainfo')
 )
 
 install_data(
     'io.elementary.switchboard.locale.gschema.xml',
-    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
+    install_dir: join_paths(datadir, 'glib-2.0', 'schemas')
 )
 
 install_data(
     'languagelist',
     'packages_blacklist',
-    install_dir: pkg_data_dir
+    install_dir: pkgdatadir
 )

@@ -7,8 +7,13 @@ project(
 
 gnome = import('gnome')
 i18n = import('i18n')
+
+prefix = get_option('prefix')
+datadir = join_paths(prefix, get_option('datadir'))
+libdir = join_paths(prefix, get_option('libdir'))
+
 switchboard_dep = dependency('switchboard-2.0')
-pkg_data_dir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personal', 'pantheon-locale')
+pkgdatadir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personal', 'pantheon-locale')
 
 
 add_project_arguments(
@@ -24,7 +29,7 @@ add_project_arguments(
 
 configuration_data = configuration_data()
 configuration_data.set('GETTEXT_PACKAGE', meson.project_name())
-configuration_data.set('PKGDATADIR', pkg_data_dir)
+configuration_data.set('PKGDATADIR', pkgdatadir)
 
 constants = configure_file(
     configuration: configuration_data,
