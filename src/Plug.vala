@@ -14,20 +14,6 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-namespace LC {
-    public const string LANG = "LANG";
-    public const string NUMERIC = "LC_NUMERIC";
-    public const string TIME = "LC_TIME";
-    public const string MONETARY = "LC_MONETARY";
-    public const string MESSAGES = "LC_MESSAGES";
-    public const string PAPER = "LC_PAPER";
-    public const string NAME = "LC_NAME";
-    public const string ADDRESS = "LC_ADDRESS";
-    public const string MEASUREMENT = "LC_MEASUREMENT";
-    public const string TELEPHONE = "LC_TELEPHONE";
-    public const string IDENTIFICATION = "LC_IDENTIFICATION";
-}
-
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
         Gtk.Grid grid;

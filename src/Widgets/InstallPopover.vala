@@ -23,6 +23,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
         construct {
             var search_entry = new Gtk.SearchEntry ();
+            search_entry.margin = 12;
 
             list_store = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (string));
             list_store.set_default_sort_func ((model, a, b) => {
@@ -33,23 +34,24 @@ namespace SwitchboardPlugLocale.Widgets {
                 return value_a.get_string ().collate (value_b.get_string ());
             });
 
+            var cellrenderer = new Gtk.CellRendererText ();
+            cellrenderer.set_padding (10, 0);
+
             languages_view = new Gtk.TreeView.with_model (list_store);
             languages_view.headers_visible = false;
-            languages_view.insert_column_with_attributes (-1, "", new Gtk.CellRendererText (), "text", 0);
+            languages_view.insert_column_with_attributes (-1, "", cellrenderer, "text", 0);
             languages_view.activate_on_single_click = true;
             languages_view.row_activated.connect (row_activated);
             languages_view.set_search_entry (search_entry);
             languages_view.set_search_equal_func (treesearchfunc);
 
             var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.shadow_type = Gtk.ShadowType.IN;
-            scrolled.height_request = 145;
-            scrolled.width_request = 200;
+            scrolled.height_request = 200;
+            scrolled.width_request = 300;
             scrolled.add (languages_view);
 
             var grid = new Gtk.Grid ();
-            grid.margin = 12;
-            grid.row_spacing = 12;
+            grid.margin_bottom = 3;
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.add (search_entry);
             grid.add (scrolled);
