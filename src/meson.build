@@ -41,5 +41,5 @@ shared_module(
         switchboard_dep
     ],
     install: true,
-    install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personal')
+    install_dir : join_paths(switchboard_plugsdir, 'personal')
 )
