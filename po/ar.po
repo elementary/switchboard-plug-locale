@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2014-08-01 01:59+0000\n"
-"Last-Translator: Fathallah Wael <fathallahwael80@gmail.com>\n"
-"Language-Team: Arabic <ar@li.org>\n"
+"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
+"Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
 #: src/Plug.vala:49
 msgid "Language & Region"
@@ -53,7 +56,7 @@ msgstr ""
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "تطلب بعض الإعدادات تغيير حقوق المسؤول"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
@@ -71,7 +74,7 @@ msgstr ""
 
 #: src/Widgets/InstallInfoBar.vala:68
 msgid "Cancel"
-msgstr ""
+msgstr "الغاء"
 
 #: src/Widgets/LanguageListBox.vala:31
 msgid "Installed Languages"
