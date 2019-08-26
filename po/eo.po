@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 16:33-0500\n"
-"PO-Revision-Date: 2019-07-15 17:11+0000\n"
+"PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/eo/>\n"
@@ -55,7 +55,7 @@ msgstr "Fini instalon"
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
+msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
