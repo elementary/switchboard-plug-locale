@@ -148,15 +148,10 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             set_system_button.clicked.connect (() => {
-                var permission = Utils.get_permission ();
-                if (!permission.allowed) {
-                    try {
-                        permission.acquire (null);
-                        on_applied_to_system ();
-                    } catch (Error e) {
-                        critical (e.message);
-                    }
+                if (!Utils.allowed_permission ()) {
+                    return;
                 }
+                on_applied_to_system ();
             });
         }
 

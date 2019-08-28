@@ -83,28 +83,18 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             remove_button.clicked.connect (() => {
-                var permission = Utils.get_permission ();
-                if (!permission.allowed) {
-                    try {
-                        permission.acquire (null);
-                        make_sensitive (false);
-                        plug.installer.remove (list_box.get_selected_language_code ());
-                    } catch (Error e) {
-                        critical (e.message);
-                    }
+                if (!Utils.allowed_permission ()) {
+                    return;
                 }
+                make_sensitive (false);
+                plug.installer.remove (list_box.get_selected_language_code ());
             });
 
             popover.language_selected.connect ((lang) => {
-                var permission = Utils.get_permission ();
-                if (!permission.allowed) {
-                    try {
-                        permission.acquire (null);
-                        plug.on_install_language (lang);
-                    } catch (Error e) {
-                        critical (e.message);
-                    }
+                if (!Utils.allowed_permission ()) {
+                    return;
                 }
+                plug.on_install_language (lang);
             });
 
             show_all ();

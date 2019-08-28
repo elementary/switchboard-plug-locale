@@ -279,6 +279,19 @@ namespace SwitchboardPlugLocale {
             }
         }
 
+        public static bool allowed_permission () {
+            var permission = Utils.get_permission ();
+            if (!permission.allowed) {
+                try {
+                    permission.acquire (null);
+                } catch (Error e) {
+                    critical (e.message);
+                    return false;
+                }
+            }
+            return true;
+        }
+
         static Utils? instance = null;
 
         public static Utils get_default () {
