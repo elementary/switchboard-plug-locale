@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"PO-Revision-Date: 2019-08-29 04:22+0000\n"
 "Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ar/>\n"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: src/Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
-msgstr "تطلب بعض الإعدادات تغيير حقوق المسؤول"
+msgstr "تتطلب بعض الإعدادات تغيير الصلاحيات للمسؤول"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
