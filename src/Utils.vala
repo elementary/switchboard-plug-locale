@@ -289,6 +289,7 @@ namespace SwitchboardPlugLocale {
                     return false;
                 }
             }
+
             return true;
         }
 

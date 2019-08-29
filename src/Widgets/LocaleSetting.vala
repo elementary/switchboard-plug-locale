@@ -151,6 +151,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
+
                 on_applied_to_system ();
             });
         }

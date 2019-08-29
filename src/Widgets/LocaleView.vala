@@ -86,6 +86,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
+
                 make_sensitive (false);
                 plug.installer.remove (list_box.get_selected_language_code ());
             });
@@ -94,6 +95,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
+
                 plug.on_install_language (lang);
             });
 
