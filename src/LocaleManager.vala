@@ -33,9 +33,7 @@ namespace SwitchboardPlugLocale {
         public bool is_connected { get; private set; default = false; }
 
         private const string GNOME_SYSTEM_LOCALE = "org.gnome.system.locale";
-        private const string KEY_REGION = "region";
         private const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
-        private const string KEY_CURRENT_INPUT = "current";
         private const string KEY_INPUT_SOURCES = "sources";
         private const string KEY_INPUT_SELETION = "input-selections";
 
