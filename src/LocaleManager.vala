@@ -32,7 +32,6 @@ namespace SwitchboardPlugLocale {
     public class LocaleManager : Object {
         public bool is_connected { get; private set; default = false; }
 
-        private const string GNOME_SYSTEM_LOCALE = "org.gnome.system.locale";
         private const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
         private const string KEY_INPUT_SOURCES = "sources";
         private const string KEY_INPUT_SELETION = "input-selections";
@@ -43,7 +42,6 @@ namespace SwitchboardPlugLocale {
         private Act.UserManager user_manager;
         private Act.User user;
 
-        private Settings locale_settings;
         private Settings input_settings;
         private Settings settings;
 
@@ -56,7 +54,6 @@ namespace SwitchboardPlugLocale {
             uint uid = (uint)Posix.getuid();
             user = user_manager.get_user_by_id (uid);
 
-            locale_settings = new Settings (GNOME_SYSTEM_LOCALE);
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
             try {
@@ -74,7 +71,6 @@ namespace SwitchboardPlugLocale {
         }
 
         private void on_settings_changed (string key) {
-
             if (key == KEY_INPUT_SELETION) {
                 var map_array = settings.get_value (KEY_INPUT_SELETION);
                 var iter = map_array.iterator ();
@@ -87,9 +83,6 @@ namespace SwitchboardPlugLocale {
                 while (iter.next ("(ss)", &k, &value)) {
                     map.@set (k, value);
                 }
-
-
-                //language_list.select_inputs (map);
             }
         }
 
@@ -186,11 +179,6 @@ namespace SwitchboardPlugLocale {
         }
 
         public void apply_to_system (string language, string? format) {
-            set_system_language (language, format);
-            set_system_input ();
-        }
-
-        private void set_system_language (string language, string? format) {
             /*
              * This is a temporary solution for setting the system-wide locale.
              * I am assuming systemd in version 204 (which we currently ship from Ubuntu repositories)
@@ -199,18 +187,16 @@ namespace SwitchboardPlugLocale {
              * be reversed (TODO) when introducing a newer version of systemd to elementary OS.
              */
 
-
             try {
-                if (language.length == 2)
+                if (language.length == 2) {
                     localectl_set_locale ("LANG=%s.UTF-8".printf (Utils.get_default_for_lang (language)), format);
-                else
+                } else {
                     localectl_set_locale ("LANG=%s.UTF-8".printf (language), format);
+                }
             } catch (Error e) {
                 warning (e.message);
             }
-        }
 
-        private void set_system_input () {
             string layouts = "";
             string variants = "";
 
@@ -238,7 +224,6 @@ namespace SwitchboardPlugLocale {
 
             try {
                 /* TODO: temporary solution for systemd-localed polkit problem */
-
                 localectl_set_x11_keymap (layouts, variants);
             } catch (Error e) {
                 warning (e.message);
