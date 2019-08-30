@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2015-07-14 17:30+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -18,44 +18,40 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "Gjuha dhe Rajoni"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Region"
 msgstr "Rajoni: "
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Formats"
 msgstr "Formatet: "
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr ""
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Disa ndryshime nuk do kenë efekt deri kur të dalësh nga llogaria"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "Mbështetja për gjuhën nuk është e instaluar plotësisht"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "Plotëso instalimin"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "Disa parametra kërkojnë të drejtat e administratorit për tu ndryshuar"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, fuzzy, c-format
@@ -83,11 +79,11 @@ msgstr "Gjuhët e instaluara"
 msgid "Currently active language"
 msgstr "Gjuha në përdorim"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "Instalo gjuhë"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "Hiqe gjuhën"
 
@@ -119,16 +115,20 @@ msgstr "Vendos gjuhën"
 msgid "Set System Language"
 msgstr "Vendos gjuhën e sistemit"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Vendos gjuhën për ekranin e hyrjes, llogarinë mysafir dhe llogaritë e reja "
 "të përdoruesit"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "Kalo tek rregullimet e tastierës"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr ""
+#~ "Disa parametra kërkojnë të drejtat e administratorit për tu ndryshuar"
 
 #~ msgid "Language: "
 #~ msgstr "Gjuha: "

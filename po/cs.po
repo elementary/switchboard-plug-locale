@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2018-10-18 07:04+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
@@ -20,42 +20,38 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "Jazyk a region"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte region a místní formáty"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 msgid "Region"
 msgstr "Oblast"
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 msgid "Formats"
 msgstr "Formáty"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr "Teplota"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Některé změny se projeví až po opětovném přihlášení"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "Jazyková podpora není kompletně nainstalována"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "Dokončit instalaci"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
@@ -83,11 +79,11 @@ msgstr "Nainstalované jazyky"
 msgid "Currently active language"
 msgstr "Aktuálně používaný jazyk"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "Nainstalovat jazyk"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "Odebrat jazyk"
 
@@ -119,13 +115,16 @@ msgstr "Nastavit jazyk"
 msgid "Set System Language"
 msgstr "Nastavit jazyk systému"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Použít jazyk pro přihlašovací obrazovku, účet hosta a nové uživatele"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 msgid "Keyboard Settings…"
 msgstr "Nastavení klávesnice…"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "K úpravě jazykových nastavení je nutné oprávnění"

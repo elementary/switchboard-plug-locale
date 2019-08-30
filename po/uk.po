@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2016-04-29 14:49+0000\n"
 "Last-Translator: neiron13 <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -18,44 +18,40 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "Мова та регіон"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr "Керування мовами, а також налаштувати область і формат"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Region"
 msgstr "Регіон: "
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Formats"
 msgstr "Формати: "
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr ""
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Деякі зміни набудуть чинності тільки після виходу з сеансу"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "Підтримка мови встановлена не повністю"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "Завершити встановлення"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, fuzzy, c-format
@@ -83,11 +79,11 @@ msgstr "Встановлені Мови"
 msgid "Currently active language"
 msgstr "Активна мова"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "Встановити мову"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "Вилучити мову"
 
@@ -119,16 +115,19 @@ msgstr "Вказати мову"
 msgid "Set System Language"
 msgstr "Виставити мову системи"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Встановити мову для екрану входу, гостьового облікового запису та нових "
 "користувацьких облікових записів"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "Перейти до налаштувань клавіатури"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
 #~ msgid "Language: "
 #~ msgstr "Мова: "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2018-10-18 12:10+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -20,42 +20,38 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "語言和地區"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr "管理語言、調整區域和相關格式"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 msgid "Region"
 msgstr "地區"
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 msgid "Formats"
 msgstr "格式"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr "溫度"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "部份修改需要重新登入後才會生效"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "語言支援尚未完全安裝"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "完全安裝"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "有些設定值需要有管理員權限才能變更"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
@@ -83,11 +79,11 @@ msgstr "已安裝的語言"
 msgid "Currently active language"
 msgstr "目前啟用的語言"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "安裝語言"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "移除語言"
 
@@ -119,13 +115,16 @@ msgstr "設定語言"
 msgid "Set System Language"
 msgstr "設定系統語言"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "為登入畫面、訪客帳號、和新使用者帳號設定預設語言"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 msgid "Keyboard Settings…"
 msgstr "鍵盤設定…"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "有些設定值需要有管理員權限才能變更"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "需要通過身份核對才能管理地區語言設定值"

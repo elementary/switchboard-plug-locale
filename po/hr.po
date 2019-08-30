@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2017-04-17 14:18+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,44 +21,40 @@ msgstr ""
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "Jezik i regija"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr "Upravljajte jezicima i postavite regiju i format"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Region"
 msgstr "Regija "
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Formats"
 msgstr "Formati: "
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr ""
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Neke promjene neće biti primijenjene dok se ne odjavite"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "Jezična podrška nije u potpunosti instalirana"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "Potpuna instalacija"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, fuzzy, c-format
@@ -86,11 +82,11 @@ msgstr "Instalirani jezici"
 msgid "Currently active language"
 msgstr "Trenutno aktivan jezik"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "Instaliraj jezik"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "Ukloni jezik"
 
@@ -122,14 +118,17 @@ msgstr "Postavi jezik"
 msgid "Set System Language"
 msgstr "Postavi jezik sustava"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Postavi jezik za zaslon prijave, račun gosta i nove korisničke račune"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "Prebaci na postavke tipkovnice"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "Potrebna je ovjera za upravljanjem lokalnim postavkama"

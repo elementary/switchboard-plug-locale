@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -15,44 +15,40 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "ენა & რეგიონი"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Region"
 msgstr "რეგიონი: "
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Formats"
 msgstr "ფორმატები: "
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr ""
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "ზოგიერთი ცვლილება გამოსვლამდე არ ამოქმედდება"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "ენის მხარდაჭერა სრულიად ინსტალირებული არ არის"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "სრული ინსტალაცია"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, fuzzy, c-format
@@ -80,11 +76,11 @@ msgstr "დაყენებული ენები"
 msgid "Currently active language"
 msgstr "ამჟამად აქტიური ენა"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "ენის დაყენება"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "ენის წაშლა"
 
@@ -116,15 +112,18 @@ msgstr "ენის დაყენება"
 msgid "Set System Language"
 msgstr "სისტემური ენის მითითება"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "შესვლის ეკრანის, სტუმრის და ახალი მომხმარებლის ანგარიშისთვის ენის დაყენება"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "კლავიატურის პარამეტრებზე გადასვლა"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
 #~ msgid "Language: "
 #~ msgstr "ენა: "

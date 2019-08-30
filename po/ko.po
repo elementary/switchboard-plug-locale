@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-08-30 12:04-0700\n"
 "PO-Revision-Date: 2018-10-20 03:10+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -20,42 +20,38 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:35
 msgid "Language & Region"
 msgstr "언어 & 지역"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
 msgstr "언어 설정 및 지역과 형식 설정"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:108
 msgid "Region"
 msgstr "지역"
 
-#: src/Plug.vala:123
+#: src/Plug.vala:109
 msgid "Formats"
 msgstr "형식"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:110
 msgid "Temperature"
 msgstr "온도"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "몇몇 설정은 로그아웃 후에 적용됩니다"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:139
+#: src/Plug.vala:125
 msgid "Language support is not installed completely"
 msgstr "언어 지원이 제대로 설치되지 않았습니다"
 
-#: src/Plug.vala:143
+#: src/Plug.vala:129
 msgid "Complete Installation"
 msgstr "설치 완료"
-
-#: src/Plug.vala:155
-msgid "Some settings require administrator rights to be changed"
-msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
 #: src/Widgets/InstallInfoBar.vala:42
 #, c-format
@@ -83,11 +79,11 @@ msgstr "설치한 언어"
 msgid "Currently active language"
 msgstr "사용 중인 언어"
 
-#: src/Widgets/LocaleView.vala:42
+#: src/Widgets/LocaleView.vala:46
 msgid "Install language"
 msgstr "언어 설치"
 
-#: src/Widgets/LocaleView.vala:51
+#: src/Widgets/LocaleView.vala:49
 msgid "Remove language"
 msgstr "언어 제거"
 
@@ -119,13 +115,16 @@ msgstr "언어 설정"
 msgid "Set System Language"
 msgstr "시스템 언어 설정"
 
-#: src/Widgets/LocaleSetting.vala:110
+#: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "로그인 화면, 손님 계정과 새로운 사용자 계정을 위한 언어 설정"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:111
 msgid "Keyboard Settings…"
 msgstr "키보드 설정…"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
 #~ msgid "Authentication is required to manage locale settings"
 #~ msgstr "로케일 설정을 관리하려면 인증이 필요합니다"
