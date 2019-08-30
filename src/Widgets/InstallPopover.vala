@@ -21,13 +21,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public signal void language_selected (string lang);
 
-        public InstallPopover (Gtk.Widget relative_to) {
-            Object (
-                position: Gtk.PositionType.BOTTOM,
-                relative_to: relative_to
-            );
-        }
-
         construct {
             var search_entry = new Gtk.SearchEntry ();
             search_entry.margin = 12;
@@ -62,6 +55,7 @@ namespace SwitchboardPlugLocale.Widgets {
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.add (search_entry);
             grid.add (scrolled);
+            grid.show_all ();
 
             add (grid);
 

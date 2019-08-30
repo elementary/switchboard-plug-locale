@@ -129,33 +129,10 @@ namespace SwitchboardPlugLocale {
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.get_content_area ().add (missing_label);
 
-            // Gtk.InfoBar for "one-click" administrative permissions
-            permission_infobar = new Gtk.InfoBar ();
-            permission_infobar.message_type = Gtk.MessageType.INFO;
-
-            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            var lock_button = new Gtk.LockButton (Utils.get_permission ());
-            area_infobar.add (lock_button);
-
-            var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
-            var label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-            content_infobar.add (label_infobar);
-
-            permission_infobar.show_all ();
-
             // Custom InstallInfoBar widget for language installation progress
             install_infobar = new Widgets.InstallInfoBar ();
             install_infobar.no_show_all = true;
             install_infobar.cancel_clicked.connect (installer.cancel_install);
-
-            // connect polkit permission to hiding the permission infobar
-            var permission = Utils.get_permission ();
-            permission.notify["allowed"].connect (() => {
-                if (permission.allowed) {
-                    permission_infobar.no_show_all = true;
-                    permission_infobar.hide ();
-                }
-            });
 
             view = new Widgets.LocaleView (this);
 
@@ -163,7 +140,6 @@ namespace SwitchboardPlugLocale {
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.add (infobar);
             grid.add (missing_lang_infobar);
-            grid.add (permission_infobar);
             grid.add (install_infobar);
             grid.add (view);
             grid.show ();

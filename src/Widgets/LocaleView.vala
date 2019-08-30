@@ -38,22 +38,15 @@ namespace SwitchboardPlugLocale.Widgets {
             scroll.add (list_box);
             scroll.expand = true;
 
-            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
+            var popover = new Widgets.InstallPopover ();
+
+            var add_button = new Gtk.MenuButton ();
+            add_button.image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
+            add_button.popover = popover;
             add_button.tooltip_text = _("Install language");
-            add_button.sensitive = false;
-            add_button.clicked.connect (() => {
-                var popover = new Widgets.InstallPopover (add_button);
-                popover.show_all ();
-                popover.language_selected.connect (plug.on_install_language);
-            });
 
             var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
             remove_button.tooltip_text = _("Remove language");
-            remove_button.sensitive = false;
-            remove_button.clicked.connect (() => {
-                make_sensitive (false);
-                plug.installer.remove (list_box.get_selected_language_code ());
-            });
 
             var action_bar = new Gtk.ActionBar ();
             action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
@@ -82,25 +75,28 @@ namespace SwitchboardPlugLocale.Widgets {
                 locale_setting.reload_regions (selected_language_code, regions);
                 locale_setting.reload_labels (selected_language_code);
 
-                if (remove_button != null) {
-                    if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {
-                        remove_button.sensitive = false;
-                    } else if (Utils.get_permission ().allowed) {
-                        remove_button.sensitive = true;
-                    }
+                if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {
+                    remove_button.sensitive = false;
+                } else {
+                    remove_button.sensitive = true;
                 }
             });
 
-            Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().allowed) {
-                    add_button.sensitive = true;
-                    if (list_box.get_selected_language_code () != locale_manager.get_user_language ().slice (0, 2)) {
-                        remove_button.sensitive = true;
-                    }
-                } else {
-                    add_button.sensitive = false;
-                    remove_button.sensitive = false;
+            remove_button.clicked.connect (() => {
+                if (!Utils.allowed_permission ()) {
+                    return;
                 }
+
+                make_sensitive (false);
+                plug.installer.remove (list_box.get_selected_language_code ());
+            });
+
+            popover.language_selected.connect ((lang) => {
+                if (!Utils.allowed_permission ()) {
+                    return;
+                }
+
+                plug.on_install_language (lang);
             });
 
             show_all ();
