@@ -20,11 +20,11 @@ namespace SwitchboardPlugLocale {
         Widgets.LocaleView view;
 
         public Installer.UbuntuInstaller installer;
-
         public Gtk.InfoBar infobar;
         public Gtk.InfoBar permission_infobar;
         public Gtk.InfoBar missing_lang_infobar;
-        public Widgets.InstallInfoBar install_infobar;
+
+        private ProgressDialog progress_dialog = null;
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -129,18 +129,12 @@ namespace SwitchboardPlugLocale {
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.get_content_area ().add (missing_label);
 
-            // Custom InstallInfoBar widget for language installation progress
-            install_infobar = new Widgets.InstallInfoBar ();
-            install_infobar.no_show_all = true;
-            install_infobar.cancel_clicked.connect (installer.cancel_install);
-
             view = new Widgets.LocaleView (this);
 
             grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
-            grid.add (infobar);
             grid.add (missing_lang_infobar);
-            grid.add (install_infobar);
+            grid.add (progress_dialog);
             grid.add (view);
             grid.show ();
 
@@ -165,10 +159,14 @@ namespace SwitchboardPlugLocale {
         }
 
         private void on_progress_changed (int progress) {
-            install_infobar.progress = progress;
-            install_infobar.is_cancellable = installer.install_cancellable;
-            install_infobar.transaction_language_name = Utils.translate (installer.transaction_language_code, null);
-            install_infobar.transaction_mode = installer.transaction_mode;
+            if (progress_dialog == null) {
+                progress_dialog = new ProgressDialog (installer);
+                progress_dialog.transient_for = (Gtk.Window) grid.get_toplevel ();
+                progress_dialog.run ();
+                progress_dialog = null;
+            }
+
+            progress_dialog.progress = progress;
         }
     }
 }
