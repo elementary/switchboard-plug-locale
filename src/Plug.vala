@@ -134,7 +134,6 @@ namespace SwitchboardPlugLocale {
             grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.add (missing_lang_infobar);
-            grid.add (progress_dialog);
             grid.add (view);
             grid.show ();
 
