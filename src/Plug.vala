@@ -159,14 +159,16 @@ namespace SwitchboardPlugLocale {
         }
 
         private void on_progress_changed (int progress) {
-            if (progress_dialog == null) {
-                progress_dialog = new ProgressDialog (installer);
-                progress_dialog.transient_for = (Gtk.Window) grid.get_toplevel ();
-                progress_dialog.run ();
-                progress_dialog = null;
+            if (progress_dialog != null) {
+                progress_dialog.progress = progress;
+                return;
             }
 
+            progress_dialog = new ProgressDialog (installer);
             progress_dialog.progress = progress;
+            progress_dialog.transient_for = (Gtk.Window) grid.get_toplevel ();
+            progress_dialog.run ();
+            progress_dialog = null;
         }
     }
 }
