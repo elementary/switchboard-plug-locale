@@ -39,8 +39,6 @@ namespace SwitchboardPlugLocale {
         private Locale1Proxy locale1_proxy;
         private AccountProxy account_proxy;
 
-        private Act.UserManager user_manager;
-
         private Settings input_settings;
         private Settings settings;
 
@@ -49,7 +47,6 @@ namespace SwitchboardPlugLocale {
         construct {
             xkbinfo = new Gnome.XkbInfo ();
 
-            user_manager = Act.UserManager.get_default ();
             uint uid = (uint)Posix.getuid();
 
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
