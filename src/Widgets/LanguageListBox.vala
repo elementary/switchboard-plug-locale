@@ -20,16 +20,13 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
 
     private Gtk.Label installed_languages_label;
 
-    public signal void settings_changed ();
-
-    public LanguageListBox () {
+    construct {
         languages = new Gee.HashMap <string, LanguageRow> ();
         lm = LocaleManager.get_default ();
-        row_selected.connect (on_row_selected);
 
         installed_languages_label = new Gtk.Label (_("Installed Languages"));
         installed_languages_label.halign = Gtk.Align.START;
-        installed_languages_label.get_style_context ().add_class ("h4");
+        installed_languages_label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
 
         set_header_func (update_headers);
     }
@@ -41,8 +38,11 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             this.remove (item);
         });
 
-        foreach (var lang in langs) {
-            add_language (lang);
+        foreach (var language in langs) {
+            var code = language.slice (0, 2);
+            if (language.length == 2 || language.length == 5) {
+                add_language (code);
+            }
         }
 
         foreach (Gtk.Widget row in get_children ()) {
@@ -54,26 +54,25 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         show_all ();
     }
 
-    private void add_language (string language) {
-        var code = language.slice (0, 2);
-        if (!languages.has_key (code) && (language.length == 2 || language.length == 5)) {
+    private void add_language (string code) {
+        if (!languages.has_key (code)) {
             var language_string = Utils.translate (code, null);
 
-            LanguageRow label;
             if (lm.get_user_language ().slice (0, 2) == code) {
-                label = new LanguageRow (code, language_string, true);
+                languages[code] = new LanguageRow (code, language_string, true);
             } else {
-                label = new LanguageRow (code, language_string);
+                languages[code] = new LanguageRow (code, language_string);
             }
 
-            languages.set (code, label);
-            add (label);
+            add (languages[code]);
         }
+
+        show_all ();
     }
 
-    private void on_row_selected (Gtk.ListBoxRow? row) {
-        if (row != null) {
-            settings_changed ();
+    public void remove_language (string code) {
+        if (languages.has_key (code)) {
+            languages[code].destroy ();
         }
     }
 
