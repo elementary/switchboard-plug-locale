@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-30 12:04-0700\n"
-"PO-Revision-Date: 2019-01-09 00:06+0000\n"
+"PO-Revision-Date: 2019-09-01 16:22+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-locale/pt/>\n"
+"Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:35
 msgid "Language & Region"
-msgstr "Idioma & região"
+msgstr "Idioma e Região"
 
 #: src/Plug.vala:36
 msgid "Manage languages, and configure region and format"
@@ -42,7 +42,7 @@ msgstr "Temperatura"
 
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
-msgstr "Algumas alterações terão efeito após terminar sessão"
+msgstr "Algumas alterações não terão efeito até que termine a sessão"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:125
@@ -109,17 +109,17 @@ msgstr "Temperatura:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr "Escolher como Idioma"
+msgstr "Definir idioma"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
-msgstr "Escolher como Idioma do Sistema"
+msgstr "Definir idioma do sistema"
 
 #: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
-"Definir idioma do ecrã de início de sessão, da conta de convidado e novas "
-"contas"
+"Definir idioma para o ecrã de início de sessão, conta de convidado e novas "
+"contas de utilizador"
 
 #: src/Widgets/LocaleSetting.vala:111
 msgid "Keyboard Settings…"
