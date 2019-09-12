@@ -1,10 +1,11 @@
 project(
-    'locale-plug',
+    'locale',
     'vala', 'c',
     meson_version: '>= 0.46.1',
     version: '2.4.1'
 )
 
+gettext_name = meson.project_name() + '-plug'
 gnome = import('gnome')
 i18n = import('i18n')
 
@@ -20,7 +21,7 @@ polkit_dep = dependency('polkit-gobject-1')
 polkit_actiondir = polkit_dep.get_pkgconfig_variable('actiondir', define_variable: ['prefix', prefix])
 
 add_project_arguments(
-    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
     '-DGNOME_DESKTOP_USE_UNSTABLE_API',
     language: 'c'
 )
