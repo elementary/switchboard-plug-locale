@@ -18,8 +18,8 @@
 public interface AccountProxy : GLib.Object {
     public abstract void set_formats_locale (string formats_locale) throws GLib.Error;
     public abstract void set_language (string language) throws GLib.Error;
-    public abstract string formats_locale  { owned get; }
-    public abstract string language  { owned get; }
+    public abstract string formats_locale { owned get; }
+    public abstract string language { owned get; }
 }
 
 [DBus (name = "org.freedesktop.locale1")]
@@ -47,7 +47,7 @@ namespace SwitchboardPlugLocale {
         construct {
             xkbinfo = new Gnome.XkbInfo ();
 
-            uint uid = (uint)Posix.getuid();
+            uint uid = (uint)Posix.getuid ();
 
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
 
@@ -85,7 +85,7 @@ namespace SwitchboardPlugLocale {
          * user related stuff
          */
         public void set_user_language (string language) {
-            debug("Setting user language to %s", language);
+            debug ("Setting user language to %s", language);
 
             try {
                 account_proxy.set_language (language);
@@ -99,7 +99,7 @@ namespace SwitchboardPlugLocale {
         }
 
         public void set_user_format (string language) {
-            debug("Setting user format to %s", language);
+            debug ("Setting user format to %s", language);
 
             try {
                 account_proxy.set_formats_locale (language);
@@ -128,8 +128,9 @@ namespace SwitchboardPlugLocale {
                             SpawnFlags.SEARCH_PATH,
                             null, out output,
                             null, out status);
-                        if (output != "")
+                        if (output != "") {
                             critical ("localectl failed to set locale");
+                        }
                     } else {
                         Process.spawn_sync (null,
                             {"pkexec", cli, command, locale, "LC_TIME=%s".printf (format),
@@ -139,8 +140,9 @@ namespace SwitchboardPlugLocale {
                             SpawnFlags.SEARCH_PATH,
                             null, out output,
                             null, out status);
-                        if (output != "")
+                        if (output != "") {
                             critical ("localectl failed to set locale");
+                        }
                     }
                 } catch (Error e) {
                     critical ("localectl failed to set locale");
@@ -164,8 +166,9 @@ namespace SwitchboardPlugLocale {
                         null, out output,
                         null, out status);
 
-                    if (output != "")
+                    if (output != "") {
                         critical ("localectl failed to set x11 keymap");
+                    }
                 } catch (Error e) {
                     critical ("localectl failed to set x11 keymap");
                     throw e;
@@ -211,7 +214,7 @@ namespace SwitchboardPlugLocale {
                 layouts += l;
                 variants += v;
 
-                if (i < nr_keymaps-1) {
+                if (i < nr_keymaps - 1) {
                     layouts += ",";
                     variants += ",";
                 }
