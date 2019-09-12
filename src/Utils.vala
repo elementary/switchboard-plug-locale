@@ -16,7 +16,6 @@
 
 namespace SwitchboardPlugLocale {
     public class Utils : Object {
-
         private static string[] installed_languages;
         private static Gee.ArrayList<string> installed_locales;
         private static Gee.HashMap<string, string> default_regions;
@@ -228,10 +227,11 @@ namespace SwitchboardPlugLocale {
 
         public static string translate (string locale, string? translation) {
             var current_language = Environment.get_variable ("LANGUAGE");
-            if (translation == null)
+            if (translation == null) {
                 Environment.set_variable ("LANGUAGE", locale, true);
-            else
+            } else {
                 Environment.set_variable ("LANGUAGE", translation, true);
+            }
 
             var lang_name = translate_language (Gnome.Languages.get_language_from_locale (locale, null));
 
@@ -246,15 +246,17 @@ namespace SwitchboardPlugLocale {
 
         public static string translate_region (string locale, string region, string? translation) {
             var current_language = Environment.get_variable ("LANGUAGE");
-            if (translation == null)
+            if (translation == null) {
                 Environment.set_variable ("LANGUAGE", locale, true);
-            else
+            } else {
                 Environment.set_variable ("LANGUAGE", translation, true);
+            }
 
             string region_name = region;
 
-            if (region.length == 2)
+            if (region.length == 2) {
                 region_name = translate_country (Gnome.Languages.get_country_from_code (region, null));
+            }
 
             if (current_language != null) {
                 Environment.set_variable ("LANGUAGE", current_language, true);
@@ -268,10 +270,15 @@ namespace SwitchboardPlugLocale {
         private static Polkit.Permission? permission = null;
 
         public static Polkit.Permission? get_permission () {
-            if (permission != null)
+            if (permission != null) {
                 return permission;
+            }
+
             try {
-                permission = new Polkit.Permission.sync ("io.elementary.switchboard.locale.administration", new Polkit.UnixProcess (Posix.getpid ()));
+                permission = new Polkit.Permission.sync (
+                    "io.elementary.switchboard.locale.administration",
+                    new Polkit.UnixProcess (Posix.getpid ())
+                );
                 return permission;
             } catch (Error e) {
                 critical (e.message);
