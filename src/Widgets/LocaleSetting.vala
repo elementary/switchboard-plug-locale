@@ -166,8 +166,10 @@ namespace SwitchboardPlugLocale.Widgets {
             Gtk.TreeIter iter;
             string region;
 
-            if (!region_combobox.get_active_iter (out iter))
+            if (!region_combobox.get_active_iter (out iter)) {
                 return "";
+            }
+
             region_store.get (iter, 1, out region);
 
             return region;
@@ -177,8 +179,10 @@ namespace SwitchboardPlugLocale.Widgets {
             Gtk.TreeIter iter;
             string format;
 
-            if (!format_combobox.get_active_iter (out iter))
+            if (!format_combobox.get_active_iter (out iter)) {
                 return "";
+            }
+
             format_store.get (iter, 1, out format);
 
             return format;
@@ -187,20 +191,23 @@ namespace SwitchboardPlugLocale.Widgets {
         private void on_format_changed () {
             var format = get_format ();
 
-            if (format != "")
+            if (format != "") {
                 preview.reload_languages (format);
+            }
         }
 
         private void compare () {
             if (set_button != null && selected_language != "" && selected_format != "") {
                 var compare_language = language;
-                if (has_region)
+                if (has_region) {
                     compare_language = "%s_%s".printf (compare_language, get_region ());
+                }
 
-                if (compare_language == selected_language && selected_format == get_format ())
-                    set_button.set_sensitive (false);
-                else
-                    set_button.set_sensitive (true);
+                if (compare_language == selected_language && selected_format == get_format ()) {
+                    set_button.sensitive = false;
+                } else {
+                    set_button.sensitive = true;
+                }
             }
         }
 
@@ -230,20 +237,22 @@ namespace SwitchboardPlugLocale.Widgets {
                 region_store.set (iter, 0, region_string, 1, region);
 
                 if (lm.get_user_language ().length == 5 && lm.get_user_language ().slice (0, 2) == language
-                    && lm.get_user_language ().slice (3, 5) == region)
+                    && lm.get_user_language ().slice (3, 5) == region) {
                         selected_region = i;
+                }
 
                 var default_regions = yield Utils.get_default_regions ();
                 if (default_regions.has_key (language) && lm.get_user_language ().slice (0, 2) != language
-                && default_regions.@get (language) == "%s_%s".printf (language, region))
+                && default_regions.@get (language) == "%s_%s".printf (language, region)) {
                     selected_region = i;
+                }
 
                 i++;
             }
 
             region_combobox.active = selected_region;
 
-            region_store.set_sort_column_id(0, Gtk.SortType.ASCENDING);
+            region_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
 
             if (i == 0) {
                 region_endlabel.hide ();
@@ -253,10 +262,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 region_combobox.show ();
             }
 
-            if (selected_language == "" && has_region)
+            if (selected_language == "" && has_region) {
                 selected_language = "%s_%s".printf (language, get_region ());
-            else if (selected_language == "" && !has_region)
+            } else if (selected_language == "" && !has_region) {
                 selected_language = language;
+            }
 
             compare ();
         }
@@ -270,10 +280,11 @@ namespace SwitchboardPlugLocale.Widgets {
             foreach (var locale in locales) {
                 string country = null;
 
-                if (locale.length == 2)
+                if (locale.length == 2) {
                     country = Gnome.Languages.get_country_from_code (locale, null);
-                else if (locale.length == 5)
+                } else if (locale.length == 5) {
                     country = Gnome.Languages.get_country_from_locale (locale, null);
+                }
 
                 if (country != null) {
                     locale += ".UTF-8";
@@ -281,8 +292,9 @@ namespace SwitchboardPlugLocale.Widgets {
                     format_store.append (out iter);
                     format_store.set (iter, 0, country, 1, locale);
 
-                    if (locale == user_format)
+                    if (locale == user_format) {
                         format_id = i;
+                    }
 
                     i++;
                 }
@@ -290,10 +302,11 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
             format_combobox.active = format_id;
 
-            format_store.set_sort_column_id(0, Gtk.SortType.ASCENDING);
+            format_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
 
-            if (selected_format == "")
+            if (selected_format == "") {
                 selected_format = get_format ();
+            }
 
             compare ();
         }
