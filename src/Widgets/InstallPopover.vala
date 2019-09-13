@@ -63,7 +63,11 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         search_entry.grab_focus ();
 
         list_box.row_selected.connect ((row) => {
+            var langrow = (LangRow) list_box.get_selected_row ();
+
             button_add.sensitive = row != null;
+            button_add.label = _("Install %s").printf (Utils.translate (langrow.lang, "C"));
+
         });
 
         button_add.clicked.connect (() => {
