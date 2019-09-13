@@ -70,12 +70,6 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         show_all ();
     }
 
-    public void remove_language (string code) {
-        if (languages.has_key (code)) {
-            languages[code].destroy ();
-        }
-    }
-
     public void set_current (string code) {
         foreach (Gtk.Widget row in get_children ()) {
             if (((LanguageRow)row).code == code) {

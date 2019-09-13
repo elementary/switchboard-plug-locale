@@ -29,10 +29,6 @@ namespace SwitchboardPlugLocale {
         }
 
         public static string[]? get_installed_languages () {
-            if (installed_languages.length > 0) {
-                return installed_languages;
-            }
-
             string output;
             int status;
 

@@ -82,7 +82,6 @@ namespace SwitchboardPlugLocale {
             });
 
             installer.remove_finished.connect ((langcode) => {
-                view.list_box.remove_language (langcode);
                 reload.begin ();
                 view.make_sensitive (true);
             });
