@@ -125,6 +125,7 @@ namespace SwitchboardPlugLocale {
 
             missing_lang_infobar = new Gtk.InfoBar ();
             missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
+            missing_lang_infobar.revealed = false;
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.get_content_area ().add (missing_label);
 
@@ -138,7 +139,7 @@ namespace SwitchboardPlugLocale {
             grid.show ();
 
             missing_lang_infobar.response.connect (() => {
-                missing_lang_infobar.hide ();
+                missing_lang_infobar.revealed = false;
                 installer.install_missing_languages ();
             });
         }
@@ -150,10 +151,10 @@ namespace SwitchboardPlugLocale {
 
         private void on_check_missing_finished (string[] missing) {
             if (missing.length > 0) {
-                missing_lang_infobar.show ();
                 missing_lang_infobar.show_all ();
+                missing_lang_infobar.revealed = true;
             } else {
-                missing_lang_infobar.hide ();
+                missing_lang_infobar.revealed = false;
             }
         }
 
