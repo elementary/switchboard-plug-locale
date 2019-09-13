@@ -92,7 +92,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 make_sensitive (false);
-                plug.installer.remove (list_box.get_selected_language_code ());
+                Installer.UbuntuInstaller.get_default ().remove (list_box.get_selected_language_code ());
             });
 
             popover.language_selected.connect ((lang) => {
