@@ -35,7 +35,7 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.add (list_box);
 
-        var button_add = new Gtk.Button.with_label (_("Add Layout"));
+        var button_add = new Gtk.Button.with_label (_("Install Language"));
         button_add.sensitive = false;
         button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
