@@ -73,6 +73,10 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
             language_selected (langrow.lang);
         });
 
+        button_cancel.clicked.connect (() => {
+            popdown ();
+        });
+
         search_entry.activate.connect (() => {
             list_box.get_row_at_y (0).activate ();
         });
