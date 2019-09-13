@@ -67,7 +67,11 @@ namespace SwitchboardPlugLocale.Widgets {
             pack1 (sidebar, true, false);
             pack2 (locale_setting, true, false);
 
-            list_box.settings_changed.connect (() => {
+            list_box.row_selected.connect ((row) => {
+                if (row == null) {
+                    return;
+                }
+
                 var selected_language_code = list_box.get_selected_language_code ();
                 var regions = Utils.get_regions (selected_language_code);
 
