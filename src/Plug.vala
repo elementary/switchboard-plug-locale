@@ -72,8 +72,7 @@ namespace SwitchboardPlugLocale {
             if (lm.is_connected) {
                 reload.begin ();
 
-                infobar.no_show_all = true;
-                infobar.hide ();
+                infobar.revealed = false;
             }
 
             installer.install_finished.connect ((langcode) => {
@@ -115,12 +114,11 @@ namespace SwitchboardPlugLocale {
         // Wires up and configures initial UI
         private void setup_ui () {
             // Gtk.InfoBar for informing about necessary log-out/log-in
+            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
-            infobar.no_show_all = true;
-            var content = infobar.get_content_area () as Gtk.Container;
-            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
-            content.add (label);
+            infobar.revealed = false;
+            infobar.get_content_area ().add (label);
 
             // Gtk.InfoBar for language support installation
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
