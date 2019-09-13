@@ -28,6 +28,7 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         search_entry.margin = 12;
 
         list_box = new Gtk.ListBox ();
+        list_box.activate_on_single_click = false;
         list_box.expand = true;
         list_box.set_filter_func ((Gtk.ListBoxFilterFunc) filter_function);
         list_box.set_sort_func ((Gtk.ListBoxSortFunc) sort_function);
@@ -70,12 +71,9 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
 
         });
 
-        button_add.clicked.connect (() => {
-            popdown ();
+        list_box.row_activated.connect (install_selected);
 
-            var langrow = (LangRow) list_box.get_selected_row ();
-            language_selected (langrow.lang);
-        });
+        button_add.clicked.connect (install_selected);
 
         button_cancel.clicked.connect (() => {
             popdown ();
@@ -88,6 +86,13 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         search_entry.search_changed.connect (() => {
             list_box.invalidate_filter ();
         });
+    }
+
+    private void install_selected () {
+        popdown ();
+
+        var langrow = (LangRow) list_box.get_selected_row ();
+        language_selected (langrow.lang);
     }
 
     [CCode (instance_pos = -1)]
