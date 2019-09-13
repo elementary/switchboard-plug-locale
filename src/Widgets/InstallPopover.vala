@@ -21,23 +21,39 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
     private Gtk.ListBox list_box;
 
     construct {
+        height_request = 400;
+        width_request = 400;
+
         search_entry = new Gtk.SearchEntry ();
         search_entry.margin = 12;
 
         list_box = new Gtk.ListBox ();
+        list_box.expand = true;
         list_box.set_filter_func ((Gtk.ListBoxFilterFunc) filter_function);
         list_box.set_sort_func ((Gtk.ListBoxSortFunc) sort_function);
 
         var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.height_request = 200;
-        scrolled.width_request = 300;
         scrolled.add (list_box);
 
+        var button_add = new Gtk.Button.with_label (_("Add Layout"));
+        button_add.sensitive = false;
+        button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var button_cancel = new Gtk.Button.with_label (_("Cancel"));
+
+        var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
+        button_box.layout_style = Gtk.ButtonBoxStyle.END;
+        button_box.margin = 12;
+        button_box.spacing = 6;
+        button_box.add (button_cancel);
+        button_box.add (button_add);
+
         var grid = new Gtk.Grid ();
-        grid.margin_bottom = 3;
         grid.orientation = Gtk.Orientation.VERTICAL;
         grid.add (search_entry);
         grid.add (scrolled);
+        grid.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        grid.add (button_box);
         grid.show_all ();
 
         add (grid);
@@ -46,9 +62,15 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
 
         search_entry.grab_focus ();
 
-        list_box.row_activated.connect ((row) => {
+        list_box.row_selected.connect ((row) => {
+            button_add.sensitive = row != null;
+        });
+
+        button_add.clicked.connect (() => {
             popdown ();
-            language_selected (((LangRow) row).lang);
+
+            var langrow = (LangRow) list_box.get_selected_row ();
+            language_selected (langrow.lang);
         });
 
         search_entry.activate.connect (() => {
