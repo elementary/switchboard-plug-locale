@@ -60,14 +60,18 @@ namespace SwitchboardPlugLocale.Widgets {
 
             locale_setting = new LocaleSetting ();
             locale_setting.settings_changed.connect (() => {
-                plug.infobar.no_show_all = false;
                 plug.infobar.show_all ();
+                plug.infobar.revealed = true;
             });
 
             pack1 (sidebar, true, false);
             pack2 (locale_setting, true, false);
 
-            list_box.settings_changed.connect (() => {
+            list_box.row_selected.connect ((row) => {
+                if (row == null) {
+                    return;
+                }
+
                 var selected_language_code = list_box.get_selected_language_code ();
                 var regions = Utils.get_regions (selected_language_code);
 
