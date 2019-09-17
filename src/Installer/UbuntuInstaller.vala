@@ -62,7 +62,7 @@ namespace SwitchboardPlugLocale.Installer {
             transaction_language_code = language;
 
             foreach (var packet in packages) {
-                message("Packet: %s", packet);
+                message ("Packet: %s", packet);
             }
 
             aptd.install_packages.begin (packages, (obj, res) => {
@@ -122,7 +122,7 @@ namespace SwitchboardPlugLocale.Installer {
 
                 try {
                     var transaction_id = aptd.remove_packages.end (res);
-                    transactions.@set (transaction_id, "r-"+languagecode);
+                    transactions.@set (transaction_id, "r-" + languagecode);
                     run_transaction (transaction_id);
 
                 } catch (Error e) {

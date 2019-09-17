@@ -25,7 +25,14 @@ public interface AccountProxy : GLib.Object {
 [DBus (name = "org.freedesktop.locale1")]
 public interface Locale1Proxy : GLib.Object {
     public abstract void set_locale (string[] arg_0, bool arg_1) throws GLib.Error;
-    public abstract void set_x11_keyboard (string arg_0, string arg_1, string arg_2, string arg_3, bool arg_4, bool arg_5) throws GLib.Error;
+    public abstract void set_x11_keyboard (
+        string arg_0,
+        string arg_1,
+        string arg_2,
+        string arg_3,
+        bool arg_4,
+        bool arg_5
+    ) throws GLib.Error;
 }
 
 namespace SwitchboardPlugLocale {
@@ -53,8 +60,16 @@ namespace SwitchboardPlugLocale {
 
             try {
                 var connection = Bus.get_sync (BusType.SYSTEM);
-                locale1_proxy = connection.get_proxy_sync<Locale1Proxy> ("org.freedesktop.locale1", "/org/freedesktop/locale1", DBusProxyFlags.NONE);
-                account_proxy = connection.get_proxy_sync<AccountProxy> ("org.freedesktop.Accounts", "/org/freedesktop/Accounts/User%u".printf (uid), DBusProxyFlags.NONE);
+                locale1_proxy = connection.get_proxy_sync<Locale1Proxy> (
+                    "org.freedesktop.locale1",
+                    "/org/freedesktop/locale1",
+                    DBusProxyFlags.NONE
+                );
+                account_proxy = connection.get_proxy_sync<AccountProxy> (
+                    "org.freedesktop.Accounts",
+                    "/org/freedesktop/Accounts/User%u".printf (uid),
+                    DBusProxyFlags.NONE
+                );
             } catch (IOError e) {
                 critical (e.message);
             }
