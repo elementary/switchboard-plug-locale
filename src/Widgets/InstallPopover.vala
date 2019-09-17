@@ -93,14 +93,19 @@ namespace SwitchboardPlugLocale.Widgets {
                 string line;
                 var langs = new GLib.List<string> ();
                 while ((line = dis.read_line (null)) != null) {
-                    if (line.substring(0,1) != "#" && line != "") {
+                    if (line.substring (0, 1) != "#" && line != "") {
                         if (line == "ia")
                             continue;
 
                         if (langs.find_custom (line, strcmp).length () == 0) {
                             Gtk.TreeIter iter;
                             list_store.append (out iter);
-                            list_store.set (iter, 0, Utils.translate (line, null), 1, Utils.translate (line, "C"), 2, line);
+                            list_store.set (
+                                iter, 0,
+                                Utils.translate (line, null), 1,
+                                Utils.translate (line, "C"), 2,
+                                line
+                            );
                             langs.append (line);
                         }
                     }
