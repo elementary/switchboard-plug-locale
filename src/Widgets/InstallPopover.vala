@@ -124,7 +124,7 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
             string line;
             var langs = new GLib.List<string> ();
             while ((line = dis.read_line (null)) != null) {
-                if (line.substring (0,1) != "#" && line != "") {
+                if (line.substring (0, 1) != "#" && line != "") {
                     if (line == "ia") {
                         continue;
                     }

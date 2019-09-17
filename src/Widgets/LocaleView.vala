@@ -60,8 +60,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
             locale_setting = new LocaleSetting ();
             locale_setting.settings_changed.connect (() => {
-                plug.infobar.no_show_all = false;
                 plug.infobar.show_all ();
+                plug.infobar.revealed = true;
             });
 
             pack1 (sidebar, true, false);
