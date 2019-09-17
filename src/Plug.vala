@@ -72,8 +72,7 @@ namespace SwitchboardPlugLocale {
             if (lm.is_connected) {
                 reload.begin ();
 
-                infobar.no_show_all = true;
-                infobar.hide ();
+                infobar.revealed = false;
             }
 
             installer.install_finished.connect ((langcode) => {
@@ -105,7 +104,10 @@ namespace SwitchboardPlugLocale {
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+            var search_results = new Gee.TreeMap<string, string> (
+                (GLib.CompareDataFunc<string>)strcmp,
+                (Gee.EqualDataFunc<string>)str_equal
+            );
             search_results.set ("%s → %s".printf (display_name, _("Region")), "");
             search_results.set ("%s → %s".printf (display_name, _("Formats")), "");
             search_results.set ("%s → %s".printf (display_name, _("Temperature")), "");
@@ -115,18 +117,18 @@ namespace SwitchboardPlugLocale {
         // Wires up and configures initial UI
         private void setup_ui () {
             // Gtk.InfoBar for informing about necessary log-out/log-in
+            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
-            infobar.no_show_all = true;
-            var content = infobar.get_content_area () as Gtk.Container;
-            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
-            content.add (label);
+            infobar.revealed = false;
+            infobar.get_content_area ().add (label);
 
             // Gtk.InfoBar for language support installation
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
             missing_lang_infobar = new Gtk.InfoBar ();
             missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
+            missing_lang_infobar.revealed = false;
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.get_content_area ().add (missing_label);
 
@@ -140,7 +142,7 @@ namespace SwitchboardPlugLocale {
             grid.show ();
 
             missing_lang_infobar.response.connect (() => {
-                missing_lang_infobar.hide ();
+                missing_lang_infobar.revealed = false;
                 installer.install_missing_languages ();
             });
         }
@@ -152,10 +154,10 @@ namespace SwitchboardPlugLocale {
 
         private void on_check_missing_finished (string[] missing) {
             if (missing.length > 0) {
-                missing_lang_infobar.show ();
                 missing_lang_infobar.show_all ();
+                missing_lang_infobar.revealed = true;
             } else {
-                missing_lang_infobar.hide ();
+                missing_lang_infobar.revealed = false;
             }
         }
 
