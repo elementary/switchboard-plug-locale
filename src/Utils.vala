@@ -16,7 +16,7 @@
 
 namespace SwitchboardPlugLocale {
     public class Utils : Object {
-        private static string[] installed_languages;
+        private static Gee.ArrayList<string> installed_languages;
         private static Gee.ArrayList<string> installed_locales;
         private static Gee.HashMap<string, string> default_regions;
         private static Gee.ArrayList<string> blacklist_packages;
@@ -25,11 +25,11 @@ namespace SwitchboardPlugLocale {
             installed_locales = new Gee.ArrayList<string> ();
             default_regions = new Gee.HashMap<string, string> ();
             blacklist_packages = new Gee.ArrayList<string> ();
-            installed_languages = {};
+            installed_languages = new Gee.ArrayList<string> ();
         }
 
-        public static string[]? get_installed_languages () {
-            if (installed_languages.length > 0) {
+        public static Gee.ArrayList<string>? get_installed_languages () {
+            if (installed_languages.size > 0) {
                 return installed_languages;
             }
 
@@ -46,7 +46,9 @@ namespace SwitchboardPlugLocale {
                     null,
                     out status);
 
-                installed_languages = output.split ("\n");
+                foreach (var lang in output.split ("\n")) {
+                    installed_languages.add (lang);
+                }
             } catch (Error e) {
                 warning (e.message);
             }
