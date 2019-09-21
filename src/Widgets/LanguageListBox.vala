@@ -38,6 +38,10 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             this.remove (item);
         });
 
+        langs.sort ((a, b) => {
+            return ((string) a).collate ((string) b);
+        });
+
         for (int i = 0; i < langs.size; i++) {
             var language = langs[i];
             var code = language.slice (0, 2);
