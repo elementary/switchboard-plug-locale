@@ -17,6 +17,7 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Granite.SimpleSettingsPage {
         private Gtk.Button set_button;
+        private Gtk.Button set_system_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
         private Gtk.ListStore format_store;
@@ -105,7 +106,7 @@ namespace SwitchboardPlugLocale.Widgets {
             set_button.sensitive = false;
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-            var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
+            set_system_button = new Gtk.Button.with_label (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
 
             var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…"));
@@ -197,7 +198,7 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void compare () {
-            if (set_button != null && selected_language != "" && selected_format != "") {
+            if (set_button != null && set_system_button != null && selected_language != "" && selected_format != "") {
                 var compare_language = language;
                 if (has_region) {
                     compare_language = "%s_%s".printf (compare_language, get_region ());
@@ -207,6 +208,12 @@ namespace SwitchboardPlugLocale.Widgets {
                     set_button.sensitive = false;
                 } else {
                     set_button.sensitive = true;
+                }
+
+                if (compare_language == lm.get_system_language () && selected_format == get_format ()) {
+                    set_system_button.sensitive = false;
+                } else {
+                    set_system_button.sensitive = true;
                 }
             }
         }

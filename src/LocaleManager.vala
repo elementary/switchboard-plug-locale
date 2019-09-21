@@ -191,6 +191,34 @@ namespace SwitchboardPlugLocale {
             }
         }
 
+        public string get_system_language () {
+            string result = "";
+            string prefix = "LANG=";
+
+            try {
+                string localectl_output;
+                Process.spawn_sync (null,
+                    {"/usr/bin/localectl", "status"},
+                    Environ.get (),
+                    SpawnFlags.SEARCH_PATH,
+                    null, out localectl_output);
+
+                foreach (string line in localectl_output.split ("\n")) {
+                    if ("System Locale" in line) {
+                        foreach (string splitted in line.split (":")) {
+                            if (prefix in splitted) {
+                                result = splitted.strip ();
+                            }
+                        }
+                    }
+                }
+            } catch (Error e) {
+                critical (e.message);
+            }
+
+            return result[prefix.length:prefix.length + 5];
+        }
+
         public void apply_to_system (string language, string? format) {
             /*
              * This is a temporary solution for setting the system-wide locale.
