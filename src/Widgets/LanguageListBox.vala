@@ -39,7 +39,7 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         });
 
         langs.sort ((a, b) => {
-            return ((string) a).collate ((string) b);
+            return a.collate (b);
         });
 
         for (int i = 0; i < langs.size; i++) {
