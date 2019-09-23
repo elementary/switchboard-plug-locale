@@ -77,7 +77,7 @@ namespace SwitchboardPlugLocale.Installer {
 
                 try {
                     var transaction_id = aptd.install_packages.end (res);
-                    transactions.@set (transaction_id, "i- " + language);
+                    transactions.@set (transaction_id, "i-" + language);
                     run_transaction (transaction_id);
                 } catch (Error e) {
                     warning ("Could not queue downloads: %s", e.message);

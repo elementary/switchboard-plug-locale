@@ -26,6 +26,8 @@ namespace SwitchboardPlugLocale {
 
         private ProgressDialog progress_dialog = null;
 
+        private Gee.ArrayList<string> langs;
+
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("language", null);
@@ -52,7 +54,7 @@ namespace SwitchboardPlugLocale {
 
         private async void reload () {
             new Thread<void*> ("load-lang-data", () => {
-                var langs = Utils.get_installed_languages ();
+                langs = Utils.get_installed_languages ();
                 var locales = Utils.get_installed_locales ();
 
                 Idle.add (() => {
@@ -76,12 +78,13 @@ namespace SwitchboardPlugLocale {
             }
 
             installer.install_finished.connect ((langcode) => {
+                langs.add (langcode);
                 reload.begin ();
                 view.make_sensitive (true);
             });
 
             installer.remove_finished.connect ((langcode) => {
-                view.list_box.remove_language (langcode);
+                langs.remove (langcode);
                 reload.begin ();
                 view.make_sensitive (true);
             });
