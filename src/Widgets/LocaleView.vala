@@ -101,13 +101,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 make_sensitive (false);
-                plug.installer.install (lang);
+                Installer.UbuntuInstaller.get_default ().install (lang);
             });
 
             show_all ();
         }
 
-        public void make_sensitive (bool sensitive) {
+        private void make_sensitive (bool sensitive) {
             sidebar.sensitive = sensitive;
             locale_setting.sensitive = sensitive;
         }
