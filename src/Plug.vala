@@ -19,11 +19,11 @@ namespace SwitchboardPlugLocale {
         Gtk.Grid grid;
         Widgets.LocaleView view;
 
-        private Installer.UbuntuInstaller installer;
         public Gtk.InfoBar infobar;
         public Gtk.InfoBar permission_infobar;
         public Gtk.InfoBar missing_lang_infobar;
 
+        private Installer.UbuntuInstaller installer;
         private ProgressDialog progress_dialog = null;
 
         private Gee.ArrayList<string> langs;

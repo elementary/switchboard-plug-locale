@@ -86,7 +86,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
-            var installer = Installer.UbuntuInstaller.get_default ();
+            unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
             installer.install_finished.connect (() => {
                 make_sensitive (true);

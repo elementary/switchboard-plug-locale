@@ -30,7 +30,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Gtk.Dialog {
         var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale", Gtk.IconSize.DIALOG);
         image.valign = Gtk.Align.START;
 
-        var installer = Installer.UbuntuInstaller.get_default ();
+        unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
         var transaction_language_name = Utils.translate (installer.transaction_language_code, null);
 
