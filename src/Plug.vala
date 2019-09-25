@@ -150,11 +150,6 @@ namespace SwitchboardPlugLocale {
             });
         }
 
-        public void on_install_language (string language) {
-            view.make_sensitive (false);
-            installer.install (language);
-        }
-
         private void on_check_missing_finished (string[] missing) {
             if (missing.length > 0) {
                 missing_lang_infobar.show_all ();

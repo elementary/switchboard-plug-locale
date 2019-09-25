@@ -100,7 +100,8 @@ namespace SwitchboardPlugLocale.Widgets {
                     return;
                 }
 
-                plug.on_install_language (lang);
+                make_sensitive (false);
+                plug.installer.install (lang);
             });
 
             show_all ();
