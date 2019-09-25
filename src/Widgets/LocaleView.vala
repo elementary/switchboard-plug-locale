@@ -86,13 +86,23 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
+            var installer = Installer.UbuntuInstaller.get_default ();
+
+            installer.install_finished.connect (() => {
+                make_sensitive (true);
+            });
+
+            installer.remove_finished.connect (() => {
+                make_sensitive (true);
+            });
+
             remove_button.clicked.connect (() => {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
 
                 make_sensitive (false);
-                Installer.UbuntuInstaller.get_default ().remove (list_box.get_selected_language_code ());
+                installer.remove (list_box.get_selected_language_code ());
             });
 
             popover.language_selected.connect ((lang) => {
@@ -101,7 +111,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 make_sensitive (false);
-                Installer.UbuntuInstaller.get_default ().install (lang);
+                installer.install (lang);
             });
 
             show_all ();

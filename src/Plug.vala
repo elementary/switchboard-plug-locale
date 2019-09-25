@@ -80,13 +80,11 @@ namespace SwitchboardPlugLocale {
             installer.install_finished.connect ((langcode) => {
                 langs.add (langcode);
                 reload.begin ();
-                view.make_sensitive (true);
             });
 
             installer.remove_finished.connect ((langcode) => {
                 langs.remove (langcode);
                 reload.begin ();
-                view.make_sensitive (true);
             });
 
             installer.check_missing_finished.connect (on_check_missing_finished);
@@ -165,7 +163,7 @@ namespace SwitchboardPlugLocale {
                 return;
             }
 
-            progress_dialog = new ProgressDialog (installer);
+            progress_dialog = new ProgressDialog ();
             progress_dialog.progress = progress;
             progress_dialog.transient_for = (Gtk.Window) grid.get_toplevel ();
             progress_dialog.run ();
