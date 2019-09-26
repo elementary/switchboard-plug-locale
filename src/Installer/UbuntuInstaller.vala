@@ -43,8 +43,16 @@ namespace SwitchboardPlugLocale.Installer {
 
         Gee.HashMap<string, string> transactions;
 
-        public UbuntuInstaller () {
+        private static GLib.Once<UbuntuInstaller> instance;
+        public static unowned UbuntuInstaller get_default () {
+            return instance.once (() => {
+                return new UbuntuInstaller ();
+            });
+        }
 
+        private UbuntuInstaller () {}
+
+        construct {
             transactions = new Gee.HashMap<string, string> ();
             aptd = new AptdProxy ();
 
