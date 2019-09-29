@@ -15,17 +15,15 @@
 */
 
 public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
-    const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
-    const string LOCALES_INSTALLER = "/usr/share/locales/install-language-pack";
-    const string LOCALES_REMOVER = "/usr/share/locales/install-language-pack";
+    private const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
 
-    AptdProxy aptd;
-    AptdTransactionProxy proxy;
+    private AptdProxy aptd;
+    private AptdTransactionProxy proxy;
 
-    string []? missing_packages = null;
-    public bool install_cancellable;
-    public TransactionMode transaction_mode;
-    public string transaction_language_code;
+    private string []? missing_packages = null;
+    private bool install_cancellable;
+    public TransactionMode transaction_mode { get; private set; }
+    public string transaction_language_code { get; private set; }
 
     public signal void install_finished (string langcode);
     public signal void install_failed ();
@@ -81,7 +79,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         });
     }
 
-    public void install_packages (string [] packages) {
+    private void install_packages (string [] packages) {
         foreach (var packet in packages) {
             message ("will install: %s", packet);
         }
@@ -140,7 +138,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    void run_transaction (string transaction_id) {
+    private void run_transaction (string transaction_id) {
         proxy = new AptdTransactionProxy ();
         proxy.finished.connect (() => {
             on_apt_finshed (transaction_id, true);
@@ -167,7 +165,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    void on_apt_finshed (string id, bool success) {
+    private void on_apt_finshed (string id, bool success) {
         if (!success) {
             install_failed ();
             transactions.unset (id);
@@ -198,7 +196,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         transactions.unset (id);
     }
 
-    string[]? get_remaining_packages_for_language (string langcode) {
+    private string[]? get_remaining_packages_for_language (string langcode) {
         string output;
         int status;
 
@@ -218,7 +216,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         return output.strip ().split (" ");
     }
 
-    string[] get_to_remove_packages_for_language (string language) {
+    private string[] get_to_remove_packages_for_language (string language) {
         var installed = get_installed_packages_for_language (language);
 
         string[] multilang_packs = { "chromium-browser-l10n", "poppler-data"};
@@ -233,7 +231,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         return removable.to_array ();
     }
 
-    string[]? get_installed_packages_for_language (string langcode) {
+    private string[]? get_installed_packages_for_language (string langcode) {
         string output;
         int status;
 
