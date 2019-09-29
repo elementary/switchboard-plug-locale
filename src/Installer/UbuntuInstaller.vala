@@ -14,263 +14,240 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-namespace SwitchboardPlugLocale.Installer {
-    public class UbuntuInstaller : Object {
+public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
+    private const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
 
-        const string LANGUAGE_CHECKER = "/usr/bin/check-language-support";
-        const string LOCALES_INSTALLER = "/usr/share/locales/install-language-pack";
-        const string LOCALES_REMOVER = "/usr/share/locales/install-language-pack";
+    private AptdProxy aptd;
+    private AptdTransactionProxy proxy;
 
-        AptdProxy aptd;
-        AptdTransactionProxy proxy;
+    private string []? missing_packages = null;
+    private bool install_cancellable;
+    public TransactionMode transaction_mode { get; private set; }
+    public string transaction_language_code { get; private set; }
 
-        string []? missing_packages = null;
-        public bool install_cancellable;
-        public TransactionMode transaction_mode;
-        public string transaction_language_code;
+    public signal void install_finished (string langcode);
+    public signal void install_failed ();
+    public signal void remove_finished (string langcode);
+    public signal void check_missing_finished (string [] missing);
+    public signal void progress_changed (int progress);
 
-        public signal void install_finished (string langcode);
-        public signal void install_failed ();
-        public signal void remove_finished (string langcode);
-        public signal void check_missing_finished (string [] missing);
-        public signal void progress_changed (int progress);
+    public enum TransactionMode {
+        INSTALL,
+        REMOVE,
+        INSTALL_MISSING,
+    }
 
-        public enum TransactionMode {
-            INSTALL,
-            REMOVE,
-            INSTALL_MISSING,
+    Gee.HashMap<string, string> transactions;
+
+    private static GLib.Once<UbuntuInstaller> instance;
+    public static unowned UbuntuInstaller get_default () {
+        return instance.once (() => {
+            return new UbuntuInstaller ();
+        });
+    }
+
+    private UbuntuInstaller () {}
+
+    construct {
+        transactions = new Gee.HashMap<string, string> ();
+        aptd = new AptdProxy ();
+
+        try {
+            aptd.connect_to_aptd ();
+        } catch (Error e) {
+            warning ("Could not connect to APT daemon");
+        }
+    }
+
+    public void install (string language) {
+        transaction_mode = TransactionMode.INSTALL;
+        var packages = get_remaining_packages_for_language (language);
+        transaction_language_code = language;
+
+        foreach (var packet in packages) {
+            message ("Packet: %s", packet);
         }
 
-        Gee.HashMap<string, string> transactions;
-
-        private static GLib.Once<UbuntuInstaller> instance;
-        public static unowned UbuntuInstaller get_default () {
-            return instance.once (() => {
-                return new UbuntuInstaller ();
-            });
-        }
-
-        private UbuntuInstaller () {}
-
-        construct {
-            transactions = new Gee.HashMap<string, string> ();
-            aptd = new AptdProxy ();
-
+        aptd.install_packages.begin (packages, (obj, res) => {
             try {
-                aptd.connect_to_aptd ();
+                var transaction_id = aptd.install_packages.end (res);
+                transactions.@set (transaction_id, "i-" + language);
+                run_transaction (transaction_id);
             } catch (Error e) {
-                warning ("Could not connect to APT daemon");
+                warning ("Could not queue downloads: %s", e.message);
             }
+        });
+    }
 
+    private void install_packages (string [] packages) {
+        foreach (var packet in packages) {
+            message ("will install: %s", packet);
         }
 
-        public void install (string language) {
-            transaction_mode = TransactionMode.INSTALL;
-            var packages = get_remaining_packages_for_language (language);
-            transaction_language_code = language;
-
-            foreach (var packet in packages) {
-                message ("Packet: %s", packet);
-            }
-
-            aptd.install_packages.begin (packages, (obj, res) => {
-
-                try {
-                    var transaction_id = aptd.install_packages.end (res);
-                    transactions.@set (transaction_id, "i-" + language);
-                    run_transaction (transaction_id);
-                } catch (Error e) {
-                    warning ("Could not queue downloads: %s", e.message);
-                }
-
-
-            });
-
-        }
-
-        public void install_packages (string [] packages) {
-            foreach (var packet in packages) {
-                message ("will install: %s", packet);
-            }
-
-            aptd.install_packages.begin (packages, (obj, res) => {
-
-                try {
-                    var transaction_id = aptd.install_packages.end (res);
-                    transactions.@set (transaction_id, "install-missing");
-                    run_transaction (transaction_id);
-                } catch (Error e) {
-                    warning ("Could not queue downloads: %s", e.message);
-                }
-            });
-
-        }
-
-        public async void check_missing_languages () {
-            missing_packages = yield Utils.get_missing_languages ();
-            check_missing_finished (missing_packages);
-        }
-
-        public void install_missing_languages () {
-            if (missing_packages == null || missing_packages.length == 0)
-                return;
-            transaction_mode = TransactionMode.INSTALL_MISSING;
-
-            install_packages (missing_packages);
-        }
-
-        public void remove (string languagecode) {
-            transaction_mode = TransactionMode.REMOVE;
-            transaction_language_code = languagecode;
-
-            var installed = get_to_remove_packages_for_language (languagecode);
-
-
-            aptd.remove_packages.begin (installed, (obj, res) => {
-
-                try {
-                    var transaction_id = aptd.remove_packages.end (res);
-                    transactions.@set (transaction_id, "r-" + languagecode);
-                    run_transaction (transaction_id);
-
-                } catch (Error e) {
-                    warning ("Could not queue deletions: %s", e.message);
-                }
-
-            });
-
-        }
-
-        public void cancel_install () {
-            if (install_cancellable) {
-                warning ("cancel_install");
-                try {
-                    proxy.cancel ();
-                } catch (Error e) {
-                    warning ("cannot cancel installation:%s", e.message);
-                }
-            }
-        }
-
-        void run_transaction (string transaction_id) {
-
-            proxy = new AptdTransactionProxy ();
-            proxy.finished.connect (() => {
-                on_apt_finshed (transaction_id, true);
-            });
-
-            proxy.property_changed.connect ((prop, val) => {
-                if (prop == "Progress")
-                    progress_changed ((int) val.get_int32 ());
-                if (prop == "Cancellable")
-                    install_cancellable = val.get_boolean ();
-            });
-
+        aptd.install_packages.begin (packages, (obj, res) => {
             try {
-                proxy.connect_to_aptd (transaction_id);
-                proxy.simulate ();
-
-                proxy.run ();
+                var transaction_id = aptd.install_packages.end (res);
+                transactions.@set (transaction_id, "install-missing");
+                run_transaction (transaction_id);
             } catch (Error e) {
-                on_apt_finshed (transaction_id, false);
-                warning ("Could no run transaction: %s", e.message);
+                warning ("Could not queue downloads: %s", e.message);
             }
+        });
+    }
 
+    public async void check_missing_languages () {
+        missing_packages = yield Utils.get_missing_languages ();
+        check_missing_finished (missing_packages);
+    }
+
+    public void install_missing_languages () {
+        if (missing_packages == null || missing_packages.length == 0) {
+            return;
         }
 
+        transaction_mode = TransactionMode.INSTALL_MISSING;
 
-        void on_apt_finshed (string id, bool success) {
-            if (!success) {
-                install_failed ();
-                transactions.unset (id);
-                return;
+        install_packages (missing_packages);
+    }
+
+    public void remove (string languagecode) {
+        transaction_mode = TransactionMode.REMOVE;
+        transaction_language_code = languagecode;
+
+        var installed = get_to_remove_packages_for_language (languagecode);
+
+        aptd.remove_packages.begin (installed, (obj, res) => {
+            try {
+                var transaction_id = aptd.remove_packages.end (res);
+                transactions.@set (transaction_id, "r-" + languagecode);
+                run_transaction (transaction_id);
+            } catch (Error e) {
+                warning ("Could not queue deletions: %s", e.message);
+            }
+        });
+    }
+
+    public void cancel_install () {
+        if (install_cancellable) {
+            warning ("cancel_install");
+            try {
+                proxy.cancel ();
+            } catch (Error e) {
+                warning ("cannot cancel installation:%s", e.message);
+            }
+        }
+    }
+
+    private void run_transaction (string transaction_id) {
+        proxy = new AptdTransactionProxy ();
+        proxy.finished.connect (() => {
+            on_apt_finshed (transaction_id, true);
+        });
+
+        proxy.property_changed.connect ((prop, val) => {
+            if (prop == "Progress") {
+                progress_changed ((int) val.get_int32 ());
             }
 
-            if (!transactions.has_key (id)) { //transaction already removed
-                return;
+            if (prop == "Cancellable") {
+                install_cancellable = val.get_boolean ();
             }
+        });
 
-            var action = transactions.get (id);
-            if (action == "install-missing") {
-                install_finished ("");
-                transactions.unset (id);
-                return;
-            }
-            var lang = action[2:action.length];
+        try {
+            proxy.connect_to_aptd (transaction_id);
+            proxy.simulate ();
 
-            message ("ID %s -> %s", id, success ? "success" : "failed");
+            proxy.run ();
+        } catch (Error e) {
+            on_apt_finshed (transaction_id, false);
+            warning ("Could no run transaction: %s", e.message);
+        }
+    }
 
-            if (action[0:1] == "i") { // install
-
-                install_finished (lang);
-
-            } else {
-
-                remove_finished (lang);
-            }
-
+    private void on_apt_finshed (string id, bool success) {
+        if (!success) {
+            install_failed ();
             transactions.unset (id);
+            return;
         }
 
-
-        string[]? get_remaining_packages_for_language (string langcode) {
-
-            string output;
-            int status;
-
-            try {
-                Process.spawn_sync (null,
-                    {LANGUAGE_CHECKER, "-l", langcode.substring (0, 2) , null},
-                    Environ.get (),
-                    SpawnFlags.SEARCH_PATH,
-                    null,
-                    out output,
-                    null,
-                    out status);
-            } catch (Error e) {
-                warning ("Could not get remaining language packages for %s", langcode);
-            }
-
-            return output.strip ().split (" ");
-
+        if (!transactions.has_key (id)) { //transaction already removed
+            return;
         }
 
-        string[] get_to_remove_packages_for_language (string language) {
-            var installed = get_installed_packages_for_language (language);
-
-            string[] multilang_packs = { "chromium-browser-l10n", "poppler-data"};
-            string[]? missing_packs = get_remaining_packages_for_language (language);
-
-            var removable = new Gee.ArrayList<string> ();
-            foreach (var packet in installed) {
-                if (!(packet in multilang_packs) && !(packet in missing_packs))
-                    removable.add (packet);
-            }
-
-            return removable.to_array ();
-
+        var action = transactions.get (id);
+        if (action == "install-missing") {
+            install_finished ("");
+            transactions.unset (id);
+            return;
         }
 
-        string[]? get_installed_packages_for_language (string langcode) {
+        var lang = action[2:action.length];
 
-            string output;
-            int status;
+        message ("ID %s -> %s", id, success ? "success" : "failed");
 
-            try {
-                Process.spawn_sync (null,
-                    {LANGUAGE_CHECKER, "--show-installed", "-l", langcode.substring (0, 2) , null},
-                    Environ.get (),
-                    SpawnFlags.SEARCH_PATH,
-                    null,
-                    out output,
-                    null,
-                    out status);
-            } catch (Error e) {
-                warning ("Could not get remaining language packages for %s", langcode);
-            }
-
-            return output.strip ().split (" ");
-
+        if (action[0:1] == "i") { // install
+            install_finished (lang);
+        } else {
+            remove_finished (lang);
         }
+
+        transactions.unset (id);
+    }
+
+    private string[]? get_remaining_packages_for_language (string langcode) {
+        string output;
+        int status;
+
+        try {
+            Process.spawn_sync (null,
+                {LANGUAGE_CHECKER, "-l", langcode.substring (0, 2) , null},
+                Environ.get (),
+                SpawnFlags.SEARCH_PATH,
+                null,
+                out output,
+                null,
+                out status);
+        } catch (Error e) {
+            warning ("Could not get remaining language packages for %s", langcode);
+        }
+
+        return output.strip ().split (" ");
+    }
+
+    private string[] get_to_remove_packages_for_language (string language) {
+        var installed = get_installed_packages_for_language (language);
+
+        string[] multilang_packs = { "chromium-browser-l10n", "poppler-data"};
+        string[]? missing_packs = get_remaining_packages_for_language (language);
+
+        var removable = new Gee.ArrayList<string> ();
+        foreach (var packet in installed) {
+            if (!(packet in multilang_packs) && !(packet in missing_packs))
+                removable.add (packet);
+        }
+
+        return removable.to_array ();
+    }
+
+    private string[]? get_installed_packages_for_language (string langcode) {
+        string output;
+        int status;
+
+        try {
+            Process.spawn_sync (null,
+                {LANGUAGE_CHECKER, "--show-installed", "-l", langcode.substring (0, 2) , null},
+                Environ.get (),
+                SpawnFlags.SEARCH_PATH,
+                null,
+                out output,
+                null,
+                out status);
+        } catch (Error e) {
+            warning ("Could not get remaining language packages for %s", langcode);
+        }
+
+        return output.strip ().split (" ");
     }
 }
