@@ -17,9 +17,12 @@ jobs:
         apt update
         apt install -y libaccountsservice-dev libibus-1.0-dev libgnome-desktop-3-dev libgranite-dev libswitchboard-2.0-dev meson policykit-1 valac
     - name: Build
+      env:
+        DESTDIR: out
       run: |
         meson build
         ninja -C build
+        ninja -C build install
 
   lint:
 
