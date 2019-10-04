@@ -31,14 +31,19 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         set_header_func (update_headers);
     }
 
-    public void reload_languages (string[] langs) {
+    public void reload_languages (Gee.ArrayList<string> langs) {
         //clear hashmap and this listbox
         languages.clear ();
         this.foreach ((item) => {
             this.remove (item);
         });
 
-        foreach (var language in langs) {
+        langs.sort ((a, b) => {
+            return a.collate (b);
+        });
+
+        for (int i = 0; i < langs.size; i++) {
+            var language = langs[i];
             var code = language.slice (0, 2);
             if (language.length == 2 || language.length == 5) {
                 add_language (code);
@@ -68,12 +73,6 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         }
 
         show_all ();
-    }
-
-    public void remove_language (string code) {
-        if (languages.has_key (code)) {
-            languages[code].destroy ();
-        }
     }
 
     public void set_current (string code) {

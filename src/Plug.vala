@@ -19,12 +19,14 @@ namespace SwitchboardPlugLocale {
         Gtk.Grid grid;
         Widgets.LocaleView view;
 
-        public Installer.UbuntuInstaller installer;
         public Gtk.InfoBar infobar;
         public Gtk.InfoBar permission_infobar;
         public Gtk.InfoBar missing_lang_infobar;
 
+        private Installer.UbuntuInstaller installer;
         private ProgressDialog progress_dialog = null;
+
+        private Gee.ArrayList<string> langs;
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -41,7 +43,7 @@ namespace SwitchboardPlugLocale {
         public override Gtk.Widget get_widget () {
             if (grid == null) {
                 Utils.init ();
-                installer = new Installer.UbuntuInstaller ();
+                installer = Installer.UbuntuInstaller.get_default ();
 
                 setup_ui ();
                 setup_info ();
@@ -52,7 +54,7 @@ namespace SwitchboardPlugLocale {
 
         private async void reload () {
             new Thread<void*> ("load-lang-data", () => {
-                var langs = Utils.get_installed_languages ();
+                langs = Utils.get_installed_languages ();
                 var locales = Utils.get_installed_locales ();
 
                 Idle.add (() => {
@@ -76,14 +78,13 @@ namespace SwitchboardPlugLocale {
             }
 
             installer.install_finished.connect ((langcode) => {
+                langs.add (langcode);
                 reload.begin ();
-                view.make_sensitive (true);
             });
 
             installer.remove_finished.connect ((langcode) => {
-                view.list_box.remove_language (langcode);
+                langs.remove (langcode);
                 reload.begin ();
-                view.make_sensitive (true);
             });
 
             installer.check_missing_finished.connect (on_check_missing_finished);
@@ -147,11 +148,6 @@ namespace SwitchboardPlugLocale {
             });
         }
 
-        public void on_install_language (string language) {
-            view.make_sensitive (false);
-            installer.install (language);
-        }
-
         private void on_check_missing_finished (string[] missing) {
             if (missing.length > 0) {
                 missing_lang_infobar.show_all ();
@@ -167,7 +163,7 @@ namespace SwitchboardPlugLocale {
                 return;
             }
 
-            progress_dialog = new ProgressDialog (installer);
+            progress_dialog = new ProgressDialog ();
             progress_dialog.progress = progress;
             progress_dialog.transient_for = (Gtk.Window) grid.get_toplevel ();
             progress_dialog.run ();

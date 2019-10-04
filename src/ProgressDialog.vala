@@ -24,17 +24,13 @@ public class SwitchboardPlugLocale.ProgressDialog : Gtk.Dialog {
         }
     }
 
-    public Installer.UbuntuInstaller installer { get; construct; }
-
     private Gtk.ProgressBar progress_bar;
-
-    public ProgressDialog (Installer.UbuntuInstaller installer) {
-        Object (installer: installer);
-    }
 
     construct {
         var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale", Gtk.IconSize.DIALOG);
         image.valign = Gtk.Align.START;
+
+        unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
         var transaction_language_name = Utils.translate (installer.transaction_language_code, null);
 
