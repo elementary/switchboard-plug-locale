@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 12:04-0700\n"
+"POT-Creation-Date: 2019-11-05 00:41+0000\n"
 "PO-Revision-Date: 2015-10-13 19:50+0000\n"
 "Last-Translator: ABCDEFGH <aefgh7233@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -18,64 +18,76 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:37
 msgid "Language & Region"
 msgstr "ภาษาและภูมิภาค"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:108
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "ภูมิภาค: "
 
-#: src/Plug.vala:109
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "รูปแบบ: "
 
-#: src/Plug.vala:110
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr ""
 
+#. Wires up and configures initial UI
+#. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:125
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "การสนับสนุนภาษาไม่ได้ถูกติดตั้งอย่างครบวงจร"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "ทำการติดตั้งให้สมบูรณ์"
 
-#: src/Widgets/InstallInfoBar.vala:42
+#: src/ProgressDialog.vala:45
 #, fuzzy, c-format
 msgid "Installing %s"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
-#: src/Widgets/InstallInfoBar.vala:45
+#: src/ProgressDialog.vala:48
 #, c-format
 msgid "Removing %s"
 msgstr ""
 
-#: src/Widgets/InstallInfoBar.vala:48
+#: src/ProgressDialog.vala:51
 msgid "Installing missing language"
 msgstr "กำลังติดตั้งภาษาที่หายไป"
 
-#: src/Widgets/InstallInfoBar.vala:68
+#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/InstallPopover.vala:39
+#, fuzzy
+msgid "Install Language"
+msgstr "ภาษาที่ติดตั้งไว้แล้ว"
+
+#: src/Widgets/InstallPopover.vala:70
+#, fuzzy, c-format
+msgid "Install %s"
+msgstr "ภาษาที่ติดตั้งไว้แล้ว"
+
+#: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
-#: src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:115
 msgid "Currently active language"
 msgstr ""
 

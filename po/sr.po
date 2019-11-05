@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 12:04-0700\n"
+"POT-Creation-Date: 2019-11-05 00:41+0000\n"
 "PO-Revision-Date: 2017-05-06 09:02+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,64 +21,76 @@ msgstr ""
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-01-07 06:43+0000\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:37
 msgid "Language & Region"
 msgstr "Језик и област"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
 msgstr "Управљајте језицима и подесите област и формат"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "Област: "
 
-#: src/Plug.vala:109
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "Формати: "
 
-#: src/Plug.vala:110
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr ""
 
+#. Wires up and configures initial UI
+#. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Неке измене неће ступити у дејство све док се не одјавите"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:125
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Подршка за језике није инсталирана у потпуности"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Заврши инсталацију"
 
-#: src/Widgets/InstallInfoBar.vala:42
+#: src/ProgressDialog.vala:45
 #, fuzzy, c-format
 msgid "Installing %s"
 msgstr "Инсталирам језик"
 
-#: src/Widgets/InstallInfoBar.vala:45
+#: src/ProgressDialog.vala:48
 #, fuzzy, c-format
 msgid "Removing %s"
 msgstr "Уклањам језик"
 
-#: src/Widgets/InstallInfoBar.vala:48
+#: src/ProgressDialog.vala:51
 msgid "Installing missing language"
 msgstr "Инсталирам језик који недостаје"
 
-#: src/Widgets/InstallInfoBar.vala:68
+#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
 msgstr "Откажи"
 
-#: src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/InstallPopover.vala:39
+#, fuzzy
+msgid "Install Language"
+msgstr "Инсталирај језик"
+
+#: src/Widgets/InstallPopover.vala:70
+#, fuzzy, c-format
+msgid "Install %s"
+msgstr "Инсталирам језик"
+
+#: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
 msgstr "Инсталирани језици"
 
-#: src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:115
 msgid "Currently active language"
 msgstr "Тренутни радни језик"
 

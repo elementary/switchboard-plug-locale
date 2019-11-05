@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 12:04-0700\n"
+"POT-Creation-Date: 2019-11-05 00:41+0000\n"
 "PO-Revision-Date: 2017-04-17 14:18+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,64 +21,76 @@ msgstr ""
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:37
 msgid "Language & Region"
 msgstr "Jezik i regija"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
 msgstr "Upravljajte jezicima i postavite regiju i format"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "Regija "
 
-#: src/Plug.vala:109
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "Formati: "
 
-#: src/Plug.vala:110
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr ""
 
+#. Wires up and configures initial UI
+#. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Neke promjene neće biti primijenjene dok se ne odjavite"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:125
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Jezična podrška nije u potpunosti instalirana"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Potpuna instalacija"
 
-#: src/Widgets/InstallInfoBar.vala:42
+#: src/ProgressDialog.vala:45
 #, fuzzy, c-format
 msgid "Installing %s"
 msgstr "Instalacija jezika"
 
-#: src/Widgets/InstallInfoBar.vala:45
+#: src/ProgressDialog.vala:48
 #, fuzzy, c-format
 msgid "Removing %s"
 msgstr "Uklanjanje jezika"
 
-#: src/Widgets/InstallInfoBar.vala:48
+#: src/ProgressDialog.vala:51
 msgid "Installing missing language"
 msgstr "Instalacija nedostajućeg jezika"
 
-#: src/Widgets/InstallInfoBar.vala:68
+#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
 msgstr "Odustani"
 
-#: src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/InstallPopover.vala:39
+#, fuzzy
+msgid "Install Language"
+msgstr "Instaliraj jezik"
+
+#: src/Widgets/InstallPopover.vala:70
+#, fuzzy, c-format
+msgid "Install %s"
+msgstr "Instalacija jezika"
+
+#: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
 msgstr "Instalirani jezici"
 
-#: src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:115
 msgid "Currently active language"
 msgstr "Trenutno aktivan jezik"
 
