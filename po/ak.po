@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 12:04-0700\n"
+"POT-Creation-Date: 2019-11-05 00:41+0000\n"
 "PO-Revision-Date: 2016-08-17 15:09+0000\n"
 "Last-Translator: aberba <karabutaworld@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,64 +13,76 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:37
 msgid "Language & Region"
 msgstr "Kasa ne Beae"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
 msgstr "Hyehyɛ kasa, beaɛ ne format ma kɔmputa no."
 
-#: src/Plug.vala:108
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "Beae: "
 
-#: src/Plug.vala:109
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "Formats: "
 
-#: src/Plug.vala:110
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr ""
 
+#. Wires up and configures initial UI
+#. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Nsakrae a wayɛ no nnyɛ adwuma gye sɛ w'adum kɔmputa no asan asɔ."
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:125
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Wonnya ntwee kasa ahoroɔ no nyinaa nguu so."
 
-#: src/Plug.vala:129
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Fa kasa ahoroɔ no nyinaa gu so"
 
-#: src/Widgets/InstallInfoBar.vala:42
+#: src/ProgressDialog.vala:45
 #, fuzzy, c-format
 msgid "Installing %s"
 msgstr "Ɛde kasa no regu so"
 
-#: src/Widgets/InstallInfoBar.vala:45
+#: src/ProgressDialog.vala:48
 #, fuzzy, c-format
 msgid "Removing %s"
 msgstr "Ɛreyi kasa no"
 
-#: src/Widgets/InstallInfoBar.vala:48
+#: src/ProgressDialog.vala:51
 msgid "Installing missing language"
 msgstr "Ɛde kasa a enni so no regu so"
 
-#: src/Widgets/InstallInfoBar.vala:68
+#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
 msgstr "Gyae"
 
-#: src/Widgets/LanguageListBox.vala:31
+#: src/Widgets/InstallPopover.vala:39
+#, fuzzy
+msgid "Install Language"
+msgstr "Fa kasa yi gu so"
+
+#: src/Widgets/InstallPopover.vala:70
+#, fuzzy, c-format
+msgid "Install %s"
+msgstr "Ɛde kasa no regu so"
+
+#: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
 msgstr "Kasa Ahoroɔ a Ɛgu So"
 
-#: src/Widgets/LanguageListBox.vala:118
+#: src/Widgets/LanguageListBox.vala:115
 msgid "Currently active language"
 msgstr "Kasa a wode redi dwuma"
 
