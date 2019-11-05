@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-09-25 22:23+0000\n"
+"PO-Revision-Date: 2019-11-07 13:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ja/>\n"
@@ -74,14 +74,13 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "言語をインストール"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "%s をインストールしています"
+msgstr "%s をインストール"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
