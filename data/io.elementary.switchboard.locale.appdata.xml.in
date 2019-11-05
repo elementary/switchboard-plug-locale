@@ -4,10 +4,23 @@
   <extends>io.elementary.switchboard</extends>
   <name>Locale</name>
   <summary>Manage languages, and configure region and format</summary>
+  <releases>
+    <release version="2.4.2" date="2019-11-04" urgency="medium">
+      <description>
+        <ul>
+          <li>Redesigned Install Language popover</li>
+          <li>Asks for permission when needed. No more extra InfoBar</li>
+          <li>Installtion progress InfoBar is now a Dialog</li>
+          <li>Language list properly updates when adding or removing languages</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
   <screenshots>
-      <screenshot type="default">
-          <image>https://raw.githubusercontent.com/elementary/switchboard-plug-locale/master/data/screenshot.png</image>
-      </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-locale/master/data/screenshot.png</image>
+    </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/switchboard-plug-locale/issues</url>
