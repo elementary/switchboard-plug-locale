@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2018-10-15 15:32+0000\n"
+"PO-Revision-Date: 2019-11-07 13:24+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
-"Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Locale"
@@ -29,23 +29,27 @@ msgstr "Gérer les langues, configurer les paramètres régionaux"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Renouvellement du design de la bulle d'installation des langues"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
+"Demande de la permission à la demande, plus besoin de barre d'information"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
+"Le progrès de l'installation s'affiche maintenant dans une boîte de dialogue"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
+"La liste des langues se met correctement à jour lors de l'ajout ou de la "
+"suppression de langues"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:15
 msgid "Updated translations"
-msgstr ""
+msgstr "Mise à jour des traductions"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
