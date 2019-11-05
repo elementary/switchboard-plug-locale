@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:41+0000\n"
+"POT-Creation-Date: 2019-11-05 00:59+0000\n"
 "PO-Revision-Date: 2018-10-21 13:38+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -26,6 +26,26 @@ msgstr ""
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "Kelola bahasa, dan konfigurasi wilayah dan format"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:11
+msgid "Redesigned Install Language popover"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+msgid "Asks for permission when needed. No more extra InfoBar"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:13
+msgid "Installtion progress InfoBar is now a Dialog"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid "Language list properly updates when adding or removing languages"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:15
+msgid "Updated translations"
+msgstr ""
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
