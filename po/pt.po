@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-09-01 16:22+0000\n"
+"PO-Revision-Date: 2019-11-07 13:24+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/pt/>\n"
@@ -26,7 +26,7 @@ msgstr "Idioma e Região"
 
 #: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
-msgstr "Gerir idiomas e configurar região e formato"
+msgstr "Gerir idiomas e configurar a região e o formato"
 
 #: src/Plug.vala:112
 msgid "Region"
@@ -74,14 +74,13 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
-msgstr "Instalar idioma"
+msgstr "Instalar Idioma"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "A instalar %s"
+msgstr "Instalar %s"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
