@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-08-27 21:22+0000\n"
+"PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/eo/>\n"
@@ -74,14 +74,13 @@ msgid "Cancel"
 msgstr "Rezigni"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "Instali lingvon"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Instalanta %s"
+msgstr "Instalo de %s"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
