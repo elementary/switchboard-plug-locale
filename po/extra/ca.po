@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-05-16 18:14+0000\n"
+"PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Locale"
@@ -29,23 +29,25 @@ msgstr "Gestioneu les llengües i configureu-ne la regió i el format."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Finestra emergent per instal·lar llengües redissenyada"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
+msgstr "Es demana permís quan cal. Ja no hi ha la barra d'informació."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "La barra d'informació d'instal·lació ara és un diàleg."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
+"La llista de llengües s'actualitza correctament quan se n'afegeixen o se "
+"n'eliminen."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:15
 msgid "Updated translations"
-msgstr ""
+msgstr "Traduccions actualitzades"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
