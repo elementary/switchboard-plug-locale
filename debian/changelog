@@ -1,3 +1,42 @@
+switchboard-plug-locale (2.5.0) bionic; urgency=medium
+
+  * Release 2.5.0 (#116)
+  * Update translation template
+  * Create release.md
+  * AppData: Add releases info (#115)
+  * Update translation template
+  * Add Release to Actions
+  * Add Gettext Updates to Actions
+  * Split Debian packaging into its own branch
+  * Delete CODE_OF_CONDUCT.md
+  * aptd-client: Update code style (#114)
+  * run installation in CI (#113)
+  * UbuntuInstaller: Code cleanup (#111)
+  * Make UbuntuInstaller a singleton (#104)
+  * Make the installation trigger code more readable (#110)
+  * Update the languages list on adding/removing a language (#108)
+  * Add Lint to CI (#98)
+  * InstallPopover: Rewrite as ListBox (#96)
+  * lint src directory files via vala-lint (#107)
+  * Plug.vala: Animate infobar hide/show for login/logout warning (#106)
+  * Plug.vala: Animate infobar hide/show for missing languages (#105)
+  * LanguageListBox: Fix removing language row and cleanups (#94)
+  * LocaleManager: Code style cleanups (#99)
+  * Utils: code style cleanups (#100)
+  * LocaleSetting: Code style cleanups (#101)
+  * Test with GitHub CI (#97)
+  * LocaleManager: Remove unused stuff (#92)
+  * Plug: Change progress infobar to a dialog (#93)
+  * Update translation files
+  * Ask for Permission (#89)
+  * build: fix install path for switchboard plug  (#91)
+  * InstallPopover: design refresh (#90)
+  * Plug: Remove unused constants (#88)
+  * Plug: Change code name to RDNN
+  * Add Silesian and update translation template
+
+ -- elementary LLC <builds@elementary.io>  Fri, 15 Nov 2019 23:11:37 +0000
+
 switchboard-plug-locale (2.4.1) bionic; urgency=medium
 
   * New upstream release.
