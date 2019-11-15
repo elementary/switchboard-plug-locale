@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-10-09 17:23+0000\n"
+"PO-Revision-Date: 2019-11-16 17:24+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/es/>\n"
@@ -74,14 +74,13 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "Instalar idioma"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Instalando %s"
+msgstr "Instalar %s"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
