@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-11-25 09:24+0000\n"
+"PO-Revision-Date: 2019-11-28 16:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/mr/>\n"
@@ -29,19 +29,19 @@ msgstr "भाषा व्यवस्थापित करा आणि क�
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "पुन्हा डिसिन केलेले भाषा पॉप ओव्हर इन्स्टॉल करा"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
+msgstr "गरज भासल्यास परवानगी मागते. यापुढे अतिरिक्त इन्फोबार नाही"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "इन्स्टॉलेशन प्रगती इन्फोबार आता एक संवाद आहे"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Language list properly updates when adding or removing languages"
-msgstr ""
+msgstr "भाषा जोडताना किंवा काढताना भाषेची यादी योग्यरित्या अद्यतनित होते"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:15
 msgid "Updated translations"
