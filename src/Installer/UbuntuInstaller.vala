@@ -21,7 +21,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
     private AptdTransactionProxy proxy;
 
     private string []? missing_packages = null;
-    private bool install_cancellable;
+    public bool install_cancellable { get; private set; }
     public TransactionMode transaction_mode { get; private set; }
     public string transaction_language_code { get; private set; }
 
