@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-04-06 17:52+0000\n"
+"PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Locale"
@@ -29,7 +29,7 @@ msgstr "管理语言、设置区域和格式"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "重新设计安装语言弹窗"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Asks for permission when needed. No more extra InfoBar"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:15
 msgid "Updated translations"
-msgstr ""
+msgstr "翻译更新"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr "管理区域设置"
+msgstr "管理本地化设置"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
