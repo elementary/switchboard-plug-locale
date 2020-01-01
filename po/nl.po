@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2018-06-30 00:03+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-01-01 23:08+0000\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:37
@@ -29,18 +29,16 @@ msgid "Manage languages, and configure region and format"
 msgstr "Beheer talen en configureer regio's en formaten"
 
 #: src/Plug.vala:112
-#, fuzzy
 msgid "Region"
-msgstr "Regio: "
+msgstr "Regio"
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "Formaten: "
+msgstr "Formaten"
 
 #: src/Plug.vala:114
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatuur"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
@@ -76,12 +74,11 @@ msgid "Cancel"
 msgstr "Annuleren"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "Installeer taal"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
 msgstr "%s installeren"
 
@@ -111,15 +108,15 @@ msgstr "Formaten: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperatuur:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
