@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-11-28 16:24+0000\n"
+"PO-Revision-Date: 2020-03-26 22:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Locale"
@@ -29,19 +29,19 @@ msgstr "ניהול שפות והגדרת מיקום ותקנים"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "החלונית הקופצת להתקנת שפה עוצבה מחדש"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
+msgstr "בקשת הרשאה כשיש צורך. סרגל המידע הנוסף אינו עוד"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "סרגל המידע על מהלך ההתקנה הפך לתיבת דו־שיח"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Language list properly updates when adding or removing languages"
-msgstr ""
+msgstr "רשימת השפות מתעדכנת כראוי בעת הוספת או הסרה של שפות"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:15
 msgid "Updated translations"
