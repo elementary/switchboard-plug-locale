@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2020-04-01 22:16+0000\n"
 "PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -28,24 +28,29 @@ msgid "Manage languages, and configure region and format"
 msgstr "管理语言、设置区域和格式"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
+msgid "Fix an issue with cancelling language installation"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "翻译更新"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:19
 msgid "Redesigned Install Language popover"
 msgstr "重新设计安装语言弹窗"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:13
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "翻译更新"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
