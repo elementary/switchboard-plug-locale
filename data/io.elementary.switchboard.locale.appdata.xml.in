@@ -5,6 +5,14 @@
   <name>Locale</name>
   <summary>Manage languages, and configure region and format</summary>
   <releases>
+    <release version="2.5.1" date="2020-03-31" urgency="medium">
+      <description>
+        <ul>
+          <li>Fix an issue with cancelling language installation</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.0" date="2019-11-15" urgency="medium">
       <description>
         <ul>
