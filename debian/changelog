@@ -1,3 +1,14 @@
+switchboard-plug-locale (2.5.1) bionic; urgency=medium
+
+  * Release 2.5.1 (#118)
+  * Update translation files
+  * Update translation template
+  * Update io.elementary.switchboard.locale.appdata.xml.in
+  * Update translation files
+  * Fix the property 'install-cancellable' warning (#117)
+
+ -- elementary LLC <builds@elementary.io>  Wed, 01 Apr 2020 22:49:29 +0000
+
 switchboard-plug-locale (2.5.0) bionic; urgency=medium
 
   * Release 2.5.0 (#116)
