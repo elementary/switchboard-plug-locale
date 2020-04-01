@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2020-04-01 22:16+0000\n"
 "PO-Revision-Date: 2019-11-28 16:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -28,24 +28,29 @@ msgid "Manage languages, and configure region and format"
 msgstr "भाषा व्यवस्थापित करा आणि क्षेत्र आणि स्वरूप कॉन्फिगर करा"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
+msgid "Fix an issue with cancelling language installation"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "अद्ययावत भाषांतर"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:19
 msgid "Redesigned Install Language popover"
 msgstr "पुन्हा डिसिन केलेले भाषा पॉप ओव्हर इन्स्टॉल करा"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "गरज भासल्यास परवानगी मागते. यापुढे अतिरिक्त इन्फोबार नाही"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:13
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "इन्स्टॉलेशन प्रगती इन्फोबार आता एक संवाद आहे"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Language list properly updates when adding or removing languages"
 msgstr "भाषा जोडताना किंवा काढताना भाषेची यादी योग्यरित्या अद्यतनित होते"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "अद्ययावत भाषांतर"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"

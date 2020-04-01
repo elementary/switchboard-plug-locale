@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2020-04-01 22:16+0000\n"
 "PO-Revision-Date: 2019-11-07 13:24+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,28 +28,33 @@ msgid "Manage languages, and configure region and format"
 msgstr "Gerir idiomas e configurar a região e o formato"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
+msgid "Fix an issue with cancelling language installation"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "Traduções atualizadas"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:19
 msgid "Redesigned Install Language popover"
 msgstr "Janela de instalação do idioma redesenhada"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Pede permissão quando necessário. Acabou-se a barra de informações extra"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:13
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 "A barra de informações do progresso da instalação é agora uma caixa de "
 "diálogo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "A lista de idiomas é atualizada corretamente ao adicionar ou remover idiomas"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "Traduções atualizadas"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"

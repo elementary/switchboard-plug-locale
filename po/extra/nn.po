@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2020-04-01 22:16+0000\n"
 "PO-Revision-Date: 2019-01-06 14:39+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -28,23 +28,28 @@ msgid "Manage languages, and configure region and format"
 msgstr "Handsam språk, og sett opp region og format"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
-msgid "Redesigned Install Language popover"
+msgid "Fix an issue with cancelling language installation"
 msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+msgid "Updated translations"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:19
+msgid "Redesigned Install Language popover"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:13
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Language list properly updates when adding or removing languages"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:15
-msgid "Updated translations"
 msgstr ""
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10

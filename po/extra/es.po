@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2020-04-01 22:16+0000\n"
 "PO-Revision-Date: 2019-11-16 17:24+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,26 +28,32 @@ msgid "Manage languages, and configure region and format"
 msgstr "Gestiona los idiomas y configura la región y el formato."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
+msgid "Fix an issue with cancelling language installation"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "Traducciones actualizadas"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:19
 msgid "Redesigned Install Language popover"
 msgstr "Rediseñada la ventana emergente para instalar idiomas"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Pide permiso cuando sea necesario. No más barra de información adicional"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:13
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr "La barra de información del progreso de instalación es ahora un diálogo"
+msgstr ""
+"La barra de información del progreso de instalación es ahora un diálogo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "La lista de idiomas se actualiza correctamente al añadir o eliminar idiomas"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "Traducciones actualizadas"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
