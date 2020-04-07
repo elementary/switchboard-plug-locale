@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:16+0000\n"
-"PO-Revision-Date: 2019-11-22 03:24+0000\n"
+"PO-Revision-Date: 2020-04-09 14:10+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/pt_BR/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Locale"
@@ -29,7 +29,7 @@ msgstr "Gerenciar idiomas e configurar região e formato"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:11
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "Correção de um problema ao cancelar a instalação do idioma"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 #: data/io.elementary.switchboard.locale.appdata.xml.in:23
