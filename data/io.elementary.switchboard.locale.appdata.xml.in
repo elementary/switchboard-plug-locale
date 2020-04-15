@@ -4,6 +4,8 @@
   <extends>io.elementary.switchboard</extends>
   <name>Locale</name>
   <summary>Manage languages, and configure region and format</summary>
+  <icon type="stock">preferences-desktop-locale</icon>
+  <translation type="gettext">locale-plug</translation>
   <releases>
     <release version="2.5.1" date="2020-04-01" urgency="medium">
       <description>
