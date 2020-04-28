@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:16+0000\n"
+"POT-Creation-Date: 2020-04-28 22:16+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -21,35 +21,37 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-msgid "Locale"
-msgstr "Ustawienia regionalne"
+#, fuzzy
+#| msgid "Manage locale settings"
+msgid "Language &amp; Region Settings"
+msgstr "Zarządzaj ustawieniami lokalnymi"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "Zarządzaj językami, konfiguruj region i formaty"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:11
+#: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Fix an issue with cancelling language installation"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
-#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Zaktualizowane tłumaczenia"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:19
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Redesigned Install Language popover"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 
@@ -60,3 +62,6 @@ msgstr "Zarządzaj ustawieniami lokalnymi"
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Wymagane jest uwierzytelnienie, aby zarządzać ustawieniami lokalnymi"
+
+#~ msgid "Locale"
+#~ msgstr "Ustawienia regionalne"

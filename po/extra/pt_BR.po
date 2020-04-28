@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:16+0000\n"
+"POT-Creation-Date: 2020-04-28 22:16+0000\n"
 "PO-Revision-Date: 2020-04-09 14:10+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -20,36 +20,38 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-msgid "Locale"
-msgstr "Localidade"
+#, fuzzy
+#| msgid "Manage locale settings"
+msgid "Language &amp; Region Settings"
+msgstr "Gerenciar configurações de localização"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "Gerenciar idiomas e configurar região e formato"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:11
+#: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Fix an issue with cancelling language installation"
 msgstr "Correção de um problema ao cancelar a instalação do idioma"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
-#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:19
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Redesigned Install Language popover"
 msgstr "Janela de instalação do idioma redesenhada"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Solicita permissão quando necessário. Não há mais barra de informações extra"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Progresso da instalação InfoBar agora é um Diálogo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "A lista de idiomas é atualizada corretamente ao adicionar ou remover idiomas"
@@ -61,3 +63,6 @@ msgstr "Gerenciar configurações de localização"
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "É necessária autenticação para gerenciar configurações de localidade"
+
+#~ msgid "Locale"
+#~ msgstr "Localidade"

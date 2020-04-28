@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:16+0000\n"
+"POT-Creation-Date: 2020-04-28 22:16+0000\n"
 "PO-Revision-Date: 2020-01-01 23:08+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/locale-"
@@ -20,35 +20,37 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-msgid "Locale"
-msgstr "Lokalisatie"
+#, fuzzy
+#| msgid "Manage locale settings"
+msgid "Language &amp; Region Settings"
+msgstr "Beheer lokalisatie instellingen"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "Beheer talen en configureer regio's en formaten"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:11
+#: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Fix an issue with cancelling language installation"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
-#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/io.elementary.switchboard.locale.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:19
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Redesigned Install Language popover"
 msgstr "Het venster Taal Installeren is opnieuw ontworpen"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "Vraag om toestemming indien nodig. Geen extra infobalk meer"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:23
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "De voortgang van de installatie wordt nu weergegeven in een venster"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "De lijst met talen wordt nu op een juiste manier bijgewerkt bij het "
@@ -61,3 +63,6 @@ msgstr "Beheer lokalisatie instellingen"
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Authenticatie is vereist om lokalisatie instellingen te beheren"
+
+#~ msgid "Locale"
+#~ msgstr "Lokalisatie"
