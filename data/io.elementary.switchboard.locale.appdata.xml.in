@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.switchboard.locale</id>
   <extends>io.elementary.switchboard</extends>
-  <name>Locale</name>
+  <name>Language &amp; Region Settings</name>
   <summary>Manage languages, and configure region and format</summary>
   <icon type="stock">preferences-desktop-locale</icon>
   <translation type="gettext">locale-plug</translation>
