@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2019-11-16 17:24+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"PO-Revision-Date: 2020-04-30 02:10+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:26+0000\n"
 
 #: src/Plug.vala:37
@@ -26,7 +26,7 @@ msgstr "Idioma y región"
 
 #: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
-msgstr "Gestiona los idiomas y configura la región y el formato."
+msgstr "Gestione los idiomas y configure la región y el formato"
 
 #: src/Plug.vala:112
 msgid "Region"
@@ -34,7 +34,7 @@ msgstr "Región"
 
 #: src/Plug.vala:113
 msgid "Formats"
-msgstr "Fomatos"
+msgstr "Formatos"
 
 #: src/Plug.vala:114
 msgid "Temperature"
@@ -49,7 +49,7 @@ msgstr "Algunos cambios no surtirán efecto hasta que cierre sesión"
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
 msgid "Language support is not installed completely"
-msgstr "El soporte de idioma no está instalado completamente"
+msgstr "No se han instalado todos los componentes lingüísticos"
 
 #: src/Plug.vala:133
 msgid "Complete Installation"
@@ -63,11 +63,11 @@ msgstr "Instalando %s"
 #: src/ProgressDialog.vala:48
 #, c-format
 msgid "Removing %s"
-msgstr "Eliminando %s"
+msgstr "Desinstalando %s"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
-msgstr "Instalando el idioma no encontrado"
+msgstr "Instalando el idioma faltante"
 
 #: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
@@ -129,8 +129,8 @@ msgstr "Establecer idioma del sistema"
 #: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
-"Establecer idioma para inicio de sesión, cuenta de invitado y nuevas cuentas "
-"de usuario"
+"Establecer idioma para pantalla de acceso, cuenta de invitado y cuentas de "
+"usuario nuevas"
 
 #: src/Widgets/LocaleSetting.vala:111
 msgid "Keyboard Settings…"
