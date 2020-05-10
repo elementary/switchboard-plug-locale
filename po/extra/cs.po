@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:16+0000\n"
-"PO-Revision-Date: 2020-05-08 14:10+0000\n"
+"PO-Revision-Date: 2020-05-11 16:10+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/cs/>\n"
@@ -20,10 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "Spravujte nastavení místního prostředí"
+msgstr "Místní a jazyková nastavení"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -31,7 +29,7 @@ msgstr "Spravujte jazyky, nastavte region a místní formáty"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "Oprava problému při rušení instalace jazyka"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 #: data/io.elementary.switchboard.locale.appdata.xml.in:25
@@ -40,19 +38,20 @@ msgstr "Aktualizované překlady"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Předělaný vyskakovací dialog po najetí pro instalaci jazyka"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
+"V případě potřeby si vyžádat oprávnění. Už bez dalšího informačního pruhu"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:23
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "Informační lišta o postupu instalace je nyní dialog"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Language list properly updates when adding or removing languages"
-msgstr ""
+msgstr "Seznam jazyků se správně aktualizuje po přidání nebo odebrání jazyků"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
