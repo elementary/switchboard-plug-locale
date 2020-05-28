@@ -1,3 +1,14 @@
+switchboard-plug-locale (2.5.2) bionic; urgency=medium
+
+  * Release 2.5.2 (#124)
+  * Update translation files
+  * Update translation template
+  * AppData: Locale → Language & Region Settings (#121)
+  * AppData: Add Icon & Gettext domain (#120)
+  * LocaleSetting: lookup schemas recursive (#119)
+
+ -- elementary LLC <builds@elementary.io>  Thu, 28 May 2020 23:44:24 +0000
+
 switchboard-plug-locale (2.5.1) bionic; urgency=medium
 
   * Release 2.5.1 (#118)
