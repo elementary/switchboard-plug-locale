@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2020-05-11 16:10+0000\n"
+"PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/cs/>\n"
@@ -58,16 +58,16 @@ msgstr "Dokončit instalaci"
 #: src/ProgressDialog.vala:45
 #, c-format
 msgid "Installing %s"
-msgstr "Instalování %s"
+msgstr "Instaluje se %s"
 
 #: src/ProgressDialog.vala:48
 #, c-format
 msgid "Removing %s"
-msgstr "Odstraňování %s"
+msgstr "Odstraňuje se %s"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
-msgstr "Instaluji chybějící jazyk"
+msgstr "Instaluje se chybějící jazyk"
 
 #: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
@@ -112,7 +112,7 @@ msgstr "Celsia"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr "Fahrenheit"
+msgstr "Fahrenheita"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
