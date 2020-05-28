@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:16+0000\n"
+"POT-Creation-Date: 2020-05-28 23:43+0000\n"
 "PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -30,27 +30,28 @@ msgid "Manage languages, and configure region and format"
 msgstr "Mastrumi lingvojn, kaj agordi regionon kaj formaton"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
-msgid "Fix an issue with cancelling language installation"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
-#: data/io.elementary.switchboard.locale.appdata.xml.in:25
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:32
 msgid "Updated translations"
 msgstr "Ĝisdatigitaj tradukoj"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+msgid "Fix an issue with cancelling language installation"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
 msgstr "Refasonita ŝprucfenestro pri instala lingvo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:29
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "Petas permeson kiam bezonata. Ne plu estas informbreto"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+#: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Instala antaŭeniĝa informbreto de nun aperas ĉe dialogo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
+#: data/io.elementary.switchboard.locale.appdata.xml.in:31
 msgid "Language list properly updates when adding or removing languages"
 msgstr "Lingva listo ĝuste ĝisdatiĝas post aldono aŭ forigo de lingvo"
 

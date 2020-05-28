@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:16+0000\n"
+"POT-Creation-Date: 2020-05-28 23:43+0000\n"
 "PO-Revision-Date: 2020-04-30 02:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,27 +28,28 @@ msgid "Manage languages, and configure region and format"
 msgstr "言語を管理し、地域と書式を設定します"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
-msgid "Fix an issue with cancelling language installation"
-msgstr "言語のインストールをキャンセルした際の問題を修正"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
-#: data/io.elementary.switchboard.locale.appdata.xml.in:25
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:32
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+msgid "Fix an issue with cancelling language installation"
+msgstr "言語のインストールをキャンセルした際の問題を修正"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
 msgstr "Install Language ポップオーバーのデザインを変更"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:29
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "必要な場合のみ管理者権限を確認するように変更し、余計な情報バーを廃止"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+#: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "インストールの進捗情報バーをダイアログに変更"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
+#: data/io.elementary.switchboard.locale.appdata.xml.in:31
 msgid "Language list properly updates when adding or removing languages"
 msgstr "言語の追加および削除時に言語リストを適切に更新するように修正"
 

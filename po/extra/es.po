@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:16+0000\n"
+"POT-Creation-Date: 2020-05-28 23:43+0000\n"
 "PO-Revision-Date: 2020-04-30 02:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,31 +28,32 @@ msgid "Manage languages, and configure region and format"
 msgstr "Gestione los idiomas y configure la región y el formato"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
+#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:32
+msgid "Updated translations"
+msgstr "Traducciones actualizadas"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fix an issue with cancelling language installation"
 msgstr ""
 "Se corrigió un problema que se producía al cancelar la instalación de un "
 "idioma"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
-#: data/io.elementary.switchboard.locale.appdata.xml.in:25
-msgid "Updated translations"
-msgstr "Traducciones actualizadas"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
+#: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
 msgstr "Rediseñada la ventana emergente para instalar idiomas"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:29
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Pide permiso cuando sea necesario. No más barra de información adicional"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:23
+#: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 "La barra de información del progreso de instalación es ahora un diálogo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
+#: data/io.elementary.switchboard.locale.appdata.xml.in:31
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "La lista de idiomas se actualiza correctamente al añadir o eliminar idiomas"
