@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:16+0000\n"
-"PO-Revision-Date: 2020-05-11 16:10+0000\n"
+"PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/cs/>\n"
@@ -34,7 +34,7 @@ msgstr "Oprava problému při rušení instalace jazyka"
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 #: data/io.elementary.switchboard.locale.appdata.xml.in:25
 msgid "Updated translations"
-msgstr "Aktualizované překlady"
+msgstr "Aktualizovány překlady"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:21
 msgid "Redesigned Install Language popover"
