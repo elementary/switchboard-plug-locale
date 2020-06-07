@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2020-05-28 22:11+0000\n"
+"PO-Revision-Date: 2020-06-08 10:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/cs/>\n"
@@ -49,7 +49,7 @@ msgstr "Některé změny se projeví až po opětovném přihlášení"
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
 msgid "Language support is not installed completely"
-msgstr "Jazyková podpora není kompletně nainstalována"
+msgstr "Instalace jazykové podpory není úplná"
 
 #: src/Plug.vala:133
 msgid "Complete Installation"
@@ -88,7 +88,7 @@ msgstr "Nainstalované jazyky"
 
 #: src/Widgets/LanguageListBox.vala:115
 msgid "Currently active language"
-msgstr "Aktuálně používaný jazyk"
+msgstr "Nyní používaný jazyk"
 
 #: src/Widgets/LocaleView.vala:46
 msgid "Install language"
