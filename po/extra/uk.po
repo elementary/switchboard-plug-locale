@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2020-09-17 00:14+0000\n"
+"PO-Revision-Date: 2020-09-30 12:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/uk/>\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
-msgstr ""
+msgstr "Параметри Мови та Регіону"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Керування мовами та налаштування регіону і форматів"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 #: data/io.elementary.switchboard.locale.appdata.xml.in:21
@@ -36,28 +36,29 @@ msgstr "Оновлено переклади"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "Розв'язано проблему зі скасуванням встановлення мови"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Перероблено вікно встановлення мови"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:29
 msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
+msgstr "Запит дозволу за потреби. Більше немає додаткової  панелі подробиць"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "Панель поступу встановлення тепер є діалоговим вікном"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:31
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
+"Перелік мов оновлюється належним чином під час додавання чи видалення мов"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr ""
+msgstr "Керування налаштуваннями мови"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr ""
+msgstr "Необхідно автентифікуватися, щоб керувати налаштуваннями мови"
