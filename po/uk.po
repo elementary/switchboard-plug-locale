@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2020-09-30 12:14+0000\n"
+"PO-Revision-Date: 2020-10-01 22:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/uk/>\n"
@@ -30,43 +30,41 @@ msgid "Manage languages, and configure region and format"
 msgstr "Керування мовами та налаштування регіону і форматів"
 
 #: src/Plug.vala:112
-#, fuzzy
 msgid "Region"
-msgstr "Регіон: "
+msgstr "Регіон"
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "Формати: "
+msgstr "Формати"
 
 #: src/Plug.vala:114
 msgid "Temperature"
-msgstr ""
+msgstr "Температура"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
-msgstr "Деякі зміни набудуть чинності тільки після виходу з сеансу"
+msgstr "Деякі зміни набудуть чинності лише після виходу з системи"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
 msgid "Language support is not installed completely"
-msgstr "Підтримка мови встановлена не повністю"
+msgstr "Підтримку мови встановлено не повністю"
 
 #: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Завершити встановлення"
 
 #: src/ProgressDialog.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Встановлення мови"
+msgstr "Встановлення %s"
 
 #: src/ProgressDialog.vala:48
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Видалення мови"
+msgstr "Вилучення %s"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
@@ -77,22 +75,21 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "Встановити мову"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Встановлення мови"
+msgstr "Встановити %s"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
-msgstr "Встановлені Мови"
+msgstr "Встановлені мови"
 
 #: src/Widgets/LanguageListBox.vala:115
 msgid "Currently active language"
-msgstr "Активна мова"
+msgstr "Поточна мова"
 
 #: src/Widgets/LocaleView.vala:46
 msgid "Install language"
@@ -112,34 +109,33 @@ msgstr "Формати: "
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Celsius"
-msgstr ""
+msgstr "За Цельсієм"
 
 #: src/Widgets/LocaleSetting.vala:81
 msgid "Fahrenheit"
-msgstr ""
+msgstr "За Фаренгейтом"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Temperature:"
-msgstr ""
+msgstr "Температура:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr "Вказати мову"
+msgstr "Встановити мову"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
-msgstr "Виставити мову системи"
+msgstr "Встановити мовою системи"
 
 #: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
-"Встановити мову для екрану входу, гостьового облікового запису та нових "
-"користувацьких облікових записів"
+"Встановити мову для екрана входу, гостьового облікового запису та нових "
+"облікових записів користувачів"
 
 #: src/Widgets/LocaleSetting.vala:111
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "Перейти до налаштувань клавіатури"
+msgstr "Параметри клавіатури…"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
