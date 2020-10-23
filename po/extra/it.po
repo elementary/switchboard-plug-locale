@@ -8,22 +8,20 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2018-12-07 20:50+0000\n"
+"PO-Revision-Date: 2020-10-24 12:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
-"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "Gestisci le impostazioni di localizzazione"
+msgstr "Impostazioni di lingua e regione"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -33,27 +31,32 @@ msgstr "Gestisci le lingue installate e configura il formato di localizzazione"
 #: data/io.elementary.switchboard.locale.appdata.xml.in:21
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
 msgid "Updated translations"
-msgstr ""
+msgstr "Traduzioni aggiornate"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "Risolve un problema con l'annullamento dell'installazione della lingua"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Popover di installazione delle lingue ridisegnato"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:29
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
+"Chiede il permesso quando necessario. Niente più barre infromative aggiuntive"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
+"La barra informativa sullo stato dell'installazione ora è una finestra di "
+"dialogo"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:31
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
+"L'elenco delle lingue viene aggiornato correttamente quando si aggiungono o "
+"rimuovono lingue"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
@@ -62,7 +65,7 @@ msgstr "Gestisci le impostazioni di localizzazione"
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr ""
-"È richiesto l'accesso per poter gestire le impostazioni di localizzazione"
+"È necessario autenticarsi per poter gestire le impostazioni di localizzazione"
 
 #~ msgid "Locale"
 #~ msgstr "Localizzazione"
