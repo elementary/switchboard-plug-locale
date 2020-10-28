@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2019-11-28 16:25+0000\n"
+"PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/mr/>\n"
@@ -17,13 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "लोकेल सेटिंग्ज व्यवस्थापित करा"
+msgstr "भाषा &amp; प्रदेश सेटिंग्ज"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -37,7 +35,7 @@ msgstr "अद्ययावत भाषांतर"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "भाषा स्थापना रद्द करण्याच्या समस्येचे निराकरण करा"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
