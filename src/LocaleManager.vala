@@ -18,7 +18,9 @@
 public interface AccountProxy : GLib.Object {
     public abstract void set_formats_locale (string formats_locale) throws GLib.Error;
     public abstract void set_language (string language) throws GLib.Error;
+    public abstract void set_first_day (string first_day) throws GLib.Error;
     public abstract string formats_locale { owned get; }
+    public abstract string first_day { owned get; }
     public abstract string language { owned get; }
 }
 
@@ -125,6 +127,20 @@ namespace SwitchboardPlugLocale {
 
         public string get_user_format () {
             return account_proxy.formats_locale;
+        }
+
+        public void set_user_first_day (string first_day) {
+            debug ("Setting user first day of the week to %s", first_day);
+
+            try {
+                account_proxy.set_first_day (first_day);
+            } catch (Error e) {
+                critical (e.message);
+            }
+        }
+
+        public string get_user_first_day () {
+            return account_proxy.first_day;
         }
 
         private void localectl_set_locale (string locale, string? format = null) throws GLib.Error {

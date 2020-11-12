@@ -19,16 +19,20 @@ namespace SwitchboardPlugLocale.Widgets {
         private Gtk.Button set_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
+        private Gtk.ComboBox first_day_combobox;
         private Gtk.ListStore format_store;
         private Gtk.ListStore region_store;
+        private Gtk.ListStore first_day_store;
 
         private LocaleManager lm;
         private Preview preview;
         private string language;
         private string selected_language = "";
         private string selected_format = "";
+        private string selected_first_day = "";
         private bool has_region;
         private EndLabel region_endlabel;
+        private EndLabel first_day_endlabel;
 
         private static GLib.Settings? temperature_settings = null;
 
@@ -62,26 +66,38 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.changed.connect (compare);
             format_combobox.active = 0;
 
+            first_day_store = new Gtk.ListStore (1, typeof (string));
+
+            first_day_combobox = new Gtk.ComboBox.with_model (first_day_store);
+            first_day_combobox.pack_start (renderer, true);
+            first_day_combobox.add_attribute (renderer, "text", 0);
+            first_day_combobox.changed.connect (on_first_day_changed);
+            first_day_combobox.changed.connect (compare);
+            first_day_combobox.active = 0;
+
             preview = new Preview ();
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
             region_endlabel = new EndLabel (_("Region: "));
+            first_day_endlabel = new EndLabel (_("First Day Of Week: "));
 
             content_area.halign = Gtk.Align.CENTER;
             content_area.attach (region_endlabel, 0, 2, 1, 1);
             content_area.attach (region_combobox, 1, 2, 1, 1);
             content_area.attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
             content_area.attach (format_combobox, 1, 3, 1, 1);
-            content_area.attach (preview, 0, 5, 2, 1);
+            content_area.attach (first_day_endlabel, 0, 4, 1, 1);
+            content_area.attach (first_day_combobox, 1, 4, 1, 1);
+            content_area.attach (preview, 0, 6, 2, 1);
 
             if (temperature_settings != null) {
                 var temperature = new Granite.Widgets.ModeButton ();
                 temperature.append_text (_("Celsius"));
                 temperature.append_text (_("Fahrenheit"));
 
-                content_area.attach (new EndLabel (_("Temperature:")), 0, 4, 1, 1);
-                content_area.attach (temperature, 1, 4, 1, 1);
+                content_area.attach (new EndLabel (_("Temperature:")), 0, 5, 1, 1);
+                content_area.attach (temperature, 1, 5, 1, 1);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
@@ -144,6 +160,10 @@ namespace SwitchboardPlugLocale.Widgets {
                 debug ("Setting user format to '%s'", format);
                 lm.set_user_format (format);
 
+                var first_day = get_first_day ();
+                debug ("Setting user's first day of the week to '%s'", format);
+                lm.set_user_first_day (first_day);
+
                 settings_changed ();
             });
 
@@ -193,6 +213,27 @@ namespace SwitchboardPlugLocale.Widgets {
 
             if (format != "") {
                 preview.reload_languages (format);
+            }
+        }
+
+        public string get_first_day () {
+            Gtk.TreeIter iter;
+            string first_day;
+
+            if (!first_day_combobox.get_active_iter (out iter)) {
+                return "";
+            }
+
+            first_day_store.get (iter, 1, out first_day);
+
+            return first_day;
+        }
+
+        private void on_first_day_changed () {
+            var first_day = get_first_day ();
+
+            if (first_day != "") {
+                preview.reload_languages (first_day);
             }
         }
 
@@ -306,6 +347,45 @@ namespace SwitchboardPlugLocale.Widgets {
 
             if (selected_format == "") {
                 selected_format = get_format ();
+            }
+
+            compare ();
+        }
+
+        public void reload_first_day () {
+            Gee.ArrayList<string>? first_days = new Gee.ArrayList<string>();
+            first_days.add (_("Sunday"));
+            first_days.add (_("Monday"));
+            first_days.add (_("Tuesday"));
+            first_days.add (_("Wednesday"));
+            first_days.add (_("Thursday"));
+            first_days.add (_("Friday"));
+            first_days.add (_("Saturday"));
+            first_day_store.clear ();
+            var user_first_day = lm.get_user_first_day ();
+            int first_day_id = 0;
+
+            int i = 0;
+            foreach (var first_day in first_days) {
+                if (first_day != null) {
+
+
+                    var iter = Gtk.TreeIter ();
+                    first_day_store.append (out iter);
+                    first_day_store.set (iter, 0, first_day);
+
+                    if (first_day == user_first_day) {
+                        first_day_id = i;
+                    }
+
+                    i++;
+                }
+            }
+            first_day_combobox.sensitive = i != 1; // set to unsensitive if only have one item
+            first_day_combobox.active = first_day_id;
+
+            if (selected_first_day == "") {
+                selected_first_day = get_first_day ();
             }
 
             compare ();
