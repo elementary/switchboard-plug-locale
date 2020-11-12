@@ -353,7 +353,7 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         public void reload_first_day () {
-            Gee.ArrayList<string>? first_days = new Gee.ArrayList<string>();
+            Gee.ArrayList<string>? first_days = new Gee.ArrayList<string> ();
             first_days.add (_("Sunday"));
             first_days.add (_("Monday"));
             first_days.add (_("Tuesday"));
