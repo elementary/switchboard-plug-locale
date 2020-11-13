@@ -29,7 +29,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private string language;
         private string selected_language = "";
         private string selected_format = "";
-        private string selected_first_day = "";
+        private int selected_first_day;
         private bool has_region;
         private EndLabel region_endlabel;
         private EndLabel first_day_endlabel;
@@ -212,27 +212,15 @@ namespace SwitchboardPlugLocale.Widgets {
             }
         }
 
-        public string get_first_day () {
-            Gtk.TreeIter iter;
-            string first_day;
-
-            if (!first_day_combobox.get_active_iter (out iter)) {
-                return "";
-            }
-
-            first_day_store.get (iter, 0, out first_day);
-
-            return first_day;
+        public int get_first_day () {
+            return first_day_combobox.get_active ();
         }
 
         private void on_first_day_changed () {
             var first_day = get_first_day ();
 
-            if (first_day != "") {
-                debug ("Setting user's first day of the week to '%s'", first_day);
-                lm.set_user_first_day (first_day);
-                preview.reload_languages (first_day);
-            }
+            debug ("Setting user's first day of the week to position '%i'", first_day);
+            lm.set_user_first_day (first_day);
         }
 
         private void compare () {
@@ -370,7 +358,7 @@ namespace SwitchboardPlugLocale.Widgets {
                     first_day_store.append (out iter);
                     first_day_store.set (iter, 0, first_day);
 
-                    if (first_day == user_first_day) {
+                    if (first_days.index_of (first_day) == user_first_day) {
                         first_day_id = i;
                     }
 
@@ -380,7 +368,7 @@ namespace SwitchboardPlugLocale.Widgets {
             first_day_combobox.sensitive = i != 1; // set to unsensitive if only have one item
             first_day_combobox.active = first_day_id;
 
-            if (selected_first_day == "") {
+            if (selected_first_day == 0) {
                 selected_first_day = get_first_day ();
             }
 

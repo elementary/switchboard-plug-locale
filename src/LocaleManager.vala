@@ -128,14 +128,14 @@ namespace SwitchboardPlugLocale {
             return account_proxy.formats_locale;
         }
 
-        public void set_user_first_day (string first_day) {
-            debug ("Setting user first day of the week to %s", first_day);
+        public void set_user_first_day (int first_day) {
+            debug ("Setting user first day of the week to position %i", first_day);
 
-            settings.set_string ("first-day", first_day);
+            settings.set_int ("first-day", first_day);
         }
 
-        public string get_user_first_day () {
-            return settings.get_string ("first-day");
+        public int get_user_first_day () {
+            return settings.get_int ("first-day");
         }
 
         private void localectl_set_locale (string locale, string? format = null) throws GLib.Error {
