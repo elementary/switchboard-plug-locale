@@ -160,10 +160,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 debug ("Setting user format to '%s'", format);
                 lm.set_user_format (format);
 
-                var first_day = get_first_day ();
-                debug ("Setting user's first day of the week to '%s'", format);
-                lm.set_user_first_day (first_day);
-
                 settings_changed ();
             });
 
@@ -224,7 +220,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 return "";
             }
 
-            first_day_store.get (iter, 1, out first_day);
+            first_day_store.get (iter, 0, out first_day);
 
             return first_day;
         }
@@ -233,6 +229,8 @@ namespace SwitchboardPlugLocale.Widgets {
             var first_day = get_first_day ();
 
             if (first_day != "") {
+                debug ("Setting user's first day of the week to '%s'", first_day);
+                lm.set_user_first_day (first_day);
                 preview.reload_languages (first_day);
             }
         }
@@ -368,8 +366,6 @@ namespace SwitchboardPlugLocale.Widgets {
             int i = 0;
             foreach (var first_day in first_days) {
                 if (first_day != null) {
-
-
                     var iter = Gtk.TreeIter ();
                     first_day_store.append (out iter);
                     first_day_store.set (iter, 0, first_day);

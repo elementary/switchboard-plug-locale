@@ -6,6 +6,10 @@
 			<summary>Saves selected input sources per language.</summary>
 			<description>Saves selected input sources per language.</description>
 		</key>
-
+		<key name="first-day" type="s">
+			<default>'Sunday'</default>
+			<summary>Saves the First Day of the Week for use in locale settings such as a calendar display.</summary>
+			<description>Saves the First Day of the Week for use in locale settings such as a calendar display.</description>
+		</key>
 	</schema>
 </schemalist>
