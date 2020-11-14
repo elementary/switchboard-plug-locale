@@ -71,9 +71,9 @@ namespace SwitchboardPlugLocale.Widgets {
             first_day_combobox = new Gtk.ComboBox.with_model (first_day_store);
             first_day_combobox.pack_start (renderer, true);
             first_day_combobox.add_attribute (renderer, "text", 0);
+            first_day_combobox.active = get_first_day ();
             first_day_combobox.changed.connect (on_first_day_changed);
             first_day_combobox.changed.connect (compare);
-            first_day_combobox.active = 0;
 
             preview = new Preview ();
             preview.margin_bottom = 12;
@@ -353,23 +353,21 @@ namespace SwitchboardPlugLocale.Widgets {
 
             int i = 0;
             foreach (var first_day in first_days) {
-                if (first_day != null) {
-                    var iter = Gtk.TreeIter ();
-                    first_day_store.append (out iter);
-                    first_day_store.set (iter, 0, first_day);
+                var iter = Gtk.TreeIter ();
+                first_day_store.append (out iter);
+                first_day_store.set (iter, 0, first_day);
 
-                    if (first_days.index_of (first_day) == user_first_day) {
-                        first_day_id = i;
-                    }
-
-                    i++;
+                if (first_days.index_of (first_day) == user_first_day) {
+                    first_day_id = i;
                 }
+
+                i++;
             }
             first_day_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            first_day_combobox.active = first_day_id;
+            first_day_combobox.active = user_first_day;
 
             if (selected_first_day == 0) {
-                selected_first_day = get_first_day ();
+                selected_first_day = user_first_day;
             }
 
             compare ();

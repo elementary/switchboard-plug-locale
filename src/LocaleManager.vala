@@ -129,8 +129,6 @@ namespace SwitchboardPlugLocale {
         }
 
         public void set_user_first_day (int first_day) {
-            debug ("Setting user first day of the week to position %i", first_day);
-
             settings.set_int ("first-day", first_day);
         }
 
