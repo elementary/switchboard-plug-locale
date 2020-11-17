@@ -7,6 +7,7 @@
 			<description>Saves selected input sources per language.</description>
 		</key>
 		<key name="first-day" type="i">
+			<range min="0" max="6" />
 			<default>0</default>
 			<summary>Saves the First Day of the Week for use in locale settings such as a calendar display.</summary>
 			<description>Saves the First Day of the Week for use in locale settings such as a calendar display.</description>

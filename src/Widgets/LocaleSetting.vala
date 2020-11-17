@@ -220,7 +220,9 @@ namespace SwitchboardPlugLocale.Widgets {
             var first_day = get_first_day ();
 
             debug ("Setting user's first day of the week to position '%i'", first_day);
-            lm.set_user_first_day (first_day);
+            if (first_day >= 0 && first_day <= 6) { // 0 = sunday, 1 = monday, ..., 6 = saturday
+                lm.set_user_first_day (first_day);
+            }
         }
 
         private void compare () {
@@ -364,7 +366,9 @@ namespace SwitchboardPlugLocale.Widgets {
                 i++;
             }
             first_day_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            first_day_combobox.active = user_first_day;
+            if (user_first_day >= 0 && user_first_day <= 6) { // 0 = sunday, 1 = monday, ..., 6 = saturday
+                first_day_combobox.active = user_first_day;
+            }
 
             if (selected_first_day == 0) {
                 selected_first_day = user_first_day;
