@@ -71,9 +71,11 @@ namespace SwitchboardPlugLocale.Widgets {
             first_day_combobox = new Gtk.ComboBox.with_model (first_day_store);
             first_day_combobox.pack_start (renderer, true);
             first_day_combobox.add_attribute (renderer, "text", 0);
-            first_day_combobox.active = get_first_day ();
-            first_day_combobox.changed.connect (on_first_day_changed);
-            first_day_combobox.changed.connect (compare);
+            first_day_combobox.active = lm.get_user_first_day ();
+            first_day_combobox.changed.connect (() => {
+                lm.set_user_first_day (first_day_combobox.active);
+                compare ();
+            });
 
             preview = new Preview ();
             preview.margin_bottom = 12;
@@ -209,19 +211,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
             if (format != "") {
                 preview.reload_languages (format);
-            }
-        }
-
-        public int get_first_day () {
-            return first_day_combobox.get_active ();
-        }
-
-        private void on_first_day_changed () {
-            var first_day = get_first_day ();
-
-            debug ("Setting user's first day of the week to position '%i'", first_day);
-            if (first_day >= 0 && first_day <= 6) { // 0 = sunday, 1 = monday, ..., 6 = saturday
-                lm.set_user_first_day (first_day);
             }
         }
 
@@ -366,9 +355,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 i++;
             }
             first_day_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            if (user_first_day >= 0 && user_first_day <= 6) { // 0 = sunday, 1 = monday, ..., 6 = saturday
-                first_day_combobox.active = user_first_day;
-            }
+            first_day_combobox.active = user_first_day;
 
             if (selected_first_day == 0) {
                 selected_first_day = user_first_day;

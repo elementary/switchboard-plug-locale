@@ -129,7 +129,7 @@ namespace SwitchboardPlugLocale {
         }
 
         public void set_user_first_day (int first_day) {
-            settings.set_int ("first-day", first_day);
+            settings.set_int ("first-day", first_day.clamp (0, 6));
         }
 
         public int get_user_first_day () {
