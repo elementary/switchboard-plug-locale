@@ -331,11 +331,9 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public void reload_first_day () {
             Gee.ArrayList<string>? first_days = new Gee.ArrayList<string> ();
+            // As per real world data, First Day option in many countries boils down to these 4 options.
             first_days.add (_("Sunday"));
             first_days.add (_("Monday"));
-            first_days.add (_("Tuesday"));
-            first_days.add (_("Wednesday"));
-            first_days.add (_("Thursday"));
             first_days.add (_("Friday"));
             first_days.add (_("Saturday"));
             first_day_store.clear ();
