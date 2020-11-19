@@ -82,7 +82,7 @@ namespace SwitchboardPlugLocale.Widgets {
             preview.margin_top = 12;
 
             region_endlabel = new EndLabel (_("Region: "));
-            first_day_endlabel = new EndLabel (_("First Day Of Week: "));
+            first_day_endlabel = new EndLabel (_("First Day of Week:"));
 
             content_area.halign = Gtk.Align.CENTER;
             content_area.attach (region_endlabel, 0, 2, 1, 1);
