@@ -66,7 +66,7 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.changed.connect (compare);
             format_combobox.active = 0;
 
-            first_day_store = new Gtk.ListStore (2, typeof (int), typeof (string));
+            first_day_store = new Gtk.ListStore (2, typeof (string), typeof (int));
 
             first_day_combobox = new Gtk.ComboBox.with_model (first_day_store);
             first_day_combobox.pack_start (renderer, true);
@@ -344,7 +344,7 @@ namespace SwitchboardPlugLocale.Widgets {
             foreach (var first_day in first_days) {
                 var iter = Gtk.TreeIter ();
                 first_day_store.append (out iter);
-                first_day_store.set (iter, 0, first_days.index_of (first_day), 1, first_day);
+                first_day_store.set (iter, 0, first_day, 1, first_days.index_of (first_day));
 
                 if (first_days.index_of (first_day) == user_first_day) {
                     first_day_id = i;
