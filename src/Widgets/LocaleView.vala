@@ -77,7 +77,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
                 locale_setting.reload_regions.begin (selected_language_code, regions);
-                locale_setting.reload_first_day ();
+                locale_setting.set_first_day ();
                 locale_setting.reload_labels (selected_language_code);
 
                 if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {

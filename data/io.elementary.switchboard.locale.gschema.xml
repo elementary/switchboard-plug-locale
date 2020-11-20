@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<enum id='first-day'>
-		<value nick='Sunday' value='0'/>
-		<value nick='Monday' value='1'/>
-		<value nick='Friday' value='2'/>
-		<value nick='Saturday' value='3'/>
-	</enum>
-	<schema path="/io/elementary/switchboard/locale/" id="io.elementary.switchboard.locale">
-		<key name="input-selections" type="a(ss)">
-			<default>[]</default>
-			<summary>Saves selected input sources per language.</summary>
-			<description>Saves selected input sources per language.</description>
-		</key>
-		<key name='week-start-day-name' enum='first-day'>
-			<default>'Sunday'</default>
-			<summary>Saves the First Day of the Week for use in locale settings such as a calendar display.</summary>
-			<description>Saves the First Day of the Week for use in locale settings such as a calendar display.</description>
-		</key>
-	</schema>
+    <enum id='first-day'>
+        <value nick='Sunday' value='0'/>
+        <value nick='Monday' value='1'/>
+        <value nick='Friday' value='5'/>
+        <value nick='Saturday' value='6'/>
+    </enum>
+    <schema path="/io/elementary/switchboard/locale/" id="io.elementary.switchboard.locale">
+        <key name="input-selections" type="a(ss)">
+            <default>[]</default>
+            <summary>Saves selected input sources per language.</summary>
+            <description>Saves selected input sources per language.</description>
+        </key>
+        <key name='week-start-day-name' enum='first-day'>
+            <default>'Sunday'</default>
+            <summary>Saves the First Day of the Week for use in locale settings such as a calendar display.</summary>
+            <description>Saves the First Day of the Week for use in locale settings such as a calendar display.</description>
+        </key>
+    </schema>
 </schemalist>
