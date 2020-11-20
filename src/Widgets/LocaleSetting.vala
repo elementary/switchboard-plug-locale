@@ -19,17 +19,15 @@ namespace SwitchboardPlugLocale.Widgets {
         private Gtk.Button set_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
-        private Gtk.ComboBox first_day_combobox;
+        private Gtk.ComboBoxText first_day_combobox;
         private Gtk.ListStore format_store;
         private Gtk.ListStore region_store;
-        private Gtk.ListStore first_day_store;
 
         private LocaleManager lm;
         private Preview preview;
         private string language;
         private string selected_language = "";
         private string selected_format = "";
-        private int selected_first_day;
         private bool has_region;
         private EndLabel region_endlabel;
         private EndLabel first_day_endlabel;
@@ -66,14 +64,14 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.changed.connect (compare);
             format_combobox.active = 0;
 
-            first_day_store = new Gtk.ListStore (2, typeof (string), typeof (int));
-
-            first_day_combobox = new Gtk.ComboBox.with_model (first_day_store);
-            first_day_combobox.pack_start (renderer, true);
-            first_day_combobox.add_attribute (renderer, "text", 0);
-            first_day_combobox.active = lm.get_user_first_day ();
+            first_day_combobox = new Gtk.ComboBoxText ();
+            first_day_combobox.append ("0", _("Sunday"));
+            first_day_combobox.append ("1", _("Monday"));
+            first_day_combobox.append ("5", _("Friday"));
+            first_day_combobox.append ("6", _("Saturday"));
+            first_day_combobox.active_id = lm.get_user_first_day ().to_string ();
             first_day_combobox.changed.connect (() => {
-                lm.set_user_first_day (first_day_combobox.active);
+                lm.set_user_first_day (int.parse (first_day_combobox.active_id));
                 compare ();
             });
 
@@ -329,36 +327,8 @@ namespace SwitchboardPlugLocale.Widgets {
             compare ();
         }
 
-        public void reload_first_day () {
-            Gee.ArrayList<string>? first_days = new Gee.ArrayList<string> ();
-            // As per real world data, First Day option in many countries boils down to these 4 options.
-            first_days.add (_("Sunday"));
-            first_days.add (_("Monday"));
-            first_days.add (_("Friday"));
-            first_days.add (_("Saturday"));
-            first_day_store.clear ();
-            var user_first_day = lm.get_user_first_day ();
-            int first_day_id = 0;
-
-            int i = 0;
-            foreach (var first_day in first_days) {
-                var iter = Gtk.TreeIter ();
-                first_day_store.append (out iter);
-                first_day_store.set (iter, 0, first_day, 1, first_days.index_of (first_day));
-
-                if (first_days.index_of (first_day) == user_first_day) {
-                    first_day_id = i;
-                }
-
-                i++;
-            }
-            first_day_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            first_day_combobox.active = user_first_day;
-
-            if (selected_first_day == 0) {
-                selected_first_day = user_first_day;
-            }
-
+        public void set_first_day () {
+            first_day_combobox.active_id = lm.get_user_first_day ().to_string ();
             compare ();
         }
 
