@@ -87,9 +87,9 @@ namespace SwitchboardPlugLocale.Widgets {
             content_area.attach (region_combobox, 1, 2, 1, 1);
             content_area.attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
             content_area.attach (format_combobox, 1, 3, 1, 1);
-            content_area.attach (first_day_endlabel, 0, 4, 1, 1);
-            content_area.attach (first_day_combobox, 1, 4, 1, 1);
-            content_area.attach (preview, 0, 6, 2, 1);
+            content_area.attach (first_day_endlabel, 0, 4);
+            content_area.attach (first_day_combobox, 1, 4);
+            content_area.attach (preview, 0, 6, 2);
 
             if (temperature_settings != null) {
                 var temperature = new Granite.Widgets.ModeButton ();
