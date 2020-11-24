@@ -96,8 +96,8 @@ namespace SwitchboardPlugLocale.Widgets {
                 temperature.append_text (_("Celsius"));
                 temperature.append_text (_("Fahrenheit"));
 
-                content_area.attach (new EndLabel (_("Temperature:")), 0, 5, 1, 1);
-                content_area.attach (temperature, 1, 5, 1, 1);
+                content_area.attach (new EndLabel (_("Temperature:")), 0, 5);
+                content_area.attach (temperature, 1, 5);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
