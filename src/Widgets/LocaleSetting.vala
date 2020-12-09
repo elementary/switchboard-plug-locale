@@ -65,7 +65,7 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.active = 0;
 
             first_day_combobox = new Gtk.ComboBoxText ();
-            first_day_combobox.append ("0", _("Sunday"));
+            first_day_combobox.append ("7", _("Sunday"));
             first_day_combobox.append ("1", _("Monday"));
             first_day_combobox.append ("5", _("Friday"));
             first_day_combobox.append ("6", _("Saturday"));
