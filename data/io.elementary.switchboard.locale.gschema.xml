@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
     <enum id='first-day'>
-        <value nick='Monday' value='0'/>
-        <value nick='Friday' value='4'/>
-        <value nick='Saturday' value='5'/>
-        <value nick='Sunday' value='6'/>
+        <value nick='Monday' value='1'/>
+        <value nick='Friday' value='5'/>
+        <value nick='Saturday' value='6'/>
+        <value nick='Sunday' value='7'/>
     </enum>
     <schema path="/io/elementary/switchboard/locale/" id="io.elementary.switchboard.locale">
         <key name="input-selections" type="a(ss)">
