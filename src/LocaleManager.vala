@@ -129,7 +129,7 @@ namespace SwitchboardPlugLocale {
         }
 
         public void set_user_first_day (int first_day) {
-            settings.set_enum ("week-start-day-name", first_day.clamp (0, 6));
+            settings.set_enum ("week-start-day-name", first_day.clamp (1, 7));
         }
 
         public int get_user_first_day () {
