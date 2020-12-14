@@ -72,6 +72,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Gtk.Dialog {
 
         border_width = 6;
         deletable = false;
+        resizable = false;
         get_content_area ().add (grid);
 
         cancel_button.clicked.connect (() => {
