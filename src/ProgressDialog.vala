@@ -14,7 +14,7 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-public class SwitchboardPlugLocale.ProgressDialog : Gtk.Dialog {
+public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
     public int progress {
         set {
             if (value >= 100) {
