@@ -14,7 +14,7 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-public class SwitchboardPlugLocale.ProgressDialog : Gtk.Dialog {
+public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
     public int progress {
         set {
             if (value >= 100) {
@@ -72,6 +72,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Gtk.Dialog {
 
         border_width = 6;
         deletable = false;
+        resizable = false;
         get_content_area ().add (grid);
 
         cancel_button.clicked.connect (() => {
