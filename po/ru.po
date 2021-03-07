@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2021-03-04 07:57+0000\n"
+"PO-Revision-Date: 2021-03-08 04:48+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ru/>\n"
@@ -72,7 +72,7 @@ msgstr "Установка недостающих языковых пакето�
 
 #: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "Отменить"
 
 #: src/Widgets/InstallPopover.vala:39
 msgid "Install Language"
