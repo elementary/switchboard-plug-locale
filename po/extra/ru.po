@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2021-03-05 18:36+0000\n"
+"PO-Revision-Date: 2021-04-07 15:37+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ru/>\n"
@@ -21,10 +21,8 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "Управление настройками локали"
+msgstr "Настройки Языка и Региона"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -38,23 +36,26 @@ msgstr "Обновлены переводы"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "Исправлена проблема с отменой установки языка"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Переработано окно установки языка"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:29
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
+"Запрос разрешения при необходимости. Больше нет дополнительной панели "
+"подробностей"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "Панель прогресса установки теперь является диалоговым окном"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:31
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
+"Список языков обновляется должным образом при добавлении или удалении языков"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
