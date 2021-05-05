@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2021-05-05 23:40+0000\n"
+"PO-Revision-Date: 2021-05-06 14:05+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/nb/>\n"
@@ -31,7 +31,7 @@ msgstr "Behandle språk, og sett opp region og format"
 #: data/io.elementary.switchboard.locale.appdata.xml.in:21
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
 msgid "Updated translations"
-msgstr ""
+msgstr "Oppdaterte oversettelser"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fix an issue with cancelling language installation"
