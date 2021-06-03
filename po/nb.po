@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2018-10-15 15:51+0000\n"
+"PO-Revision-Date: 2021-06-03 15:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
+"Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/nb/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:37
@@ -34,14 +34,12 @@ msgid "Region"
 msgstr "Region: "
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "Formater: "
+msgstr "Formater"
 
 #: src/Plug.vala:114
-#, fuzzy
 msgid "Temperature"
-msgstr "Temperatur:"
+msgstr "Temperatur"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
@@ -82,9 +80,9 @@ msgid "Install Language"
 msgstr "Installer språk"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Installerer %s"
+msgstr "Installer %s"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
