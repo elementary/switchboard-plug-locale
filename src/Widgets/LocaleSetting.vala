@@ -19,6 +19,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private Gtk.Button set_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
+        private Gtk.ComboBoxText first_day_combobox;
         private Gtk.ListStore format_store;
         private Gtk.ListStore region_store;
 
@@ -29,6 +30,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private string selected_format = "";
         private bool has_region;
         private EndLabel region_endlabel;
+        private EndLabel first_day_endlabel;
 
         private static GLib.Settings? temperature_settings = null;
 
@@ -62,26 +64,40 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.changed.connect (compare);
             format_combobox.active = 0;
 
+            first_day_combobox = new Gtk.ComboBoxText ();
+            first_day_combobox.append ("7", _("Sunday"));
+            first_day_combobox.append ("1", _("Monday"));
+            first_day_combobox.append ("5", _("Friday"));
+            first_day_combobox.append ("6", _("Saturday"));
+            first_day_combobox.active_id = lm.get_user_first_day ().to_string ();
+            first_day_combobox.changed.connect (() => {
+                lm.set_user_first_day (int.parse (first_day_combobox.active_id));
+                compare ();
+            });
+
             preview = new Preview ();
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
             region_endlabel = new EndLabel (_("Region: "));
+            first_day_endlabel = new EndLabel (_("First Day of Week:"));
 
             content_area.halign = Gtk.Align.CENTER;
             content_area.attach (region_endlabel, 0, 2, 1, 1);
             content_area.attach (region_combobox, 1, 2, 1, 1);
             content_area.attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
             content_area.attach (format_combobox, 1, 3, 1, 1);
-            content_area.attach (preview, 0, 5, 2, 1);
+            content_area.attach (first_day_endlabel, 0, 4);
+            content_area.attach (first_day_combobox, 1, 4);
+            content_area.attach (preview, 0, 6, 2);
 
             if (temperature_settings != null) {
                 var temperature = new Granite.Widgets.ModeButton ();
                 temperature.append_text (_("Celsius"));
                 temperature.append_text (_("Fahrenheit"));
 
-                content_area.attach (new EndLabel (_("Temperature:")), 0, 4, 1, 1);
-                content_area.attach (temperature, 1, 4, 1, 1);
+                content_area.attach (new EndLabel (_("Temperature:")), 0, 5);
+                content_area.attach (temperature, 1, 5);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
@@ -308,6 +324,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 selected_format = get_format ();
             }
 
+            compare ();
+        }
+
+        public void set_first_day () {
+            first_day_combobox.active_id = lm.get_user_first_day ().to_string ();
             compare ();
         }
 
