@@ -7,6 +7,13 @@
   <icon type="stock">preferences-desktop-locale</icon>
   <translation type="gettext">locale-plug</translation>
   <releases>
+    <release version="2.5.4" date="2021-07-14" urgency="medium">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.3" date="2020-12-23" urgency="medium">
       <description>
         <ul>
