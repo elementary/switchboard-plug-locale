@@ -2,7 +2,7 @@ project(
     'locale-plug',
     'vala', 'c',
     meson_version: '>= 0.46.1',
-    version: '2.5.3'
+    version: '2.5.4'
 )
 
 gnome = import('gnome')
