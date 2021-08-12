@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2020-07-24 13:12+0000\n"
+"PO-Revision-Date: 2021-08-12 17:07+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:37
@@ -44,7 +44,7 @@ msgstr "Température"
 #. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
-msgstr "Certains changements ne prendront effet qu'après déconnexion"
+msgstr "Certaines modifications ne prendront effet qu'après déconnexion"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
