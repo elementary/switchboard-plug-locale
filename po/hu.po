@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2018-06-23 08:05+0000\n"
-"Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:37
@@ -26,7 +26,7 @@ msgstr "Nyelv és régió"
 
 #: src/Plug.vala:38
 msgid "Manage languages, and configure region and format"
-msgstr "Nyelvi, régió és formátum beállítások"
+msgstr "Nyelvi, régió- és formátumbeállítások"
 
 #: src/Plug.vala:112
 #, fuzzy
@@ -74,7 +74,7 @@ msgstr "Hiányzó nyelv telepítése"
 
 #: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: src/Widgets/InstallPopover.vala:39
 #, fuzzy
