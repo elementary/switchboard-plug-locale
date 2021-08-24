@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"PO-Revision-Date: 2021-08-24 19:47+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/hu/>\n"
@@ -29,19 +29,16 @@ msgid "Manage languages, and configure region and format"
 msgstr "Nyelvi, régió- és formátumbeállítások"
 
 #: src/Plug.vala:112
-#, fuzzy
 msgid "Region"
-msgstr "Régió: "
+msgstr "Régió"
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "Formátumok: "
+msgstr "Formátumok"
 
 #: src/Plug.vala:114
-#, fuzzy
 msgid "Temperature"
-msgstr "Hőmérséklet:"
+msgstr "Hőmérséklet"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
@@ -77,12 +74,11 @@ msgid "Cancel"
 msgstr "Mégse"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "Nyelv telepítése"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
 msgstr "%s telepítése"
 
@@ -124,7 +120,7 @@ msgstr "Hőmérséklet:"
 
 #: src/Widgets/LocaleSetting.vala:104
 msgid "Set Language"
-msgstr "Nyelv megadása"
+msgstr "Nyelv beállítása"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Set System Language"
@@ -133,12 +129,12 @@ msgstr "A rendszer nyelvének beállítása"
 #: src/Widgets/LocaleSetting.vala:109
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
-"Nyelv beállítása a bejelentkező képernyőhöz, a vendég fiókhoz és az új "
-"felhasználói fiókokhoz."
+"Nyelv beállítása a bejelentkezőképernyőhöz, a vendégfiókhoz és az új "
+"felhasználói fiókokhoz"
 
 #: src/Widgets/LocaleSetting.vala:111
 msgid "Keyboard Settings…"
-msgstr "Billentyűzet beállítások…"
+msgstr "Billentyűzetbeállítások…"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""
