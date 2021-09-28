@@ -43,8 +43,8 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         });
 
         foreach (var locale in langs) {
-            string code, region, codeset, modifier;
-            if (!Gnome.Languages.parse_locale (locale, out code, out region, out codeset, out modifier)) {
+            string code;
+            if (!Gnome.Languages.parse_locale (locale, out code, null, null, null)) {
                 continue;
             }
 
