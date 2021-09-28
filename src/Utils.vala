@@ -33,9 +33,6 @@ namespace SwitchboardPlugLocale {
             }
 
             installed_languages = new Gee.ArrayList<string>.wrap (Gnome.Languages.get_all_locales ());
-            foreach (var lang in installed_languages) {
-                stdout.printf ("%s\n", lang);
-            }
 
             return installed_languages;
         }
