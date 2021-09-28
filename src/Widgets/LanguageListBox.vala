@@ -42,9 +42,12 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             return a.collate (b);
         });
 
-        for (int i = 0; i < langs.size; i++) {
-            var language = langs[i];
-            var code = language.slice (0, 2);
+        foreach (var locale in langs) {
+            string code, region, codeset, modifier;
+            if (!Gnome.Languages.parse_locale (locale, out code, out region, out codeset, out modifier)) {
+                continue;
+            }
+
             add_language (code);
         }
 

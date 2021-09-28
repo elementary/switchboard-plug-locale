@@ -182,8 +182,10 @@ namespace SwitchboardPlugLocale {
         public static Gee.ArrayList<string> get_regions (string language) {
             Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
             foreach (string locale in get_installed_languages ()) {
-                string code = locale.slice (0, 2);
-                string region = locale.slice (3, 5);
+                string code, region, codeset, modifier;
+                if (!Gnome.Languages.parse_locale (locale, out code, out region, out codeset, out modifier)) {
+                    continue;
+                }
 
                 if (!regions.contains (region) && code == language) {
                     regions.add (region);
