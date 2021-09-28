@@ -25,32 +25,16 @@ namespace SwitchboardPlugLocale {
             installed_locales = new Gee.ArrayList<string> ();
             default_regions = new Gee.HashMap<string, string> ();
             blacklist_packages = new Gee.ArrayList<string> ();
-            installed_languages = new Gee.ArrayList<string> ();
         }
 
         public static Gee.ArrayList<string>? get_installed_languages () {
-            if (installed_languages.size > 0) {
+            if (installed_languages != null) {
                 return installed_languages;
             }
 
-            string output;
-            int status;
-
-            try {
-                Process.spawn_sync (null,
-                    {"/usr/share/language-tools/language-options", null},
-                    Environ.get (),
-                    SpawnFlags.SEARCH_PATH,
-                    null,
-                    out output,
-                    null,
-                    out status);
-
-                foreach (var lang in output.split ("\n")) {
-                    installed_languages.add (lang);
-                }
-            } catch (Error e) {
-                warning (e.message);
+            installed_languages = new Gee.ArrayList<string>.wrap (Gnome.Languages.get_all_locales ());
+            foreach (var lang in installed_languages) {
+                stdout.printf ("%s\n", lang);
             }
 
             return installed_languages;
@@ -201,13 +185,11 @@ namespace SwitchboardPlugLocale {
         public static Gee.ArrayList<string> get_regions (string language) {
             Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
             foreach (string locale in get_installed_languages ()) {
-                if (locale.length == 5) {
-                    string code = locale.slice (0, 2);
-                    string region = locale.slice (3, 5);
+                string code = locale.slice (0, 2);
+                string region = locale.slice (3, 5);
 
-                    if (!regions.contains (region) && code == language) {
-                        regions.add (region);
-                    }
+                if (!regions.contains (region) && code == language) {
+                    regions.add (region);
                 }
             }
 
