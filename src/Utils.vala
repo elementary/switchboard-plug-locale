@@ -23,7 +23,6 @@ namespace SwitchboardPlugLocale {
 
         public static void init () {
             installed_locales = new Gee.ArrayList<string> ();
-            default_regions = new Gee.HashMap<string, string> ();
             blacklist_packages = new Gee.ArrayList<string> ();
         }
 
@@ -151,11 +150,9 @@ namespace SwitchboardPlugLocale {
         }
 
         public static async Gee.HashMap<string, string>? get_default_regions () {
-            if (default_regions.size > 0) {
+            if (default_regions != null) {
                 return default_regions;
             }
-
-            default_regions = new Gee.HashMap<string, string> ();
 
             uint8[] data;
             try {
@@ -163,7 +160,10 @@ namespace SwitchboardPlugLocale {
                 yield file.load_contents_async (null, out data, null);
             } catch (Error e) {
                 warning (e.message);
+                return null;
             }
+
+            default_regions = new Gee.HashMap<string, string> ();
 
             string contents = (string)data;
             var output_array = contents.split ("\n");

@@ -226,6 +226,21 @@ namespace SwitchboardPlugLocale.Widgets {
 
             region_store.clear ();
 
+            var user_lang = lm.get_user_language ();
+             // If accountsservice doesn't have a specific language for the user, then get the system locale
+            if (user_lang.length == 0) {
+                 // If we can't get a system locale either, fall back to displaying the user as using en_US
+                user_lang = lm.get_system_locale () ?? "en_US.UTF-8";
+            }
+
+            string user_code, user_region;
+            if (!Gnome.Languages.parse_locale (user_lang, out user_code, out user_region, null, null)) {
+                user_code = "en";
+                user_region = "US";
+            }
+
+            var default_regions = yield Utils.get_default_regions ();
+
             int i = 0;
             has_region = false;
             foreach (var region in regions) {
@@ -236,13 +251,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 region_store.append (out iter);
                 region_store.set (iter, 0, region_string, 1, region);
 
-                if (lm.get_user_language ().length == 5 && lm.get_user_language ().slice (0, 2) == language
-                    && lm.get_user_language ().slice (3, 5) == region) {
-                        selected_region = i;
+                if (user_code == language && user_region == region) {
+                    selected_region = i;
                 }
 
-                var default_regions = yield Utils.get_default_regions ();
-                if (default_regions.has_key (language) && lm.get_user_language ().slice (0, 2) != language
+                if (default_regions != null && default_regions.has_key (language) && user_code != language
                 && default_regions.@get (language) == "%s_%s".printf (language, region)) {
                     selected_region = i;
                 }

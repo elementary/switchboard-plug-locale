@@ -24,6 +24,8 @@ public interface AccountProxy : GLib.Object {
 
 [DBus (name = "org.freedesktop.locale1")]
 public interface Locale1Proxy : GLib.Object {
+    public abstract string[] locale { owned get; }
+
     public abstract void set_locale (string[] arg_0, bool arg_1) throws GLib.Error;
     public abstract void set_x11_keyboard (
         string arg_0,
@@ -189,6 +191,16 @@ namespace SwitchboardPlugLocale {
                     throw e;
                 }
             }
+        }
+
+        public string? get_system_locale () {
+            foreach (unowned var locale in locale1_proxy.locale) {
+                if (locale.has_prefix ("LANG=")) {
+                    return locale.replace ("LANG=", "");
+                }
+            }
+
+            return null;
         }
 
         public void apply_to_system (string language, string? format) {

@@ -64,7 +64,20 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         if (!languages.has_key (code)) {
             var language_string = Utils.translate (code, null);
 
-            if (lm.get_user_language ().slice (0, 2) == code) {
+            string user_lang = lm.get_user_language ();
+            // If accountsservice doesn't have a specific language for the user, then get the system locale
+            if (user_lang == null || user_lang.length == 0) {
+                // If we can't get a system locale either, fall back to displaying the user as using en_US
+                user_lang = lm.get_system_locale () ?? "en_US.UTF-8";
+            }
+
+            string user_lang_code;
+            if (!Gnome.Languages.parse_locale (user_lang, out user_lang_code, null, null, null)) {
+                // If we somehow still ended up with an invalid locale, display the user as using English
+                user_lang_code = "en";
+            }
+
+            if (user_lang_code == code) {
                 languages[code] = new LanguageRow (code, language_string, true);
             } else {
                 languages[code] = new LanguageRow (code, language_string);
