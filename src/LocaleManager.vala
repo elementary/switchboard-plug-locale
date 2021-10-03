@@ -24,6 +24,8 @@ public interface AccountProxy : GLib.Object {
 
 [DBus (name = "org.freedesktop.locale1")]
 public interface Locale1Proxy : GLib.Object {
+    public abstract string[] locale { owned get; }
+
     public abstract void set_locale (string[] arg_0, bool arg_1) throws GLib.Error;
     public abstract void set_x11_keyboard (
         string arg_0,
@@ -40,6 +42,7 @@ namespace SwitchboardPlugLocale {
         public bool is_connected { get; private set; default = false; }
 
         private const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
+        private const string GNOME_LOCALE_KEY = "org.gnome.system.locale";
         private const string KEY_INPUT_SOURCES = "sources";
         private const string KEY_INPUT_SELETION = "input-selections";
 
@@ -47,6 +50,7 @@ namespace SwitchboardPlugLocale {
         private AccountProxy account_proxy;
 
         private Settings input_settings;
+        private Settings locale_settings;
         private Settings settings;
 
         private Gnome.XkbInfo xkbinfo;
@@ -57,6 +61,7 @@ namespace SwitchboardPlugLocale {
             uint uid = (uint)Posix.getuid ();
 
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
+            locale_settings = new Settings (GNOME_LOCALE_KEY);
 
             try {
                 var connection = Bus.get_sync (BusType.SYSTEM);
@@ -119,12 +124,40 @@ namespace SwitchboardPlugLocale {
             try {
                 account_proxy.set_formats_locale (language);
             } catch (Error e) {
-                critical (e.message);
+                warning ("Error setting formats on AccountsService: %s", e.message);
             }
+
+            // Also set the format on the GNOME GSettings key as this is used on
+            // other distros where the Ubuntu-specific `formats_locale` extension isn't
+            // available
+            locale_settings.set_string ("region", language);
         }
 
         public string get_user_format () {
-            return account_proxy.formats_locale;
+            // The `formats_locale` property is specific to Ubuntu, so check it exists before
+            // returning the value
+            if (account_proxy.formats_locale != null) {
+                return account_proxy.formats_locale;
+            }
+
+            // If the Ubuntu-specific setting isn't available, we use the GNOME GSettings key
+            // which controls the user formats on other distros
+            var user_format = locale_settings.get_string ("region");
+            if (user_format != "") {
+                return user_format;
+            }
+
+            // If the GNOME key isn't set, we're using the default for the user's locale, which
+            // we can get with setlocale. We use LC_MONETARY here, but when set with the plug,
+            // all of the locale categories will have the same value, so this should be right
+            string? monetary = Intl.setlocale (LocaleCategory.MONETARY, null);
+            if (monetary != null) {
+                return monetary;
+            }
+
+            // If all of these attempts have failed, fall back to the system locale, or
+            // in the worst case just en_US
+            return get_system_locale () ?? "en_US.UTF-8";
         }
 
         private void localectl_set_locale (string locale, string? format = null) throws GLib.Error {
@@ -189,6 +222,16 @@ namespace SwitchboardPlugLocale {
                     throw e;
                 }
             }
+        }
+
+        public string? get_system_locale () {
+            foreach (unowned var locale in locale1_proxy.locale) {
+                if (locale.has_prefix ("LANG=")) {
+                    return locale.replace ("LANG=", "");
+                }
+            }
+
+            return null;
         }
 
         public void apply_to_system (string language, string? format) {
