@@ -179,20 +179,20 @@ namespace SwitchboardPlugLocale {
             return default_regions;
         }
 
-        public static Gee.ArrayList<string> get_regions (string language) {
-            Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
+        public static Gee.HashSet<string> get_locales_for_language_code (string language) {
+            Gee.HashSet<string> locales = new Gee.HashSet<string> ();
             foreach (string locale in get_installed_languages ()) {
-                string code, region;
-                if (!Gnome.Languages.parse_locale (locale, out code, out region, null, null)) {
+                string code;
+                if (!Gnome.Languages.parse_locale (locale, out code, null, null, null)) {
                     continue;
                 }
 
-                if (!regions.contains (region) && code == language) {
-                    regions.add (region);
+                if (code == language) {
+                    locales.add (locale);
                 }
             }
 
-            return regions;
+            return locales;
         }
 
         public static string translate_language (string lang) {
