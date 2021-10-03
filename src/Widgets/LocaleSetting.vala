@@ -214,7 +214,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
             var default_regions = yield Utils.get_default_regions ();
             var user_locale = lm.get_user_language ();
-            warning (user_locale);
 
             foreach (var locale in locales) {
                 string code;
@@ -228,7 +227,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 region_store.append (out iter);
                 region_store.set (iter, 0, region_string, 1, locale);
 
-                warning (locale);
                 if (user_locale == locale) {
                     selected_locale_id = locale;
                     user_locale_found = true;
