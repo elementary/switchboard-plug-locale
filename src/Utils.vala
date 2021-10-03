@@ -119,37 +119,6 @@ namespace SwitchboardPlugLocale {
             }
         }
 
-        public static Gee.ArrayList<string> get_installed_locales () {
-            if (installed_locales.size > 0) {
-                return installed_locales;
-            }
-
-            string output;
-            int status;
-
-            try {
-                Process.spawn_sync (null,
-                    {"locale", "-a", null},
-                    Environ.get (),
-                    SpawnFlags.SEARCH_PATH,
-                    null,
-                    out output,
-                    null,
-                    out status);
-
-                foreach (var line in output.split ("\n")) {
-                    if (".utf8" in line) {
-                        var locale = line.substring (0, line.index_of (".utf8"));
-                        installed_locales.add (locale);
-                    }
-                }
-            } catch (Error e) {
-                warning (e.message);
-            }
-
-            return installed_locales;
-        }
-
         public static async Gee.HashMap<string, string>? get_default_regions () {
             if (default_regions.size > 0) {
                 return default_regions;

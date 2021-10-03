@@ -278,16 +278,9 @@ namespace SwitchboardPlugLocale.Widgets {
 
             int i = 0;
             foreach (var locale in locales) {
-                string country = null;
-
-                if (locale.length == 2) {
-                    country = Gnome.Languages.get_country_from_code (locale, null);
-                } else if (locale.length == 5) {
-                    country = Gnome.Languages.get_country_from_locale (locale, null);
-                }
+                string country = Gnome.Languages.get_country_from_locale (locale, null);
 
                 if (country != null) {
-                    locale += ".UTF-8";
                     var iter = Gtk.TreeIter ();
                     format_store.append (out iter);
                     format_store.set (iter, 0, country, 1, locale);
@@ -299,6 +292,7 @@ namespace SwitchboardPlugLocale.Widgets {
                     i++;
                 }
             }
+
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
             format_combobox.active = format_id;
 
