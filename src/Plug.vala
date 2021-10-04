@@ -58,11 +58,10 @@ namespace SwitchboardPlugLocale {
         private async void reload () {
             new Thread<void*> ("load-lang-data", () => {
                 langs = Utils.get_installed_languages ();
-                var locales = Utils.get_installed_locales ();
 
                 Idle.add (() => {
                     view.list_box.reload_languages (langs);
-                    view.locale_setting.reload_formats (locales);
+                    view.locale_setting.reload_formats (langs);
                     return false;
                 });
 
