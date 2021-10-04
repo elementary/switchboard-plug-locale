@@ -115,7 +115,14 @@ namespace SwitchboardPlugLocale {
         }
 
         public string get_user_language () {
-            return account_proxy.language;
+            // AccountsService on Ubuntu seems to strip off the codepage, so we put it back here
+            // so that we can match it against the locales installed on the system
+            var lang = account_proxy.language;
+            if (!lang.contains (".UTF-8")) {
+                lang = lang + ".UTF-8";
+            }
+
+            return lang;
         }
 
         public void set_user_format (string language) {
@@ -244,11 +251,7 @@ namespace SwitchboardPlugLocale {
              */
 
             try {
-                if (language.length == 2) {
-                    localectl_set_locale ("LANG=%s.UTF-8".printf (Utils.get_default_for_lang (language)), format);
-                } else {
-                    localectl_set_locale ("LANG=%s.UTF-8".printf (language), format);
-                }
+                localectl_set_locale ("LANG=%s".printf (language), format);
             } catch (Error e) {
                 warning (e.message);
             }

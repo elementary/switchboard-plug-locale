@@ -73,13 +73,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 var selected_language_code = list_box.get_selected_language_code ();
-                var regions = Utils.get_regions (selected_language_code);
+                var locales = Utils.get_locales_for_language_code (selected_language_code);
 
                 debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
-                locale_setting.reload_regions (selected_language_code, regions);
+                locale_setting.reload_locales (selected_language_code, locales);
                 locale_setting.reload_labels (selected_language_code);
 
-                if (selected_language_code == locale_manager.get_user_language ().slice (0, 2)) {
+                if (locale_manager.get_user_language () in locales) {
                     remove_button.sensitive = false;
                 } else {
                     remove_button.sensitive = true;
