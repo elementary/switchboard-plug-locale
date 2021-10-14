@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2021-10-14 15:14+0000\n"
 "PO-Revision-Date: 2018-10-20 03:10+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -20,38 +20,38 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr "언어 & 지역"
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr "언어 설정 및 지역과 형식 설정"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:114
 msgid "Region"
 msgstr "지역"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:115
 msgid "Formats"
 msgstr "형식"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:116
 msgid "Temperature"
 msgstr "온도"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
+#: src/Plug.vala:123
 msgid "Some changes will not take effect until you log out"
 msgstr "몇몇 설정은 로그아웃 후에 적용됩니다"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
+#: src/Plug.vala:130
 msgid "Language support is not installed completely"
 msgstr "언어 지원이 제대로 설치되지 않았습니다"
 
-#: src/Plug.vala:133
+#: src/Plug.vala:135
 msgid "Complete Installation"
 msgstr "설치 완료"
 
@@ -87,7 +87,7 @@ msgstr "%s 설치 중"
 msgid "Installed Languages"
 msgstr "설치한 언어"
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr "사용 중인 언어"
 
@@ -99,39 +99,39 @@ msgstr "언어 설치"
 msgid "Remove language"
 msgstr "언어 제거"
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr "지역: "
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "형식: "
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr "섭씨"
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr "화씨"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr "온도:"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "언어 설정"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "시스템 언어 설정"
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "로그인 화면, 손님 계정과 새로운 사용자 계정을 위한 언어 설정"
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
 msgstr "키보드 설정…"
 
