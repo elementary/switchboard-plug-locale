@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-14 15:14+0000\n"
-"PO-Revision-Date: 2020-06-08 10:11+0000\n"
+"PO-Revision-Date: 2021-10-15 08:53+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
@@ -29,11 +29,11 @@ msgstr "言語を管理し、地域と書式を設定します"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "言語コードが3文字のロケールをサポート"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "非 Ubuntu ベースのディストリビューションへの対応を強化"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:15
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
