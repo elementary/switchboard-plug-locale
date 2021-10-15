@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2021-10-14 15:14+0000\n"
 "PO-Revision-Date: 2018-05-28 06:30+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -13,41 +13,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr "Limbă și regiune"
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr "Gestionați limbile și configurați regiunea și formatul"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:114
 #, fuzzy
 msgid "Region"
 msgstr "Regiune: "
 
-#: src/Plug.vala:113
+#: src/Plug.vala:115
 #, fuzzy
 msgid "Formats"
 msgstr "Format: "
 
-#: src/Plug.vala:114
+#: src/Plug.vala:116
 #, fuzzy
 msgid "Temperature"
 msgstr "Temperatură:"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
+#: src/Plug.vala:123
 msgid "Some changes will not take effect until you log out"
 msgstr "Unele modificări nu vor avea efect până când nu vă deconectați"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
+#: src/Plug.vala:130
 msgid "Language support is not installed completely"
 msgstr "Suportul lingvistic nu este instalat complet"
 
-#: src/Plug.vala:133
+#: src/Plug.vala:135
 msgid "Complete Installation"
 msgstr "Instalare completă"
 
@@ -83,7 +83,7 @@ msgstr "Instalarea limbii"
 msgid "Installed Languages"
 msgstr "Limbi instalate"
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr "Limba activă în prezent"
 
@@ -95,41 +95,41 @@ msgstr "Instalați limba"
 msgid "Remove language"
 msgstr "Eliminați limba"
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr "Regiune: "
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "Format: "
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr "Grade Celsius"
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr "Scară Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr "Temperatură:"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "Setați limba"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "Setați limba sistemului"
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Setați limba pentru ecranul de conectare, contul de oaspeți și noile conturi "
 "de utilizator"
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
 msgstr "Setările tastaturii …"
 

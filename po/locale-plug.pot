@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: locale-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 23:43+0000\n"
+"POT-Creation-Date: 2021-10-14 15:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,38 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr ""
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:112
+#: src/Plug.vala:114
 msgid "Region"
 msgstr ""
 
-#: src/Plug.vala:113
+#: src/Plug.vala:115
 msgid "Formats"
 msgstr ""
 
-#: src/Plug.vala:114
+#: src/Plug.vala:116
 msgid "Temperature"
 msgstr ""
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
+#: src/Plug.vala:123
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
+#: src/Plug.vala:130
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: src/Plug.vala:133
+#: src/Plug.vala:135
 msgid "Complete Installation"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgstr ""
 msgid "Installed Languages"
 msgstr ""
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr ""
 
@@ -95,38 +95,38 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
 msgstr ""

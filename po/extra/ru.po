@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2021-04-07 15:37+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2021-10-14 15:14+0000\n"
+"PO-Revision-Date: 2021-10-14 18:40+0000\n"
+"Last-Translator: asdffdsdaf <asdffdsdaf@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -29,30 +29,41 @@ msgid "Manage languages, and configure region and format"
 msgstr "Управление языками, настройка региона и формата времени"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:13
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
-#: data/io.elementary.switchboard.locale.appdata.xml.in:32
+msgid "Support locales with 3-letter codes"
+msgstr "Поддержка языков с трёхзначным идентификатором"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid "Better support for non-Ubuntu based distributions"
+msgstr "Улучшена работа на дистрибутивах не основанных на Ubuntu"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:15
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:29
+#: data/io.elementary.switchboard.locale.appdata.xml.in:36
+#: data/io.elementary.switchboard.locale.appdata.xml.in:44
+#: data/io.elementary.switchboard.locale.appdata.xml.in:55
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/io.elementary.switchboard.locale.appdata.xml.in:43
 msgid "Fix an issue with cancelling language installation"
 msgstr "Исправлена проблема с отменой установки языка"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:28
+#: data/io.elementary.switchboard.locale.appdata.xml.in:51
 msgid "Redesigned Install Language popover"
 msgstr "Переработано окно установки языка"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:29
+#: data/io.elementary.switchboard.locale.appdata.xml.in:52
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Запрос разрешения при необходимости. Больше нет дополнительной панели "
 "подробностей"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:30
+#: data/io.elementary.switchboard.locale.appdata.xml.in:53
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Панель прогресса установки теперь является диалоговым окном"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:31
+#: data/io.elementary.switchboard.locale.appdata.xml.in:54
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "Список языков обновляется должным образом при добавлении или удалении языков"
