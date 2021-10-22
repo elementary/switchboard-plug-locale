@@ -7,7 +7,7 @@
   <icon type="stock">preferences-desktop-locale</icon>
   <translation type="gettext">locale-plug</translation>
   <releases>
-    <release version="2.5.5" date="2021-10-14" urgency="medium">
+    <release version="2.5.5" date="2021-10-22" urgency="medium">
       <description>
         <ul>
           <li>Support locales with 3-letter codes</li>
