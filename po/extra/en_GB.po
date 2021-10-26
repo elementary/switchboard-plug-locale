@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-26 17:52+0000\n"
-"PO-Revision-Date: 2021-10-25 20:25+0000\n"
+"PO-Revision-Date: 2021-10-26 18:32+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/en_GB/>\n"
@@ -29,7 +29,7 @@ msgstr "Manage languages, and configure region and format"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Fixes:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Support locales with 3-letter codes"
@@ -37,7 +37,7 @@ msgstr "Support locales with 3-letter codes"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 msgid "Minor updates:"
-msgstr ""
+msgstr "Minor updates:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
 msgid "Better support for non-Ubuntu based distributions"
