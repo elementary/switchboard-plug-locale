@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-26 17:52+0000\n"
-"PO-Revision-Date: 2021-10-18 21:15+0000\n"
+"PO-Revision-Date: 2021-10-28 11:50+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/tr/>\n"
@@ -29,7 +29,7 @@ msgstr "Dilleri yönetin ve bölge ayarlarını yapılandırın"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Düzeltmeler:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Support locales with 3-letter codes"
@@ -37,7 +37,7 @@ msgstr " "
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 msgid "Minor updates:"
-msgstr ""
+msgstr "Küçük güncellemeler:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
 msgid "Better support for non-Ubuntu based distributions"
