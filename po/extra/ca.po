@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-26 17:52+0000\n"
-"PO-Revision-Date: 2021-10-15 08:53+0000\n"
+"PO-Revision-Date: 2021-10-31 22:15+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ca/>\n"
@@ -29,7 +29,7 @@ msgstr "Gestioneu les llengües i configureu-ne la regió i el format."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Correccions:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Support locales with 3-letter codes"
@@ -37,7 +37,7 @@ msgstr "S'admeten codis de llengua de tres lletres."
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 msgid "Minor updates:"
-msgstr ""
+msgstr "Actualitzacions menors:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
 msgid "Better support for non-Ubuntu based distributions"
