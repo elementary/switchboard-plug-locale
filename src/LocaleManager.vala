@@ -143,7 +143,7 @@ namespace SwitchboardPlugLocale {
         public string get_user_format () {
             // The `formats_locale` property is specific to Ubuntu, so check it exists before
             // returning the value
-            if (account_proxy.formats_locale != null) {
+            if (account_proxy.formats_locale != null && account_proxy.formats_locale != "") {
                 return account_proxy.formats_locale;
             }
 
