@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -28,30 +28,30 @@ msgstr "語言和地區"
 msgid "Manage languages, and configure region and format"
 msgstr "管理語言，設定區域和格式"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 msgid "Region"
 msgstr "地區"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 msgid "Formats"
 msgstr "格式"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr "溫度"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "部份修改需要重新登入後才會生效"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "語言支援尚未完全安裝"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "完全安裝"
 

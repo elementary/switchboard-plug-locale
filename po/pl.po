@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2021-11-03 06:56+0000\n"
 "Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -29,30 +29,30 @@ msgstr "Język i region"
 msgid "Manage languages, and configure region and format"
 msgstr "Zarządzaj językami, konfiguruj region i formaty"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 msgid "Region"
 msgstr "Region"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 msgid "Formats"
 msgstr "Formaty"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr "Temperatura"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Niektóre zmiany nie będą działać zanim nie nastąpi ponowne zalogowanie"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Obsługa języka nie jest w pełni zainstalowana"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Dokończ instalację"
 

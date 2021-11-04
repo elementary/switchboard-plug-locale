@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2018-06-22 12:54+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -28,33 +28,33 @@ msgstr "Language & Region"
 msgid "Manage languages, and configure region and format"
 msgstr "Manage languages, and configure region and format"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "Region: "
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "Formats: "
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 #, fuzzy
 msgid "Temperature"
 msgstr "Temperature:"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Some changes will not take effect until you log out"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Language support is not installed completely"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Complete Installation"
 
