@@ -257,9 +257,9 @@ namespace SwitchboardPlugLocale.Widgets {
         public void reload_formats (Gee.ArrayList<string>? locales) {
             format_store.clear ();
             var user_format = lm.get_user_format ();
-            int format_id = 0;
 
             int i = 0;
+            string? active_id = null;
             foreach (var locale in locales) {
                 string country = Gnome.Languages.get_country_from_locale (locale, null);
 
@@ -269,15 +269,20 @@ namespace SwitchboardPlugLocale.Widgets {
                     format_store.set (iter, 0, country, 1, locale);
 
                     if (locale == user_format) {
-                        format_id = i;
+                        active_id = locale;
                     }
 
                     i++;
                 }
             }
 
+            format_combobox.id_column = 1;
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            format_combobox.active = format_id;
+            if (active_id != null) {
+                format_combobox.active_id = active_id;
+            } else {
+                format_combobox.active = 0;
+            }
 
             format_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
 
