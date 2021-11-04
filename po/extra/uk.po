@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2021-10-27 00:31+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,47 +29,54 @@ msgid "Manage languages, and configure region and format"
 msgstr "Керування мовами та налаштування регіону і форматів"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fixes:"
 msgstr "Виправлення:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid ""
+"Ensure \"Formats\" dropdown remains correct after installing or removing "
+"languages"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Support locales with 3-letter codes"
 msgstr "Підтримка мов із тризначними кодами"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:16
+#: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:18
+#: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Краща підтримка дистрибутивів, що не базуються на Ubuntu"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:19
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
-#: data/io.elementary.switchboard.locale.appdata.xml.in:33
-#: data/io.elementary.switchboard.locale.appdata.xml.in:40
+#: data/io.elementary.switchboard.locale.appdata.xml.in:27
+#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/io.elementary.switchboard.locale.appdata.xml.in:41
 #: data/io.elementary.switchboard.locale.appdata.xml.in:48
-#: data/io.elementary.switchboard.locale.appdata.xml.in:59
+#: data/io.elementary.switchboard.locale.appdata.xml.in:56
+#: data/io.elementary.switchboard.locale.appdata.xml.in:67
 msgid "Updated translations"
 msgstr "Оновлено переклади"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:47
+#: data/io.elementary.switchboard.locale.appdata.xml.in:55
 msgid "Fix an issue with cancelling language installation"
 msgstr "Розв'язано проблему зі скасуванням встановлення мови"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:55
+#: data/io.elementary.switchboard.locale.appdata.xml.in:63
 msgid "Redesigned Install Language popover"
 msgstr "Перероблено вікно встановлення мови"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:56
+#: data/io.elementary.switchboard.locale.appdata.xml.in:64
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "Запит дозволу за потреби. Більше немає додаткової панелі подробиць"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:57
+#: data/io.elementary.switchboard.locale.appdata.xml.in:65
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Панель поступу встановлення тепер є діалоговим вікном"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:58
+#: data/io.elementary.switchboard.locale.appdata.xml.in:66
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "Перелік мов оновлюється належним чином під час додавання чи видалення мов"
