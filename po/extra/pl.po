@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2021-11-12 09:39+0000\n"
+"PO-Revision-Date: 2021-11-12 14:43+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/pl/>\n"
@@ -21,10 +21,8 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "Zarządzaj ustawieniami lokalnymi"
+msgstr "Ustawienia języka i regionu"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -40,6 +38,8 @@ msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
+"Upewniono się, że menu „Formaty” działa poprawnie po instalacji i usunięciu "
+"języków"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Support locales with 3-letter codes"
@@ -64,23 +64,25 @@ msgstr "Zaktualizowane tłumaczenia"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:55
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "Naprawiono problem z anulowaniem instalacji języka"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:63
 msgid "Redesigned Install Language popover"
-msgstr ""
+msgstr "Przeprojektowano popover instalacji języka"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:64
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
+"Pytanie o uprawnienia tam gdzie to potrzebne. Usunięto niepotrzebny InfoBar"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:65
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "InfoBar z postępem instalacji jest teraz oknem dialogowym"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:66
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
+"Lista języków poprawnie aktualizuje się przy dodawaniu i usuwaniu języków"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
