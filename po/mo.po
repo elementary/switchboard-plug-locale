@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2018-05-28 06:30+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -21,33 +21,33 @@ msgstr "Limbă și regiune"
 msgid "Manage languages, and configure region and format"
 msgstr "Gestionați limbile și configurați regiunea și formatul"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "Regiune: "
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "Format: "
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 #, fuzzy
 msgid "Temperature"
 msgstr "Temperatură:"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Unele modificări nu vor avea efect până când nu vă deconectați"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Suportul lingvistic nu este instalat complet"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Instalare completă"
 

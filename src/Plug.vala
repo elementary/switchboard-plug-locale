@@ -80,12 +80,10 @@ namespace SwitchboardPlugLocale {
             }
 
             installer.install_finished.connect ((langcode) => {
-                langs.add (langcode);
                 reload.begin ();
             });
 
             installer.remove_finished.connect ((langcode) => {
-                langs.remove (langcode);
                 reload.begin ();
             });
 

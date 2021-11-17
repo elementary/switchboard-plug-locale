@@ -282,6 +282,7 @@ namespace SwitchboardPlugLocale.Widgets {
             string? format_id = null;
 
             int i = 0;
+            string? active_id = null;
             foreach (var locale in locales) {
                 string country = Gnome.Languages.get_country_from_locale (locale, null);
 

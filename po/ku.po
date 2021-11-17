@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2017-02-17 20:14+0000\n"
 "Last-Translator: Rokar ✌ <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,32 +21,32 @@ msgstr "Ziman & Herêm"
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Region"
 msgstr "Herêm: "
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 #, fuzzy
 msgid "Formats"
 msgstr "Mîzanpaj: "
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr ""
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "bicihkirin ava bu"
 

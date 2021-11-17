@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2021-03-08 04:48+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,30 +29,30 @@ msgstr "Язык и регион"
 msgid "Manage languages, and configure region and format"
 msgstr "Управление языками, настройка региона и формата времени"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 msgid "Region"
 msgstr "Регион"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 msgid "Formats"
 msgstr "Формат"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr "Температура"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Некоторые изменения вступят в силу после выхода из сеанса"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Поддержка языка установлена не полностью"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Завершить установку"
 

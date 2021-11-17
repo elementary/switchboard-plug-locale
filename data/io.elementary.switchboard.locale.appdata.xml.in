@@ -7,6 +7,14 @@
   <icon type="stock">preferences-desktop-locale</icon>
   <translation type="gettext">locale-plug</translation>
   <releases>
+    <release version="2.5.6" date="2021-11-04" urgency="medium">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>Ensure "Formats" dropdown remains correct after installing or removing languages</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.5" date="2021-10-26" urgency="medium">
       <description>
         <p>Fixes:</p>
@@ -18,7 +26,7 @@
           <li>Better support for non-Ubuntu based distributions</li>
           <li>Updated translations</li>
         </ul>
-      </description>       
+      </description>
     </release>
     <release version="2.5.4" date="2021-07-14" urgency="medium">
       <description>

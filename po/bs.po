@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-26 17:52+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2018-11-05 20:39+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -29,30 +29,30 @@ msgstr "Jezik i regija"
 msgid "Manage languages, and configure region and format"
 msgstr "Upravljajte jezicima i podesite regiju i formate"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:112
 msgid "Region"
 msgstr "Regija"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:113
 msgid "Formats"
 msgstr "Formati"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:114
 msgid "Temperature"
 msgstr "Temperatura"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:123
+#: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
 msgstr "Neke promjene neće biti aktivirane dok se ne odjavite"
 
 #. Gtk.InfoBar for language support installation
-#: src/Plug.vala:130
+#: src/Plug.vala:128
 msgid "Language support is not installed completely"
 msgstr "Jezična podrška nije instalirana potpuno"
 
-#: src/Plug.vala:135
+#: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Dovršite instalaciju"
 
