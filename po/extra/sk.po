@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2021-11-30 16:52+0000\n"
+"PO-Revision-Date: 2021-11-30 18:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/sk/>\n"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Podpora miest s 3-písmenovými kódmi"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Minor updates:"
@@ -50,7 +50,7 @@ msgstr "Menšie aktualizácie:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Lepšia podpora pre distribúcie nezaložené na základe Ubuntu"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:27
 #: data/io.elementary.switchboard.locale.appdata.xml.in:34
