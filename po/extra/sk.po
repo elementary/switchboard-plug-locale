@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2021-11-30 16:52+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/sk/>\n"
@@ -30,13 +30,15 @@ msgstr "Spravujte jazyky, nastavte oblasť a miestne formáty"
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fixes:"
-msgstr ""
+msgstr "Opravy:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
+"Zabezpečené, že kontextové menu „Formáty“ bude fungovať správne po "
+"nainštalovaní alebo odstránení jazykov"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Support locales with 3-letter codes"
@@ -44,7 +46,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Minor updates:"
-msgstr ""
+msgstr "Menšie aktualizácie:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid "Better support for non-Ubuntu based distributions"
