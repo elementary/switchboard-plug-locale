@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2021-11-05 01:02+0000\n"
+"PO-Revision-Date: 2021-12-09 06:51+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -81,11 +81,11 @@ msgstr "言語の追加および削除時に言語リストを適切に更新す
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"
-msgstr "地域設定を管理します"
+msgstr "ロケール設定を管理します"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr "地域設定を管理するには認証が必要です"
+msgstr "ロケール設定を管理するには認証が必要です"
 
 #~ msgid "Locale"
 #~ msgstr "地域"
