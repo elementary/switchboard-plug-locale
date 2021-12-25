@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2021-10-26 23:46+0000\n"
+"PO-Revision-Date: 2021-12-25 22:41+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
-msgstr ""
+msgstr "Nyelv- és régióbeállítások"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
@@ -30,7 +30,7 @@ msgstr "Nyelvi, régió- és formátumbeállítások"
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Fixes:"
-msgstr ""
+msgstr "Javítások:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid ""
