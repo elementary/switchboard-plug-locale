@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2021-12-09 06:51+0000\n"
+"PO-Revision-Date: 2021-12-30 18:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -40,7 +40,7 @@ msgstr "言語をインストールしたり削除したりしても、“書式
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Support locales with 3-letter codes"
-msgstr "言語コードが3文字のロケールをサポート"
+msgstr "言語コードが3文字のロケールに対応"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 msgid "Minor updates:"
