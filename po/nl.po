@@ -132,7 +132,7 @@ msgstr ""
 "Zet de taal voor het aanmeldscherm, het gast account en nieuwe gebruikers"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Toetsenbordinstellingen…"
 
 #~ msgid "Some settings require administrator rights to be changed"

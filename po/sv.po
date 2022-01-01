@@ -133,7 +133,7 @@ msgstr ""
 "Ställ in språk för inloggningsskärmen, gästkontot och nya användarkonton"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Tangentbordsinställningar…"
 
 #~ msgid "Some settings require administrator rights to be changed"

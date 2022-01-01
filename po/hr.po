@@ -136,7 +136,7 @@ msgstr "Postavi jezik za zaslon prijave, račun gosta i nove korisničke račune
 
 #: src/Widgets/LocaleSetting.vala:108
 #, fuzzy
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Prebaci na postavke tipkovnice"
 
 #~ msgid "Some settings require administrator rights to be changed"

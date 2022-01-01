@@ -125,7 +125,7 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr ""
 
 #~ msgid "Authentication is required to manage locale settings"

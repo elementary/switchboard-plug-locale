@@ -134,7 +134,7 @@ msgstr ""
 "облікових записів користувачів"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Налаштування клавіатури…"
 
 #~ msgid "Some settings require administrator rights to be changed"

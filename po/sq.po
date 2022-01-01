@@ -135,7 +135,7 @@ msgstr ""
 
 #: src/Widgets/LocaleSetting.vala:108
 #, fuzzy
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Kalo tek rregullimet e tastierës"
 
 #~ msgid "Some settings require administrator rights to be changed"

@@ -133,7 +133,7 @@ msgstr ""
 "Nastavi jezik za prijavni zaslon, račun gosta in račun novih uporabnikov"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Nastavitve tipkovnice…"
 
 #~ msgid "Some settings require administrator rights to be changed"

@@ -132,7 +132,7 @@ msgstr ""
 "Sprache für Anmelde-Bildschirm, Gast- und neue Benutzerkonten festlegen"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Tastatureinstellungen …"
 
 #~ msgid "Some settings require administrator rights to be changed"

@@ -132,7 +132,7 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Задаване на език за екрана за вписване, гости и нови потребители"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr ""
 
 #~ msgid "Some settings require administrator rights to be changed"

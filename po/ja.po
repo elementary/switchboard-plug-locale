@@ -133,7 +133,7 @@ msgstr ""
 "定します"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "キーボードの設定…"
 
 #~ msgid "Some settings require administrator rights to be changed"

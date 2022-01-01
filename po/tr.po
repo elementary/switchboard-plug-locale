@@ -131,7 +131,7 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Misafir ve yeni kullanıcı hesapları için giriş ekranı dilini ayarla"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Klavye Ayarları…"
 
 #~ msgid "Some settings require administrator rights to be changed"

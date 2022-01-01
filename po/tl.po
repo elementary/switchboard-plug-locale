@@ -129,7 +129,7 @@ msgstr ""
 "account"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr ""
 
 #~ msgid "Language: "

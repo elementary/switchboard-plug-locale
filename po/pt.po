@@ -133,7 +133,7 @@ msgstr ""
 "contas de utilizador"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Definições do teclado…"
 
 #~ msgid "Some settings require administrator rights to be changed"

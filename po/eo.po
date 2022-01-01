@@ -131,7 +131,7 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Difini lingvon de la ensaluta ekrano, gasta konto, kaj nova uzanto"
 
 #: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
+msgid "Keyboard Settings"
 msgstr "Klavaraj agordoj…"
 
 #~ msgid "Some settings require administrator rights to be changed"
