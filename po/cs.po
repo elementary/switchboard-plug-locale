@@ -63,7 +63,7 @@ msgstr "Instalace %s"
 #: src/ProgressDialog.vala:48
 #, c-format
 msgid "Removing %s"
-msgstr "Odebírá se %s"
+msgstr "Odebírání %s"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
