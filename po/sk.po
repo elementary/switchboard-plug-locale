@@ -7,63 +7,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
-"PO-Revision-Date: 2015-08-17 13:54+0000\n"
-"Last-Translator: pyler <pyler.inbox@gmail.com>\n"
-"Language-Team: Slovak <sk@li.org>\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
+"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
-msgstr "Jazyk & Krajina"
+msgstr "Jazyk a oblasť"
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "Spravujte jazyky, nastavte oblasť a miestne formáty"
 
 #: src/Plug.vala:112
-#, fuzzy
 msgid "Region"
-msgstr "Oblasť: "
+msgstr "Oblasť"
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "Formáty "
+msgstr "Formáty"
 
 #: src/Plug.vala:114
 msgid "Temperature"
-msgstr ""
+msgstr "Teplota"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
-msgstr "Niektoré zmeny sa prejavia až po vašom odhlásení"
+msgstr "Niektoré zmeny sa prejavia až po opätovnom prihlásení"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
 msgid "Language support is not installed completely"
-msgstr "Jazyková podpora nie je úplne nainštalovaná"
+msgstr "Inštalácia jazykovej podpory je neúplná"
 
 #: src/Plug.vala:133
 msgid "Complete Installation"
 msgstr "Dokončiť inštaláciu"
 
 #: src/ProgressDialog.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Inštalácia jazyku"
+msgstr "Inštaluje sa %s"
 
 #: src/ProgressDialog.vala:48
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Odstraňovanie jazyku"
+msgstr "Odstraňuje sa %s"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
@@ -74,22 +74,21 @@ msgid "Cancel"
 msgstr "Zrušiť"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "Nainštalovať jazyk"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Inštalácia jazyku"
+msgstr "Nainštalovať %s"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
 msgstr "Nainštalované jazyky"
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr "Aktuálny aktívny jazyk"
+msgstr "Práve používaný jazyk"
 
 #: src/Widgets/LocaleView.vala:46
 msgid "Install language"
@@ -99,44 +98,43 @@ msgstr "Nainštalovať jazyk"
 msgid "Remove language"
 msgstr "Odstrániť jazyk"
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr "Oblasť: "
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "Formáty "
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
-msgstr ""
+msgstr "Celzius"
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
-msgstr ""
+msgstr "Teplota:"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "Nastaviť jazyk"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "Nastaviť jazyk systému"
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nastaviť jazyk pre prihlasovaciu obrazovku, účet hosťa a nové používateľské "
 "účty"
 
-#: src/Widgets/LocaleSetting.vala:111
-#, fuzzy
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
-msgstr "Prepnúť do nastavení klávesnice"
+msgstr "Nastavenia klávesnice…"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Niektoré nastavenia vyžadujú zmenu administrátorských práv"

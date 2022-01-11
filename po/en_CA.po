@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2018-06-22 12:54+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr "Language & Region"
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr "Manage languages, and configure region and format"
 
@@ -90,7 +90,7 @@ msgstr "Installing %s"
 msgid "Installed Languages"
 msgstr "Installed Languages"
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr "Currently active language"
 
@@ -102,39 +102,39 @@ msgstr "Install language"
 msgid "Remove language"
 msgstr "Remove language"
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr "Region: "
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "Formats: "
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr "Temperature:"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "Set Language"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "Set System Language"
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Set language for login screen, guest account and new user accounts"
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
 msgstr "Keyboard Settings…"
 

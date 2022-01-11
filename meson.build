@@ -2,7 +2,7 @@ project(
     'locale-plug',
     'vala', 'c',
     meson_version: '>= 0.46.1',
-    version: '2.5.3'
+    version: '2.5.6'
 )
 
 gnome = import('gnome')
@@ -33,6 +33,7 @@ add_project_arguments(
 configuration_data = configuration_data()
 configuration_data.set('GETTEXT_PACKAGE', meson.project_name())
 configuration_data.set('PKGDATADIR', pkgdatadir)
+configuration_data.set('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
 
 constants = configure_file(
     configuration: configuration_data,

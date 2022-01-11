@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 23:43+0000\n"
-"PO-Revision-Date: 2019-12-20 16:09+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
+"PO-Revision-Date: 2021-11-02 05:56+0000\n"
+"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -17,43 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "管理本地化设置"
+msgstr "语言&amp; 区域设置"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "管理语言、设置区域和格式"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:13
-#: data/io.elementary.switchboard.locale.appdata.xml.in:21
-#: data/io.elementary.switchboard.locale.appdata.xml.in:32
+#: data/io.elementary.switchboard.locale.appdata.xml.in:12
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+msgid "Fixes:"
+msgstr "修复:"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid ""
+"Ensure \"Formats\" dropdown remains correct after installing or removing "
+"languages"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+msgid "Support locales with 3-letter codes"
+msgstr "支持带有 3 个字母代码的语言环境"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:24
+msgid "Minor updates:"
+msgstr "次要更新："
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:26
+msgid "Better support for non-Ubuntu based distributions"
+msgstr "更好地支持非基于 Ubuntu 的发行版"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:27
+#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/io.elementary.switchboard.locale.appdata.xml.in:41
+#: data/io.elementary.switchboard.locale.appdata.xml.in:48
+#: data/io.elementary.switchboard.locale.appdata.xml.in:56
+#: data/io.elementary.switchboard.locale.appdata.xml.in:67
 msgid "Updated translations"
 msgstr "翻译更新"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/io.elementary.switchboard.locale.appdata.xml.in:55
 msgid "Fix an issue with cancelling language installation"
-msgstr ""
+msgstr "修复取消语言安装的问题"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:28
+#: data/io.elementary.switchboard.locale.appdata.xml.in:63
 msgid "Redesigned Install Language popover"
 msgstr "重新设计安装语言弹窗"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:29
+#: data/io.elementary.switchboard.locale.appdata.xml.in:64
 msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
+msgstr "需要时请求许可。 不再有额外的信息栏"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:30
+#: data/io.elementary.switchboard.locale.appdata.xml.in:65
 msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
+msgstr "安装进度信息条现在是一个对话框"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:31
+#: data/io.elementary.switchboard.locale.appdata.xml.in:66
 msgid "Language list properly updates when adding or removing languages"
-msgstr ""
+msgstr "添加或删除语言时，语言列表会及时更新"
 
 #: data/io.elementary.switchboard.locale.policy.in.in:10
 msgid "Manage locale settings"

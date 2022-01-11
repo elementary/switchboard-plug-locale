@@ -26,9 +26,6 @@ namespace SwitchboardPlugLocale.Widgets {
         private LocaleManager lm;
         private Preview preview;
         private string language;
-        private string selected_language = "";
-        private string selected_format = "";
-        private bool has_region;
         private EndLabel region_endlabel;
         private EndLabel first_day_endlabel;
 
@@ -142,17 +139,9 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             set_button.clicked.connect (() => {
-                if (!has_region) {
-                    debug ("Setting user language to '%s'", language);
-                    lm.set_user_language (language);
-                    selected_language = language;
-                } else {
-                    var region = get_region ();
-                    debug ("Setting user language to '%s_%s'", language, region);
-                    lm.set_user_language ("%s_%s".printf (language, region));
-                    selected_language = "%s_%s".printf (language, region);
-                }
-                selected_format = get_format ();
+                var locale = get_selected_locale ();
+                debug ("Setting user language to '%s'", locale);
+                lm.set_user_language (locale);
 
                 compare ();
 
@@ -178,17 +167,17 @@ namespace SwitchboardPlugLocale.Widgets {
             }
         }
 
-        public string get_region () {
+        public string get_selected_locale () {
             Gtk.TreeIter iter;
-            string region;
+            string locale;
 
             if (!region_combobox.get_active_iter (out iter)) {
                 return "";
             }
 
-            region_store.get (iter, 1, out region);
+            region_store.get (iter, 1, out locale);
 
-            return region;
+            return locale;
         }
 
         public string get_format () {
@@ -213,13 +202,8 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void compare () {
-            if (set_button != null && selected_language != "" && selected_format != "") {
-                var compare_language = language;
-                if (has_region) {
-                    compare_language = "%s_%s".printf (compare_language, get_region ());
-                }
-
-                if (compare_language == selected_language && selected_format == get_format ()) {
+            if (set_button != null) {
+                if (lm.get_user_language () == get_selected_locale () && lm.get_user_format () == get_format ()) {
                     set_button.sensitive = false;
                 } else {
                     set_button.sensitive = true;
@@ -236,53 +220,52 @@ namespace SwitchboardPlugLocale.Widgets {
             }
         }
 
-        public async void reload_regions (string language, Gee.ArrayList<string> regions) {
+        public async void reload_locales (string language, Gee.HashSet<string> locales) {
             this.language = language;
-            int selected_region = 0;
+            string? selected_locale_id = null;
+            bool user_locale_found = false;
+            int locales_added = 0;
 
             region_store.clear ();
 
-            int i = 0;
-            has_region = false;
-            foreach (var region in regions) {
-                has_region = true;
-                var region_string = Utils.translate_region (language, region, language);
+            var default_regions = yield Utils.get_default_regions ();
+            var user_locale = lm.get_user_language ();
+
+            foreach (var locale in locales) {
+                string code;
+                if (!Gnome.Languages.parse_locale (locale, null, out code, null, null)) {
+                    continue;
+                }
+
+                var region_string = Utils.translate_region (language, code, language);
 
                 var iter = Gtk.TreeIter ();
                 region_store.append (out iter);
-                region_store.set (iter, 0, region_string, 1, region);
+                region_store.set (iter, 0, region_string, 1, locale);
 
-                if (lm.get_user_language ().length == 5 && lm.get_user_language ().slice (0, 2) == language
-                    && lm.get_user_language ().slice (3, 5) == region) {
-                        selected_region = i;
+                if (user_locale == locale) {
+                    selected_locale_id = locale;
+                    user_locale_found = true;
                 }
 
-                var default_regions = yield Utils.get_default_regions ();
-                if (default_regions.has_key (language) && lm.get_user_language ().slice (0, 2) != language
-                && default_regions.@get (language) == "%s_%s".printf (language, region)) {
-                    selected_region = i;
+                if (!user_locale_found && default_regions.has_key (language)) {
+                    if (locale.has_prefix (default_regions[language])) {
+                        selected_locale_id = locale;
+                    }
                 }
 
-                i++;
+                locales_added++;
             }
 
-            region_combobox.active = selected_region;
+            region_combobox.id_column = 1;
+            region_combobox.sensitive = locales_added > 1;
+            if (selected_locale_id != null) {
+                region_combobox.active_id = selected_locale_id;
+            } else {
+                region_combobox.active = 0;
+            }
 
             region_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
-
-            if (i == 0) {
-                region_endlabel.hide ();
-                region_combobox.hide ();
-            } else {
-                region_endlabel.show ();
-                region_combobox.show ();
-            }
-
-            if (selected_language == "" && has_region) {
-                selected_language = "%s_%s".printf (language, get_region ());
-            } else if (selected_language == "" && !has_region) {
-                selected_language = language;
-            }
 
             compare ();
         }
@@ -290,39 +273,34 @@ namespace SwitchboardPlugLocale.Widgets {
         public void reload_formats (Gee.ArrayList<string>? locales) {
             format_store.clear ();
             var user_format = lm.get_user_format ();
-            int format_id = 0;
 
             int i = 0;
+            string? active_id = null;
             foreach (var locale in locales) {
-                string country = null;
-
-                if (locale.length == 2) {
-                    country = Gnome.Languages.get_country_from_code (locale, null);
-                } else if (locale.length == 5) {
-                    country = Gnome.Languages.get_country_from_locale (locale, null);
-                }
+                string country = Gnome.Languages.get_country_from_locale (locale, null);
 
                 if (country != null) {
-                    locale += ".UTF-8";
                     var iter = Gtk.TreeIter ();
                     format_store.append (out iter);
                     format_store.set (iter, 0, country, 1, locale);
 
                     if (locale == user_format) {
-                        format_id = i;
+                        active_id = locale;
                     }
 
                     i++;
                 }
             }
+
+            format_combobox.id_column = 1;
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            format_combobox.active = format_id;
+            if (active_id != null) {
+                format_combobox.active_id = active_id;
+            } else {
+                format_combobox.active = 0;
+            }
 
             format_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
-
-            if (selected_format == "") {
-                selected_format = get_format ();
-            }
 
             compare ();
         }
@@ -337,13 +315,11 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void on_applied_to_system () {
-            if (!has_region) {
-                debug ("Setting system language to '%s' and format to '%s'", language, get_format ());
-                lm.apply_to_system (language, get_format ());
-            } else {
-                debug ("Setting system language to '%s_%s' and format to '%s'", language, get_region (), get_format ());
-                lm.apply_to_system ("%s_%s".printf (language, get_region ()), get_format ());
-            }
+            var selected_locale = get_selected_locale ();
+            var selected_format = get_format ();
+            debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
+            lm.apply_to_system (selected_locale, selected_format);
+
             settings_changed ();
         }
     }

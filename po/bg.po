@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2016-08-04 09:39+0000\n"
 "Last-Translator: Адмирал АнимЕ <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr "Език и регион"
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr "Управление на езиците и настройване на регион и формати"
 
@@ -87,7 +87,7 @@ msgstr "Инсталиране на език"
 msgid "Installed Languages"
 msgstr "Инсталирани езици"
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr "Текущ език"
 
@@ -99,39 +99,39 @@ msgstr "Инсталиране на езика"
 msgid "Remove language"
 msgstr "Премахване на езика"
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr "Регион: "
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "Формати: "
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "Задаване на език"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "Задаване на език на системата"
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Задаване на език за екрана за вписване, гости и нови потребители"
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
 msgstr ""
 

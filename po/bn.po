@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2014-08-01 01:56+0000\n"
 "Last-Translator: Ibraheem Moosa <ibraheemmoosa1347@gmail.com>\n"
 "Language-Team: Bengali <bn@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr ""
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Installed Languages"
 msgstr ""
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr ""
 
@@ -96,38 +96,38 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
 msgstr ""

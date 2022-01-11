@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 00:59+0000\n"
+"POT-Creation-Date: 2021-11-04 18:25+0000\n"
 "PO-Revision-Date: 2017-01-02 02:59+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-03 06:15+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:40
 msgid "Language & Region"
 msgstr "تىل ۋە رايون"
 
-#: src/Plug.vala:38
+#: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
 msgstr "تىللارنى باشقۇرۇش، رايون ۋە فورماتلارنى تەڭشەش"
 
@@ -82,7 +82,7 @@ msgstr "تىلنى ئورنىتىۋاتىدۇ"
 msgid "Installed Languages"
 msgstr "قوشۇلغان تىللار"
 
-#: src/Widgets/LanguageListBox.vala:115
+#: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
 msgstr "نۆۋەتتىكى ئاكتىپ تىل"
 
@@ -94,40 +94,40 @@ msgstr "تىل ئورنىتىش"
 msgid "Remove language"
 msgstr "تىل ئۆچۈرۈش"
 
-#: src/Widgets/LocaleSetting.vala:69
+#: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
 msgstr "رايون: "
 
-#: src/Widgets/LocaleSetting.vala:74
+#: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
 msgstr "فورماتلار: "
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:81
+#: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
 msgstr "تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
 msgstr "سىستېما تىلىنى بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:109
+#: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "كىرىش ئىكرانى، مىھمان ھىساۋاتى ۋە يىڭى ئابونت ھىساۋاتلىرى ئۈچۈن تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:111
+#: src/Widgets/LocaleSetting.vala:108
 #, fuzzy
 msgid "Keyboard Settings…"
 msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
