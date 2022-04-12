@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:25+0000\n"
+"POT-Creation-Date: 2022-04-12 11:52+0000\n"
 "PO-Revision-Date: 2022-04-09 01:40+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -29,53 +29,62 @@ msgstr "言語を管理し、地域と書式を設定します"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/io.elementary.switchboard.locale.appdata.xml.in:28
 msgid "Fixes:"
 msgstr "修正点:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#, fuzzy
+#| msgid "Support locales with 3-letter codes"
+msgid "Support installation and removal of languages with 3-letter codes"
+msgstr "言語コードが3文字のロケールに対応"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
-msgstr "言語をインストールしたり削除したりしても、“書式”ドロップダウンリストの値が変更されないように修正"
+msgstr ""
+"言語をインストールしたり削除したりしても、“書式”ドロップダウンリストの値が変"
+"更されないように修正"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/io.elementary.switchboard.locale.appdata.xml.in:30
 msgid "Support locales with 3-letter codes"
 msgstr "言語コードが3文字のロケールに対応"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
+#: data/io.elementary.switchboard.locale.appdata.xml.in:32
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
+#: data/io.elementary.switchboard.locale.appdata.xml.in:34
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "非 Ubuntu ベースのディストリビューションへの対応を強化"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:27
-#: data/io.elementary.switchboard.locale.appdata.xml.in:34
-#: data/io.elementary.switchboard.locale.appdata.xml.in:41
-#: data/io.elementary.switchboard.locale.appdata.xml.in:48
+#: data/io.elementary.switchboard.locale.appdata.xml.in:35
+#: data/io.elementary.switchboard.locale.appdata.xml.in:42
+#: data/io.elementary.switchboard.locale.appdata.xml.in:49
 #: data/io.elementary.switchboard.locale.appdata.xml.in:56
-#: data/io.elementary.switchboard.locale.appdata.xml.in:67
+#: data/io.elementary.switchboard.locale.appdata.xml.in:64
+#: data/io.elementary.switchboard.locale.appdata.xml.in:75
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:55
+#: data/io.elementary.switchboard.locale.appdata.xml.in:63
 msgid "Fix an issue with cancelling language installation"
 msgstr "言語のインストールをキャンセルした際の不具合を修正"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:63
+#: data/io.elementary.switchboard.locale.appdata.xml.in:71
 msgid "Redesigned Install Language popover"
 msgstr "Install Language ポップオーバーのデザインを変更"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:64
+#: data/io.elementary.switchboard.locale.appdata.xml.in:72
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "必要な場合のみ管理者権限を確認するように変更し、余計な情報バーを廃止"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:65
+#: data/io.elementary.switchboard.locale.appdata.xml.in:73
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "インストールの進捗情報バーをダイアログに変更"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:66
+#: data/io.elementary.switchboard.locale.appdata.xml.in:74
 msgid "Language list properly updates when adding or removing languages"
 msgstr "言語の追加および削除時に言語リストを適切に更新するように修正"
 
