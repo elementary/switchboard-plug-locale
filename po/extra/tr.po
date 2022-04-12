@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 12:36+0000\n"
-"PO-Revision-Date: 2021-12-22 21:50+0000\n"
+"PO-Revision-Date: 2022-04-12 18:01+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/tr/>\n"
@@ -29,11 +29,11 @@ msgstr "Dilleri yönetin ve bölge ayarlarını yapılandırın"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Improvements:"
-msgstr ""
+msgstr "İyileştirmeler:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "Orta Kürtçe artık kurulabilir bir dil olarak mevcut"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
@@ -42,16 +42,16 @@ msgid "Fixes:"
 msgstr "Düzeltmeler:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "3 harfli yerel kodlar desteklendi"
+msgstr "3 harfli kodlarla dillerin yüklenmesi ve kaldırılması desteği eklendi"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
+"Dilleri yükledikten veya kaldırdıktan sonra \"Biçimler\" açılır menüsünün "
+"doğru kalması sağlandı"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:34
 msgid "Support locales with 3-letter codes"
