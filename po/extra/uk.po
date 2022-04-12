@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 12:36+0000\n"
-"PO-Revision-Date: 2021-11-04 19:53+0000\n"
+"PO-Revision-Date: 2022-04-12 18:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/uk/>\n"
@@ -30,11 +30,11 @@ msgstr "Керування мовами та налаштування регіо
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Improvements:"
-msgstr ""
+msgstr "Удосконалення:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "Серед доступних мов з'явилася центральнокурдська"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
@@ -43,10 +43,8 @@ msgid "Fixes:"
 msgstr "Виправлення:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "Підтримка мов із тризначними кодами"
+msgstr "Підтримка встановлення та вилучення мов із трибуквеними кодами"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid ""
