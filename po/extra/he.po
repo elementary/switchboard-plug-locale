@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 11:52+0000\n"
-"PO-Revision-Date: 2021-11-05 01:02+0000\n"
+"PO-Revision-Date: 2022-04-12 12:29+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -34,10 +34,8 @@ msgid "Fixes:"
 msgstr "תיקונים:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "תמיכה בשפות עם קודים ב־3 אותיות"
+msgstr "נוספה תמיכה בהתקנה והסרה של שפות עם קודים ב־3 אותיות"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid ""
