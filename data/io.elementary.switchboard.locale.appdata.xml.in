@@ -9,6 +9,10 @@
   <releases>
     <release version="2.5.7" date="2022-04-12" urgency="medium">
       <description>
+        <p>Improvements:</p>
+        <ul>
+          <li>Central Kurdish is now available as an installable language</li>
+        </ul>
         <p>Fixes:</p>
         <ul>
           <li>Support installation and removal of languages with 3-letter codes</li>
