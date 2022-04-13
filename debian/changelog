@@ -1,3 +1,15 @@
+switchboard-plug-locale (2.5.7) focal; urgency=medium
+
+  * Release 2.5.7 (#160)
+  * Update translation files
+  * Update translation template
+  * appdata: Update for recent changes (#159)
+  * installer: Don't trim language codes (#156)
+  * languagelist: Add Kurdish, Central (#158)
+  * Revert "Update Release.yml" (#153)
+
+ -- elementary LLC <builds@elementary.io>  Wed, 13 Apr 2022 12:52:48 +0000
+
 switchboard-plug-locale (2.5.6) focal; urgency=medium
 
   * New upstream release
