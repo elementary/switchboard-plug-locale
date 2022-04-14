@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 12:36+0000\n"
-"PO-Revision-Date: 2022-04-09 01:40+0000\n"
+"PO-Revision-Date: 2022-04-14 14:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -29,11 +29,11 @@ msgstr "言語を管理し、地域と書式を設定します"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Improvements:"
-msgstr ""
+msgstr "改善点:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "インストール可能な言語に中央クルド語を追加"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
@@ -42,10 +42,8 @@ msgid "Fixes:"
 msgstr "修正点:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "言語コードが3文字のロケールに対応"
+msgstr "言語コードが3文字の言語のインストールと削除に対応"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid ""
