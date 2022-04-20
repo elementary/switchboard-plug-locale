@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 12:36+0000\n"
-"PO-Revision-Date: 2021-11-30 18:29+0000\n"
+"PO-Revision-Date: 2022-04-20 07:04+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/sk/>\n"
@@ -29,11 +29,11 @@ msgstr "Spravujte jazyky, nastavte oblasť a miestne formáty"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Improvements:"
-msgstr ""
+msgstr "Vylepšenia:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "Centrálna kurdčina je teraz dostupná ako inštalovateľný jazyk"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
@@ -42,10 +42,8 @@ msgid "Fixes:"
 msgstr "Opravy:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "Podpora miest s 3-písmenovými kódmi"
+msgstr "Podpora inštalácie a odstraňovania jazykov s 3-písmenovými kódmi"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid ""
