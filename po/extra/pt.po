@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 12:36+0000\n"
-"PO-Revision-Date: 2021-12-22 19:30+0000\n"
+"PO-Revision-Date: 2022-04-30 21:31+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/pt/>\n"
@@ -29,11 +29,11 @@ msgstr "Gerir idiomas e configurar a região e o formato"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 msgid "Improvements:"
-msgstr ""
+msgstr "Melhorias:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "O Curdo Central está agora disponível como idioma instalável"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
@@ -42,10 +42,8 @@ msgid "Fixes:"
 msgstr "Correções:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:18
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "Suporta localizações com códigos de 3 letras"
+msgstr "Suporta à instalação e remoção de idiomas com códigos de 3 letras"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid ""
