@@ -1,11 +1,5 @@
-configured_policy_file = configure_file(
-    configuration: configuration_data,
-    input: 'io.elementary.switchboard.locale.policy.in.in',
-    output: '@BASENAME@'
-)
-
 i18n.merge_file(
-    input: configured_policy_file,
+    input: 'io.elementary.switchboard.locale.policy.in',
     output: 'io.elementary.switchboard.locale.policy',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,
