@@ -1,3 +1,4 @@
+data/io.elementary.switchboard.locale.policy.in.in
 src/Plug.vala
 src/ProgressDialog.vala
 src/Utils.vala

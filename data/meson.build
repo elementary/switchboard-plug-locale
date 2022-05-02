@@ -7,7 +7,7 @@ configured_policy_file = configure_file(
 i18n.merge_file(
     input: configured_policy_file,
     output: 'io.elementary.switchboard.locale.policy',
-    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    po_dir: join_paths(meson.source_root(), 'po'),
     install: true,
     install_dir: polkit_actiondir
 )
