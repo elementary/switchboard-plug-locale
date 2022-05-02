@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:25+0000\n"
-"PO-Revision-Date: 2020-06-08 10:11+0000\n"
+"POT-Creation-Date: 2022-04-12 12:36+0000\n"
+"PO-Revision-Date: 2022-01-10 21:59+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/locale-"
 "plug-extra/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
@@ -28,57 +28,74 @@ msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte region a místní formáty"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
-msgid "Fixes:"
+msgid "Improvements:"
 msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid "Central Kurdish is now available as an installable language"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:16
+#: data/io.elementary.switchboard.locale.appdata.xml.in:24
+#: data/io.elementary.switchboard.locale.appdata.xml.in:32
+msgid "Fixes:"
+msgstr "Opravy:"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:18
+#, fuzzy
+#| msgid "Support locales with 3-letter codes"
+msgid "Support installation and removal of languages with 3-letter codes"
+msgstr "Podpora místních a jazykových nastavení s třípísmenkovými kódy"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
+"Zajištěno, že rozbalovací nabídka „Formáty“ zůstane správná po instalaci "
+"nebo odebrání jazyků"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
-msgid "Support locales with 3-letter codes"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
-msgid "Minor updates:"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
-msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:27
 #: data/io.elementary.switchboard.locale.appdata.xml.in:34
-#: data/io.elementary.switchboard.locale.appdata.xml.in:41
-#: data/io.elementary.switchboard.locale.appdata.xml.in:48
-#: data/io.elementary.switchboard.locale.appdata.xml.in:56
-#: data/io.elementary.switchboard.locale.appdata.xml.in:67
+msgid "Support locales with 3-letter codes"
+msgstr "Podpora místních a jazykových nastavení s třípísmenkovými kódy"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:36
+msgid "Minor updates:"
+msgstr "Drobné aktualizace:"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:38
+msgid "Better support for non-Ubuntu based distributions"
+msgstr "Lepší podpora pro distribuce nezaložené na Ubuntu"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:39
+#: data/io.elementary.switchboard.locale.appdata.xml.in:46
+#: data/io.elementary.switchboard.locale.appdata.xml.in:53
+#: data/io.elementary.switchboard.locale.appdata.xml.in:60
+#: data/io.elementary.switchboard.locale.appdata.xml.in:68
+#: data/io.elementary.switchboard.locale.appdata.xml.in:79
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:55
+#: data/io.elementary.switchboard.locale.appdata.xml.in:67
 msgid "Fix an issue with cancelling language installation"
 msgstr "Oprava problému při přerušení instalace jazyka"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:63
+#: data/io.elementary.switchboard.locale.appdata.xml.in:75
 msgid "Redesigned Install Language popover"
 msgstr ""
 "Předělaný vyskakovací dialog po najetí ukazatelem myši, určený pro instalaci "
 "jazyka"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:64
+#: data/io.elementary.switchboard.locale.appdata.xml.in:76
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "V případě potřeby si vyžádat oprávnění. Už bez dalšího informačního pruhu"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:65
+#: data/io.elementary.switchboard.locale.appdata.xml.in:77
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Informační lišta o postupu instalace je nyní dialog"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:66
+#: data/io.elementary.switchboard.locale.appdata.xml.in:78
 msgid "Language list properly updates when adding or removing languages"
 msgstr "Seznam jazyků se správně aktualizuje po přidání nebo odebrání jazyků"
 

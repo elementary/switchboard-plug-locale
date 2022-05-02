@@ -202,7 +202,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
 
         try {
             Process.spawn_sync (null,
-                {LANGUAGE_CHECKER, "-l", langcode.substring (0, 2) , null},
+                {LANGUAGE_CHECKER, "-l", langcode, null},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
@@ -237,7 +237,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
 
         try {
             Process.spawn_sync (null,
-                {LANGUAGE_CHECKER, "--show-installed", "-l", langcode.substring (0, 2) , null},
+                {LANGUAGE_CHECKER, "--show-installed", "-l", langcode, null},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
