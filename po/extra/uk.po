@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2022-04-12 18:01+0000\n"
+"PO-Revision-Date: 2022-05-05 20:34+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/uk/>\n"
@@ -37,7 +37,7 @@ msgstr "Виправлення:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "Перекладено текст опису вікна автентифікації"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Improvements:"
