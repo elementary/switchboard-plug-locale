@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 12:36+0000\n"
+"POT-Creation-Date: 2022-05-05 17:08+0000\n"
 "PO-Revision-Date: 2022-04-12 18:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,24 +29,29 @@ msgid "Manage languages, and configure region and format"
 msgstr "Керування мовами та налаштування регіону і форматів"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
-msgid "Improvements:"
-msgstr "Удосконалення:"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
-msgid "Central Kurdish is now available as an installable language"
-msgstr "Серед доступних мов з'явилася центральнокурдська"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
+#: data/io.elementary.switchboard.locale.appdata.xml.in:40
 msgid "Fixes:"
 msgstr "Виправлення:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:18
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid "Translate authentication dialog description text"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+msgid "Improvements:"
+msgstr "Удосконалення:"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+msgid "Central Kurdish is now available as an installable language"
+msgstr "Серед доступних мов з'явилася центральнокурдська"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Підтримка встановлення та вилучення мов із трибуквеними кодами"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
+#: data/io.elementary.switchboard.locale.appdata.xml.in:34
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -54,52 +59,52 @@ msgstr ""
 "Спадне меню «Формати» залишається правильним після встановлення або "
 "вилучення мов"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/io.elementary.switchboard.locale.appdata.xml.in:42
 msgid "Support locales with 3-letter codes"
 msgstr "Підтримка мов із тризначними кодами"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:36
+#: data/io.elementary.switchboard.locale.appdata.xml.in:44
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:38
+#: data/io.elementary.switchboard.locale.appdata.xml.in:46
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Краща підтримка дистрибутивів, що не базуються на Ubuntu"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:39
-#: data/io.elementary.switchboard.locale.appdata.xml.in:46
-#: data/io.elementary.switchboard.locale.appdata.xml.in:53
-#: data/io.elementary.switchboard.locale.appdata.xml.in:60
+#: data/io.elementary.switchboard.locale.appdata.xml.in:47
+#: data/io.elementary.switchboard.locale.appdata.xml.in:54
+#: data/io.elementary.switchboard.locale.appdata.xml.in:61
 #: data/io.elementary.switchboard.locale.appdata.xml.in:68
-#: data/io.elementary.switchboard.locale.appdata.xml.in:79
+#: data/io.elementary.switchboard.locale.appdata.xml.in:76
+#: data/io.elementary.switchboard.locale.appdata.xml.in:87
 msgid "Updated translations"
 msgstr "Оновлено переклади"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:67
+#: data/io.elementary.switchboard.locale.appdata.xml.in:75
 msgid "Fix an issue with cancelling language installation"
 msgstr "Розв'язано проблему зі скасуванням встановлення мови"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:75
+#: data/io.elementary.switchboard.locale.appdata.xml.in:83
 msgid "Redesigned Install Language popover"
 msgstr "Перероблено вікно встановлення мови"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:76
+#: data/io.elementary.switchboard.locale.appdata.xml.in:84
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "Запит дозволу за потреби. Більше немає додаткової панелі подробиць"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:77
+#: data/io.elementary.switchboard.locale.appdata.xml.in:85
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Панель поступу встановлення тепер є діалоговим вікном"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:78
+#: data/io.elementary.switchboard.locale.appdata.xml.in:86
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "Перелік мов оновлюється належним чином під час додавання чи видалення мов"
 
-#: data/io.elementary.switchboard.locale.policy.in.in:10
+#: data/io.elementary.switchboard.locale.policy.in:10
 msgid "Manage locale settings"
 msgstr "Керування налаштуваннями мови"
 
-#: data/io.elementary.switchboard.locale.policy.in.in:11
+#: data/io.elementary.switchboard.locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Необхідно автентифікуватися, щоб керувати налаштуваннями мови"
