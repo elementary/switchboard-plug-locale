@@ -1,3 +1,13 @@
+switchboard-plug-locale (2.5.8) focal; urgency=medium
+
+  * Release 2.5.8 (#164)
+  * Update translation files
+  * Update translation template
+  * POTFILES: Update the suffix of the policy file (#163)
+  * policy: Do not specify the gettext-domain (#162)
+
+ -- elementary LLC <builds@elementary.io>  Thu, 12 May 2022 16:37:50 +0000
+
 switchboard-plug-locale (2.5.7) focal; urgency=medium
 
   * Release 2.5.7 (#160)
