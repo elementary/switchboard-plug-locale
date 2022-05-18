@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2022-04-14 14:25+0000\n"
+"PO-Revision-Date: 2022-05-18 16:23+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -36,7 +36,7 @@ msgstr "修正点:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "認証ダイアログの説明文が英語で表示されていた不具合を修正"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Improvements:"
