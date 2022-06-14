@@ -24,15 +24,18 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         height_request = 400;
         width_request = 400;
 
-        search_entry = new Gtk.SearchEntry ();
-        search_entry.margin = 12;
+        search_entry = new Gtk.SearchEntry () {
+            margin_top = 12,
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12
+        };
 
         list_box = new Gtk.ListBox () {
             hexpand = true,
             vexpand = true,
             activate_on_single_click = false
         };
-        list_box.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         list_box.set_filter_func ((Gtk.ListBoxFilterFunc) filter_function);
         list_box.set_sort_func ((Gtk.ListBoxSortFunc) sort_function);
 
@@ -46,12 +49,17 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
 
         var button_cancel = new Gtk.Button.with_label (_("Cancel"));
 
-        var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-        button_box.layout_style = Gtk.ButtonBoxStyle.END;
-        button_box.margin = 12;
-        button_box.spacing = 6;
-        button_box.add (button_cancel);
-        button_box.add (button_add);
+        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+            halign = Gtk.Align.END,
+            hexpand = true,
+            homogeneous = true,
+            margin_top = 12,
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12
+        };
+        button_box.append (button_cancel);
+        button_box.append (button_add);
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         box.append (search_entry);
@@ -59,7 +67,8 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         box.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         box.append (button_box);
 
-        add (box);
+        child = box;
+        halign = Gtk.Align.START;
 
         load_languagelist ();
 
@@ -150,10 +159,15 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         }
 
         construct {
-            var label = new Gtk.Label (Utils.translate (lang, null));
-            label.xalign = 0;
+            var label = new Gtk.Label (Utils.translate (lang, null)) {
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6,
+                margin_start = 6,
+                xalign = 0
+            };
 
-            add (label);
+            child = label;
         }
     }
 }

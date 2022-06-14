@@ -18,7 +18,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
     public int progress {
         set {
             if (value >= 100) {
-                destroy ();
+                response (Gtk.ResponseType.DELETE_EVENT);
             }
             progress_bar.fraction = value / 100.0;
         }
@@ -80,7 +80,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
 
         cancel_button.clicked.connect (() => {
             installer.cancel_install ();
-            destroy ();
+            response (Gtk.ResponseType.CANCEL);
         });
     }
 }

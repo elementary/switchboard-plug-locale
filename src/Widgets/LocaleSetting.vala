@@ -25,7 +25,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private LocaleManager lm;
         private Preview preview;
         private string language;
-        private EndLabel region_endlabel;
+        private Gtk.Label region_endlabel;
 
         private static GLib.Settings? temperature_settings = null;
 
@@ -63,39 +63,61 @@ namespace SwitchboardPlugLocale.Widgets {
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
-            region_endlabel = new EndLabel (_("Region: "));
+            region_endlabel = new Gtk.Label (_("Region:")) {
+                halign = Gtk.Align.END
+            };
+
+            var formats_label = new Gtk.Label (_("Formats:")) {
+                halign = Gtk.Align.END
+            };
 
             content_area.halign = Gtk.Align.CENTER;
-            content_area.attach (region_endlabel, 0, 2, 1, 1);
-            content_area.attach (region_combobox, 1, 2, 1, 1);
-            content_area.attach (new EndLabel (_("Formats: ")), 0, 3, 1, 1);
-            content_area.attach (format_combobox, 1, 3, 1, 1);
-            content_area.attach (preview, 0, 5, 2, 1);
+            content_area.attach (region_endlabel, 0, 2);
+            content_area.attach (region_combobox, 1, 2, 2);
+            content_area.attach (formats_label, 0, 3);
+            content_area.attach (format_combobox, 1, 3, 2);
+            content_area.attach (preview, 0, 5, 3);
 
             if (temperature_settings != null) {
-                var temperature = new Granite.Widgets.ModeButton ();
-                temperature.append_text (_("Celsius"));
-                temperature.append_text (_("Fahrenheit"));
+                var temperature_label = new Gtk.Label (_("Temperature:")) {
+                    halign = Gtk.Align.END
+                };
 
-                content_area.attach (new EndLabel (_("Temperature:")), 0, 4, 1, 1);
-                content_area.attach (temperature, 1, 4, 1, 1);
+                var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
+
+                var fahrenheit_radio = new Gtk.CheckButton.with_label (_("Fahrenheit")) {
+                    group = celcius_radio
+                };
+
+                var auto_radio = new Gtk.CheckButton () {
+                    group = celcius_radio
+                };
+
+                content_area.attach (temperature_label, 0, 4);
+                content_area.attach (celcius_radio, 1, 4);
+                content_area.attach (fahrenheit_radio, 2, 4);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
                 if (temp_setting == "centigrade") {
-                    temperature.selected = 0;
+                    celcius_radio.active = true;
                 } else if (temp_setting == "fahrenheit") {
-                    temperature.selected = 1;
+                    fahrenheit_radio.active = true;
+                } else {
+                    auto_radio.active = true;
                 }
 
-                temperature.mode_changed.connect (() => {
-                    if (temperature.selected == 0) {
-                        temperature_settings.set_string ("temperature-unit", "centigrade");
-                    } else {
-                        temperature_settings.set_string ("temperature-unit", "fahrenheit");
+                celcius_radio.toggled.connect (() => {
+                    if (celcius_radio.active) {
+                        temperature_settings.set_string ("temperature-unit", "centigrade"); 
                     }
                 });
 
+                fahrenheit_radio.toggled.connect (() => {
+                    if (fahrenheit_radio.active) {
+                        temperature_settings.set_string ("temperature-unit", "fahrenheit");
+                    }
+                });
             }
 
             set_button = new Gtk.Button.with_label (_("Set Language"));
@@ -106,9 +128,11 @@ namespace SwitchboardPlugLocale.Widgets {
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
 
             var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…")) {
+                halign = Gtk.Align.START,
                 hexpand = true
             };
 
+            action_area.halign = Gtk.Align.FILL;
             action_area.append (keyboard_button);
             action_area.append (set_system_button);
             action_area.append (set_button);
@@ -191,15 +215,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 } else {
                     set_button.sensitive = true;
                 }
-            }
-        }
-
-        public class EndLabel : Gtk.Label {
-            public EndLabel (string label) {
-                Object (
-                    halign: Gtk.Align.END,
-                    label: label
-                );
             }
         }
 

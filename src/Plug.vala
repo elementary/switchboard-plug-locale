@@ -122,7 +122,7 @@ namespace SwitchboardPlugLocale {
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
             infobar.revealed = false;
-            infobar.get_content_area ().add (label);
+            infobar.add_child (label);
 
             // Gtk.InfoBar for language support installation
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
@@ -131,7 +131,7 @@ namespace SwitchboardPlugLocale {
             missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
             missing_lang_infobar.revealed = false;
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
-            missing_lang_infobar.get_content_area ().add (missing_label);
+            missing_lang_infobar.add_child (missing_label);
 
             view = new Widgets.LocaleView (this);
 
@@ -160,11 +160,17 @@ namespace SwitchboardPlugLocale {
                 return;
             }
 
-            progress_dialog = new ProgressDialog ();
-            progress_dialog.progress = progress;
-            progress_dialog.transient_for = (Gtk.Window) box.get_root ();
-            progress_dialog.run ();
-            progress_dialog = null;
+            progress_dialog = new ProgressDialog () {
+                modal = true,
+                progress = progress,
+                transient_for = (Gtk.Window) box.get_root ()
+            };
+            progress_dialog.present ();
+
+            progress_dialog.response.connect (() => {
+                progress_dialog.destroy ();
+                progress_dialog = null;
+            });
         }
     }
 }

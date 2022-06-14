@@ -14,11 +14,12 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
+public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
+    public Gtk.ListBox listbox { get; private set; }
+
     private Gee.HashMap <string, LanguageRow> languages;
     private LocaleManager lm;
-
-    private Gtk.Label installed_languages_label;
+    private Granite.HeaderLabel installed_languages_label;
 
     construct {
         languages = new Gee.HashMap <string, LanguageRow> ();
@@ -26,17 +27,25 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
 
         installed_languages_label = new Granite.HeaderLabel (_("Installed Languages"));
 
-        add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+        listbox = new Gtk.ListBox () {
+            hexpand = true,
+            vexpand = true
+        };
+        listbox.set_header_func (update_headers);
 
-        set_header_func (update_headers);
+        append (listbox);
     }
 
     public void reload_languages (Gee.ArrayList<string> langs) {
         //clear hashmap and this listbox
         languages.clear ();
-        this.foreach ((item) => {
-            this.remove (item);
-        });
+
+        var item = listbox.get_first_child ();
+        while (item != null) {
+            listbox.remove (item);
+
+            item = item.get_next_sibling ();
+        }
 
         langs.sort ((a, b) => {
             return a.collate (b);
@@ -51,10 +60,13 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             add_language (code);
         }
 
-        foreach (Gtk.Widget row in get_children ()) {
-            if (((LanguageRow)row).current) {
-                select_row ((LanguageRow)row);
+        var row = listbox.get_first_child ();
+        while (row != null) {
+            if (row is LanguageRow && ((LanguageRow)row).current) {
+                listbox.select_row ((LanguageRow)row);
             }
+
+            row = row.get_next_sibling ();
         }
     }
 
@@ -68,28 +80,31 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
                 languages[code] = new LanguageRow (code, language_string);
             }
 
-            add (languages[code]);
+            listbox.append (languages[code]);
         }
     }
 
     public void set_current (string code) {
-        foreach (Gtk.Widget row in get_children ()) {
+        var row = get_first_child ();
+        while (row != null) {
             if (((LanguageRow)row).code == code) {
                 ((LanguageRow)row).current = true;
             } else {
                 ((LanguageRow)row).current = false;
             }
+
+            row = row.get_next_sibling ();
         }
     }
 
     private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-        if (row == get_row_at_index (0)) {
+        if (row == listbox.get_row_at_index (0)) {
             row.set_header (installed_languages_label);
         }
     }
 
     public string? get_selected_language_code () {
-        var selected_row = get_selected_row () as LanguageRow;
+        var selected_row = listbox.get_selected_row () as LanguageRow;
         if (selected_row != null) {
             return selected_row.code;
         } else {
@@ -136,11 +151,16 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             var label = new Gtk.Label (text);
             label.halign = Gtk.Align.START;
 
-            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6,
+                margin_start = 6
+            };
             box.append (label);
             box.append (image);
 
-            add (grid);
+            child = box;
         }
     }
 }

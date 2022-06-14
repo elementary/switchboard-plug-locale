@@ -30,6 +30,7 @@ shared_module(
         dependency('accountsservice'),
         dependency('gio-2.0'),
         dependency('glib-2.0'),
+        dependency('gnome-desktop-4'),
         dependency('gobject-2.0'),
         dependency('granite-7'),
         dependency('gtk4'),

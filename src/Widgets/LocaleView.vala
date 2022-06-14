@@ -15,7 +15,7 @@
 */
 
 namespace SwitchboardPlugLocale.Widgets {
-    public class LocaleView : Gtk.Paned {
+    public class LocaleView : Gtk.Box {
         private Gtk.Box sidebar;
 
         public LanguageListBox list_box;
@@ -23,10 +23,7 @@ namespace SwitchboardPlugLocale.Widgets {
         public weak Plug plug { get; construct; }
 
         public LocaleView (Plug plug) {
-            Object (
-                plug: plug,
-                position: 200
-            );
+            Object (plug: plug);
         }
 
         construct {
@@ -35,9 +32,7 @@ namespace SwitchboardPlugLocale.Widgets {
             list_box = new LanguageListBox ();
 
             var scroll = new Gtk.ScrolledWindow () {
-                child = list_box,
-                hexpand = true,
-                vexpand = true
+                child = list_box
             };
 
             var popover = new Widgets.InstallPopover ();
@@ -66,13 +61,18 @@ namespace SwitchboardPlugLocale.Widgets {
                 plug.infobar.revealed = true;
             });
 
-            start_child = sidebar;
-            shrink_start_child = false;
-            resize_start_child = false;
-            end_child = locale_setting;
-            shrink_end_child = false;
+            var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+                start_child = sidebar,
+                shrink_start_child = false,
+                resize_start_child = false,
+                end_child = locale_setting,
+                shrink_end_child = false,
+                position = 200
+            };
 
-            list_box.row_selected.connect ((row) => {
+            append (paned);
+
+            list_box.listbox.row_selected.connect ((row) => {
                 if (row == null) {
                     return;
                 }

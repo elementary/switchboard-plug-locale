@@ -9,6 +9,7 @@ You'll need the following dependencies:
 
 * libaccountsservice-dev
 * libibus-1.0-dev
+* libgnome-desktop-4-dev
 * libgranite-7-dev
 * libswitchboard-3-dev
 * meson >= 0.46.1
