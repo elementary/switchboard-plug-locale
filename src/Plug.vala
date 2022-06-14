@@ -150,7 +150,6 @@ namespace SwitchboardPlugLocale {
 
         private void on_check_missing_finished (string[] missing) {
             if (missing.length > 0) {
-                missing_lang_infobar.show_all ();
                 missing_lang_infobar.revealed = true;
             } else {
                 missing_lang_infobar.revealed = false;
@@ -165,7 +164,7 @@ namespace SwitchboardPlugLocale {
 
             progress_dialog = new ProgressDialog ();
             progress_dialog.progress = progress;
-            progress_dialog.transient_for = (Gtk.Window) grid.get_toplevel ();
+            progress_dialog.transient_for = (Gtk.Window) grid.get_root ();
             progress_dialog.run ();
             progress_dialog = null;
         }

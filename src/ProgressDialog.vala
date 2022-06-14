@@ -27,8 +27,10 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
     private Gtk.ProgressBar progress_bar;
 
     construct {
-        var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale", Gtk.IconSize.DIALOG);
-        image.valign = Gtk.Align.START;
+        var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale") {
+            pixel_size = 48,
+            valign = Gtk.Align.START
+        };
 
         unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
@@ -68,7 +70,6 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
         grid.attach (image, 0, 0, 1, 2);
         grid.attach (primary_label, 1, 0);
         grid.attach (progress_bar, 1, 1);
-        grid.show_all ();
 
         border_width = 6;
         deletable = false;

@@ -34,33 +34,33 @@ namespace SwitchboardPlugLocale.Widgets {
 
             list_box = new LanguageListBox ();
 
-            var scroll = new Gtk.ScrolledWindow (null, null);
-            scroll.add (list_box);
-            scroll.expand = true;
+            var scroll = new Gtk.ScrolledWindow () {
+                child = list_box,
+                expand = true
+            };
 
             var popover = new Widgets.InstallPopover ();
 
-            var add_button = new Gtk.MenuButton ();
-            add_button.image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
-            add_button.popover = popover;
-            add_button.tooltip_text = _("Install language");
+            var add_button = new Gtk.MenuButton () {
+                icon_name = "list-add-symbolic",
+                popover = popover,
+                tooltip_text = _("Install language")
+            };
 
             var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
             remove_button.tooltip_text = _("Remove language");
 
             var action_bar = new Gtk.ActionBar ();
-            action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+            action_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
             action_bar.pack_start (add_button);
             action_bar.pack_start (remove_button);
 
-            sidebar = new Gtk.Grid ();
-            sidebar.orientation = Gtk.Orientation.VERTICAL;
-            sidebar.add (scroll);
-            sidebar.add (action_bar);
+            sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            sidebar.append (scroll);
+            sidebar.append (action_bar);
 
             locale_setting = new LocaleSetting ();
             locale_setting.settings_changed.connect (() => {
-                plug.infobar.show_all ();
                 plug.infobar.revealed = true;
             });
 
@@ -113,8 +113,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 make_sensitive (false);
                 installer.install (lang);
             });
-
-            show_all ();
         }
 
         private void make_sensitive (bool sensitive) {

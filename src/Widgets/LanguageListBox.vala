@@ -24,9 +24,9 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         languages = new Gee.HashMap <string, LanguageRow> ();
         lm = LocaleManager.get_default ();
 
-        installed_languages_label = new Gtk.Label (_("Installed Languages"));
-        installed_languages_label.halign = Gtk.Align.START;
-        installed_languages_label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+        installed_languages_label = new Granite.HeaderLabel (_("Installed Languages"));
+
+        add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         set_header_func (update_headers);
     }
@@ -56,8 +56,6 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
                 select_row ((LanguageRow)row);
             }
         }
-
-        show_all ();
     }
 
     private void add_language (string code) {
@@ -72,8 +70,6 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
 
             add (languages[code]);
         }
-
-        show_all ();
     }
 
     public void set_current (string code) {
@@ -136,19 +132,15 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             image = new Gtk.Image ();
             image.hexpand = true;
             image.halign = Gtk.Align.END;
-            image.icon_size = Gtk.IconSize.BUTTON;
 
             var label = new Gtk.Label (text);
             label.halign = Gtk.Align.START;
 
-            var grid = new Gtk.Grid ();
-            grid.column_spacing = 6;
-            grid.margin = 6;
-            grid.add (label);
-            grid.add (image);
+            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            box.append (label);
+            box.append (image);
 
             add (grid);
-            show_all ();
         }
     }
 }

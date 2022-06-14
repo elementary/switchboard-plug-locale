@@ -9,9 +9,8 @@ You'll need the following dependencies:
 
 * libaccountsservice-dev
 * libibus-1.0-dev
-* libgnome-desktop-3-dev
-* libgranite-dev
-* libswitchboard-2.0-dev
+* libgranite-7-dev
+* libswitchboard-3-dev
 * meson >= 0.46.1
 * policykit-1
 * valac

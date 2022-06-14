@@ -53,10 +53,10 @@ namespace SwitchboardPlugLocale {
         private Settings locale_settings;
         private Settings settings;
 
-        private Gnome.XkbInfo xkbinfo;
+        // private Gnome.XkbInfo xkbinfo;
 
         construct {
-            xkbinfo = new Gnome.XkbInfo ();
+            // xkbinfo = new Gnome.XkbInfo ();
 
             uint uid = (uint)Posix.getuid ();
 

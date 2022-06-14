@@ -53,8 +53,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
             attach (date_time_label, 0, 0, 1, 1);
             attach (grid, 0, 1, 1, 1);
-
-            this.show_all ();
         }
 
         public void reload_languages (string format) {
