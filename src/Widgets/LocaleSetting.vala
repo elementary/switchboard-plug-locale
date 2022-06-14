@@ -109,7 +109,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 celcius_radio.toggled.connect (() => {
                     if (celcius_radio.active) {
-                        temperature_settings.set_string ("temperature-unit", "centigrade"); 
+                        temperature_settings.set_string ("temperature-unit", "centigrade");
                     }
                 });
 
