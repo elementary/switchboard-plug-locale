@@ -16,7 +16,7 @@
 
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
-        Gtk.Grid grid;
+        private Gtk.Box box;
         Widgets.LocaleView view;
 
         public Gtk.InfoBar infobar;
@@ -44,7 +44,7 @@ namespace SwitchboardPlugLocale {
         }
 
         public override Gtk.Widget get_widget () {
-            if (grid == null) {
+            if (box == null) {
                 Utils.init ();
                 installer = Installer.UbuntuInstaller.get_default ();
 
@@ -52,7 +52,7 @@ namespace SwitchboardPlugLocale {
                 setup_info ();
             }
 
-            return grid;
+            return box;
         }
 
         private async void reload () {
@@ -135,12 +135,10 @@ namespace SwitchboardPlugLocale {
 
             view = new Widgets.LocaleView (this);
 
-            grid = new Gtk.Grid ();
-            grid.orientation = Gtk.Orientation.VERTICAL;
-            grid.add (infobar);
-            grid.add (missing_lang_infobar);
-            grid.add (view);
-            grid.show ();
+            box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            box.append (infobar);
+            box.append (missing_lang_infobar);
+            box.append (view);
 
             missing_lang_infobar.response.connect (() => {
                 missing_lang_infobar.revealed = false;
@@ -164,7 +162,7 @@ namespace SwitchboardPlugLocale {
 
             progress_dialog = new ProgressDialog ();
             progress_dialog.progress = progress;
-            progress_dialog.transient_for = (Gtk.Window) grid.get_root ();
+            progress_dialog.transient_for = (Gtk.Window) box.get_root ();
             progress_dialog.run ();
             progress_dialog = null;
         }

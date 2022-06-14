@@ -105,12 +105,13 @@ namespace SwitchboardPlugLocale.Widgets {
             var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
 
-            var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…"));
+            var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…")) {
+                hexpand = true
+            };
 
-            action_area.add (keyboard_button);
-            action_area.add (set_system_button);
-            action_area.add (set_button);
-            action_area.set_child_secondary (keyboard_button, true);
+            action_area.append (keyboard_button);
+            action_area.append (set_system_button);
+            action_area.append (set_button);
 
             keyboard_button.clicked.connect (() => {
                 try {

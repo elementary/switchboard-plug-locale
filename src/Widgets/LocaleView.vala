@@ -16,7 +16,7 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Paned {
-        private Gtk.Grid sidebar;
+        private Gtk.Box sidebar;
 
         public LanguageListBox list_box;
         public LocaleSetting locale_setting;
@@ -36,7 +36,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
             var scroll = new Gtk.ScrolledWindow () {
                 child = list_box,
-                expand = true
+                hexpand = true,
+                vexpand = true
             };
 
             var popover = new Widgets.InstallPopover ();
@@ -47,8 +48,9 @@ namespace SwitchboardPlugLocale.Widgets {
                 tooltip_text = _("Install language")
             };
 
-            var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
-            remove_button.tooltip_text = _("Remove language");
+            var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
+                tooltip_text = _("Remove language")
+            };
 
             var action_bar = new Gtk.ActionBar ();
             action_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
@@ -64,8 +66,11 @@ namespace SwitchboardPlugLocale.Widgets {
                 plug.infobar.revealed = true;
             });
 
-            pack1 (sidebar, true, false);
-            pack2 (locale_setting, true, false);
+            start_child = sidebar;
+            shrink_start_child = false;
+            resize_start_child = false;
+            end_child = locale_setting;
+            shrink_end_child = false;
 
             list_box.row_selected.connect ((row) => {
                 if (row == null) {

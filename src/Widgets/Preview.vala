@@ -44,15 +44,14 @@ namespace SwitchboardPlugLocale.Widgets {
             number_label.hexpand = true;
             number_label.xalign = 1;
 
-            var grid = new Gtk.Grid ();
-            grid.column_spacing = 6;
-            grid.add (date_label);
-            grid.add (time_label);
-            grid.add (currency_label);
-            grid.add (number_label);
+            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            box.append (date_label);
+            box.append (time_label);
+            box.append (currency_label);
+            box.append (number_label);
 
-            attach (date_time_label, 0, 0, 1, 1);
-            attach (grid, 0, 1, 1, 1);
+            attach (date_time_label, 0, 0);
+            attach (box, 0, 1);
         }
 
         public void reload_languages (string format) {
