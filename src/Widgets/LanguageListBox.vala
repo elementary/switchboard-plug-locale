@@ -114,7 +114,8 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
                 if (value) {
                     var check = new Gtk.RadioButton (null) {
                         hexpand = true,
-                        halign = Gtk.Align.END
+                        halign = Gtk.Align.END,
+                        tooltip_text = _("Currently active language")
                     };
                     grid.add (check);
                 } else if (check != null) {
