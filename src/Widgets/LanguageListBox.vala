@@ -112,17 +112,20 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             }
             set {
                 if (value) {
-                    image.icon_name = "selection-checked";
-                    image.tooltip_text = _("Currently active language");
-                } else {
-                    image.tooltip_text = "";
-                    image.clear ();
+                    var check = new Gtk.RadioButton (null) {
+                        hexpand = true,
+                        halign = Gtk.Align.END
+                    };
+                    grid.add (check);
+                } else if (check != null) {
+                    check.destroy ();
                 }
                 _current = value;
             }
         }
 
-        private Gtk.Image image;
+        private Gtk.Grid grid;
+        private Gtk.RadioButton check;
 
         public LanguageRow (string code, string text, bool current = false) {
             Object (
@@ -133,19 +136,13 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
         }
 
         construct {
-            image = new Gtk.Image ();
-            image.hexpand = true;
-            image.halign = Gtk.Align.END;
-            image.icon_size = Gtk.IconSize.BUTTON;
-
             var label = new Gtk.Label (text);
             label.halign = Gtk.Align.START;
 
-            var grid = new Gtk.Grid ();
+            grid = new Gtk.Grid ();
             grid.column_spacing = 6;
             grid.margin = 6;
             grid.add (label);
-            grid.add (image);
 
             add (grid);
             show_all ();
