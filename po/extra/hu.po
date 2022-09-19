@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2022-04-24 23:33+0000\n"
+"PO-Revision-Date: 2022-07-12 14:26+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/hu/>\n"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Improvements:"
-msgstr "Javítások:"
+msgstr "Újítások:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Central Kurdish is now available as an installable language"

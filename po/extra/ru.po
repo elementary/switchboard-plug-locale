@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2021-11-05 16:18+0000\n"
-"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
+"PO-Revision-Date: 2022-07-12 19:46+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -37,21 +37,19 @@ msgstr "Исправления:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "Перевод описания диалога аутентификации"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Improvements:"
-msgstr ""
+msgstr "Улучшения:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "Центральнокурдский теперь доступен как устанавливаемый язык"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
-#, fuzzy
-#| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "Поддержка языков с трёхзначным идентификатором"
+msgstr "Поддержка установки и удаления языков с трёхзначным идентификатором"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:34
 msgid ""
