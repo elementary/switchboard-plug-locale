@@ -1,10 +1,10 @@
-switchboard-plug-locale (2.5.9) jammy; urgency=medium
+io.elementary.settings.locale (2.5.9) jammy; urgency=medium
 
   * Release 2.5.9
 
  -- Danielle Foré <danielle@elementary.io>  Wed, 03 May 2023 10:15:21 -0700
 
-switchboard-plug-locale (2.5.8) focal; urgency=medium
+io.elementary.settings.locale (2.5.8) focal; urgency=medium
 
   * Release 2.5.8 (#164)
   * Update translation files
@@ -14,7 +14,7 @@ switchboard-plug-locale (2.5.8) focal; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Thu, 12 May 2022 16:37:50 +0000
 
-switchboard-plug-locale (2.5.7) focal; urgency=medium
+io.elementary.settings.locale (2.5.7) focal; urgency=medium
 
   * Release 2.5.7 (#160)
   * Update translation files
@@ -26,13 +26,13 @@ switchboard-plug-locale (2.5.7) focal; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Wed, 13 Apr 2022 12:52:48 +0000
 
-switchboard-plug-locale (2.5.6) focal; urgency=medium
+io.elementary.settings.locale (2.5.6) focal; urgency=medium
 
   * New upstream release
 
  -- Danielle Fore <danielle@elementary.io>  Thu, 18 Nov 2021 12:21:42 -0800
 
-switchboard-plug-locale (2.5.5) bionic; urgency=medium
+io.elementary.settings.locale (2.5.5) bionic; urgency=medium
 
   * Release 2.5.5 (#145)
   * Get/Set formats in a distro-agnostic way (#140)
@@ -46,7 +46,7 @@ switchboard-plug-locale (2.5.5) bionic; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Tue, 26 Oct 2021 17:52:25 +0000
 
-switchboard-plug-locale (2.5.4) bionic; urgency=medium
+io.elementary.settings.locale (2.5.4) bionic; urgency=medium
 
   * Release 2.5.4 (#133)
   * Replace Gtk.Dialog with Granite.Dialog (#131)
@@ -55,7 +55,7 @@ switchboard-plug-locale (2.5.4) bionic; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Wed, 14 Jul 2021 20:50:53 +0000
 
-switchboard-plug-locale (2.5.3) bionic; urgency=medium
+io.elementary.settings.locale (2.5.3) bionic; urgency=medium
 
   * Release 2.5.3 (#130)
   * ProgressDialog: Set 'resizable' to false (#129)
@@ -64,7 +64,7 @@ switchboard-plug-locale (2.5.3) bionic; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Tue, 05 Jan 2021 22:01:32 +0000
 
-switchboard-plug-locale (2.5.2) bionic; urgency=medium
+io.elementary.settings.locale (2.5.2) bionic; urgency=medium
 
   * Release 2.5.2 (#124)
   * Update translation files
@@ -75,7 +75,7 @@ switchboard-plug-locale (2.5.2) bionic; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Thu, 28 May 2020 23:44:24 +0000
 
-switchboard-plug-locale (2.5.1) bionic; urgency=medium
+io.elementary.settings.locale (2.5.1) bionic; urgency=medium
 
   * Release 2.5.1 (#118)
   * Update translation files
@@ -86,7 +86,7 @@ switchboard-plug-locale (2.5.1) bionic; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Wed, 01 Apr 2020 22:49:29 +0000
 
-switchboard-plug-locale (2.5.0) bionic; urgency=medium
+io.elementary.settings.locale (2.5.0) bionic; urgency=medium
 
   * Release 2.5.0 (#116)
   * Update translation template
@@ -125,67 +125,67 @@ switchboard-plug-locale (2.5.0) bionic; urgency=medium
 
  -- elementary LLC <builds@elementary.io>  Fri, 15 Nov 2019 23:11:37 +0000
 
-switchboard-plug-locale (2.4.1) bionic; urgency=medium
+io.elementary.settings.locale (2.4.1) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Wed, 19 Dec 2018 00:28:04 -0600
 
-switchboard-plug-locale (2.4.0) bionic; urgency=medium
+io.elementary.settings.locale (2.4.0) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Mon, 15 Oct 2018 16:25:39 -0500
 
-switchboard-plug-locale (0.2.3) xenial; urgency=medium
+io.elementary.settings.locale (0.2.3) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Mon, 22 May 2017 15:19:09 -0500
 
-switchboard-plug-locale (0.2.2) xenial; urgency=medium
+io.elementary.settings.locale (0.2.2) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Fri, 12 May 2017 03:26:03 -0500
 
-switchboard-plug-locale (0.2.1) xenial; urgency=medium
+io.elementary.settings.locale (0.2.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Thu, 11 Aug 2016 02:50:31 -0500
 
-switchboard-plug-locale (0.2.0.2) trusty; urgency=medium
+io.elementary.settings.locale (0.2.0.2) trusty; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Wed, 09 Dec 2015 14:37:18 -0600
 
-switchboard-plug-locale (0.2.0.1) trusty; urgency=medium
+io.elementary.settings.locale (0.2.0.1) trusty; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Fri, 20 Nov 2015 23:55:32 -0600
 
-switchboard-plug-locale (0.2) trusty; urgency=medium
+io.elementary.settings.locale (0.2) trusty; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Sun, 16 Aug 2015 01:40:30 -0500
 
-switchboard-plug-locale (0.1.1) trusty; urgency=medium
+io.elementary.settings.locale (0.1.1) trusty; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 07 Jul 2015 18:23:53 -0500
 
-switchboard-plug-locale (0.1.0.1) trusty; urgency=low
+io.elementary.settings.locale (0.1.0.1) trusty; urgency=low
 
   * Fix Switchboard tooltip (lp:1443639)
 
  -- Cody Garver <cody@elementaryos.org>  Fri, 22 May 2015 05:20:34 -0500
 
-switchboard-plug-locale (0.1) trusty; urgency=low
+io.elementary.settings.locale (0.1) trusty; urgency=low
 
   * Initial release.
 
