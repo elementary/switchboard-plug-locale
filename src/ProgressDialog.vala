@@ -18,7 +18,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
     public int progress {
         set {
             if (value >= 100) {
-                destroy ();
+                response (Gtk.ResponseType.DELETE_EVENT);
             }
             progress_bar.fraction = value / 100.0;
         }
@@ -27,8 +27,10 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
     private Gtk.ProgressBar progress_bar;
 
     construct {
-        var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale", Gtk.IconSize.DIALOG);
-        image.valign = Gtk.Align.START;
+        var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale") {
+            pixel_size = 48,
+            valign = Gtk.Align.START
+        };
 
         unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
@@ -38,7 +40,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
         primary_label.max_width_chars = 50;
         primary_label.wrap = true;
         primary_label.xalign = 0;
-        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_PRIMARY_LABEL);
+        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
         switch (installer.transaction_mode) {
             case Installer.UbuntuInstaller.TransactionMode.INSTALL:
@@ -61,23 +63,24 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
 
         installer.bind_property ("install-cancellable", cancel_button, "sensitive");
 
-        var grid = new Gtk.Grid ();
-        grid.column_spacing = 12;
-        grid.row_spacing = 6;
-        grid.margin = 6;
+        var grid = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 6,
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6
+        };
         grid.attach (image, 0, 0, 1, 2);
         grid.attach (primary_label, 1, 0);
         grid.attach (progress_bar, 1, 1);
-        grid.show_all ();
 
-        border_width = 6;
-        deletable = false;
         resizable = false;
-        get_content_area ().add (grid);
+        get_content_area ().append (grid);
 
         cancel_button.clicked.connect (() => {
             installer.cancel_install ();
-            destroy ();
+            response (Gtk.ResponseType.CANCEL);
         });
     }
 }

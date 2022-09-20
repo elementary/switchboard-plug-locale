@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema path="/io/elementary/switchboard/locale/" id="io.elementary.switchboard.locale">
+	<schema path="/io/elementary/settings/locale/" id="io.elementary.settings.locale">
 		<key name="input-selections" type="a(ss)">
 			<default>[]</default>
 			<summary>Saves selected input sources per language.</summary>

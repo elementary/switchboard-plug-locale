@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.locale</id>
-  <extends>io.elementary.switchboard</extends>
+  <id>io.elementary.settings.locale</id>
+  <extends>io.elementary.settings</extends>
   <name>Language &amp; Region Settings</name>
   <summary>Manage languages, and configure region and format</summary>
   <icon type="stock">preferences-desktop-locale</icon>
-  <translation type="gettext">locale-plug</translation>
   <releases>
     <release version="2.5.8" date="2022-05-12" urgency="medium">
       <description>
@@ -91,7 +90,7 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-locale/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-locale/main/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>

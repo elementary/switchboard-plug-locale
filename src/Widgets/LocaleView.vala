@@ -15,18 +15,15 @@
 */
 
 namespace SwitchboardPlugLocale.Widgets {
-    public class LocaleView : Gtk.Paned {
-        private Gtk.Grid sidebar;
+    public class LocaleView : Gtk.Box {
+        private Gtk.Box sidebar;
 
         public LanguageListBox list_box;
         public LocaleSetting locale_setting;
         public weak Plug plug { get; construct; }
 
         public LocaleView (Plug plug) {
-            Object (
-                plug: plug,
-                position: 200
-            );
+            Object (plug: plug);
         }
 
         construct {
@@ -34,40 +31,48 @@ namespace SwitchboardPlugLocale.Widgets {
 
             list_box = new LanguageListBox ();
 
-            var scroll = new Gtk.ScrolledWindow (null, null);
-            scroll.add (list_box);
-            scroll.expand = true;
+            var scroll = new Gtk.ScrolledWindow () {
+                child = list_box
+            };
 
             var popover = new Widgets.InstallPopover ();
 
-            var add_button = new Gtk.MenuButton ();
-            add_button.image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
-            add_button.popover = popover;
-            add_button.tooltip_text = _("Install language");
+            var add_button = new Gtk.MenuButton () {
+                icon_name = "list-add-symbolic",
+                popover = popover,
+                tooltip_text = _("Install language")
+            };
 
-            var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
-            remove_button.tooltip_text = _("Remove language");
+            var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
+                tooltip_text = _("Remove language")
+            };
 
             var action_bar = new Gtk.ActionBar ();
-            action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+            action_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
             action_bar.pack_start (add_button);
             action_bar.pack_start (remove_button);
 
-            sidebar = new Gtk.Grid ();
-            sidebar.orientation = Gtk.Orientation.VERTICAL;
-            sidebar.add (scroll);
-            sidebar.add (action_bar);
+            sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            sidebar.append (scroll);
+            sidebar.append (action_bar);
 
             locale_setting = new LocaleSetting ();
             locale_setting.settings_changed.connect (() => {
-                plug.infobar.show_all ();
                 plug.infobar.revealed = true;
             });
 
-            pack1 (sidebar, true, false);
-            pack2 (locale_setting, true, false);
+            var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+                start_child = sidebar,
+                shrink_start_child = false,
+                resize_start_child = false,
+                end_child = locale_setting,
+                shrink_end_child = false,
+                position = 200
+            };
 
-            list_box.row_selected.connect ((row) => {
+            append (paned);
+
+            list_box.listbox.row_selected.connect ((row) => {
                 if (row == null) {
                     return;
                 }
@@ -113,8 +118,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 make_sensitive (false);
                 installer.install (lang);
             });
-
-            show_all ();
         }
 
         private void make_sensitive (bool sensitive) {

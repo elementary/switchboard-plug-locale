@@ -24,40 +24,51 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         height_request = 400;
         width_request = 400;
 
-        search_entry = new Gtk.SearchEntry ();
-        search_entry.margin = 12;
+        search_entry = new Gtk.SearchEntry () {
+            margin_top = 12,
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12
+        };
 
-        list_box = new Gtk.ListBox ();
-        list_box.activate_on_single_click = false;
-        list_box.expand = true;
+        list_box = new Gtk.ListBox () {
+            hexpand = true,
+            vexpand = true,
+            activate_on_single_click = false
+        };
         list_box.set_filter_func ((Gtk.ListBoxFilterFunc) filter_function);
         list_box.set_sort_func ((Gtk.ListBoxSortFunc) sort_function);
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.add (list_box);
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = list_box
+        };
 
         var button_add = new Gtk.Button.with_label (_("Install Language"));
         button_add.sensitive = false;
-        button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        button_add.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         var button_cancel = new Gtk.Button.with_label (_("Cancel"));
 
-        var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-        button_box.layout_style = Gtk.ButtonBoxStyle.END;
-        button_box.margin = 12;
-        button_box.spacing = 6;
-        button_box.add (button_cancel);
-        button_box.add (button_add);
+        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+            halign = Gtk.Align.END,
+            hexpand = true,
+            homogeneous = true,
+            margin_top = 12,
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12
+        };
+        button_box.append (button_cancel);
+        button_box.append (button_add);
 
-        var grid = new Gtk.Grid ();
-        grid.orientation = Gtk.Orientation.VERTICAL;
-        grid.add (search_entry);
-        grid.add (scrolled);
-        grid.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        grid.add (button_box);
-        grid.show_all ();
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        box.append (search_entry);
+        box.append (scrolled);
+        box.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        box.append (button_box);
 
-        add (grid);
+        child = box;
+        halign = Gtk.Align.START;
 
         load_languagelist ();
 
@@ -130,13 +141,11 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
 
                     if (langs.find_custom (line, strcmp).length () == 0) {
                         var langrow = new LangRow (line);
-                        list_box.add (langrow);
+                        list_box.append (langrow);
                         langs.append (line);
                     }
                 }
             }
-
-            list_box.show_all ();
         } catch (Error e) {
             critical (e.message);
         }
@@ -150,12 +159,15 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         }
 
         construct {
-            var label = new Gtk.Label (Utils.translate (lang, null));
-            label.margin = 6;
-            label.margin_start = label.margin_end = 12;
-            label.xalign = 0;
+            var label = new Gtk.Label (Utils.translate (lang, null)) {
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6,
+                margin_start = 6,
+                xalign = 0
+            };
 
-            add (label);
+            child = label;
         }
     }
 }

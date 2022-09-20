@@ -14,29 +14,35 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
+public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
+    public Gtk.ListBox listbox { get; private set; }
+
     private Gee.HashMap <string, LanguageRow> languages;
     private LocaleManager lm;
-
-    private Gtk.Label installed_languages_label;
+    private Granite.HeaderLabel installed_languages_label;
 
     construct {
         languages = new Gee.HashMap <string, LanguageRow> ();
         lm = LocaleManager.get_default ();
 
-        installed_languages_label = new Gtk.Label (_("Installed Languages"));
-        installed_languages_label.halign = Gtk.Align.START;
-        installed_languages_label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+        installed_languages_label = new Granite.HeaderLabel (_("Installed Languages"));
 
-        set_header_func (update_headers);
+        listbox = new Gtk.ListBox () {
+            hexpand = true,
+            vexpand = true
+        };
+        listbox.set_header_func (update_headers);
+
+        append (listbox);
     }
 
     public void reload_languages (Gee.ArrayList<string> langs) {
         //clear hashmap and this listbox
         languages.clear ();
-        this.foreach ((item) => {
-            this.remove (item);
-        });
+
+        while (listbox.get_first_child () != null) {
+            listbox.remove (listbox.get_first_child ());
+        }
 
         langs.sort ((a, b) => {
             return a.collate (b);
@@ -51,13 +57,14 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             add_language (code);
         }
 
-        foreach (Gtk.Widget row in get_children ()) {
-            if (((LanguageRow)row).current) {
-                select_row ((LanguageRow)row);
+        var row = listbox.get_first_child ();
+        while (row != null) {
+            if (row is LanguageRow && ((LanguageRow)row).current) {
+                listbox.select_row ((LanguageRow)row);
             }
-        }
 
-        show_all ();
+            row = row.get_next_sibling ();
+        }
     }
 
     private void add_language (string code) {
@@ -70,30 +77,31 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
                 languages[code] = new LanguageRow (code, language_string);
             }
 
-            add (languages[code]);
+            listbox.append (languages[code]);
         }
-
-        show_all ();
     }
 
     public void set_current (string code) {
-        foreach (Gtk.Widget row in get_children ()) {
+        var row = get_first_child ();
+        while (row != null) {
             if (((LanguageRow)row).code == code) {
                 ((LanguageRow)row).current = true;
             } else {
                 ((LanguageRow)row).current = false;
             }
+
+            row = row.get_next_sibling ();
         }
     }
 
     private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-        if (row == get_row_at_index (0)) {
+        if (row == listbox.get_row_at_index (0)) {
             row.set_header (installed_languages_label);
         }
     }
 
     public string? get_selected_language_code () {
-        var selected_row = get_selected_row () as LanguageRow;
+        var selected_row = listbox.get_selected_row () as LanguageRow;
         if (selected_row != null) {
             return selected_row.code;
         } else {
@@ -136,19 +144,20 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.ListBox {
             image = new Gtk.Image ();
             image.hexpand = true;
             image.halign = Gtk.Align.END;
-            image.icon_size = Gtk.IconSize.BUTTON;
 
             var label = new Gtk.Label (text);
             label.halign = Gtk.Align.START;
 
-            var grid = new Gtk.Grid ();
-            grid.column_spacing = 6;
-            grid.margin = 6;
-            grid.add (label);
-            grid.add (image);
+            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6,
+                margin_start = 6
+            };
+            box.append (label);
+            box.append (image);
 
-            add (grid);
-            show_all ();
+            child = box;
         }
     }
 }

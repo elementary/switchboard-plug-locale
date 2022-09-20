@@ -1,4 +1,4 @@
-# Switchboard Locale Plug
+# Locale Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-locale/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -9,9 +9,9 @@ You'll need the following dependencies:
 
 * libaccountsservice-dev
 * libibus-1.0-dev
-* libgnome-desktop-3-dev
-* libgranite-dev
-* libswitchboard-2.0-dev
+* libgnome-desktop-4-dev
+* libgranite-7-dev
+* libswitchboard-3-dev
 * meson >= 0.46.1
 * policykit-1
 * valac
