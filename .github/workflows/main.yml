@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: elementary/docker:unstable-next
+      image: elementary/docker:next-unstable
     
     steps:
     - uses: actions/checkout@v1
