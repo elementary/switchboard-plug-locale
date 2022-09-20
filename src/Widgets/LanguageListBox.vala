@@ -40,11 +40,8 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         //clear hashmap and this listbox
         languages.clear ();
 
-        var item = listbox.get_first_child ();
-        while (item != null) {
-            listbox.remove (item);
-
-            item = item.get_next_sibling ();
+        while (listbox.get_first_child () != null) {
+            listbox.remove (listbox.get_first_child ());
         }
 
         langs.sort ((a, b) => {
