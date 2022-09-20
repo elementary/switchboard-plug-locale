@@ -16,7 +16,7 @@ Homepage: https://github.com/elementary/switchboard-plug-locale
 
 Package: io.elementary.settings.locale
 Architecture: any
-Depends: aptdaemon, io.elementary.settings ${misc:Depends}, ${shlibs:Depends}
+Depends: aptdaemon, io.elementary.settings, ${misc:Depends}, ${shlibs:Depends}
 Enhances: io.elementary.settings
 Description: Region & Language plug for Switchboard
  Change your region and language settings
