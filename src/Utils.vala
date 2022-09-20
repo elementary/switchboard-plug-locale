@@ -1,4 +1,4 @@
-/* Copyright 2011-2015 Switchboard Locale Plug Developers
+/* Copyright 2011-2022 elementary, Inc. (https://elementary.io)
 *
 * This program is free software: you can redistribute it
 * and/or modify it under the terms of the GNU Lesser General Public License as
@@ -228,7 +228,7 @@ namespace SwitchboardPlugLocale {
 
             try {
                 permission = new Polkit.Permission.sync (
-                    "io.elementary.switchboard.locale.administration",
+                    "io.elementary.settings.locale.administration",
                     new Polkit.UnixProcess (Posix.getpid ())
                 );
                 return permission;

@@ -1,5 +1,5 @@
 project(
-    'locale-plug',
+    'io.elementary.settings.locale',
     'vala', 'c',
     meson_version: '>= 0.46.1',
     version: '2.5.8'

@@ -35,7 +35,7 @@ namespace SwitchboardPlugLocale {
             settings.set ("language", null);
 
             Object (category: Category.PERSONAL,
-                    code_name: "io.elementary.switchboard.locale",
+                    code_name: "io.elementary.settings.locale",
                     display_name: _("Language & Region"),
                     description: _("Manage languages, and configure region and format"),
                     icon: "preferences-desktop-locale",
