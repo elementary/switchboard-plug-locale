@@ -1,6 +1,11 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
 
 jobs:
   build:
@@ -8,20 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: elementary/docker:unstable
+      image: elementary/docker:unstable-next
     
     steps:
     - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y libaccountsservice-dev libibus-1.0-dev libgnome-desktop-3-dev libgranite-dev libswitchboard-2.0-dev meson policykit-1 valac
+        apt install -y libaccountsservice-dev libibus-1.0-dev libgnome-desktop-3-dev libgranite-7-dev libswitchboard-3-dev meson policykit-1 valac
     - name: Build
       env:
         DESTDIR: out
       run: |
         meson build
-        ninja -C build
         ninja -C build install
 
   lint:
