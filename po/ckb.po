@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2022-09-21 02:54+0000\n"
+"PO-Revision-Date: 2022-09-25 06:58+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/ckb/>\n"
@@ -17,40 +17,38 @@ msgstr ""
 
 #: src/Plug.vala:40
 msgid "Language & Region"
-msgstr ""
+msgstr "زمان & هەرێم"
 
 #: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "زمانی خۆت هەڵبژێرە و، هەرێم و جۆری دەرکەوتن ڕێکەوت و کات ڕێکبخە"
 
 #: src/Plug.vala:112
-#, fuzzy
 msgid "Region"
-msgstr "هەرێم "
+msgstr "هەرێم"
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "ڕێخستن "
+msgstr "جۆرەکان"
 
 #: src/Plug.vala:114
 msgid "Temperature"
-msgstr ""
+msgstr "پلەی گەرمی"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
 #: src/Plug.vala:121
 msgid "Some changes will not take effect until you log out"
-msgstr ""
+msgstr "هەندێک لە گۆڕانکارییەکان کارا نابن هەتا لە سیستەم نەچیتەدەر"
 
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
 msgid "Language support is not installed completely"
-msgstr ""
+msgstr "پاڵپستی زمان بەتەواوی دانەمەزاروە"
 
 #: src/Plug.vala:133
 msgid "Complete Installation"
-msgstr ""
+msgstr "تەواوکردنی دامەزرادن"
 
 #: src/ProgressDialog.vala:45
 #, c-format
@@ -64,21 +62,20 @@ msgstr "سڕینەوەی %s"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
-msgstr ""
+msgstr "دامەزراندنی زمانی ونبوو"
 
 #: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "دامەزراندنی زمان"
 
 #: src/Widgets/InstallPopover.vala:70
 #, c-format
 msgid "Install %s"
-msgstr "%s دامەزرێنەوە"
+msgstr "%s دامەزرێنە"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
@@ -86,7 +83,7 @@ msgstr "زمانه‌ دامه‌زراوه‌كان"
 
 #: src/Widgets/LanguageListBox.vala:116
 msgid "Currently active language"
-msgstr "ئێستا زمان چالاک ە"
+msgstr "زمانی چالاکی ئێستا"
 
 #: src/Widgets/LocaleView.vala:46
 msgid "Install language"
@@ -98,40 +95,39 @@ msgstr "سڕینەوەی زمان"
 
 #: src/Widgets/LocaleSetting.vala:66
 msgid "Region: "
-msgstr "هەرێم "
+msgstr "هەرێم: "
 
 #: src/Widgets/LocaleSetting.vala:71
 msgid "Formats: "
-msgstr "ڕێخستن "
+msgstr "جۆرەکان: "
 
 #: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
-msgstr ""
+msgstr "سیلیزی"
 
 #: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
-msgstr ""
+msgstr "فەهرەنهایت"
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
-msgstr ""
+msgstr "پلەی گەرمی:"
 
 #: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
-msgstr "رێکخستنی زمان"
+msgstr "چەسپاندنی زمان"
 
 #: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
-msgstr "زمانی سیسته‌مه‌كه‌ ڕیكبخه‌"
+msgstr "چەسپاندنی زمانی سیستەم"
 
 #: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr "زمان بۆ پەڕەی چونەژوورەوە ، هەژمارەی میوان و هەژمارەی نوێ ڕێکبخە"
+msgstr "زمان بۆ پەڕەی چونەژوورەوە ، هەژماری میوان و هەژماری نوێ دابنێ"
 
 #: src/Widgets/LocaleSetting.vala:108
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "ڕیکخستنی گۆڕین تختەکلیل"
+msgstr "ڕێکخستنەکانی تەختەکلیل…"
 
 #~ msgid "Language: "
 #~ msgstr "زمان : "
