@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2021-03-08 04:48+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"PO-Revision-Date: 2022-10-02 09:07+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ru/>\n"
 "Language: ru\n"
@@ -125,15 +125,15 @@ msgstr "Установить язык"
 
 #: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
-msgstr "Выбрать как системный язык"
+msgstr "Установить как системный язык"
 
 #: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
-msgstr "Выбрать язык для экрана входа, гостевого и новых аккаунтов"
+msgstr "Установить язык для экрана входа, гостевого и новых аккаунтов"
 
 #: src/Widgets/LocaleSetting.vala:108
 msgid "Keyboard Settings…"
-msgstr "Настройки клавиатуры…"
+msgstr "Параметры клавиатуры…"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Для изменения некоторых настроек требуются права администратора"
