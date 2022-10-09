@@ -20,7 +20,6 @@ namespace SwitchboardPlugLocale {
         Widgets.LocaleView view;
 
         public Gtk.InfoBar infobar;
-        public Gtk.InfoBar permission_infobar;
         public Gtk.InfoBar missing_lang_infobar;
 
         private Installer.UbuntuInstaller installer;

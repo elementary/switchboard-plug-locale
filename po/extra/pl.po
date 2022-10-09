@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 12:36+0000\n"
-"PO-Revision-Date: 2022-04-13 16:35+0000\n"
+"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"PO-Revision-Date: 2022-05-06 16:33+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/pl/>\n"
@@ -29,24 +29,29 @@ msgid "Manage languages, and configure region and format"
 msgstr "Zarządzaj językami, konfiguruj region i formaty"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
-msgid "Improvements:"
-msgstr "Ulepszenia:"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
-msgid "Central Kurdish is now available as an installable language"
-msgstr "Centralny Kurdyjski jest teraz dostępny jako język do zainstalowania"
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
+#: data/io.elementary.switchboard.locale.appdata.xml.in:40
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:18
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid "Translate authentication dialog description text"
+msgstr "Przetłumaczono opis okna uwierzytelniania"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+msgid "Improvements:"
+msgstr "Ulepszenia:"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+msgid "Central Kurdish is now available as an installable language"
+msgstr "Centralny Kurdyjski jest teraz dostępny jako język do zainstalowania"
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:26
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Wsparcie dla instalacji i usuwania języków z trzyliterowymi kodami"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
+#: data/io.elementary.switchboard.locale.appdata.xml.in:34
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -54,54 +59,54 @@ msgstr ""
 "Upewniono się, że menu „Formaty” działa poprawnie po instalacji i usunięciu "
 "języków"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/io.elementary.switchboard.locale.appdata.xml.in:42
 msgid "Support locales with 3-letter codes"
 msgstr "Wsparcie dla języków z trzyliterowymi kodami"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:36
+#: data/io.elementary.switchboard.locale.appdata.xml.in:44
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:38
+#: data/io.elementary.switchboard.locale.appdata.xml.in:46
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Lepsze wsparcie dla dystrybucji niebazujących na Ubuntu"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:39
-#: data/io.elementary.switchboard.locale.appdata.xml.in:46
-#: data/io.elementary.switchboard.locale.appdata.xml.in:53
-#: data/io.elementary.switchboard.locale.appdata.xml.in:60
+#: data/io.elementary.switchboard.locale.appdata.xml.in:47
+#: data/io.elementary.switchboard.locale.appdata.xml.in:54
+#: data/io.elementary.switchboard.locale.appdata.xml.in:61
 #: data/io.elementary.switchboard.locale.appdata.xml.in:68
-#: data/io.elementary.switchboard.locale.appdata.xml.in:79
+#: data/io.elementary.switchboard.locale.appdata.xml.in:76
+#: data/io.elementary.switchboard.locale.appdata.xml.in:87
 msgid "Updated translations"
 msgstr "Zaktualizowane tłumaczenia"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:67
+#: data/io.elementary.switchboard.locale.appdata.xml.in:75
 msgid "Fix an issue with cancelling language installation"
 msgstr "Naprawiono problem z anulowaniem instalacji języka"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:75
+#: data/io.elementary.switchboard.locale.appdata.xml.in:83
 msgid "Redesigned Install Language popover"
 msgstr "Przeprojektowano popover instalacji języka"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:76
+#: data/io.elementary.switchboard.locale.appdata.xml.in:84
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Pytanie o uprawnienia tam gdzie to potrzebne. Usunięto niepotrzebny InfoBar"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:77
+#: data/io.elementary.switchboard.locale.appdata.xml.in:85
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "InfoBar z postępem instalacji jest teraz oknem dialogowym"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:78
+#: data/io.elementary.switchboard.locale.appdata.xml.in:86
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "Lista języków poprawnie aktualizuje się przy dodawaniu i usuwaniu języków"
 
-#: data/io.elementary.switchboard.locale.policy.in.in:10
+#: data/io.elementary.switchboard.locale.policy.in:10
 msgid "Manage locale settings"
 msgstr "Zarządzaj ustawieniami lokalnymi"
 
-#: data/io.elementary.switchboard.locale.policy.in.in:11
+#: data/io.elementary.switchboard.locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Wymagane jest uwierzytelnienie, aby zarządzać ustawieniami lokalnymi"
 

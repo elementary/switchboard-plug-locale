@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 12:36+0000\n"
+"POT-Creation-Date: 2022-05-05 17:08+0000\n"
 "PO-Revision-Date: 2020-04-30 02:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,80 +28,85 @@ msgid "Manage languages, and configure region and format"
 msgstr "Gestione los idiomas y configure la región y el formato"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
-msgid "Improvements:"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
-msgid "Central Kurdish is now available as an installable language"
-msgstr ""
-
-#: data/io.elementary.switchboard.locale.appdata.xml.in:16
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
+#: data/io.elementary.switchboard.locale.appdata.xml.in:40
 msgid "Fixes:"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:18
-msgid "Support installation and removal of languages with 3-letter codes"
+#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+msgid "Translate authentication dialog description text"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+msgid "Improvements:"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:26
+msgid "Support installation and removal of languages with 3-letter codes"
+msgstr ""
+
+#: data/io.elementary.switchboard.locale.appdata.xml.in:34
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/io.elementary.switchboard.locale.appdata.xml.in:42
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:36
+#: data/io.elementary.switchboard.locale.appdata.xml.in:44
 msgid "Minor updates:"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:38
+#: data/io.elementary.switchboard.locale.appdata.xml.in:46
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:39
-#: data/io.elementary.switchboard.locale.appdata.xml.in:46
-#: data/io.elementary.switchboard.locale.appdata.xml.in:53
-#: data/io.elementary.switchboard.locale.appdata.xml.in:60
+#: data/io.elementary.switchboard.locale.appdata.xml.in:47
+#: data/io.elementary.switchboard.locale.appdata.xml.in:54
+#: data/io.elementary.switchboard.locale.appdata.xml.in:61
 #: data/io.elementary.switchboard.locale.appdata.xml.in:68
-#: data/io.elementary.switchboard.locale.appdata.xml.in:79
+#: data/io.elementary.switchboard.locale.appdata.xml.in:76
+#: data/io.elementary.switchboard.locale.appdata.xml.in:87
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:67
+#: data/io.elementary.switchboard.locale.appdata.xml.in:75
 msgid "Fix an issue with cancelling language installation"
 msgstr ""
 "Se corrigió un problema que se producía al cancelar la instalación de un "
 "idioma"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:75
+#: data/io.elementary.switchboard.locale.appdata.xml.in:83
 msgid "Redesigned Install Language popover"
 msgstr "Rediseñada la ventana emergente para instalar idiomas"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:76
+#: data/io.elementary.switchboard.locale.appdata.xml.in:84
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Pide permiso cuando sea necesario. No más barra de información adicional"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:77
+#: data/io.elementary.switchboard.locale.appdata.xml.in:85
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 "La barra de información del progreso de instalación es ahora un diálogo"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:78
+#: data/io.elementary.switchboard.locale.appdata.xml.in:86
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "La lista de idiomas se actualiza correctamente al añadir o eliminar idiomas"
 
-#: data/io.elementary.switchboard.locale.policy.in.in:10
+#: data/io.elementary.switchboard.locale.policy.in:10
 msgid "Manage locale settings"
 msgstr "Gestionar la configuración regional"
 
-#: data/io.elementary.switchboard.locale.policy.in.in:11
+#: data/io.elementary.switchboard.locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Necesita autenticarse para gestionar la configuración de región"
 
