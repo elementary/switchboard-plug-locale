@@ -19,12 +19,12 @@ namespace SwitchboardPlugLocale {
         private static Gee.ArrayList<string> installed_languages;
         private static Gee.ArrayList<string> installed_locales;
         private static Gee.HashMap<string, string> default_regions;
-        private static Gee.ArrayList<string> blacklist_packages;
+        private static Gee.ArrayList<string> blocklist_packages;
 
         public static void init () {
             installed_locales = new Gee.ArrayList<string> ();
             default_regions = new Gee.HashMap<string, string> ();
-            blacklist_packages = new Gee.ArrayList<string> ();
+            blocklist_packages = new Gee.ArrayList<string> ();
         }
 
         public static Gee.ArrayList<string>? get_installed_languages () {
@@ -38,8 +38,8 @@ namespace SwitchboardPlugLocale {
         }
 
         public static async string [] get_missing_languages () {
-            if (blacklist_packages.size == 0) {
-                blacklist_packages = yield get_blacklist_packages ();
+            if (blocklist_packages.size == 0) {
+                blocklist_packages = yield get_blocklist_packages ();
             }
 
             Pid pid;
@@ -71,7 +71,7 @@ namespace SwitchboardPlugLocale {
                 missing_aux = res.strip ().split (" ");
 
                 for (var i = 0; i < missing_aux.length; i++) {
-                    if (!blacklist_packages.contains (missing_aux[i])) {
+                    if (!blocklist_packages.contains (missing_aux[i])) {
                         missing += missing_aux[i];
                     }
                 }
@@ -82,22 +82,22 @@ namespace SwitchboardPlugLocale {
             return missing;
         }
 
-        public static async Gee.ArrayList<string> get_blacklist_packages () {
-            Gee.ArrayList<string> blacklist_items = new Gee.ArrayList<string> ();
-            var file = File.new_for_path (Path.build_path ("/", Constants.PKGDATADIR, "packages_blacklist"));
+        public static async Gee.ArrayList<string> get_blocklist_packages () {
+            Gee.ArrayList<string> blocklist_items = new Gee.ArrayList<string> ();
+            var file = File.new_for_path (Path.build_path ("/", Constants.PKGDATADIR, "packages_blocklist"));
 
             try {
                 var dis = new DataInputStream (file.read ());
                 string line = null;
 
                 while ((line = yield dis.read_line_async (Priority.DEFAULT)) != null) {
-                    blacklist_items.add (line);
+                    blocklist_items.add (line);
                 }
             } catch (Error e) {
                 error (e.message);
             }
 
-            return blacklist_items;
+            return blocklist_items;
         }
 
         public static string? get_default_for_lang (string lang) {
