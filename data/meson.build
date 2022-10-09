@@ -22,6 +22,6 @@ install_data(
 
 install_data(
     'languagelist',
-    'packages_blacklist',
+    'packages_blocklist',
     install_dir: pkgdatadir
 )
