@@ -9,21 +9,21 @@
 # Rahul Ghose <hansum.rahul@gmail.com>, 2012
 # runab <runab@redhat.com>, 2012
 # runa <runabh@gmail.com>, 2012
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: shotwell-0.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2013-09-20 19:30+0000\n"
-"Last-Translator: runa <runabh@gmail.com>\n"
-"Language-Team: Bengali (India) (http://www.transifex.com/projects/p/shotwell/"
-"language/bn_IN/)\n"
+"PO-Revision-Date: 2023-02-17 17:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
+"Language-Team: Bengali (India) <https://l10n.elementary.io/projects/"
+"switchboard/switchboard-plug-locale/bn_IN/>\n"
 "Language: bn_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: src/Plug.vala:40
 msgid "Language & Region"
@@ -67,9 +67,9 @@ msgid "Installing %s"
 msgstr ""
 
 #: src/ProgressDialog.vala:48
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "ইভেন্ট মুছে ফেলা হচ্ছে"
+msgstr ""
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
