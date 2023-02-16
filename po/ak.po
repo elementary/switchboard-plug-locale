@@ -3,15 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2016-08-17 15:09+0000\n"
-"Last-Translator: aberba <karabutaworld@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-02-17 17:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
+"Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/ak/>\n"
+"Language: ak\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
 #: src/Plug.vala:40
 msgid "Language & Region"
@@ -51,14 +53,14 @@ msgid "Complete Installation"
 msgstr "Fa kasa ahoroɔ no nyinaa gu so"
 
 #: src/ProgressDialog.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Ɛde kasa no regu so"
+msgstr ""
 
 #: src/ProgressDialog.vala:48
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Ɛreyi kasa no"
+msgstr ""
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
@@ -74,9 +76,9 @@ msgid "Install Language"
 msgstr "Fa kasa yi gu so"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Ɛde kasa no regu so"
+msgstr ""
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
