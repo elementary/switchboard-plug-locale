@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2017-02-21 10:45+0000\n"
-"Last-Translator: Christos Iatropoulos <Unknown>\n"
-"Language-Team: Greek <el@li.org>\n"
+"PO-Revision-Date: 2023-02-17 17:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
+"Language-Team: Greek <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-02-22 06:07+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: src/Plug.vala:40
 msgid "Language & Region"
@@ -56,14 +58,14 @@ msgid "Complete Installation"
 msgstr "Ολοκλήρωση εγκατάστασης"
 
 #: src/ProgressDialog.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "Γίνεται εγκατάσταση γλώσσας"
+msgstr ""
 
 #: src/ProgressDialog.vala:48
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "Γίνεται αφαίρεση γλώσσας"
+msgstr ""
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
@@ -79,9 +81,9 @@ msgid "Install Language"
 msgstr "Εγκατάσταση γλώσσας"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "Γίνεται εγκατάσταση γλώσσας"
+msgstr ""
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
