@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2018-02-11 00:08+0000\n"
-"Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
-"Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2023-03-11 15:02+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:40
@@ -53,14 +53,14 @@ msgid "Complete Installation"
 msgstr "სრული ინსტალაცია"
 
 #: src/ProgressDialog.vala:45
-#, fuzzy, c-format
+#, c-format
 msgid "Installing %s"
-msgstr "ენა ყენდება"
+msgstr "ყენდება %s"
 
 #: src/ProgressDialog.vala:48
-#, fuzzy, c-format
+#, c-format
 msgid "Removing %s"
-msgstr "ენა იშლება"
+msgstr "%s-ის წაშლა"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
