@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2023-03-11 15:02+0000\n"
+"PO-Revision-Date: 2023-03-12 15:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ka/>\n"
@@ -17,25 +17,23 @@ msgstr ""
 
 #: src/Plug.vala:40
 msgid "Language & Region"
-msgstr "ენა & რეგიონი"
+msgstr "რეგიონი და ენა"
 
 #: src/Plug.vala:41
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "მართეთ ენები და მოირგეთ რეგიონი და ფორმატი"
 
 #: src/Plug.vala:112
-#, fuzzy
 msgid "Region"
-msgstr "რეგიონი: "
+msgstr "რეგიონი"
 
 #: src/Plug.vala:113
-#, fuzzy
 msgid "Formats"
-msgstr "ფორმატები: "
+msgstr "ფორმატები"
 
 #: src/Plug.vala:114
 msgid "Temperature"
-msgstr ""
+msgstr "ტემპერატურა"
 
 #. Wires up and configures initial UI
 #. Gtk.InfoBar for informing about necessary log-out/log-in
@@ -46,16 +44,16 @@ msgstr "ზოგიერთი ცვლილება გამოსვლ�
 #. Gtk.InfoBar for language support installation
 #: src/Plug.vala:128
 msgid "Language support is not installed completely"
-msgstr "ენის მხარდაჭერა სრულიად ინსტალირებული არ არის"
+msgstr "ენის მხარდაჭერა სრულიად არაა დაყენებული"
 
 #: src/Plug.vala:133
 msgid "Complete Installation"
-msgstr "სრული ინსტალაცია"
+msgstr "სრული დაყენება"
 
 #: src/ProgressDialog.vala:45
 #, c-format
 msgid "Installing %s"
-msgstr "ყენდება %s"
+msgstr "%s-ის დაყენება"
 
 #: src/ProgressDialog.vala:48
 #, c-format
@@ -64,21 +62,20 @@ msgstr "%s-ის წაშლა"
 
 #: src/ProgressDialog.vala:51
 msgid "Installing missing language"
-msgstr "ნაკლული ენა ყენდება"
+msgstr "ნაკლული ენის დაყენება"
 
 #: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
 msgid "Cancel"
 msgstr "გაუქმება"
 
 #: src/Widgets/InstallPopover.vala:39
-#, fuzzy
 msgid "Install Language"
 msgstr "ენის დაყენება"
 
 #: src/Widgets/InstallPopover.vala:70
-#, fuzzy, c-format
+#, c-format
 msgid "Install %s"
-msgstr "ენა ყენდება"
+msgstr "%s-ის დაყენება"
 
 #: src/Widgets/LanguageListBox.vala:27
 msgid "Installed Languages"
@@ -106,15 +103,15 @@ msgstr "ფორმატები: "
 
 #: src/Widgets/LocaleSetting.vala:77
 msgid "Celsius"
-msgstr ""
+msgstr "ცელსიუსი"
 
 #: src/Widgets/LocaleSetting.vala:78
 msgid "Fahrenheit"
-msgstr ""
+msgstr "ფარენჰეიტი"
 
 #: src/Widgets/LocaleSetting.vala:80
 msgid "Temperature:"
-msgstr ""
+msgstr "ტემპერატურა:"
 
 #: src/Widgets/LocaleSetting.vala:101
 msgid "Set Language"
@@ -122,7 +119,7 @@ msgstr "ენის დაყენება"
 
 #: src/Widgets/LocaleSetting.vala:105
 msgid "Set System Language"
-msgstr "სისტემური ენის მითითება"
+msgstr "სისტემური ენის დაყენება"
 
 #: src/Widgets/LocaleSetting.vala:106
 msgid "Set language for login screen, guest account and new user accounts"
@@ -130,9 +127,8 @@ msgstr ""
 "შესვლის ეკრანის, სტუმრის და ახალი მომხმარებლის ანგარიშისთვის ენის დაყენება"
 
 #: src/Widgets/LocaleSetting.vala:108
-#, fuzzy
 msgid "Keyboard Settings…"
-msgstr "კლავიატურის პარამეტრებზე გადასვლა"
+msgstr "კლავიატურის მორგება…"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
