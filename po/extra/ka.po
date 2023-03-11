@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2023-03-11 14:25+0000\n"
+"PO-Revision-Date: 2023-03-12 15:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ka/>\n"
@@ -21,26 +21,26 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
-msgstr ""
+msgstr "ენისა და რეგიონის მორგება"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
-msgstr ""
+msgstr "მართეთ ენები და მოირგეთ რეგიონი და ფორმატი"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:12
 #: data/io.elementary.switchboard.locale.appdata.xml.in:24
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
 #: data/io.elementary.switchboard.locale.appdata.xml.in:40
 msgid "Fixes:"
-msgstr ""
+msgstr "შეცდომების გასწორებები:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "ავთენტიკაციის ფანჯრის აღწერის ტექსტის თარგმნა"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Improvements:"
-msgstr ""
+msgstr "გაუმჯობესებები:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Central Kurdish is now available as an installable language"
@@ -99,7 +99,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.policy.in:10
 msgid "Manage locale settings"
-msgstr ""
+msgstr "ენის პარამეტრების მართვა"
 
 #: data/io.elementary.switchboard.locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
