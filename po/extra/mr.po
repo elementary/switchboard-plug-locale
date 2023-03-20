@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2020-10-29 18:15+0000\n"
+"PO-Revision-Date: 2023-03-21 18:59+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/mr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
@@ -32,7 +32,7 @@ msgstr "भाषा व्यवस्थापित करा आणि क�
 #: data/io.elementary.switchboard.locale.appdata.xml.in:32
 #: data/io.elementary.switchboard.locale.appdata.xml.in:40
 msgid "Fixes:"
-msgstr ""
+msgstr "निराकारणे:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:14
 msgid "Translate authentication dialog description text"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:44
 msgid "Minor updates:"
-msgstr ""
+msgstr "किरकोळ अद्यतने:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:46
 msgid "Better support for non-Ubuntu based distributions"
