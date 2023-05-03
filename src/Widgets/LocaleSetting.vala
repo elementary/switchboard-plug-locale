@@ -17,6 +17,7 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Granite.SimpleSettingsPage {
         private Gtk.Button set_button;
+        private Gtk.Button set_system_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
         private Gtk.ListStore format_store;
@@ -102,8 +103,9 @@ namespace SwitchboardPlugLocale.Widgets {
             set_button.sensitive = false;
             set_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-            var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
+            set_system_button = new Gtk.Button.with_label (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
+            set_system_button.sensitive = false;
 
             var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…"));
 
@@ -127,13 +129,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 debug ("Setting user language to '%s'", locale);
                 lm.set_user_language (locale);
 
-                compare ();
-
                 var format = get_format ();
                 debug ("Setting user format to '%s'", format);
                 lm.set_user_format (format);
 
                 settings_changed ();
+                compare ();
             });
 
             set_system_button.clicked.connect (() => {
@@ -186,11 +187,32 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void compare () {
+            string? compared_format = null;
+
+            var selected_locale = get_selected_locale ();
+            var selected_format = get_format ();
+
             if (set_button != null) {
-                if (lm.get_user_language () == get_selected_locale () && lm.get_user_format () == get_format ()) {
-                    set_button.sensitive = false;
+                if (lm.get_user_language () == selected_locale && lm.get_user_format () == selected_format) {
+                     set_button.sensitive = false;
+                 } else {
+                     set_button.sensitive = true;
+                }
+            }
+
+            if (selected_locale != selected_format) {
+                compared_format = selected_format;
+            }
+
+            compare_system_settings (selected_locale, compared_format, selected_locale, selected_format);
+        }
+
+        private void compare_system_settings (string locale, string? unknown, string selected, string format) {
+            if (set_system_button != null) {
+                if (lm.get_localectl_settings (locale, null, selected) == locale && lm.get_localectl_settings (null, unknown, selected) == format) {
+                    set_system_button.sensitive = false;
                 } else {
-                    set_button.sensitive = true;
+                    set_system_button.sensitive = true;
                 }
             }
         }
@@ -257,6 +279,7 @@ namespace SwitchboardPlugLocale.Widgets {
         public void reload_formats (Gee.ArrayList<string>? locales) {
             format_store.clear ();
             var user_format = lm.get_user_format ();
+            string? format_id = null;
 
             int i = 0;
             string? active_id = null;
@@ -269,7 +292,7 @@ namespace SwitchboardPlugLocale.Widgets {
                     format_store.set (iter, 0, country, 1, locale);
 
                     if (locale == user_format) {
-                        active_id = locale;
+                        format_id = locale;
                     }
 
                     i++;
@@ -278,8 +301,9 @@ namespace SwitchboardPlugLocale.Widgets {
 
             format_combobox.id_column = 1;
             format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            if (active_id != null) {
-                format_combobox.active_id = active_id;
+
+            if (format_id != null) {
+                format_combobox.active_id = format_id;
             } else {
                 format_combobox.active = 0;
             }
@@ -294,12 +318,13 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void on_applied_to_system () {
-            var selected_locale = get_selected_locale ();
-            var selected_format = get_format ();
-            debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
-            lm.apply_to_system (selected_locale, selected_format);
+            var selected_system_locale = get_selected_locale ();
+            var selected_system_format = get_format ();
+            debug ("Setting system language to '%s' and format to '%s'", selected_system_locale, selected_system_format);
+            lm.apply_to_system (selected_system_locale, selected_system_format);
 
             settings_changed ();
+            compare();
         }
     }
 }
