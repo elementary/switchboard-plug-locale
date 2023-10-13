@@ -1,11 +1,11 @@
-Source: switchboard-plug-locale
+Source: io.elementary.settings.locale
 Section: x11
 Priority: optional
-Maintainer: elementary LLC <builds@elementary.io>
+Maintainer: elementary, Inc. <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
-               libgranite-dev,
-               libswitchboard-2.0-dev,
-               libgnome-desktop-3-dev,
+               libgranite-7-dev,
+               libswitchboard-3-dev,
+               libgnome-desktop-4-dev,
                libaccountsservice-dev,
                libibus-1.0-dev,
                meson (>= 0.46.1),
@@ -14,9 +14,9 @@ Build-Depends: debhelper (>= 10.5.1),
 Standards-Version: 4.1.1
 Homepage: https://github.com/elementary/switchboard-plug-locale
 
-Package: switchboard-plug-locale
+Package: io.elementary.settings.locale
 Architecture: any
-Depends: aptdaemon, ${misc:Depends}, ${shlibs:Depends}
-Enhances: switchboard
+Depends: aptdaemon, io.elementary.settings, ${misc:Depends}, ${shlibs:Depends}
+Enhances: io.elementary.settings
 Description: Region & Language plug for Switchboard
  Change your region and language settings
