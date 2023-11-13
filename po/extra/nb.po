@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2023-07-08 21:07+0000\n"
+"PO-Revision-Date: 2023-11-14 16:10+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:20
 msgid "Improvements:"
-msgstr ""
+msgstr "Forbedringer:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:22
 msgid "Central Kurdish is now available as an installable language"
