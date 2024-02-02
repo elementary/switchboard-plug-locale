@@ -15,7 +15,7 @@
 */
 
 namespace SwitchboardPlugLocale.Widgets {
-    public class LocaleSetting : Granite.SimpleSettingsPage {
+    public class LocaleSetting : Switchboard.SettingsPage {
         private Gtk.Button set_button;
         private Gtk.ComboBox format_combobox;
         private Gtk.ComboBox region_combobox;
@@ -32,7 +32,7 @@ namespace SwitchboardPlugLocale.Widgets {
         public signal void settings_changed ();
 
         public LocaleSetting () {
-            Object (icon_name: "preferences-desktop-locale");
+            Object (icon: new ThemedIcon ("preferences-desktop-locale"));
         }
 
         construct {
@@ -59,7 +59,9 @@ namespace SwitchboardPlugLocale.Widgets {
             format_combobox.changed.connect (compare);
             format_combobox.active = 0;
 
-            preview = new Preview ();
+            preview = new Preview () {
+                halign = CENTER
+            };
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
@@ -71,12 +73,17 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = Gtk.Align.END
             };
 
-            content_area.halign = Gtk.Align.CENTER;
+            var content_area = new Gtk.Grid () {
+                column_spacing = 6,
+                row_spacing = 12
+            };
             content_area.attach (region_endlabel, 0, 2);
             content_area.attach (region_combobox, 1, 2, 2);
             content_area.attach (formats_label, 0, 3);
             content_area.attach (format_combobox, 1, 3, 2);
             content_area.attach (preview, 0, 5, 3);
+
+            child = content_area;
 
             if (temperature_settings != null) {
                 var temperature_label = new Gtk.Label (_("Temperature:")) {
@@ -120,22 +127,14 @@ namespace SwitchboardPlugLocale.Widgets {
                 });
             }
 
-            set_button = new Gtk.Button.with_label (_("Set Language"));
+            set_button = add_button (_("Set Language"));
             set_button.sensitive = false;
             set_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-            var set_system_button = new Gtk.Button.with_label (_("Set System Language"));
+            var set_system_button = add_button (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
 
-            var keyboard_button = new Gtk.Button.with_label (_("Keyboard Settings…")) {
-                halign = Gtk.Align.START,
-                hexpand = true
-            };
-
-            action_area.halign = Gtk.Align.FILL;
-            action_area.append (keyboard_button);
-            action_area.append (set_system_button);
-            action_area.append (set_button);
+            var keyboard_button = add_start_button (_("Keyboard Settings…"));
 
             keyboard_button.clicked.connect (() => {
                 try {
