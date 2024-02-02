@@ -32,7 +32,7 @@ namespace SwitchboardPlugLocale.Widgets {
         public signal void settings_changed ();
 
         public LocaleSetting () {
-            Object (icon_name: "preferences-desktop-locale");
+            Object (icon: new ThemedIcon ("preferences-desktop-locale"));
         }
 
         construct {
