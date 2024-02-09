@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2023-11-14 16:10+0000\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/nb/>\n"
@@ -66,7 +66,7 @@ msgstr "Småoppdateringer:"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:46
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Bedre støtte for distribusjoner som ikke er basert på Ubuntu"
 
 #: data/io.elementary.switchboard.locale.appdata.xml.in:47
 #: data/io.elementary.switchboard.locale.appdata.xml.in:54
