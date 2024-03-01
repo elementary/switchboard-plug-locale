@@ -84,6 +84,7 @@ namespace SwitchboardPlugLocale.Widgets {
             content_area.attach (preview, 0, 5, 3);
 
             child = content_area;
+            show_end_title_buttons = true;
 
             if (temperature_settings != null) {
                 var temperature_label = new Gtk.Label (_("Temperature:")) {

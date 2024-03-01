@@ -35,6 +35,7 @@ shared_module(
         dependency('granite-7'),
         dependency('gtk4'),
         dependency('ibus-1.0'),
+        adw_dep,
         polkit_dep,
         switchboard_dep,
         vala_compiler.find_library('monetary', dirs: join_paths(meson.source_root(), 'vapi')),

@@ -16,7 +16,7 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Box {
-        private Gtk.Box sidebar;
+        private Adw.ToolbarView toolbarview;
 
         public LanguageListBox list_box;
         public LocaleSetting locale_setting;
@@ -33,6 +33,11 @@ namespace SwitchboardPlugLocale.Widgets {
 
             var scroll = new Gtk.ScrolledWindow () {
                 child = list_box
+            };
+
+            var headerbar = new Adw.HeaderBar () {
+                show_end_title_buttons = false,
+                show_title = false
             };
 
             var popover = new Widgets.InstallPopover ();
@@ -52,9 +57,13 @@ namespace SwitchboardPlugLocale.Widgets {
             action_bar.pack_start (add_button);
             action_bar.pack_start (remove_button);
 
-            sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            sidebar.append (scroll);
-            sidebar.append (action_bar);
+            var toolbarview = new Adw.ToolbarView () {
+                content = scroll,
+                top_bar_style = FLAT
+            };
+            toolbarview.add_top_bar (headerbar);
+            toolbarview.add_bottom_bar (action_bar);
+            toolbarview.add_css_class (Granite.STYLE_CLASS_SIDEBAR);
 
             locale_setting = new LocaleSetting ();
             locale_setting.settings_changed.connect (() => {
@@ -62,7 +71,7 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
-                start_child = sidebar,
+                start_child = toolbarview,
                 shrink_start_child = false,
                 resize_start_child = false,
                 end_child = locale_setting,
@@ -121,7 +130,7 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void make_sensitive (bool sensitive) {
-            sidebar.sensitive = sensitive;
+            toolbarview.sensitive = sensitive;
             locale_setting.sensitive = sensitive;
         }
     }
