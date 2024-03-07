@@ -219,9 +219,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public async void reload_locales (string language, Gee.HashSet<string> locales) {
             this.language = language;
-            uint selected_locale_id = 0;
-            bool user_locale_found = false;
-            int locales_added = 0;
 
             locale_list.remove_all ();
 
@@ -238,24 +235,16 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 var locale_object = new Locale (region_string, locale);
 
-                locale_list.insert_sorted (locale_object, locale_sort_func);
+                var position = locale_list.insert_sorted (locale_object, locale_sort_func);
 
                 if (user_locale == locale) {
-                    locale_list.find (locale_object, out selected_locale_id);
-                    user_locale_found = true;
+                    region_dropdown.selected = position;
+                } else if (default_regions.has_key (language) && locale.has_prefix (default_regions[language])) {
+                    region_dropdown.selected = position;
                 }
-
-                if (!user_locale_found && default_regions.has_key (language)) {
-                    if (locale.has_prefix (default_regions[language])) {
-                        locale_list.find (locale_object, out selected_locale_id);
-                    }
-                }
-
-                locales_added++;
             }
 
-            region_dropdown.sensitive = locales_added > 1;
-            region_dropdown.selected = selected_locale_id + 1;
+            region_dropdown.sensitive = locale_list.n_items > 1;
 
             compare ();
         }
