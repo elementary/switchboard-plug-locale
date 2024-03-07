@@ -19,7 +19,6 @@ namespace SwitchboardPlugLocale {
         private Gtk.Box box;
         Widgets.LocaleView view;
 
-        public Gtk.InfoBar infobar;
         public Gtk.InfoBar missing_lang_infobar;
 
         private Installer.UbuntuInstaller installer;
@@ -74,8 +73,6 @@ namespace SwitchboardPlugLocale {
             unowned LocaleManager lm = LocaleManager.get_default ();
             if (lm.is_connected) {
                 reload.begin ();
-
-                infobar.revealed = false;
             }
 
             installer.install_finished.connect ((langcode) => {
@@ -116,13 +113,6 @@ namespace SwitchboardPlugLocale {
 
         // Wires up and configures initial UI
         private void setup_ui () {
-            // Gtk.InfoBar for informing about necessary log-out/log-in
-            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
-            infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.WARNING;
-            infobar.revealed = false;
-            infobar.add_child (label);
-
             // Gtk.InfoBar for language support installation
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
@@ -135,7 +125,6 @@ namespace SwitchboardPlugLocale {
             view = new Widgets.LocaleView (this);
 
             box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            box.append (infobar);
             box.append (missing_lang_infobar);
             box.append (view);
 
