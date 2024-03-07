@@ -93,20 +93,11 @@ namespace SwitchboardPlugLocale.Widgets {
 
             unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
-            installer.install_finished.connect (() => {
-                make_sensitive (true);
-            });
-
-            installer.remove_finished.connect (() => {
-                make_sensitive (true);
-            });
-
             remove_button.clicked.connect (() => {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
 
-                make_sensitive (false);
                 installer.remove (list_box.get_selected_language_code ());
             });
 
@@ -115,14 +106,8 @@ namespace SwitchboardPlugLocale.Widgets {
                     return;
                 }
 
-                make_sensitive (false);
                 installer.install (lang);
             });
-        }
-
-        private void make_sensitive (bool sensitive) {
-            sidebar.sensitive = sensitive;
-            locale_setting.sensitive = sensitive;
         }
     }
 }
