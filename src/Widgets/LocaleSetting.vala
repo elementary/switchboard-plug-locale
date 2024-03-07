@@ -219,6 +219,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public async void reload_locales (string language, Gee.HashSet<string> locales) {
             this.language = language;
+            bool user_locale_found = false;
 
             locale_list.remove_all ();
 
@@ -237,8 +238,13 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 var position = locale_list.insert_sorted (locale_object, locale_sort_func);
 
+                if (user_locale_found) {
+                    continue;
+                }
+
                 if (user_locale == locale) {
                     region_dropdown.selected = position;
+                    user_locale_found = true;
                 } else if (default_regions.has_key (language) && locale.has_prefix (default_regions[language])) {
                     region_dropdown.selected = position;
                 }
