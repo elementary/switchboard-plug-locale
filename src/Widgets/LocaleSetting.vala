@@ -40,21 +40,26 @@ namespace SwitchboardPlugLocale.Widgets {
             format_list = new GLib.ListStore (typeof (Locale));
             locale_list = new GLib.ListStore (typeof (Locale));
 
-            var region_factory = new Gtk.SignalListItemFactory ();
-            region_factory.setup.connect (region_setup_factory);
-            region_factory.bind.connect (region_bind_factory);
+            var expression = new Gtk.CClosureExpression (
+                typeof (string),
+                null,
+                {},
+                (Callback) get_locale_name,
+                null,
+                null
+            );
 
             region_dropdown = new Gtk.DropDown (locale_list, null) {
-                factory = region_factory
+                enable_search = true,
+                expression = expression,
+                search_match_mode = SUBSTRING
             };
             region_dropdown.notify["selected"].connect (compare);
 
-            var format_factory = new Gtk.SignalListItemFactory ();
-            format_factory.setup.connect (region_setup_factory);
-            format_factory.bind.connect (region_bind_factory);
-
             format_dropdown = new Gtk.DropDown (format_list, null) {
-                factory = format_factory
+                enable_search = true,
+                expression = expression,
+                search_match_mode = SUBSTRING
             };
             format_dropdown.notify["selected"].connect (() => {
                 on_format_changed ();
@@ -297,22 +302,8 @@ namespace SwitchboardPlugLocale.Widgets {
             restart_infobar.revealed = true;
         }
 
-        private void region_setup_factory (Object object) {
-            var title = new Gtk.Label ("") {
-                xalign = 0
-            };
-
-            var list_item = (Gtk.ListItem) object;
-            list_item.child = title;
-        }
-
-        private void region_bind_factory (Object object) {
-            var list_item = object as Gtk.ListItem;
-
-            var locale = (Locale) list_item.get_item ();
-
-            var title = (Gtk.Label) list_item.child;
-            title.label = locale.name;
+        private static string get_locale_name (Locale locale) {
+            return locale.name;
         }
 
         private class Locale : Object {
