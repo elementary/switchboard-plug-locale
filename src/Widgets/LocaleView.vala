@@ -57,9 +57,6 @@ namespace SwitchboardPlugLocale.Widgets {
             sidebar.append (action_bar);
 
             locale_setting = new LocaleSetting ();
-            locale_setting.settings_changed.connect (() => {
-                plug.infobar.revealed = true;
-            });
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
                 start_child = sidebar,
