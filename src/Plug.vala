@@ -22,9 +22,6 @@ namespace SwitchboardPlugLocale {
         public Gtk.InfoBar missing_lang_infobar;
 
         private Installer.UbuntuInstaller installer;
-        private ProgressDialog progress_dialog = null;
-
-        private Gee.ArrayList<string> langs;
 
         public Plug () {
             GLib.Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
@@ -53,38 +50,8 @@ namespace SwitchboardPlugLocale {
             return box;
         }
 
-        private async void reload () {
-            new Thread<void*> ("load-lang-data", () => {
-                langs = Utils.get_installed_languages ();
-
-                Idle.add (() => {
-                    view.list_box.reload_languages (langs);
-                    view.locale_setting.reload_formats (langs);
-                    return false;
-                });
-
-                return null;
-            });
-
-            yield installer.check_missing_languages ();
-        }
-
         void setup_info () {
-            unowned LocaleManager lm = LocaleManager.get_default ();
-            if (lm.is_connected) {
-                reload.begin ();
-            }
-
-            installer.install_finished.connect ((langcode) => {
-                reload.begin ();
-            });
-
-            installer.remove_finished.connect ((langcode) => {
-                reload.begin ();
-            });
-
             installer.check_missing_finished.connect (on_check_missing_finished);
-            installer.progress_changed.connect (on_progress_changed);
         }
 
         public override void shown () {
@@ -140,25 +107,6 @@ namespace SwitchboardPlugLocale {
             } else {
                 missing_lang_infobar.revealed = false;
             }
-        }
-
-        private void on_progress_changed (int progress) {
-            if (progress_dialog != null) {
-                progress_dialog.progress = progress;
-                return;
-            }
-
-            progress_dialog = new ProgressDialog () {
-                modal = true,
-                progress = progress,
-                transient_for = (Gtk.Window) box.get_root ()
-            };
-            progress_dialog.present ();
-
-            progress_dialog.response.connect (() => {
-                progress_dialog.destroy ();
-                progress_dialog = null;
-            });
         }
     }
 }
