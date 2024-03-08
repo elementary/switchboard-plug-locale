@@ -16,10 +16,7 @@
 
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
-        private Gtk.Box box;
-        Widgets.LocaleView view;
-
-        public Gtk.InfoBar infobar;
+        private Widgets.LocaleView view;
 
         private Installer.UbuntuInstaller installer;
         private ProgressDialog progress_dialog = null;
@@ -42,15 +39,15 @@ namespace SwitchboardPlugLocale {
         }
 
         public override Gtk.Widget get_widget () {
-            if (box == null) {
+            if (view == null) {
                 Utils.init ();
                 installer = Installer.UbuntuInstaller.get_default ();
 
-                setup_ui ();
+                view = new Widgets.LocaleView (this);
                 setup_info ();
             }
 
-            return box;
+            return view;
         }
 
         private async void reload () {
@@ -73,8 +70,6 @@ namespace SwitchboardPlugLocale {
             unowned LocaleManager lm = LocaleManager.get_default ();
             if (lm.is_connected) {
                 reload.begin ();
-
-                infobar.revealed = false;
             }
 
             installer.install_finished.connect ((langcode) => {
@@ -112,22 +107,6 @@ namespace SwitchboardPlugLocale {
             return search_results;
         }
 
-        // Wires up and configures initial UI
-        private void setup_ui () {
-            // Gtk.InfoBar for informing about necessary log-out/log-in
-            var label = new Gtk.Label (_("Some changes will not take effect until you log out"));
-            infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.WARNING;
-            infobar.revealed = false;
-            infobar.add_child (label);
-
-            view = new Widgets.LocaleView (this);
-
-            box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            box.append (infobar);
-            box.append (view);
-        }
-
         private void on_progress_changed (int progress) {
             if (progress_dialog != null) {
                 progress_dialog.progress = progress;
@@ -137,7 +116,7 @@ namespace SwitchboardPlugLocale {
             progress_dialog = new ProgressDialog () {
                 modal = true,
                 progress = progress,
-                transient_for = (Gtk.Window) box.get_root ()
+                transient_for = (Gtk.Window) view.get_root ()
             };
             progress_dialog.present ();
 
