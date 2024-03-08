@@ -45,7 +45,7 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
 
         var button_add = new Gtk.Button.with_label (_("Install Language"));
         button_add.sensitive = false;
-        button_add.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        button_add.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         var button_cancel = new Gtk.Button.with_label (_("Cancel"));
 
