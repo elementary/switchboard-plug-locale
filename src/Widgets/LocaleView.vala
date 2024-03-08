@@ -16,18 +16,12 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Box {
-        public weak Plug plug { get; construct; }
-
         private Gee.ArrayList<string> langs;
         private Gtk.Box sidebar;
         private Installer.UbuntuInstaller installer;
         private LanguageListBox list_box;
         private LocaleSetting locale_setting;
         private ProgressDialog progress_dialog = null;
-
-        public LocaleView (Plug plug) {
-            Object (plug: plug);
-        }
 
         construct {
             var locale_manager = LocaleManager.get_default ();

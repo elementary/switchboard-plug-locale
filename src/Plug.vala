@@ -89,7 +89,7 @@ namespace SwitchboardPlugLocale {
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.add_child (missing_label);
 
-            view = new Widgets.LocaleView (this);
+            view = new Widgets.LocaleView ();
 
             box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             box.append (missing_lang_infobar);
