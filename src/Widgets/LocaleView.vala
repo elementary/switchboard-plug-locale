@@ -39,10 +39,17 @@ namespace SwitchboardPlugLocale.Widgets {
                 modal = true
             };
 
+            var install_label = new Gtk.Label (_("Install Language"));
+
+            var add_box = new Gtk.Box (HORIZONTAL, 0);
+            add_box.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
+            add_box.append (install_label);
+
             var add_button = new Gtk.Button () {
-                icon_name = "list-add-symbolic",
-                tooltip_text = _("Install language")
+                child = add_box,
+                has_frame = false
             };
+            install_label.mnemonic_widget = add_button;
 
             var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
                 tooltip_text = _("Remove language")
