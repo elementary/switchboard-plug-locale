@@ -5,7 +5,7 @@ plug_files = files(
     'LocaleManager.vala',
     'Installer/UbuntuInstaller.vala',
     'Installer/aptd-client.vala',
-    'Widgets/InstallPopover.vala',
+    'Widgets/InstallDialog.vala',
     'Widgets/LanguageListBox.vala',
     'Widgets/LocaleView.vala',
     'Widgets/LocaleSetting.vala',

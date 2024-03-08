@@ -17,10 +17,10 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Switchboard.SettingsPage {
         private Gtk.Button set_button;
-        private Gtk.ComboBox format_combobox;
         private Gtk.InfoBar restart_infobar;
+        private Gtk.DropDown format_dropdown;
         private Gtk.DropDown region_dropdown;
-        private Gtk.ListStore format_store;
+        private GLib.ListStore format_list;
         private GLib.ListStore locale_list;
 
         private LocaleManager lm;
@@ -37,11 +37,7 @@ namespace SwitchboardPlugLocale.Widgets {
         construct {
             lm = LocaleManager.get_default ();
 
-            var region_label = new Gtk.Label ("");
-            region_label.halign = Gtk.Align.START;
-
-            Gtk.CellRendererText renderer = new Gtk.CellRendererText ();
-
+            format_list = new GLib.ListStore (typeof (Locale));
             locale_list = new GLib.ListStore (typeof (Locale));
 
             var region_factory = new Gtk.SignalListItemFactory ();
@@ -53,14 +49,17 @@ namespace SwitchboardPlugLocale.Widgets {
             };
             region_dropdown.notify["selected"].connect (compare);
 
-            format_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+            var format_factory = new Gtk.SignalListItemFactory ();
+            format_factory.setup.connect (region_setup_factory);
+            format_factory.bind.connect (region_bind_factory);
 
-            format_combobox = new Gtk.ComboBox.with_model (format_store);
-            format_combobox.pack_start (renderer, true);
-            format_combobox.add_attribute (renderer, "text", 0);
-            format_combobox.changed.connect (on_format_changed);
-            format_combobox.changed.connect (compare);
-            format_combobox.active = 0;
+            format_dropdown = new Gtk.DropDown (format_list, null) {
+                factory = format_factory
+            };
+            format_dropdown.notify["selected"].connect (() => {
+                on_format_changed ();
+                compare ();
+            });
 
             preview = new Preview () {
                 halign = CENTER
@@ -90,7 +89,7 @@ namespace SwitchboardPlugLocale.Widgets {
             content_area.attach (region_endlabel, 0, 2);
             content_area.attach (region_dropdown, 1, 2, 2);
             content_area.attach (formats_label, 0, 3);
-            content_area.attach (format_combobox, 1, 3, 2);
+            content_area.attach (format_dropdown, 1, 3, 2);
             content_area.attach (preview, 0, 5, 3);
             content_area.attach (restart_infobar, 0, 6, 3);
 
@@ -194,16 +193,12 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         public string get_format () {
-            Gtk.TreeIter iter;
-            string format;
-
-            if (!format_combobox.get_active_iter (out iter)) {
+            var locale_object = (Locale) format_dropdown.selected_item;
+            if (locale_object == null) {
                 return "";
             }
 
-            format_store.get (iter, 1, out format);
-
-            return format;
+            return locale_object.locale;
         }
 
         private void on_format_changed () {
@@ -268,36 +263,23 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         public void reload_formats (Gee.ArrayList<string>? locales) {
-            format_store.clear ();
+            format_list.remove_all ();
             var user_format = lm.get_user_format ();
 
-            int i = 0;
-            string? active_id = null;
             foreach (var locale in locales) {
                 string country = Gnome.Languages.get_country_from_locale (locale, null);
 
                 if (country != null) {
-                    var iter = Gtk.TreeIter ();
-                    format_store.append (out iter);
-                    format_store.set (iter, 0, country, 1, locale);
+                    var locale_object = new Locale (country, locale);
+                    var position = format_list.insert_sorted (locale_object, locale_sort_func);
 
                     if (locale == user_format) {
-                        active_id = locale;
+                        format_dropdown.selected = position;
                     }
-
-                    i++;
                 }
             }
 
-            format_combobox.id_column = 1;
-            format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            if (active_id != null) {
-                format_combobox.active_id = active_id;
-            } else {
-                format_combobox.active = 0;
-            }
-
-            format_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
+            format_dropdown.sensitive = format_list.n_items > 1;
 
             compare ();
         }
