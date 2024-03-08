@@ -18,6 +18,7 @@ namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Switchboard.SettingsPage {
         private Gtk.Button set_button;
         private Gtk.ComboBox format_combobox;
+        private Gtk.InfoBar restart_infobar;
         private Gtk.DropDown region_dropdown;
         private Gtk.ListStore format_store;
         private GLib.ListStore locale_list;
@@ -28,8 +29,6 @@ namespace SwitchboardPlugLocale.Widgets {
         private Gtk.Label region_endlabel;
 
         private static GLib.Settings? temperature_settings = null;
-
-        public signal void settings_changed ();
 
         public LocaleSetting () {
             Object (icon: new ThemedIcon ("preferences-desktop-locale"));
@@ -77,6 +76,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = Gtk.Align.END
             };
 
+            restart_infobar = new Gtk.InfoBar () {
+                message_type = WARNING,
+                revealed = false
+            };
+            restart_infobar.add_child (new Gtk.Label (_("Some changes will not take effect until you log out")));
+            restart_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+
             var content_area = new Gtk.Grid () {
                 column_spacing = 6,
                 row_spacing = 12
@@ -86,6 +92,7 @@ namespace SwitchboardPlugLocale.Widgets {
             content_area.attach (formats_label, 0, 3);
             content_area.attach (format_combobox, 1, 3, 2);
             content_area.attach (preview, 0, 5, 3);
+            content_area.attach (restart_infobar, 0, 6, 3);
 
             child = content_area;
 
@@ -159,7 +166,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 debug ("Setting user format to '%s'", format);
                 lm.set_user_format (format);
 
-                settings_changed ();
+                restart_infobar.revealed = true;
             });
 
             set_system_button.clicked.connect (() => {
@@ -210,6 +217,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private void compare () {
             if (set_button != null) {
                 if (lm.get_user_language () == get_selected_locale () && lm.get_user_format () == get_format ()) {
+                    restart_infobar.revealed = false;
                     set_button.sensitive = false;
                 } else {
                     set_button.sensitive = true;
@@ -304,7 +312,7 @@ namespace SwitchboardPlugLocale.Widgets {
             debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
             lm.apply_to_system (selected_locale, selected_format);
 
-            settings_changed ();
+            restart_infobar.revealed = true;
         }
 
         private void region_setup_factory (Object object) {
