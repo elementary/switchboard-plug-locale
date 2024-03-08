@@ -14,22 +14,17 @@
 * with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
+public class SwitchboardPlugLocale.Widgets.InstallDialog : Granite.Dialog {
     public signal void language_selected (string lang);
 
     private Gtk.SearchEntry search_entry;
     private Gtk.ListBox list_box;
 
     construct {
-        height_request = 400;
-        width_request = 400;
+        default_height = 400;
+        default_width = 400;
 
-        search_entry = new Gtk.SearchEntry () {
-            margin_top = 12,
-            margin_end = 12,
-            margin_bottom = 12,
-            margin_start = 12
-        };
+        search_entry = new Gtk.SearchEntry ();
 
         list_box = new Gtk.ListBox () {
             hexpand = true,
@@ -42,33 +37,19 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
         var scrolled = new Gtk.ScrolledWindow () {
             child = list_box
         };
+        scrolled.add_css_class (Granite.STYLE_CLASS_FRAME);
 
-        var button_add = new Gtk.Button.with_label (_("Install Language"));
-        button_add.sensitive = false;
-        button_add.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-
-        var button_cancel = new Gtk.Button.with_label (_("Cancel"));
-
-        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
-            halign = Gtk.Align.END,
-            hexpand = true,
-            homogeneous = true,
-            margin_top = 12,
-            margin_end = 12,
-            margin_bottom = 12,
-            margin_start = 12
-        };
-        button_box.append (button_cancel);
-        button_box.append (button_add);
-
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
         box.append (search_entry);
         box.append (scrolled);
-        box.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        box.append (button_box);
 
-        child = box;
-        halign = Gtk.Align.START;
+        get_content_area ().append (box);
+
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+
+        var button_add = (Gtk.Button)add_button (_("Install Language"), Gtk.ResponseType.ACCEPT);
+        button_add.sensitive = false;
+        button_add.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         load_languagelist ();
 
@@ -81,12 +62,17 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
             button_add.label = _("Install %s").printf (Utils.translate (langrow.lang, "C"));
         });
 
-        list_box.row_activated.connect (install_selected);
+        list_box.row_activated.connect (() => {
+            install_selected ();
+            hide ();
+        });
 
-        button_add.clicked.connect (install_selected);
+        response.connect ((response) => {
+            if (response == Gtk.ResponseType.ACCEPT) {
+                install_selected ();
+            }
 
-        button_cancel.clicked.connect (() => {
-            popdown ();
+            hide ();
         });
 
         search_entry.activate.connect (() => {
@@ -99,8 +85,6 @@ public class SwitchboardPlugLocale.Widgets.InstallPopover : Gtk.Popover {
     }
 
     private void install_selected () {
-        popdown ();
-
         var langrow = (LangRow) list_box.get_selected_row ();
         language_selected (langrow.lang);
     }

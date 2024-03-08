@@ -35,11 +35,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 child = list_box
             };
 
-            var popover = new Widgets.InstallPopover ();
+            var install_dialog = new Widgets.InstallDialog () {
+                modal = true
+            };
 
-            var add_button = new Gtk.MenuButton () {
+            var add_button = new Gtk.Button () {
                 icon_name = "list-add-symbolic",
-                popover = popover,
                 tooltip_text = _("Install language")
             };
 
@@ -98,7 +99,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 installer.remove (list_box.get_selected_language_code ());
             });
 
-            popover.language_selected.connect ((lang) => {
+            add_button.clicked.connect (() => {
+                install_dialog.transient_for = (Gtk.Window) get_root ();
+                install_dialog.present ();
+            });
+
+            install_dialog.language_selected.connect ((lang) => {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
