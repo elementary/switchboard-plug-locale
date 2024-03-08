@@ -76,7 +76,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = Gtk.Align.END
             };
 
-
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
             missing_lang_infobar = new Gtk.InfoBar () {
