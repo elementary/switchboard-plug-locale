@@ -17,6 +17,7 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Switchboard.SettingsPage {
         private Gtk.Button set_button;
+        private Gtk.InfoBar missing_lang_infobar;
         private Gtk.InfoBar restart_infobar;
         private Gtk.DropDown format_dropdown;
         private Gtk.DropDown region_dropdown;
@@ -75,6 +76,16 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = Gtk.Align.END
             };
 
+            var missing_label = new Gtk.Label (_("Language support is not installed completely"));
+
+            missing_lang_infobar = new Gtk.InfoBar () {
+                message_type = WARNING,
+                revealed = false
+            };
+            missing_lang_infobar.add_button (_("Complete Installation"), 0);
+            missing_lang_infobar.add_child (missing_label);
+            missing_lang_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+
             restart_infobar = new Gtk.InfoBar () {
                 message_type = WARNING,
                 revealed = false
@@ -91,7 +102,8 @@ namespace SwitchboardPlugLocale.Widgets {
             content_area.attach (formats_label, 0, 3);
             content_area.attach (format_dropdown, 1, 3, 2);
             content_area.attach (preview, 0, 5, 3);
-            content_area.attach (restart_infobar, 0, 6, 3);
+            content_area.attach (missing_lang_infobar, 0, 6, 3);
+            content_area.attach (restart_infobar, 0, 7, 3);
 
             child = content_area;
 
@@ -154,6 +166,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
+            unowned var installer = Installer.UbuntuInstaller.get_default ();
+
+            missing_lang_infobar.response.connect (() => {
+                missing_lang_infobar.revealed = false;
+                installer.install_missing_languages ();
+            });
+
             set_button.clicked.connect (() => {
                 var locale = get_selected_locale ();
                 debug ("Setting user language to '%s'", locale);
@@ -175,6 +194,12 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 on_applied_to_system ();
             });
+
+            installer.check_missing_finished.connect (on_check_missing_finished);
+        }
+
+        private void on_check_missing_finished (string[] missing) {
+            missing_lang_infobar.revealed = missing.length > 0;
         }
 
         static construct {
