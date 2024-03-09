@@ -324,10 +324,6 @@ namespace SwitchboardPlugLocale.Widgets {
             restart_infobar.revealed = true;
         }
 
-        private static string get_locale_name (Locale locale) {
-            return locale.name;
-        }
-
         private class Locale : Object {
             public string name { get; construct; }
             public string locale { get; construct; }
