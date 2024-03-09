@@ -224,8 +224,12 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
 
         var removable = new Gee.ArrayList<string> ();
         foreach (var packet in installed) {
-            if (!(packet in multilang_packs) && !(packet in missing_packs))
+            if (!(packet in multilang_packs) &&
+                !(packet in missing_packs) &&
+                !packet.contains ("font")
+            ) {
                 removable.add (packet);
+            }
         }
 
         return removable.to_array ();
