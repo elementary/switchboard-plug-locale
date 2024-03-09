@@ -17,10 +17,12 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleSetting : Switchboard.SettingsPage {
         private Gtk.Button set_button;
-        private Gtk.ComboBox format_combobox;
-        private Gtk.ComboBox region_combobox;
-        private Gtk.ListStore format_store;
-        private Gtk.ListStore region_store;
+        private Gtk.InfoBar missing_lang_infobar;
+        private Gtk.InfoBar restart_infobar;
+        private Gtk.DropDown format_dropdown;
+        private Gtk.DropDown region_dropdown;
+        private GLib.ListStore format_list;
+        private GLib.ListStore locale_list;
 
         private LocaleManager lm;
         private Preview preview;
@@ -29,8 +31,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
         private static GLib.Settings? temperature_settings = null;
 
-        public signal void settings_changed ();
-
         public LocaleSetting () {
             Object (icon: new ThemedIcon ("preferences-desktop-locale"));
         }
@@ -38,26 +38,31 @@ namespace SwitchboardPlugLocale.Widgets {
         construct {
             lm = LocaleManager.get_default ();
 
-            var region_label = new Gtk.Label ("");
-            region_label.halign = Gtk.Align.START;
+            format_list = new GLib.ListStore (typeof (Locale));
+            locale_list = new GLib.ListStore (typeof (Locale));
 
-            Gtk.CellRendererText renderer = new Gtk.CellRendererText ();
-            region_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+            var expression = new Gtk.PropertyExpression (
+                typeof (Locale),
+                null,
+                "name"
+            );
 
-            region_combobox = new Gtk.ComboBox.with_model (region_store);
-            region_combobox.height_request = 27;
-            region_combobox.pack_start (renderer, true);
-            region_combobox.add_attribute (renderer, "text", 0);
-            region_combobox.changed.connect (compare);
+            region_dropdown = new Gtk.DropDown (locale_list, null) {
+                enable_search = true,
+                expression = expression,
+                search_match_mode = SUBSTRING
+            };
+            region_dropdown.notify["selected"].connect (compare);
 
-            format_store = new Gtk.ListStore (2, typeof (string), typeof (string));
-
-            format_combobox = new Gtk.ComboBox.with_model (format_store);
-            format_combobox.pack_start (renderer, true);
-            format_combobox.add_attribute (renderer, "text", 0);
-            format_combobox.changed.connect (on_format_changed);
-            format_combobox.changed.connect (compare);
-            format_combobox.active = 0;
+            format_dropdown = new Gtk.DropDown (format_list, null) {
+                enable_search = true,
+                expression = expression,
+                search_match_mode = SUBSTRING
+            };
+            format_dropdown.notify["selected"].connect (() => {
+                on_format_changed ();
+                compare ();
+            });
 
             preview = new Preview () {
                 halign = CENTER
@@ -73,15 +78,34 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = Gtk.Align.END
             };
 
+            var missing_label = new Gtk.Label (_("Language support is not installed completely"));
+
+            missing_lang_infobar = new Gtk.InfoBar () {
+                message_type = WARNING,
+                revealed = false
+            };
+            missing_lang_infobar.add_button (_("Complete Installation"), 0);
+            missing_lang_infobar.add_child (missing_label);
+            missing_lang_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+
+            restart_infobar = new Gtk.InfoBar () {
+                message_type = WARNING,
+                revealed = false
+            };
+            restart_infobar.add_child (new Gtk.Label (_("Some changes will not take effect until you log out")));
+            restart_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+
             var content_area = new Gtk.Grid () {
                 column_spacing = 6,
                 row_spacing = 12
             };
             content_area.attach (region_endlabel, 0, 2);
-            content_area.attach (region_combobox, 1, 2, 2);
+            content_area.attach (region_dropdown, 1, 2, 2);
             content_area.attach (formats_label, 0, 3);
-            content_area.attach (format_combobox, 1, 3, 2);
+            content_area.attach (format_dropdown, 1, 3, 2);
             content_area.attach (preview, 0, 5, 3);
+            content_area.attach (missing_lang_infobar, 0, 6, 3);
+            content_area.attach (restart_infobar, 0, 7, 3);
 
             child = content_area;
             show_end_title_buttons = true;
@@ -130,7 +154,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
             set_button = add_button (_("Set Language"));
             set_button.sensitive = false;
-            set_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+            set_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
             var set_system_button = add_button (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
@@ -145,6 +169,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
+            unowned var installer = Installer.UbuntuInstaller.get_default ();
+
+            missing_lang_infobar.response.connect (() => {
+                missing_lang_infobar.revealed = false;
+                installer.install_missing_languages ();
+            });
+
             set_button.clicked.connect (() => {
                 var locale = get_selected_locale ();
                 debug ("Setting user language to '%s'", locale);
@@ -156,7 +187,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 debug ("Setting user format to '%s'", format);
                 lm.set_user_format (format);
 
-                settings_changed ();
+                restart_infobar.revealed = true;
             });
 
             set_system_button.clicked.connect (() => {
@@ -166,6 +197,12 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 on_applied_to_system ();
             });
+
+            installer.check_missing_finished.connect (on_check_missing_finished);
+        }
+
+        private void on_check_missing_finished (string[] missing) {
+            missing_lang_infobar.revealed = missing.length > 0;
         }
 
         static construct {
@@ -175,29 +212,21 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         public string get_selected_locale () {
-            Gtk.TreeIter iter;
-            string locale;
-
-            if (!region_combobox.get_active_iter (out iter)) {
+            var locale_object = (Locale) region_dropdown.selected_item;
+            if (locale_object == null) {
                 return "";
             }
 
-            region_store.get (iter, 1, out locale);
-
-            return locale;
+            return locale_object.locale;
         }
 
         public string get_format () {
-            Gtk.TreeIter iter;
-            string format;
-
-            if (!format_combobox.get_active_iter (out iter)) {
+            var locale_object = (Locale) format_dropdown.selected_item;
+            if (locale_object == null) {
                 return "";
             }
 
-            format_store.get (iter, 1, out format);
-
-            return format;
+            return locale_object.locale;
         }
 
         private void on_format_changed () {
@@ -211,6 +240,7 @@ namespace SwitchboardPlugLocale.Widgets {
         private void compare () {
             if (set_button != null) {
                 if (lm.get_user_language () == get_selected_locale () && lm.get_user_format () == get_format ()) {
+                    restart_infobar.revealed = false;
                     set_button.sensitive = false;
                 } else {
                     set_button.sensitive = true;
@@ -220,11 +250,9 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public async void reload_locales (string language, Gee.HashSet<string> locales) {
             this.language = language;
-            string? selected_locale_id = null;
             bool user_locale_found = false;
-            int locales_added = 0;
 
-            region_store.clear ();
+            locale_list.remove_all ();
 
             var default_regions = yield Utils.get_default_regions ();
             var user_locale = lm.get_user_language ();
@@ -237,68 +265,49 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 var region_string = Utils.translate_region (language, code, language);
 
-                var iter = Gtk.TreeIter ();
-                region_store.append (out iter);
-                region_store.set (iter, 0, region_string, 1, locale);
+                var locale_object = new Locale (region_string, locale);
+
+                var position = locale_list.insert_sorted (locale_object, locale_sort_func);
+
+                if (user_locale_found) {
+                    continue;
+                }
 
                 if (user_locale == locale) {
-                    selected_locale_id = locale;
+                    region_dropdown.selected = position;
                     user_locale_found = true;
+                } else if (default_regions.has_key (language) && locale.has_prefix (default_regions[language])) {
+                    region_dropdown.selected = position;
                 }
-
-                if (!user_locale_found && default_regions.has_key (language)) {
-                    if (locale.has_prefix (default_regions[language])) {
-                        selected_locale_id = locale;
-                    }
-                }
-
-                locales_added++;
             }
 
-            region_combobox.id_column = 1;
-            region_combobox.sensitive = locales_added > 1;
-            if (selected_locale_id != null) {
-                region_combobox.active_id = selected_locale_id;
-            } else {
-                region_combobox.active = 0;
-            }
-
-            region_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
+            region_dropdown.sensitive = locale_list.n_items > 1;
 
             compare ();
         }
 
+        private int locale_sort_func (Object a, Object b) {
+            return ((Locale) a).name.collate (((Locale) b).name);
+        }
+
         public void reload_formats (Gee.ArrayList<string>? locales) {
-            format_store.clear ();
+            format_list.remove_all ();
             var user_format = lm.get_user_format ();
 
-            int i = 0;
-            string? active_id = null;
             foreach (var locale in locales) {
                 string country = Gnome.Languages.get_country_from_locale (locale, null);
 
                 if (country != null) {
-                    var iter = Gtk.TreeIter ();
-                    format_store.append (out iter);
-                    format_store.set (iter, 0, country, 1, locale);
+                    var locale_object = new Locale (country, locale);
+                    var position = format_list.insert_sorted (locale_object, locale_sort_func);
 
                     if (locale == user_format) {
-                        active_id = locale;
+                        format_dropdown.selected = position;
                     }
-
-                    i++;
                 }
             }
 
-            format_combobox.id_column = 1;
-            format_combobox.sensitive = i != 1; // set to unsensitive if only have one item
-            if (active_id != null) {
-                format_combobox.active_id = active_id;
-            } else {
-                format_combobox.active = 0;
-            }
-
-            format_store.set_sort_column_id (0, Gtk.SortType.ASCENDING);
+            format_dropdown.sensitive = format_list.n_items > 1;
 
             compare ();
         }
@@ -313,7 +322,16 @@ namespace SwitchboardPlugLocale.Widgets {
             debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
             lm.apply_to_system (selected_locale, selected_format);
 
-            settings_changed ();
+            restart_infobar.revealed = true;
+        }
+
+        private class Locale : Object {
+            public string name { get; construct; }
+            public string locale { get; construct; }
+
+            public Locale (string name, string locale) {
+                Object (name: name, locale: locale);
+            }
         }
     }
 }

@@ -16,8 +16,6 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Box {
-        private Adw.ToolbarView toolbarview;
-
         public LanguageListBox list_box;
         public LocaleSetting locale_setting;
         public weak Plug plug { get; construct; }
@@ -40,13 +38,21 @@ namespace SwitchboardPlugLocale.Widgets {
                 show_title = false
             };
 
-            var popover = new Widgets.InstallPopover ();
-
-            var add_button = new Gtk.MenuButton () {
-                icon_name = "list-add-symbolic",
-                popover = popover,
-                tooltip_text = _("Install language")
+            var install_dialog = new Widgets.InstallDialog () {
+                modal = true
             };
+
+            var install_label = new Gtk.Label (_("Install Language"));
+
+            var add_box = new Gtk.Box (HORIZONTAL, 0);
+            add_box.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
+            add_box.append (install_label);
+
+            var add_button = new Gtk.Button () {
+                child = add_box,
+                has_frame = false
+            };
+            install_label.mnemonic_widget = add_button;
 
             var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
                 tooltip_text = _("Remove language")
@@ -66,9 +72,6 @@ namespace SwitchboardPlugLocale.Widgets {
             toolbarview.add_css_class (Granite.STYLE_CLASS_SIDEBAR);
 
             locale_setting = new LocaleSetting ();
-            locale_setting.settings_changed.connect (() => {
-                plug.infobar.revealed = true;
-            });
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
                 start_child = toolbarview,
@@ -102,36 +105,26 @@ namespace SwitchboardPlugLocale.Widgets {
 
             unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
 
-            installer.install_finished.connect (() => {
-                make_sensitive (true);
-            });
-
-            installer.remove_finished.connect (() => {
-                make_sensitive (true);
-            });
-
             remove_button.clicked.connect (() => {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
 
-                make_sensitive (false);
                 installer.remove (list_box.get_selected_language_code ());
             });
 
-            popover.language_selected.connect ((lang) => {
+            add_button.clicked.connect (() => {
+                install_dialog.transient_for = (Gtk.Window) get_root ();
+                install_dialog.present ();
+            });
+
+            install_dialog.language_selected.connect ((lang) => {
                 if (!Utils.allowed_permission ()) {
                     return;
                 }
 
-                make_sensitive (false);
                 installer.install (lang);
             });
-        }
-
-        private void make_sensitive (bool sensitive) {
-            toolbarview.sensitive = sensitive;
-            locale_setting.sensitive = sensitive;
         }
     }
 }
