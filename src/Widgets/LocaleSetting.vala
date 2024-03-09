@@ -139,7 +139,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
             set_button = add_button (_("Set Language"));
             set_button.sensitive = false;
-            set_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+            set_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
             var set_system_button = add_button (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
