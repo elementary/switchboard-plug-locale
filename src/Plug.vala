@@ -16,10 +16,7 @@
 
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
-        private Gtk.Box box;
-        Widgets.LocaleView view;
-
-        public Gtk.InfoBar missing_lang_infobar;
+        private Widgets.LocaleView view;
 
         private Installer.UbuntuInstaller installer;
         private ProgressDialog progress_dialog = null;
@@ -42,15 +39,15 @@ namespace SwitchboardPlugLocale {
         }
 
         public override Gtk.Widget get_widget () {
-            if (box == null) {
+            if (view == null) {
                 Utils.init ();
                 installer = Installer.UbuntuInstaller.get_default ();
 
-                setup_ui ();
+                view = new Widgets.LocaleView (this);
                 setup_info ();
             }
 
-            return box;
+            return view;
         }
 
         private async void reload () {
@@ -83,7 +80,6 @@ namespace SwitchboardPlugLocale {
                 reload.begin ();
             });
 
-            installer.check_missing_finished.connect (on_check_missing_finished);
             installer.progress_changed.connect (on_progress_changed);
         }
 
@@ -111,37 +107,6 @@ namespace SwitchboardPlugLocale {
             return search_results;
         }
 
-        // Wires up and configures initial UI
-        private void setup_ui () {
-            // Gtk.InfoBar for language support installation
-            var missing_label = new Gtk.Label (_("Language support is not installed completely"));
-
-            missing_lang_infobar = new Gtk.InfoBar ();
-            missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
-            missing_lang_infobar.revealed = false;
-            missing_lang_infobar.add_button (_("Complete Installation"), 0);
-            missing_lang_infobar.add_child (missing_label);
-
-            view = new Widgets.LocaleView (this);
-
-            box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            box.append (missing_lang_infobar);
-            box.append (view);
-
-            missing_lang_infobar.response.connect (() => {
-                missing_lang_infobar.revealed = false;
-                installer.install_missing_languages ();
-            });
-        }
-
-        private void on_check_missing_finished (string[] missing) {
-            if (missing.length > 0) {
-                missing_lang_infobar.revealed = true;
-            } else {
-                missing_lang_infobar.revealed = false;
-            }
-        }
-
         private void on_progress_changed (int progress) {
             if (progress_dialog != null) {
                 progress_dialog.progress = progress;
@@ -151,7 +116,7 @@ namespace SwitchboardPlugLocale {
             progress_dialog = new ProgressDialog () {
                 modal = true,
                 progress = progress,
-                transient_for = (Gtk.Window) box.get_root ()
+                transient_for = (Gtk.Window) view.get_root ()
             };
             progress_dialog.present ();
 
