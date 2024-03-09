@@ -40,7 +40,7 @@ public class SwitchboardPlugLocale.ProgressDialog : Granite.Dialog {
         primary_label.max_width_chars = 50;
         primary_label.wrap = true;
         primary_label.xalign = 0;
-        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_TITLE_LABEL);
+        primary_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
         switch (installer.transaction_mode) {
             case Installer.UbuntuInstaller.TransactionMode.INSTALL:
