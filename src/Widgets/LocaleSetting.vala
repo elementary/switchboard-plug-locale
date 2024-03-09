@@ -41,13 +41,10 @@ namespace SwitchboardPlugLocale.Widgets {
             format_list = new GLib.ListStore (typeof (Locale));
             locale_list = new GLib.ListStore (typeof (Locale));
 
-            var expression = new Gtk.CClosureExpression (
-                typeof (string),
+            var expression = new Gtk.PropertyExpression (
+                typeof (Locale),
                 null,
-                {},
-                (Callback) get_locale_name,
-                null,
-                null
+                "name"
             );
 
             region_dropdown = new Gtk.DropDown (locale_list, null) {
