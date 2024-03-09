@@ -16,12 +16,7 @@
 
 namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
-        private Gtk.Box box;
-        Widgets.LocaleView view;
-
-        public Gtk.InfoBar missing_lang_infobar;
-
-        private Installer.UbuntuInstaller installer;
+        private Widgets.LocaleView view;
 
         public Plug () {
             GLib.Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
@@ -39,19 +34,12 @@ namespace SwitchboardPlugLocale {
         }
 
         public override Gtk.Widget get_widget () {
-            if (box == null) {
+            if (view == null) {
                 Utils.init ();
-                installer = Installer.UbuntuInstaller.get_default ();
-
-                setup_ui ();
-                setup_info ();
+                view = new Widgets.LocaleView ();
             }
 
-            return box;
-        }
-
-        void setup_info () {
-            installer.check_missing_finished.connect (on_check_missing_finished);
+            return view;
         }
 
         public override void shown () {
@@ -76,37 +64,6 @@ namespace SwitchboardPlugLocale {
             search_results.set ("%s → %s".printf (display_name, _("Formats")), "");
             search_results.set ("%s → %s".printf (display_name, _("Temperature")), "");
             return search_results;
-        }
-
-        // Wires up and configures initial UI
-        private void setup_ui () {
-            // Gtk.InfoBar for language support installation
-            var missing_label = new Gtk.Label (_("Language support is not installed completely"));
-
-            missing_lang_infobar = new Gtk.InfoBar ();
-            missing_lang_infobar.message_type = Gtk.MessageType.WARNING;
-            missing_lang_infobar.revealed = false;
-            missing_lang_infobar.add_button (_("Complete Installation"), 0);
-            missing_lang_infobar.add_child (missing_label);
-
-            view = new Widgets.LocaleView ();
-
-            box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            box.append (missing_lang_infobar);
-            box.append (view);
-
-            missing_lang_infobar.response.connect (() => {
-                missing_lang_infobar.revealed = false;
-                installer.install_missing_languages ();
-            });
-        }
-
-        private void on_check_missing_finished (string[] missing) {
-            if (missing.length > 0) {
-                missing_lang_infobar.revealed = true;
-            } else {
-                missing_lang_infobar.revealed = false;
-            }
         }
     }
 }
