@@ -46,7 +46,8 @@ namespace SwitchboardPlugLocale.Widgets {
             region_factory.bind.connect (region_bind_factory);
 
             region_dropdown = new Gtk.DropDown (locale_list, null) {
-                factory = region_factory
+                factory = region_factory,
+                hexpand = true
             };
             region_dropdown.notify["selected"].connect (compare);
 
@@ -76,6 +77,22 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = Gtk.Align.END
             };
 
+            var layout_label = new Gtk.Label (_("Keyboard Layout:")) {
+                halign = END
+            };
+
+            var layout_link = new Gtk.LinkButton.with_label ("settings://input/keyboard/layout", _("Keyboard settings…")) {
+                halign = START
+            };
+
+            var datetime_label = new Gtk.Label (_("Time Format:")) {
+                halign = END
+            };
+
+            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
+                halign = START
+            };
+
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
             missing_lang_infobar = new Gtk.InfoBar () {
@@ -101,9 +118,13 @@ namespace SwitchboardPlugLocale.Widgets {
             content_area.attach (region_dropdown, 1, 2, 2);
             content_area.attach (formats_label, 0, 3);
             content_area.attach (format_dropdown, 1, 3, 2);
-            content_area.attach (preview, 0, 5, 3);
-            content_area.attach (missing_lang_infobar, 0, 6, 3);
-            content_area.attach (restart_infobar, 0, 7, 3);
+            content_area.attach (layout_label, 0, 5);
+            content_area.attach (layout_link, 1, 5, 2);
+            content_area.attach (datetime_label, 0, 6);
+            content_area.attach (datetime_link, 1, 6, 2);
+            content_area.attach (preview, 0, 7, 3);
+            content_area.attach (missing_lang_infobar, 0, 8, 3);
+            content_area.attach (restart_infobar, 0, 9, 3);
 
             child = content_area;
 
@@ -155,16 +176,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
             var set_system_button = add_button (_("Set System Language"));
             set_system_button.tooltip_text = _("Set language for login screen, guest account and new user accounts");
-
-            var keyboard_button = add_start_button (_("Keyboard Settings…"));
-
-            keyboard_button.clicked.connect (() => {
-                try {
-                    AppInfo.launch_default_for_uri ("settings://input/keyboard/layout", null);
-                } catch (Error e) {
-                    warning ("Failed to open keyboard settings: %s", e.message);
-                }
-            });
 
             unowned var installer = Installer.UbuntuInstaller.get_default ();
 
