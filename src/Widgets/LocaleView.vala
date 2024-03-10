@@ -16,15 +16,12 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Box {
+        private Gee.ArrayList<string> langs;
         private Gtk.Box sidebar;
-
-        public LanguageListBox list_box;
-        public LocaleSetting locale_setting;
-        public weak Plug plug { get; construct; }
-
-        public LocaleView (Plug plug) {
-            Object (plug: plug);
-        }
+        private Installer.UbuntuInstaller installer;
+        private LanguageListBox list_box;
+        private LocaleSetting locale_setting;
+        private ProgressDialog progress_dialog = null;
 
         construct {
             var locale_manager = LocaleManager.get_default ();
@@ -86,7 +83,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 var locales = Utils.get_locales_for_language_code (selected_language_code);
 
                 debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
-                locale_setting.reload_locales (selected_language_code, locales);
+                locale_setting.reload_locales.begin (selected_language_code, locales);
                 locale_setting.reload_labels (selected_language_code);
 
                 if (locale_manager.get_user_language () in locales) {
@@ -96,7 +93,21 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
-            unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
+            unowned var lm = LocaleManager.get_default ();
+            if (lm.is_connected) {
+                reload.begin ();
+            }
+
+            installer = Installer.UbuntuInstaller.get_default ();
+            installer.progress_changed.connect (on_progress_changed);
+
+            installer.install_finished.connect ((langcode) => {
+                reload.begin ();
+            });
+
+            installer.remove_finished.connect ((langcode) => {
+                reload.begin ();
+            });
 
             remove_button.clicked.connect (() => {
                 if (!Utils.allowed_permission ()) {
@@ -117,6 +128,41 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 installer.install (lang);
+            });
+        }
+
+        private async void reload () {
+            new Thread<void*> ("load-lang-data", () => {
+                langs = Utils.get_installed_languages ();
+
+                Idle.add (() => {
+                    list_box.reload_languages (langs);
+                    locale_setting.reload_formats (langs);
+                    return false;
+                });
+
+                return null;
+            });
+
+            yield installer.check_missing_languages ();
+        }
+
+        private void on_progress_changed (int progress) {
+            if (progress_dialog != null) {
+                progress_dialog.progress = progress;
+                return;
+            }
+
+            progress_dialog = new ProgressDialog () {
+                modal = true,
+                progress = progress,
+                transient_for = (Gtk.Window) get_root ()
+            };
+            progress_dialog.present ();
+
+            progress_dialog.response.connect (() => {
+                progress_dialog.destroy ();
+                progress_dialog = null;
             });
         }
     }
