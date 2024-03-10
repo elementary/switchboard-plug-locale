@@ -205,7 +205,9 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         static construct {
-            if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", true) != null) {
+            if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather4", true) != null) {
+                temperature_settings = new Settings ("org.gnome.GWeather4");
+            } else if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", true) != null) {
                 temperature_settings = new Settings ("org.gnome.GWeather");
             }
         }
