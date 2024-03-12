@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2023-03-31 11:59+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,42 +16,40 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.16.4\n"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:5
+#: data/locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
 msgstr "Параметры языка и региона"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:6
+#: data/locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "Управление языками, настройка региона и формата времени"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
-#: data/io.elementary.switchboard.locale.appdata.xml.in:32
-#: data/io.elementary.switchboard.locale.appdata.xml.in:40
+#: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
+#: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/locale.appdata.xml.in:13
 msgid "Translate authentication dialog description text"
 msgstr "Перевод описания диалога аутентификации"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/locale.appdata.xml.in:19
 msgid "Improvements:"
 msgstr "Улучшения:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/locale.appdata.xml.in:21
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Центральнокурдский теперь доступен как устанавливаемый язык"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
+#: data/locale.appdata.xml.in:25
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Поддержка установки и удаления языков с трёхзначным идентификатором"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/locale.appdata.xml.in:33
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -59,55 +57,52 @@ msgstr ""
 "Выпадающее меню «Форматы» остается правильным после установки или удаления "
 "языков"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:42
+#: data/locale.appdata.xml.in:41
 msgid "Support locales with 3-letter codes"
 msgstr "Поддержка языков с трёхзначным идентификатором"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:44
+#: data/locale.appdata.xml.in:43
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:46
+#: data/locale.appdata.xml.in:45
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Улучшена работа на дистрибутивах не основанных на Ubuntu"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:47
-#: data/io.elementary.switchboard.locale.appdata.xml.in:54
-#: data/io.elementary.switchboard.locale.appdata.xml.in:61
-#: data/io.elementary.switchboard.locale.appdata.xml.in:68
-#: data/io.elementary.switchboard.locale.appdata.xml.in:76
-#: data/io.elementary.switchboard.locale.appdata.xml.in:87
+#: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
+#: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
+#: data/locale.appdata.xml.in:75 data/locale.appdata.xml.in:86
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:75
+#: data/locale.appdata.xml.in:74
 msgid "Fix an issue with cancelling language installation"
 msgstr "Исправлена проблема с отменой установки языка"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:83
+#: data/locale.appdata.xml.in:82
 msgid "Redesigned Install Language popover"
 msgstr "Переработано окно установки языка"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:84
+#: data/locale.appdata.xml.in:83
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "Запрос разрешения при необходимости. Больше нет дополнительной панели "
 "подробностей"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:85
+#: data/locale.appdata.xml.in:84
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Панель прогресса установки теперь является диалоговым окном"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:86
+#: data/locale.appdata.xml.in:85
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "Список языков обновляется должным образом при добавлении или удалении языков"
 
-#: data/io.elementary.switchboard.locale.policy.in:10
+#: data/locale.policy.in:10
 msgid "Manage locale settings"
 msgstr "Управление настройками локали"
 
-#: data/io.elementary.switchboard.locale.policy.in:11
+#: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Для управления настройками локали необходима аутентификация"
 

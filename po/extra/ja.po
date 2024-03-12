@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2022-05-18 16:23+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -19,38 +19,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:5
+#: data/locale.appdata.xml.in:5
 msgid "Language &amp; Region Settings"
 msgstr "言語と地域の設定"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:6
+#: data/locale.appdata.xml.in:6
 msgid "Manage languages, and configure region and format"
 msgstr "言語を管理し、地域と書式を設定します"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:12
-#: data/io.elementary.switchboard.locale.appdata.xml.in:24
-#: data/io.elementary.switchboard.locale.appdata.xml.in:32
-#: data/io.elementary.switchboard.locale.appdata.xml.in:40
+#: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
+#: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:14
+#: data/locale.appdata.xml.in:13
 msgid "Translate authentication dialog description text"
 msgstr "認証ダイアログの説明文が英語で表示されていた不具合を修正"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:20
+#: data/locale.appdata.xml.in:19
 msgid "Improvements:"
 msgstr "改善点:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:22
+#: data/locale.appdata.xml.in:21
 msgid "Central Kurdish is now available as an installable language"
 msgstr "インストール可能な言語に中央クルド語を追加"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:26
+#: data/locale.appdata.xml.in:25
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "言語コードが3文字の言語のインストールと削除に対応"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:34
+#: data/locale.appdata.xml.in:33
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -58,52 +56,49 @@ msgstr ""
 "言語をインストールしたり削除したりしても、“書式”ドロップダウンリストの値が変"
 "更されないように修正"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:42
+#: data/locale.appdata.xml.in:41
 msgid "Support locales with 3-letter codes"
 msgstr "言語コードが3文字のロケールに対応"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:44
+#: data/locale.appdata.xml.in:43
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:46
+#: data/locale.appdata.xml.in:45
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "非 Ubuntu ベースのディストリビューションへの対応を強化"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:47
-#: data/io.elementary.switchboard.locale.appdata.xml.in:54
-#: data/io.elementary.switchboard.locale.appdata.xml.in:61
-#: data/io.elementary.switchboard.locale.appdata.xml.in:68
-#: data/io.elementary.switchboard.locale.appdata.xml.in:76
-#: data/io.elementary.switchboard.locale.appdata.xml.in:87
+#: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
+#: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
+#: data/locale.appdata.xml.in:75 data/locale.appdata.xml.in:86
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:75
+#: data/locale.appdata.xml.in:74
 msgid "Fix an issue with cancelling language installation"
 msgstr "言語のインストールをキャンセルした際の不具合を修正"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:83
+#: data/locale.appdata.xml.in:82
 msgid "Redesigned Install Language popover"
 msgstr "Install Language ポップオーバーのデザインを変更"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:84
+#: data/locale.appdata.xml.in:83
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr "必要な場合のみ管理者権限を確認するように変更し、余計な情報バーを廃止"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:85
+#: data/locale.appdata.xml.in:84
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "インストールの進捗情報バーをダイアログに変更"
 
-#: data/io.elementary.switchboard.locale.appdata.xml.in:86
+#: data/locale.appdata.xml.in:85
 msgid "Language list properly updates when adding or removing languages"
 msgstr "言語の追加および削除時に言語リストを適切に更新するように修正"
 
-#: data/io.elementary.switchboard.locale.policy.in:10
+#: data/locale.policy.in:10
 msgid "Manage locale settings"
 msgstr "ロケール設定を管理します"
 
-#: data/io.elementary.switchboard.locale.policy.in:11
+#: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "ロケール設定を管理するには認証が必要です"
 
