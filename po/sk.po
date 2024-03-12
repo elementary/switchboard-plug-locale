@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2021-08-24 18:20+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -20,121 +20,137 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:30
 msgid "Language & Region"
 msgstr "Jazyk a oblasť"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:31
 msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte oblasť a miestne formáty"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:63
 msgid "Region"
 msgstr "Oblasť"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:64
 msgid "Formats"
 msgstr "Formáty"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:65
 msgid "Temperature"
 msgstr "Teplota"
 
-#. Wires up and configures initial UI
-#. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
-msgid "Some changes will not take effect until you log out"
-msgstr "Niektoré zmeny sa prejavia až po opätovnom prihlásení"
-
-#. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
-msgid "Language support is not installed completely"
-msgstr "Inštalácia jazykovej podpory je neúplná"
-
-#: src/Plug.vala:133
-msgid "Complete Installation"
-msgstr "Dokončiť inštaláciu"
-
-#: src/ProgressDialog.vala:45
+#: src/ProgressDialog.vala:47
 #, c-format
 msgid "Installing %s"
 msgstr "Inštaluje sa %s"
 
-#: src/ProgressDialog.vala:48
+#: src/ProgressDialog.vala:50
 #, c-format
 msgid "Removing %s"
 msgstr "Odstraňuje sa %s"
 
-#: src/ProgressDialog.vala:51
+#: src/ProgressDialog.vala:53
 msgid "Installing missing language"
 msgstr "Inštalácia chýbajúceho jazyku"
 
-#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: src/Widgets/InstallPopover.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
 msgid "Install Language"
 msgstr "Nainštalovať jazyk"
 
-#: src/Widgets/InstallPopover.vala:70
+#: src/Widgets/InstallDialog.vala:62
 #, c-format
 msgid "Install %s"
 msgstr "Nainštalovať %s"
 
-#: src/Widgets/LanguageListBox.vala:27
+#: src/Widgets/LanguageListBox.vala:28
 msgid "Installed Languages"
 msgstr "Nainštalované jazyky"
 
-#: src/Widgets/LanguageListBox.vala:116
+#: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
 msgstr "Práve používaný jazyk"
 
-#: src/Widgets/LocaleView.vala:46
-msgid "Install language"
-msgstr "Nainštalovať jazyk"
-
-#: src/Widgets/LocaleView.vala:49
+#: src/Widgets/LocaleView.vala:52
 msgid "Remove language"
 msgstr "Odstrániť jazyk"
 
-#: src/Widgets/LocaleSetting.vala:66
-msgid "Region: "
+#: src/Widgets/LocaleSetting.vala:74
+#, fuzzy
+#| msgid "Region: "
+msgid "Region:"
 msgstr "Oblasť: "
 
-#: src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
+#: src/Widgets/LocaleSetting.vala:78
+#, fuzzy
+#| msgid "Formats: "
+msgid "Formats:"
 msgstr "Formáty "
 
-#: src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
-msgstr "Celzius"
+#: src/Widgets/LocaleSetting.vala:82
+msgid "Keyboard Layout:"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
+#: src/Widgets/LocaleSetting.vala:86
+#, fuzzy
+#| msgid "Keyboard Settings…"
+msgid "Keyboard settings…"
+msgstr "Nastavenia klávesnice…"
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:90
+#, fuzzy
+#| msgid "Formats: "
+msgid "Time Format:"
+msgstr "Formáty "
+
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Date & Time settings…"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:98
+msgid "Language support is not installed completely"
+msgstr "Inštalácia jazykovej podpory je neúplná"
+
+#: src/Widgets/LocaleSetting.vala:104
+msgid "Complete Installation"
+msgstr "Dokončiť inštaláciu"
+
+#: src/Widgets/LocaleSetting.vala:112
+msgid "Some changes will not take effect until you log out"
+msgstr "Niektoré zmeny sa prejavia až po opätovnom prihlásení"
+
+#: src/Widgets/LocaleSetting.vala:134
 msgid "Temperature:"
 msgstr "Teplota:"
 
-#: src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:138
+msgid "Celsius"
+msgstr "Celzius"
+
+#: src/Widgets/LocaleSetting.vala:140
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: src/Widgets/LocaleSetting.vala:175
 msgid "Set Language"
 msgstr "Nastaviť jazyk"
 
-#: src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:179
 msgid "Set System Language"
 msgstr "Nastaviť jazyk systému"
 
-#: src/Widgets/LocaleSetting.vala:106
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nastaviť jazyk pre prihlasovaciu obrazovku, účet hosťa a nové používateľské "
 "účty"
 
-#: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
-msgstr "Nastavenia klávesnice…"
+#~ msgid "Install language"
+#~ msgstr "Nainštalovať jazyk"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Niektoré nastavenia vyžadujú zmenu administrátorských práv"

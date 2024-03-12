@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2017-01-02 02:59+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,124 +13,138 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-03 06:15+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:30
 msgid "Language & Region"
 msgstr "تىل ۋە رايون"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:31
 msgid "Manage languages, and configure region and format"
 msgstr "تىللارنى باشقۇرۇش، رايون ۋە فورماتلارنى تەڭشەش"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:63
 #, fuzzy
 msgid "Region"
 msgstr "رايون: "
 
-#: src/Plug.vala:113
+#: src/Plug.vala:64
 #, fuzzy
 msgid "Formats"
 msgstr "فورماتلار: "
 
-#: src/Plug.vala:114
+#: src/Plug.vala:65
 msgid "Temperature"
 msgstr ""
 
-#. Wires up and configures initial UI
-#. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
-msgid "Some changes will not take effect until you log out"
-msgstr "ھىساۋاتتىن چىكىنمىگۈچە بەزى ئۆزگەرتىشلەر كۈچكە ئىگە بولمايدۇ"
-
-#. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
-msgid "Language support is not installed completely"
-msgstr "تىل قوللىشى تولۇق ئورنىتىلمىغان"
-
-#: src/Plug.vala:133
-msgid "Complete Installation"
-msgstr "تولۇق ئورنىتىش"
-
-#: src/ProgressDialog.vala:45
+#: src/ProgressDialog.vala:47
 #, fuzzy, c-format
 msgid "Installing %s"
 msgstr "تىلنى ئورنىتىۋاتىدۇ"
 
-#: src/ProgressDialog.vala:48
+#: src/ProgressDialog.vala:50
 #, fuzzy, c-format
 msgid "Removing %s"
 msgstr "تىلنى ئۆچۈرىۋاتىدۇ"
 
-#: src/ProgressDialog.vala:51
+#: src/ProgressDialog.vala:53
 msgid "Installing missing language"
 msgstr "يۈتكەن تىللارنى ئورنىتىۋاتىدۇ"
 
-#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇرۇش"
 
-#: src/Widgets/InstallPopover.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
 #, fuzzy
 msgid "Install Language"
 msgstr "تىل ئورنىتىش"
 
-#: src/Widgets/InstallPopover.vala:70
+#: src/Widgets/InstallDialog.vala:62
 #, fuzzy, c-format
 msgid "Install %s"
 msgstr "تىلنى ئورنىتىۋاتىدۇ"
 
-#: src/Widgets/LanguageListBox.vala:27
+#: src/Widgets/LanguageListBox.vala:28
 msgid "Installed Languages"
 msgstr "قوشۇلغان تىللار"
 
-#: src/Widgets/LanguageListBox.vala:116
+#: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
 msgstr "نۆۋەتتىكى ئاكتىپ تىل"
 
-#: src/Widgets/LocaleView.vala:46
-msgid "Install language"
-msgstr "تىل ئورنىتىش"
-
-#: src/Widgets/LocaleView.vala:49
+#: src/Widgets/LocaleView.vala:52
 msgid "Remove language"
 msgstr "تىل ئۆچۈرۈش"
 
-#: src/Widgets/LocaleSetting.vala:66
-msgid "Region: "
+#: src/Widgets/LocaleSetting.vala:74
+#, fuzzy
+#| msgid "Region: "
+msgid "Region:"
 msgstr "رايون: "
 
-#: src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
+#: src/Widgets/LocaleSetting.vala:78
+#, fuzzy
+#| msgid "Formats: "
+msgid "Formats:"
 msgstr "فورماتلار: "
 
-#: src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
+#: src/Widgets/LocaleSetting.vala:82
+msgid "Keyboard Layout:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
+#: src/Widgets/LocaleSetting.vala:86
+#, fuzzy
+msgid "Keyboard settings…"
+msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
+
+#: src/Widgets/LocaleSetting.vala:90
+#, fuzzy
+#| msgid "Formats: "
+msgid "Time Format:"
+msgstr "فورماتلار: "
+
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:98
+msgid "Language support is not installed completely"
+msgstr "تىل قوللىشى تولۇق ئورنىتىلمىغان"
+
+#: src/Widgets/LocaleSetting.vala:104
+msgid "Complete Installation"
+msgstr "تولۇق ئورنىتىش"
+
+#: src/Widgets/LocaleSetting.vala:112
+msgid "Some changes will not take effect until you log out"
+msgstr "ھىساۋاتتىن چىكىنمىگۈچە بەزى ئۆزگەرتىشلەر كۈچكە ئىگە بولمايدۇ"
+
+#: src/Widgets/LocaleSetting.vala:134
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:138
+msgid "Celsius"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:140
+msgid "Fahrenheit"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:175
 msgid "Set Language"
 msgstr "تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:179
 msgid "Set System Language"
 msgstr "سىستېما تىلىنى بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:106
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "كىرىش ئىكرانى، مىھمان ھىساۋاتى ۋە يىڭى ئابونت ھىساۋاتلىرى ئۈچۈن تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:108
-#, fuzzy
-msgid "Keyboard Settings…"
-msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
+#~ msgid "Install language"
+#~ msgstr "تىل ئورنىتىش"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈر"

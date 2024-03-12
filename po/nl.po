@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2023-02-01 19:25+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -20,120 +20,136 @@ msgstr ""
 "X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:30
 msgid "Language & Region"
 msgstr "Taal & regio"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:31
 msgid "Manage languages, and configure region and format"
 msgstr "Beheer talen en configureer regio's en formaten"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:63
 msgid "Region"
 msgstr "Regio"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:64
 msgid "Formats"
 msgstr "Formaten"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:65
 msgid "Temperature"
 msgstr "Temperatuur"
 
-#. Wires up and configures initial UI
-#. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
-msgid "Some changes will not take effect until you log out"
-msgstr "Sommige wijzigingen worden pas van kracht nadat u zich heeft afgemeld"
-
-#. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
-msgid "Language support is not installed completely"
-msgstr "Taalondersteuning is niet volledig geïnstalleerd"
-
-#: src/Plug.vala:133
-msgid "Complete Installation"
-msgstr "Volledige Installatie"
-
-#: src/ProgressDialog.vala:45
+#: src/ProgressDialog.vala:47
 #, c-format
 msgid "Installing %s"
 msgstr "%s installeren"
 
-#: src/ProgressDialog.vala:48
+#: src/ProgressDialog.vala:50
 #, c-format
 msgid "Removing %s"
 msgstr "%s verwijderen"
 
-#: src/ProgressDialog.vala:51
+#: src/ProgressDialog.vala:53
 msgid "Installing missing language"
 msgstr "Ontbrekende taal wordt geïnstalleerd"
 
-#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/Widgets/InstallPopover.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
 msgid "Install Language"
 msgstr "Installeer taal"
 
-#: src/Widgets/InstallPopover.vala:70
+#: src/Widgets/InstallDialog.vala:62
 #, c-format
 msgid "Install %s"
 msgstr "%s installeren"
 
-#: src/Widgets/LanguageListBox.vala:27
+#: src/Widgets/LanguageListBox.vala:28
 msgid "Installed Languages"
 msgstr "Geïnstalleerde talen"
 
-#: src/Widgets/LanguageListBox.vala:116
+#: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
 msgstr "Huidige actieve taal"
 
-#: src/Widgets/LocaleView.vala:46
-msgid "Install language"
-msgstr "Installeer taal"
-
-#: src/Widgets/LocaleView.vala:49
+#: src/Widgets/LocaleView.vala:52
 msgid "Remove language"
 msgstr "Taal verwijderen"
 
-#: src/Widgets/LocaleSetting.vala:66
-msgid "Region: "
+#: src/Widgets/LocaleSetting.vala:74
+#, fuzzy
+#| msgid "Region: "
+msgid "Region:"
 msgstr "Regio: "
 
-#: src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
+#: src/Widgets/LocaleSetting.vala:78
+#, fuzzy
+#| msgid "Formats: "
+msgid "Formats:"
 msgstr "Formaten: "
 
-#: src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
-msgstr "Celsius"
+#: src/Widgets/LocaleSetting.vala:82
+msgid "Keyboard Layout:"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
+#: src/Widgets/LocaleSetting.vala:86
+#, fuzzy
+#| msgid "Keyboard Settings…"
+msgid "Keyboard settings…"
+msgstr "Toetsenbordinstellingen…"
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:90
+#, fuzzy
+#| msgid "Formats: "
+msgid "Time Format:"
+msgstr "Formaten: "
+
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Date & Time settings…"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:98
+msgid "Language support is not installed completely"
+msgstr "Taalondersteuning is niet volledig geïnstalleerd"
+
+#: src/Widgets/LocaleSetting.vala:104
+msgid "Complete Installation"
+msgstr "Volledige Installatie"
+
+#: src/Widgets/LocaleSetting.vala:112
+msgid "Some changes will not take effect until you log out"
+msgstr "Sommige wijzigingen worden pas van kracht nadat u zich heeft afgemeld"
+
+#: src/Widgets/LocaleSetting.vala:134
 msgid "Temperature:"
 msgstr "Temperatuur:"
 
-#: src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:138
+msgid "Celsius"
+msgstr "Celsius"
+
+#: src/Widgets/LocaleSetting.vala:140
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: src/Widgets/LocaleSetting.vala:175
 msgid "Set Language"
 msgstr "Taal instellen"
 
-#: src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:179
 msgid "Set System Language"
 msgstr "Systeemtaal instellen"
 
-#: src/Widgets/LocaleSetting.vala:106
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Zet de taal voor het aanmeldscherm, het gast account en nieuwe gebruikers"
 
-#: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
-msgstr "Toetsenbordinstellingen…"
+#~ msgid "Install language"
+#~ msgstr "Installeer taal"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""
