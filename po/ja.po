@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2019-11-07 13:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -20,121 +20,137 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:23+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:30
 msgid "Language & Region"
 msgstr "言語と地域"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:31
 msgid "Manage languages, and configure region and format"
 msgstr "言語を管理し、地域と書式を設定します"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:63
 msgid "Region"
 msgstr "地域"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:64
 msgid "Formats"
 msgstr "書式"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:65
 msgid "Temperature"
 msgstr "温度"
 
-#. Wires up and configures initial UI
-#. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
-msgid "Some changes will not take effect until you log out"
-msgstr "一部の変更は、ログアウト後に反映されます"
-
-#. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
-msgid "Language support is not installed completely"
-msgstr "言語サポートが完全にはインストールされていません"
-
-#: src/Plug.vala:133
-msgid "Complete Installation"
-msgstr "インストールを完了"
-
-#: src/ProgressDialog.vala:45
+#: src/ProgressDialog.vala:47
 #, c-format
 msgid "Installing %s"
 msgstr "%s をインストールしています"
 
-#: src/ProgressDialog.vala:48
+#: src/ProgressDialog.vala:50
 #, c-format
 msgid "Removing %s"
 msgstr "%s を削除しています"
 
-#: src/ProgressDialog.vala:51
+#: src/ProgressDialog.vala:53
 msgid "Installing missing language"
 msgstr "不足している言語をインストールしています"
 
-#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Widgets/InstallPopover.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
 msgid "Install Language"
 msgstr "言語をインストール"
 
-#: src/Widgets/InstallPopover.vala:70
+#: src/Widgets/InstallDialog.vala:62
 #, c-format
 msgid "Install %s"
 msgstr "%s をインストール"
 
-#: src/Widgets/LanguageListBox.vala:27
+#: src/Widgets/LanguageListBox.vala:28
 msgid "Installed Languages"
 msgstr "インストール済み言語"
 
-#: src/Widgets/LanguageListBox.vala:116
+#: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
 msgstr "現在の表示言語"
 
-#: src/Widgets/LocaleView.vala:46
-msgid "Install language"
-msgstr "言語をインストール"
-
-#: src/Widgets/LocaleView.vala:49
+#: src/Widgets/LocaleView.vala:52
 msgid "Remove language"
 msgstr "言語を削除"
 
-#: src/Widgets/LocaleSetting.vala:66
-msgid "Region: "
+#: src/Widgets/LocaleSetting.vala:74
+#, fuzzy
+#| msgid "Region: "
+msgid "Region:"
 msgstr "地域: "
 
-#: src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
+#: src/Widgets/LocaleSetting.vala:78
+#, fuzzy
+#| msgid "Formats: "
+msgid "Formats:"
 msgstr "書式: "
 
-#: src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
-msgstr "摂氏"
+#: src/Widgets/LocaleSetting.vala:82
+msgid "Keyboard Layout:"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
-msgstr "華氏"
+#: src/Widgets/LocaleSetting.vala:86
+#, fuzzy
+#| msgid "Keyboard Settings…"
+msgid "Keyboard settings…"
+msgstr "キーボードの設定…"
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:90
+#, fuzzy
+#| msgid "Formats: "
+msgid "Time Format:"
+msgstr "書式: "
+
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Date & Time settings…"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:98
+msgid "Language support is not installed completely"
+msgstr "言語サポートが完全にはインストールされていません"
+
+#: src/Widgets/LocaleSetting.vala:104
+msgid "Complete Installation"
+msgstr "インストールを完了"
+
+#: src/Widgets/LocaleSetting.vala:112
+msgid "Some changes will not take effect until you log out"
+msgstr "一部の変更は、ログアウト後に反映されます"
+
+#: src/Widgets/LocaleSetting.vala:134
 msgid "Temperature:"
 msgstr "温度:"
 
-#: src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:138
+msgid "Celsius"
+msgstr "摂氏"
+
+#: src/Widgets/LocaleSetting.vala:140
+msgid "Fahrenheit"
+msgstr "華氏"
+
+#: src/Widgets/LocaleSetting.vala:175
 msgid "Set Language"
 msgstr "ユーザーの表示言語に設定"
 
-#: src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:179
 msgid "Set System Language"
 msgstr "システム言語に設定"
 
-#: src/Widgets/LocaleSetting.vala:106
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "ログイン画面、ゲストアカウント、新しいユーザーアカウントで使用される言語に設"
 "定します"
 
-#: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
-msgstr "キーボードの設定…"
+#~ msgid "Install language"
+#~ msgstr "言語をインストール"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "一部の設定変更には管理者権限が必要です"

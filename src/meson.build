@@ -38,9 +38,9 @@ shared_module(
         adw_dep,
         polkit_dep,
         switchboard_dep,
-        vala_compiler.find_library('monetary', dirs: join_paths(meson.source_root(), 'vapi')),
+        vala_compiler.find_library('monetary', dirs: meson.project_source_root() / 'vapi'),
         vala_compiler.find_library('posix'),
     ],
     install: true,
-    install_dir : join_paths(switchboard_plugsdir, 'personal')
+    install_dir : switchboard_plugsdir / 'personal'
 )

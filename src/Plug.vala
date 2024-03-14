@@ -18,11 +18,6 @@ namespace SwitchboardPlugLocale {
     public class Plug : Switchboard.Plug {
         private Widgets.LocaleView view;
 
-        private Installer.UbuntuInstaller installer;
-        private ProgressDialog progress_dialog = null;
-
-        private Gee.ArrayList<string> langs;
-
         public Plug () {
             GLib.Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
             GLib.Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
@@ -41,46 +36,10 @@ namespace SwitchboardPlugLocale {
         public override Gtk.Widget get_widget () {
             if (view == null) {
                 Utils.init ();
-                installer = Installer.UbuntuInstaller.get_default ();
-
-                view = new Widgets.LocaleView (this);
-                setup_info ();
+                view = new Widgets.LocaleView ();
             }
 
             return view;
-        }
-
-        private async void reload () {
-            new Thread<void*> ("load-lang-data", () => {
-                langs = Utils.get_installed_languages ();
-
-                Idle.add (() => {
-                    view.list_box.reload_languages (langs);
-                    view.locale_setting.reload_formats (langs);
-                    return false;
-                });
-
-                return null;
-            });
-
-            yield installer.check_missing_languages ();
-        }
-
-        void setup_info () {
-            unowned LocaleManager lm = LocaleManager.get_default ();
-            if (lm.is_connected) {
-                reload.begin ();
-            }
-
-            installer.install_finished.connect ((langcode) => {
-                reload.begin ();
-            });
-
-            installer.remove_finished.connect ((langcode) => {
-                reload.begin ();
-            });
-
-            installer.progress_changed.connect (on_progress_changed);
         }
 
         public override void shown () {
@@ -105,25 +64,6 @@ namespace SwitchboardPlugLocale {
             search_results.set ("%s → %s".printf (display_name, _("Formats")), "");
             search_results.set ("%s → %s".printf (display_name, _("Temperature")), "");
             return search_results;
-        }
-
-        private void on_progress_changed (int progress) {
-            if (progress_dialog != null) {
-                progress_dialog.progress = progress;
-                return;
-            }
-
-            progress_dialog = new ProgressDialog () {
-                modal = true,
-                progress = progress,
-                transient_for = (Gtk.Window) view.get_root ()
-            };
-            progress_dialog.present ();
-
-            progress_dialog.response.connect (() => {
-                progress_dialog.destroy ();
-                progress_dialog = null;
-            });
         }
     }
 }

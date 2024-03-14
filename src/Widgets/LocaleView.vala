@@ -16,13 +16,11 @@
 
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Box {
-        public LanguageListBox list_box;
-        public LocaleSetting locale_setting;
-        public weak Plug plug { get; construct; }
-
-        public LocaleView (Plug plug) {
-            Object (plug: plug);
-        }
+        private Gee.ArrayList<string> langs;
+        private Installer.UbuntuInstaller installer;
+        private LanguageListBox list_box;
+        private LocaleSetting locale_setting;
+        private ProgressDialog progress_dialog = null;
 
         construct {
             var locale_manager = LocaleManager.get_default ();
@@ -30,7 +28,8 @@ namespace SwitchboardPlugLocale.Widgets {
             list_box = new LanguageListBox ();
 
             var scroll = new Gtk.ScrolledWindow () {
-                child = list_box
+                child = list_box,
+                hscrollbar_policy = NEVER
             };
 
             var headerbar = new Adw.HeaderBar () {
@@ -59,27 +58,27 @@ namespace SwitchboardPlugLocale.Widgets {
             };
 
             var action_bar = new Gtk.ActionBar ();
-            action_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
             action_bar.pack_start (add_button);
             action_bar.pack_start (remove_button);
 
             var toolbarview = new Adw.ToolbarView () {
                 content = scroll,
-                top_bar_style = FLAT
+                bottom_bar_style = RAISED
             };
             toolbarview.add_top_bar (headerbar);
             toolbarview.add_bottom_bar (action_bar);
-            toolbarview.add_css_class (Granite.STYLE_CLASS_SIDEBAR);
+
+            var sidebar = new Sidebar ();
+            sidebar.append (toolbarview);
 
             locale_setting = new LocaleSetting ();
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
-                start_child = toolbarview,
+                start_child = sidebar,
                 shrink_start_child = false,
                 resize_start_child = false,
                 end_child = locale_setting,
-                shrink_end_child = false,
-                position = 200
+                shrink_end_child = false
             };
 
             append (paned);
@@ -93,7 +92,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 var locales = Utils.get_locales_for_language_code (selected_language_code);
 
                 debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
-                locale_setting.reload_locales (selected_language_code, locales);
+                locale_setting.reload_locales.begin (selected_language_code, locales);
                 locale_setting.reload_labels (selected_language_code);
 
                 if (locale_manager.get_user_language () in locales) {
@@ -103,7 +102,21 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
-            unowned Installer.UbuntuInstaller installer = Installer.UbuntuInstaller.get_default ();
+            unowned var lm = LocaleManager.get_default ();
+            if (lm.is_connected) {
+                reload.begin ();
+            }
+
+            installer = Installer.UbuntuInstaller.get_default ();
+            installer.progress_changed.connect (on_progress_changed);
+
+            installer.install_finished.connect ((langcode) => {
+                reload.begin ();
+            });
+
+            installer.remove_finished.connect ((langcode) => {
+                reload.begin ();
+            });
 
             remove_button.clicked.connect (() => {
                 if (!Utils.allowed_permission ()) {
@@ -125,6 +138,52 @@ namespace SwitchboardPlugLocale.Widgets {
 
                 installer.install (lang);
             });
+        }
+
+        private async void reload () {
+            new Thread<void*> ("load-lang-data", () => {
+                langs = Utils.get_installed_languages ();
+
+                Idle.add (() => {
+                    list_box.reload_languages (langs);
+                    locale_setting.reload_formats (langs);
+                    return false;
+                });
+
+                return null;
+            });
+
+            yield installer.check_missing_languages ();
+        }
+
+        private void on_progress_changed (int progress) {
+            if (progress_dialog != null) {
+                progress_dialog.progress = progress;
+                return;
+            }
+
+            progress_dialog = new ProgressDialog () {
+                modal = true,
+                progress = progress,
+                transient_for = (Gtk.Window) get_root ()
+            };
+            progress_dialog.present ();
+
+            progress_dialog.response.connect (() => {
+                progress_dialog.destroy ();
+                progress_dialog = null;
+            });
+        }
+
+        // Workaround to set styles
+        private class Sidebar : Gtk.Box {
+            class construct {
+                set_css_name ("settingssidebar");
+            }
+
+            construct {
+                add_css_class (Granite.STYLE_CLASS_SIDEBAR);
+            }
         }
     }
 }

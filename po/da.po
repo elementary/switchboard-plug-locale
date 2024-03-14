@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
 "PO-Revision-Date: 2020-05-25 20:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,119 +20,135 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-03-15 06:49+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:30
 msgid "Language & Region"
 msgstr "Sprog & Region"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:31
 msgid "Manage languages, and configure region and format"
 msgstr "Administrer sprog og konfigurer region og format"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:63
 msgid "Region"
 msgstr "Region"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:64
 msgid "Formats"
 msgstr "Formater"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:65
 msgid "Temperature"
 msgstr "Temperatur"
 
-#. Wires up and configures initial UI
-#. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
-msgid "Some changes will not take effect until you log out"
-msgstr "Nogle ændringer vil ikke træde i kraft før du logger ud"
-
-#. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
-msgid "Language support is not installed completely"
-msgstr "Sprogunderstøttelse er ikke komplet installeret"
-
-#: src/Plug.vala:133
-msgid "Complete Installation"
-msgstr "Fuldfør installation"
-
-#: src/ProgressDialog.vala:45
+#: src/ProgressDialog.vala:47
 #, c-format
 msgid "Installing %s"
 msgstr "Installerer %s"
 
-#: src/ProgressDialog.vala:48
+#: src/ProgressDialog.vala:50
 #, c-format
 msgid "Removing %s"
 msgstr "Fjerner %s"
 
-#: src/ProgressDialog.vala:51
+#: src/ProgressDialog.vala:53
 msgid "Installing missing language"
 msgstr "Installerer manglende sprog"
 
-#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
 msgstr "Annuller"
 
-#: src/Widgets/InstallPopover.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
 msgid "Install Language"
 msgstr "Installér Sprog"
 
-#: src/Widgets/InstallPopover.vala:70
+#: src/Widgets/InstallDialog.vala:62
 #, c-format
 msgid "Install %s"
 msgstr "Installér %s"
 
-#: src/Widgets/LanguageListBox.vala:27
+#: src/Widgets/LanguageListBox.vala:28
 msgid "Installed Languages"
 msgstr "Installerede sprog"
 
-#: src/Widgets/LanguageListBox.vala:116
+#: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
 msgstr "Nuværende aktive sprog"
 
-#: src/Widgets/LocaleView.vala:46
-msgid "Install language"
-msgstr "Installér sprog"
-
-#: src/Widgets/LocaleView.vala:49
+#: src/Widgets/LocaleView.vala:52
 msgid "Remove language"
 msgstr "Fjern sprog"
 
-#: src/Widgets/LocaleSetting.vala:66
-msgid "Region: "
+#: src/Widgets/LocaleSetting.vala:74
+#, fuzzy
+#| msgid "Region: "
+msgid "Region:"
 msgstr "Region: "
 
-#: src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
+#: src/Widgets/LocaleSetting.vala:78
+#, fuzzy
+#| msgid "Formats: "
+msgid "Formats:"
 msgstr "Formater: "
 
-#: src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
-msgstr "Celsius"
+#: src/Widgets/LocaleSetting.vala:82
+msgid "Keyboard Layout:"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
+#: src/Widgets/LocaleSetting.vala:86
+#, fuzzy
+#| msgid "Keyboard Settings…"
+msgid "Keyboard settings…"
+msgstr "Tastaturindstillinger…"
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:90
+#, fuzzy
+#| msgid "Formats: "
+msgid "Time Format:"
+msgstr "Formater: "
+
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Date & Time settings…"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:98
+msgid "Language support is not installed completely"
+msgstr "Sprogunderstøttelse er ikke komplet installeret"
+
+#: src/Widgets/LocaleSetting.vala:104
+msgid "Complete Installation"
+msgstr "Fuldfør installation"
+
+#: src/Widgets/LocaleSetting.vala:112
+msgid "Some changes will not take effect until you log out"
+msgstr "Nogle ændringer vil ikke træde i kraft før du logger ud"
+
+#: src/Widgets/LocaleSetting.vala:134
 msgid "Temperature:"
 msgstr "Temperatur:"
 
-#: src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:138
+msgid "Celsius"
+msgstr "Celsius"
+
+#: src/Widgets/LocaleSetting.vala:140
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: src/Widgets/LocaleSetting.vala:175
 msgid "Set Language"
 msgstr "Valgt Sprog"
 
-#: src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:179
 msgid "Set System Language"
 msgstr "Angiv systemets sprog"
 
-#: src/Widgets/LocaleSetting.vala:106
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Angiv sprog for loginskærm, gæstekonto, og nye brugerkonti"
 
-#: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
-msgstr "Tastaturindstillinger…"
+#~ msgid "Install language"
+#~ msgstr "Installér sprog"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

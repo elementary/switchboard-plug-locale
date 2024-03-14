@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 17:08+0000\n"
-"PO-Revision-Date: 2019-11-09 12:24+0000\n"
+"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"PO-Revision-Date: 2024-03-14 06:12+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ca/>\n"
@@ -17,124 +17,132 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-21 05:36+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:30
 msgid "Language & Region"
 msgstr "Llengua i regió"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:31
 msgid "Manage languages, and configure region and format"
 msgstr "Gestioneu les llengües i configureu-ne la regió i el format."
 
-#: src/Plug.vala:112
+#: src/Plug.vala:63
 msgid "Region"
 msgstr "Regió"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:64
 msgid "Formats"
 msgstr "Formats"
 
-#: src/Plug.vala:114
+#: src/Plug.vala:65
 msgid "Temperature"
 msgstr "Temperatura"
 
-#. Wires up and configures initial UI
-#. Gtk.InfoBar for informing about necessary log-out/log-in
-#: src/Plug.vala:121
-msgid "Some changes will not take effect until you log out"
-msgstr "Alguns canvis no seran efectius fins que tanqueu la sessió"
-
-#. Gtk.InfoBar for language support installation
-#: src/Plug.vala:128
-msgid "Language support is not installed completely"
-msgstr "El suport de la llengua no s'ha instal·lat completament."
-
-#: src/Plug.vala:133
-msgid "Complete Installation"
-msgstr "Completa'n la instal·lació"
-
-#: src/ProgressDialog.vala:45
+#: src/ProgressDialog.vala:47
 #, c-format
 msgid "Installing %s"
 msgstr "S'instal·la %s"
 
-#: src/ProgressDialog.vala:48
+#: src/ProgressDialog.vala:50
 #, c-format
 msgid "Removing %s"
 msgstr "Se suprimeix %s"
 
-#: src/ProgressDialog.vala:51
+#: src/ProgressDialog.vala:53
 msgid "Installing missing language"
 msgstr "S'instal·la la llengua que falta"
 
-#: src/ProgressDialog.vala:60 src/Widgets/InstallPopover.vala:43
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: src/Widgets/InstallPopover.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
 msgid "Install Language"
 msgstr "Instal·la la llengua"
 
-#: src/Widgets/InstallPopover.vala:70
+#: src/Widgets/InstallDialog.vala:62
 #, c-format
 msgid "Install %s"
 msgstr "Instal·la %s"
 
-#: src/Widgets/LanguageListBox.vala:27
+#: src/Widgets/LanguageListBox.vala:28
 msgid "Installed Languages"
 msgstr "Llengües instal·lades"
 
-#: src/Widgets/LanguageListBox.vala:116
+#: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
 msgstr "Llengua activa actual"
 
-#: src/Widgets/LocaleView.vala:46
-msgid "Install language"
-msgstr "Instal·la la llengua"
-
-#: src/Widgets/LocaleView.vala:49
+#: src/Widgets/LocaleView.vala:52
 msgid "Remove language"
 msgstr "Suprimeix la llengua"
 
-#: src/Widgets/LocaleSetting.vala:66
-msgid "Region: "
-msgstr "Regió: "
-
-#: src/Widgets/LocaleSetting.vala:71
-msgid "Formats: "
-msgstr "Formats: "
-
-#: src/Widgets/LocaleSetting.vala:77
-msgid "Celsius"
-msgstr "Celsius"
+#: src/Widgets/LocaleSetting.vala:74
+msgid "Region:"
+msgstr "Regió:"
 
 #: src/Widgets/LocaleSetting.vala:78
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
+msgid "Formats:"
+msgstr "Formats:"
 
-#: src/Widgets/LocaleSetting.vala:80
+#: src/Widgets/LocaleSetting.vala:82
+msgid "Keyboard Layout:"
+msgstr "Disposició del teclat:"
+
+#: src/Widgets/LocaleSetting.vala:86
+msgid "Keyboard settings…"
+msgstr "Paràmetres del teclat…"
+
+#: src/Widgets/LocaleSetting.vala:90
+msgid "Time Format:"
+msgstr "Format de l'hora:"
+
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Date & Time settings…"
+msgstr "Paràmetres de la data i l'hora…"
+
+#: src/Widgets/LocaleSetting.vala:98
+msgid "Language support is not installed completely"
+msgstr "El suport de la llengua no s'ha instal·lat completament."
+
+#: src/Widgets/LocaleSetting.vala:104
+msgid "Complete Installation"
+msgstr "Completa'n la instal·lació"
+
+#: src/Widgets/LocaleSetting.vala:112
+msgid "Some changes will not take effect until you log out"
+msgstr "Alguns canvis no seran efectius fins que tanqueu la sessió"
+
+#: src/Widgets/LocaleSetting.vala:134
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: src/Widgets/LocaleSetting.vala:101
+#: src/Widgets/LocaleSetting.vala:138
+msgid "Celsius"
+msgstr "Celsius"
+
+#: src/Widgets/LocaleSetting.vala:140
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: src/Widgets/LocaleSetting.vala:175
 msgid "Set Language"
 msgstr "Estableix la llengua"
 
-#: src/Widgets/LocaleSetting.vala:105
+#: src/Widgets/LocaleSetting.vala:179
 msgid "Set System Language"
 msgstr "Establiu la llengua del sistema"
 
-#: src/Widgets/LocaleSetting.vala:106
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Establiu la llengua per a la pantalla d'entrada, la sessió de convidat i els "
 "comptes d'usuari nous."
 
-#: src/Widgets/LocaleSetting.vala:108
-msgid "Keyboard Settings…"
-msgstr "Paràmetres del teclat…"
+#~ msgid "Install language"
+#~ msgstr "Instal·la la llengua"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""
