@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-12 15:55+0000\n"
-"PO-Revision-Date: 2019-11-07 13:24+0000\n"
+"PO-Revision-Date: 2024-03-17 15:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:23+0000\n"
 
 #: src/Plug.vala:30
@@ -80,36 +80,28 @@ msgid "Remove language"
 msgstr "言語を削除"
 
 #: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
 msgid "Region:"
-msgstr "地域: "
+msgstr "地域:"
 
 #: src/Widgets/LocaleSetting.vala:78
-#, fuzzy
-#| msgid "Formats: "
 msgid "Formats:"
-msgstr "書式: "
+msgstr "書式:"
 
 #: src/Widgets/LocaleSetting.vala:82
 msgid "Keyboard Layout:"
-msgstr ""
+msgstr "キーボードレイアウト:"
 
 #: src/Widgets/LocaleSetting.vala:86
-#, fuzzy
-#| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "キーボードの設定…"
 
 #: src/Widgets/LocaleSetting.vala:90
-#, fuzzy
-#| msgid "Formats: "
 msgid "Time Format:"
-msgstr "書式: "
+msgstr "時刻の書式:"
 
 #: src/Widgets/LocaleSetting.vala:94
 msgid "Date & Time settings…"
-msgstr ""
+msgstr "日付と時刻の設定…"
 
 #: src/Widgets/LocaleSetting.vala:98
 msgid "Language support is not installed completely"
