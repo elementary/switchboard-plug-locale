@@ -12,6 +12,8 @@ prefix = get_option('prefix')
 datadir = prefix / get_option('datadir')
 libdir = prefix / get_option('libdir')
 
+adw_dep = dependency('libadwaita-1', version: '>=1.4')
+
 switchboard_dep = dependency('switchboard-3')
 switchboard_plugsdir = switchboard_dep.get_variable('plugsdir', pkgconfig_define: ['libdir', libdir])
 pkgdatadir = switchboard_plugsdir / 'personal' / 'pantheon-locale'

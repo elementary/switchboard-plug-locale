@@ -17,7 +17,6 @@
 namespace SwitchboardPlugLocale.Widgets {
     public class LocaleView : Gtk.Box {
         private Gee.ArrayList<string> langs;
-        private Gtk.Box sidebar;
         private Installer.UbuntuInstaller installer;
         private LanguageListBox list_box;
         private LocaleSetting locale_setting;
@@ -29,7 +28,13 @@ namespace SwitchboardPlugLocale.Widgets {
             list_box = new LanguageListBox ();
 
             var scroll = new Gtk.ScrolledWindow () {
-                child = list_box
+                child = list_box,
+                hscrollbar_policy = NEVER
+            };
+
+            var headerbar = new Adw.HeaderBar () {
+                show_end_title_buttons = false,
+                show_title = false
             };
 
             var install_dialog = new Widgets.InstallDialog () {
@@ -53,13 +58,18 @@ namespace SwitchboardPlugLocale.Widgets {
             };
 
             var action_bar = new Gtk.ActionBar ();
-            action_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
             action_bar.pack_start (add_button);
             action_bar.pack_start (remove_button);
 
-            sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            sidebar.append (scroll);
-            sidebar.append (action_bar);
+            var toolbarview = new Adw.ToolbarView () {
+                content = scroll,
+                bottom_bar_style = RAISED
+            };
+            toolbarview.add_top_bar (headerbar);
+            toolbarview.add_bottom_bar (action_bar);
+
+            var sidebar = new Sidebar ();
+            sidebar.append (toolbarview);
 
             locale_setting = new LocaleSetting ();
 
@@ -68,8 +78,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 shrink_start_child = false,
                 resize_start_child = false,
                 end_child = locale_setting,
-                shrink_end_child = false,
-                position = 200
+                shrink_end_child = false
             };
 
             append (paned);
@@ -164,6 +173,17 @@ namespace SwitchboardPlugLocale.Widgets {
                 progress_dialog.destroy ();
                 progress_dialog = null;
             });
+        }
+
+        // Workaround to set styles
+        private class Sidebar : Gtk.Box {
+            class construct {
+                set_css_name ("settingssidebar");
+            }
+
+            construct {
+                add_css_class (Granite.STYLE_CLASS_SIDEBAR);
+            }
         }
     }
 }

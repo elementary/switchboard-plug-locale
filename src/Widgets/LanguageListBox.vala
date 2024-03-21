@@ -148,12 +148,7 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
             var label = new Gtk.Label (text);
             label.halign = Gtk.Align.START;
 
-            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
-                margin_top = 6,
-                margin_end = 6,
-                margin_bottom = 6,
-                margin_start = 6
-            };
+            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             box.append (label);
             box.append (image);
 
