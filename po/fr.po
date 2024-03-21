@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-12 15:55+0000\n"
-"PO-Revision-Date: 2021-08-12 17:07+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"PO-Revision-Date: 2024-03-20 22:13+0000\n"
+"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -80,36 +80,28 @@ msgid "Remove language"
 msgstr "Supprimer une langue"
 
 #: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
 msgid "Region:"
-msgstr "Région : "
+msgstr "Région :"
 
 #: src/Widgets/LocaleSetting.vala:78
-#, fuzzy
-#| msgid "Formats: "
 msgid "Formats:"
-msgstr "Format : "
+msgstr "Format :"
 
 #: src/Widgets/LocaleSetting.vala:82
 msgid "Keyboard Layout:"
-msgstr ""
+msgstr "Disposition du clavier :"
 
 #: src/Widgets/LocaleSetting.vala:86
-#, fuzzy
-#| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Paramètres du clavier…"
 
 #: src/Widgets/LocaleSetting.vala:90
-#, fuzzy
-#| msgid "Formats: "
 msgid "Time Format:"
-msgstr "Format : "
+msgstr "Format de l'heure :"
 
 #: src/Widgets/LocaleSetting.vala:94
 msgid "Date & Time settings…"
-msgstr ""
+msgstr "Paramètres de la date et de l'heure…"
 
 #: src/Widgets/LocaleSetting.vala:98
 msgid "Language support is not installed completely"
