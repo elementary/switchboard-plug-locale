@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-12 15:55+0000\n"
-"PO-Revision-Date: 2023-02-01 19:25+0000\n"
+"PO-Revision-Date: 2024-04-30 06:13+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:30
@@ -80,36 +80,28 @@ msgid "Remove language"
 msgstr "Taal verwijderen"
 
 #: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
 msgid "Region:"
-msgstr "Regio: "
+msgstr "Regio:"
 
 #: src/Widgets/LocaleSetting.vala:78
-#, fuzzy
-#| msgid "Formats: "
 msgid "Formats:"
-msgstr "Formaten: "
+msgstr "Formaten:"
 
 #: src/Widgets/LocaleSetting.vala:82
 msgid "Keyboard Layout:"
-msgstr ""
+msgstr "Toetsenbordindeling:"
 
 #: src/Widgets/LocaleSetting.vala:86
-#, fuzzy
-#| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Toetsenbordinstellingen…"
 
 #: src/Widgets/LocaleSetting.vala:90
-#, fuzzy
-#| msgid "Formats: "
 msgid "Time Format:"
-msgstr "Formaten: "
+msgstr "Tijdsindeling:"
 
 #: src/Widgets/LocaleSetting.vala:94
 msgid "Date & Time settings…"
-msgstr ""
+msgstr "Datum- & tijdinstellingen…"
 
 #: src/Widgets/LocaleSetting.vala:98
 msgid "Language support is not installed completely"
