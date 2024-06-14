@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
-"PO-Revision-Date: 2024-06-14 00:51+0000\n"
+"POT-Creation-Date: 2024-06-14 22:59+0000\n"
+"PO-Revision-Date: 2024-06-14 22:59+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/es/>\n"
@@ -58,7 +58,7 @@ msgstr "Instalando el idioma faltante"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 msgid "Install Language"
 msgstr "Instalar idioma"
 
@@ -73,39 +73,31 @@ msgstr "Idiomas instalados"
 
 #: src/Widgets/LanguageListBox.vala:124
 msgid "Currently active language"
-msgstr "Idioma activo actualmente"
+msgstr "Idioma activo"
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Eliminar idioma"
 
 #: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
 msgid "Region:"
-msgstr "Región: "
+msgstr "Región:"
 
 #: src/Widgets/LocaleSetting.vala:78
-#, fuzzy
-#| msgid "Formats: "
 msgid "Formats:"
-msgstr "Fomatos: "
+msgstr "Formatos:"
 
 #: src/Widgets/LocaleSetting.vala:82
 msgid "Keyboard Layout:"
-msgstr ""
+msgstr "Distribución del teclado:"
 
 #: src/Widgets/LocaleSetting.vala:86
-#, fuzzy
-#| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
-msgstr "Configuración del teclado…"
+msgstr "Configuración del Teclado…"
 
 #: src/Widgets/LocaleSetting.vala:90
-#, fuzzy
-#| msgid "Formats: "
 msgid "Time Format:"
-msgstr "Fomatos: "
+msgstr "Formato de hora:"
 
 #: src/Widgets/LocaleSetting.vala:94
 msgid "Date & Time settings…"
@@ -123,31 +115,31 @@ msgstr "Completar instalación"
 msgid "Some changes will not take effect until you log out"
 msgstr "Algunos cambios no surtirán efecto hasta que cierre sesión"
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
-msgstr "Celsius"
+msgstr "Centígrados"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr "Establecer idioma"
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr "Establecer idioma del sistema"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
-"Establecer idioma para pantalla de acceso, cuenta de invitado y cuentas de "
-"usuario nuevas"
+"Establecer idioma para pantalla de inicio de sesión, cuenta de invitado y "
+"cuentas de usuario nuevas"
 
 #~ msgid "Install language"
 #~ msgstr "Instalar idioma"

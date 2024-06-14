@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 22:59+0000\n"
 "PO-Revision-Date: 2019-11-25 09:24+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -58,7 +58,7 @@ msgstr "गहाळ भाषा स्थापित करत आहे"
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 msgid "Install Language"
 msgstr "भाषा स्थापित करा"
 
@@ -75,7 +75,7 @@ msgstr "स्थापित भाषा"
 msgid "Currently active language"
 msgstr "सध्या सक्रिय भाषा"
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "भाषा काढा"
 
@@ -123,27 +123,27 @@ msgstr "स्थापना पूर्ण करा"
 msgid "Some changes will not take effect until you log out"
 msgstr "आपण लॉग आउट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr "तापमान:"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
 msgstr "सेल्सिअस"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr "फारेनहाइट"
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr "भाषा सेट करा"
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr "सिस्टम भाषा सेट करा"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "लॉगिन स्क्रीन, अतिथी खाते आणि नवीन वापरकर्ता खात्यांसाठी भाषा सेट करा"
 
