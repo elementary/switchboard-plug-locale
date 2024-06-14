@@ -7,9 +7,10 @@ i18n.merge_file(
 )
 
 i18n.merge_file(
-    input: 'locale.appdata.xml.in',
+    input: 'locale.metainfo.xml.in',
     output: meson.project_name() + '.appdata.xml',
     po_dir: meson.project_source_root() / 'po' / 'extra',
+    type: 'xml',
     install: true,
     install_dir: datadir / 'metainfo'
 )
