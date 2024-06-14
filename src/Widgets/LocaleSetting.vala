@@ -201,13 +201,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 restart_infobar.revealed = true;
             });
 
-            set_system_button.clicked.connect (() => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
-
-                on_applied_to_system ();
-            });
+            set_system_button.clicked.connect (on_applied_to_system);
 
             installer.check_missing_finished.connect (on_check_missing_finished);
         }
