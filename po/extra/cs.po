@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 22:59+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2022-01-10 21:59+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/locale-"
@@ -31,30 +31,46 @@ msgstr "Spravujte jazyky, nastavte region a místní formáty"
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/locale.metainfo.xml.in:34 data/locale.metainfo.xml.in:46
-#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:34
+msgid "A big redesign!"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:36
+msgid "Prevent fcitx5 packages from being installed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:37
+msgid "Add links to other places locale-related settings are managed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+msgid "Updated translations"
+msgstr "Aktualizovány překlady"
+
+#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Opravy:"
 
-#: data/locale.metainfo.xml.in:36
+#: data/locale.metainfo.xml.in:51
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:42
+#: data/locale.metainfo.xml.in:58
 msgid "Improvements:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:44
+#: data/locale.metainfo.xml.in:60
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:48
+#: data/locale.metainfo.xml.in:64
 #, fuzzy
 #| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Podpora místních a jazykových nastavení s třípísmenkovými kódy"
 
-#: data/locale.metainfo.xml.in:56
+#: data/locale.metainfo.xml.in:73
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -62,46 +78,17 @@ msgstr ""
 "Zajištěno, že rozbalovací nabídka „Formáty“ zůstane správná po instalaci "
 "nebo odebrání jazyků"
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:82
 msgid "Support locales with 3-letter codes"
 msgstr "Podpora místních a jazykových nastavení s třípísmenkovými kódy"
 
-#: data/locale.metainfo.xml.in:66
+#: data/locale.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Drobné aktualizace:"
 
-#: data/locale.metainfo.xml.in:68
+#: data/locale.metainfo.xml.in:86
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Lepší podpora pro distribuce nezaložené na Ubuntu"
-
-#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:76
-#: data/locale.metainfo.xml.in:83 data/locale.metainfo.xml.in:90
-#: data/locale.metainfo.xml.in:98 data/locale.metainfo.xml.in:109
-msgid "Updated translations"
-msgstr "Aktualizovány překlady"
-
-#: data/locale.metainfo.xml.in:97
-msgid "Fix an issue with cancelling language installation"
-msgstr "Oprava problému při přerušení instalace jazyka"
-
-#: data/locale.metainfo.xml.in:105
-msgid "Redesigned Install Language popover"
-msgstr ""
-"Předělaný vyskakovací dialog po najetí ukazatelem myši, určený pro instalaci "
-"jazyka"
-
-#: data/locale.metainfo.xml.in:106
-msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
-"V případě potřeby si vyžádat oprávnění. Už bez dalšího informačního pruhu"
-
-#: data/locale.metainfo.xml.in:107
-msgid "Installtion progress InfoBar is now a Dialog"
-msgstr "Informační lišta o postupu instalace je nyní dialog"
-
-#: data/locale.metainfo.xml.in:108
-msgid "Language list properly updates when adding or removing languages"
-msgstr "Seznam jazyků se správně aktualizuje po přidání nebo odebrání jazyků"
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
@@ -110,6 +97,25 @@ msgstr "Spravujte nastavení místního prostředí"
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Pro správu nastavení prostředí je vyžadováno ověření se"
+
+#~ msgid "Fix an issue with cancelling language installation"
+#~ msgstr "Oprava problému při přerušení instalace jazyka"
+
+#~ msgid "Redesigned Install Language popover"
+#~ msgstr ""
+#~ "Předělaný vyskakovací dialog po najetí ukazatelem myši, určený pro "
+#~ "instalaci jazyka"
+
+#~ msgid "Asks for permission when needed. No more extra InfoBar"
+#~ msgstr ""
+#~ "V případě potřeby si vyžádat oprávnění. Už bez dalšího informačního pruhu"
+
+#~ msgid "Installtion progress InfoBar is now a Dialog"
+#~ msgstr "Informační lišta o postupu instalace je nyní dialog"
+
+#~ msgid "Language list properly updates when adding or removing languages"
+#~ msgstr ""
+#~ "Seznam jazyků se správně aktualizuje po přidání nebo odebrání jazyků"
 
 #~ msgid "Locale"
 #~ msgstr "Místní prostředí"

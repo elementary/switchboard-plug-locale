@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 22:59+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2022-05-06 16:33+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -31,29 +31,45 @@ msgstr "Gestioneu les llengües i configureu-ne la regió i el format."
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/locale.metainfo.xml.in:34 data/locale.metainfo.xml.in:46
-#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:34
+msgid "A big redesign!"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:36
+msgid "Prevent fcitx5 packages from being installed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:37
+msgid "Add links to other places locale-related settings are managed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+msgid "Updated translations"
+msgstr "Traduccions actualitzades"
+
+#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Correccions:"
 
-#: data/locale.metainfo.xml.in:36
+#: data/locale.metainfo.xml.in:51
 msgid "Translate authentication dialog description text"
 msgstr "Traducció del text de descripció del diàleg d'autenticació"
 
-#: data/locale.metainfo.xml.in:42
+#: data/locale.metainfo.xml.in:58
 msgid "Improvements:"
 msgstr "Millores:"
 
-#: data/locale.metainfo.xml.in:44
+#: data/locale.metainfo.xml.in:60
 msgid "Central Kurdish is now available as an installable language"
 msgstr "El kurd central ja està disponible com a idioma instal·lable."
 
-#: data/locale.metainfo.xml.in:48
+#: data/locale.metainfo.xml.in:64
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 "Suport per a la instal·lació i eliminació d'idiomes amb codis de 3 lletres"
 
-#: data/locale.metainfo.xml.in:56
+#: data/locale.metainfo.xml.in:73
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -61,45 +77,17 @@ msgstr ""
 "S'assegura que el menú desplegable \"Formats\" segueix sent correcte després "
 "d'instal·lar o eliminar idiomes."
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:82
 msgid "Support locales with 3-letter codes"
 msgstr "S'admeten codis de llengua de tres lletres."
 
-#: data/locale.metainfo.xml.in:66
+#: data/locale.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Actualitzacions menors:"
 
-#: data/locale.metainfo.xml.in:68
+#: data/locale.metainfo.xml.in:86
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Millor suport per a distribucions no basades en l'Ubuntu"
-
-#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:76
-#: data/locale.metainfo.xml.in:83 data/locale.metainfo.xml.in:90
-#: data/locale.metainfo.xml.in:98 data/locale.metainfo.xml.in:109
-msgid "Updated translations"
-msgstr "Traduccions actualitzades"
-
-#: data/locale.metainfo.xml.in:97
-msgid "Fix an issue with cancelling language installation"
-msgstr "Solució d'un problema en cancel·lar la instal·lació de la llengua"
-
-#: data/locale.metainfo.xml.in:105
-msgid "Redesigned Install Language popover"
-msgstr "Finestra emergent per instal·lar llengües redissenyada"
-
-#: data/locale.metainfo.xml.in:106
-msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr "Es demana permís quan cal. Ja no hi ha la barra d'informació."
-
-#: data/locale.metainfo.xml.in:107
-msgid "Installtion progress InfoBar is now a Dialog"
-msgstr "La barra d'informació d'instal·lació ara és un diàleg."
-
-#: data/locale.metainfo.xml.in:108
-msgid "Language list properly updates when adding or removing languages"
-msgstr ""
-"La llista de llengües s'actualitza correctament quan se n'afegeixen o se "
-"n'eliminen."
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
@@ -108,6 +96,23 @@ msgstr "Gestioneu els paràmetres de la llengua."
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Cal autenticació per gestionar els paràmetres de la llengua."
+
+#~ msgid "Fix an issue with cancelling language installation"
+#~ msgstr "Solució d'un problema en cancel·lar la instal·lació de la llengua"
+
+#~ msgid "Redesigned Install Language popover"
+#~ msgstr "Finestra emergent per instal·lar llengües redissenyada"
+
+#~ msgid "Asks for permission when needed. No more extra InfoBar"
+#~ msgstr "Es demana permís quan cal. Ja no hi ha la barra d'informació."
+
+#~ msgid "Installtion progress InfoBar is now a Dialog"
+#~ msgstr "La barra d'informació d'instal·lació ara és un diàleg."
+
+#~ msgid "Language list properly updates when adding or removing languages"
+#~ msgstr ""
+#~ "La llista de llengües s'actualitza correctament quan se n'afegeixen o se "
+#~ "n'eliminen."
 
 #~ msgid "Locale"
 #~ msgstr "Llengua"

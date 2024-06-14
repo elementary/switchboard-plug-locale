@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 22:59+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2022-05-06 16:33+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -32,28 +32,44 @@ msgstr "Zarządzaj językami, konfiguruj region i formaty"
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/locale.metainfo.xml.in:34 data/locale.metainfo.xml.in:46
-#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:34
+msgid "A big redesign!"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:36
+msgid "Prevent fcitx5 packages from being installed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:37
+msgid "Add links to other places locale-related settings are managed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+msgid "Updated translations"
+msgstr "Zaktualizowane tłumaczenia"
+
+#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/locale.metainfo.xml.in:36
+#: data/locale.metainfo.xml.in:51
 msgid "Translate authentication dialog description text"
 msgstr "Przetłumaczono opis okna uwierzytelniania"
 
-#: data/locale.metainfo.xml.in:42
+#: data/locale.metainfo.xml.in:58
 msgid "Improvements:"
 msgstr "Ulepszenia:"
 
-#: data/locale.metainfo.xml.in:44
+#: data/locale.metainfo.xml.in:60
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Centralny Kurdyjski jest teraz dostępny jako język do zainstalowania"
 
-#: data/locale.metainfo.xml.in:48
+#: data/locale.metainfo.xml.in:64
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Wsparcie dla instalacji i usuwania języków z trzyliterowymi kodami"
 
-#: data/locale.metainfo.xml.in:56
+#: data/locale.metainfo.xml.in:73
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -61,45 +77,17 @@ msgstr ""
 "Upewniono się, że menu „Formaty” działa poprawnie po instalacji i usunięciu "
 "języków"
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:82
 msgid "Support locales with 3-letter codes"
 msgstr "Wsparcie dla języków z trzyliterowymi kodami"
 
-#: data/locale.metainfo.xml.in:66
+#: data/locale.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
-#: data/locale.metainfo.xml.in:68
+#: data/locale.metainfo.xml.in:86
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Lepsze wsparcie dla dystrybucji niebazujących na Ubuntu"
-
-#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:76
-#: data/locale.metainfo.xml.in:83 data/locale.metainfo.xml.in:90
-#: data/locale.metainfo.xml.in:98 data/locale.metainfo.xml.in:109
-msgid "Updated translations"
-msgstr "Zaktualizowane tłumaczenia"
-
-#: data/locale.metainfo.xml.in:97
-msgid "Fix an issue with cancelling language installation"
-msgstr "Naprawiono problem z anulowaniem instalacji języka"
-
-#: data/locale.metainfo.xml.in:105
-msgid "Redesigned Install Language popover"
-msgstr "Przeprojektowano popover instalacji języka"
-
-#: data/locale.metainfo.xml.in:106
-msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
-"Pytanie o uprawnienia tam gdzie to potrzebne. Usunięto niepotrzebny InfoBar"
-
-#: data/locale.metainfo.xml.in:107
-msgid "Installtion progress InfoBar is now a Dialog"
-msgstr "InfoBar z postępem instalacji jest teraz oknem dialogowym"
-
-#: data/locale.metainfo.xml.in:108
-msgid "Language list properly updates when adding or removing languages"
-msgstr ""
-"Lista języków poprawnie aktualizuje się przy dodawaniu i usuwaniu języków"
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
@@ -108,6 +96,24 @@ msgstr "Zarządzaj ustawieniami lokalnymi"
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Wymagane jest uwierzytelnienie, aby zarządzać ustawieniami lokalnymi"
+
+#~ msgid "Fix an issue with cancelling language installation"
+#~ msgstr "Naprawiono problem z anulowaniem instalacji języka"
+
+#~ msgid "Redesigned Install Language popover"
+#~ msgstr "Przeprojektowano popover instalacji języka"
+
+#~ msgid "Asks for permission when needed. No more extra InfoBar"
+#~ msgstr ""
+#~ "Pytanie o uprawnienia tam gdzie to potrzebne. Usunięto niepotrzebny "
+#~ "InfoBar"
+
+#~ msgid "Installtion progress InfoBar is now a Dialog"
+#~ msgstr "InfoBar z postępem instalacji jest teraz oknem dialogowym"
+
+#~ msgid "Language list properly updates when adding or removing languages"
+#~ msgstr ""
+#~ "Lista języków poprawnie aktualizuje się przy dodawaniu i usuwaniu języków"
 
 #~ msgid "Locale"
 #~ msgstr "Ustawienia regionalne"
