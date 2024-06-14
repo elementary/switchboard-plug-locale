@@ -73,7 +73,7 @@ namespace SwitchboardPlugLocale {
                 account_proxy = connection.get_proxy_sync<AccountProxy> (
                     "org.freedesktop.Accounts",
                     "/org/freedesktop/Accounts/User%u".printf (uid),
-                    DBusProxyFlags.NONE
+                    DBusProxyFlags.DO_NOT_LOAD_PROPERTIES
                 );
             } catch (IOError e) {
                 critical (e.message);
@@ -288,6 +288,42 @@ namespace SwitchboardPlugLocale {
                 warning (e.message);
             }
         }
+
+        public string? get_localectl_settings (string? locale, string? format, string current_format) {
+            try {
+                string output;
+                Process.spawn_command_line_sync ("localectl", out output);
+
+                var lines = output.split ("\n");
+                foreach (var line in lines) {
+                    if (locale != null) {
+                        if ("LANG" in line) {
+                            if (locale in line) {
+                                return locale;
+                            }
+                        }
+                    }
+                    if (format != null) {
+                        if ("LC_" in line) {
+                            if (format in line) {
+                                return format;
+                            }
+                        }
+                    }
+                }
+
+                if (locale == null && format == null) {
+                    if ("LC_" in string.joinv(" ", lines))  {
+                        return null;
+                    }
+                    return current_format;
+                }
+
+            } catch (Error e) {
+                warning (e.message);
+            }
+            return null;
+         }
 
         private static LocaleManager? instance = null;
 
