@@ -29,6 +29,21 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.0.0" date="2024-06-14" urgency="medium">
+      <description>
+        <p>A big redesign!</p>
+        <ul>
+          <li>Prevent fcitx5 packages from being installed</li>
+          <li>Add links to other places locale-related settings are managed</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-locale/issues/70">Formats dropdown is slow to navigate</issue>
+        <issue url="https://github.com/elementary/switchboard-plug-locale/issues/200">Font missing after uninstalling language</issue>
+      </issues>
+    </release>
+
     <release version="2.5.8" date="2022-05-12" urgency="medium">
       <description>
         <p>Fixes:</p>
@@ -37,6 +52,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.5.7" date="2022-04-12" urgency="medium">
       <description>
         <p>Improvements:</p>
@@ -49,6 +65,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.5.6" date="2021-11-18" urgency="medium">
       <description>
         <p>Fixes:</p>
@@ -57,6 +74,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.5.5" date="2021-10-26" urgency="medium">
       <description>
         <p>Fixes:</p>
@@ -70,45 +88,11 @@
         </ul>
       </description>
     </release>
-    <release version="2.5.4" date="2021-07-14" urgency="medium">
-      <description>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.5.3" date="2020-12-23" urgency="medium">
-      <description>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.5.2" date="2020-05-28" urgency="medium">
-      <description>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.5.1" date="2020-04-01" urgency="medium">
-      <description>
-        <ul>
-          <li>Fix an issue with cancelling language installation</li>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.5.0" date="2019-11-15" urgency="medium">
-      <description>
-        <ul>
-          <li>Redesigned Install Language popover</li>
-          <li>Asks for permission when needed. No more extra InfoBar</li>
-          <li>Installtion progress InfoBar is now a Dialog</li>
-          <li>Language list properly updates when adding or removing languages</li>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
+
+    <release version="2.5.4" date="2021-07-14" urgency="medium" />
+    <release version="2.5.3" date="2020-12-23" urgency="medium" />
+    <release version="2.5.2" date="2020-05-28" urgency="medium" />
+    <release version="2.5.1" date="2020-04-01" urgency="medium" />
+    <release version="2.5.0" date="2019-11-15" urgency="medium" />
   </releases>
 </component>
