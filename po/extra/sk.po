@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 22:59+0000\n"
 "PO-Revision-Date: 2022-05-07 09:18+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -19,36 +19,40 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/locale.appdata.xml.in:5
+#: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
 msgstr "Miestne a jazykové nastavenia"
 
-#: data/locale.appdata.xml.in:6
+#: data/locale.metainfo.xml.in:11
 msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte oblasť a miestne formáty"
 
-#: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
-#: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
+#: data/locale.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/locale.metainfo.xml.in:34 data/locale.metainfo.xml.in:46
+#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:62
 msgid "Fixes:"
 msgstr "Opravy:"
 
-#: data/locale.appdata.xml.in:13
+#: data/locale.metainfo.xml.in:36
 msgid "Translate authentication dialog description text"
 msgstr "Preklad popisného textu v dialógovom okne overenia"
 
-#: data/locale.appdata.xml.in:19
+#: data/locale.metainfo.xml.in:42
 msgid "Improvements:"
 msgstr "Vylepšenia:"
 
-#: data/locale.appdata.xml.in:21
+#: data/locale.metainfo.xml.in:44
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Centrálna kurdčina je teraz dostupná ako inštalovateľný jazyk"
 
-#: data/locale.appdata.xml.in:25
+#: data/locale.metainfo.xml.in:48
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Podpora inštalácie a odstraňovania jazykov s 3-písmenovými kódmi"
 
-#: data/locale.appdata.xml.in:33
+#: data/locale.metainfo.xml.in:56
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -56,42 +60,42 @@ msgstr ""
 "Zabezpečené, že kontextové menu „Formáty“ bude fungovať správne po "
 "nainštalovaní alebo odstránení jazykov"
 
-#: data/locale.appdata.xml.in:41
+#: data/locale.metainfo.xml.in:64
 msgid "Support locales with 3-letter codes"
 msgstr "Podpora miest s 3-písmenovými kódmi"
 
-#: data/locale.appdata.xml.in:43
+#: data/locale.metainfo.xml.in:66
 msgid "Minor updates:"
 msgstr "Menšie aktualizácie:"
 
-#: data/locale.appdata.xml.in:45
+#: data/locale.metainfo.xml.in:68
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Lepšia podpora pre distribúcie nezaložené na základe Ubuntu"
 
-#: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
-#: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
-#: data/locale.appdata.xml.in:75 data/locale.appdata.xml.in:86
+#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:76
+#: data/locale.metainfo.xml.in:83 data/locale.metainfo.xml.in:90
+#: data/locale.metainfo.xml.in:98 data/locale.metainfo.xml.in:109
 msgid "Updated translations"
 msgstr "Aktualizované preklady"
 
-#: data/locale.appdata.xml.in:74
+#: data/locale.metainfo.xml.in:97
 msgid "Fix an issue with cancelling language installation"
 msgstr "Opravený problém pri prerušení inštalácie jazyka"
 
-#: data/locale.appdata.xml.in:82
+#: data/locale.metainfo.xml.in:105
 msgid "Redesigned Install Language popover"
 msgstr "Prerobené vyskakovacie okno Inštalovať jazyk"
 
-#: data/locale.appdata.xml.in:83
+#: data/locale.metainfo.xml.in:106
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 "V prípade potreby si vypýtať oprávnenie. Už žiaden ďalší informačný pruh"
 
-#: data/locale.appdata.xml.in:84
+#: data/locale.metainfo.xml.in:107
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr "Informačná lišta postupu inštalácie je po novom dialóg"
 
-#: data/locale.appdata.xml.in:85
+#: data/locale.metainfo.xml.in:108
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 "Zoznam jazykov sa správne aktualizuje po pridaní alebo odobraní jazykov"

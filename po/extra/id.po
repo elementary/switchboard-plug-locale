@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 22:59+0000\n"
 "PO-Revision-Date: 2020-11-18 15:15+0000\n"
 "Last-Translator: deovaliandro <mdv16h@student.unhas.ac.id>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -19,76 +19,80 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#: data/locale.appdata.xml.in:5
+#: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
 msgstr ""
 
-#: data/locale.appdata.xml.in:6
+#: data/locale.metainfo.xml.in:11
 msgid "Manage languages, and configure region and format"
 msgstr "Kelola bahasa, dan konfigurasi wilayah dan format"
 
-#: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
-#: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
+#: data/locale.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/locale.metainfo.xml.in:34 data/locale.metainfo.xml.in:46
+#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:62
 msgid "Fixes:"
 msgstr ""
 
-#: data/locale.appdata.xml.in:13
+#: data/locale.metainfo.xml.in:36
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.appdata.xml.in:19
+#: data/locale.metainfo.xml.in:42
 msgid "Improvements:"
 msgstr ""
 
-#: data/locale.appdata.xml.in:21
+#: data/locale.metainfo.xml.in:44
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.appdata.xml.in:25
+#: data/locale.metainfo.xml.in:48
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 
-#: data/locale.appdata.xml.in:33
+#: data/locale.metainfo.xml.in:56
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
 
-#: data/locale.appdata.xml.in:41
+#: data/locale.metainfo.xml.in:64
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/locale.appdata.xml.in:43
+#: data/locale.metainfo.xml.in:66
 msgid "Minor updates:"
 msgstr ""
 
-#: data/locale.appdata.xml.in:45
+#: data/locale.metainfo.xml.in:68
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
-#: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
-#: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
-#: data/locale.appdata.xml.in:75 data/locale.appdata.xml.in:86
+#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:76
+#: data/locale.metainfo.xml.in:83 data/locale.metainfo.xml.in:90
+#: data/locale.metainfo.xml.in:98 data/locale.metainfo.xml.in:109
 msgid "Updated translations"
 msgstr "Terjemahan yang diperbarui"
 
-#: data/locale.appdata.xml.in:74
+#: data/locale.metainfo.xml.in:97
 msgid "Fix an issue with cancelling language installation"
 msgstr ""
 
-#: data/locale.appdata.xml.in:82
+#: data/locale.metainfo.xml.in:105
 msgid "Redesigned Install Language popover"
 msgstr ""
 
-#: data/locale.appdata.xml.in:83
+#: data/locale.metainfo.xml.in:106
 msgid "Asks for permission when needed. No more extra InfoBar"
 msgstr ""
 
-#: data/locale.appdata.xml.in:84
+#: data/locale.metainfo.xml.in:107
 msgid "Installtion progress InfoBar is now a Dialog"
 msgstr ""
 
-#: data/locale.appdata.xml.in:85
+#: data/locale.metainfo.xml.in:108
 msgid "Language list properly updates when adding or removing languages"
 msgstr ""
 
