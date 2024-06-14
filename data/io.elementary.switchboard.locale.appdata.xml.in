@@ -7,6 +7,19 @@
   <icon type="stock">preferences-desktop-locale</icon>
   <translation type="gettext">locale-plug</translation>
   <releases>
+    <release version="2.5.9" date="2023-05-03" urgency="medium">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>Prevent fcitx5-* packages from being installed</li>
+          <li>Correctly list polkit implied permissions</li>
+        </ul>
+        <p>Other updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.8" date="2022-05-12" urgency="medium">
       <description>
         <p>Fixes:</p>
