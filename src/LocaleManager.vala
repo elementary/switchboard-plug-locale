@@ -187,7 +187,21 @@ namespace SwitchboardPlugLocale {
                 locale += "LC_MEASUREMENT=%s".printf (format);
             }
 
-            yield locale1_proxy.set_locale (locale, true);
+            try {
+                yield locale1_proxy.set_locale (locale, true);
+            } catch (Error e) {
+                var dialog = new Granite.MessageDialog (
+                    _("Can't set system locale"),
+                    e.message,
+                    new ThemedIcon ("preferences-desktop-locale")
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
+                    transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                };
+                dialog.present ();
+                dialog.response.connect (dialog.destroy);
+            }
 
             string layouts = "";
             string variants = "";
@@ -214,14 +228,28 @@ namespace SwitchboardPlugLocale {
                 }
             }
 
-            locale1_proxy.set_x11_keyboard (
-                layouts,
-                "",
-                variants,
-                "",
-                true,
-                true
-            );
+            try {
+                yield locale1_proxy.set_x11_keyboard (
+                    layouts,
+                    "",
+                    variants,
+                    "",
+                    true,
+                    true
+                );
+            } catch (Error e) {
+                var dialog = new Granite.MessageDialog (
+                    _("Can't set system keyboard"),
+                    e.message,
+                    new ThemedIcon ("preferences-desktop-locale")
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
+                    transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                };
+                dialog.present ();
+                dialog.response.connect (dialog.destroy);
+            }
         }
 
         private static LocaleManager? instance = null;
