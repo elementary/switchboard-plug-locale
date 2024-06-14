@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-12 15:55+0000\n"
-"PO-Revision-Date: 2024-06-14 03:33+0000\n"
+"PO-Revision-Date: 2024-06-14 22:59+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/es/>\n"
@@ -34,29 +34,31 @@ msgstr "Correcciones:"
 
 #: data/locale.appdata.xml.in:13
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "Se traduce el idioma del texto de la descripción de autorización"
 
 #: data/locale.appdata.xml.in:19
 msgid "Improvements:"
-msgstr ""
+msgstr "Mejoras:"
 
 #: data/locale.appdata.xml.in:21
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "Kurdo central ahora está disponible como un idioma instalable"
 
 #: data/locale.appdata.xml.in:25
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr ""
+msgstr "Se pueden instalar y eliminar idiomas usando sus códigos de 3 letras"
 
 #: data/locale.appdata.xml.in:33
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
+"Se garantiza que el menú desplegable de «Formatos» permanezca correcto "
+"después de instalar o eliminar idiomas"
 
 #: data/locale.appdata.xml.in:41
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Se agregó soporte de regiones usando códigos de tres letras"
 
 #: data/locale.appdata.xml.in:43
 msgid "Minor updates:"
@@ -65,6 +67,8 @@ msgstr "Actualizaciones menores:"
 #: data/locale.appdata.xml.in:45
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
+"Se mejoró la compatibilidad con distribuciones de Linux que no sean de tipo "
+"Ubuntu"
 
 #: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
 #: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
@@ -99,7 +103,7 @@ msgstr ""
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
-msgstr "Gestionar la configuración regional"
+msgstr "Gestionar la configuración de región"
 
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
