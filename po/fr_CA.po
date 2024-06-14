@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 22:59+0000\n"
 "PO-Revision-Date: 2015-07-12 04:22+0000\n"
 "Last-Translator: Ismael Cormier <ismael.cormier@outlook.com>\n"
 "Language-Team: French (Canada) <fr_CA@li.org>\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 msgid "Install Language"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Currently active language"
 msgstr ""
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr ""
 
@@ -113,26 +113,26 @@ msgstr "Completer l'installation"
 msgid "Some changes will not take effect until you log out"
 msgstr "Certains changements ne prendrons effet seulement à la déconnexion."
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
