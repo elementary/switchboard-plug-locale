@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-12 15:55+0000\n"
-"PO-Revision-Date: 2024-06-13 17:16+0000\n"
+"PO-Revision-Date: 2024-06-14 03:33+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/es/>\n"
@@ -30,7 +30,7 @@ msgstr "Gestione los idiomas y configure la región y el formato"
 #: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
 #: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
 msgid "Fixes:"
-msgstr ""
+msgstr "Correcciones:"
 
 #: data/locale.appdata.xml.in:13
 msgid "Translate authentication dialog description text"
