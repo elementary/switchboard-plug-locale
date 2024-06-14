@@ -26,8 +26,8 @@ public interface AccountProxy : GLib.Object {
 public interface Locale1Proxy : GLib.Object {
     public abstract string[] locale { owned get; }
 
-    public abstract void set_locale (string[] locale, bool interactive) throws GLib.Error;
-    public abstract void set_x11_keyboard (
+    public abstract async void set_locale (string[] locale, bool interactive) throws GLib.Error;
+    public abstract async void set_x11_keyboard (
         string layout,
         string model,
         string variant,
@@ -177,7 +177,7 @@ namespace SwitchboardPlugLocale {
             return null;
         }
 
-        public void apply_to_system (string language, string? format) {
+        public async void apply_to_system (string language, string? format) {
             string[] locale = {"LANG=%s".printf (language)};
 
             if (format != null) {
@@ -187,7 +187,7 @@ namespace SwitchboardPlugLocale {
                 locale += "LC_MEASUREMENT=%s".printf (format);
             }
 
-            locale1_proxy.set_locale (locale, true);
+            yield locale1_proxy.set_locale (locale, true);
 
             string layouts = "";
             string variants = "";

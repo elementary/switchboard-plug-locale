@@ -333,7 +333,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var selected_locale = get_selected_locale ();
             var selected_format = get_format ();
             debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
-            lm.apply_to_system (selected_locale, selected_format);
+            lm.apply_to_system.begin (selected_locale, selected_format);
 
             restart_infobar.revealed = true;
         }
