@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:08+0000\n"
-"PO-Revision-Date: 2024-05-27 08:13+0000\n"
+"PO-Revision-Date: 2024-06-16 01:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -29,19 +29,19 @@ msgstr "言語を管理し、地域と書式を設定します"
 
 #: data/locale.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/locale.metainfo.xml.in:34
 msgid "A big redesign!"
-msgstr ""
+msgstr "大幅なデザイン変更!"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Prevent fcitx5 packages from being installed"
-msgstr ""
+msgstr "fcitx5 パッケージがインストールされないように修正"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Add links to other places locale-related settings are managed"
-msgstr ""
+msgstr "ロケール関連の設定を管理するページへのリンクを追加"
 
 #: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
 msgid "Updated translations"
