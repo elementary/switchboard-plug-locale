@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2018-10-16 19:49+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
@@ -59,7 +59,7 @@ msgstr "Įdiegiama trūkstama kalba"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 #, fuzzy
 msgid "Install Language"
 msgstr "Įdiegti kalbą"
@@ -77,7 +77,7 @@ msgstr "Įdiegtos kalbos"
 msgid "Currently active language"
 msgstr "Šiuo metu aktyvi kalba"
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Šalinti kalbą"
 
@@ -125,27 +125,27 @@ msgstr "Pabaigti įdiegimą"
 msgid "Some changes will not take effect until you log out"
 msgstr "Kai kurie pasikeitimai neįsigalios tol, kol neatsijungsite"
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr "Temperatūra:"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
 msgstr "Celsijus"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr "Farenheitas"
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr "Nustatyti kalbą"
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr "Nustatyti sistemos kalba"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nustatyti kalbą prisijungimo ekranui, svečio paskyrai ir naujoms naudotojų "

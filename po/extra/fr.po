@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2022-06-30 10:04+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -19,39 +19,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/locale.appdata.xml.in:5
+#: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
 msgstr "Paramètres de langue et de région"
 
-#: data/locale.appdata.xml.in:6
+#: data/locale.metainfo.xml.in:11
 msgid "Manage languages, and configure region and format"
 msgstr "Gérer les langues, configurer les paramètres régionaux"
 
-#: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
-#: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
+#: data/locale.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/locale.metainfo.xml.in:34
+msgid "A big redesign!"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:36
+msgid "Prevent fcitx5 packages from being installed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:37
+msgid "Add links to other places locale-related settings are managed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+msgid "Updated translations"
+msgstr "Mise à jour des traductions"
+
+#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Corrections :"
 
-#: data/locale.appdata.xml.in:13
+#: data/locale.metainfo.xml.in:51
 msgid "Translate authentication dialog description text"
 msgstr "Traduction du texte de description de la fenêtre d'authentification"
 
-#: data/locale.appdata.xml.in:19
+#: data/locale.metainfo.xml.in:58
 msgid "Improvements:"
 msgstr "Améliorations :"
 
-#: data/locale.appdata.xml.in:21
+#: data/locale.metainfo.xml.in:60
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 "Le kurde central est désormais disponible en tant que langue installable"
 
-#: data/locale.appdata.xml.in:25
+#: data/locale.metainfo.xml.in:64
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 "Prise en charge de l'installation et de la suppression des langues avec des "
 "codes à 3 lettres"
 
-#: data/locale.appdata.xml.in:33
+#: data/locale.metainfo.xml.in:73
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -59,48 +79,17 @@ msgstr ""
 "Nous nous sommes assurés que le menu déroulant « Formats » reste correct "
 "après l'installation ou la suppression de langues"
 
-#: data/locale.appdata.xml.in:41
+#: data/locale.metainfo.xml.in:82
 msgid "Support locales with 3-letter codes"
 msgstr "Prise en charge des langues avec un code à 3 lettres"
 
-#: data/locale.appdata.xml.in:43
+#: data/locale.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Mises à jour mineures :"
 
-#: data/locale.appdata.xml.in:45
+#: data/locale.metainfo.xml.in:86
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Meilleure prise en charge pour les distributions non basées sur Ubuntu"
-
-#: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
-#: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
-#: data/locale.appdata.xml.in:75 data/locale.appdata.xml.in:86
-msgid "Updated translations"
-msgstr "Mise à jour des traductions"
-
-#: data/locale.appdata.xml.in:74
-msgid "Fix an issue with cancelling language installation"
-msgstr ""
-"Correction d'un problème lors de l'annulation de l'installation d'une langue"
-
-#: data/locale.appdata.xml.in:82
-msgid "Redesigned Install Language popover"
-msgstr "Renouvellement du design de la bulle d'installation des langues"
-
-#: data/locale.appdata.xml.in:83
-msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr ""
-"Demande de la permission à la demande, plus besoin de barre d'information"
-
-#: data/locale.appdata.xml.in:84
-msgid "Installtion progress InfoBar is now a Dialog"
-msgstr ""
-"Le progrès de l'installation s'affiche maintenant dans une boîte de dialogue"
-
-#: data/locale.appdata.xml.in:85
-msgid "Language list properly updates when adding or removing languages"
-msgstr ""
-"La liste des langues se met correctement à jour lors de l'ajout ou de la "
-"suppression de langues"
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
@@ -109,6 +98,28 @@ msgstr "Gérer les paramètres des langues"
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Authentification requise pour modifier les paramètres des langues"
+
+#~ msgid "Fix an issue with cancelling language installation"
+#~ msgstr ""
+#~ "Correction d'un problème lors de l'annulation de l'installation d'une "
+#~ "langue"
+
+#~ msgid "Redesigned Install Language popover"
+#~ msgstr "Renouvellement du design de la bulle d'installation des langues"
+
+#~ msgid "Asks for permission when needed. No more extra InfoBar"
+#~ msgstr ""
+#~ "Demande de la permission à la demande, plus besoin de barre d'information"
+
+#~ msgid "Installtion progress InfoBar is now a Dialog"
+#~ msgstr ""
+#~ "Le progrès de l'installation s'affiche maintenant dans une boîte de "
+#~ "dialogue"
+
+#~ msgid "Language list properly updates when adding or removing languages"
+#~ msgstr ""
+#~ "La liste des langues se met correctement à jour lors de l'ajout ou de la "
+#~ "suppression de langues"
 
 #~ msgid "Locale"
 #~ msgstr "Langues"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2024-03-14 06:12+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -59,7 +59,7 @@ msgstr "Установка недостающих языковых пакето�
 msgid "Cancel"
 msgstr "Отменить"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 msgid "Install Language"
 msgstr "Установить язык"
 
@@ -76,7 +76,7 @@ msgstr "Установленные языки"
 msgid "Currently active language"
 msgstr "Текущий язык"
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Удалить язык"
 
@@ -116,27 +116,27 @@ msgstr "Завершить установку"
 msgid "Some changes will not take effect until you log out"
 msgstr "Некоторые изменения вступят в силу после выхода из сеанса"
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
 msgstr "Цельсий"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr "Фаренгейт"
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr "Установить язык"
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr "Установить как системный язык"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Установить язык для экрана входа, гостевого и новых аккаунтов"
 

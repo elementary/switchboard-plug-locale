@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2023-02-17 17:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: Greek <https://l10n.elementary.io/projects/switchboard/"
@@ -60,7 +60,7 @@ msgstr "Γίνεται εγκατάσταση ελλειπούσας γλώσσ�
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 #, fuzzy
 msgid "Install Language"
 msgstr "Εγκατάσταση γλώσσας"
@@ -78,7 +78,7 @@ msgstr "Εγκατεστημένες γλώσσες"
 msgid "Currently active language"
 msgstr "Τρέχουσα ενεργή γλώσσα"
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Αφαίρεση γλώσσας"
 
@@ -125,27 +125,27 @@ msgstr "Ολοκλήρωση εγκατάστασης"
 msgid "Some changes will not take effect until you log out"
 msgstr "Κάποιες αλλαγές δε θα εφαρμοστούν μέχρι να αποσυνδεθείτε"
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr "Ορισμός γλώσσας"
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr "Καθορισμός γλώσσας συστήματος"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Ορίστε γλώσσα για την οθόνη εισόδου, τον λογαριασμό επισκέπτη και τους νέους "

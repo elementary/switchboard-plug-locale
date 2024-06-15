@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2023-06-23 10:07+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/locale-"
@@ -19,81 +19,72 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.17\n"
 
-#: data/locale.appdata.xml.in:5
+#: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
 msgstr "Taal &amp; Regio instellingen"
 
-#: data/locale.appdata.xml.in:6
+#: data/locale.metainfo.xml.in:11
 msgid "Manage languages, and configure region and format"
 msgstr "Beheer talen en configureer regio's en formaten"
 
-#: data/locale.appdata.xml.in:11 data/locale.appdata.xml.in:23
-#: data/locale.appdata.xml.in:31 data/locale.appdata.xml.in:39
+#: data/locale.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/locale.metainfo.xml.in:34
+msgid "A big redesign!"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:36
+msgid "Prevent fcitx5 packages from being installed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:37
+msgid "Add links to other places locale-related settings are managed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+msgid "Updated translations"
+msgstr "Bijgewerkte vertalingen"
+
+#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
+#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Oplossingen:"
 
-#: data/locale.appdata.xml.in:13
+#: data/locale.metainfo.xml.in:51
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.appdata.xml.in:19
+#: data/locale.metainfo.xml.in:58
 msgid "Improvements:"
 msgstr "Verbeteringen:"
 
-#: data/locale.appdata.xml.in:21
+#: data/locale.metainfo.xml.in:60
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.appdata.xml.in:25
+#: data/locale.metainfo.xml.in:64
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 
-#: data/locale.appdata.xml.in:33
+#: data/locale.metainfo.xml.in:73
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
 
-#: data/locale.appdata.xml.in:41
+#: data/locale.metainfo.xml.in:82
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/locale.appdata.xml.in:43
+#: data/locale.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Kleine updates:"
 
-#: data/locale.appdata.xml.in:45
+#: data/locale.metainfo.xml.in:86
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
-
-#: data/locale.appdata.xml.in:46 data/locale.appdata.xml.in:53
-#: data/locale.appdata.xml.in:60 data/locale.appdata.xml.in:67
-#: data/locale.appdata.xml.in:75 data/locale.appdata.xml.in:86
-msgid "Updated translations"
-msgstr "Bijgewerkte vertalingen"
-
-#: data/locale.appdata.xml.in:74
-msgid "Fix an issue with cancelling language installation"
-msgstr ""
-"Een probleem opgelost bij het annuleren van het installeren van een taal"
-
-#: data/locale.appdata.xml.in:82
-msgid "Redesigned Install Language popover"
-msgstr "Het venster Taal Installeren is opnieuw ontworpen"
-
-#: data/locale.appdata.xml.in:83
-msgid "Asks for permission when needed. No more extra InfoBar"
-msgstr "Vraag om toestemming indien nodig. Geen extra infobalk meer"
-
-#: data/locale.appdata.xml.in:84
-msgid "Installtion progress InfoBar is now a Dialog"
-msgstr "De voortgang van de installatie wordt nu weergegeven in een venster"
-
-#: data/locale.appdata.xml.in:85
-msgid "Language list properly updates when adding or removing languages"
-msgstr ""
-"De lijst met talen wordt nu op een juiste manier bijgewerkt bij het "
-"toevoegen of verwijderen van talen"
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
@@ -102,6 +93,24 @@ msgstr "Beheer lokalisatie instellingen"
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
 msgstr "Authenticatie is vereist om lokalisatie instellingen te beheren"
+
+#~ msgid "Fix an issue with cancelling language installation"
+#~ msgstr ""
+#~ "Een probleem opgelost bij het annuleren van het installeren van een taal"
+
+#~ msgid "Redesigned Install Language popover"
+#~ msgstr "Het venster Taal Installeren is opnieuw ontworpen"
+
+#~ msgid "Asks for permission when needed. No more extra InfoBar"
+#~ msgstr "Vraag om toestemming indien nodig. Geen extra infobalk meer"
+
+#~ msgid "Installtion progress InfoBar is now a Dialog"
+#~ msgstr "De voortgang van de installatie wordt nu weergegeven in een venster"
+
+#~ msgid "Language list properly updates when adding or removing languages"
+#~ msgstr ""
+#~ "De lijst met talen wordt nu op een juiste manier bijgewerkt bij het "
+#~ "toevoegen of verwijderen van talen"
 
 #~ msgid "Locale"
 #~ msgstr "Lokalisatie"

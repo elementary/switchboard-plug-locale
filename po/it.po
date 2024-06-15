@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 15:55+0000\n"
+"POT-Creation-Date: 2024-06-14 23:08+0000\n"
 "PO-Revision-Date: 2020-10-24 12:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -58,7 +58,7 @@ msgstr "Installazione lingua mancante"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:39
+#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
 msgid "Install Language"
 msgstr "Installa lingua"
 
@@ -75,7 +75,7 @@ msgstr "Lingue installate"
 msgid "Currently active language"
 msgstr "Lingua in uso"
 
-#: src/Widgets/LocaleView.vala:52
+#: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Rimuovi lingua"
 
@@ -123,27 +123,27 @@ msgstr "Completa l'installazione"
 msgid "Some changes will not take effect until you log out"
 msgstr "Alcune modifiche non avranno effetto fino alla disconnessione"
 
-#: src/Widgets/LocaleSetting.vala:134
+#: src/Widgets/LocaleSetting.vala:135
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Celsius"
 msgstr "Centigradi"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:141
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:175
+#: src/Widgets/LocaleSetting.vala:176
 msgid "Set Language"
 msgstr "Imposta lingua"
 
-#: src/Widgets/LocaleSetting.vala:179
+#: src/Widgets/LocaleSetting.vala:180
 msgid "Set System Language"
 msgstr "Imposta lingua di sistema"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Imposta lingua per la schermata di accesso, l'account ospite e i nuovi "
