@@ -177,7 +177,7 @@ namespace SwitchboardPlugLocale {
             return null;
         }
 
-        public async void apply_to_system (string language, string? format) {
+        public async bool apply_to_system (string language, string? format) {
             string[] locale = {"LANG=%s".printf (language)};
 
             if (format != null) {
@@ -190,6 +190,10 @@ namespace SwitchboardPlugLocale {
             try {
                 yield locale1_proxy.set_locale (locale, true);
             } catch (Error e) {
+                if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                    return false;
+                }
+
                 var dialog = new Granite.MessageDialog (
                     _("Can't set system locale"),
                     e.message,
@@ -238,6 +242,10 @@ namespace SwitchboardPlugLocale {
                     true
                 );
             } catch (Error e) {
+                if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                    return false;
+                }
+
                 var dialog = new Granite.MessageDialog (
                     _("Can't set system keyboard"),
                     e.message,
@@ -249,7 +257,11 @@ namespace SwitchboardPlugLocale {
                 };
                 dialog.present ();
                 dialog.response.connect (dialog.destroy);
+
+                return false;
             }
+
+            return true;
         }
 
         private static LocaleManager? instance = null;
