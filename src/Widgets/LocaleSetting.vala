@@ -328,7 +328,26 @@ namespace SwitchboardPlugLocale.Widgets {
             var selected_format = get_format ();
             debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
             lm.apply_to_system.begin (selected_locale, selected_format, (obj, res) => {
-                restart_infobar.revealed = lm.apply_to_system.end (res);
+                try {
+                    lm.apply_to_system.end (res);
+                    restart_infobar.revealed = true;
+                } catch (Error e) {
+                    if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                        return;
+                    }
+
+                    var dialog = new Granite.MessageDialog (
+                        _("Can't set system locale"),
+                        e.message,
+                        new ThemedIcon ("preferences-desktop-locale")
+                    ) {
+                        badge_icon = new ThemedIcon ("dialog-error"),
+                        modal = true,
+                        transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                    };
+                    dialog.present ();
+                    dialog.response.connect (dialog.destroy);
+                }
             });
         }
 
