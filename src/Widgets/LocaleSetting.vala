@@ -74,10 +74,12 @@ namespace SwitchboardPlugLocale.Widgets {
             region_endlabel = new Gtk.Label (_("Region:")) {
                 halign = Gtk.Align.END
             };
+            region_dropdown.update_property_value ({DESCRIPTION}, {region_endlabel.label});
 
             var formats_label = new Gtk.Label (_("Formats:")) {
                 halign = Gtk.Align.END
             };
+            format_dropdown.update_property_value ({DESCRIPTION}, {formats_label.label});
 
             var layout_label = new Gtk.Label (_("Keyboard Layout:")) {
                 halign = END
@@ -86,6 +88,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var layout_link = new Gtk.LinkButton.with_label ("settings://input/keyboard/layout", _("Keyboard settings…")) {
                 halign = START
             };
+            layout_link.update_property_value ({DESCRIPTION}, {layout_label.label});
 
             var datetime_label = new Gtk.Label (_("Time Format:")) {
                 halign = END
@@ -94,6 +97,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
                 halign = START
             };
+            datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
 
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
@@ -137,14 +141,17 @@ namespace SwitchboardPlugLocale.Widgets {
                 };
 
                 var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
+                celcius_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 var fahrenheit_radio = new Gtk.CheckButton.with_label (_("Fahrenheit")) {
                     group = celcius_radio
                 };
+                fahrenheit_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 var auto_radio = new Gtk.CheckButton () {
                     group = celcius_radio
                 };
+                auto_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 content_area.attach (temperature_label, 0, 4);
                 content_area.attach (celcius_radio, 1, 4);
