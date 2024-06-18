@@ -26,14 +26,14 @@ public interface AccountProxy : GLib.Object {
 public interface Locale1Proxy : GLib.Object {
     public abstract string[] locale { owned get; }
 
-    public abstract void set_locale (string[] arg_0, bool arg_1) throws GLib.Error;
-    public abstract void set_x11_keyboard (
-        string arg_0,
-        string arg_1,
-        string arg_2,
-        string arg_3,
-        bool arg_4,
-        bool arg_5
+    public abstract async void set_locale (string[] locale, bool interactive) throws GLib.Error;
+    public abstract async void set_x11_keyboard (
+        string layout,
+        string model,
+        string variant,
+        string options,
+        bool convert,
+        bool interactive
     ) throws GLib.Error;
 }
 
@@ -167,70 +167,6 @@ namespace SwitchboardPlugLocale {
             return get_system_locale () ?? "en_US.UTF-8";
         }
 
-        private void localectl_set_locale (string locale, string? format = null) throws GLib.Error {
-            debug ("setting system-wide locale via localectl");
-            if (Utils.get_permission ().allowed) {
-                string output;
-                int status;
-                string cli = "/usr/bin/localectl";
-                string command = "set-locale";
-
-                try {
-                    if (format == null) {
-                        Process.spawn_sync (null,
-                            {"pkexec", cli, command, locale},
-                            Environ.get (),
-                            SpawnFlags.SEARCH_PATH,
-                            null, out output,
-                            null, out status);
-                        if (output != "") {
-                            critical ("localectl failed to set locale");
-                        }
-                    } else {
-                        Process.spawn_sync (null,
-                            {"pkexec", cli, command, locale, "LC_TIME=%s".printf (format),
-                             "LC_NUMERIC=%s".printf (format), "LC_MONETARY=%s".printf (format),
-                             "LC_MEASUREMENT=%s".printf (format)},
-                            Environ.get (),
-                            SpawnFlags.SEARCH_PATH,
-                            null, out output,
-                            null, out status);
-                        if (output != "") {
-                            critical ("localectl failed to set locale");
-                        }
-                    }
-                } catch (Error e) {
-                    critical ("localectl failed to set locale");
-                    throw e;
-                }
-            }
-        }
-
-        private void localectl_set_x11_keymap (string layouts, string variants) throws GLib.Error {
-            if (Utils.get_permission ().allowed) {
-                string output;
-                int status;
-                string cli = "/usr/bin/localectl";
-                string command = "set-x11-keymap";
-
-                try {
-                    Process.spawn_sync (null,
-                        {"pkexec", cli, command, layouts, "", variants},
-                        Environ.get (),
-                        SpawnFlags.SEARCH_PATH,
-                        null, out output,
-                        null, out status);
-
-                    if (output != "") {
-                        critical ("localectl failed to set x11 keymap");
-                    }
-                } catch (Error e) {
-                    critical ("localectl failed to set x11 keymap");
-                    throw e;
-                }
-            }
-        }
-
         public string? get_system_locale () {
             foreach (unowned var locale in locale1_proxy.locale) {
                 if (locale.has_prefix ("LANG=")) {
@@ -241,19 +177,20 @@ namespace SwitchboardPlugLocale {
             return null;
         }
 
-        public void apply_to_system (string language, string? format) {
-            /*
-             * This is a temporary solution for setting the system-wide locale.
-             * I am assuming systemd in version 204 (which we currently ship from Ubuntu repositories)
-             * is broken as SetLocale does not recognize the aquired polkit permission. Maybe that is
-             * intended, but I do not believe this. May be fixed in a later version of systemd and should
-             * be reversed (TODO) when introducing a newer version of systemd to elementary OS.
-             */
+        public async void apply_to_system (string language, string? format) throws GLib.Error {
+            string[] locale = {"LANG=%s".printf (language)};
+
+            if (format != null) {
+                locale += "LC_TIME=%s".printf (format);
+                locale += "LC_NUMERIC=%s".printf (format);
+                locale += "LC_MONETARY=%s".printf (format);
+                locale += "LC_MEASUREMENT=%s".printf (format);
+            }
 
             try {
-                localectl_set_locale ("LANG=%s".printf (language), format);
+                yield locale1_proxy.set_locale (locale, true);
             } catch (Error e) {
-                warning (e.message);
+                throw (e);
             }
 
             string layouts = "";
@@ -282,10 +219,16 @@ namespace SwitchboardPlugLocale {
             }
 
             try {
-                /* TODO: temporary solution for systemd-localed polkit problem */
-                localectl_set_x11_keymap (layouts, variants);
+                yield locale1_proxy.set_x11_keyboard (
+                    layouts,
+                    "",
+                    variants,
+                    "",
+                    true,
+                    true
+                );
             } catch (Error e) {
-                warning (e.message);
+                throw (e);
             }
         }
 

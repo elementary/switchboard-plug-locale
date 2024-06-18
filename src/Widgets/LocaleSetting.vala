@@ -208,13 +208,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 restart_infobar.revealed = true;
             });
 
-            set_system_button.clicked.connect (() => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
-
-                on_applied_to_system ();
-            });
+            set_system_button.clicked.connect (on_applied_to_system);
 
             installer.check_missing_finished.connect (on_check_missing_finished);
         }
@@ -340,9 +334,28 @@ namespace SwitchboardPlugLocale.Widgets {
             var selected_locale = get_selected_locale ();
             var selected_format = get_format ();
             debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
-            lm.apply_to_system (selected_locale, selected_format);
+            lm.apply_to_system.begin (selected_locale, selected_format, (obj, res) => {
+                try {
+                    lm.apply_to_system.end (res);
+                    restart_infobar.revealed = true;
+                } catch (Error e) {
+                    if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                        return;
+                    }
 
-            restart_infobar.revealed = true;
+                    var dialog = new Granite.MessageDialog (
+                        _("Can't set system locale"),
+                        e.message,
+                        new ThemedIcon ("preferences-desktop-locale")
+                    ) {
+                        badge_icon = new ThemedIcon ("dialog-error"),
+                        modal = true,
+                        transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                    };
+                    dialog.present ();
+                    dialog.response.connect (dialog.destroy);
+                }
+            });
         }
 
         private class Locale : Object {
