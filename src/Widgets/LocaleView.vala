@@ -89,11 +89,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 var selected_language_code = list_box.get_selected_language_code ();
+                var selected_language_name = list_box.get_selected_language_name ();
                 var locales = Utils.get_locales_for_language_code (selected_language_code);
 
                 debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
                 locale_setting.reload_locales.begin (selected_language_code, locales);
-                locale_setting.reload_labels (selected_language_code);
+                locale_setting.reload_labels (selected_language_name);
 
                 if (locale_manager.get_user_language () in locales) {
                     remove_button.sensitive = false;
