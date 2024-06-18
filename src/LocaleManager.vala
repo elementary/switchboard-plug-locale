@@ -177,7 +177,7 @@ namespace SwitchboardPlugLocale {
             return null;
         }
 
-        public async void apply_to_system (string language, string? format) throws GLib.DBusError {
+        public async void apply_to_system (string language, string? format) throws GLib.Error {
             string[] locale = {"LANG=%s".printf (language)};
 
             if (format != null) {
