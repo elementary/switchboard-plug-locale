@@ -109,6 +109,15 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         }
     }
 
+    public string? get_selected_language_name () {
+        var selected_row = listbox.get_selected_row () as LanguageRow;
+        if (selected_row != null) {
+            return selected_row.text;
+        } else {
+            return null;
+        }
+    }
+
     private class LanguageRow : Gtk.ListBoxRow {
         public string code { get; construct; }
         public string text { get; construct; }

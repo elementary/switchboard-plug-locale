@@ -325,8 +325,8 @@ namespace SwitchboardPlugLocale.Widgets {
             compare ();
         }
 
-        public void reload_labels (string language) {
-            title = Utils.translate (language, null);
+        public void reload_labels (string language_name) {
+            title = language_name;
         }
 
         private void on_applied_to_system () {
