@@ -219,39 +219,6 @@ namespace SwitchboardPlugLocale {
             return region_name;
         }
 
-        private static Polkit.Permission? permission = null;
-
-        public static Polkit.Permission? get_permission () {
-            if (permission != null) {
-                return permission;
-            }
-
-            try {
-                permission = new Polkit.Permission.sync (
-                    "io.elementary.settings.locale.administration",
-                    new Polkit.UnixProcess (Posix.getpid ())
-                );
-                return permission;
-            } catch (Error e) {
-                critical (e.message);
-                return null;
-            }
-        }
-
-        public static bool allowed_permission () {
-            var permission = Utils.get_permission ();
-            if (!permission.allowed) {
-                try {
-                    permission.acquire (null);
-                } catch (Error e) {
-                    critical (e.message);
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         static Utils? instance = null;
 
         public static Utils get_default () {

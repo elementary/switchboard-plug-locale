@@ -121,11 +121,7 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             remove_button.clicked.connect (() => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
-
-                installer.remove (list_box.get_selected_language_code ());
+                installer.remove.begin (list_box.get_selected_language_code ());
             });
 
             add_button.clicked.connect (() => {
@@ -134,11 +130,7 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             install_dialog.language_selected.connect ((lang) => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
-
-                installer.install (lang);
+                installer.install.begin (lang);
             });
         }
 

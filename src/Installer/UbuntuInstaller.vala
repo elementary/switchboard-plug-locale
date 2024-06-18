@@ -59,7 +59,12 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    public void install (string language) {
+    public async void install (string language) {
+        var permission = yield get_permission ();
+        if (!permission) {
+            return;
+        }
+
         transaction_mode = TransactionMode.INSTALL;
         var packages = get_remaining_packages_for_language (language);
         transaction_language_code = language;
@@ -68,15 +73,13 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
             message ("Packet: %s", packet);
         }
 
-        aptd.install_packages.begin (packages, (obj, res) => {
-            try {
-                var transaction_id = aptd.install_packages.end (res);
-                transactions.@set (transaction_id, "i-" + language);
-                run_transaction (transaction_id);
-            } catch (Error e) {
-                warning ("Could not queue downloads: %s", e.message);
-            }
-        });
+        try {
+            var transaction_id =  yield aptd.install_packages (packages);
+            transactions.@set (transaction_id, "i-" + language);
+            run_transaction (transaction_id);
+        } catch (Error e) {
+            warning ("Could not queue downloads: %s", e.message);
+        }
     }
 
     private void install_packages (string [] packages) {
@@ -110,21 +113,50 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         install_packages (missing_packages);
     }
 
-    public void remove (string languagecode) {
+    public async void remove (string languagecode) {
+        var permission = yield get_permission ();
+        if (!permission) {
+            return;
+        }
+
         transaction_mode = TransactionMode.REMOVE;
         transaction_language_code = languagecode;
 
         var installed = get_to_remove_packages_for_language (languagecode);
 
-        aptd.remove_packages.begin (installed, (obj, res) => {
+        try {
+            var transaction_id = yield aptd.remove_packages (installed);
+            transactions.@set (transaction_id, "r-" + languagecode);
+            run_transaction (transaction_id);
+        } catch (Error e) {
+            warning ("Could not queue deletions: %s", e.message);
+        }
+    }
+
+    private static Polkit.Permission? permission = null;
+    private static async bool get_permission () {
+        if (permission == null) {
             try {
-                var transaction_id = aptd.remove_packages.end (res);
-                transactions.@set (transaction_id, "r-" + languagecode);
-                run_transaction (transaction_id);
+                permission = yield new Polkit.Permission (
+                    "io.elementary.settings.locale.administration",
+                    new Polkit.UnixProcess (Posix.getpid ())
+                );
             } catch (Error e) {
-                warning ("Could not queue deletions: %s", e.message);
+                critical (e.message);
+                return false;
             }
-        });
+        }
+
+        if (!permission.allowed) {
+            try {
+                yield permission.acquire_async ();
+            } catch (Error e) {
+                critical (e.message);
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void cancel_install () {
