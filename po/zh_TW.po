@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -71,7 +71,7 @@ msgstr "安裝 %s"
 msgid "Installed Languages"
 msgstr "已安裝的語言"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "目前啟用的語言"
 
@@ -146,6 +146,10 @@ msgstr "設定系統語言"
 #: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "為登入畫面、訪客帳號、和新使用者帳號設定預設語言"
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "安裝語言"

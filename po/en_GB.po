@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2024-03-19 22:04+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -71,7 +71,7 @@ msgstr "Install %s"
 msgid "Installed Languages"
 msgstr "Installed Languages"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "Currently active language"
 
@@ -138,6 +138,10 @@ msgstr "Set System Language"
 #: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Set language for login screen, guest account, and new user accounts"
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "Install language"

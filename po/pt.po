@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2024-03-26 21:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -71,7 +71,7 @@ msgstr "Instalar %s"
 msgid "Installed Languages"
 msgstr "Idiomas instalados"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "Idioma ativo"
 
@@ -140,6 +140,10 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Definir idioma para o ecrã de início de sessão, conta de convidado e novas "
 "contas de utilizador"
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "Instalar idioma"

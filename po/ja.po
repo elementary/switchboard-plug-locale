@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2024-03-17 15:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -71,7 +71,7 @@ msgstr "%s をインストール"
 msgid "Installed Languages"
 msgstr "インストール済み言語"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "現在の表示言語"
 
@@ -140,6 +140,10 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "ログイン画面、ゲストアカウント、新しいユーザーアカウントで使用される言語に設"
 "定します"
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "言語をインストール"

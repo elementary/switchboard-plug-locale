@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2023-02-17 17:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: Bulgarian <https://l10n.elementary.io/projects/switchboard/"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Installed Languages"
 msgstr "Инсталирани езици"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "Текущ език"
 
@@ -147,6 +147,10 @@ msgstr "Задаване на език на системата"
 #: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Задаване на език за екрана за вписване, гости и нови потребители"
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "Инсталиране на езика"

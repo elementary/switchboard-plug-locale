@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2020-01-08 00:07+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
@@ -72,7 +72,7 @@ msgstr "Namesti %s"
 msgid "Installed Languages"
 msgstr "Nameščeni jeziki"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "Trenutno aktivni jezik"
 
@@ -148,6 +148,10 @@ msgstr "Nastavi jezik sistema"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nastavi jezik za prijavni zaslon, račun gosta in račun novih uporabnikov"
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "Namesti jezik"

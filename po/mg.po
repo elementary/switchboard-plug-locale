@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2024-01-27 17:09+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Malagasy <https://l10n.elementary.io/projects/switchboard/"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Installed Languages"
 msgstr ""
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr ""
 
@@ -132,4 +132,8 @@ msgstr ""
 
 #: src/Widgets/LocaleSetting.vala:181
 msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
 msgstr ""
