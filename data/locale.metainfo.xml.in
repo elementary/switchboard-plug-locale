@@ -35,6 +35,7 @@
         <ul>
           <li>Prevent fcitx5 packages from being installed</li>
           <li>Add links to other places locale-related settings are managed</li>
+          <li>Improve screen reader accessibility</li>
           <li>Updated translations</li>
         </ul>
       </description>
