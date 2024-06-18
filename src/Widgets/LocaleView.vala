@@ -102,12 +102,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
+            installer = Installer.UbuntuInstaller.get_default ();
+
             unowned var lm = LocaleManager.get_default ();
             if (lm.is_connected) {
                 reload.begin ();
             }
 
-            installer = Installer.UbuntuInstaller.get_default ();
             installer.progress_changed.connect (on_progress_changed);
 
             installer.install_finished.connect ((langcode) => {
