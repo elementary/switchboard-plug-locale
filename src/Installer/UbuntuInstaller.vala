@@ -74,7 +74,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
 
         try {
-            var transaction_id =  yield aptd.install_packages (packages);
+            var transaction_id = yield aptd.install_packages (packages);
             transactions.@set (transaction_id, "i-" + language);
             run_transaction (transaction_id);
         } catch (Error e) {
