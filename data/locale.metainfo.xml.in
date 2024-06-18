@@ -39,6 +39,7 @@
         </ul>
       </description>
       <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-locale/issues/15">"Chinese" language listed in the list not displayed in Chinese characters</issue>
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/70">Formats dropdown is slow to navigate</issue>
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/200">Font missing after uninstalling language</issue>
       </issues>
