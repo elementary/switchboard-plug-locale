@@ -117,23 +117,24 @@ namespace SwitchboardPlugLocale.Widgets {
                 row_spacing = 12
             };
             content_area.attach (region_endlabel, 0, 2);
-            content_area.attach (region_dropdown, 1, 2, 2);
+            content_area.attach (region_dropdown, 1, 2);
             content_area.attach (formats_label, 0, 3);
-            content_area.attach (format_dropdown, 1, 3, 2);
+            content_area.attach (format_dropdown, 1, 3);
             content_area.attach (layout_label, 0, 5);
-            content_area.attach (layout_link, 1, 5, 2);
+            content_area.attach (layout_link, 1, 5);
             content_area.attach (datetime_label, 0, 6);
-            content_area.attach (datetime_link, 1, 6, 2);
-            content_area.attach (preview, 0, 7, 3);
-            content_area.attach (missing_lang_infobar, 0, 8, 3);
-            content_area.attach (restart_infobar, 0, 9, 3);
+            content_area.attach (datetime_link, 1, 6);
+            content_area.attach (preview, 0, 7, 2);
+            content_area.attach (missing_lang_infobar, 0, 8, 2);
+            content_area.attach (restart_infobar, 0, 9, 2);
 
             child = content_area;
             show_end_title_buttons = true;
 
             if (temperature_settings != null) {
                 var temperature_label = new Gtk.Label (_("Temperature:")) {
-                    halign = Gtk.Align.END
+                    halign = Gtk.Align.END,
+                    valign = START
                 };
 
                 var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
@@ -142,13 +143,17 @@ namespace SwitchboardPlugLocale.Widgets {
                     group = celcius_radio
                 };
 
-                var auto_radio = new Gtk.CheckButton () {
+                var auto_radio = new Gtk.CheckButton.with_label (_("Automatic, based on locale")) {
                     group = celcius_radio
                 };
 
+                var temperature_box = new Gtk.Box (VERTICAL, 6);
+                temperature_box.append (auto_radio);
+                temperature_box.append (celcius_radio);
+                temperature_box.append (fahrenheit_radio);
+
                 content_area.attach (temperature_label, 0, 4);
-                content_area.attach (celcius_radio, 1, 4);
-                content_area.attach (fahrenheit_radio, 2, 4);
+                content_area.attach (temperature_box, 1, 4);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
@@ -159,6 +164,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 } else {
                     auto_radio.active = true;
                 }
+
+                auto_radio.toggled.connect (() => {
+                    if (auto_radio.active) {
+                        temperature_settings.set_string ("temperature-unit", "default");
+                    }
+                });
 
                 celcius_radio.toggled.connect (() => {
                     if (celcius_radio.active) {
