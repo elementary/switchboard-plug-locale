@@ -276,7 +276,7 @@ namespace SwitchboardPlugLocale.Widgets {
                     continue;
                 }
 
-                var region_string = Utils.translate_region (language, code, language);
+                var region_string = Utils.translate_region (language, code, locale);
 
                 var locale_object = new Locale (region_string, locale);
 

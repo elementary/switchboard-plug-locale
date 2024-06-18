@@ -54,7 +54,7 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
                 continue;
             }
 
-            add_language (code);
+            add_language (code, locale);
         }
 
         var row = listbox.get_first_child ();
@@ -67,9 +67,9 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         }
     }
 
-    private void add_language (string code) {
+    private void add_language (string code, string locale) {
         if (!languages.has_key (code)) {
-            var language_string = Utils.translate (code, null);
+            var language_string = Utils.translate (code, locale);
 
             if (lm.get_user_language ().slice (0, 2) == code) {
                 languages[code] = new LanguageRow (code, language_string, true);
