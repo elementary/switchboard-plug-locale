@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2024-06-16 01:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -43,32 +43,32 @@ msgstr "fcitx5 パッケージがインストールされないように修正"
 msgid "Add links to other places locale-related settings are managed"
 msgstr "ロケール関連の設定を管理するページへのリンクを追加"
 
-#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:88
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
-#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
+#: data/locale.metainfo.xml.in:50 data/locale.metainfo.xml.in:63
+#: data/locale.metainfo.xml.in:72 data/locale.metainfo.xml.in:81
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/locale.metainfo.xml.in:51
+#: data/locale.metainfo.xml.in:52
 msgid "Translate authentication dialog description text"
 msgstr "認証ダイアログの説明文が英語で表示されていた不具合を修正"
 
-#: data/locale.metainfo.xml.in:58
+#: data/locale.metainfo.xml.in:59
 msgid "Improvements:"
 msgstr "改善点:"
 
-#: data/locale.metainfo.xml.in:60
+#: data/locale.metainfo.xml.in:61
 msgid "Central Kurdish is now available as an installable language"
 msgstr "インストール可能な言語に中央クルド語を追加"
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:65
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "言語コードが3文字の言語のインストールと削除に対応"
 
-#: data/locale.metainfo.xml.in:73
+#: data/locale.metainfo.xml.in:74
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -76,15 +76,15 @@ msgstr ""
 "言語をインストールしたり削除したりしても、“書式”ドロップダウンリストの値が変"
 "更されないように修正"
 
-#: data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:83
 msgid "Support locales with 3-letter codes"
 msgstr "言語コードが3文字のロケールに対応"
 
-#: data/locale.metainfo.xml.in:84
+#: data/locale.metainfo.xml.in:85
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/locale.metainfo.xml.in:86
+#: data/locale.metainfo.xml.in:87
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "非 Ubuntu ベースのディストリビューションへの対応を改善"
 
