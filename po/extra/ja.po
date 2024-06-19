@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-18 22:57+0000\n"
-"PO-Revision-Date: 2024-06-16 01:16+0000\n"
+"PO-Revision-Date: 2024-06-20 09:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -66,7 +66,7 @@ msgstr "インストール可能な言語に中央クルド語を追加"
 
 #: data/locale.metainfo.xml.in:65
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr "言語コードが3文字の言語のインストールと削除に対応"
+msgstr "言語コードが 3 文字の言語のインストールと削除に対応"
 
 #: data/locale.metainfo.xml.in:74
 msgid ""
@@ -78,7 +78,7 @@ msgstr ""
 
 #: data/locale.metainfo.xml.in:83
 msgid "Support locales with 3-letter codes"
-msgstr "言語コードが3文字のロケールに対応"
+msgstr "言語コードが 3 文字のロケールに対応"
 
 #: data/locale.metainfo.xml.in:85
 msgid "Minor updates:"
