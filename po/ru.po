@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-18 22:57+0000\n"
-"PO-Revision-Date: 2024-03-14 06:12+0000\n"
+"PO-Revision-Date: 2024-06-20 09:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ru/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -142,7 +142,7 @@ msgstr "Установить язык для экрана входа, госте
 
 #: src/Widgets/LocaleSetting.vala:340
 msgid "Can't set system locale"
-msgstr ""
+msgstr "Не удалось установить системную локаль"
 
 #~ msgid "Install language"
 #~ msgstr "Установить язык"
