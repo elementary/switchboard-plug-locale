@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-18 22:57+0000\n"
-"PO-Revision-Date: 2024-06-17 03:16+0000\n"
+"PO-Revision-Date: 2024-06-22 02:15+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -37,11 +37,11 @@ msgstr "עיצוב מחדש לחלוטין!"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Prevent fcitx5 packages from being installed"
-msgstr ""
+msgstr "למנוע את התקנת חבילות fcitx5"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Add links to other places locale-related settings are managed"
-msgstr ""
+msgstr "נוספו קישורים להגדרות תלויות מיקום מנוהלות"
 
 #: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:88
 msgid "Updated translations"
