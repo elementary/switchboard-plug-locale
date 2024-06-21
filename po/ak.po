@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-18 22:57+0000\n"
 "PO-Revision-Date: 2023-02-17 17:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Installed Languages"
 msgstr "Kasa Ahoroɔ a Ɛgu So"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "Kasa a wode redi dwuma"
 
@@ -145,6 +145,10 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Paw kasa wode bɛdi dwuma wɔ mmerɛ a wopɛ sɛ woba mu, anaa obi foforɔ biara "
 "de bɛdi dwuma."
+
+#: src/Widgets/LocaleSetting.vala:340
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Install language"
 #~ msgstr "Fa kasa yi gu so"
