@@ -60,8 +60,8 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
     }
 
     public async void install (string language) {
-        var permission = yield get_permission ();
-        if (!permission) {
+        var has_permission = yield get_permission ();
+        if (!has_permission) {
             return;
         }
 
