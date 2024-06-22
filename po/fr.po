@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 22:57+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
 "PO-Revision-Date: 2024-06-20 09:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -121,29 +121,33 @@ msgstr "Certaines modifications ne prendront effet qu'après déconnexion"
 msgid "Temperature:"
 msgstr "Température :"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:142
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:146
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:187
 msgid "Set Language"
 msgstr "Définir la langue"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:191
 msgid "Set System Language"
 msgstr "Définir la langue du système"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:192
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Définir la langue pour le menu de connexion, le compte invité et les "
 "nouveaux comptes utilisateur"
 
-#: src/Widgets/LocaleSetting.vala:340
+#: src/Widgets/LocaleSetting.vala:351
 msgid "Can't set system locale"
 msgstr "Impossible de définir la langue du système"
 

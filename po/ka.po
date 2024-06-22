@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 22:57+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
 "PO-Revision-Date: 2024-03-29 05:13+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -116,28 +116,32 @@ msgstr "ზოგიერთი ცვლილება გამოსვლ�
 msgid "Temperature:"
 msgstr "ტემპერატურა:"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Celsius"
 msgstr "ცელსიუსი"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:142
 msgid "Fahrenheit"
 msgstr "ფარენჰეიტი"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:146
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:187
 msgid "Set Language"
 msgstr "ენის დაყენება"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:191
 msgid "Set System Language"
 msgstr "სისტემური ენის დაყენება"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:192
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "შესვლის ეკრანის, სტუმრის და ახალი მომხმარებლის ანგარიშისთვის ენის დაყენება"
 
-#: src/Widgets/LocaleSetting.vala:340
+#: src/Widgets/LocaleSetting.vala:351
 msgid "Can't set system locale"
 msgstr ""
 

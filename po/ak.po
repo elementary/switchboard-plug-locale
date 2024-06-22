@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 22:57+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
 "PO-Revision-Date: 2023-02-17 17:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -124,29 +124,33 @@ msgstr "Nsakrae a wayɛ no nnyɛ adwuma gye sɛ w'adum kɔmputa no asan asɔ."
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:142
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:146
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:187
 msgid "Set Language"
 msgstr "Paw wo Kasa"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:191
 msgid "Set System Language"
 msgstr "Paw Kasa a Kɔmputa no de bɛdi Dwuma"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:192
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Paw kasa wode bɛdi dwuma wɔ mmerɛ a wopɛ sɛ woba mu, anaa obi foforɔ biara "
 "de bɛdi dwuma."
 
-#: src/Widgets/LocaleSetting.vala:340
+#: src/Widgets/LocaleSetting.vala:351
 msgid "Can't set system locale"
 msgstr ""
 

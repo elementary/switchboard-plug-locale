@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 22:57+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -127,27 +127,31 @@ msgstr "部份修改需要重新登入後才會生效"
 msgid "Temperature:"
 msgstr "溫度："
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Celsius"
 msgstr "攝氏"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:142
 msgid "Fahrenheit"
 msgstr "華氏"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:146
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:187
 msgid "Set Language"
 msgstr "設定語言"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:191
 msgid "Set System Language"
 msgstr "設定系統語言"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:192
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "為登入畫面、訪客帳號、和新使用者帳號設定預設語言"
 
-#: src/Widgets/LocaleSetting.vala:340
+#: src/Widgets/LocaleSetting.vala:351
 msgid "Can't set system locale"
 msgstr ""
 

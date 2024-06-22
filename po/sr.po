@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 22:57+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
 "PO-Revision-Date: 2020-12-23 07:16+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -127,29 +127,33 @@ msgstr "Неке измене неће ступити у дејство све �
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Celsius"
 msgstr "Целзијуси"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:142
 msgid "Fahrenheit"
 msgstr "Фаренхајти"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:146
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:187
 msgid "Set Language"
 msgstr "Подеси језик"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:191
 msgid "Set System Language"
 msgstr "Подеси језик система"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:192
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Подесите језик за екран пријављивања, за налог госта и за налоге нових "
 "корисника"
 
-#: src/Widgets/LocaleSetting.vala:340
+#: src/Widgets/LocaleSetting.vala:351
 msgid "Can't set system locale"
 msgstr ""
 
