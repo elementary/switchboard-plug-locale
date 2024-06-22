@@ -25,13 +25,15 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         languages = new Gee.HashMap <string, LanguageRow> ();
         lm = LocaleManager.get_default ();
 
-        installed_languages_label = new Granite.HeaderLabel (_("Installed Languages"));
-
         listbox = new Gtk.ListBox () {
             hexpand = true,
             vexpand = true
         };
         listbox.set_header_func (update_headers);
+
+        installed_languages_label = new Granite.HeaderLabel (_("Installed Languages")) {
+            mnemonic_widget = listbox
+        };
 
         append (listbox);
     }
