@@ -114,8 +114,8 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
     }
 
     public async void remove (string languagecode) {
-        var permission = yield get_permission ();
-        if (!permission) {
+        var has_permission = yield get_permission ();
+        if (!has_permission) {
             return;
         }
 
