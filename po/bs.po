@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:14+0000\n"
+"POT-Creation-Date: 2024-06-22 02:22+0000\n"
 "PO-Revision-Date: 2018-11-05 20:39+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -69,11 +69,11 @@ msgstr "Instaliraj jezik"
 msgid "Install %s"
 msgstr "Instaliranje %s"
 
-#: src/Widgets/LanguageListBox.vala:28
+#: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
 msgstr "Instalirani jezici"
 
-#: src/Widgets/LanguageListBox.vala:133
+#: src/Widgets/LanguageListBox.vala:135
 msgid "Currently active language"
 msgstr "Trenutno aktivni jezik"
 
@@ -87,73 +87,73 @@ msgstr "Ukloni jezik"
 msgid "Region:"
 msgstr "Regija: "
 
-#: src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:79
 #, fuzzy
 #| msgid "Formats: "
 msgid "Formats:"
 msgstr "Formati: "
 
-#: src/Widgets/LocaleSetting.vala:82
+#: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:86
+#: src/Widgets/LocaleSetting.vala:88
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Podešavanja tastature…"
 
-#: src/Widgets/LocaleSetting.vala:90
+#: src/Widgets/LocaleSetting.vala:93
 #, fuzzy
 #| msgid "Formats: "
 msgid "Time Format:"
 msgstr "Formati: "
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:98
+#: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
 msgstr "Jezična podrška nije instalirana potpuno"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Complete Installation"
 msgstr "Dovršite instalaciju"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:116
 msgid "Some changes will not take effect until you log out"
 msgstr "Neke promjene neće biti aktivirane dok se ne odjavite"
 
-#: src/Widgets/LocaleSetting.vala:135
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:144
 msgid "Celsius"
 msgstr "Celzij"
 
-#: src/Widgets/LocaleSetting.vala:142
+#: src/Widgets/LocaleSetting.vala:147
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:146
+#: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:187
+#: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
 msgstr "Podesi jezik"
 
-#: src/Widgets/LocaleSetting.vala:191
+#: src/Widgets/LocaleSetting.vala:198
 msgid "Set System Language"
 msgstr "Postavi jezik sistema"
 
-#: src/Widgets/LocaleSetting.vala:192
+#: src/Widgets/LocaleSetting.vala:199
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Postavi jezik za ekran prijave, račun gosta i nove korisničke račune"
 
-#: src/Widgets/LocaleSetting.vala:351
+#: src/Widgets/LocaleSetting.vala:358
 msgid "Can't set system locale"
 msgstr ""
 

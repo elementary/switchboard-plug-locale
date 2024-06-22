@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:14+0000\n"
+"POT-Creation-Date: 2024-06-22 02:22+0000\n"
 "PO-Revision-Date: 2024-06-20 09:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -68,11 +68,11 @@ msgstr "Установить язык"
 msgid "Install %s"
 msgstr "Установить %s"
 
-#: src/Widgets/LanguageListBox.vala:28
+#: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
 msgstr "Установленные языки"
 
-#: src/Widgets/LanguageListBox.vala:133
+#: src/Widgets/LanguageListBox.vala:135
 msgid "Currently active language"
 msgstr "Текущий язык"
 
@@ -84,67 +84,67 @@ msgstr "Удалить язык"
 msgid "Region:"
 msgstr "Регион:"
 
-#: src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:79
 msgid "Formats:"
 msgstr "Форматы:"
 
-#: src/Widgets/LocaleSetting.vala:82
+#: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
 msgstr "Раскладка клавиатуры:"
 
-#: src/Widgets/LocaleSetting.vala:86
+#: src/Widgets/LocaleSetting.vala:88
 msgid "Keyboard settings…"
 msgstr "Параметры клавиатуры…"
 
-#: src/Widgets/LocaleSetting.vala:90
+#: src/Widgets/LocaleSetting.vala:93
 msgid "Time Format:"
 msgstr "Формат времени:"
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
 msgstr "Параметры даты и времени…"
 
-#: src/Widgets/LocaleSetting.vala:98
+#: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
 msgstr "Поддержка языка установлена не полностью"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Complete Installation"
 msgstr "Завершить установку"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:116
 msgid "Some changes will not take effect until you log out"
 msgstr "Некоторые изменения вступят в силу после выхода из сеанса"
 
-#: src/Widgets/LocaleSetting.vala:135
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:144
 msgid "Celsius"
 msgstr "Цельсий"
 
-#: src/Widgets/LocaleSetting.vala:142
+#: src/Widgets/LocaleSetting.vala:147
 msgid "Fahrenheit"
 msgstr "Фаренгейт"
 
-#: src/Widgets/LocaleSetting.vala:146
+#: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:187
+#: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
 msgstr "Установить язык"
 
-#: src/Widgets/LocaleSetting.vala:191
+#: src/Widgets/LocaleSetting.vala:198
 msgid "Set System Language"
 msgstr "Установить как системный язык"
 
-#: src/Widgets/LocaleSetting.vala:192
+#: src/Widgets/LocaleSetting.vala:199
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Установить язык для экрана входа, гостевого и новых аккаунтов"
 
-#: src/Widgets/LocaleSetting.vala:351
+#: src/Widgets/LocaleSetting.vala:358
 msgid "Can't set system locale"
 msgstr "Не удалось установить системную локаль"
 
