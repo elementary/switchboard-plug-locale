@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
-"PO-Revision-Date: 2023-03-31 11:59+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
+"PO-Revision-Date: 2024-06-20 09:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ru/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -30,46 +30,47 @@ msgstr "Управление языками, настройка региона �
 
 #: data/locale.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/locale.metainfo.xml.in:34
 msgid "A big redesign!"
-msgstr ""
+msgstr "Большой редизайн!"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Prevent fcitx5 packages from being installed"
-msgstr ""
+msgstr "Предотвращение установки пакетов fcitx5"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Add links to other places locale-related settings are managed"
 msgstr ""
+"Добавлены ссылки на другие места управления настройками, связанными с локалью"
 
-#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:89
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
-#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
+#: data/locale.metainfo.xml.in:51 data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:73 data/locale.metainfo.xml.in:82
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/locale.metainfo.xml.in:51
+#: data/locale.metainfo.xml.in:53
 msgid "Translate authentication dialog description text"
 msgstr "Перевод описания диалога аутентификации"
 
-#: data/locale.metainfo.xml.in:58
+#: data/locale.metainfo.xml.in:60
 msgid "Improvements:"
 msgstr "Улучшения:"
 
-#: data/locale.metainfo.xml.in:60
+#: data/locale.metainfo.xml.in:62
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Центральнокурдский теперь доступен как устанавливаемый язык"
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:66
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Поддержка установки и удаления языков с трёхзначным идентификатором"
 
-#: data/locale.metainfo.xml.in:73
+#: data/locale.metainfo.xml.in:75
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -77,15 +78,15 @@ msgstr ""
 "Выпадающее меню «Форматы» остается правильным после установки или удаления "
 "языков"
 
-#: data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:84
 msgid "Support locales with 3-letter codes"
 msgstr "Поддержка языков с трёхзначным идентификатором"
 
-#: data/locale.metainfo.xml.in:84
+#: data/locale.metainfo.xml.in:86
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/locale.metainfo.xml.in:86
+#: data/locale.metainfo.xml.in:88
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Улучшена работа на дистрибутивах не основанных на Ubuntu"
 

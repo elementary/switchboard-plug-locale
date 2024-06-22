@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
-"PO-Revision-Date: 2024-03-14 06:12+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
+"PO-Revision-Date: 2024-06-22 02:15+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -71,7 +71,7 @@ msgstr "התקנת %s"
 msgid "Installed Languages"
 msgstr "שפות מותקנות"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:133
 msgid "Currently active language"
 msgstr "שפות פעילות נכון לעכשיו"
 
@@ -119,25 +119,33 @@ msgstr "חלק מהשינויים לא יכנסו לתוקף עד ליציאתך
 msgid "Temperature:"
 msgstr "מעלות:"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Celsius"
 msgstr "צלזיוס"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:142
 msgid "Fahrenheit"
 msgstr "פרנהייט"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:146
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:187
 msgid "Set Language"
 msgstr "הגדרת שפה"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:191
 msgid "Set System Language"
 msgstr "הגדרת שפת המערכת"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:192
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "הגדרת שפה למסך הכניסה, לחשבון האורח ולחשבונות של משתמשים חדשים"
+
+#: src/Widgets/LocaleSetting.vala:351
+msgid "Can't set system locale"
+msgstr "לא ניתן להגדיר את שפת המערכת"
 
 #~ msgid "Install language"
 #~ msgstr "התקנת שפה"

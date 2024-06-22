@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
-"PO-Revision-Date: 2024-06-17 03:16+0000\n"
+"POT-Creation-Date: 2024-06-22 02:14+0000\n"
+"PO-Revision-Date: 2024-06-22 02:15+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -37,52 +37,52 @@ msgstr "עיצוב מחדש לחלוטין!"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Prevent fcitx5 packages from being installed"
-msgstr ""
+msgstr "למנוע את התקנת חבילות fcitx5"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Add links to other places locale-related settings are managed"
-msgstr ""
+msgstr "נוספו קישורים להגדרות תלויות מיקום מנוהלות"
 
-#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:89
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
-#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
+#: data/locale.metainfo.xml.in:51 data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:73 data/locale.metainfo.xml.in:82
 msgid "Fixes:"
 msgstr "תיקונים:"
 
-#: data/locale.metainfo.xml.in:51
+#: data/locale.metainfo.xml.in:53
 msgid "Translate authentication dialog description text"
 msgstr "תרגום טקסט תיאור חלונית האימות"
 
-#: data/locale.metainfo.xml.in:58
+#: data/locale.metainfo.xml.in:60
 msgid "Improvements:"
 msgstr "שיפורים:"
 
-#: data/locale.metainfo.xml.in:60
+#: data/locale.metainfo.xml.in:62
 msgid "Central Kurdish is now available as an installable language"
 msgstr "כורדית מרכזית זמינה מעתה כשפה להתקנה"
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:66
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "נוספה תמיכה בהתקנה והסרה של שפות עם קודים ב־3 אותיות"
 
-#: data/locale.metainfo.xml.in:73
+#: data/locale.metainfo.xml.in:75
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr "וידוא שהתפריט הנפתח „עיצובים” נשאר לאחר התקנת או הסרת שפות"
 
-#: data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:84
 msgid "Support locales with 3-letter codes"
 msgstr "תמיכה בשפות עם קודים ב־3 אותיות"
 
-#: data/locale.metainfo.xml.in:84
+#: data/locale.metainfo.xml.in:86
 msgid "Minor updates:"
 msgstr "עדכונים משניים:"
 
-#: data/locale.metainfo.xml.in:86
+#: data/locale.metainfo.xml.in:88
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "שופרה התמיכה במערכות שאינן מבוססות על אובונטו"
 
