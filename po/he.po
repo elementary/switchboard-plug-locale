@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 02:22+0000\n"
-"PO-Revision-Date: 2024-06-22 02:15+0000\n"
+"PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/he/>\n"
@@ -129,7 +129,7 @@ msgstr "פרנהייט"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "אוטומטית, לפי השפה"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
