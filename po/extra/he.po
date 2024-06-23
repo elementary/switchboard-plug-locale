@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 02:22+0000\n"
-"PO-Revision-Date: 2024-06-22 02:15+0000\n"
+"PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -45,7 +45,7 @@ msgstr "נוספו קישורים להגדרות תלויות מיקום מנו�
 
 #: data/locale.metainfo.xml.in:38
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "שיפור נגישות מקריא המסך"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
 msgid "Updated translations"
