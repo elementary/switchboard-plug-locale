@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 02:22+0000\n"
-"PO-Revision-Date: 2024-06-20 09:16+0000\n"
+"PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
@@ -45,7 +45,7 @@ msgstr "ロケール関連の設定を管理するページへのリンクを追
 
 #: data/locale.metainfo.xml.in:38
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "スクリーンリーダーのアクセシビリティを改善"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
 msgid "Updated translations"
