@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 02:22+0000\n"
-"PO-Revision-Date: 2024-06-16 01:16+0000\n"
+"PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/es/>\n"
@@ -42,12 +42,12 @@ msgstr "Se evita la instalación de paquetes de fcitx5"
 #: data/locale.metainfo.xml.in:37
 msgid "Add links to other places locale-related settings are managed"
 msgstr ""
-"Se pueden gestionar los enlaces a otros lugares relacionados con "
-"regionalización"
+"Se pueden gestionar los enlaces a otros lugares relacionados con la "
+"configuración regional"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "Se mejoró la accesibilidad con los lectores de pantalla"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
 msgid "Updated translations"
@@ -84,7 +84,8 @@ msgstr ""
 
 #: data/locale.metainfo.xml.in:85
 msgid "Support locales with 3-letter codes"
-msgstr "Se agregó soporte de regiones usando códigos de tres letras"
+msgstr ""
+"Se agregó soporte de configuración regional usando códigos de tres letras"
 
 #: data/locale.metainfo.xml.in:87
 msgid "Minor updates:"
@@ -98,11 +99,11 @@ msgstr ""
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
-msgstr "Gestionar la configuración de región"
+msgstr "Gestionar la configuración regional"
 
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr "Necesita autenticarse para gestionar la configuración de región"
+msgstr "Necesita autenticarse para gestionar la configuración regional"
 
 #~ msgid "Fix an issue with cancelling language installation"
 #~ msgstr ""
