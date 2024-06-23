@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 02:22+0000\n"
-"PO-Revision-Date: 2024-06-14 22:59+0000\n"
+"PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/es/>\n"
@@ -129,7 +129,7 @@ msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "Automático, basado en la configuración regional"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
@@ -147,7 +147,7 @@ msgstr ""
 
 #: src/Widgets/LocaleSetting.vala:358
 msgid "Can't set system locale"
-msgstr ""
+msgstr "No se pudo establecer la configuración regional del sistema"
 
 #~ msgid "Install language"
 #~ msgstr "Instalar idioma"
