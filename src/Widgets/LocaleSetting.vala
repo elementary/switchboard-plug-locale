@@ -74,10 +74,12 @@ namespace SwitchboardPlugLocale.Widgets {
             region_endlabel = new Gtk.Label (_("Region:")) {
                 halign = Gtk.Align.END
             };
+            region_dropdown.update_property_value ({DESCRIPTION}, {region_endlabel.label});
 
             var formats_label = new Gtk.Label (_("Formats:")) {
                 halign = Gtk.Align.END
             };
+            format_dropdown.update_property_value ({DESCRIPTION}, {formats_label.label});
 
             var layout_label = new Gtk.Label (_("Keyboard Layout:")) {
                 halign = END
@@ -86,6 +88,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var layout_link = new Gtk.LinkButton.with_label ("settings://input/keyboard/layout", _("Keyboard settings…")) {
                 halign = START
             };
+            layout_link.update_property_value ({DESCRIPTION}, {layout_label.label});
 
             var datetime_label = new Gtk.Label (_("Time Format:")) {
                 halign = END
@@ -94,6 +97,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
                 halign = START
             };
+            datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
 
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
@@ -117,38 +121,46 @@ namespace SwitchboardPlugLocale.Widgets {
                 row_spacing = 12
             };
             content_area.attach (region_endlabel, 0, 2);
-            content_area.attach (region_dropdown, 1, 2, 2);
+            content_area.attach (region_dropdown, 1, 2);
             content_area.attach (formats_label, 0, 3);
-            content_area.attach (format_dropdown, 1, 3, 2);
+            content_area.attach (format_dropdown, 1, 3);
             content_area.attach (layout_label, 0, 5);
-            content_area.attach (layout_link, 1, 5, 2);
+            content_area.attach (layout_link, 1, 5);
             content_area.attach (datetime_label, 0, 6);
-            content_area.attach (datetime_link, 1, 6, 2);
-            content_area.attach (preview, 0, 7, 3);
-            content_area.attach (missing_lang_infobar, 0, 8, 3);
-            content_area.attach (restart_infobar, 0, 9, 3);
+            content_area.attach (datetime_link, 1, 6);
+            content_area.attach (preview, 0, 7, 2);
+            content_area.attach (missing_lang_infobar, 0, 8, 2);
+            content_area.attach (restart_infobar, 0, 9, 2);
 
             child = content_area;
             show_end_title_buttons = true;
 
             if (temperature_settings != null) {
                 var temperature_label = new Gtk.Label (_("Temperature:")) {
-                    halign = Gtk.Align.END
+                    halign = Gtk.Align.END,
+                    valign = START
                 };
 
                 var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
+                celcius_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 var fahrenheit_radio = new Gtk.CheckButton.with_label (_("Fahrenheit")) {
                     group = celcius_radio
                 };
+                fahrenheit_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
-                var auto_radio = new Gtk.CheckButton () {
+                var auto_radio = new Gtk.CheckButton.with_label (_("Automatic, based on locale")) {
                     group = celcius_radio
                 };
+                auto_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
+
+                var temperature_box = new Gtk.Box (VERTICAL, 6);
+                temperature_box.append (auto_radio);
+                temperature_box.append (celcius_radio);
+                temperature_box.append (fahrenheit_radio);
 
                 content_area.attach (temperature_label, 0, 4);
-                content_area.attach (celcius_radio, 1, 4);
-                content_area.attach (fahrenheit_radio, 2, 4);
+                content_area.attach (temperature_box, 1, 4);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
@@ -159,6 +171,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 } else {
                     auto_radio.active = true;
                 }
+
+                auto_radio.toggled.connect (() => {
+                    if (auto_radio.active) {
+                        temperature_settings.set_string ("temperature-unit", "default");
+                    }
+                });
 
                 celcius_radio.toggled.connect (() => {
                     if (celcius_radio.active) {

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-22 02:22+0000\n"
 "PO-Revision-Date: 2018-06-11 08:49-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -40,46 +40,50 @@ msgstr ""
 msgid "Add links to other places locale-related settings are managed"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:38
+msgid "Improve screen reader accessibility"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
 msgid "Updated translations"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
-#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
+#: data/locale.metainfo.xml.in:52 data/locale.metainfo.xml.in:65
+#: data/locale.metainfo.xml.in:74 data/locale.metainfo.xml.in:83
 msgid "Fixes:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:51
+#: data/locale.metainfo.xml.in:54
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:58
+#: data/locale.metainfo.xml.in:61
 msgid "Improvements:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:60
+#: data/locale.metainfo.xml.in:63
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:67
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:73
+#: data/locale.metainfo.xml.in:76
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:85
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:84
+#: data/locale.metainfo.xml.in:87
 msgid "Minor updates:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:86
+#: data/locale.metainfo.xml.in:89
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
