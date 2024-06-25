@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 02:22+0000\n"
-"PO-Revision-Date: 2024-06-20 09:16+0000\n"
+"PO-Revision-Date: 2024-06-25 10:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/fr/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: data/locale.metainfo.xml.in:38
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "Amélioration de l'accessibilité pour les lecteurs d'écran"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
 msgid "Updated translations"
