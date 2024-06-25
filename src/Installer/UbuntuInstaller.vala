@@ -94,7 +94,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
 
         var has_permission = yield get_permission ();
         if (!has_permission) {
-            return;
+            throw (new DBusError.ACCESS_DENIED (""));
         }
 
         transaction_mode = TransactionMode.INSTALL_MISSING;
