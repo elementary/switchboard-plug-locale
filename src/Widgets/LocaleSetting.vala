@@ -184,7 +184,30 @@ namespace SwitchboardPlugLocale.Widgets {
 
             missing_lang_infobar.response.connect (() => {
                 missing_lang_infobar.revealed = false;
-                installer.install_missing_languages ();
+
+                installer.install_missing_languages.begin ((obj, res) => {
+                    try {
+                        installer.install_missing_languages.end (res);
+                    } catch (Error e) {
+                        missing_lang_infobar.revealed = true;
+
+                        if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                            return;
+                        }
+
+                        var dialog = new Granite.MessageDialog (
+                            _("Couldn't install missing language packs"),
+                            e.message,
+                            new ThemedIcon ("preferences-desktop-locale")
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
+                            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                        };
+                        dialog.present ();
+                        dialog.response.connect (dialog.destroy);
+                    }
+                });
             });
 
             set_button.clicked.connect (() => {

@@ -82,35 +82,34 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    private void install_packages (string [] packages) {
-        foreach (var packet in packages) {
-            message ("will install: %s", packet);
-        }
-
-        aptd.install_packages.begin (packages, (obj, res) => {
-            try {
-                var transaction_id = aptd.install_packages.end (res);
-                transactions.@set (transaction_id, "install-missing");
-                run_transaction (transaction_id);
-            } catch (Error e) {
-                warning ("Could not queue downloads: %s", e.message);
-            }
-        });
-    }
-
     public async void check_missing_languages () {
         missing_packages = yield Utils.get_missing_languages ();
         check_missing_finished (missing_packages);
     }
 
-    public void install_missing_languages () {
+    public async void install_missing_languages () throws Error {
         if (missing_packages == null || missing_packages.length == 0) {
+            return;
+        }
+
+        var has_permission = yield get_permission ();
+        if (!has_permission) {
             return;
         }
 
         transaction_mode = TransactionMode.INSTALL_MISSING;
 
-        install_packages (missing_packages);
+        foreach (unowned var package in missing_packages) {
+            message ("will install: %s", package);
+        }
+
+        try {
+            var transaction_id = yield aptd.install_packages (missing_packages);
+            transactions.@set (transaction_id, "install-missing");
+            run_transaction (transaction_id);
+        } catch (Error e) {
+            throw (e);
+        }
     }
 
     public async void remove (string languagecode) {
