@@ -43,6 +43,7 @@
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/15">"Chinese" language listed in the list not displayed in Chinese characters</issue>
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/70">Formats dropdown is slow to navigate</issue>
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/81">Setting default temperature units depending on locale</issue>
+        <issue url="https://github.com/elementary/switchboard-plug-locale/issues/112">Throw an error dialog when an installation of language failed</issue>
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/200">Font missing after uninstalling language</issue>
         <issue url="https://github.com/elementary/switchboard-plug-locale/issues/204">Clicking on plug while authentication dialog open results in persistent "Not responding" warning</issue>
       </issues>
