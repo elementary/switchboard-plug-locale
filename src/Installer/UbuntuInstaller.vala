@@ -59,10 +59,10 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    public async void install (string language) {
+    public async void install (string language) throws Error {
         var has_permission = yield get_permission ();
         if (!has_permission) {
-            return;
+            throw (new DBusError.ACCESS_DENIED (""));
         }
 
         transaction_mode = TransactionMode.INSTALL;
@@ -78,7 +78,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
             transactions.@set (transaction_id, "i-" + language);
             run_transaction (transaction_id);
         } catch (Error e) {
-            warning ("Could not queue downloads: %s", e.message);
+            throw (e);
         }
     }
 
@@ -112,10 +112,10 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    public async void remove (string languagecode) {
+    public async void remove (string languagecode) throws Error {
         var has_permission = yield get_permission ();
         if (!has_permission) {
-            return;
+            throw (new DBusError.ACCESS_DENIED (""));
         }
 
         transaction_mode = TransactionMode.REMOVE;
@@ -128,7 +128,7 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
             transactions.@set (transaction_id, "r-" + languagecode);
             run_transaction (transaction_id);
         } catch (Error e) {
-            warning ("Could not queue deletions: %s", e.message);
+            throw (e);
         }
     }
 
