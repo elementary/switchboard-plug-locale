@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-06-24 03:16+0000\n"
+"PO-Revision-Date: 2024-06-30 04:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/es/>\n"
@@ -52,7 +52,7 @@ msgstr "Desinstalando %s"
 
 #: src/ProgressDialog.vala:53
 msgid "Installing missing language"
-msgstr "Instalando el idioma faltante"
+msgstr "Instalando idiomas faltantes"
 
 #: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
 msgid "Cancel"
@@ -80,16 +80,12 @@ msgid "Remove language"
 msgstr "Eliminar idioma"
 
 #: src/Widgets/LocaleView.vala:133
-#, fuzzy
-#| msgid "Remove language"
 msgid "Couldn't remove language pack"
-msgstr "Eliminar idioma"
+msgstr "No se pudo eliminar el paquete de idioma"
 
 #: src/Widgets/LocaleView.vala:162
-#, fuzzy
-#| msgid "Install language"
 msgid "Couldn't install language pack"
-msgstr "Instalar idioma"
+msgstr "No se pudo instalar el paquete de idioma"
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
@@ -158,10 +154,8 @@ msgstr ""
 "cuentas de usuario nuevas"
 
 #: src/Widgets/LocaleSetting.vala:217
-#, fuzzy
-#| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
-msgstr "Instalando el idioma faltante"
+msgstr "No se pudieron instalar los paquetes de idiomas faltantes"
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
