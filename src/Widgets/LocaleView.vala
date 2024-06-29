@@ -121,11 +121,27 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             remove_button.clicked.connect (() => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
+                installer.remove.begin (list_box.get_selected_language_code (), (obj, res) => {
+                    try {
+                        installer.remove.end (res);
+                    } catch (Error e) {
+                        if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                            return;
+                        }
 
-                installer.remove (list_box.get_selected_language_code ());
+                        var dialog = new Granite.MessageDialog (
+                            _("Couldn't remove language pack"),
+                            e.message,
+                            new ThemedIcon ("preferences-desktop-locale")
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
+                            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                        };
+                        dialog.present ();
+                        dialog.response.connect (dialog.destroy);
+                    }
+                });
             });
 
             add_button.clicked.connect (() => {
@@ -134,11 +150,27 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             install_dialog.language_selected.connect ((lang) => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
+                installer.install.begin (lang, (obj, res) => {
+                    try {
+                        installer.install.end (res);
+                    } catch (Error e) {
+                        if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                            return;
+                        }
 
-                installer.install (lang);
+                        var dialog = new Granite.MessageDialog (
+                            _("Couldn't install language pack"),
+                            e.message,
+                            new ThemedIcon ("preferences-desktop-locale")
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
+                            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                        };
+                        dialog.present ();
+                        dialog.response.connect (dialog.destroy);
+                    }
+                });
             });
         }
 
