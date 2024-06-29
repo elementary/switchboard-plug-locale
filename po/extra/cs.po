@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2022-01-10 21:59+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/locale-"
@@ -47,34 +47,34 @@ msgstr ""
 msgid "Improve screen reader accessibility"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
+#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"
 
-#: data/locale.metainfo.xml.in:52 data/locale.metainfo.xml.in:65
-#: data/locale.metainfo.xml.in:74 data/locale.metainfo.xml.in:83
+#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:67
+#: data/locale.metainfo.xml.in:76 data/locale.metainfo.xml.in:85
 msgid "Fixes:"
 msgstr "Opravy:"
 
-#: data/locale.metainfo.xml.in:54
+#: data/locale.metainfo.xml.in:56
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:61
+#: data/locale.metainfo.xml.in:63
 msgid "Improvements:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:63
+#: data/locale.metainfo.xml.in:65
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:67
+#: data/locale.metainfo.xml.in:69
 #, fuzzy
 #| msgid "Support locales with 3-letter codes"
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Podpora místních a jazykových nastavení s třípísmenkovými kódy"
 
-#: data/locale.metainfo.xml.in:76
+#: data/locale.metainfo.xml.in:78
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -82,15 +82,15 @@ msgstr ""
 "Zajištěno, že rozbalovací nabídka „Formáty“ zůstane správná po instalaci "
 "nebo odebrání jazyků"
 
-#: data/locale.metainfo.xml.in:85
+#: data/locale.metainfo.xml.in:87
 msgid "Support locales with 3-letter codes"
 msgstr "Podpora místních a jazykových nastavení s třípísmenkovými kódy"
 
-#: data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:89
 msgid "Minor updates:"
 msgstr "Drobné aktualizace:"
 
-#: data/locale.metainfo.xml.in:89
+#: data/locale.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Lepší podpora pro distribuce nezaložené na Ubuntu"
 

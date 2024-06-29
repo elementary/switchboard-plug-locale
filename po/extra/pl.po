@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-06-21 04:24+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -48,32 +48,32 @@ msgstr "Dodano linki do innych miejsc gdzie zarządzane są ustawienia języka"
 msgid "Improve screen reader accessibility"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:90
+#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Zaktualizowane tłumaczenia"
 
-#: data/locale.metainfo.xml.in:52 data/locale.metainfo.xml.in:65
-#: data/locale.metainfo.xml.in:74 data/locale.metainfo.xml.in:83
+#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:67
+#: data/locale.metainfo.xml.in:76 data/locale.metainfo.xml.in:85
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/locale.metainfo.xml.in:54
+#: data/locale.metainfo.xml.in:56
 msgid "Translate authentication dialog description text"
 msgstr "Przetłumaczono opis okna uwierzytelniania"
 
-#: data/locale.metainfo.xml.in:61
+#: data/locale.metainfo.xml.in:63
 msgid "Improvements:"
 msgstr "Ulepszenia:"
 
-#: data/locale.metainfo.xml.in:63
+#: data/locale.metainfo.xml.in:65
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Centralny Kurdyjski jest teraz dostępny jako język do zainstalowania"
 
-#: data/locale.metainfo.xml.in:67
+#: data/locale.metainfo.xml.in:69
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Wsparcie dla instalacji i usuwania języków z trzyliterowymi kodami"
 
-#: data/locale.metainfo.xml.in:76
+#: data/locale.metainfo.xml.in:78
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -81,15 +81,15 @@ msgstr ""
 "Upewniono się, że menu „Formaty” działa poprawnie po instalacji i usunięciu "
 "języków"
 
-#: data/locale.metainfo.xml.in:85
+#: data/locale.metainfo.xml.in:87
 msgid "Support locales with 3-letter codes"
 msgstr "Wsparcie dla języków z trzyliterowymi kodami"
 
-#: data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:89
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
-#: data/locale.metainfo.xml.in:89
+#: data/locale.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Lepsze wsparcie dla dystrybucji niebazujących na Ubuntu"
 
