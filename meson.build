@@ -2,7 +2,7 @@ project(
     'io.elementary.settings.locale',
     'vala', 'c',
     meson_version: '>=0.58.0',
-    version: '2.5.8'
+    version: '8.0.0'
 )
 
 gnome = import('gnome')
