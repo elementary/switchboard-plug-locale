@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2020-08-12 12:13+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -78,6 +78,18 @@ msgstr "Şu anda etkin olan dil"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Dili kaldır"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Dili kaldır"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Dil yükle"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -151,12 +163,15 @@ msgstr "Sistem Dili Olarak Ayarla"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Misafir ve yeni kullanıcı hesapları için giriş ekranı dilini ayarla"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Eksik dil yükleniyor"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Dil yükle"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

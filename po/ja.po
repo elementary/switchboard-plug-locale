@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -79,6 +79,18 @@ msgstr "現在の表示言語"
 msgid "Remove language"
 msgstr "言語を削除"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "言語を削除"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "言語をインストール"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "地域:"
@@ -145,12 +157,15 @@ msgstr ""
 "ログイン画面、ゲストアカウント、新しいユーザーアカウントで使用される言語に設"
 "定します"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "不足している言語をインストールしています"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr "システムロケールを設定できません"
-
-#~ msgid "Install language"
-#~ msgstr "言語をインストール"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "一部の設定変更には管理者権限が必要です"

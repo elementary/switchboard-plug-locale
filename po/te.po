@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shotwell-0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2015-03-23 16:01+0000\n"
 "Last-Translator: venkat <subash.venkat007@gmail.com>\n"
 "Language-Team: Telugu (http://www.transifex.com/projects/p/shotwell/language/"
@@ -84,6 +84,14 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
+#: src/Widgets/LocaleView.vala:133
+msgid "Couldn't remove language pack"
+msgstr ""
+
+#: src/Widgets/LocaleView.vala:162
+msgid "Couldn't install language pack"
+msgstr ""
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr ""
@@ -148,6 +156,10 @@ msgstr ""
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+msgid "Couldn't install missing language packs"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""

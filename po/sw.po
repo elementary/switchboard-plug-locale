@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2014-08-01 01:08+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: Swahili <sw@li.org>\n"
@@ -77,6 +77,14 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
+#: src/Widgets/LocaleView.vala:133
+msgid "Couldn't remove language pack"
+msgstr ""
+
+#: src/Widgets/LocaleView.vala:162
+msgid "Couldn't install language pack"
+msgstr ""
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr ""
@@ -141,6 +149,10 @@ msgstr ""
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+msgid "Couldn't install missing language packs"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""

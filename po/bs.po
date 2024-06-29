@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2018-11-05 20:39+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -81,6 +81,18 @@ msgstr "Trenutno aktivni jezik"
 msgid "Remove language"
 msgstr "Ukloni jezik"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Ukloni jezik"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Instaliraj jezik"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
@@ -153,12 +165,15 @@ msgstr "Postavi jezik sistema"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Postavi jezik za ekran prijave, račun gosta i nove korisničke račune"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Instaliranje nedostajućeg jezika"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Instaliraj jezik"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"

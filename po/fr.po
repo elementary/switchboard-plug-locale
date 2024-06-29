@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-06-25 10:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -79,6 +79,18 @@ msgstr "Langue actuellement activée"
 msgid "Remove language"
 msgstr "Supprimer une langue"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Supprimer une langue"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Installer une langue"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "Région :"
@@ -147,12 +159,15 @@ msgstr ""
 "Définir la langue pour le menu de connexion, le compte invité et les "
 "nouveaux comptes utilisateur"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Installation de la langue manquante"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr "Impossible de définir la langue du système"
-
-#~ msgid "Install language"
-#~ msgstr "Installer une langue"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

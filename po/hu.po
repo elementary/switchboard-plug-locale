@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-06-26 16:16+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -79,6 +79,18 @@ msgstr "Jelenleg használt nyelv"
 msgid "Remove language"
 msgstr "Nyelv eltávolítása"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Nyelv eltávolítása"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Nyelv telepítése"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "Régió:"
@@ -145,12 +157,15 @@ msgstr ""
 "Nyelv beállítása a bejelentkezőképernyőhöz, a vendégfiókhoz és az új "
 "felhasználói fiókokhoz"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Hiányzó nyelv telepítése"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr "A rendszer nyelvi beállításainak mentése sikertelen"
-
-#~ msgid "Install language"
-#~ msgstr "Nyelv telepítése"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

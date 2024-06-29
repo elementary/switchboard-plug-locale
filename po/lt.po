@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2018-10-16 19:49+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
@@ -80,6 +80,18 @@ msgstr "Šiuo metu aktyvi kalba"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Šalinti kalbą"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Šalinti kalbą"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Įdiegti kalbą"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -155,12 +167,15 @@ msgstr ""
 "Nustatyti kalbą prisijungimo ekranui, svečio paskyrai ir naujoms naudotojų "
 "paskyroms"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Įdiegiama trūkstama kalba"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Įdiegti kalbą"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2018-10-20 13:25+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -79,6 +79,18 @@ msgstr "Nuvarande aktivt språk"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Ta bort språk"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Ta bort språk"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Installera språk"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -153,12 +165,15 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Ställ in språk för inloggningsskärmen, gästkontot och nya användarkonton"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Installerar saknat språk"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Installera språk"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"

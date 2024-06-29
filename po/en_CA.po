@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2018-06-22 12:54+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -83,6 +83,18 @@ msgstr "Currently active language"
 msgid "Remove language"
 msgstr "Remove language"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Remove language"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Install language"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
@@ -155,12 +167,15 @@ msgstr "Set System Language"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Set language for login screen, guest account and new user accounts"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Installing missing language"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Install language"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Some settings require administrator rights to be changed"

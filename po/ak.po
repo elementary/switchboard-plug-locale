@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2023-02-17 17:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -77,6 +77,18 @@ msgstr "Kasa a wode redi dwuma"
 msgid "Remove language"
 msgstr "Yi kasa yi"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Yi kasa yi"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Fa kasa yi gu so"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
@@ -150,12 +162,15 @@ msgstr ""
 "Paw kasa wode bɛdi dwuma wɔ mmerɛ a wopɛ sɛ woba mu, anaa obi foforɔ biara "
 "de bɛdi dwuma."
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Ɛde kasa a enni so no regu so"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Fa kasa yi gu so"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Ɛhia sɛ wonnya hokwan a administrator wɔ ansa watumi aye nsakrae."

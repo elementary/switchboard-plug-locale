@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-06-24 03:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -79,6 +79,18 @@ msgstr "שפות פעילות נכון לעכשיו"
 msgid "Remove language"
 msgstr "הסרת שפה"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "הסרת שפה"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "התקנת שפה"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "אזור:"
@@ -143,12 +155,15 @@ msgstr "הגדרת שפת המערכת"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "הגדרת שפה למסך הכניסה, לחשבון האורח ולחשבונות של משתמשים חדשים"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "השפה החסרה מותקנת"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr "לא ניתן להגדיר את שפת המערכת"
-
-#~ msgid "Install language"
-#~ msgstr "התקנת שפה"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"

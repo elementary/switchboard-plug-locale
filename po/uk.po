@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-03-15 21:13+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -80,6 +80,18 @@ msgstr "Поточна мова"
 msgid "Remove language"
 msgstr "Вилучити мову"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Вилучити мову"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Встановити мову"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "Регіон:"
@@ -146,12 +158,15 @@ msgstr ""
 "Встановити мову для екрана входу, гостьового облікового запису та нових "
 "облікових записів користувачів"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Встановлення відсутніх мов"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Встановити мову"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"

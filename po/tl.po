@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2016-07-06 15:47+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,6 +74,18 @@ msgstr "Kasalukuyang aktibong wika"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Magtanggal ng wika"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Magtanggal ng wika"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Mag-install ng wika"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -147,12 +159,15 @@ msgstr ""
 "Magtalaga ng wika para sa login screen, guest account at mga bagong user "
 "account"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Ini-install ang nawawalang wika"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Mag-install ng wika"
 
 #~ msgid "Language: "
 #~ msgstr "Wika: "

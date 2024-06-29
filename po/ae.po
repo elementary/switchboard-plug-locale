@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -62,6 +62,14 @@ msgstr ""
 
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
+msgstr ""
+
+#: src/Widgets/LocaleView.vala:133
+msgid "Couldn't remove language pack"
+msgstr ""
+
+#: src/Widgets/LocaleView.vala:162
+msgid "Couldn't install language pack"
 msgstr ""
 
 #: src/Widgets/LocaleSetting.vala:74
@@ -128,6 +136,10 @@ msgstr ""
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+msgid "Couldn't install missing language packs"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""

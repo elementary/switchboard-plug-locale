@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2024-06-27 19:16+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -79,6 +79,18 @@ msgstr "Huidige actieve taal"
 msgid "Remove language"
 msgstr "Taal verwijderen"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Taal verwijderen"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Installeer taal"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "Regio:"
@@ -144,12 +156,15 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Zet de taal voor het aanmeldscherm, het gast account en nieuwe gebruikers"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Ontbrekende taal wordt geïnstalleerd"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr "Kan systeemlocale niet instellen"
-
-#~ msgid "Install language"
-#~ msgstr "Installeer taal"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

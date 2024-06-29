@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2017-02-17 20:14+0000\n"
 "Last-Translator: Rokar ✌ <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,6 +75,18 @@ msgstr "Zimane niha çalak"
 msgid "Remove language"
 msgstr "Ziman rakirin"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Ziman rakirin"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Ziman ava bikin"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
@@ -145,12 +157,15 @@ msgstr "Zimanê Pergalê Eyar Bike"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Zimane kêm damezrandin"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Ziman ava bikin"
 
 #~ msgid "Language: "
 #~ msgstr "Ziman: "

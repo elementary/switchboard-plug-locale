@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2017-01-02 02:59+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,6 +74,18 @@ msgstr "نۆۋەتتىكى ئاكتىپ تىل"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "تىل ئۆچۈرۈش"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "تىل ئۆچۈرۈش"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "تىل ئورنىتىش"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -147,12 +159,15 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "كىرىش ئىكرانى، مىھمان ھىساۋاتى ۋە يىڭى ئابونت ھىساۋاتلىرى ئۈچۈن تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "يۈتكەن تىللارنى ئورنىتىۋاتىدۇ"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "تىل ئورنىتىش"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈر"

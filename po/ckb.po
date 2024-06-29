@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2022-09-25 06:58+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -73,6 +73,18 @@ msgstr "زمانی چالاکی ئێستا"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "سڕینەوەی زمان"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "سڕینەوەی زمان"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "دامەزراندنی زمان"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -146,12 +158,15 @@ msgstr "چەسپاندنی زمانی سیستەم"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "زمان بۆ پەڕەی چونەژوورەوە ، هەژماری میوان و هەژماری نوێ دابنێ"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "دامەزراندنی زمانی ونبوو"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "دامەزراندنی زمان"
 
 #~ msgid "Language: "
 #~ msgstr "زمان : "

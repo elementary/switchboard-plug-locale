@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2019-12-04 21:25+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -78,6 +78,18 @@ msgstr "Aktiivisena oleva kieli"
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
 msgstr "Poista kieli"
+
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Poista kieli"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Asenna kieli"
 
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
@@ -151,12 +163,15 @@ msgstr "Aseta järjestelmän kieli"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Aseta kieli kirjautumisnäkymään, vierastilille ja uusille käyttäjille"
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Asennetaan puuttuva kieli"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
-
-#~ msgid "Install language"
-#~ msgstr "Asenna kieli"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"

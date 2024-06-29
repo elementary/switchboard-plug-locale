@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-22 02:22+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2015-10-13 19:50+0000\n"
 "Last-Translator: ABCDEFGH <aefgh7233@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -80,6 +80,15 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
+#: src/Widgets/LocaleView.vala:133
+msgid "Couldn't remove language pack"
+msgstr ""
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+msgid "Couldn't install language pack"
+msgstr "ภาษาที่ติดตั้งไว้แล้ว"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
@@ -150,7 +159,13 @@ msgstr "ตั้งภาษาระบบ"
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:358
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "กำลังติดตั้งภาษาที่หายไป"
+
+#: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
 msgstr ""
 
