@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-03-15 21:13+0000\n"
+"PO-Revision-Date: 2024-07-01 13:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -81,16 +81,12 @@ msgid "Remove language"
 msgstr "Вилучити мову"
 
 #: src/Widgets/LocaleView.vala:133
-#, fuzzy
-#| msgid "Remove language"
 msgid "Couldn't remove language pack"
-msgstr "Вилучити мову"
+msgstr "Неможливо вилучити мовний пакунок"
 
 #: src/Widgets/LocaleView.vala:162
-#, fuzzy
-#| msgid "Install language"
 msgid "Couldn't install language pack"
-msgstr "Встановити мову"
+msgstr "Неможливо встановити мовний пакунок"
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
@@ -142,7 +138,7 @@ msgstr "За Фаренгейтом"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "Автоматично, на основі локалі"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
@@ -159,14 +155,12 @@ msgstr ""
 "облікових записів користувачів"
 
 #: src/Widgets/LocaleSetting.vala:217
-#, fuzzy
-#| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
-msgstr "Встановлення відсутніх мов"
+msgstr "Неможливо встановити відсутні мовні пакунки"
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
-msgstr ""
+msgstr "Не вдається встановити системну локаль"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
