@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-06-25 10:16+0000\n"
+"PO-Revision-Date: 2024-07-01 13:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/ca/>\n"
@@ -80,16 +80,12 @@ msgid "Remove language"
 msgstr "Suprimeix la llengua"
 
 #: src/Widgets/LocaleView.vala:133
-#, fuzzy
-#| msgid "Remove language"
 msgid "Couldn't remove language pack"
-msgstr "Suprimeix la llengua"
+msgstr "No s'ha pogut suprimir el paquet de llengua."
 
 #: src/Widgets/LocaleView.vala:162
-#, fuzzy
-#| msgid "Install language"
 msgid "Couldn't install language pack"
-msgstr "Instal·la la llengua"
+msgstr "No s'ha pogut instal·lar el paquet de llengua."
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
@@ -158,10 +154,8 @@ msgstr ""
 "comptes d'usuari nous."
 
 #: src/Widgets/LocaleSetting.vala:217
-#, fuzzy
-#| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
-msgstr "S'instal·la la llengua que falta"
+msgstr "No s'han pogut instal·lar els paquets de llengua que manquen."
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
