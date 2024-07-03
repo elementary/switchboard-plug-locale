@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-06-21 04:24+0000\n"
+"PO-Revision-Date: 2024-07-03 14:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -81,16 +81,12 @@ msgid "Remove language"
 msgstr "Usuń język"
 
 #: src/Widgets/LocaleView.vala:133
-#, fuzzy
-#| msgid "Remove language"
 msgid "Couldn't remove language pack"
-msgstr "Usuń język"
+msgstr "Nie udało się usunąć paczki językowej"
 
 #: src/Widgets/LocaleView.vala:162
-#, fuzzy
-#| msgid "Install language"
 msgid "Couldn't install language pack"
-msgstr "Zainstaluj język"
+msgstr "Nie udało się zainstalować paczki językowej"
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
@@ -142,7 +138,7 @@ msgstr "Fahrenheita"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "Automatyczne, w oparciu o język"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
@@ -157,10 +153,8 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Ustaw język ekranu logowania, konta gościa i nowych kont użytkowników"
 
 #: src/Widgets/LocaleSetting.vala:217
-#, fuzzy
-#| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
-msgstr "Instalowanie brakującego języka"
+msgstr "Nie udało się zainstalować brakujących paczek językowych"
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
