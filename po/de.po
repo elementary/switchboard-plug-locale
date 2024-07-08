@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-03-19 22:04+0000\n"
+"PO-Revision-Date: 2024-07-09 19:16+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -80,16 +80,12 @@ msgid "Remove language"
 msgstr "Sprache entfernen"
 
 #: src/Widgets/LocaleView.vala:133
-#, fuzzy
-#| msgid "Remove language"
 msgid "Couldn't remove language pack"
-msgstr "Sprache entfernen"
+msgstr "Sprachpaket konnte nicht entfernt werden"
 
 #: src/Widgets/LocaleView.vala:162
-#, fuzzy
-#| msgid "Install language"
 msgid "Couldn't install language pack"
-msgstr "Sprache installieren"
+msgstr "Sprachpaket konnte nicht installiert werden"
 
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
@@ -141,7 +137,7 @@ msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "Automatisch, auf Basis der Lokaleinstellungen"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
@@ -157,14 +153,12 @@ msgstr ""
 "Sprache für Anmelde-Bildschirm, Gast- und neue Benutzerkonten festlegen"
 
 #: src/Widgets/LocaleSetting.vala:217
-#, fuzzy
-#| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
-msgstr "Fehlende Sprache wird installiert"
+msgstr "Fehlende Sprachpakete konnten nicht installiert werden"
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
-msgstr ""
+msgstr "Lokaleinstellungen des System konnten nicht gesetzt werden"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""
