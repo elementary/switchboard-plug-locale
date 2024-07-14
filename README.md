@@ -12,7 +12,7 @@ You'll need the following dependencies:
 * libgnome-desktop-4-dev
 * libgranite-7-dev
 * libswitchboard-3-dev
-* meson >= 0.46.1
+* meson >= 0.58.0
 * policykit-1
 * valac
 
