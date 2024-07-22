@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
-"PO-Revision-Date: 2024-03-17 15:13+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"PO-Revision-Date: 2024-07-03 14:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -68,11 +68,11 @@ msgstr "Zainstaluj język"
 msgid "Install %s"
 msgstr "Zainstaluj %s"
 
-#: src/Widgets/LanguageListBox.vala:28
+#: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
 msgstr "Zainstalowane języki"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:135
 msgid "Currently active language"
 msgstr "Język obecnie aktywny"
 
@@ -80,68 +80,85 @@ msgstr "Język obecnie aktywny"
 msgid "Remove language"
 msgstr "Usuń język"
 
+#: src/Widgets/LocaleView.vala:133
+msgid "Couldn't remove language pack"
+msgstr "Nie udało się usunąć paczki językowej"
+
+#: src/Widgets/LocaleView.vala:162
+msgid "Couldn't install language pack"
+msgstr "Nie udało się zainstalować paczki językowej"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "Region:"
 
-#: src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:79
 msgid "Formats:"
 msgstr "Formaty:"
 
-#: src/Widgets/LocaleSetting.vala:82
+#: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
 msgstr "Układ klawiatury:"
 
-#: src/Widgets/LocaleSetting.vala:86
+#: src/Widgets/LocaleSetting.vala:88
 msgid "Keyboard settings…"
 msgstr "Ustawienia klawiatury…"
 
-#: src/Widgets/LocaleSetting.vala:90
+#: src/Widgets/LocaleSetting.vala:93
 msgid "Time Format:"
 msgstr "Format czasu:"
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
 msgstr "Ustawienia daty i czasu…"
 
-#: src/Widgets/LocaleSetting.vala:98
+#: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
 msgstr "Obsługa języka nie jest w pełni zainstalowana"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Complete Installation"
 msgstr "Dokończ instalację"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:116
 msgid "Some changes will not take effect until you log out"
 msgstr "Niektóre zmiany nie będą działać zanim nie nastąpi ponowne zalogowanie"
 
-#: src/Widgets/LocaleSetting.vala:135
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:144
 msgid "Celsius"
 msgstr "Celsjusza"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:147
 msgid "Fahrenheit"
 msgstr "Fahrenheita"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:152
+msgid "Automatic, based on locale"
+msgstr "Automatyczne, w oparciu o język"
+
+#: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
 msgstr "Ustawienie języka"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:198
 msgid "Set System Language"
 msgstr "Ustaw język systemu"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:199
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Ustaw język ekranu logowania, konta gościa i nowych kont użytkowników"
 
-#~ msgid "Install language"
-#~ msgstr "Zainstaluj język"
+#: src/Widgets/LocaleSetting.vala:217
+msgid "Couldn't install missing language packs"
+msgstr "Nie udało się zainstalować brakujących paczek językowych"
+
+#: src/Widgets/LocaleSetting.vala:381
+msgid "Can't set system locale"
+msgstr "Nie można ustawić języka systemu"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"

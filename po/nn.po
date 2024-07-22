@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2019-01-06 14:39+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -68,11 +68,11 @@ msgstr "Installer språk"
 msgid "Install %s"
 msgstr "Installerer %s"
 
-#: src/Widgets/LanguageListBox.vala:28
+#: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
 msgstr "Installerte språk"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:135
 msgid "Currently active language"
 msgstr "Gjeldande språk"
 
@@ -80,76 +80,99 @@ msgstr "Gjeldande språk"
 msgid "Remove language"
 msgstr "Fjern språk"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Fjern språk"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Installer språk"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
 msgid "Region:"
 msgstr "Region: "
 
-#: src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:79
 #, fuzzy
 #| msgid "Formats: "
 msgid "Formats:"
 msgstr "Format: "
 
-#: src/Widgets/LocaleSetting.vala:82
+#: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:86
+#: src/Widgets/LocaleSetting.vala:88
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Tastaturinnstillingar…"
 
-#: src/Widgets/LocaleSetting.vala:90
+#: src/Widgets/LocaleSetting.vala:93
 #, fuzzy
 #| msgid "Formats: "
 msgid "Time Format:"
 msgstr "Format: "
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:98
+#: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
 msgstr "Språkstøtte er ikkje fullstendig installert"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Complete Installation"
 msgstr "Fullfør installasjonen"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:116
 msgid "Some changes will not take effect until you log out"
 msgstr "Nokre endringar trer ikkje i kraft før du loggar ut"
 
-#: src/Widgets/LocaleSetting.vala:135
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Temperature:"
 msgstr "Temperatur:"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:144
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:147
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:152
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
 msgstr "Vel språk"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:198
 msgid "Set System Language"
 msgstr "Vel systemspråk"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:199
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Vel språket for innloggingsskjermen, gjestekonto og nye brukarkontoar"
 
-#~ msgid "Install language"
-#~ msgstr "Installer språk"
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Installerer manglande språk"
+
+#: src/Widgets/LocaleSetting.vala:381
+msgid "Can't set system locale"
+msgstr ""
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Nokre innstillingar krev administratorrettar for å kunne endrast"

@@ -89,11 +89,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
 
                 var selected_language_code = list_box.get_selected_language_code ();
+                var selected_language_name = list_box.get_selected_language_name ();
                 var locales = Utils.get_locales_for_language_code (selected_language_code);
 
                 debug ("reloading Settings widget for language '%s'".printf (selected_language_code));
                 locale_setting.reload_locales.begin (selected_language_code, locales);
-                locale_setting.reload_labels (selected_language_code);
+                locale_setting.reload_labels (selected_language_name);
 
                 if (locale_manager.get_user_language () in locales) {
                     remove_button.sensitive = false;
@@ -102,12 +103,13 @@ namespace SwitchboardPlugLocale.Widgets {
                 }
             });
 
+            installer = Installer.UbuntuInstaller.get_default ();
+
             unowned var lm = LocaleManager.get_default ();
             if (lm.is_connected) {
                 reload.begin ();
             }
 
-            installer = Installer.UbuntuInstaller.get_default ();
             installer.progress_changed.connect (on_progress_changed);
 
             installer.install_finished.connect ((langcode) => {
@@ -119,11 +121,27 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             remove_button.clicked.connect (() => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
+                installer.remove.begin (list_box.get_selected_language_code (), (obj, res) => {
+                    try {
+                        installer.remove.end (res);
+                    } catch (Error e) {
+                        if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                            return;
+                        }
 
-                installer.remove (list_box.get_selected_language_code ());
+                        var dialog = new Granite.MessageDialog (
+                            _("Couldn't remove language pack"),
+                            e.message,
+                            new ThemedIcon ("preferences-desktop-locale")
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
+                            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                        };
+                        dialog.present ();
+                        dialog.response.connect (dialog.destroy);
+                    }
+                });
             });
 
             add_button.clicked.connect (() => {
@@ -132,11 +150,27 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             install_dialog.language_selected.connect ((lang) => {
-                if (!Utils.allowed_permission ()) {
-                    return;
-                }
+                installer.install.begin (lang, (obj, res) => {
+                    try {
+                        installer.install.end (res);
+                    } catch (Error e) {
+                        if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                            return;
+                        }
 
-                installer.install (lang);
+                        var dialog = new Granite.MessageDialog (
+                            _("Couldn't install language pack"),
+                            e.message,
+                            new ThemedIcon ("preferences-desktop-locale")
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
+                            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                        };
+                        dialog.present ();
+                        dialog.response.connect (dialog.destroy);
+                    }
+                });
             });
         }
 

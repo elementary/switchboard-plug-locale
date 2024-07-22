@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2015-10-13 19:50+0000\n"
 "Last-Translator: ABCDEFGH <aefgh7233@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -68,11 +68,11 @@ msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 msgid "Install %s"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
-#: src/Widgets/LanguageListBox.vala:28
+#: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:135
 msgid "Currently active language"
 msgstr ""
 
@@ -80,70 +80,93 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
+#: src/Widgets/LocaleView.vala:133
+msgid "Couldn't remove language pack"
+msgstr ""
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+msgid "Couldn't install language pack"
+msgstr "ภาษาที่ติดตั้งไว้แล้ว"
+
 #: src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 #| msgid "Region: "
 msgid "Region:"
 msgstr "ภูมิภาค: "
 
-#: src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:79
 #, fuzzy
 #| msgid "Formats: "
 msgid "Formats:"
 msgstr "รูปแบบ: "
 
-#: src/Widgets/LocaleSetting.vala:82
+#: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:86
+#: src/Widgets/LocaleSetting.vala:88
 msgid "Keyboard settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:90
+#: src/Widgets/LocaleSetting.vala:93
 #, fuzzy
 #| msgid "Formats: "
 msgid "Time Format:"
 msgstr "รูปแบบ: "
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:98
+#: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
 msgstr "การสนับสนุนภาษาไม่ได้ถูกติดตั้งอย่างครบวงจร"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Complete Installation"
 msgstr "ทำการติดตั้งให้สมบูรณ์"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:116
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:135
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Temperature:"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:144
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:147
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:152
+msgid "Automatic, based on locale"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
 msgstr "ตั้งภาษา"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:198
 msgid "Set System Language"
 msgstr "ตั้งภาษาระบบ"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:199
 msgid "Set language for login screen, guest account and new user accounts"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "กำลังติดตั้งภาษาที่หายไป"
+
+#: src/Widgets/LocaleSetting.vala:381
+msgid "Can't set system locale"
 msgstr ""
 
 #~ msgid "Some settings require administrator rights to be changed"

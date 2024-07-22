@@ -25,13 +25,15 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         languages = new Gee.HashMap <string, LanguageRow> ();
         lm = LocaleManager.get_default ();
 
-        installed_languages_label = new Granite.HeaderLabel (_("Installed Languages"));
-
         listbox = new Gtk.ListBox () {
             hexpand = true,
             vexpand = true
         };
         listbox.set_header_func (update_headers);
+
+        installed_languages_label = new Granite.HeaderLabel (_("Installed Languages")) {
+            mnemonic_widget = listbox
+        };
 
         append (listbox);
     }
@@ -54,7 +56,7 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
                 continue;
             }
 
-            add_language (code);
+            add_language (code, locale);
         }
 
         var row = listbox.get_first_child ();
@@ -67,9 +69,9 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         }
     }
 
-    private void add_language (string code) {
+    private void add_language (string code, string locale) {
         if (!languages.has_key (code)) {
-            var language_string = Utils.translate (code, null);
+            var language_string = Utils.translate (code, locale);
 
             if (lm.get_user_language ().slice (0, 2) == code) {
                 languages[code] = new LanguageRow (code, language_string, true);
@@ -104,6 +106,15 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         var selected_row = listbox.get_selected_row () as LanguageRow;
         if (selected_row != null) {
             return selected_row.code;
+        } else {
+            return null;
+        }
+    }
+
+    public string? get_selected_language_name () {
+        var selected_row = listbox.get_selected_row () as LanguageRow;
+        if (selected_row != null) {
+            return selected_row.text;
         } else {
             return null;
         }

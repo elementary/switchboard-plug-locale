@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
-"PO-Revision-Date: 2024-04-30 06:13+0000\n"
-"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"PO-Revision-Date: 2024-06-27 19:16+0000\n"
+"Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:30
@@ -67,11 +67,11 @@ msgstr "Installeer taal"
 msgid "Install %s"
 msgstr "%s installeren"
 
-#: src/Widgets/LanguageListBox.vala:28
+#: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
 msgstr "Geïnstalleerde talen"
 
-#: src/Widgets/LanguageListBox.vala:124
+#: src/Widgets/LanguageListBox.vala:135
 msgid "Currently active language"
 msgstr "Huidige actieve taal"
 
@@ -79,69 +79,92 @@ msgstr "Huidige actieve taal"
 msgid "Remove language"
 msgstr "Taal verwijderen"
 
+#: src/Widgets/LocaleView.vala:133
+#, fuzzy
+#| msgid "Remove language"
+msgid "Couldn't remove language pack"
+msgstr "Taal verwijderen"
+
+#: src/Widgets/LocaleView.vala:162
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Installeer taal"
+
 #: src/Widgets/LocaleSetting.vala:74
 msgid "Region:"
 msgstr "Regio:"
 
-#: src/Widgets/LocaleSetting.vala:78
+#: src/Widgets/LocaleSetting.vala:79
 msgid "Formats:"
 msgstr "Formaten:"
 
-#: src/Widgets/LocaleSetting.vala:82
+#: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
 msgstr "Toetsenbordindeling:"
 
-#: src/Widgets/LocaleSetting.vala:86
+#: src/Widgets/LocaleSetting.vala:88
 msgid "Keyboard settings…"
 msgstr "Toetsenbordinstellingen…"
 
-#: src/Widgets/LocaleSetting.vala:90
+#: src/Widgets/LocaleSetting.vala:93
 msgid "Time Format:"
 msgstr "Tijdsindeling:"
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
 msgstr "Datum- & tijdinstellingen…"
 
-#: src/Widgets/LocaleSetting.vala:98
+#: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
 msgstr "Taalondersteuning is niet volledig geïnstalleerd"
 
-#: src/Widgets/LocaleSetting.vala:104
+#: src/Widgets/LocaleSetting.vala:108
 msgid "Complete Installation"
 msgstr "Volledige Installatie"
 
-#: src/Widgets/LocaleSetting.vala:112
+#: src/Widgets/LocaleSetting.vala:116
 msgid "Some changes will not take effect until you log out"
 msgstr "Sommige wijzigingen worden pas van kracht nadat u zich heeft afgemeld"
 
-#: src/Widgets/LocaleSetting.vala:135
+#: src/Widgets/LocaleSetting.vala:139
 msgid "Temperature:"
 msgstr "Temperatuur:"
 
-#: src/Widgets/LocaleSetting.vala:139
+#: src/Widgets/LocaleSetting.vala:144
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:141
+#: src/Widgets/LocaleSetting.vala:147
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:176
+#: src/Widgets/LocaleSetting.vala:152
+msgid "Automatic, based on locale"
+msgstr "Automatisch, gebaseerd op locale"
+
+#: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
 msgstr "Taal instellen"
 
-#: src/Widgets/LocaleSetting.vala:180
+#: src/Widgets/LocaleSetting.vala:198
 msgid "Set System Language"
 msgstr "Systeemtaal instellen"
 
-#: src/Widgets/LocaleSetting.vala:181
+#: src/Widgets/LocaleSetting.vala:199
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Zet de taal voor het aanmeldscherm, het gast account en nieuwe gebruikers"
 
-#~ msgid "Install language"
-#~ msgstr "Installeer taal"
+#: src/Widgets/LocaleSetting.vala:217
+#, fuzzy
+#| msgid "Installing missing language"
+msgid "Couldn't install missing language packs"
+msgstr "Ontbrekende taal wordt geïnstalleerd"
+
+#: src/Widgets/LocaleSetting.vala:381
+msgid "Can't set system locale"
+msgstr "Kan systeemlocale niet instellen"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

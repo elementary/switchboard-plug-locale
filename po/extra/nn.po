@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:08+0000\n"
+"POT-Creation-Date: 2024-06-29 03:36+0000\n"
 "PO-Revision-Date: 2023-02-02 23:25+0000\n"
 "Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://l10n.elementary.io/projects/"
@@ -45,46 +45,50 @@ msgstr ""
 msgid "Add links to other places locale-related settings are managed"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:38 data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:38
+msgid "Improve screen reader accessibility"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Oppdaterte over­setningar"
 
-#: data/locale.metainfo.xml.in:49 data/locale.metainfo.xml.in:62
-#: data/locale.metainfo.xml.in:71 data/locale.metainfo.xml.in:80
+#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:67
+#: data/locale.metainfo.xml.in:76 data/locale.metainfo.xml.in:85
 msgid "Fixes:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:51
+#: data/locale.metainfo.xml.in:56
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:58
+#: data/locale.metainfo.xml.in:63
 msgid "Improvements:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:60
+#: data/locale.metainfo.xml.in:65
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:64
+#: data/locale.metainfo.xml.in:69
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:73
+#: data/locale.metainfo.xml.in:78
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:87
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:84
+#: data/locale.metainfo.xml.in:89
 msgid "Minor updates:"
 msgstr "Mindre oppdateringar:"
 
-#: data/locale.metainfo.xml.in:86
+#: data/locale.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 

@@ -59,7 +59,12 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         }
     }
 
-    public void install (string language) {
+    public async void install (string language) throws Error {
+        var has_permission = yield get_permission ();
+        if (!has_permission) {
+            throw (new DBusError.ACCESS_DENIED (""));
+        }
+
         transaction_mode = TransactionMode.INSTALL;
         var packages = get_remaining_packages_for_language (language);
         transaction_language_code = language;
@@ -68,31 +73,13 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
             message ("Packet: %s", packet);
         }
 
-        aptd.install_packages.begin (packages, (obj, res) => {
-            try {
-                var transaction_id = aptd.install_packages.end (res);
-                transactions.@set (transaction_id, "i-" + language);
-                run_transaction (transaction_id);
-            } catch (Error e) {
-                warning ("Could not queue downloads: %s", e.message);
-            }
-        });
-    }
-
-    private void install_packages (string [] packages) {
-        foreach (var packet in packages) {
-            message ("will install: %s", packet);
+        try {
+            var transaction_id = yield aptd.install_packages (packages);
+            transactions.@set (transaction_id, "i-" + language);
+            run_transaction (transaction_id);
+        } catch (Error e) {
+            throw (e);
         }
-
-        aptd.install_packages.begin (packages, (obj, res) => {
-            try {
-                var transaction_id = aptd.install_packages.end (res);
-                transactions.@set (transaction_id, "install-missing");
-                run_transaction (transaction_id);
-            } catch (Error e) {
-                warning ("Could not queue downloads: %s", e.message);
-            }
-        });
     }
 
     public async void check_missing_languages () {
@@ -100,31 +87,75 @@ public class SwitchboardPlugLocale.Installer.UbuntuInstaller : Object {
         check_missing_finished (missing_packages);
     }
 
-    public void install_missing_languages () {
+    public async void install_missing_languages () throws Error {
         if (missing_packages == null || missing_packages.length == 0) {
             return;
         }
 
+        var has_permission = yield get_permission ();
+        if (!has_permission) {
+            throw (new DBusError.ACCESS_DENIED (""));
+        }
+
         transaction_mode = TransactionMode.INSTALL_MISSING;
 
-        install_packages (missing_packages);
+        foreach (unowned var package in missing_packages) {
+            message ("will install: %s", package);
+        }
+
+        try {
+            var transaction_id = yield aptd.install_packages (missing_packages);
+            transactions.@set (transaction_id, "install-missing");
+            run_transaction (transaction_id);
+        } catch (Error e) {
+            throw (e);
+        }
     }
 
-    public void remove (string languagecode) {
+    public async void remove (string languagecode) throws Error {
+        var has_permission = yield get_permission ();
+        if (!has_permission) {
+            throw (new DBusError.ACCESS_DENIED (""));
+        }
+
         transaction_mode = TransactionMode.REMOVE;
         transaction_language_code = languagecode;
 
         var installed = get_to_remove_packages_for_language (languagecode);
 
-        aptd.remove_packages.begin (installed, (obj, res) => {
+        try {
+            var transaction_id = yield aptd.remove_packages (installed);
+            transactions.@set (transaction_id, "r-" + languagecode);
+            run_transaction (transaction_id);
+        } catch (Error e) {
+            throw (e);
+        }
+    }
+
+    private static Polkit.Permission? permission = null;
+    private static async bool get_permission () {
+        if (permission == null) {
             try {
-                var transaction_id = aptd.remove_packages.end (res);
-                transactions.@set (transaction_id, "r-" + languagecode);
-                run_transaction (transaction_id);
+                permission = yield new Polkit.Permission (
+                    "io.elementary.settings.locale.administration",
+                    new Polkit.UnixProcess (Posix.getpid ())
+                );
             } catch (Error e) {
-                warning ("Could not queue deletions: %s", e.message);
+                critical (e.message);
+                return false;
             }
-        });
+        }
+
+        if (!permission.allowed) {
+            try {
+                yield permission.acquire_async ();
+            } catch (Error e) {
+                critical (e.message);
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void cancel_install () {
