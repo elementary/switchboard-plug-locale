@@ -1,3 +1,9 @@
+io.elementary.settings.locale (8.0.0) noble; urgency=medium
+
+  * Release 8.0.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 26 Jul 2024 10:30:48 -0700
+
 io.elementary.settings.locale (2.5.9) jammy; urgency=medium
 
   * Release 2.5.9
