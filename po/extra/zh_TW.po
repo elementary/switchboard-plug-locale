@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-09-02 05:42+0000\n"
+"PO-Revision-Date: 2024-09-05 21:13+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/locale-plug-extra/zh_Hant/>\n"
@@ -20,14 +20,12 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 
 #: data/locale.metainfo.xml.in:10
-#, fuzzy
-#| msgid "Manage locale settings"
 msgid "Language &amp; Region Settings"
-msgstr "管理語言區域設定"
+msgstr "語言與地區設定值"
 
 #: data/locale.metainfo.xml.in:11
 msgid "Manage languages, and configure region and format"
-msgstr "管理語言，設定區域和格式"
+msgstr "管理語言，設定地區和格式"
 
 #: data/locale.metainfo.xml.in:26
 msgid "elementary, Inc."
@@ -35,19 +33,19 @@ msgstr "elementary, Inc."
 
 #: data/locale.metainfo.xml.in:34
 msgid "A big redesign!"
-msgstr ""
+msgstr "大幅重新設計！"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Prevent fcitx5 packages from being installed"
-msgstr ""
+msgstr "防止安裝 fcitx5 的各套件"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Add links to other places locale-related settings are managed"
-msgstr ""
+msgstr "增加連結到其他地域相關的設定頁面"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "改善螢幕閱讀器輔助"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:92
 msgid "Updated translations"
@@ -60,29 +58,29 @@ msgstr "修正："
 
 #: data/locale.metainfo.xml.in:56
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "翻譯身份核對對話盒的描述文字"
 
 #: data/locale.metainfo.xml.in:63
 msgid "Improvements:"
-msgstr ""
+msgstr "改善項目："
 
 #: data/locale.metainfo.xml.in:65
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "中央庫德語現在可供安裝"
 
 #: data/locale.metainfo.xml.in:69
 msgid "Support installation and removal of languages with 3-letter codes"
-msgstr ""
+msgstr "支援安裝或移除代碼有三個字元的語言"
 
 #: data/locale.metainfo.xml.in:78
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
-msgstr ""
+msgstr "確保「格式」下拉選單在安裝或移除語言之後仍然是正確的"
 
 #: data/locale.metainfo.xml.in:87
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "支援代碼有三個字元的地域"
 
 #: data/locale.metainfo.xml.in:89
 msgid "Minor updates:"
@@ -90,15 +88,15 @@ msgstr "小型更新："
 
 #: data/locale.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "改善對不是基於 Ubuntu 的發行版的支援"
 
 #: data/locale.policy.in:10
 msgid "Manage locale settings"
-msgstr "管理語言區域設定"
+msgstr "管理地域設定"
 
 #: data/locale.policy.in:11
 msgid "Authentication is required to manage locale settings"
-msgstr "管理語言區域設定需要通過身分核對"
+msgstr "需要核對身份才能管理地域設定"
 
 #~ msgid "Redesigned Install Language popover"
 #~ msgstr "重新設計的語言安裝彈出通知"
