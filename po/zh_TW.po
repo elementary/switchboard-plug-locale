@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-09-05 21:13+0000\n"
+"PO-Revision-Date: 2024-09-06 10:13+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/zh_Hant/>\n"
@@ -43,12 +43,12 @@ msgstr "溫度"
 #: src/ProgressDialog.vala:47
 #, c-format
 msgid "Installing %s"
-msgstr "正在安裝 %s 中"
+msgstr "正在安裝 %s"
 
 #: src/ProgressDialog.vala:50
 #, c-format
 msgid "Removing %s"
-msgstr "正在移除 %s 中"
+msgstr "正在移除 %s"
 
 #: src/ProgressDialog.vala:53
 msgid "Installing missing language"
