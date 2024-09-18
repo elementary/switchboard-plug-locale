@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2024-06-17 03:16+0000\n"
+"PO-Revision-Date: 2024-09-19 07:21+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-locale/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -145,7 +145,7 @@ msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "Automatisk, basert på systemspråk"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
@@ -167,7 +167,7 @@ msgstr "Installerer manglende språk"
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
-msgstr ""
+msgstr "Kan ikke sette systemspråk"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
