@@ -81,6 +81,12 @@ namespace SwitchboardPlugLocale.Widgets {
                 shrink_end_child = false
             };
 
+            var sss = SettingsSchemaSource.get_default ().lookup ("io.elementary.settings", true);
+            if (sss != null && sss.has_key ("sidebar-position")) {
+                var settings = new Settings ("io.elementary.settings");
+                settings.bind ("sidebar-position", paned, "position", DEFAULT);
+            }
+
             append (paned);
 
             list_box.listbox.row_selected.connect ((row) => {
