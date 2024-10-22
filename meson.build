@@ -23,6 +23,7 @@ polkit_actiondir = polkit_dep.get_variable('actiondir', pkgconfig_define: ['pref
 
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    '-DG_LOG_DOMAIN="@0@"'.format(meson.project_name()),
     '-DGNOME_DESKTOP_USE_UNSTABLE_API',
     language: 'c'
 )
