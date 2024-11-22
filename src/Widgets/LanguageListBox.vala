@@ -73,13 +73,12 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         if (!languages.has_key (code)) {
             var language_string = Utils.translate (code, locale);
 
-            if (lm.get_user_language ().slice (0, 2) == code) {
-                languages[code] = new LanguageRow (code, language_string, true);
-            } else {
-                languages[code] = new LanguageRow (code, language_string);
-            }
-
+            languages[code] = new LanguageRow (code, language_string);
             listbox.append (languages[code]);
+
+            if (lm.get_user_language ().slice (0, 2) == code) {
+                languages[code].current = true;
+            }
         }
     }
 
@@ -124,44 +123,47 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
         public string code { get; construct; }
         public string text { get; construct; }
 
-        private bool _current;
+        private Gtk.Box box;
+        private Gtk.CheckButton? check_button;
+        // group_check_button is used for forcing radio button style
+        private static Gtk.CheckButton group_check_button;
+
         public bool current {
             get {
-                return _current;
+                return check_button != null;
             }
             set {
                 if (value) {
-                    image.icon_name = "selection-checked";
-                    image.tooltip_text = _("Currently active language");
+                    check_button = new Gtk.CheckButton () {
+                        active = true,
+                        group = group_check_button,
+                        focusable = false,
+                        tooltip_text = _("Currently active language")
+                    };
+                    box.append (check_button);
                 } else {
-                    image.tooltip_text = "";
-                    image.clear ();
+                    box.remove (check_button);
+                    check_button = null;
                 }
-                _current = value;
             }
         }
 
-        private Gtk.Image image;
+        static construct {
+            group_check_button = new Gtk.CheckButton ();
+        }
 
-        public LanguageRow (string code, string text, bool current = false) {
-            Object (
-                code: code,
-                current: current,
-                text: text
-            );
+        public LanguageRow (string code, string text) {
+            Object (code: code, text: text);
         }
 
         construct {
-            image = new Gtk.Image ();
-            image.hexpand = true;
-            image.halign = Gtk.Align.END;
+            var label = new Gtk.Label (text) {
+                halign = Gtk.Align.START,
+                hexpand = true
+            };
 
-            var label = new Gtk.Label (text);
-            label.halign = Gtk.Align.START;
-
-            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             box.append (label);
-            box.append (image);
 
             child = box;
         }
