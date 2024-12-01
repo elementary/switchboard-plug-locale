@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-29 03:36+0000\n"
-"PO-Revision-Date: 2019-12-04 21:25+0000\n"
+"PO-Revision-Date: 2024-12-02 12:16+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:30
@@ -80,48 +80,36 @@ msgid "Remove language"
 msgstr "Poista kieli"
 
 #: src/Widgets/LocaleView.vala:133
-#, fuzzy
-#| msgid "Remove language"
 msgid "Couldn't remove language pack"
-msgstr "Poista kieli"
+msgstr "Kielipakettia ei voitu poistaa"
 
 #: src/Widgets/LocaleView.vala:162
-#, fuzzy
-#| msgid "Install language"
 msgid "Couldn't install language pack"
-msgstr "Asenna kieli"
+msgstr "Kielipakettia ei voitu asentaa"
 
 #: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
 msgid "Region:"
-msgstr "Alue: "
+msgstr "Alue:"
 
 #: src/Widgets/LocaleSetting.vala:79
-#, fuzzy
-#| msgid "Formats: "
 msgid "Formats:"
-msgstr "Muotoilut: "
+msgstr "Muotoilut:"
 
 #: src/Widgets/LocaleSetting.vala:84
 msgid "Keyboard Layout:"
-msgstr ""
+msgstr "Näppäimistön asettelu:"
 
 #: src/Widgets/LocaleSetting.vala:88
-#, fuzzy
-#| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Näppäimistön asetukset…"
 
 #: src/Widgets/LocaleSetting.vala:93
-#, fuzzy
-#| msgid "Formats: "
 msgid "Time Format:"
-msgstr "Muotoilut: "
+msgstr "Aikamuoto:"
 
 #: src/Widgets/LocaleSetting.vala:97
 msgid "Date & Time settings…"
-msgstr ""
+msgstr "Päivän ja ajan asetukset…"
 
 #: src/Widgets/LocaleSetting.vala:102
 msgid "Language support is not installed completely"
@@ -149,7 +137,7 @@ msgstr "Fahrenheit"
 
 #: src/Widgets/LocaleSetting.vala:152
 msgid "Automatic, based on locale"
-msgstr ""
+msgstr "Automaattinen, pohjautuu maa-asetustoon"
 
 #: src/Widgets/LocaleSetting.vala:194
 msgid "Set Language"
@@ -164,14 +152,12 @@ msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Aseta kieli kirjautumisnäkymään, vierastilille ja uusille käyttäjille"
 
 #: src/Widgets/LocaleSetting.vala:217
-#, fuzzy
-#| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
-msgstr "Asennetaan puuttuva kieli"
+msgstr "Puuttuvia kielipaketteja ei voitu asentaa"
 
 #: src/Widgets/LocaleSetting.vala:381
 msgid "Can't set system locale"
-msgstr ""
+msgstr "Järjestelmän maa-asetustoa ei voitu asettaa"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
