@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2024-07-23 15:16+0000\n"
+"PO-Revision-Date: 2024-12-11 16:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -32,18 +32,16 @@ msgid "elementary, Inc."
 msgstr "elementary בע״מ"
 
 #: data/locale.metainfo.xml.in:34
-#, fuzzy
-#| msgid "Improvements:"
 msgid "Minor improvements:"
-msgstr "שיפורים:"
+msgstr "שיפורים משניים:"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Selected language checkmark now follows system accent color"
-msgstr ""
+msgstr "סימון השפה הנבחרת תואמת לצבע המשני של המערכת"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Sidebar position is now remembered"
-msgstr ""
+msgstr "מקום סרגל הצד נשמר מעתה"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Performance improvements"
