@@ -29,6 +29,21 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.0.1" date="2024-11-11" urgency="medium">
+      <description>
+        <p>Minor improvements:</p>
+        <ul>
+          <li>Selected language checkmark now follows system accent color</li>
+          <li>Sidebar position is now remembered</li>
+          <li>Performance improvements</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-locale/issues/221">element does not follow accent color</issue>
+      </issues>
+    </release>
+    
     <release version="8.0.0" date="2024-07-26" urgency="medium">
       <description>
         <p>A big redesign!</p>
