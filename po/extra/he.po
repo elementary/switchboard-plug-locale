@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2024-12-11 16:17+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/he/>\n"
 "Language: he\n"
@@ -45,7 +45,7 @@ msgstr "מקום סרגל הצד נשמר מעתה"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Performance improvements"
-msgstr ""
+msgstr "שיפורי ביצועים"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:54
 #: data/locale.metainfo.xml.in:107
