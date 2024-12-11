@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"PO-Revision-Date: 2024-12-11 16:17+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: data/locale.metainfo.xml.in:38
 msgid "Performance improvements"
-msgstr ""
+msgstr "Suorituskykyparannuksia"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:54
 #: data/locale.metainfo.xml.in:107
