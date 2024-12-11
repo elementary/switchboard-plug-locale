@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2024-07-01 13:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,49 +33,68 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/locale.metainfo.xml.in:34
+#, fuzzy
+#| msgid "Improvements:"
+msgid "Minor improvements:"
+msgstr "Удосконалення:"
+
+#: data/locale.metainfo.xml.in:36
+msgid "Selected language checkmark now follows system accent color"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:37
+msgid "Sidebar position is now remembered"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:38
+msgid "Performance improvements"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:54
+#: data/locale.metainfo.xml.in:107
+msgid "Updated translations"
+msgstr "Оновлені переклади"
+
+#: data/locale.metainfo.xml.in:49
 msgid "A big redesign!"
 msgstr "Великий редизайн!"
 
-#: data/locale.metainfo.xml.in:36
+#: data/locale.metainfo.xml.in:51
 msgid "Prevent fcitx5 packages from being installed"
 msgstr "Запобігати встановленню пакунків fcitx5"
 
-#: data/locale.metainfo.xml.in:37
+#: data/locale.metainfo.xml.in:52
 msgid "Add links to other places locale-related settings are managed"
 msgstr ""
 "Додавання посилань на інші місця, де керуються налаштуваннями, пов'язаними з "
 "локалізацією"
 
-#: data/locale.metainfo.xml.in:38
+#: data/locale.metainfo.xml.in:53
 msgid "Improve screen reader accessibility"
 msgstr "Поліпшення доступності для зчитувачів з екрана"
 
-#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:92
-msgid "Updated translations"
-msgstr "Оновлені переклади"
-
-#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:67
-#: data/locale.metainfo.xml.in:76 data/locale.metainfo.xml.in:85
+#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:91 data/locale.metainfo.xml.in:100
 msgid "Fixes:"
 msgstr "Виправлення:"
 
-#: data/locale.metainfo.xml.in:56
+#: data/locale.metainfo.xml.in:71
 msgid "Translate authentication dialog description text"
 msgstr "Перекладено текст опису вікна автентифікації"
 
-#: data/locale.metainfo.xml.in:63
+#: data/locale.metainfo.xml.in:78
 msgid "Improvements:"
 msgstr "Удосконалення:"
 
-#: data/locale.metainfo.xml.in:65
+#: data/locale.metainfo.xml.in:80
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Серед доступних мов з'явилася центральнокурдська"
 
-#: data/locale.metainfo.xml.in:69
+#: data/locale.metainfo.xml.in:84
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Підтримка встановлення та вилучення мов із трибуквеними кодами"
 
-#: data/locale.metainfo.xml.in:78
+#: data/locale.metainfo.xml.in:93
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -83,15 +102,15 @@ msgstr ""
 "Спадне меню «Формати» залишається правильним після встановлення або "
 "вилучення мов"
 
-#: data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:102
 msgid "Support locales with 3-letter codes"
 msgstr "Підтримка мов із тризначними кодами"
 
-#: data/locale.metainfo.xml.in:89
+#: data/locale.metainfo.xml.in:104
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/locale.metainfo.xml.in:91
+#: data/locale.metainfo.xml.in:106
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Краща підтримка дистрибутивів, що не базуються на Ubuntu"
 

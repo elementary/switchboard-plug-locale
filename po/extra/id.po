@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2020-11-18 15:15+0000\n"
 "Last-Translator: deovaliandro <mdv16h@student.unhas.ac.id>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -32,61 +32,78 @@ msgid "elementary, Inc."
 msgstr ""
 
 #: data/locale.metainfo.xml.in:34
-msgid "A big redesign!"
+msgid "Minor improvements:"
 msgstr ""
 
 #: data/locale.metainfo.xml.in:36
-msgid "Prevent fcitx5 packages from being installed"
+msgid "Selected language checkmark now follows system accent color"
 msgstr ""
 
 #: data/locale.metainfo.xml.in:37
-msgid "Add links to other places locale-related settings are managed"
+msgid "Sidebar position is now remembered"
 msgstr ""
 
 #: data/locale.metainfo.xml.in:38
-msgid "Improve screen reader accessibility"
+msgid "Performance improvements"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:92
+#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:54
+#: data/locale.metainfo.xml.in:107
 msgid "Updated translations"
 msgstr "Terjemahan yang diperbarui"
 
-#: data/locale.metainfo.xml.in:54 data/locale.metainfo.xml.in:67
-#: data/locale.metainfo.xml.in:76 data/locale.metainfo.xml.in:85
+#: data/locale.metainfo.xml.in:49
+msgid "A big redesign!"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:51
+msgid "Prevent fcitx5 packages from being installed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:52
+msgid "Add links to other places locale-related settings are managed"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:53
+msgid "Improve screen reader accessibility"
+msgstr ""
+
+#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:82
+#: data/locale.metainfo.xml.in:91 data/locale.metainfo.xml.in:100
 msgid "Fixes:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:56
+#: data/locale.metainfo.xml.in:71
 msgid "Translate authentication dialog description text"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:63
+#: data/locale.metainfo.xml.in:78
 msgid "Improvements:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:65
+#: data/locale.metainfo.xml.in:80
 msgid "Central Kurdish is now available as an installable language"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:69
+#: data/locale.metainfo.xml.in:84
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:78
+#: data/locale.metainfo.xml.in:93
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:87
+#: data/locale.metainfo.xml.in:102
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:89
+#: data/locale.metainfo.xml.in:104
 msgid "Minor updates:"
 msgstr ""
 
-#: data/locale.metainfo.xml.in:91
+#: data/locale.metainfo.xml.in:106
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
