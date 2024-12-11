@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2020-10-01 22:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Luxembourgish <https://l10n.elementary.io/projects/"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Installed Languages"
 msgstr ""
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr ""
 
@@ -74,11 +74,11 @@ msgstr ""
 msgid "Remove language"
 msgstr ""
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 msgid "Couldn't remove language pack"
 msgstr ""
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 msgid "Couldn't install language pack"
 msgstr ""
 

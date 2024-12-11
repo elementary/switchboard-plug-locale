@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2015-07-14 17:30+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -72,7 +72,7 @@ msgstr "Duke instaluar gjuhën"
 msgid "Installed Languages"
 msgstr "Gjuhët e instaluara"
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr "Gjuha në përdorim"
 
@@ -80,13 +80,13 @@ msgstr "Gjuha në përdorim"
 msgid "Remove language"
 msgstr "Hiqe gjuhën"
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "Hiqe gjuhën"
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 #, fuzzy
 #| msgid "Install language"
 msgid "Couldn't install language pack"

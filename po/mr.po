@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2019-11-25 09:24+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -71,7 +71,7 @@ msgstr "%s स्थापित करा"
 msgid "Installed Languages"
 msgstr "स्थापित भाषा"
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr "सध्या सक्रिय भाषा"
 
@@ -79,13 +79,13 @@ msgstr "सध्या सक्रिय भाषा"
 msgid "Remove language"
 msgstr "भाषा काढा"
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "भाषा काढा"
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 #, fuzzy
 #| msgid "Install language"
 msgid "Couldn't install language pack"

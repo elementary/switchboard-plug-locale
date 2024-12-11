@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2024-06-27 19:16+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -71,7 +71,7 @@ msgstr "%s installeren"
 msgid "Installed Languages"
 msgstr "Geïnstalleerde talen"
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr "Huidige actieve taal"
 
@@ -79,13 +79,13 @@ msgstr "Huidige actieve taal"
 msgid "Remove language"
 msgstr "Taal verwijderen"
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "Taal verwijderen"
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 #, fuzzy
 #| msgid "Install language"
 msgid "Couldn't install language pack"

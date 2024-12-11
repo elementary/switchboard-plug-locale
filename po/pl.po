@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2024-07-03 14:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -72,7 +72,7 @@ msgstr "Zainstaluj %s"
 msgid "Installed Languages"
 msgstr "Zainstalowane języki"
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr "Język obecnie aktywny"
 
@@ -80,11 +80,11 @@ msgstr "Język obecnie aktywny"
 msgid "Remove language"
 msgstr "Usuń język"
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 msgid "Couldn't remove language pack"
 msgstr "Nie udało się usunąć paczki językowej"
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 msgid "Couldn't install language pack"
 msgstr "Nie udało się zainstalować paczki językowej"
 

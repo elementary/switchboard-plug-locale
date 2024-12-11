@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2018-10-20 13:25+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -72,7 +72,7 @@ msgstr "Installerar %s"
 msgid "Installed Languages"
 msgstr "Installerade språk"
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr "Nuvarande aktivt språk"
 
@@ -80,13 +80,13 @@ msgstr "Nuvarande aktivt språk"
 msgid "Remove language"
 msgstr "Ta bort språk"
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "Ta bort språk"
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 #, fuzzy
 #| msgid "Install language"
 msgid "Couldn't install language pack"

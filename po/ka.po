@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 03:36+0000\n"
+"POT-Creation-Date: 2024-12-11 11:43+0000\n"
 "PO-Revision-Date: 2024-03-29 05:13+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -66,7 +66,7 @@ msgstr "%s-ის დაყენება"
 msgid "Installed Languages"
 msgstr "დაყენებული ენები"
 
-#: src/Widgets/LanguageListBox.vala:135
+#: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
 msgstr "ამჟამად აქტიური ენა"
 
@@ -74,13 +74,13 @@ msgstr "ამჟამად აქტიური ენა"
 msgid "Remove language"
 msgstr "ენის წაშლა"
 
-#: src/Widgets/LocaleView.vala:133
+#: src/Widgets/LocaleView.vala:139
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "ენის წაშლა"
 
-#: src/Widgets/LocaleView.vala:162
+#: src/Widgets/LocaleView.vala:168
 #, fuzzy
 #| msgid "Install language"
 msgid "Couldn't install language pack"
