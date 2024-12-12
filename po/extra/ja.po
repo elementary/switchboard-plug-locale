@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2024-12-11 16:17+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-12 05:36+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/ja/>\n"
 "Language: ja\n"
@@ -32,18 +32,16 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/locale.metainfo.xml.in:34
-#, fuzzy
-#| msgid "Improvements:"
 msgid "Minor improvements:"
-msgstr "改善点:"
+msgstr "軽微な改善:"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Selected language checkmark now follows system accent color"
-msgstr ""
+msgstr "選択言語のチェックマークがシステムのアクセントカラーで表示されるように修正"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Sidebar position is now remembered"
-msgstr ""
+msgstr "サイドバーの位置が保存されるように変更"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Performance improvements"
@@ -105,7 +103,7 @@ msgstr "言語コードが 3 文字のロケールに対応"
 
 #: data/locale.metainfo.xml.in:104
 msgid "Minor updates:"
-msgstr "そのほかのアップデート:"
+msgstr "マイナーアップデート:"
 
 #: data/locale.metainfo.xml.in:106
 msgid "Better support for non-Ubuntu based distributions"
