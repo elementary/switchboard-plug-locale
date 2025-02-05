@@ -136,7 +136,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
             missing_lang_infobar = new Gtk.InfoBar () {
                 message_type = WARNING,
-                revealed = true
+                revealed = false
             };
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.add_child (missing_label);
