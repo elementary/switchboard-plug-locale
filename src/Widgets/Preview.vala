@@ -23,11 +23,15 @@ namespace SwitchboardPlugLocale.Widgets {
         private Gtk.Label number_label;
 
         public Preview () {
-            Object (row_spacing: 12);
+            Object (row_spacing: 6);
         }
 
         construct {
-            date_time_label = new Gtk.Label ("");
+            date_time_label = new Gtk.Label ("") {
+                margin_top = 12,
+                margin_start = 12,
+                margin_end = 12
+            };
             date_time_label.hexpand = true;
 
             date_label = new Gtk.Label ("");
@@ -44,7 +48,11 @@ namespace SwitchboardPlugLocale.Widgets {
             number_label.hexpand = true;
             number_label.xalign = 1;
 
-            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                margin_start = 12,
+                margin_end = 12,
+                margin_bottom = 12
+            };
             box.append (date_label);
             box.append (time_label);
             box.append (currency_label);
@@ -52,6 +60,8 @@ namespace SwitchboardPlugLocale.Widgets {
 
             attach (date_time_label, 0, 0);
             attach (box, 0, 1);
+            add_css_class (Granite.STYLE_CLASS_CARD);
+            add_css_class (Granite.STYLE_CLASS_ROUNDED);
         }
 
         public void reload_languages (string format) {
