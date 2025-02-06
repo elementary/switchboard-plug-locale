@@ -93,9 +93,7 @@ namespace SwitchboardPlugLocale.Widgets {
             layout_box.append (layout_label);
             layout_box.append (layout_link);
 
-            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
-                halign = START
-            };
+            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…"));
 
             var datetime_label = new Granite.HeaderLabel (_("Time Format"));
             datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
@@ -129,6 +127,7 @@ namespace SwitchboardPlugLocale.Widgets {
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.add_child (missing_label);
             missing_lang_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+            missing_lang_infobar.add_css_class ("infobar-margin");
 
             restart_infobar = new Gtk.InfoBar () {
                 message_type = WARNING,
@@ -136,19 +135,11 @@ namespace SwitchboardPlugLocale.Widgets {
             };
             restart_infobar.add_child (new Gtk.Label (_("Some changes will not take effect until you log out")));
             restart_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
-
-            var info_box = new Gtk.Box (VERTICAL, 6) {
-                margin_bottom = 24
-            };
-            info_box.append (missing_lang_infobar);
-            info_box.append (restart_infobar);
-
-            var info_box_revealer = new Gtk.Revealer () {
-                child = info_box
-            };
+            restart_infobar.add_css_class ("infobar-margin");
 
             var content_box = new Gtk.Box (VERTICAL, 0);
-            content_box.append (info_box_revealer);
+            content_box.append (missing_lang_infobar);
+            content_box.append (restart_infobar);
             content_box.append (region_type_box);
             content_box.append (formats_box);
             content_box.append (layout_box);
@@ -271,14 +262,6 @@ namespace SwitchboardPlugLocale.Widgets {
             set_system_button.clicked.connect (on_applied_to_system);
 
             installer.check_missing_finished.connect (on_check_missing_finished);
-
-            missing_lang_infobar.notify["revealed"].connect (() => {
-                info_box_revealer.reveal_child = missing_lang_infobar.revealed || restart_infobar.revealed;
-            });
-
-            restart_infobar.notify["revealed"].connect (() => {
-                info_box_revealer.reveal_child = missing_lang_infobar.revealed || restart_infobar.revealed;
-            });
         }
 
         private void on_check_missing_finished (string[] missing) {
@@ -291,6 +274,19 @@ namespace SwitchboardPlugLocale.Widgets {
             } else if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", true) != null) {
                 temperature_settings = new Settings ("org.gnome.GWeather");
             }
+
+            string css = """
+                .infobar-margin > revealer > box {
+                    margin-bottom: 24px;
+                }
+            """;
+
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_string (css);
+
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
         }
 
         public string get_selected_locale () {
