@@ -64,18 +64,14 @@ namespace SwitchboardPlugLocale.Widgets {
                 compare ();
             });
 
-            var region_endlabel = new Granite.HeaderLabel (_("Region")) {
-                mnemonic_widget = region_dropdown
-            };
+            var region_endlabel = new Granite.HeaderLabel (_("Region"));
             region_dropdown.update_property_value ({DESCRIPTION}, {region_endlabel.label});
 
             var region_type_box = new Gtk.Box (VERTICAL, 6);
             region_type_box.append (region_endlabel);
             region_type_box.append (region_dropdown);
 
-            var formats_label = new Granite.HeaderLabel (_("Formats")) {
-                mnemonic_widget = format_dropdown
-            };
+            var formats_label = new Granite.HeaderLabel (_("Formats"));
             format_dropdown.update_property_value ({DESCRIPTION}, {formats_label.label});
 
             var formats_box = new Gtk.Box (VERTICAL, 6) {
@@ -88,10 +84,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = START
             };
 
-            var layout_label = new Granite.HeaderLabel (_("Keyboard Layout")) {
-                mnemonic_widget = layout_link
-            };
-
+            var layout_label = new Granite.HeaderLabel (_("Keyboard Layout"));
             layout_link.update_property_value ({DESCRIPTION}, {layout_label.label});
 
             var layout_box = new Gtk.Box (VERTICAL, 6) {
@@ -104,10 +97,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 halign = START
             };
 
-            var datetime_label = new Granite.HeaderLabel (_("Time Format")) {
-                mnemonic_widget = datetime_link
-            };
-
+            var datetime_label = new Granite.HeaderLabel (_("Time Format"));
             datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
 
             var datetime_box = new Gtk.Box (VERTICAL, 6) {
@@ -122,9 +112,7 @@ namespace SwitchboardPlugLocale.Widgets {
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
-            var preview_label = new Granite.HeaderLabel (_("Preview")) {
-                mnemonic_widget = preview
-            };
+            var preview_label = new Granite.HeaderLabel (_("Preview"));
 
             var preview_box = new Gtk.Box (VERTICAL, 6) {
                 margin_top = 24
@@ -168,23 +156,24 @@ namespace SwitchboardPlugLocale.Widgets {
 
             if (temperature_settings != null) {
                 var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
+                celcius_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 var fahrenheit_radio = new Gtk.CheckButton.with_label (_("Fahrenheit")) {
                     group = celcius_radio
                 };
+                fahrenheit_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 var auto_radio = new Gtk.CheckButton.with_label (_("Automatic, based on locale")) {
                     group = celcius_radio
                 };
+                auto_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
                 var temperature_radio_box = new Gtk.Box (VERTICAL, 6);
                 temperature_radio_box.append (auto_radio);
                 temperature_radio_box.append (celcius_radio);
                 temperature_radio_box.append (fahrenheit_radio);
 
-                var temperature_label = new Granite.HeaderLabel (_("Temperature")) {
-                    mnemonic_widget = temperature_radio_box
-                };
+                var temperature_label = new Granite.HeaderLabel (_("Temperature"));
 
                 var temperature_box = new Gtk.Box (VERTICAL, 6) {
                     margin_top = 24
@@ -193,11 +182,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 temperature_box.append (temperature_radio_box);
 
                 content_box.append (temperature_box);
-
-                celcius_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
-                fahrenheit_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
-                auto_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
-
+                
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
                 if (temp_setting == "centigrade") {
