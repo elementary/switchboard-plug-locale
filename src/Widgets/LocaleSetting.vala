@@ -155,6 +155,8 @@ namespace SwitchboardPlugLocale.Widgets {
             content_box.append (datetime_box);
 
             if (temperature_settings != null) {
+                var temperature_label = new Granite.HeaderLabel (_("Temperature"));
+
                 var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
                 celcius_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
@@ -172,8 +174,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 temperature_radio_box.append (auto_radio);
                 temperature_radio_box.append (celcius_radio);
                 temperature_radio_box.append (fahrenheit_radio);
-
-                var temperature_label = new Granite.HeaderLabel (_("Temperature"));
 
                 var temperature_box = new Gtk.Box (VERTICAL, 6) {
                     margin_top = 24
