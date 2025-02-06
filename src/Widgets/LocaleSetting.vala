@@ -182,7 +182,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 temperature_box.append (temperature_radio_box);
 
                 content_box.append (temperature_box);
-                
+
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
                 if (temp_setting == "centigrade") {
