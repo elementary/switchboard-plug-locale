@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
 "PO-Revision-Date: 2024-12-12 05:36+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -37,7 +37,8 @@ msgstr "軽微な改善:"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Selected language checkmark now follows system accent color"
-msgstr "選択言語のチェックマークがシステムのアクセントカラーで表示されるように修正"
+msgstr ""
+"選択言語のチェックマークがシステムのアクセントカラーで表示されるように修正"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Sidebar position is now remembered"
