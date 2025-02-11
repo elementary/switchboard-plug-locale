@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2018-05-28 06:30+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -21,12 +21,12 @@ msgstr "Limbă și regiune"
 msgid "Manage languages, and configure region and format"
 msgstr "Gestionați limbile și configurați regiunea și formatul"
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 #, fuzzy
 msgid "Region"
 msgstr "Regiune: "
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 #, fuzzy
 msgid "Formats"
 msgstr "Format: "
@@ -88,39 +88,31 @@ msgstr "Eliminați limba"
 msgid "Couldn't install language pack"
 msgstr "Instalați limba"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
 #| msgid "Keyboard Settings…"
-msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
 msgstr "Setările tastaturii …"
 
-#: src/Widgets/LocaleSetting.vala:87
-msgid "Keyboard Layout"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:100
+#: src/Widgets/LocaleSetting.vala:94
 #, fuzzy
-#| msgid "Formats: "
-msgid "Time Format"
-msgstr "Format: "
+#| msgid "Keyboard Settings…"
+msgid "Time format settings…"
+msgstr "Setările tastaturii …"
 
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "Suportul lingvistic nu este instalat complet"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "Instalare completă"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "Unele modificări nu vor avea efect până când nu vă deconectați"
 
@@ -136,29 +128,34 @@ msgstr "Scară Fahrenheit"
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "Setați limba"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "Setați limba sistemului"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Setați limba pentru ecranul de conectare, contul de oaspeți și noile conturi "
 "de utilizator"
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Instalează limba care lipsește"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Time Format"
+#~ msgstr "Format: "
 
 #, fuzzy
 #~| msgid "Region: "

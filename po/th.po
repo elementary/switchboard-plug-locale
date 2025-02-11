@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2015-10-13 19:50+0000\n"
 "Last-Translator: ABCDEFGH <aefgh7233@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -26,12 +26,12 @@ msgstr "ภาษาและภูมิภาค"
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 #, fuzzy
 msgid "Region"
 msgstr "ภูมิภาค: "
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 #, fuzzy
 msgid "Formats"
 msgstr "รูปแบบ: "
@@ -89,37 +89,27 @@ msgstr ""
 msgid "Couldn't install language pack"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
-#: src/Widgets/LocaleSetting.vala:83
-msgid "Keyboard settings…"
-msgstr ""
-
 #: src/Widgets/LocaleSetting.vala:87
-msgid "Keyboard Layout"
+msgid "Keyboard layout settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
+#: src/Widgets/LocaleSetting.vala:94
+msgid "Time format settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:100
-#, fuzzy
-#| msgid "Formats: "
-msgid "Time Format"
-msgstr "รูปแบบ: "
-
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "การสนับสนุนภาษาไม่ได้ถูกติดตั้งอย่างครบวงจร"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "ทำการติดตั้งให้สมบูรณ์"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
@@ -135,27 +125,32 @@ msgstr ""
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "ตั้งภาษา"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "ตั้งภาษาระบบ"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "กำลังติดตั้งภาษาที่หายไป"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Time Format"
+#~ msgstr "รูปแบบ: "
 
 #, fuzzy
 #~| msgid "Region: "

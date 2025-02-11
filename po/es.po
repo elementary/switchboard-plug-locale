@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2025-02-11 19:55+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,11 +28,11 @@ msgstr "Idioma y región"
 msgid "Manage languages, and configure region and format"
 msgstr "Gestione los idiomas y configure la región y el formato"
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 msgid "Region"
 msgstr "Región"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 msgid "Formats"
 msgstr "Formatos"
 
@@ -87,37 +87,31 @@ msgstr "No se pudo eliminar el paquete de idioma"
 msgid "Couldn't install language pack"
 msgstr "No se pudo instalar el paquete de idioma"
 
-#: src/Widgets/LocaleSetting.vala:83
-msgid "Keyboard settings…"
-msgstr "Configuración del Teclado…"
-
 #: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
-#| msgid "Keyboard Layout:"
-msgid "Keyboard Layout"
-msgstr "Distribución del teclado:"
+#| msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
+msgstr "Configuración del Teclado…"
 
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr "Configuración de Fecha y hora…"
+#: src/Widgets/LocaleSetting.vala:94
+#, fuzzy
+#| msgid "Keyboard settings…"
+msgid "Time format settings…"
+msgstr "Configuración del Teclado…"
 
-#: src/Widgets/LocaleSetting.vala:100
-msgid "Time Format"
-msgstr "Formato de hora"
-
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "No se han instalado todos los componentes lingüísticos"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "Completar instalación"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "Algunos cambios no surtirán efecto hasta que cierre sesión"
 
@@ -133,27 +127,38 @@ msgstr "Fahrenheit"
 msgid "Automatic, based on locale"
 msgstr "Automático, basado en la configuración regional"
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "Establecer idioma"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "Establecer idioma del sistema"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Establecer idioma para pantalla de inicio de sesión, cuenta de invitado y "
 "cuentas de usuario nuevas"
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 msgid "Couldn't install missing language packs"
 msgstr "No se pudieron instalar los paquetes de idiomas faltantes"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr "No se pudo establecer la configuración regional del sistema"
+
+#, fuzzy
+#~| msgid "Keyboard Layout:"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Distribución del teclado:"
+
+#~ msgid "Date & Time settings…"
+#~ msgstr "Configuración de Fecha y hora…"
+
+#~ msgid "Time Format"
+#~ msgstr "Formato de hora"
 
 #~ msgid "Region:"
 #~ msgstr "Región:"

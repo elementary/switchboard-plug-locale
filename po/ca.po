@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2025-02-11 19:55+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -28,11 +28,11 @@ msgstr "Llengua i regió"
 msgid "Manage languages, and configure region and format"
 msgstr "Gestioneu les llengües i configureu-ne la regió i el format."
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 msgid "Region"
 msgstr "Regió"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 msgid "Formats"
 msgstr "Formats"
 
@@ -87,37 +87,31 @@ msgstr "No s'ha pogut suprimir el paquet de llengua."
 msgid "Couldn't install language pack"
 msgstr "No s'ha pogut instal·lar el paquet de llengua."
 
-#: src/Widgets/LocaleSetting.vala:83
-msgid "Keyboard settings…"
-msgstr "Paràmetres del teclat…"
-
 #: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
-#| msgid "Keyboard Layout:"
-msgid "Keyboard Layout"
-msgstr "Disposició del teclat:"
+#| msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
+msgstr "Paràmetres del teclat…"
 
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr "Paràmetres de la data i l'hora…"
+#: src/Widgets/LocaleSetting.vala:94
+#, fuzzy
+#| msgid "Keyboard settings…"
+msgid "Time format settings…"
+msgstr "Paràmetres del teclat…"
 
-#: src/Widgets/LocaleSetting.vala:100
-msgid "Time Format"
-msgstr "Format de l'hora"
-
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "El suport de la llengua no s'ha instal·lat completament."
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "Completa'n la instal·lació"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "Alguns canvis no seran efectius fins que tanqueu la sessió"
 
@@ -133,27 +127,38 @@ msgstr "Fahrenheit"
 msgid "Automatic, based on locale"
 msgstr "Automàtic, basat en la configuració regional"
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "Estableix la llengua"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "Establiu la llengua del sistema"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Establiu la llengua per a la pantalla d'entrada, la sessió de convidat i els "
 "comptes d'usuari nous."
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 msgid "Couldn't install missing language packs"
 msgstr "No s'han pogut instal·lar els paquets de llengua que manquen."
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr "No es pot establir la configuració regional del sistema."
+
+#, fuzzy
+#~| msgid "Keyboard Layout:"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Disposició del teclat:"
+
+#~ msgid "Date & Time settings…"
+#~ msgstr "Paràmetres de la data i l'hora…"
+
+#~ msgid "Time Format"
+#~ msgstr "Format de l'hora"
 
 #~ msgid "Region:"
 #~ msgstr "Regió:"

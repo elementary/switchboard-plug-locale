@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2024-09-24 11:24+0000\n"
 "Last-Translator: Sinan Decron <sinanveyasinan@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,11 +28,11 @@ msgstr "Dil ve Bölge"
 msgid "Manage languages, and configure region and format"
 msgstr "Dilleri yönetin ve bölge ayarlarını yapılandırın"
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 msgid "Region"
 msgstr "Bölge"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 msgid "Formats"
 msgstr "Biçimler"
 
@@ -87,39 +87,31 @@ msgstr "Dil paketi kaldırılamadı"
 msgid "Couldn't install language pack"
 msgstr "Dil paketi yüklenemedi"
 
-#: src/Widgets/LocaleSetting.vala:83
-msgid "Keyboard settings…"
-msgstr "Klavye ayarları…"
-
 #: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
-#| msgid "Keyboard Layout:"
-msgid "Keyboard Layout"
-msgstr "Klavye Düzeni:"
+#| msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
+msgstr "Klavye ayarları…"
 
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr "Tarih ve Saat ayarları…"
-
-#: src/Widgets/LocaleSetting.vala:100
+#: src/Widgets/LocaleSetting.vala:94
 #, fuzzy
-#| msgid "Time Format:"
-msgid "Time Format"
-msgstr "Zaman Formatı:"
+#| msgid "Keyboard settings…"
+msgid "Time format settings…"
+msgstr "Klavye ayarları…"
 
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "Dil desteği tam olarak kurulu değil"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "Kurulumu Tamamla"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "Bazı değişiklikler oturum kapatılana kadar geçerli olmayacak"
 
@@ -135,25 +127,38 @@ msgstr "Fahrenhayt"
 msgid "Automatic, based on locale"
 msgstr "Otomatik, lokasyona dayalı"
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "Dili Ayarla"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "Sistem Dili Olarak Ayarla"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Misafir ve yeni kullanıcı hesapları için giriş ekranı dilini ayarla"
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 msgid "Couldn't install missing language packs"
 msgstr "Eksik dil paketleri yüklenemedi"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr "Sistem lokasyonu ayarlanamıyor"
+
+#, fuzzy
+#~| msgid "Keyboard Layout:"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Klavye Düzeni:"
+
+#~ msgid "Date & Time settings…"
+#~ msgstr "Tarih ve Saat ayarları…"
+
+#, fuzzy
+#~| msgid "Time Format:"
+#~ msgid "Time Format"
+#~ msgstr "Zaman Formatı:"
 
 #~ msgid "Region:"
 #~ msgstr "Bölge:"

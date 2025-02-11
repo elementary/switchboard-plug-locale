@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2025-02-11 19:55+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -28,11 +28,11 @@ msgstr "Jazyk a oblasť"
 msgid "Manage languages, and configure region and format"
 msgstr "Spravujte jazyky, nastavte oblasť a miestne formáty"
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 msgid "Region"
 msgstr "Oblasť"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 msgid "Formats"
 msgstr "Formáty"
 
@@ -91,37 +91,31 @@ msgstr "Odstrániť jazyk"
 msgid "Couldn't install language pack"
 msgstr "Nainštalovať jazyk"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
 #| msgid "Keyboard Settings…"
-msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
 msgstr "Nastavenia klávesnice…"
 
-#: src/Widgets/LocaleSetting.vala:87
-msgid "Keyboard Layout"
-msgstr ""
+#: src/Widgets/LocaleSetting.vala:94
+#, fuzzy
+#| msgid "Keyboard Settings…"
+msgid "Time format settings…"
+msgstr "Nastavenia klávesnice…"
 
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:100
-msgid "Time Format"
-msgstr "Formát času"
-
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "Inštalácia jazykovej podpory je neúplná"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "Dokončiť inštaláciu"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "Niektoré zmeny sa prejavia až po opätovnom prihlásení"
 
@@ -137,29 +131,32 @@ msgstr "Fahrenheit"
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "Nastaviť jazyk"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "Nastaviť jazyk systému"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nastaviť jazyk pre prihlasovaciu obrazovku, účet hosťa a nové používateľské "
 "účty"
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Inštalácia chýbajúceho jazyku"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr ""
+
+#~ msgid "Time Format"
+#~ msgstr "Formát času"
 
 #, fuzzy
 #~| msgid "Region: "

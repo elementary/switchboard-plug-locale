@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2017-01-02 02:59+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,12 +21,12 @@ msgstr "تىل ۋە رايون"
 msgid "Manage languages, and configure region and format"
 msgstr "تىللارنى باشقۇرۇش، رايون ۋە فورماتلارنى تەڭشەش"
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 #, fuzzy
 msgid "Region"
 msgstr "رايون: "
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 #, fuzzy
 msgid "Formats"
 msgstr "فورماتلار: "
@@ -87,38 +87,29 @@ msgstr "تىل ئۆچۈرۈش"
 msgid "Couldn't install language pack"
 msgstr "تىل ئورنىتىش"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
-msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
 msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
 
-#: src/Widgets/LocaleSetting.vala:87
-msgid "Keyboard Layout"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:100
+#: src/Widgets/LocaleSetting.vala:94
 #, fuzzy
-#| msgid "Formats: "
-msgid "Time Format"
-msgstr "فورماتلار: "
+msgid "Time format settings…"
+msgstr "كۇنۇپكا تاختىسى تەكشەكلىرىگە يۆتكەش"
 
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "تىل قوللىشى تولۇق ئورنىتىلمىغان"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "تولۇق ئورنىتىش"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "ھىساۋاتتىن چىكىنمىگۈچە بەزى ئۆزگەرتىشلەر كۈچكە ئىگە بولمايدۇ"
 
@@ -134,28 +125,33 @@ msgstr ""
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "سىستېما تىلىنى بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "كىرىش ئىكرانى، مىھمان ھىساۋاتى ۋە يىڭى ئابونت ھىساۋاتلىرى ئۈچۈن تىل بەلگىلەش"
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "يۈتكەن تىللارنى ئورنىتىۋاتىدۇ"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Time Format"
+#~ msgstr "فورماتلار: "
 
 #, fuzzy
 #~| msgid "Region: "

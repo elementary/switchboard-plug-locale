@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"POT-Creation-Date: 2025-02-11 19:59+0000\n"
 "PO-Revision-Date: 2020-12-23 07:16+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -28,11 +28,11 @@ msgstr "Језик и област"
 msgid "Manage languages, and configure region and format"
 msgstr "Управљајте језицима и подесите регион и формат"
 
-#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:69
 msgid "Region"
 msgstr "Област"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
 msgid "Formats"
 msgstr "Формати"
 
@@ -91,39 +91,31 @@ msgstr "Уклони језик"
 msgid "Couldn't install language pack"
 msgstr "Инсталирај језик"
 
-#: src/Widgets/LocaleSetting.vala:83
+#: src/Widgets/LocaleSetting.vala:87
 #, fuzzy
 #| msgid "Keyboard Settings…"
-msgid "Keyboard settings…"
+msgid "Keyboard layout settings…"
 msgstr "Подешавања тастатуре…"
 
-#: src/Widgets/LocaleSetting.vala:87
-msgid "Keyboard Layout"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:96
-msgid "Date & Time settings…"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:100
+#: src/Widgets/LocaleSetting.vala:94
 #, fuzzy
-#| msgid "Formats: "
-msgid "Time Format"
-msgstr "Формати: "
+#| msgid "Keyboard Settings…"
+msgid "Time format settings…"
+msgstr "Подешавања тастатуре…"
 
-#: src/Widgets/LocaleSetting.vala:115
+#: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:123
+#: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
 msgstr "Подршка за језике није инсталирана у потпуности"
 
-#: src/Widgets/LocaleSetting.vala:129
+#: src/Widgets/LocaleSetting.vala:131
 msgid "Complete Installation"
 msgstr "Заврши инсталацију"
 
-#: src/Widgets/LocaleSetting.vala:138
+#: src/Widgets/LocaleSetting.vala:140
 msgid "Some changes will not take effect until you log out"
 msgstr "Неке измене неће ступити у дејство све док се не одјавите"
 
@@ -139,29 +131,34 @@ msgstr "Фаренхајти"
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:213
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set Language"
 msgstr "Подеси језик"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set System Language"
 msgstr "Подеси језик система"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:219
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Подесите језик за екран пријављивања, за налог госта и за налоге нових "
 "корисника"
 
-#: src/Widgets/LocaleSetting.vala:236
+#: src/Widgets/LocaleSetting.vala:237
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Инсталирам језик који недостаје"
 
-#: src/Widgets/LocaleSetting.vala:413
+#: src/Widgets/LocaleSetting.vala:416
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Time Format"
+#~ msgstr "Формати: "
 
 #, fuzzy
 #~| msgid "Region: "
