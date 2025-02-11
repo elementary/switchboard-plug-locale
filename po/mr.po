@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 18:38+0000\n"
-"PO-Revision-Date: 2019-11-25 09:24+0000\n"
-"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/mr/>\n"
 "Language: mr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -106,10 +106,8 @@ msgid "Date & Time settings…"
 msgstr ""
 
 #: src/Widgets/LocaleSetting.vala:100
-#, fuzzy
-#| msgid "Formats: "
 msgid "Time Format"
-msgstr "स्वरूप: "
+msgstr "वेळ स्वरूप"
 
 #: src/Widgets/LocaleSetting.vala:115
 msgid "Preview"
