@@ -93,7 +93,9 @@ namespace SwitchboardPlugLocale.Widgets {
             layout_box.append (layout_label);
             layout_box.append (layout_link);
 
-            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…"));
+            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
+                halign = START
+            };
 
             var datetime_label = new Granite.HeaderLabel (_("Time Format"));
             datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
