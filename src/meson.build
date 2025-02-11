@@ -26,6 +26,7 @@ shared_module(
     meson.project_name(),
     plug_files,
     constants,
+    css_gresource,
     dependencies: [
         dependency('accountsservice'),
         dependency('gio-2.0', version: '>=2.74'),

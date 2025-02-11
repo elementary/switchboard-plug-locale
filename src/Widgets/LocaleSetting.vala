@@ -35,6 +35,8 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         construct {
+            add_css_class ("locale-setting");
+
             lm = LocaleManager.get_default ();
 
             format_list = new GLib.ListStore (typeof (Locale));
@@ -80,31 +82,31 @@ namespace SwitchboardPlugLocale.Widgets {
             formats_box.append (formats_label);
             formats_box.append (format_dropdown);
 
-            var layout_link = new Gtk.LinkButton.with_label ("settings://input/keyboard/layout", _("Keyboard settings…")) {
-                halign = START
+            var layout_link = new LinkRow (
+                "settings://input/keyboard/layout",
+                _("Keyboard layout settings…"),
+                "preferences-desktop-keyboard-symbolic",
+                "slate"
+            );
+
+            var datetime_link = new LinkRow (
+                "settings://time",
+                _("Time format settings…"),
+                "preferences-system-time-symbolic",
+                "slate"
+            );
+
+            var links_list = new Gtk.ListBox () {
+                margin_top = 24,
+                valign = CENTER,
+                show_separators = true,
+                selection_mode = NONE,
+                hexpand = true
             };
-
-            var layout_label = new Granite.HeaderLabel (_("Keyboard Layout"));
-            layout_link.update_property_value ({DESCRIPTION}, {layout_label.label});
-
-            var layout_box = new Gtk.Box (VERTICAL, 6) {
-                margin_top = 24
-            };
-            layout_box.append (layout_label);
-            layout_box.append (layout_link);
-
-            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
-                halign = START
-            };
-
-            var datetime_label = new Granite.HeaderLabel (_("Time Format"));
-            datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
-
-            var datetime_box = new Gtk.Box (VERTICAL, 6) {
-                margin_top = 24
-            };
-            datetime_box.append (datetime_label);
-            datetime_box.append (datetime_link);
+            links_list.add_css_class ("boxed-list");
+            links_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+            links_list.append (layout_link);
+            links_list.append (datetime_link);
 
             preview = new Preview () {
                 halign = CENTER
@@ -144,8 +146,6 @@ namespace SwitchboardPlugLocale.Widgets {
             content_box.append (restart_infobar);
             content_box.append (region_type_box);
             content_box.append (formats_box);
-            content_box.append (layout_box);
-            content_box.append (datetime_box);
 
             if (temperature_settings != null) {
                 var temperature_label = new Granite.HeaderLabel (_("Temperature"));
@@ -205,6 +205,7 @@ namespace SwitchboardPlugLocale.Widgets {
                 });
             }
 
+            content_box.append (links_list);
             content_box.append (preview_box);
 
             child = content_box;
@@ -247,6 +248,14 @@ namespace SwitchboardPlugLocale.Widgets {
                 });
             });
 
+            links_list.row_activated.connect ((row) => {
+                var uri_launcher = new Gtk.UriLauncher (((LinkRow) row).uri);
+                uri_launcher.launch.begin (
+                    ((Gtk.Application) GLib.Application.get_default ()).active_window,
+                    null
+                );
+            });
+
             set_button.clicked.connect (() => {
                 var locale = get_selected_locale ();
                 debug ("Setting user language to '%s'", locale);
@@ -277,14 +286,8 @@ namespace SwitchboardPlugLocale.Widgets {
                 temperature_settings = new Settings ("org.gnome.GWeather");
             }
 
-            string css = """
-                .infobar-margin > revealer > box {
-                    margin-bottom: 24px;
-                }
-            """;
-
             var provider = new Gtk.CssProvider ();
-            provider.load_from_string (css);
+            provider.load_from_resource ("io/elementary/settings/locale/Plug.css");
 
             Gtk.StyleContext.add_provider_for_display (
                 Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
@@ -430,6 +433,50 @@ namespace SwitchboardPlugLocale.Widgets {
 
             public Locale (string name, string locale) {
                 Object (name: name, locale: locale);
+            }
+        }
+
+        private class LinkRow : Gtk.ListBoxRow {
+            public string uri { get; construct; }
+            public string icon_name { get; construct; }
+            public string label_string { get; construct; }
+            public string color { get; construct; }
+
+            public LinkRow (string uri, string label_string, string icon_name, string color) {
+                Object (
+                    uri: uri,
+                    label_string: label_string,
+                    icon_name: icon_name,
+                    color: color
+                );
+            }
+
+            class construct {
+                set_accessible_role (LINK);
+            }
+
+            construct {
+
+                var image = new Gtk.Image.from_icon_name (icon_name) {
+                    pixel_size = 16
+                };
+                image.add_css_class (Granite.STYLE_CLASS_ACCENT);
+                image.add_css_class (color);
+
+                var left_label = new Gtk.Label (label_string) {
+                    hexpand = true,
+                    xalign = 0
+                };
+
+                var link_image = new Gtk.Image.from_icon_name ("adw-external-link-symbolic");
+
+                var box = new Gtk.Box (HORIZONTAL, 0);
+                box.append (image);
+                box.append (left_label);
+                box.append (link_image);
+
+                child = box;
+                add_css_class ("link");
             }
         }
     }
