@@ -26,3 +26,8 @@ install_data(
     'packages_blocklist',
     install_dir: pkgdatadir
 )
+
+css_gresource = gnome.compile_resources(
+    'gresource_css',
+    'gresource.xml'
+)

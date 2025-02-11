@@ -1,0 +1,8 @@
+.locale-setting .infobar-margin > revealer > box {
+    margin-bottom: 24px;
+}
+
+.locale-setting row.link box {
+    padding: 0 6px;
+    border-spacing: 12px;
+}
