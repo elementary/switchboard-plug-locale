@@ -27,7 +27,6 @@ namespace SwitchboardPlugLocale.Widgets {
         private LocaleManager lm;
         private Preview preview;
         private string language;
-        private Gtk.Label region_endlabel;
 
         private static GLib.Settings? temperature_settings = null;
 
@@ -65,39 +64,61 @@ namespace SwitchboardPlugLocale.Widgets {
                 compare ();
             });
 
+            var region_endlabel = new Granite.HeaderLabel (_("Region"));
+            region_dropdown.update_property_value ({DESCRIPTION}, {region_endlabel.label});
+
+            var region_type_box = new Gtk.Box (VERTICAL, 6);
+            region_type_box.append (region_endlabel);
+            region_type_box.append (region_dropdown);
+
+            var formats_label = new Granite.HeaderLabel (_("Formats"));
+            format_dropdown.update_property_value ({DESCRIPTION}, {formats_label.label});
+
+            var formats_box = new Gtk.Box (VERTICAL, 6) {
+                margin_top = 24
+            };
+            formats_box.append (formats_label);
+            formats_box.append (format_dropdown);
+
+            var layout_link = new Gtk.LinkButton.with_label ("settings://input/keyboard/layout", _("Keyboard settings…")) {
+                halign = START
+            };
+
+            var layout_label = new Granite.HeaderLabel (_("Keyboard Layout"));
+            layout_link.update_property_value ({DESCRIPTION}, {layout_label.label});
+
+            var layout_box = new Gtk.Box (VERTICAL, 6) {
+                margin_top = 24
+            };
+            layout_box.append (layout_label);
+            layout_box.append (layout_link);
+
+            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
+                halign = START
+            };
+
+            var datetime_label = new Granite.HeaderLabel (_("Time Format"));
+            datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
+
+            var datetime_box = new Gtk.Box (VERTICAL, 6) {
+                margin_top = 24
+            };
+            datetime_box.append (datetime_label);
+            datetime_box.append (datetime_link);
+
             preview = new Preview () {
                 halign = CENTER
             };
             preview.margin_bottom = 12;
             preview.margin_top = 12;
 
-            region_endlabel = new Gtk.Label (_("Region:")) {
-                halign = Gtk.Align.END
-            };
-            region_dropdown.update_property_value ({DESCRIPTION}, {region_endlabel.label});
+            var preview_label = new Granite.HeaderLabel (_("Preview"));
 
-            var formats_label = new Gtk.Label (_("Formats:")) {
-                halign = Gtk.Align.END
+            var preview_box = new Gtk.Box (VERTICAL, 6) {
+                margin_top = 24
             };
-            format_dropdown.update_property_value ({DESCRIPTION}, {formats_label.label});
-
-            var layout_label = new Gtk.Label (_("Keyboard Layout:")) {
-                halign = END
-            };
-
-            var layout_link = new Gtk.LinkButton.with_label ("settings://input/keyboard/layout", _("Keyboard settings…")) {
-                halign = START
-            };
-            layout_link.update_property_value ({DESCRIPTION}, {layout_label.label});
-
-            var datetime_label = new Gtk.Label (_("Time Format:")) {
-                halign = END
-            };
-
-            var datetime_link = new Gtk.LinkButton.with_label ("settings://time", _("Date & Time settings…")) {
-                halign = START
-            };
-            datetime_link.update_property_value ({DESCRIPTION}, {datetime_label.label});
+            preview_box.append (preview_label);
+            preview_box.append (preview);
 
             var missing_label = new Gtk.Label (_("Language support is not installed completely"));
 
@@ -108,6 +129,7 @@ namespace SwitchboardPlugLocale.Widgets {
             missing_lang_infobar.add_button (_("Complete Installation"), 0);
             missing_lang_infobar.add_child (missing_label);
             missing_lang_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+            missing_lang_infobar.add_css_class ("infobar-margin");
 
             restart_infobar = new Gtk.InfoBar () {
                 message_type = WARNING,
@@ -115,31 +137,18 @@ namespace SwitchboardPlugLocale.Widgets {
             };
             restart_infobar.add_child (new Gtk.Label (_("Some changes will not take effect until you log out")));
             restart_infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+            restart_infobar.add_css_class ("infobar-margin");
 
-            var content_area = new Gtk.Grid () {
-                column_spacing = 6,
-                row_spacing = 12
-            };
-            content_area.attach (region_endlabel, 0, 2);
-            content_area.attach (region_dropdown, 1, 2);
-            content_area.attach (formats_label, 0, 3);
-            content_area.attach (format_dropdown, 1, 3);
-            content_area.attach (layout_label, 0, 5);
-            content_area.attach (layout_link, 1, 5);
-            content_area.attach (datetime_label, 0, 6);
-            content_area.attach (datetime_link, 1, 6);
-            content_area.attach (preview, 0, 7, 2);
-            content_area.attach (missing_lang_infobar, 0, 8, 2);
-            content_area.attach (restart_infobar, 0, 9, 2);
-
-            child = content_area;
-            show_end_title_buttons = true;
+            var content_box = new Gtk.Box (VERTICAL, 0);
+            content_box.append (missing_lang_infobar);
+            content_box.append (restart_infobar);
+            content_box.append (region_type_box);
+            content_box.append (formats_box);
+            content_box.append (layout_box);
+            content_box.append (datetime_box);
 
             if (temperature_settings != null) {
-                var temperature_label = new Gtk.Label (_("Temperature:")) {
-                    halign = Gtk.Align.END,
-                    valign = START
-                };
+                var temperature_label = new Granite.HeaderLabel (_("Temperature"));
 
                 var celcius_radio = new Gtk.CheckButton.with_label (_("Celsius"));
                 celcius_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
@@ -154,13 +163,18 @@ namespace SwitchboardPlugLocale.Widgets {
                 };
                 auto_radio.update_property_value ({DESCRIPTION}, {temperature_label.label});
 
-                var temperature_box = new Gtk.Box (VERTICAL, 6);
-                temperature_box.append (auto_radio);
-                temperature_box.append (celcius_radio);
-                temperature_box.append (fahrenheit_radio);
+                var temperature_radio_box = new Gtk.Box (VERTICAL, 6);
+                temperature_radio_box.append (auto_radio);
+                temperature_radio_box.append (celcius_radio);
+                temperature_radio_box.append (fahrenheit_radio);
 
-                content_area.attach (temperature_label, 0, 4);
-                content_area.attach (temperature_box, 1, 4);
+                var temperature_box = new Gtk.Box (VERTICAL, 6) {
+                    margin_top = 24
+                };
+                temperature_box.append (temperature_label);
+                temperature_box.append (temperature_radio_box);
+
+                content_box.append (temperature_box);
 
                 var temp_setting = temperature_settings.get_string ("temperature-unit");
 
@@ -190,6 +204,11 @@ namespace SwitchboardPlugLocale.Widgets {
                     }
                 });
             }
+
+            content_box.append (preview_box);
+
+            child = content_box;
+            show_end_title_buttons = true;
 
             set_button = add_button (_("Set Language"));
             set_button.sensitive = false;
@@ -257,6 +276,19 @@ namespace SwitchboardPlugLocale.Widgets {
             } else if (SettingsSchemaSource.get_default ().lookup ("org.gnome.GWeather", true) != null) {
                 temperature_settings = new Settings ("org.gnome.GWeather");
             }
+
+            string css = """
+                .infobar-margin > revealer > box {
+                    margin-bottom: 24px;
+                }
+            """;
+
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_string (css);
+
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
         }
 
         public string get_selected_locale () {
