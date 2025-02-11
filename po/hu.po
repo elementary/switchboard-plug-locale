@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2024-07-23 15:16+0000\n"
-"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/hu/>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -28,15 +28,15 @@ msgstr "Nyelv és régió"
 msgid "Manage languages, and configure region and format"
 msgstr "Nyelvi, régió- és formátumbeállítások"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 msgid "Region"
 msgstr "Régió"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 msgid "Formats"
 msgstr "Formátumok"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr "Hőmérséklet"
 
@@ -87,79 +87,82 @@ msgstr "Nyelvcsomag eltávolítása sikertelen"
 msgid "Couldn't install language pack"
 msgstr "Nyelvcsomag telepítése sikertelen"
 
-#: src/Widgets/LocaleSetting.vala:74
-msgid "Region:"
-msgstr "Régió:"
-
-#: src/Widgets/LocaleSetting.vala:79
-msgid "Formats:"
-msgstr "Formátumok:"
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr "Billentyűzetkiosztás:"
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard settings…"
 msgstr "Billentyűzetbeállítások…"
 
-#: src/Widgets/LocaleSetting.vala:93
-msgid "Time Format:"
-msgstr "Időformátum:"
+#: src/Widgets/LocaleSetting.vala:87
+#, fuzzy
+#| msgid "Keyboard Layout:"
+msgid "Keyboard Layout"
+msgstr "Billentyűzetkiosztás:"
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr "Dátum és idő beállításai…"
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr "Időformátum"
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "A nyelvi támogatás nincs teljesen telepítve"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "Telepítés befejezése"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "Bizonyos változtatások csak kijelentkezés után lépnek érvénybe"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr "Hőmérséklet:"
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr "Automatikus a nyelv alapján"
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "Nyelv beállítása"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "A rendszer nyelvének beállítása"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Nyelv beállítása a bejelentkezőképernyőhöz, a vendégfiókhoz és az új "
 "felhasználói fiókokhoz"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 msgid "Couldn't install missing language packs"
 msgstr "Hiányzó nyelvcsomagok telepítése sikertelen"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr "A rendszer nyelvi beállításainak mentése sikertelen"
+
+#~ msgid "Region:"
+#~ msgstr "Régió:"
+
+#~ msgid "Formats:"
+#~ msgstr "Formátumok:"
+
+#~ msgid "Temperature:"
+#~ msgstr "Hőmérséklet:"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

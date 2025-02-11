@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
 "PO-Revision-Date: 2018-05-28 06:30+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -21,17 +21,17 @@ msgstr "Limbă și regiune"
 msgid "Manage languages, and configure region and format"
 msgstr "Gestionați limbile și configurați regiunea și formatul"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 #, fuzzy
 msgid "Region"
 msgstr "Regiune: "
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 msgid "Formats"
 msgstr "Format: "
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 #, fuzzy
 msgid "Temperature"
 msgstr "Temperatură:"
@@ -88,89 +88,90 @@ msgstr "Eliminați limba"
 msgid "Couldn't install language pack"
 msgstr "Instalați limba"
 
-#: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
-msgid "Region:"
-msgstr "Regiune: "
-
-#: src/Widgets/LocaleSetting.vala:79
-#, fuzzy
-#| msgid "Formats: "
-msgid "Formats:"
-msgstr "Format: "
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Setările tastaturii …"
 
-#: src/Widgets/LocaleSetting.vala:93
-#, fuzzy
-#| msgid "Formats: "
-msgid "Time Format:"
-msgstr "Format: "
+#: src/Widgets/LocaleSetting.vala:87
+msgid "Keyboard Layout"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+#, fuzzy
+#| msgid "Formats: "
+msgid "Time Format"
+msgstr "Format: "
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "Suportul lingvistic nu este instalat complet"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "Instalare completă"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "Unele modificări nu vor avea efect până când nu vă deconectați"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr "Temperatură:"
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr "Grade Celsius"
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr "Scară Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "Setați limba"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "Setați limba sistemului"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Setați limba pentru ecranul de conectare, contul de oaspeți și noile conturi "
 "de utilizator"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Instalează limba care lipsește"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Region: "
+#~ msgid "Region:"
+#~ msgstr "Regiune: "
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Formats:"
+#~ msgstr "Format: "
+
+#~ msgid "Temperature:"
+#~ msgstr "Temperatură:"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Unele setări necesită modificarea drepturilor de administrator"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2024-07-03 14:16+0000\n"
-"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/pl/>\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -29,15 +29,15 @@ msgstr "Język i region"
 msgid "Manage languages, and configure region and format"
 msgstr "Zarządzaj językami, konfiguruj region i formaty"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 msgid "Region"
 msgstr "Region"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 msgid "Formats"
 msgstr "Formaty"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr "Temperatura"
 
@@ -88,77 +88,80 @@ msgstr "Nie udało się usunąć paczki językowej"
 msgid "Couldn't install language pack"
 msgstr "Nie udało się zainstalować paczki językowej"
 
-#: src/Widgets/LocaleSetting.vala:74
-msgid "Region:"
-msgstr "Region:"
-
-#: src/Widgets/LocaleSetting.vala:79
-msgid "Formats:"
-msgstr "Formaty:"
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr "Układ klawiatury:"
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard settings…"
 msgstr "Ustawienia klawiatury…"
 
-#: src/Widgets/LocaleSetting.vala:93
-msgid "Time Format:"
-msgstr "Format czasu:"
+#: src/Widgets/LocaleSetting.vala:87
+#, fuzzy
+#| msgid "Keyboard Layout:"
+msgid "Keyboard Layout"
+msgstr "Układ klawiatury:"
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr "Ustawienia daty i czasu…"
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr "Format czasu"
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "Obsługa języka nie jest w pełni zainstalowana"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "Dokończ instalację"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "Niektóre zmiany nie będą działać zanim nie nastąpi ponowne zalogowanie"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr "Temperatura:"
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr "Celsjusza"
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr "Fahrenheita"
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr "Automatyczne, w oparciu o język"
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "Ustawienie języka"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "Ustaw język systemu"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Ustaw język ekranu logowania, konta gościa i nowych kont użytkowników"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 msgid "Couldn't install missing language packs"
 msgstr "Nie udało się zainstalować brakujących paczek językowych"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr "Nie można ustawić języka systemu"
+
+#~ msgid "Region:"
+#~ msgstr "Region:"
+
+#~ msgid "Formats:"
+#~ msgstr "Formaty:"
+
+#~ msgid "Temperature:"
+#~ msgstr "Temperatura:"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"

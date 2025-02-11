@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shotwell-0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
 "PO-Revision-Date: 2014-08-01 01:27+0000\n"
 "Last-Translator: shankar <prasad.mvs@gmail.com>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/shotwell/"
@@ -31,15 +31,15 @@ msgstr ""
 msgid "Manage languages, and configure region and format"
 msgstr ""
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 msgid "Region"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 msgid "Formats"
 msgstr ""
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr ""
 
@@ -90,74 +90,66 @@ msgstr ""
 msgid "Couldn't install language pack"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:74
-msgid "Region:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:79
-msgid "Formats:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:93
-msgid "Time Format:"
+#: src/Widgets/LocaleSetting.vala:87
+msgid "Keyboard Layout"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 msgid "Couldn't install missing language packs"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr ""

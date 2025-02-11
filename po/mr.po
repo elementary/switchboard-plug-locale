@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2019-11-25 09:24+0000\n"
-"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/mr/>\n"
 "Language: mr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -28,15 +28,15 @@ msgstr "भाषा आणि क्षेत्र"
 msgid "Manage languages, and configure region and format"
 msgstr "भाषा व्यवस्थापित करा आणि क्षेत्र आणि स्वरूप कॉन्फिगर करा"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 msgid "Region"
 msgstr "क्षेत्र"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 msgid "Formats"
 msgstr "स्वरूप"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr "तापमान"
 
@@ -91,87 +91,86 @@ msgstr "भाषा काढा"
 msgid "Couldn't install language pack"
 msgstr "भाषा स्थापित करा"
 
-#: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
-msgid "Region:"
-msgstr "क्षेत्र: "
-
-#: src/Widgets/LocaleSetting.vala:79
-#, fuzzy
-#| msgid "Formats: "
-msgid "Formats:"
-msgstr "स्वरूप: "
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "कीबोर्ड सेटिंग्ज …"
 
-#: src/Widgets/LocaleSetting.vala:93
-#, fuzzy
-#| msgid "Formats: "
-msgid "Time Format:"
-msgstr "स्वरूप: "
+#: src/Widgets/LocaleSetting.vala:87
+msgid "Keyboard Layout"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr "वेळ स्वरूप"
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "भाषा समर्थन पूर्णपणे स्थापित नाही"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "स्थापना पूर्ण करा"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "आपण लॉग आउट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr "तापमान:"
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr "सेल्सिअस"
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr "फारेनहाइट"
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "भाषा सेट करा"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "सिस्टम भाषा सेट करा"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "लॉगिन स्क्रीन, अतिथी खाते आणि नवीन वापरकर्ता खात्यांसाठी भाषा सेट करा"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "गहाळ भाषा स्थापित करत आहे"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Region: "
+#~ msgid "Region:"
+#~ msgstr "क्षेत्र: "
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Formats:"
+#~ msgstr "स्वरूप: "
+
+#~ msgid "Temperature:"
+#~ msgstr "तापमान:"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"

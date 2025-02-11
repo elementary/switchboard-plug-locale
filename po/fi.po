@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2024-12-02 12:16+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/fi/>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:25+0000\n"
 
 #: src/Plug.vala:30
@@ -28,15 +28,15 @@ msgstr "Kieli ja alue"
 msgid "Manage languages, and configure region and format"
 msgstr "Hallitse kieliä, määritä alue sekä muoto"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 msgid "Region"
 msgstr "Alue"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 msgid "Formats"
 msgstr "Muotoilut"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr "Lämpötila"
 
@@ -87,77 +87,80 @@ msgstr "Kielipakettia ei voitu poistaa"
 msgid "Couldn't install language pack"
 msgstr "Kielipakettia ei voitu asentaa"
 
-#: src/Widgets/LocaleSetting.vala:74
-msgid "Region:"
-msgstr "Alue:"
-
-#: src/Widgets/LocaleSetting.vala:79
-msgid "Formats:"
-msgstr "Muotoilut:"
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr "Näppäimistön asettelu:"
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard settings…"
 msgstr "Näppäimistön asetukset…"
 
-#: src/Widgets/LocaleSetting.vala:93
-msgid "Time Format:"
-msgstr "Aikamuoto:"
+#: src/Widgets/LocaleSetting.vala:87
+#, fuzzy
+#| msgid "Keyboard Layout:"
+msgid "Keyboard Layout"
+msgstr "Näppäimistön asettelu:"
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr "Päivän ja ajan asetukset…"
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr "Ajan esitysmuoto"
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "Kielitukea ei ole asennettu kokonaan"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "Suorita asennus loppuun"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "Jotkin asetukset eivät tule voimaan, ennen kuin kirjaudut ulos"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr "Lämpötila:"
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr "Automaattinen, pohjautuu maa-asetustoon"
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "Aseta kieli"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "Aseta järjestelmän kieli"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Aseta kieli kirjautumisnäkymään, vierastilille ja uusille käyttäjille"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 msgid "Couldn't install missing language packs"
 msgstr "Puuttuvia kielipaketteja ei voitu asentaa"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr "Järjestelmän maa-asetustoa ei voitu asettaa"
+
+#~ msgid "Region:"
+#~ msgstr "Alue:"
+
+#~ msgid "Formats:"
+#~ msgstr "Muotoilut:"
+
+#~ msgid "Temperature:"
+#~ msgstr "Lämpötila:"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"

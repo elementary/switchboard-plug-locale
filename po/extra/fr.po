@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2025-02-07 15:16+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "locale-plug-extra/fr/>\n"
 "Language: fr\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: data/locale.metainfo.xml.in:37
 msgid "Sidebar position is now remembered"
-msgstr ""
+msgstr "La position de la barre latérale est désormais mémorisée"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Performance improvements"

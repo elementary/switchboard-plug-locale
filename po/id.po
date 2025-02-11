@@ -6,17 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2018-10-21 13:38+0000\n"
-"Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
-"Language-Team: Indonesian <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-locale/id/>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-locale/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -27,15 +27,15 @@ msgstr "Bahasa & Wilayah"
 msgid "Manage languages, and configure region and format"
 msgstr "Kelola bahasa, dan konfigurasi wilayah dan format"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 msgid "Region"
 msgstr "Wilayah"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 msgid "Formats"
 msgstr "Format"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr "Temperatur"
 
@@ -91,87 +91,86 @@ msgstr "Hapus bahasa"
 msgid "Couldn't install language pack"
 msgstr "Memasang bahasa"
 
-#: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
-msgid "Region:"
-msgstr "Wilayah: "
-
-#: src/Widgets/LocaleSetting.vala:79
-#, fuzzy
-#| msgid "Formats: "
-msgid "Formats:"
-msgstr "Format: "
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard settings…"
 msgstr "Pengaturan Papan Ketik…"
 
-#: src/Widgets/LocaleSetting.vala:93
-#, fuzzy
-#| msgid "Formats: "
-msgid "Time Format:"
-msgstr "Format: "
+#: src/Widgets/LocaleSetting.vala:87
+msgid "Keyboard Layout"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr "Format Waktu"
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "Dukungan bahasa tidak terpasang sepenuhnya"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "Pemasangan Lengkap"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "Beberapa perubahan tidak akan berpengaruh sampai Anda keluar"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr "Temperatur:"
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "Atur Bahasa"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "Atur Bahasa Sistem"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "Tetapkan bahasa untuk layar masuk, akun tamu, dan akun pengguna baru"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Memasang bahasa yang hilang"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Region: "
+#~ msgid "Region:"
+#~ msgstr "Wilayah: "
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Formats:"
+#~ msgstr "Format: "
+
+#~ msgid "Temperature:"
+#~ msgstr "Temperatur:"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"

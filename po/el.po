@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 11:43+0000\n"
-"PO-Revision-Date: 2023-02-17 17:25+0000\n"
-"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
+"POT-Creation-Date: 2025-02-11 18:38+0000\n"
+"PO-Revision-Date: 2025-02-11 19:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Greek <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/el/>\n"
 "Language: el\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-02-22 06:07+0000\n"
 
 #: src/Plug.vala:30
@@ -28,17 +28,17 @@ msgstr "Γλώσσα & περιοχή"
 msgid "Manage languages, and configure region and format"
 msgstr "Διαχείριση γλωσσών, και ρύθμιση περιοχής και μορφής"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Widgets/LocaleSetting.vala:67
 #, fuzzy
 msgid "Region"
 msgstr "Περιοχή: "
 
-#: src/Plug.vala:64
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:74
 #, fuzzy
 msgid "Formats"
 msgstr "Μορφές: "
 
-#: src/Plug.vala:65
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
 msgid "Temperature"
 msgstr ""
 
@@ -94,88 +94,84 @@ msgstr "Αφαίρεση γλώσσας"
 msgid "Couldn't install language pack"
 msgstr "Εγκατάσταση γλώσσας"
 
-#: src/Widgets/LocaleSetting.vala:74
-#, fuzzy
-#| msgid "Region: "
-msgid "Region:"
-msgstr "Περιοχή: "
-
-#: src/Widgets/LocaleSetting.vala:79
-#, fuzzy
-#| msgid "Formats: "
-msgid "Formats:"
-msgstr "Μορφές: "
-
-#: src/Widgets/LocaleSetting.vala:84
-msgid "Keyboard Layout:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:88
+#: src/Widgets/LocaleSetting.vala:83
 #, fuzzy
 msgid "Keyboard settings…"
 msgstr "Αλλαγή σε ρυθμίσεις πληκτρολογίου"
 
-#: src/Widgets/LocaleSetting.vala:93
-#, fuzzy
-#| msgid "Formats: "
-msgid "Time Format:"
-msgstr "Μορφές: "
+#: src/Widgets/LocaleSetting.vala:87
+msgid "Keyboard Layout"
+msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:97
+#: src/Widgets/LocaleSetting.vala:96
 msgid "Date & Time settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:102
+#: src/Widgets/LocaleSetting.vala:100
+msgid "Time Format"
+msgstr "Μορφή ώρας"
+
+#: src/Widgets/LocaleSetting.vala:115
+msgid "Preview"
+msgstr ""
+
+#: src/Widgets/LocaleSetting.vala:123
 msgid "Language support is not installed completely"
 msgstr "Η γλωσσική υποστήριξη δεν είναι πλήρως εγκατεστημένη"
 
-#: src/Widgets/LocaleSetting.vala:108
+#: src/Widgets/LocaleSetting.vala:129
 msgid "Complete Installation"
 msgstr "Ολοκλήρωση εγκατάστασης"
 
-#: src/Widgets/LocaleSetting.vala:116
+#: src/Widgets/LocaleSetting.vala:138
 msgid "Some changes will not take effect until you log out"
 msgstr "Κάποιες αλλαγές δε θα εφαρμοστούν μέχρι να αποσυνδεθείτε"
 
-#: src/Widgets/LocaleSetting.vala:139
-msgid "Temperature:"
-msgstr ""
-
-#: src/Widgets/LocaleSetting.vala:144
+#: src/Widgets/LocaleSetting.vala:153
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:147
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:152
+#: src/Widgets/LocaleSetting.vala:161
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:194
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set Language"
 msgstr "Ορισμός γλώσσας"
 
-#: src/Widgets/LocaleSetting.vala:198
+#: src/Widgets/LocaleSetting.vala:217
 msgid "Set System Language"
 msgstr "Καθορισμός γλώσσας συστήματος"
 
-#: src/Widgets/LocaleSetting.vala:199
+#: src/Widgets/LocaleSetting.vala:218
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Ορίστε γλώσσα για την οθόνη εισόδου, τον λογαριασμό επισκέπτη και τους νέους "
 "λογαριασμούς χρηστών"
 
-#: src/Widgets/LocaleSetting.vala:217
+#: src/Widgets/LocaleSetting.vala:236
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Γίνεται εγκατάσταση ελλειπούσας γλώσσας"
 
-#: src/Widgets/LocaleSetting.vala:381
+#: src/Widgets/LocaleSetting.vala:413
 msgid "Can't set system locale"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Region: "
+#~ msgid "Region:"
+#~ msgstr "Περιοχή: "
+
+#, fuzzy
+#~| msgid "Formats: "
+#~ msgid "Formats:"
+#~ msgstr "Μορφές: "
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
