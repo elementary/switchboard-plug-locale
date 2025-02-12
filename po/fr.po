@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:59+0000\n"
-"PO-Revision-Date: 2025-02-11 19:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-02-12 15:29+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-locale/fr/>\n"
 "Language: fr\n"
@@ -88,20 +88,16 @@ msgid "Couldn't install language pack"
 msgstr "Échec de l'installation du pack de langue"
 
 #: src/Widgets/LocaleSetting.vala:87
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Keyboard layout settings…"
-msgstr "Paramètres du clavier…"
+msgstr "Paramètres de disposition du clavier…"
 
 #: src/Widgets/LocaleSetting.vala:94
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Time format settings…"
-msgstr "Paramètres du clavier…"
+msgstr "Paramètres du format de l'heure…"
 
 #: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
-msgstr ""
+msgstr "Aperçu"
 
 #: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
