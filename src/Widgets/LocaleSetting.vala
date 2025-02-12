@@ -69,18 +69,14 @@ namespace SwitchboardPlugLocale.Widgets {
             var region_endlabel = new Granite.HeaderLabel (_("Region"));
             region_dropdown.update_property_value ({DESCRIPTION}, {region_endlabel.label});
 
-            var region_type_box = new Gtk.Box (VERTICAL, 6);
-            region_type_box.append (region_endlabel);
-            region_type_box.append (region_dropdown);
-
             var formats_label = new Granite.HeaderLabel (_("Formats"));
             format_dropdown.update_property_value ({DESCRIPTION}, {formats_label.label});
 
-            var formats_box = new Gtk.Box (VERTICAL, 6) {
-                margin_top = 24
-            };
-            formats_box.append (formats_label);
-            formats_box.append (format_dropdown);
+            var region_formats_box = new Gtk.Box (VERTICAL, 6);
+            region_formats_box.append (region_endlabel);
+            region_formats_box.append (region_dropdown);
+            region_formats_box.append (formats_label);
+            region_formats_box.append (format_dropdown);
 
             var layout_link = new LinkRow (
                 "settings://input/keyboard/layout",
@@ -144,8 +140,7 @@ namespace SwitchboardPlugLocale.Widgets {
             var content_box = new Gtk.Box (VERTICAL, 0);
             content_box.append (missing_lang_infobar);
             content_box.append (restart_infobar);
-            content_box.append (region_type_box);
-            content_box.append (formats_box);
+            content_box.append (region_formats_box);
 
             if (temperature_settings != null) {
                 var temperature_label = new Granite.HeaderLabel (_("Temperature"));
