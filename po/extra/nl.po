@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:59+0000\n"
-"PO-Revision-Date: 2024-09-22 14:53+0000\n"
+"PO-Revision-Date: 2025-02-16 03:16+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/locale-"
-"plug-extra/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
+"locale-plug-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -32,22 +32,20 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/locale.metainfo.xml.in:34
-#, fuzzy
-#| msgid "Improvements:"
 msgid "Minor improvements:"
-msgstr "Verbeteringen:"
+msgstr "Kleine verbeteringen:"
 
 #: data/locale.metainfo.xml.in:36
 msgid "Selected language checkmark now follows system accent color"
-msgstr ""
+msgstr "Geselecteerd taalvinkje volgt nu de systeemaccentkleur"
 
 #: data/locale.metainfo.xml.in:37
 msgid "Sidebar position is now remembered"
-msgstr ""
+msgstr "Zijbalk positie wordt nu onthouden"
 
 #: data/locale.metainfo.xml.in:38
 msgid "Performance improvements"
-msgstr ""
+msgstr "Prestatieverbeteringen"
 
 #: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:54
 #: data/locale.metainfo.xml.in:107
