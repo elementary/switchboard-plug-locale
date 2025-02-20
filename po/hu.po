@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:59+0000\n"
-"PO-Revision-Date: 2025-02-11 19:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2025-02-21 02:13+0000\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"Language-Team: Hungarian <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-locale/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
@@ -88,20 +88,16 @@ msgid "Couldn't install language pack"
 msgstr "Nyelvcsomag telepítése sikertelen"
 
 #: src/Widgets/LocaleSetting.vala:87
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Keyboard layout settings…"
-msgstr "Billentyűzetbeállítások…"
+msgstr "A billentyűzetkiosztás beállításai…"
 
 #: src/Widgets/LocaleSetting.vala:94
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Time format settings…"
-msgstr "Billentyűzetbeállítások…"
+msgstr "Az időformátum beállításai…"
 
 #: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
-msgstr ""
+msgstr "Előnézet"
 
 #: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
