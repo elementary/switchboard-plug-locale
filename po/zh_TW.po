@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:59+0000\n"
-"PO-Revision-Date: 2025-02-11 19:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Traditional Han script) <https://l10n.elementary.io/"
-"projects/switchboard/switchboard-plug-locale/zh_Hant/>\n"
+"PO-Revision-Date: 2025-03-17 11:10+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://"
+"l10n.elementaryos.org/projects/settings/switchboard-plug-locale/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.10.2\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -88,20 +88,16 @@ msgid "Couldn't install language pack"
 msgstr "無法安裝語言包"
 
 #: src/Widgets/LocaleSetting.vala:87
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Keyboard layout settings…"
-msgstr "鍵盤設定值…"
+msgstr "鍵盤配置設定值…"
 
 #: src/Widgets/LocaleSetting.vala:94
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Time format settings…"
-msgstr "鍵盤設定值…"
+msgstr "時間格式設定值…"
 
 #: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
-msgstr ""
+msgstr "預覽"
 
 #: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
