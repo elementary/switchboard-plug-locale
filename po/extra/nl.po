@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:59+0000\n"
-"PO-Revision-Date: 2025-03-17 18:47+0000\n"
+"PO-Revision-Date: 2025-04-19 22:55+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementaryos.org/projects/settings/"
 "locale-plug-extra/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -54,11 +54,11 @@ msgstr "Bijgewerkte vertalingen"
 
 #: data/locale.metainfo.xml.in:49
 msgid "A big redesign!"
-msgstr ""
+msgstr "Een groots nieuw ontwerp!"
 
 #: data/locale.metainfo.xml.in:51
 msgid "Prevent fcitx5 packages from being installed"
-msgstr ""
+msgstr "Voorkom dat fcitx5 pakketten worden geïnstalleerd"
 
 #: data/locale.metainfo.xml.in:52
 msgid "Add links to other places locale-related settings are managed"
@@ -75,7 +75,7 @@ msgstr "Oplossingen:"
 
 #: data/locale.metainfo.xml.in:71
 msgid "Translate authentication dialog description text"
-msgstr ""
+msgstr "Vertaal authenticatie dialoog-beschrijving tekst"
 
 #: data/locale.metainfo.xml.in:78
 msgid "Improvements:"
@@ -83,7 +83,7 @@ msgstr "Verbeteringen:"
 
 #: data/locale.metainfo.xml.in:80
 msgid "Central Kurdish is now available as an installable language"
-msgstr ""
+msgstr "Centraal Koerds is nu beschikbaar als een te installeren taal"
 
 #: data/locale.metainfo.xml.in:84
 msgid "Support installation and removal of languages with 3-letter codes"
