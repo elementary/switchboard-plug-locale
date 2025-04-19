@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:59+0000\n"
-"PO-Revision-Date: 2025-02-11 19:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2025-04-19 22:55+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-locale/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.10.4\n"
 "X-Launchpad-Export-Date: 2016-12-06 05:26+0000\n"
 
 #: src/Plug.vala:30
@@ -73,7 +73,7 @@ msgstr "Idiomas instalados"
 
 #: src/Widgets/LanguageListBox.vala:141
 msgid "Currently active language"
-msgstr "Idioma ativo"
+msgstr "Idioma atualmente ativo"
 
 #: src/Widgets/LocaleView.vala:57
 msgid "Remove language"
@@ -88,20 +88,16 @@ msgid "Couldn't install language pack"
 msgstr "Não foi possível instalar o pacote de idioma"
 
 #: src/Widgets/LocaleSetting.vala:87
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Keyboard layout settings…"
-msgstr "Definições de teclado…"
+msgstr "Definições do esquema de teclado…"
 
 #: src/Widgets/LocaleSetting.vala:94
-#, fuzzy
-#| msgid "Keyboard settings…"
 msgid "Time format settings…"
-msgstr "Definições de teclado…"
+msgstr "Definições do formato da hora…"
 
 #: src/Widgets/LocaleSetting.vala:117
 msgid "Preview"
-msgstr ""
+msgstr "Pré-visualizar"
 
 #: src/Widgets/LocaleSetting.vala:125
 msgid "Language support is not installed completely"
