@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:59+0000\n"
+"POT-Creation-Date: 2025-05-01 18:19+0000\n"
 "PO-Revision-Date: 2020-10-01 22:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Afrikaans <https://l10n.elementary.io/projects/switchboard/"
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Region"
 msgstr ""
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:72
 msgid "Formats"
 msgstr ""
 
-#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:146
 msgid "Temperature"
 msgstr ""
 
@@ -87,58 +87,58 @@ msgstr ""
 msgid "Couldn't install language pack"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:87
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard layout settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:90
 msgid "Time format settings…"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:117
+#: src/Widgets/LocaleSetting.vala:113
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:125
+#: src/Widgets/LocaleSetting.vala:121
 msgid "Language support is not installed completely"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:131
+#: src/Widgets/LocaleSetting.vala:127
 msgid "Complete Installation"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:136
 msgid "Some changes will not take effect until you log out"
 msgstr "Sommige veraderings sal eers intree nadat jy uitteken"
 
-#: src/Widgets/LocaleSetting.vala:153
+#: src/Widgets/LocaleSetting.vala:148
 msgid "Celsius"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:156
+#: src/Widgets/LocaleSetting.vala:151
 msgid "Fahrenheit"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:161
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:214
+#: src/Widgets/LocaleSetting.vala:209
 msgid "Set Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set System Language"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:219
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:237
+#: src/Widgets/LocaleSetting.vala:232
 msgid "Couldn't install missing language packs"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:416
+#: src/Widgets/LocaleSetting.vala:411
 msgid "Can't set system locale"
 msgstr ""

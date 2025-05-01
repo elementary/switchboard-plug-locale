@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:59+0000\n"
+"POT-Creation-Date: 2025-05-01 18:19+0000\n"
 "PO-Revision-Date: 2024-12-13 10:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -32,66 +32,70 @@ msgstr "Управление языками, настройка региона �
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/locale.metainfo.xml.in:34
+#: data/locale.metainfo.xml.in:34 data/locale.metainfo.xml.in:44
 msgid "Minor improvements:"
 msgstr "Незначительные улучшения:"
 
 #: data/locale.metainfo.xml.in:36
-msgid "Selected language checkmark now follows system accent color"
-msgstr "Флажок выбранного языка теперь следует акцентному цвету системы"
+msgid "More responsive design layout"
+msgstr ""
 
-#: data/locale.metainfo.xml.in:37
-msgid "Sidebar position is now remembered"
-msgstr "Положение боковой панели теперь запоминается"
-
-#: data/locale.metainfo.xml.in:38
-msgid "Performance improvements"
-msgstr "Улучшения производительности"
-
-#: data/locale.metainfo.xml.in:39 data/locale.metainfo.xml.in:54
-#: data/locale.metainfo.xml.in:107
+#: data/locale.metainfo.xml.in:37 data/locale.metainfo.xml.in:49
+#: data/locale.metainfo.xml.in:64 data/locale.metainfo.xml.in:117
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/locale.metainfo.xml.in:49
+#: data/locale.metainfo.xml.in:46
+msgid "Selected language checkmark now follows system accent color"
+msgstr "Флажок выбранного языка теперь следует акцентному цвету системы"
+
+#: data/locale.metainfo.xml.in:47
+msgid "Sidebar position is now remembered"
+msgstr "Положение боковой панели теперь запоминается"
+
+#: data/locale.metainfo.xml.in:48
+msgid "Performance improvements"
+msgstr "Улучшения производительности"
+
+#: data/locale.metainfo.xml.in:59
 msgid "A big redesign!"
 msgstr "Большой редизайн!"
 
-#: data/locale.metainfo.xml.in:51
+#: data/locale.metainfo.xml.in:61
 msgid "Prevent fcitx5 packages from being installed"
 msgstr "Предотвращение установки пакетов fcitx5"
 
-#: data/locale.metainfo.xml.in:52
+#: data/locale.metainfo.xml.in:62
 msgid "Add links to other places locale-related settings are managed"
 msgstr ""
 "Добавлены ссылки на другие места управления настройками, связанными с локалью"
 
-#: data/locale.metainfo.xml.in:53
+#: data/locale.metainfo.xml.in:63
 msgid "Improve screen reader accessibility"
 msgstr "Улучшена доступность для экранного диктора"
 
-#: data/locale.metainfo.xml.in:69 data/locale.metainfo.xml.in:82
-#: data/locale.metainfo.xml.in:91 data/locale.metainfo.xml.in:100
+#: data/locale.metainfo.xml.in:79 data/locale.metainfo.xml.in:92
+#: data/locale.metainfo.xml.in:101 data/locale.metainfo.xml.in:110
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/locale.metainfo.xml.in:71
+#: data/locale.metainfo.xml.in:81
 msgid "Translate authentication dialog description text"
 msgstr "Перевод описания диалога аутентификации"
 
-#: data/locale.metainfo.xml.in:78
+#: data/locale.metainfo.xml.in:88
 msgid "Improvements:"
 msgstr "Улучшения:"
 
-#: data/locale.metainfo.xml.in:80
+#: data/locale.metainfo.xml.in:90
 msgid "Central Kurdish is now available as an installable language"
 msgstr "Центральнокурдский теперь доступен как устанавливаемый язык"
 
-#: data/locale.metainfo.xml.in:84
+#: data/locale.metainfo.xml.in:94
 msgid "Support installation and removal of languages with 3-letter codes"
 msgstr "Поддержка установки и удаления языков с трёхзначным идентификатором"
 
-#: data/locale.metainfo.xml.in:93
+#: data/locale.metainfo.xml.in:103
 msgid ""
 "Ensure \"Formats\" dropdown remains correct after installing or removing "
 "languages"
@@ -99,15 +103,15 @@ msgstr ""
 "Выпадающее меню «Форматы» остается правильным после установки или удаления "
 "языков"
 
-#: data/locale.metainfo.xml.in:102
+#: data/locale.metainfo.xml.in:112
 msgid "Support locales with 3-letter codes"
 msgstr "Поддержка языков с трёхзначным идентификатором"
 
-#: data/locale.metainfo.xml.in:104
+#: data/locale.metainfo.xml.in:114
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/locale.metainfo.xml.in:106
+#: data/locale.metainfo.xml.in:116
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Улучшена работа на дистрибутивах не основанных на Ubuntu"
 

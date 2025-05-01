@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:59+0000\n"
+"POT-Creation-Date: 2025-05-01 18:19+0000\n"
 "PO-Revision-Date: 2020-12-23 07:16+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -32,11 +32,11 @@ msgstr "Управљајте језицима и подесите регион �
 msgid "Region"
 msgstr "Област"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:72
 msgid "Formats"
 msgstr "Формати"
 
-#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:146
 msgid "Temperature"
 msgstr "Температура"
 
@@ -91,67 +91,67 @@ msgstr "Уклони језик"
 msgid "Couldn't install language pack"
 msgstr "Инсталирај језик"
 
-#: src/Widgets/LocaleSetting.vala:87
+#: src/Widgets/LocaleSetting.vala:83
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard layout settings…"
 msgstr "Подешавања тастатуре…"
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:90
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Time format settings…"
 msgstr "Подешавања тастатуре…"
 
-#: src/Widgets/LocaleSetting.vala:117
+#: src/Widgets/LocaleSetting.vala:113
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:125
+#: src/Widgets/LocaleSetting.vala:121
 msgid "Language support is not installed completely"
 msgstr "Подршка за језике није инсталирана у потпуности"
 
-#: src/Widgets/LocaleSetting.vala:131
+#: src/Widgets/LocaleSetting.vala:127
 msgid "Complete Installation"
 msgstr "Заврши инсталацију"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:136
 msgid "Some changes will not take effect until you log out"
 msgstr "Неке измене неће ступити у дејство све док се не одјавите"
 
-#: src/Widgets/LocaleSetting.vala:153
+#: src/Widgets/LocaleSetting.vala:148
 msgid "Celsius"
 msgstr "Целзијуси"
 
-#: src/Widgets/LocaleSetting.vala:156
+#: src/Widgets/LocaleSetting.vala:151
 msgid "Fahrenheit"
 msgstr "Фаренхајти"
 
-#: src/Widgets/LocaleSetting.vala:161
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:214
+#: src/Widgets/LocaleSetting.vala:209
 msgid "Set Language"
 msgstr "Подеси језик"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set System Language"
 msgstr "Подеси језик система"
 
-#: src/Widgets/LocaleSetting.vala:219
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Подесите језик за екран пријављивања, за налог госта и за налоге нових "
 "корисника"
 
-#: src/Widgets/LocaleSetting.vala:237
+#: src/Widgets/LocaleSetting.vala:232
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "Инсталирам језик који недостаје"
 
-#: src/Widgets/LocaleSetting.vala:416
+#: src/Widgets/LocaleSetting.vala:411
 msgid "Can't set system locale"
 msgstr ""
 

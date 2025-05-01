@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:59+0000\n"
+"POT-Creation-Date: 2025-05-01 18:19+0000\n"
 "PO-Revision-Date: 2025-04-19 22:55+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementaryos.org/projects/settings/"
@@ -32,11 +32,11 @@ msgstr "Gerir idiomas e configurar a região e o formato"
 msgid "Region"
 msgstr "Região"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:72
 msgid "Formats"
 msgstr "Formatos"
 
-#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:146
 msgid "Temperature"
 msgstr "Temperatura"
 
@@ -87,61 +87,61 @@ msgstr "Não foi possível remover o pacote de idioma"
 msgid "Couldn't install language pack"
 msgstr "Não foi possível instalar o pacote de idioma"
 
-#: src/Widgets/LocaleSetting.vala:87
+#: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard layout settings…"
 msgstr "Definições do esquema de teclado…"
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:90
 msgid "Time format settings…"
 msgstr "Definições do formato da hora…"
 
-#: src/Widgets/LocaleSetting.vala:117
+#: src/Widgets/LocaleSetting.vala:113
 msgid "Preview"
 msgstr "Pré-visualizar"
 
-#: src/Widgets/LocaleSetting.vala:125
+#: src/Widgets/LocaleSetting.vala:121
 msgid "Language support is not installed completely"
 msgstr "O pacote de idioma não está completamente instalado"
 
-#: src/Widgets/LocaleSetting.vala:131
+#: src/Widgets/LocaleSetting.vala:127
 msgid "Complete Installation"
 msgstr "Instalação completa"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:136
 msgid "Some changes will not take effect until you log out"
 msgstr "Algumas alterações não terão efeito até que termine a sessão"
 
-#: src/Widgets/LocaleSetting.vala:153
+#: src/Widgets/LocaleSetting.vala:148
 msgid "Celsius"
 msgstr "Celsius"
 
-#: src/Widgets/LocaleSetting.vala:156
+#: src/Widgets/LocaleSetting.vala:151
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: src/Widgets/LocaleSetting.vala:161
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Automatic, based on locale"
 msgstr "Automático, com base na localidade"
 
-#: src/Widgets/LocaleSetting.vala:214
+#: src/Widgets/LocaleSetting.vala:209
 msgid "Set Language"
 msgstr "Definir idioma"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set System Language"
 msgstr "Definir idioma do sistema"
 
-#: src/Widgets/LocaleSetting.vala:219
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr ""
 "Definir idioma para o ecrã de início de sessão, conta de convidado e novas "
 "contas de utilizador"
 
-#: src/Widgets/LocaleSetting.vala:237
+#: src/Widgets/LocaleSetting.vala:232
 msgid "Couldn't install missing language packs"
 msgstr "Não foi possível instalar os pacotes de idioma em falta"
 
-#: src/Widgets/LocaleSetting.vala:416
+#: src/Widgets/LocaleSetting.vala:411
 msgid "Can't set system locale"
 msgstr "Não é possível definir a localidade do sistema"
 
