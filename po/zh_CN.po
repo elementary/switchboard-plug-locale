@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:59+0000\n"
+"POT-Creation-Date: 2025-05-01 18:19+0000\n"
 "PO-Revision-Date: 2025-02-11 19:55+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://l10n.elementary.io/"
@@ -32,11 +32,11 @@ msgstr "管理语言、设置区域和格式"
 msgid "Region"
 msgstr "区域"
 
-#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:76
+#: src/Plug.vala:64 src/Widgets/LocaleSetting.vala:72
 msgid "Formats"
 msgstr "格式"
 
-#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:151
+#: src/Plug.vala:65 src/Widgets/LocaleSetting.vala:146
 msgid "Temperature"
 msgstr "温度"
 
@@ -91,65 +91,65 @@ msgstr "删除语言"
 msgid "Couldn't install language pack"
 msgstr "安装语言"
 
-#: src/Widgets/LocaleSetting.vala:87
+#: src/Widgets/LocaleSetting.vala:83
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Keyboard layout settings…"
 msgstr "键盘设置…"
 
-#: src/Widgets/LocaleSetting.vala:94
+#: src/Widgets/LocaleSetting.vala:90
 #, fuzzy
 #| msgid "Keyboard Settings…"
 msgid "Time format settings…"
 msgstr "键盘设置…"
 
-#: src/Widgets/LocaleSetting.vala:117
+#: src/Widgets/LocaleSetting.vala:113
 msgid "Preview"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:125
+#: src/Widgets/LocaleSetting.vala:121
 msgid "Language support is not installed completely"
 msgstr "语言支持安装不完整"
 
-#: src/Widgets/LocaleSetting.vala:131
+#: src/Widgets/LocaleSetting.vala:127
 msgid "Complete Installation"
 msgstr "完整安装"
 
-#: src/Widgets/LocaleSetting.vala:140
+#: src/Widgets/LocaleSetting.vala:136
 msgid "Some changes will not take effect until you log out"
 msgstr "某些变更将会在注销后生效"
 
-#: src/Widgets/LocaleSetting.vala:153
+#: src/Widgets/LocaleSetting.vala:148
 msgid "Celsius"
 msgstr "摄氏度"
 
-#: src/Widgets/LocaleSetting.vala:156
+#: src/Widgets/LocaleSetting.vala:151
 msgid "Fahrenheit"
 msgstr "华氏度"
 
-#: src/Widgets/LocaleSetting.vala:161
+#: src/Widgets/LocaleSetting.vala:156
 msgid "Automatic, based on locale"
 msgstr ""
 
-#: src/Widgets/LocaleSetting.vala:214
+#: src/Widgets/LocaleSetting.vala:209
 msgid "Set Language"
 msgstr "设置语言"
 
-#: src/Widgets/LocaleSetting.vala:218
+#: src/Widgets/LocaleSetting.vala:213
 msgid "Set System Language"
 msgstr "设置系统语言"
 
-#: src/Widgets/LocaleSetting.vala:219
+#: src/Widgets/LocaleSetting.vala:214
 msgid "Set language for login screen, guest account and new user accounts"
 msgstr "设置登录界面、访客账户和新账户的语言"
 
-#: src/Widgets/LocaleSetting.vala:237
+#: src/Widgets/LocaleSetting.vala:232
 #, fuzzy
 #| msgid "Installing missing language"
 msgid "Couldn't install missing language packs"
 msgstr "正在安装缺失的语言"
 
-#: src/Widgets/LocaleSetting.vala:416
+#: src/Widgets/LocaleSetting.vala:411
 msgid "Can't set system locale"
 msgstr ""
 
