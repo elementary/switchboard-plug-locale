@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-01 18:19+0000\n"
-"PO-Revision-Date: 2024-12-12 05:36+0000\n"
+"PO-Revision-Date: 2025-05-02 13:04+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/settings/"
 "locale-plug-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -37,7 +37,7 @@ msgstr "軽微な改善:"
 
 #: data/locale.metainfo.xml.in:36
 msgid "More responsive design layout"
-msgstr ""
+msgstr "レスポンシブデザインレイアウトへのさらなる対応"
 
 #: data/locale.metainfo.xml.in:37 data/locale.metainfo.xml.in:49
 #: data/locale.metainfo.xml.in:64 data/locale.metainfo.xml.in:117
