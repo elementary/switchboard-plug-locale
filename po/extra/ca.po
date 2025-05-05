@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-01 18:19+0000\n"
-"PO-Revision-Date: 2024-12-13 10:16+0000\n"
+"PO-Revision-Date: 2025-05-05 13:04+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementaryos.org/projects/settings/"
 "locale-plug-extra/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: data/locale.metainfo.xml.in:10
 msgid "Language &amp; Region Settings"
@@ -37,7 +37,7 @@ msgstr "Millores menors:"
 
 #: data/locale.metainfo.xml.in:36
 msgid "More responsive design layout"
-msgstr ""
+msgstr "Disseny més sensible"
 
 #: data/locale.metainfo.xml.in:37 data/locale.metainfo.xml.in:49
 #: data/locale.metainfo.xml.in:64 data/locale.metainfo.xml.in:117
