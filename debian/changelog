@@ -1,3 +1,9 @@
+io.elementary.settings.locale (8.0.2) noble; urgency=medium
+
+  * release 8.0.2
+
+ -- Danielle Foré <danielle@elementary.io>  Tue, 06 May 2025 11:03:39 -0700
+
 io.elementary.settings.locale (8.0.1) noble; urgency=medium
 
   * release 8.0.1 (#224)
