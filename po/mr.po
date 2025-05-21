@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 18:19+0000\n"
+"POT-Creation-Date: 2025-05-21 19:08+0000\n"
 "PO-Revision-Date: 2025-02-11 19:55+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -54,18 +54,24 @@ msgstr "%s काढून टाकत आहे"
 msgid "Installing missing language"
 msgstr "गहाळ भाषा स्थापित करत आहे"
 
-#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:47
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
+#: src/Widgets/InstallDialog.vala:49 src/Widgets/LocaleView.vala:40
 msgid "Install Language"
 msgstr "भाषा स्थापित करा"
 
-#: src/Widgets/InstallDialog.vala:62
+#: src/Widgets/InstallDialog.vala:61
 #, c-format
 msgid "Install %s"
 msgstr "%s स्थापित करा"
+
+#: src/Widgets/InstallDialog.vala:98
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "भाषा स्थापित करा"
 
 #: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
@@ -75,21 +81,15 @@ msgstr "स्थापित भाषा"
 msgid "Currently active language"
 msgstr "सध्या सक्रिय भाषा"
 
-#: src/Widgets/LocaleView.vala:57
+#: src/Widgets/LocaleView.vala:53
 msgid "Remove language"
 msgstr "भाषा काढा"
 
-#: src/Widgets/LocaleView.vala:139
+#: src/Widgets/LocaleView.vala:135
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "भाषा काढा"
-
-#: src/Widgets/LocaleView.vala:168
-#, fuzzy
-#| msgid "Install language"
-msgid "Couldn't install language pack"
-msgstr "भाषा स्थापित करा"
 
 #: src/Widgets/LocaleSetting.vala:83
 #, fuzzy

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 18:19+0000\n"
+"POT-Creation-Date: 2025-05-21 19:08+0000\n"
 "PO-Revision-Date: 2025-02-13 15:26+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -54,18 +54,22 @@ msgstr "%s entfernen"
 msgid "Installing missing language"
 msgstr "Fehlende Sprache wird installiert"
 
-#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:47
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
+#: src/Widgets/InstallDialog.vala:49 src/Widgets/LocaleView.vala:40
 msgid "Install Language"
 msgstr "Sprache installieren"
 
-#: src/Widgets/InstallDialog.vala:62
+#: src/Widgets/InstallDialog.vala:61
 #, c-format
 msgid "Install %s"
 msgstr "%s installieren"
+
+#: src/Widgets/InstallDialog.vala:98
+msgid "Couldn't install language pack"
+msgstr "Sprachpaket konnte nicht installiert werden"
 
 #: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
@@ -75,17 +79,13 @@ msgstr "Installierte Sprachen"
 msgid "Currently active language"
 msgstr "Aktuell aktivierte Sprache"
 
-#: src/Widgets/LocaleView.vala:57
+#: src/Widgets/LocaleView.vala:53
 msgid "Remove language"
 msgstr "Sprache entfernen"
 
-#: src/Widgets/LocaleView.vala:139
+#: src/Widgets/LocaleView.vala:135
 msgid "Couldn't remove language pack"
 msgstr "Sprachpaket konnte nicht entfernt werden"
-
-#: src/Widgets/LocaleView.vala:168
-msgid "Couldn't install language pack"
-msgstr "Sprachpaket konnte nicht installiert werden"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard layout settings…"

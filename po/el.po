@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 18:19+0000\n"
+"POT-Creation-Date: 2025-05-21 19:08+0000\n"
 "PO-Revision-Date: 2025-02-11 19:55+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Greek <https://l10n.elementary.io/projects/switchboard/"
@@ -56,19 +56,25 @@ msgstr ""
 msgid "Installing missing language"
 msgstr "Γίνεται εγκατάσταση ελλειπούσας γλώσσας"
 
-#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:47
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
+#: src/Widgets/InstallDialog.vala:49 src/Widgets/LocaleView.vala:40
 #, fuzzy
 msgid "Install Language"
 msgstr "Εγκατάσταση γλώσσας"
 
-#: src/Widgets/InstallDialog.vala:62
+#: src/Widgets/InstallDialog.vala:61
 #, c-format
 msgid "Install %s"
 msgstr ""
+
+#: src/Widgets/InstallDialog.vala:98
+#, fuzzy
+#| msgid "Install language"
+msgid "Couldn't install language pack"
+msgstr "Εγκατάσταση γλώσσας"
 
 #: src/Widgets/LanguageListBox.vala:34
 msgid "Installed Languages"
@@ -78,21 +84,15 @@ msgstr "Εγκατεστημένες γλώσσες"
 msgid "Currently active language"
 msgstr "Τρέχουσα ενεργή γλώσσα"
 
-#: src/Widgets/LocaleView.vala:57
+#: src/Widgets/LocaleView.vala:53
 msgid "Remove language"
 msgstr "Αφαίρεση γλώσσας"
 
-#: src/Widgets/LocaleView.vala:139
+#: src/Widgets/LocaleView.vala:135
 #, fuzzy
 #| msgid "Remove language"
 msgid "Couldn't remove language pack"
 msgstr "Αφαίρεση γλώσσας"
-
-#: src/Widgets/LocaleView.vala:168
-#, fuzzy
-#| msgid "Install language"
-msgid "Couldn't install language pack"
-msgstr "Εγκατάσταση γλώσσας"
 
 #: src/Widgets/LocaleSetting.vala:83
 #, fuzzy

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 18:19+0000\n"
+"POT-Creation-Date: 2025-05-21 19:08+0000\n"
 "PO-Revision-Date: 2015-10-13 19:50+0000\n"
 "Last-Translator: ABCDEFGH <aefgh7233@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -54,18 +54,23 @@ msgstr ""
 msgid "Installing missing language"
 msgstr "กำลังติดตั้งภาษาที่หายไป"
 
-#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:48
+#: src/ProgressDialog.vala:62 src/Widgets/InstallDialog.vala:47
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: src/Widgets/InstallDialog.vala:50 src/Widgets/LocaleView.vala:44
+#: src/Widgets/InstallDialog.vala:49 src/Widgets/LocaleView.vala:40
 #, fuzzy
 msgid "Install Language"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
-#: src/Widgets/InstallDialog.vala:62
+#: src/Widgets/InstallDialog.vala:61
 #, fuzzy, c-format
 msgid "Install %s"
+msgstr "ภาษาที่ติดตั้งไว้แล้ว"
+
+#: src/Widgets/InstallDialog.vala:98
+#, fuzzy
+msgid "Couldn't install language pack"
 msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
 #: src/Widgets/LanguageListBox.vala:34
@@ -76,18 +81,13 @@ msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 msgid "Currently active language"
 msgstr ""
 
-#: src/Widgets/LocaleView.vala:57
+#: src/Widgets/LocaleView.vala:53
 msgid "Remove language"
 msgstr ""
 
-#: src/Widgets/LocaleView.vala:139
+#: src/Widgets/LocaleView.vala:135
 msgid "Couldn't remove language pack"
 msgstr ""
-
-#: src/Widgets/LocaleView.vala:168
-#, fuzzy
-msgid "Couldn't install language pack"
-msgstr "ภาษาที่ติดตั้งไว้แล้ว"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard layout settings…"
