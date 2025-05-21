@@ -37,10 +37,6 @@ namespace SwitchboardPlugLocale.Widgets {
                 show_title = false
             };
 
-            var install_dialog = new Widgets.InstallDialog () {
-                modal = true
-            };
-
             var install_label = new Gtk.Label (_("Install Language"));
 
             var add_box = new Gtk.Box (HORIZONTAL, 0);
@@ -151,32 +147,10 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             add_button.clicked.connect (() => {
-                install_dialog.transient_for = (Gtk.Window) get_root ();
+                var install_dialog = new Widgets.InstallDialog () {
+                    transient_for = (Gtk.Window) get_root ()
+                };
                 install_dialog.present ();
-            });
-
-            install_dialog.language_selected.connect ((lang) => {
-                installer.install.begin (lang, (obj, res) => {
-                    try {
-                        installer.install.end (res);
-                    } catch (Error e) {
-                        if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
-                            return;
-                        }
-
-                        var dialog = new Granite.MessageDialog (
-                            _("Couldn't install language pack"),
-                            e.message,
-                            new ThemedIcon ("preferences-desktop-locale")
-                        ) {
-                            badge_icon = new ThemedIcon ("dialog-error"),
-                            modal = true,
-                            transient_for = ((Gtk.Application) Application.get_default ()).active_window
-                        };
-                        dialog.present ();
-                        dialog.response.connect (dialog.destroy);
-                    }
-                });
             });
         }
 

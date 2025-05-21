@@ -15,14 +15,13 @@
 */
 
 public class SwitchboardPlugLocale.Widgets.InstallDialog : Granite.Dialog {
-    public signal void language_selected (string lang);
-
     private Gtk.SearchEntry search_entry;
     private Gtk.ListBox list_box;
 
     construct {
         default_height = 400;
         default_width = 400;
+        modal = true;
 
         search_entry = new Gtk.SearchEntry ();
 
@@ -85,8 +84,29 @@ public class SwitchboardPlugLocale.Widgets.InstallDialog : Granite.Dialog {
     }
 
     private void install_selected () {
-        var langrow = (LangRow) list_box.get_selected_row ();
-        language_selected (langrow.lang);
+        unowned var lang_row = (LangRow) list_box.get_selected_row ();
+
+        Installer.UbuntuInstaller.get_default ().install.begin (lang_row.lang, (obj, res) => {
+            try {
+                ((Installer.UbuntuInstaller) obj).install.end (res);
+            } catch (Error e) {
+                if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {
+                    return;
+                }
+
+                var dialog = new Granite.MessageDialog (
+                    _("Couldn't install language pack"),
+                    e.message,
+                    new ThemedIcon ("preferences-desktop-locale")
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
+                    transient_for = ((Gtk.Application) Application.get_default ()).active_window
+                };
+                dialog.present ();
+                dialog.response.connect (dialog.destroy);
+            }
+        });
     }
 
     [CCode (instance_pos = -1)]
