@@ -18,12 +18,10 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
     public Gtk.ListBox listbox { get; private set; }
 
     private Gee.HashMap <string, LanguageRow> languages;
-    private LocaleManager lm;
     private Granite.HeaderLabel installed_languages_label;
 
     construct {
         languages = new Gee.HashMap <string, LanguageRow> ();
-        lm = LocaleManager.get_default ();
 
         listbox = new Gtk.ListBox () {
             hexpand = true,
@@ -70,15 +68,17 @@ public class SwitchboardPlugLocale.Widgets.LanguageListBox : Gtk.Box {
     }
 
     private void add_language (string code, string locale) {
-        if (!languages.has_key (code)) {
-            var language_string = Utils.translate (code, locale);
+        if (languages.has_key (code)) {
+            return;
+        }
 
-            languages[code] = new LanguageRow (code, language_string);
-            listbox.append (languages[code]);
+        var language_string = Utils.translate (code, locale);
 
-            if (lm.get_user_language ().slice (0, 2) == code) {
-                languages[code].current = true;
-            }
+        languages[code] = new LanguageRow (code, language_string);
+        listbox.append (languages[code]);
+
+        if (LocaleManager.get_default ().get_user_language ().slice (0, 2) == code) {
+            languages[code].current = true;
         }
     }
 

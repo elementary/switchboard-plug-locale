@@ -44,7 +44,7 @@ namespace SwitchboardPlugLocale {
         private const string GNOME_DESKTOP_INPUT_SOURCES = "org.gnome.desktop.input-sources";
         private const string GNOME_LOCALE_KEY = "org.gnome.system.locale";
         private const string KEY_INPUT_SOURCES = "sources";
-        private const string KEY_INPUT_SELETION = "input-selections";
+        private const string KEY_INPUT_SELECTION = "input-selections";
 
         private Locale1Proxy locale1_proxy;
         private AccountProxy account_proxy;
@@ -57,23 +57,33 @@ namespace SwitchboardPlugLocale {
 
         construct {
             xkbinfo = new Gnome.XkbInfo ();
-
-            uint uid = (uint)Posix.getuid ();
+            var uid = (uint) Posix.getuid ();
 
             input_settings = new Settings (GNOME_DESKTOP_INPUT_SOURCES);
             locale_settings = new Settings (GNOME_LOCALE_KEY);
 
             try {
-                var connection = Bus.get_sync (BusType.SYSTEM);
-                locale1_proxy = connection.get_proxy_sync<Locale1Proxy> (
-                    "org.freedesktop.locale1",
-                    "/org/freedesktop/locale1",
-                    DBusProxyFlags.NONE
+                Bus.get_proxy.begin<Locale1Proxy> (
+                    SYSTEM, "org.freedesktop.locale1", "/org/freedesktop/locale1", NONE, null,
+                    (obj, res) => {
+                        try {
+                            locale1_proxy = Bus.get_proxy.end<Locale1Proxy> (res);
+                            check_connected ();
+                        } catch (Error e) {
+                            critical (e.message);
+                        }
+                    }
                 );
-                account_proxy = connection.get_proxy_sync<AccountProxy> (
-                    "org.freedesktop.Accounts",
-                    "/org/freedesktop/Accounts/User%u".printf (uid),
-                    DBusProxyFlags.NONE
+                Bus.get_proxy.begin<AccountProxy> (
+                    SYSTEM, "org.freedesktop.Accounts", "/org/freedesktop/Accounts/User%u".printf (uid), NONE, null,
+                    (obj, res) => {
+                        try {
+                            account_proxy = Bus.get_proxy.end<AccountProxy> (res);
+                            check_connected ();
+                        } catch (Error e) {
+                            critical (e.message);
+                        }
+                    }
                 );
             } catch (IOError e) {
                 critical (e.message);
@@ -81,13 +91,15 @@ namespace SwitchboardPlugLocale {
 
             settings = new Settings ("io.elementary.settings.locale");
             settings.changed.connect (on_settings_changed);
+        }
 
-            is_connected = account_proxy != null && locale1_proxy != null;
+        private void check_connected () {
+            is_connected = locale1_proxy != null && account_proxy != null;
         }
 
         private void on_settings_changed (string key) {
-            if (key == KEY_INPUT_SELETION) {
-                var map_array = settings.get_value (KEY_INPUT_SELETION);
+            if (key == KEY_INPUT_SELECTION) {
+                var map_array = settings.get_value (KEY_INPUT_SELECTION);
                 var iter = map_array.iterator ();
 
                 string? k = null;

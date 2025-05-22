@@ -24,7 +24,6 @@ namespace SwitchboardPlugLocale.Widgets {
         private GLib.ListStore format_list;
         private GLib.ListStore locale_list;
 
-        private LocaleManager lm;
         private Preview preview;
         private string language;
 
@@ -36,8 +35,6 @@ namespace SwitchboardPlugLocale.Widgets {
 
         construct {
             add_css_class ("locale-setting");
-
-            lm = LocaleManager.get_default ();
 
             format_list = new GLib.ListStore (typeof (Locale));
             locale_list = new GLib.ListStore (typeof (Locale));
@@ -252,15 +249,17 @@ namespace SwitchboardPlugLocale.Widgets {
             });
 
             set_button.clicked.connect (() => {
+                unowned var locale_manager = LocaleManager.get_default ();
+
                 var locale = get_selected_locale ();
                 debug ("Setting user language to '%s'", locale);
-                lm.set_user_language (locale);
+                locale_manager.set_user_language (locale);
 
                 compare ();
 
                 var format = get_format ();
                 debug ("Setting user format to '%s'", format);
-                lm.set_user_format (format);
+                locale_manager.set_user_format (format);
 
                 restart_infobar.revealed = true;
             });
@@ -316,13 +315,16 @@ namespace SwitchboardPlugLocale.Widgets {
         }
 
         private void compare () {
-            if (set_button != null) {
-                if (lm.get_user_language () == get_selected_locale () && lm.get_user_format () == get_format ()) {
-                    restart_infobar.revealed = false;
-                    set_button.sensitive = false;
-                } else {
-                    set_button.sensitive = true;
-                }
+            unowned var locale_manager = LocaleManager.get_default ();
+
+            if (
+                locale_manager.get_user_language () == get_selected_locale () &&
+                locale_manager.get_user_format () == get_format ()
+            ) {
+                restart_infobar.revealed = false;
+                set_button.sensitive = false;
+            } else {
+                set_button.sensitive = true;
             }
         }
 
@@ -333,7 +335,7 @@ namespace SwitchboardPlugLocale.Widgets {
             locale_list.remove_all ();
 
             var default_regions = yield Utils.get_default_regions ();
-            var user_locale = lm.get_user_language ();
+            var user_locale = LocaleManager.get_default ().get_user_language ();
 
             foreach (var locale in locales) {
                 string code;
@@ -370,7 +372,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
         public void reload_formats (Gee.ArrayList<string>? locales) {
             format_list.remove_all ();
-            var user_format = lm.get_user_format ();
+            var user_format = LocaleManager.get_default ().get_user_format ();
 
             foreach (var locale in locales) {
                 string country = Gnome.Languages.get_country_from_locale (locale, null);
@@ -398,9 +400,9 @@ namespace SwitchboardPlugLocale.Widgets {
             var selected_locale = get_selected_locale ();
             var selected_format = get_format ();
             debug ("Setting system language to '%s' and format to '%s'", selected_locale, selected_format);
-            lm.apply_to_system.begin (selected_locale, selected_format, (obj, res) => {
+            LocaleManager.get_default ().apply_to_system.begin (selected_locale, selected_format, (obj, res) => {
                 try {
-                    lm.apply_to_system.end (res);
+                    ((LocaleManager) obj).apply_to_system.end (res);
                     restart_infobar.revealed = true;
                 } catch (Error e) {
                     if (e.matches (GLib.DBusError.quark (), GLib.DBusError.ACCESS_DENIED)) {

@@ -23,8 +23,6 @@ namespace SwitchboardPlugLocale.Widgets {
         private ProgressDialog progress_dialog = null;
 
         construct {
-            var locale_manager = LocaleManager.get_default ();
-
             list_box = new LanguageListBox ();
 
             var scroll = new Gtk.ScrolledWindow () {
@@ -86,6 +84,7 @@ namespace SwitchboardPlugLocale.Widgets {
             append (paned);
 
             list_box.listbox.row_selected.connect ((row) => {
+                unowned var locale_manager = LocaleManager.get_default ();
                 if (row == null) {
                     return;
                 }
@@ -107,10 +106,7 @@ namespace SwitchboardPlugLocale.Widgets {
 
             installer = Installer.UbuntuInstaller.get_default ();
 
-            unowned var lm = LocaleManager.get_default ();
-            if (lm.is_connected) {
-                reload.begin ();
-            }
+            LocaleManager.get_default ().notify["is-connected"].connect (() => reload.begin ());
 
             installer.progress_changed.connect (on_progress_changed);
 
