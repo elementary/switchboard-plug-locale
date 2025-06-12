@@ -172,19 +172,15 @@ namespace SwitchboardPlugLocale.Widgets {
 
         private void on_progress_changed (int progress) {
             if (progress_dialog != null) {
-                progress_dialog.progress = progress;
                 return;
             }
 
             progress_dialog = new ProgressDialog () {
-                modal = true,
-                progress = progress,
                 transient_for = (Gtk.Window) get_root ()
             };
             progress_dialog.present ();
 
             progress_dialog.response.connect (() => {
-                progress_dialog.destroy ();
                 progress_dialog = null;
             });
         }
