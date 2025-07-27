@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-21 19:08+0000\n"
-"PO-Revision-Date: 2025-07-26 16:55+0000\n"
+"PO-Revision-Date: 2025-07-28 04:55+0000\n"
 "Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "settings/locale-plug-extra/pt_BR/>\n"
@@ -85,7 +85,7 @@ msgstr ""
 
 #: data/locale.metainfo.xml.in:88
 msgid "Improvements:"
-msgstr ""
+msgstr "Melhorias:"
 
 #: data/locale.metainfo.xml.in:90
 msgid "Central Kurdish is now available as an installable language"
