@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-21 19:08+0000\n"
-"PO-Revision-Date: 2025-03-01 15:25+0000\n"
+"PO-Revision-Date: 2025-08-30 22:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/settings/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-locale/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:23+0000\n"
 
 #: src/Plug.vala:30
@@ -89,11 +89,11 @@ msgstr "言語パックを削除できませんでした"
 
 #: src/Widgets/LocaleSetting.vala:83
 msgid "Keyboard layout settings…"
-msgstr "キーボードレイアウトの設定…"
+msgstr "キーボードレイアウト設定…"
 
 #: src/Widgets/LocaleSetting.vala:90
 msgid "Time format settings…"
-msgstr "時刻の書式の設定…"
+msgstr "時刻の書式設定…"
 
 #: src/Widgets/LocaleSetting.vala:113
 msgid "Preview"
